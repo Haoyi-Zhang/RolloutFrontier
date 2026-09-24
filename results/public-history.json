@@ -1,0 +1,121 @@
+{
+  "api_level_span": [
+    8,
+    34
+  ],
+  "boundary_presence_checks": 48,
+  "cpu_seconds": 0.00399996800000002,
+  "declaration_facts": 24,
+  "distinct_introduction_levels": 18,
+  "generated_lower_bound_distribution": {
+    "16": 2,
+    "17": 3,
+    "18": 2,
+    "19": 1,
+    "21": 4,
+    "22": 4,
+    "23": 4,
+    "25": 1,
+    "26": 19,
+    "28": 5,
+    "29": 8,
+    "31": 8,
+    "33": 20,
+    "34": 14,
+    "9": 1
+  },
+  "generated_reference_sets": 96,
+  "lower_bound_checks": 192,
+  "peak_rss_kib": 93224,
+  "scope": "curated official class-introduction metadata and generated reference sets; not an SDK corpus, real application sample, Android execution, behavioral equivalence, or production workload",
+  "seed": 20260912,
+  "source_file": "data/android-class-introductions.csv",
+  "source_sha256": "1144111caf21a61fd2511f5ca806304b6733c63b164f291c8b1040539ea104a8",
+  "support_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    12,
+    13,
+    15,
+    16,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "support_levels": [
+    8,
+    9,
+    11,
+    14,
+    16,
+    17,
+    18,
+    19,
+    21,
+    22,
+    23,
+    25,
+    26,
+    28,
+    29,
+    31,
+    33,
+    34
+  ],
+  "synthetic_frontier": {
+    "alternatives": 2,
+    "candidate_levels": [
+      [
+        17,
+        18,
+        19
+      ],
+      [
+        19,
+        21,
+        22
+      ],
+      [
+        25,
+        26,
+        28
+      ],
+      [
+        28,
+        29,
+        31
+      ],
+      [
+        31,
+        33,
+        34
+      ]
+    ],
+    "endpoint_levels": [
+      18,
+      21,
+      26,
+      29,
+      34
+    ],
+    "frontier_size": 2,
+    "product_mass": 108,
+    "search": {
+      "complete": 16,
+      "corner_pruned": 0,
+      "safe_complete": 16,
+      "states": 35,
+      "unsafe_pruned": 18
+    }
+  },
+  "wall_seconds": 0.001832250000006752
+}

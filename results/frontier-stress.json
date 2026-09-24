@@ -1,0 +1,63 @@
+{
+  "by_profile_count": {
+    "4": {
+      "direct_frontier_members": 508,
+      "direct_safe_boxes": 1176,
+      "planner_search_states": 3170,
+      "relations": 192,
+      "seeded_cases": 384
+    },
+    "5": {
+      "direct_frontier_members": 119,
+      "direct_safe_boxes": 250,
+      "planner_search_states": 830,
+      "relations": 48,
+      "seeded_cases": 96
+    }
+  },
+  "cpu_seconds": 0.6038886349999999,
+  "direct_frontier_members": 627,
+  "direct_safe_boxes": 1426,
+  "fail_closed_checks": {
+    "nine-branch-manifest": "branch bound",
+    "one-state-search-limit": "exact frontier search-state bound"
+  },
+  "high_pruning_checker": {
+    "checker_accepts": true,
+    "local_guard_counts": [
+      14,
+      11,
+      11,
+      14,
+      11
+    ],
+    "raw_choice_product": 260876,
+    "rejected_mutations": [
+      "duplicate-frontier-member",
+      "frontier-product-mass",
+      "selected-accepted-profiles",
+      "candidate-domains",
+      "search-state-count",
+      "corner-certificate",
+      "guard-term-count",
+      "objective-description"
+    ],
+    "visited_prefix_states": 37
+  },
+  "oracle": "all row/column subsets containing the seed, followed by direct relation-membership and nondominance checks",
+  "peak_rss_kib": 95144,
+  "planner_search_states": 4000,
+  "scope": "deterministic sparse 2D 4x4/5x5 and 3D 3x3x3 samples with at most eight allowed tuples; stress evidence, not exhaustive at these dimensions",
+  "seed": 20260912,
+  "seeded_cases": 480,
+  "three_dimensional": {
+    "dimensions": 3,
+    "direct_frontier_members": 233,
+    "direct_safe_boxes": 398,
+    "planner_search_states": 1735,
+    "profiles_per_dimension": 3,
+    "relations": 96,
+    "seeded_cases": 192
+  },
+  "wall_seconds": 0.6034959000000413
+}

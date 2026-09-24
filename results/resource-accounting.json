@@ -1,0 +1,117 @@
+{
+  "clean_semantic_reproduction": {
+    "children_cpu_seconds": 32.126294,
+    "compared_file_count": 23,
+    "compared_files": [
+      "unit.json",
+      "pilot.json",
+      "finite.json",
+      "frontier.json",
+      "frontier-stress.json",
+      "generalization.json",
+      "journal-analysis.json",
+      "scaling.json",
+      "modelcheck.json",
+      "public-history.json",
+      "network.json",
+      "integration.json",
+      "multiprocess.json",
+      "observations.json",
+      "costs.json",
+      "hardening.json",
+      "replay.json",
+      "network.csv",
+      "observations.csv",
+      "generalization.csv",
+      "scaling.csv",
+      "network-trace.jsonl",
+      "observation-trace.jsonl"
+    ],
+    "discoverable_unit_tests": 5,
+    "jobs": 17,
+    "largest_child_peak_rss_kib": 105956,
+    "limits": {
+      "affinity_cores": 1,
+      "child_address_space_bytes": 536870912,
+      "job_cpu_soft_seconds": 90,
+      "job_wall_timeout_seconds": 120,
+      "maximum_simultaneous_project_processes": 7,
+      "theoretical_aggregate_address_space_bytes": 3758096384
+    },
+    "numeric_claim_bindings_verified": 33,
+    "parent_cpu_seconds": 0.7334336090000001,
+    "scope": "semantic reproduction, not byte-identical timing or proof of model correctness",
+    "semantic_reference": "matched",
+    "status": "completed",
+    "wall_seconds": 32.939786240999865
+  },
+  "numeric_binding_negative_control": {
+    "altered_value_and_type_rejected": true
+  },
+  "paper_build": {
+    "clean_build": {
+      "peak_rss_kib": 93616,
+      "source": "clean extraction of delivered full archive",
+      "wall_seconds": 7.67
+    },
+    "main": {
+      "author_metadata": "Anonymous six-author manuscript",
+      "embedded_font_programs": 20,
+      "encrypted": false,
+      "missing_characters": 0,
+      "nonembedded_font_programs": 0,
+      "overfull_boxes": 0,
+      "pages": 10,
+      "pdf_bytes": 280456,
+      "unresolved_citations_or_references": 0
+    },
+    "raster_comparison": {
+      "main.pdf": {
+        "delivered_bytes": 280456,
+        "dpi": 200,
+        "extracted_text_equal": true,
+        "pages": 10,
+        "pixel_changed_pages": [],
+        "rebuilt_bytes": 280456
+      },
+      "supplement.pdf": {
+        "delivered_bytes": 171953,
+        "dpi": 200,
+        "extracted_text_equal": true,
+        "pages": 4,
+        "pixel_changed_pages": [],
+        "rebuilt_bytes": 171953
+      }
+    },
+    "supplement": {
+      "author_metadata": "Anonymous six-author manuscript",
+      "embedded_font_programs": 14,
+      "encrypted": false,
+      "missing_characters": 0,
+      "nonembedded_font_programs": 0,
+      "overfull_boxes": 0,
+      "pages": 4,
+      "pdf_bytes": 171953,
+      "unresolved_citations_or_references": 0
+    },
+    "target": "IEEE Transactions on Parallel and Distributed Systems (TPDS), regular paper"
+  },
+  "reference_audit": {
+    "citation_occurrences": 85,
+    "inherited_exact_title_dblp_lookup_pointers": 45,
+    "minimum_required": 55,
+    "primary_doi_official_pointers": 31,
+    "scope": "inventory consistency and explicit source-depth tracking, not a fresh full-text validation of every source",
+    "unique_cited": 76,
+    "unique_entries": 76,
+    "unknown": 0,
+    "unused": 0
+  },
+  "scope": "current clean semantic reproduction and journal manuscript validation; not external scientific review, proof mechanization, API behavioral validation, or production benchmarking",
+  "visual_validation": {
+    "clipping_overlap_or_missing_glyph_observed": false,
+    "dpi": 200,
+    "pages": 14,
+    "scope": "all main and supplement pages rendered and inspected; not independent peer review"
+  }
+}

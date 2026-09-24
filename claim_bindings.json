@@ -1,0 +1,336 @@
+[
+  {
+    "id": "oracle-relations",
+    "result_file": "frontier.json",
+    "path": [
+      "relation_oracle",
+      "relations"
+    ],
+    "expected": 510,
+    "manuscript_section": "VII-A"
+  },
+  {
+    "id": "oracle-seeds",
+    "result_file": "frontier.json",
+    "path": [
+      "relation_oracle",
+      "seeded_relations"
+    ],
+    "expected": 2295,
+    "manuscript_section": "VII-A"
+  },
+  {
+    "id": "greedy-mass",
+    "result_file": "frontier.json",
+    "path": [
+      "greedy_counterexample",
+      "greedy_product_mass"
+    ],
+    "expected": 2,
+    "manuscript_section": "VII-A"
+  },
+  {
+    "id": "exact-mass",
+    "result_file": "frontier.json",
+    "path": [
+      "greedy_counterexample",
+      "exact_product_mass"
+    ],
+    "expected": 7,
+    "manuscript_section": "VII-A"
+  },
+  {
+    "id": "model-states",
+    "result_file": "modelcheck.json",
+    "path": [
+      "guarded",
+      "reachable_states"
+    ],
+    "expected": 296,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "model-transitions",
+    "result_file": "modelcheck.json",
+    "path": [
+      "guarded",
+      "explored_transitions"
+    ],
+    "expected": 1388,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "model-safety",
+    "result_file": "modelcheck.json",
+    "path": [
+      "guarded",
+      "invariant_violations"
+    ],
+    "expected": 0,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "cases",
+    "result_file": "network.json",
+    "path": [
+      "cases"
+    ],
+    "expected": 144,
+    "manuscript_section": "VI-B; VII-B"
+  },
+  {
+    "id": "epoch-installed",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "epoch",
+      "installed"
+    ],
+    "expected": 0,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "epoch-unsafe",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "epoch",
+      "incompatible_snapshots"
+    ],
+    "expected": 0,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "branch-installed",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "branch",
+      "installed"
+    ],
+    "expected": 136,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "branch-unsafe",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "branch",
+      "incompatible_snapshots"
+    ],
+    "expected": 0,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "envelope-installed",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "envelope",
+      "installed"
+    ],
+    "expected": 150,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "envelope-unsafe",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "envelope",
+      "incompatible_snapshots"
+    ],
+    "expected": 0,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "frontier-installed",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "frontier",
+      "installed"
+    ],
+    "expected": 154,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "frontier-unsafe",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "frontier",
+      "incompatible_snapshots"
+    ],
+    "expected": 0,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "marginal-installed",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "marginal",
+      "installed"
+    ],
+    "expected": 192,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "marginal-unsafe",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "marginal",
+      "incompatible_snapshots"
+    ],
+    "expected": 55,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "unguarded-installed",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "unguarded",
+      "installed"
+    ],
+    "expected": 415,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "unguarded-unsafe",
+    "result_file": "network.json",
+    "path": [
+      "policies",
+      "unguarded",
+      "incompatible_snapshots"
+    ],
+    "expected": 484,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "trace-rpc",
+    "result_file": "replay.json",
+    "path": [
+      "checked_rpc"
+    ],
+    "expected": 40992,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "trace-bytes",
+    "result_file": "replay.json",
+    "path": [
+      "serialized_bytes"
+    ],
+    "expected": 4494882,
+    "manuscript_section": "VII-B"
+  },
+  {
+    "id": "holdout-cases",
+    "result_file": "generalization.json",
+    "path": [
+      "cases"
+    ],
+    "expected": 1440,
+    "manuscript_section": "VI-B; VII-C"
+  },
+  {
+    "id": "holdout-exact",
+    "result_file": "generalization.json",
+    "path": [
+      "exact_installed"
+    ],
+    "expected": 11256,
+    "manuscript_section": "VII-C"
+  },
+  {
+    "id": "holdout-greedy",
+    "result_file": "generalization.json",
+    "path": [
+      "greedy_installed"
+    ],
+    "expected": 10854,
+    "manuscript_section": "VII-C"
+  },
+  {
+    "id": "holdout-central",
+    "result_file": "generalization.json",
+    "path": [
+      "central_installed"
+    ],
+    "expected": 16170,
+    "manuscript_section": "VII-C"
+  },
+  {
+    "id": "greedy-schedule-wins",
+    "result_file": "generalization.json",
+    "path": [
+      "greedy_better_schedule_cases"
+    ],
+    "expected": 156,
+    "manuscript_section": "VII-C"
+  },
+  {
+    "id": "counterexample-exact",
+    "result_file": "journal-analysis.json",
+    "path": [
+      "schedule_counterexample",
+      "selected_installed"
+    ],
+    "expected": 0,
+    "manuscript_section": "V-C; VII-A"
+  },
+  {
+    "id": "counterexample-alternate",
+    "result_file": "journal-analysis.json",
+    "path": [
+      "schedule_counterexample",
+      "alternative_installed"
+    ],
+    "expected": 200,
+    "manuscript_section": "V-C; VII-A"
+  },
+  {
+    "id": "dense-calls",
+    "result_file": "journal-analysis.json",
+    "path": [
+      "dense_stress",
+      "calls"
+    ],
+    "expected": 24,
+    "manuscript_section": "VII-D"
+  },
+  {
+    "id": "dense-refusals",
+    "result_file": "journal-analysis.json",
+    "path": [
+      "dense_stress",
+      "rejected"
+    ],
+    "expected": 6,
+    "manuscript_section": "VII-D"
+  },
+  {
+    "id": "dense-states",
+    "result_file": "journal-analysis.json",
+    "path": [
+      "dense_stress",
+      "max_completed_states"
+    ],
+    "expected": 1731,
+    "manuscript_section": "VII-D"
+  },
+  {
+    "id": "dense-frontier",
+    "result_file": "journal-analysis.json",
+    "path": [
+      "dense_stress",
+      "max_frontier_size"
+    ],
+    "expected": 27,
+    "manuscript_section": "VII-D"
+  }
+]

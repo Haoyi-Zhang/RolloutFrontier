@@ -1,0 +1,17 @@
+{
+  "cases": 144,
+  "checked_rpc": 40992,
+  "cpu_seconds": 0.496593186,
+  "incompatible_snapshots": {
+    "branch": 0,
+    "envelope": 0,
+    "epoch": 0,
+    "frontier": 0,
+    "marginal": 55,
+    "unguarded": 484
+  },
+  "peak_rss_kib": 93092,
+  "scope": "full network campaign trace, separate state reconstruction",
+  "serialized_bytes": 4494882,
+  "wall_seconds": 0.49447951500008
+}

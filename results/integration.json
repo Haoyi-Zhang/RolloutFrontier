@@ -1,0 +1,2859 @@
+{
+  "certificate_mutations": {
+    "rejected_mutations": [
+      "missing-observed-generation",
+      "boolean-observed-generation",
+      "boolean-sequence",
+      "duplicate-receipt"
+    ],
+    "valid_certificate": true
+  },
+  "child_cpu_seconds": 1.646412,
+  "cpu_seconds": 0.057801716,
+  "encoding": {
+    "direct_local_atoms": 2200,
+    "frame_bytes": 1048576,
+    "malformed": "invalid",
+    "oversized_request": "ValueError",
+    "oversized_response": "response-too-large"
+  },
+  "multi_origin": {
+    "blocked_after_first_recovery": [
+      "1:1"
+    ],
+    "blocked_before_heal": [
+      "0:1",
+      "1:1"
+    ],
+    "delayed_prepare": "closed",
+    "final_floors": [
+      1,
+      1
+    ],
+    "final_install": "installed",
+    "origins": 2,
+    "persisted_slots": [
+      "0:1",
+      "1:1"
+    ],
+    "scope": "two serial origins on one host; no concurrent-writer or Byzantine claim",
+    "shared_node": 1,
+    "trace": [
+      {
+        "bytes": 228,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-zero",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "a"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "origin-zero",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 1,
+        "wall_ns": 401335
+      },
+      {
+        "bytes": 228,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-zero",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "a"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "origin-zero",
+            "node": 1,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 2,
+        "wall_ns": 366332
+      },
+      {
+        "bytes": 226,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-one",
+          "op": "prepare",
+          "origin": 1,
+          "requires": [
+            "a"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "origin-one",
+            "node": 1,
+            "observed_generation": 0,
+            "origin": 1,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 3,
+        "wall_ns": 216797
+      },
+      {
+        "bytes": 226,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-one",
+          "op": "prepare",
+          "origin": 1,
+          "requires": [
+            "a"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "origin-one",
+            "node": 2,
+            "observed_generation": 0,
+            "origin": 1,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 1,
+        "target": 2,
+        "tick": 4,
+        "wall_ns": 343017
+      },
+      {
+        "bytes": 129,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-zero",
+          "op": "use",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "origin-zero",
+          "node": 0,
+          "status": "used"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 5,
+        "wall_ns": 109715
+      },
+      {
+        "bytes": 129,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-zero",
+          "op": "use",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "origin-zero",
+          "node": 1,
+          "status": "used"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 6,
+        "wall_ns": 54332
+      },
+      {
+        "bytes": 127,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-one",
+          "op": "use",
+          "origin": 1,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "origin-one",
+          "node": 1,
+          "status": "used"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 7,
+        "wall_ns": 46010
+      },
+      {
+        "bytes": 127,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-one",
+          "op": "use",
+          "origin": 1,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "origin-one",
+          "node": 2,
+          "status": "used"
+        },
+        "source": 1,
+        "target": 2,
+        "tick": 8,
+        "wall_ns": 41974
+      },
+      {
+        "event": "crash",
+        "node": 1,
+        "tick": 8
+      },
+      {
+        "event": "recover",
+        "node": 1,
+        "tick": 8
+      },
+      {
+        "bytes": 461,
+        "event": "rpc",
+        "request": {
+          "op": "inspect"
+        },
+        "response": {
+          "state": {
+            "catalog": {
+              "1": {
+                "generation": 0,
+                "node": 1,
+                "support": [
+                  "a",
+                  "b"
+                ]
+              }
+            },
+            "floor": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "generation": 0,
+            "node": 1,
+            "policy": "predicate",
+            "slots": {
+              "0:1": {
+                "manifest": "origin-zero",
+                "node": 1,
+                "observed_generation": 0,
+                "origin": 0,
+                "requires": [
+                  "a"
+                ],
+                "sequence": 1,
+                "status": "held"
+              },
+              "1:1": {
+                "manifest": "origin-one",
+                "node": 1,
+                "observed_generation": 0,
+                "origin": 1,
+                "requires": [
+                  "a"
+                ],
+                "sequence": 1,
+                "status": "held"
+              }
+            },
+            "support": [
+              "a",
+              "b"
+            ],
+            "window": 3
+          },
+          "status": "state"
+        },
+        "source": 2,
+        "target": 1,
+        "tick": 9,
+        "wall_ns": 252060
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 10,
+        "wall_ns": 239821
+      },
+      {
+        "event": "lost",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 11
+      },
+      {
+        "bytes": 127,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-one",
+          "op": "use",
+          "origin": 1,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "origin-one",
+          "node": 1,
+          "status": "used"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 12,
+        "wall_ns": 63496
+      },
+      {
+        "bytes": 127,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-one",
+          "op": "use",
+          "origin": 1,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "origin-one",
+          "node": 2,
+          "status": "used"
+        },
+        "source": 1,
+        "target": 2,
+        "tick": 13,
+        "wall_ns": 45568
+      },
+      {
+        "bytes": 76,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "b"
+          ]
+        },
+        "response": {
+          "holds": [
+            "0:1",
+            "1:1"
+          ],
+          "status": "blocked"
+        },
+        "source": 2,
+        "target": 1,
+        "tick": 14,
+        "wall_ns": 47361
+      },
+      {
+        "bytes": 59,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 15,
+        "wall_ns": 68323
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 16,
+        "wall_ns": 154693
+      },
+      {
+        "bytes": 70,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "b"
+          ]
+        },
+        "response": {
+          "holds": [
+            "1:1"
+          ],
+          "status": "blocked"
+        },
+        "source": 2,
+        "target": 1,
+        "tick": 17,
+        "wall_ns": 74612
+      },
+      {
+        "bytes": 103,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-zero",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "a"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 18,
+        "wall_ns": 50836
+      },
+      {
+        "bytes": 127,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-one",
+          "op": "use",
+          "origin": 1,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "origin-one",
+          "node": 1,
+          "status": "used"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 19,
+        "wall_ns": 73851
+      },
+      {
+        "bytes": 127,
+        "event": "rpc",
+        "request": {
+          "manifest": "origin-one",
+          "op": "use",
+          "origin": 1,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "origin-one",
+          "node": 2,
+          "status": "used"
+        },
+        "source": 1,
+        "target": 2,
+        "tick": 20,
+        "wall_ns": 43186
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 1,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 21,
+        "wall_ns": 156135
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 1,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 1,
+        "target": 2,
+        "tick": 22,
+        "wall_ns": 145058
+      },
+      {
+        "bytes": 109,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "b"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 2,
+        "target": 1,
+        "tick": 23,
+        "wall_ns": 158569
+      },
+      {
+        "bytes": 209,
+        "event": "rpc",
+        "request": {
+          "op": "inspect"
+        },
+        "response": {
+          "state": {
+            "catalog": {
+              "1": {
+                "generation": 1,
+                "node": 1,
+                "support": [
+                  "b"
+                ]
+              }
+            },
+            "floor": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "generation": 1,
+            "node": 1,
+            "policy": "predicate",
+            "slots": {},
+            "support": [
+              "b"
+            ],
+            "window": 3
+          },
+          "status": "state"
+        },
+        "source": 2,
+        "target": 1,
+        "tick": 24,
+        "wall_ns": 62765
+      }
+    ]
+  },
+  "peak_rss_kib": 105928,
+  "process_loss": {
+    "after_close": "not-resurrected",
+    "after_prepare": "held",
+    "scope": "owned endpoint process loss after ACK; OS and storage remain running",
+    "sigkill_events": 2
+  },
+  "public_slice": {
+    "facts": [
+      {
+        "class": "android.os.VibrationEffect",
+        "contract": "haptic.one",
+        "first_public_api_level": "26",
+        "method": "createOneShot",
+        "parameter_types": "long;int"
+      },
+      {
+        "class": "android.os.VibrationEffect",
+        "contract": "haptic.wave",
+        "first_public_api_level": "26",
+        "method": "createWaveform",
+        "parameter_types": "long[];int"
+      },
+      {
+        "class": "android.os.VibrationEffect",
+        "contract": "haptic.amplitude",
+        "first_public_api_level": "26",
+        "method": "createWaveform",
+        "parameter_types": "long[];int[];int"
+      },
+      {
+        "class": "android.os.VibrationEffect",
+        "contract": "haptic.predefined",
+        "first_public_api_level": "29",
+        "method": "createPredefined",
+        "parameter_types": "int"
+      }
+    ],
+    "levels": [
+      25,
+      26,
+      28,
+      29,
+      30
+    ],
+    "new_after_upgrade": "admitted",
+    "new_before_upgrade": "not-justified",
+    "obstruction": [
+      [
+        2,
+        "haptic.predefined"
+      ]
+    ],
+    "old_admission": "admitted",
+    "rollback_after_retirement": "installed",
+    "rollback_generation": 2,
+    "rollback_while_held": "blocked",
+    "scope": "declaration-presence facts, not Android execution or behavioral equivalence",
+    "support_sizes": [
+      0,
+      3,
+      3,
+      4,
+      4
+    ],
+    "trace": [
+      {
+        "bytes": 242,
+        "event": "rpc",
+        "request": {
+          "manifest": "factories",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "haptic.one"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "factories",
+            "node": 1,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "haptic.one"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 1,
+        "wall_ns": 385761
+      },
+      {
+        "bytes": 244,
+        "event": "rpc",
+        "request": {
+          "manifest": "factories",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "haptic.wave"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "factories",
+            "node": 2,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "haptic.wave"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 2,
+        "wall_ns": 336136
+      },
+      {
+        "bytes": 247,
+        "event": "rpc",
+        "request": {
+          "manifest": "new-factory",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "haptic.predefined"
+          ],
+          "sequence": 2
+        },
+        "response": {
+          "missing": [
+            "haptic.predefined"
+          ],
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "haptic.amplitude",
+              "haptic.one",
+              "haptic.wave"
+            ]
+          },
+          "status": "missing"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 3,
+        "wall_ns": 91218
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 2
+        },
+        "response": {
+          "floor": 0,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 4,
+        "wall_ns": 533705
+      },
+      {
+        "bytes": 233,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "haptic.amplitude",
+            "haptic.one",
+            "haptic.predefined",
+            "haptic.wave"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 2,
+            "support": [
+              "haptic.amplitude",
+              "haptic.one",
+              "haptic.predefined",
+              "haptic.wave"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 2,
+        "target": 2,
+        "tick": 5,
+        "wall_ns": 241504
+      },
+      {
+        "bytes": 260,
+        "event": "rpc",
+        "request": {
+          "manifest": "new-factory",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "haptic.predefined"
+          ],
+          "sequence": 3
+        },
+        "response": {
+          "receipt": {
+            "manifest": "new-factory",
+            "node": 2,
+            "observed_generation": 1,
+            "origin": 0,
+            "requires": [
+              "haptic.predefined"
+            ],
+            "sequence": 3,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 6,
+        "wall_ns": 185440
+      },
+      {
+        "bytes": 112,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "haptic.amplitude",
+            "haptic.one",
+            "haptic.wave"
+          ]
+        },
+        "response": {
+          "holds": [
+            "0:3"
+          ],
+          "status": "blocked"
+        },
+        "source": 2,
+        "target": 2,
+        "tick": 7,
+        "wall_ns": 81142
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 3
+        },
+        "response": {
+          "floor": 0,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 8,
+        "wall_ns": 163376
+      },
+      {
+        "bytes": 193,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "haptic.amplitude",
+            "haptic.one",
+            "haptic.wave"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 2,
+            "node": 2,
+            "support": [
+              "haptic.amplitude",
+              "haptic.one",
+              "haptic.wave"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 2,
+        "target": 2,
+        "tick": 9,
+        "wall_ns": 173601
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 10,
+        "wall_ns": 160552
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 3,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 11,
+        "wall_ns": 143396
+      }
+    ]
+  },
+  "recovery": {
+    "cases": [
+      {
+        "case": "interrupted-acquisition",
+        "outcome": "not-justified",
+        "retained_attempts": 1
+      },
+      {
+        "case": "committed-recovery",
+        "outcome": "held-and-usable"
+      },
+      {
+        "case": "overlap-migration",
+        "claim": "compatibility overlap only, not application-state transfer",
+        "outcome": "new-guards-before-old-retirement"
+      },
+      {
+        "case": "retired-certificate",
+        "outcome": "structural-only-not-authority",
+        "rejected_mutations": [
+          "none",
+          "list",
+          "empty-object",
+          "boolean-origin",
+          "sequence-overflow",
+          "boolean-node",
+          "empty-requirements",
+          "missing-observed-generation",
+          "boolean-observed-generation",
+          "boolean-top-level-sequence"
+        ]
+      }
+    ],
+    "delivered": 83,
+    "serialized_bytes": 8265,
+    "trace": [
+      {
+        "bytes": 228,
+        "event": "rpc",
+        "request": {
+          "manifest": "interrupted",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "a"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "interrupted",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 1,
+        "wall_ns": 631862
+      },
+      {
+        "event": "lost",
+        "request": {
+          "manifest": "interrupted",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "a"
+          ],
+          "sequence": 1
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 2
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 3,
+        "wall_ns": 190447
+      },
+      {
+        "event": "lost",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 4
+      },
+      {
+        "bytes": 59,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 5,
+        "wall_ns": 106371
+      },
+      {
+        "event": "lost",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 6
+      },
+      {
+        "bytes": 59,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 7,
+        "wall_ns": 82604
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 8,
+        "wall_ns": 428385
+      },
+      {
+        "bytes": 103,
+        "event": "rpc",
+        "request": {
+          "manifest": "interrupted",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "a"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 9,
+        "wall_ns": 83186
+      },
+      {
+        "bytes": 212,
+        "event": "rpc",
+        "request": {
+          "manifest": "old",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "a"
+          ],
+          "sequence": 2
+        },
+        "response": {
+          "receipt": {
+            "manifest": "old",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 2,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 10,
+        "wall_ns": 179661
+      },
+      {
+        "bytes": 212,
+        "event": "rpc",
+        "request": {
+          "manifest": "old",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "a"
+          ],
+          "sequence": 2
+        },
+        "response": {
+          "receipt": {
+            "manifest": "old",
+            "node": 1,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 2,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 11,
+        "wall_ns": 308745
+      },
+      {
+        "event": "crash",
+        "node": 1,
+        "tick": 11
+      },
+      {
+        "event": "recover",
+        "node": 1,
+        "tick": 11
+      },
+      {
+        "bytes": 113,
+        "event": "rpc",
+        "request": {
+          "manifest": "old",
+          "op": "use",
+          "origin": 0,
+          "sequence": 2
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "old",
+          "node": 0,
+          "status": "used"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 12,
+        "wall_ns": 83696
+      },
+      {
+        "bytes": 113,
+        "event": "rpc",
+        "request": {
+          "manifest": "old",
+          "op": "use",
+          "origin": 0,
+          "sequence": 2
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "old",
+          "node": 1,
+          "status": "used"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 13,
+        "wall_ns": 280272
+      },
+      {
+        "bytes": 70,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "b"
+          ]
+        },
+        "response": {
+          "holds": [
+            "0:2"
+          ],
+          "status": "blocked"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 14,
+        "wall_ns": 55333
+      },
+      {
+        "bytes": 212,
+        "event": "rpc",
+        "request": {
+          "manifest": "new",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "b"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "new",
+            "node": 2,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "b"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 15,
+        "wall_ns": 364409
+      },
+      {
+        "bytes": 212,
+        "event": "rpc",
+        "request": {
+          "manifest": "new",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "b"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "new",
+            "node": 3,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "b"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 3,
+        "tick": 16,
+        "wall_ns": 465071
+      },
+      {
+        "bytes": 212,
+        "event": "rpc",
+        "request": {
+          "manifest": "new",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "b"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "new",
+            "node": 4,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "b"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 4,
+        "tick": 17,
+        "wall_ns": 340393
+      },
+      {
+        "bytes": 113,
+        "event": "rpc",
+        "request": {
+          "manifest": "new",
+          "op": "use",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "new",
+          "node": 2,
+          "status": "used"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 18,
+        "wall_ns": 166931
+      },
+      {
+        "bytes": 113,
+        "event": "rpc",
+        "request": {
+          "manifest": "new",
+          "op": "use",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "new",
+          "node": 3,
+          "status": "used"
+        },
+        "source": 0,
+        "target": 3,
+        "tick": 19,
+        "wall_ns": 91387
+      },
+      {
+        "bytes": 113,
+        "event": "rpc",
+        "request": {
+          "manifest": "new",
+          "op": "use",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "new",
+          "node": 4,
+          "status": "used"
+        },
+        "source": 0,
+        "target": 4,
+        "tick": 20,
+        "wall_ns": 49114
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 2
+        },
+        "response": {
+          "floor": 2,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 21,
+        "wall_ns": 168213
+      },
+      {
+        "event": "lost",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 2
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 22
+      },
+      {
+        "bytes": 70,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "b"
+          ]
+        },
+        "response": {
+          "holds": [
+            "0:2"
+          ],
+          "status": "blocked"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 23,
+        "wall_ns": 59440
+      },
+      {
+        "bytes": 113,
+        "event": "rpc",
+        "request": {
+          "manifest": "new",
+          "op": "use",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "new",
+          "node": 2,
+          "status": "used"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 24,
+        "wall_ns": 48453
+      },
+      {
+        "bytes": 113,
+        "event": "rpc",
+        "request": {
+          "manifest": "new",
+          "op": "use",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "new",
+          "node": 3,
+          "status": "used"
+        },
+        "source": 0,
+        "target": 3,
+        "tick": 25,
+        "wall_ns": 45589
+      },
+      {
+        "bytes": 113,
+        "event": "rpc",
+        "request": {
+          "manifest": "new",
+          "op": "use",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "generation": 0,
+          "manifest": "new",
+          "node": 4,
+          "status": "used"
+        },
+        "source": 0,
+        "target": 4,
+        "tick": 26,
+        "wall_ns": 42354
+      },
+      {
+        "bytes": 59,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 2
+        },
+        "response": {
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 27,
+        "wall_ns": 80682
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 2
+        },
+        "response": {
+          "floor": 2,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 28,
+        "wall_ns": 159160
+      },
+      {
+        "bytes": 109,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "b"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 29,
+        "wall_ns": 175335
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 30,
+        "wall_ns": 161183
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 3,
+        "tick": 31,
+        "wall_ns": 190016
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 4,
+        "tick": 32,
+        "wall_ns": 147002
+      },
+      {
+        "bytes": 93,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 33,
+        "wall_ns": 77997
+      },
+      {
+        "bytes": 93,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "target": 2,
+        "tick": 34,
+        "wall_ns": 46390
+      },
+      {
+        "bytes": 93,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 3,
+        "target": 3,
+        "tick": 35,
+        "wall_ns": 41522
+      },
+      {
+        "bytes": 93,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 4,
+        "target": 4,
+        "tick": 36,
+        "wall_ns": 39420
+      },
+      {
+        "bytes": 89,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 37,
+        "wall_ns": 239802
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 2,
+        "target": 0,
+        "tick": 38,
+        "wall_ns": 414164
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 2,
+        "target": 3,
+        "tick": 39,
+        "wall_ns": 161763
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 3,
+        "target": 0,
+        "tick": 40,
+        "wall_ns": 191599
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 3,
+        "target": 0,
+        "tick": 41,
+        "wall_ns": 57437
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 3,
+        "target": 2,
+        "tick": 42,
+        "wall_ns": 158148
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 3,
+        "target": 2,
+        "tick": 43,
+        "wall_ns": 51027
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 3,
+        "target": 4,
+        "tick": 44,
+        "wall_ns": 140512
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 4,
+        "target": 4,
+        "tick": 45,
+        "wall_ns": 52699
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 46,
+        "wall_ns": 40141
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 47,
+        "wall_ns": 141543
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 48,
+        "wall_ns": 147051
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 2,
+        "target": 1,
+        "tick": 49,
+        "wall_ns": 185289
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 4,
+        "target": 1,
+        "tick": 50,
+        "wall_ns": 152150
+      },
+      {
+        "bytes": 87,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 1,
+        "target": 2,
+        "tick": 51,
+        "wall_ns": 189506
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 52,
+        "wall_ns": 123997
+      },
+      {
+        "bytes": 87,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 1,
+        "target": 0,
+        "tick": 53,
+        "wall_ns": 162415
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 54,
+        "wall_ns": 53650
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 2,
+        "target": 4,
+        "tick": 55,
+        "wall_ns": 144668
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 3,
+        "target": 3,
+        "tick": 56,
+        "wall_ns": 62304
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 3,
+        "target": 1,
+        "tick": 57,
+        "wall_ns": 150056
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 4,
+        "target": 0,
+        "tick": 58,
+        "wall_ns": 152710
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 4,
+        "target": 2,
+        "tick": 59,
+        "wall_ns": 146370
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 4,
+        "target": 3,
+        "tick": 60,
+        "wall_ns": 145389
+      },
+      {
+        "bytes": 87,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 1,
+        "target": 3,
+        "tick": 61,
+        "wall_ns": 260622
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 62,
+        "wall_ns": 63255
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 2,
+        "target": 4,
+        "tick": 63,
+        "wall_ns": 44256
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 4,
+        "target": 4,
+        "tick": 64,
+        "wall_ns": 39619
+      },
+      {
+        "bytes": 90,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 1,
+        "target": 0,
+        "tick": 65,
+        "wall_ns": 42694
+      },
+      {
+        "bytes": 87,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 1,
+        "target": 4,
+        "tick": 66,
+        "wall_ns": 149946
+      },
+      {
+        "bytes": 90,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 1,
+        "target": 4,
+        "tick": 67,
+        "wall_ns": 46620
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 2,
+        "target": 1,
+        "tick": 68,
+        "wall_ns": 42304
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 4,
+        "target": 2,
+        "tick": 69,
+        "wall_ns": 38248
+      },
+      {
+        "bytes": 90,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 1,
+        "target": 2,
+        "tick": 70,
+        "wall_ns": 38808
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 0,
+        "target": 4,
+        "tick": 71,
+        "wall_ns": 138799
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 2,
+        "target": 2,
+        "tick": 72,
+        "wall_ns": 46591
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 2,
+        "target": 2,
+        "tick": 73,
+        "wall_ns": 367964
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 3,
+        "target": 3,
+        "tick": 74,
+        "wall_ns": 295726
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 3,
+        "target": 4,
+        "tick": 75,
+        "wall_ns": 47151
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 4,
+        "target": 1,
+        "tick": 76,
+        "wall_ns": 40902
+      },
+      {
+        "bytes": 90,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 1,
+        "target": 3,
+        "tick": 77,
+        "wall_ns": 38588
+      },
+      {
+        "bytes": 90,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 78,
+        "wall_ns": 40851
+      },
+      {
+        "bytes": 91,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "merged"
+        },
+        "source": 0,
+        "target": 3,
+        "tick": 79,
+        "wall_ns": 163085
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 0,
+        "target": 3,
+        "tick": 80,
+        "wall_ns": 48583
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 0,
+        "target": 4,
+        "tick": 81,
+        "wall_ns": 39019
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 2,
+        "target": 0,
+        "tick": 82,
+        "wall_ns": 37036
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 2,
+        "target": 3,
+        "tick": 83,
+        "wall_ns": 50476
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 3,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 3,
+        "target": 1,
+        "tick": 84,
+        "wall_ns": 40842
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 4,
+        "target": 0,
+        "tick": 85,
+        "wall_ns": 33951
+      },
+      {
+        "bytes": 94,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 0,
+            "node": 4,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 4,
+        "target": 3,
+        "tick": 86,
+        "wall_ns": 32830
+      },
+      {
+        "bytes": 90,
+        "event": "rpc",
+        "request": {
+          "op": "merge",
+          "profile": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "response": {
+          "status": "unchanged"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 87,
+        "wall_ns": 35614
+      }
+    ]
+  },
+  "wall_seconds": 1.75470975799999
+}

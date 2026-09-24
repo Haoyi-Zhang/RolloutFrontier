@@ -1,0 +1,417 @@
+{
+  "cpu_seconds": 1.5674367679999999,
+  "dense_stress": {
+    "calls": 24,
+    "completed": 18,
+    "distinct_instances": 12,
+    "max_completed_states": 1731,
+    "max_frontier_size": 27,
+    "rejected": 6,
+    "rows": [
+      {
+        "branches": 3,
+        "certificate_checked": true,
+        "frontier_size": 1,
+        "owners": 2,
+        "product_mass": 9,
+        "seed": 3000,
+        "solver_wall_ns": 7199504,
+        "state_budget": 400,
+        "states": 148,
+        "status": "exact"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": true,
+        "frontier_size": 1,
+        "owners": 2,
+        "product_mass": 9,
+        "seed": 3000,
+        "solver_wall_ns": 6692142,
+        "state_budget": 2000,
+        "states": 148,
+        "status": "exact"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": true,
+        "frontier_size": 1,
+        "owners": 2,
+        "product_mass": 9,
+        "seed": 3001,
+        "solver_wall_ns": 7189669,
+        "state_budget": 400,
+        "states": 148,
+        "status": "exact"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": true,
+        "frontier_size": 1,
+        "owners": 2,
+        "product_mass": 9,
+        "seed": 3001,
+        "solver_wall_ns": 8882602,
+        "state_budget": 2000,
+        "states": 148,
+        "status": "exact"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": true,
+        "frontier_size": 1,
+        "owners": 2,
+        "product_mass": 9,
+        "seed": 3002,
+        "solver_wall_ns": 6667214,
+        "state_budget": 400,
+        "states": 148,
+        "status": "exact"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": true,
+        "frontier_size": 1,
+        "owners": 2,
+        "product_mass": 9,
+        "seed": 3002,
+        "solver_wall_ns": 6821916,
+        "state_budget": 2000,
+        "states": 148,
+        "status": "exact"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": false,
+        "frontier_size": null,
+        "owners": 3,
+        "product_mass": null,
+        "seed": 3000,
+        "solver_wall_ns": 10123976,
+        "state_budget": 400,
+        "states": null,
+        "status": "rejected_search_budget"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": true,
+        "frontier_size": 15,
+        "owners": 3,
+        "product_mass": 8,
+        "seed": 3000,
+        "solver_wall_ns": 37138351,
+        "state_budget": 2000,
+        "states": 716,
+        "status": "exact"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": false,
+        "frontier_size": null,
+        "owners": 3,
+        "product_mass": null,
+        "seed": 3001,
+        "solver_wall_ns": 9125026,
+        "state_budget": 400,
+        "states": null,
+        "status": "rejected_search_budget"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": true,
+        "frontier_size": 15,
+        "owners": 3,
+        "product_mass": 8,
+        "seed": 3001,
+        "solver_wall_ns": 46328215,
+        "state_budget": 2000,
+        "states": 716,
+        "status": "exact"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": false,
+        "frontier_size": null,
+        "owners": 3,
+        "product_mass": null,
+        "seed": 3002,
+        "solver_wall_ns": 9255382,
+        "state_budget": 400,
+        "states": null,
+        "status": "rejected_search_budget"
+      },
+      {
+        "branches": 3,
+        "certificate_checked": true,
+        "frontier_size": 15,
+        "owners": 3,
+        "product_mass": 8,
+        "seed": 3002,
+        "solver_wall_ns": 38822291,
+        "state_budget": 2000,
+        "states": 716,
+        "status": "exact"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": true,
+        "frontier_size": 4,
+        "owners": 2,
+        "product_mass": 9,
+        "seed": 3000,
+        "solver_wall_ns": 81966598,
+        "state_budget": 400,
+        "states": 336,
+        "status": "exact"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": true,
+        "frontier_size": 4,
+        "owners": 2,
+        "product_mass": 9,
+        "seed": 3000,
+        "solver_wall_ns": 38380437,
+        "state_budget": 2000,
+        "states": 336,
+        "status": "exact"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": true,
+        "frontier_size": 4,
+        "owners": 2,
+        "product_mass": 9,
+        "seed": 3001,
+        "solver_wall_ns": 37203599,
+        "state_budget": 400,
+        "states": 334,
+        "status": "exact"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": true,
+        "frontier_size": 4,
+        "owners": 2,
+        "product_mass": 9,
+        "seed": 3001,
+        "solver_wall_ns": 37713396,
+        "state_budget": 2000,
+        "states": 334,
+        "status": "exact"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": true,
+        "frontier_size": 8,
+        "owners": 2,
+        "product_mass": 6,
+        "seed": 3002,
+        "solver_wall_ns": 36835526,
+        "state_budget": 400,
+        "states": 300,
+        "status": "exact"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": true,
+        "frontier_size": 8,
+        "owners": 2,
+        "product_mass": 6,
+        "seed": 3002,
+        "solver_wall_ns": 41092550,
+        "state_budget": 2000,
+        "states": 300,
+        "status": "exact"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": false,
+        "frontier_size": null,
+        "owners": 3,
+        "product_mass": null,
+        "seed": 3000,
+        "solver_wall_ns": 34757846,
+        "state_budget": 400,
+        "states": null,
+        "status": "rejected_search_budget"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": true,
+        "frontier_size": 19,
+        "owners": 3,
+        "product_mass": 27,
+        "seed": 3000,
+        "solver_wall_ns": 250221580,
+        "state_budget": 2000,
+        "states": 1731,
+        "status": "exact"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": false,
+        "frontier_size": null,
+        "owners": 3,
+        "product_mass": null,
+        "seed": 3001,
+        "solver_wall_ns": 38253877,
+        "state_budget": 400,
+        "states": null,
+        "status": "rejected_search_budget"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": true,
+        "frontier_size": 27,
+        "owners": 3,
+        "product_mass": 12,
+        "seed": 3001,
+        "solver_wall_ns": 184711274,
+        "state_budget": 2000,
+        "states": 1314,
+        "status": "exact"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": false,
+        "frontier_size": null,
+        "owners": 3,
+        "product_mass": null,
+        "seed": 3002,
+        "solver_wall_ns": 38034147,
+        "state_budget": 400,
+        "states": null,
+        "status": "rejected_search_budget"
+      },
+      {
+        "branches": 4,
+        "certificate_checked": true,
+        "frontier_size": 26,
+        "owners": 3,
+        "product_mass": 12,
+        "seed": 3002,
+        "solver_wall_ns": 163943992,
+        "state_budget": 2000,
+        "states": 1267,
+        "status": "exact"
+      }
+    ]
+  },
+  "paired": {
+    "bootstrap_repetitions": 4000,
+    "bootstrap_seed": 20260923,
+    "by_family": [
+      {
+        "cases": 240,
+        "central_installed": 4084,
+        "conditional_percentile_95": [
+          0.2125,
+          0.8208333333333333
+        ],
+        "difference": 122,
+        "exact_installed": 3076,
+        "family": "capped-random",
+        "greedy_installed": 2954,
+        "mean_difference": 0.5083333333333333
+      },
+      {
+        "cases": 240,
+        "central_installed": 2896,
+        "conditional_percentile_95": [
+          -0.3125,
+          0.21260416666666704
+        ],
+        "difference": -12,
+        "exact_installed": 1477,
+        "family": "cycle",
+        "greedy_installed": 1489,
+        "mean_difference": -0.05
+      },
+      {
+        "cases": 240,
+        "central_installed": 0,
+        "conditional_percentile_95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0,
+        "exact_installed": 0,
+        "family": "diagonal",
+        "greedy_installed": 0,
+        "mean_difference": 0.0
+      },
+      {
+        "cases": 240,
+        "central_installed": 4304,
+        "conditional_percentile_95": [
+          0.3458333333333333,
+          1.0333333333333334
+        ],
+        "difference": 160,
+        "exact_installed": 3288,
+        "family": "planted",
+        "greedy_installed": 3128,
+        "mean_difference": 0.6666666666666666
+      },
+      {
+        "cases": 240,
+        "central_installed": 2336,
+        "conditional_percentile_95": [
+          0.14166666666666666,
+          0.7
+        ],
+        "difference": 98,
+        "exact_installed": 1918,
+        "family": "sparse",
+        "greedy_installed": 1820,
+        "mean_difference": 0.4083333333333333
+      },
+      {
+        "cases": 240,
+        "central_installed": 2550,
+        "conditional_percentile_95": [
+          -0.12916666666666668,
+          0.4083333333333333
+        ],
+        "difference": 34,
+        "exact_installed": 1497,
+        "family": "staircase",
+        "greedy_installed": 1463,
+        "mean_difference": 0.14166666666666666
+      }
+    ],
+    "cases": 1440,
+    "conditional_percentile_95": [
+      0.1708159722222222,
+      0.38682291666666674
+    ],
+    "exact_installed": 11256,
+    "fixed_families": [
+      "capped-random",
+      "cycle",
+      "diagonal",
+      "planted",
+      "sparse",
+      "staircase"
+    ],
+    "greedy_installed": 10854,
+    "interpretation": "conditional paired-seed resampling over six fixed synthetic families; not external-population uncertainty",
+    "mean_difference": 0.2791666666666667,
+    "seed_clusters": 240
+  },
+  "peak_rss_kib": 97964,
+  "schedule_counterexample": {
+    "alternative_installed": 200,
+    "alternative_mass": 2,
+    "claim": "no positive worst-case scheduled-install ratio for frozen maximum-product selection relative to another frozen safe product",
+    "frontier_members": 2,
+    "horizon": 100,
+    "proposals": 200,
+    "safety_violations": 0,
+    "selected_installed": 0,
+    "selected_mass": 3
+  },
+  "scope": "journal supplementary analysis of frozen implementation and synthetic domains",
+  "wall_seconds": 1.568311714999993
+}

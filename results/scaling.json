@@ -1,0 +1,23 @@
+{
+  "bound_checks": {
+    "local_library_bound_rejected": true,
+    "search_state_bound_rejected": true
+  },
+  "cases": 130,
+  "cpu_seconds": 0.323986063,
+  "dimensions": [
+    2,
+    3
+  ],
+  "max_frontier_size": 3,
+  "max_product_mass": 6,
+  "max_search_states": 35,
+  "median_search_states": 12,
+  "peak_rss_kib": 93988,
+  "profiles_per_owner": [
+    3,
+    8
+  ],
+  "scope": "bounded synthetic solver stress; timings are local component measurements",
+  "wall_seconds": 0.32587444400007826
+}

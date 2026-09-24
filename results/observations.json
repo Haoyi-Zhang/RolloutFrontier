@@ -1,0 +1,115 @@
+{
+  "cpu_seconds": 1.8576210140000002,
+  "delivered": 7655,
+  "paired_states": 576,
+  "peak_rss_kib": 98216,
+  "policies": {
+    "central-latest": {
+      "admitted": 450,
+      "feasible": 305,
+      "partition_queries": 264,
+      "queries": 576,
+      "unsafe_admission": 221,
+      "withheld_feasible": 76
+    },
+    "fresh-read": {
+      "admitted": 186,
+      "feasible": 305,
+      "partition_queries": 264,
+      "queries": 576,
+      "unsafe_admission": 0,
+      "withheld_feasible": 119
+    },
+    "generation-cache": {
+      "admitted": 354,
+      "feasible": 305,
+      "partition_queries": 264,
+      "queries": 576,
+      "unsafe_admission": 76,
+      "withheld_feasible": 27
+    },
+    "guarded": {
+      "admitted": 186,
+      "feasible": 305,
+      "partition_queries": 264,
+      "queries": 576,
+      "unsafe_admission": 0,
+      "withheld_feasible": 119
+    },
+    "intersection-only": {
+      "admitted": 265,
+      "feasible": 305,
+      "partition_queries": 264,
+      "queries": 576,
+      "unsafe_admission": 64,
+      "withheld_feasible": 104
+    },
+    "last-observation": {
+      "admitted": 375,
+      "feasible": 305,
+      "partition_queries": 264,
+      "queries": 576,
+      "unsafe_admission": 89,
+      "withheld_feasible": 19
+    },
+    "local-only": {
+      "admitted": 418,
+      "feasible": 305,
+      "partition_queries": 264,
+      "queries": 576,
+      "unsafe_admission": 137,
+      "withheld_feasible": 24
+    }
+  },
+  "read_race": {
+    "incompatible_before_use": true,
+    "observed_admission": true,
+    "trace": [
+      {
+        "bytes": 89,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "a"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 1,
+        "wall_ns": 320263
+      },
+      {
+        "bytes": 103,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": []
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": []
+          },
+          "status": "installed"
+        },
+        "source": 1,
+        "target": 1,
+        "tick": 2,
+        "wall_ns": 178359
+      }
+    ],
+    "update": "installed"
+  },
+  "serialized_bytes": 801946,
+  "tcp_connections_opened": 121,
+  "wall_seconds": 1.885048084999994
+}

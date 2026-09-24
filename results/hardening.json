@@ -1,0 +1,81 @@
+{
+  "atomic_install": {
+    "after_retirement": "installed",
+    "blocked_status": "blocked",
+    "change_atoms": 3,
+    "final_generation": 1,
+    "final_support": [
+      "b",
+      "c"
+    ],
+    "state_unchanged_while_blocked": true
+  },
+  "certificate_schemas": {
+    "canonical_envelope_options": true,
+    "rejected_mutations": [
+      "fixed-extra-top-level",
+      "fixed-extra-receipt",
+      "fixed-spurious-mode",
+      "fixed-boolean-origin",
+      "envelope-extra-top-level",
+      "envelope-extra-receipt",
+      "envelope-duplicate-option",
+      "envelope-redundant-option",
+      "frontier-extra-top-level",
+      "frontier-extra-member-field",
+      "frontier-extra-certificate-field",
+      "frontier-extra-objective-field"
+    ],
+    "strict_unknown_fields": true,
+    "valid_certificates": 3
+  },
+  "cpu_seconds": 0.09978425000000002,
+  "endpoint_state": {
+    "rejected_states": [
+      "endpoint-policy-mismatch",
+      "endpoint-window-mismatch",
+      "endpoint-extra-state-field",
+      "endpoint-boolean-floor",
+      "endpoint-duplicate-support",
+      "endpoint-self-profile-mismatch",
+      "endpoint-extra-hold-field",
+      "endpoint-slot-outside-window",
+      "endpoint-extra-state-row",
+      "endpoint-missing-canonical-row",
+      "endpoint-shadow-schema-column"
+    ],
+    "valid_reopen": true
+  },
+  "origin_state": {
+    "rejected_states": [
+      "origin-node-count-mismatch",
+      "origin-window-mismatch",
+      "origin-policy-mismatch",
+      "origin-identity-mismatch",
+      "origin-boolean-next",
+      "origin-extra-state-field",
+      "origin-boolean-attempt-sequence",
+      "origin-extra-state-row",
+      "origin-missing-canonical-row",
+      "origin-shadow-schema-column",
+      "origin-duplicate-manifest",
+      "origin-extra-certificate-field"
+    ],
+    "valid_reopen": true
+  },
+  "peak_rss_kib": 98472,
+  "rpc_serialization": {
+    "allowed_outcomes": [
+      "held/blocked",
+      "missing/installed"
+    ],
+    "caller_support_alias_detached": true,
+    "concurrent_prepare_install_pairs": 64,
+    "delayed_queue_request_snapshot": true,
+    "invariant_violations": 0,
+    "rejected_unknown_field_requests": 7,
+    "rpc_trace_request_snapshot": true,
+    "scope": "two TCP clients, one serialized endpoint; not multi-writer origin failover"
+  },
+  "wall_seconds": 0.10194588399997428
+}
