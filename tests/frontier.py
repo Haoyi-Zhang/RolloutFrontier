@@ -1,5 +1,6 @@
 """Independent finite oracle for the exact positive-envelope frontier."""
 from __future__ import annotations
+import copy
 from itertools import combinations
 import json
 import resource
@@ -14,10 +15,56 @@ def subsets_containing(values, required):
             for choice in combinations(others, k)]
 
 
+def direct_relation_frontier(pairs, seed_left, seed_right):
+    """Derive the complete seeded frontier directly from the binary relation.
+
+    This oracle does not call the producer's guard library, dominance routine,
+    or certificate reconstruction.  In the singleton-profile 3x3 domain, every
+    safe rectangle is exactly a pair of row/column subsets containing the seed.
+    """
+    profiles = [0, 1, 2]
+    safe = []
+    for left in subsets_containing(profiles, seed_left):
+        for right in subsets_containing(profiles, seed_right):
+            if all((i, j) in pairs for i in left for j in right):
+                left_values, right_values = sorted(left), sorted(right)
+                safe.append(dict(
+                    left=frozenset(left_values), right=frozenset(right_values),
+                    external=dict(
+                        box={"0": [[f"a{i}"] for i in left_values],
+                             "1": [[f"b{j}"] for j in right_values]},
+                        product_mass=len(left_values) * len(right_values),
+                        local_masses={"0": len(left_values), "1": len(right_values)},
+                        accepted_unique_profiles={"0": len(left_values),
+                                                  "1": len(right_values)},
+                        accepted_profiles={"0": [[f"a{i}"] for i in left_values],
+                                           "1": [[f"b{j}"] for j in right_values]},
+                        guard_terms=len(left_values) + len(right_values),
+                    )))
+    nondominated = []
+    for record in safe:
+        dominated = any(
+            other is not record and
+            other["left"].issuperset(record["left"]) and
+            other["right"].issuperset(record["right"]) and
+            (other["left"] != record["left"] or other["right"] != record["right"])
+            for other in safe)
+        if not dominated:
+            nondominated.append(record["external"])
+    frontier = sorted(
+        nondominated,
+        key=lambda item: (-item["product_mass"], item["guard_terms"],
+                          tuple((node, tuple(tuple(option) for option in item["box"][node]))
+                                for node in ("0", "1"))))
+    return len(safe), frontier
+
+
 def relation_oracle():
     profiles = [0, 1, 2]
     cases = safe_boxes = 0
-    states = frontier_total = 0
+    states = returned_frontier_total = independent_frontier_total = 0
+    complete_frontier_matches = 0
+    deleted_member_mutation = None
     # All nonempty 3x3 relations representable by the eight-branch manifest bound.
     for bits in range(1, 511):
         pairs = {(i, j) for i in profiles for j in profiles if bits & (1 << (3 * i + j))}
@@ -30,32 +77,43 @@ def relation_oracle():
             assert plan['exact'] and plan['certificate']['safe']
             assert safe_envelope(branches, plan['box'])
             assert frontier_certificate(branches, current, candidates, plan)
-            optimum = 0
-            maximal = []
-            for left in subsets_containing(profiles, seed_left):
-                for right in subsets_containing(profiles, seed_right):
-                    if all((i, j) in pairs for i in left for j in right):
-                        volume = len(left) * len(right)
-                        optimum = max(optimum, volume)
-                        safe_boxes += 1
-                        maximal.append((left, right))
+            case_safe_boxes, expected_frontier = direct_relation_frontier(
+                pairs, seed_left, seed_right)
+            safe_boxes += case_safe_boxes
+            optimum = max(member['product_mass'] for member in expected_frontier)
             assert plan['product_mass'] == optimum
-            # Returned finite frontier members must be pairwise nondominating.
-            masks = []
-            for item in plan['frontier']:
-                accepted = tuple(frozenset(tuple(x) for x in item['accepted_profiles'][n])
-                                 for n in ('0', '1'))
-                masks.append(accepted)
-            for i, left in enumerate(masks):
-                for j, right in enumerate(masks):
-                    if i != j:
-                        assert not all(a.issuperset(b) for a, b in zip(left, right))
+            # Compare every field of every member, not merely the optimum or an
+            # aggregate count.  This catches a producer that silently omits a
+            # valid but nonselected nondominated rectangle.
+            assert plan['frontier'] == expected_frontier
+            assert plan['frontier_size'] == len(expected_frontier)
+            complete_frontier_matches += 1
+            if deleted_member_mutation is None and len(plan['frontier']) > 1:
+                selected = {key: plan[key] for key in (
+                    'box', 'product_mass', 'local_masses', 'accepted_unique_profiles',
+                    'accepted_profiles', 'guard_terms')}
+                index = next(i for i, member in enumerate(plan['frontier'])
+                             if member != selected)
+                mutant = copy.deepcopy(plan)
+                removed = mutant['frontier'].pop(index)
+                mutant['frontier_size'] -= 1
+                assert not frontier_certificate(branches, current, candidates, mutant)
+                deleted_member_mutation = dict(
+                    relation_bits=bits, seed=[seed_left, seed_right],
+                    removed_product_mass=removed['product_mass'],
+                    remaining_members=mutant['frontier_size'], rejected=True)
             cases += 1
             states += plan['search']['states']
-            frontier_total += plan['frontier_size']
+            returned_frontier_total += plan['frontier_size']
+            independent_frontier_total += len(expected_frontier)
+    assert deleted_member_mutation is not None
     return dict(relations=510, seeded_relations=cases, independently_enumerated_safe_boxes=safe_boxes,
-                planner_search_states=states, returned_frontier_members=frontier_total,
-                oracle='enumerate all seeded row/column subsets and direct relation membership')
+                planner_search_states=states, returned_frontier_members=returned_frontier_total,
+                complete_frontier_cases_compared=complete_frontier_matches,
+                independently_derived_frontier_members=independent_frontier_total,
+                deleted_nonselected_member_mutation=deleted_member_mutation,
+                oracle=('enumerate every seeded safe row/column rectangle, independently remove '
+                        'dominated rectangles, and compare each complete frontier record'))
 
 
 def greedy_counterexample():

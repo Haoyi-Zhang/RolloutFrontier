@@ -156,6 +156,8 @@ def main():
     after=resource.getrusage(resource.RUSAGE_CHILDREN)
     report=dict(status='completed',runs=records,numeric_claim_bindings_verified=bindings_verified,semantic_reference=('matched' if reference else 'not-requested'),
         compared_files=matched,generated_files=sorted(required),
+        independently_replayed_trace_files=['network-trace.jsonl'],
+        reference_compared_trace_files=['network-trace.jsonl','observation-trace.jsonl'],
         comparison_excludes=sorted(TIME_FIELDS),
         limits=dict(affinity_cores=1,child_address_space_bytes=MEMORY,job_wall_timeout_seconds=120,
                     job_cpu_soft_seconds=90,maximum_simultaneous_project_processes=7, theoretical_aggregate_address_space_bytes=7*MEMORY),

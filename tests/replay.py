@@ -143,7 +143,10 @@ def check(path: Path, table: Path) -> dict:
     assert all(controls[p] == 0 for p in ('epoch','branch','envelope','frontier'))
     assert controls['marginal'] > 0 and controls['unguarded'] > 0
     return dict(cases=cases, checked_rpc=checked, serialized_bytes=bytes_,
-                incompatible_snapshots=controls, scope='full network campaign trace, separate state reconstruction')
+                incompatible_snapshots=controls,
+                independently_replayed_trace='network-trace.jsonl',
+                aggregate_reference_table='network.csv',
+                scope='full network campaign trace, separate state reconstruction')
 
 if __name__ == '__main__':
     import sys

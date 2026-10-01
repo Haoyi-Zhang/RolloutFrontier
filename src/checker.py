@@ -216,6 +216,124 @@ def valid_manifest(branches: list[dict[str, list[str]]]) -> bool:
         return False
 
 
+def _strict_int(value: Any, minimum: int = 0, maximum: int | None = None) -> bool:
+    """Reject Python's bool/int aliasing and numerically equal floats."""
+    return (type(value) is int and value >= minimum and
+            (maximum is None or value <= maximum))
+
+
+def _canonical_atoms(value: Any, cap: int = 12_000) -> bool:
+    return (isinstance(value, list) and len(value) <= cap and
+            all(isinstance(atom, str) and 1 <= len(atom) <= 512 for atom in value) and
+            value == sorted(set(value)))
+
+
+def _valid_frontier_box(value: Any, nodes: list[str]) -> bool:
+    if not isinstance(value, dict) or set(value) != set(nodes):
+        return False
+    corners = 1
+    for node in nodes:
+        options = value[node]
+        if not isinstance(options, list) or not 1 <= len(options) <= 8:
+            return False
+        tuples = []
+        for option in options:
+            if not _canonical_atoms(option):
+                return False
+            tuples.append(tuple(option))
+        if tuples != sorted(set(tuples)):
+            return False
+        if any(set(other) < set(option) for option in tuples for other in tuples):
+            return False
+        corners *= len(options)
+        if corners > 4096:
+            return False
+    return True
+
+
+def _valid_candidate_domains(value: Any, nodes: list[str]) -> bool:
+    if not isinstance(value, dict) or set(value) != set(nodes):
+        return False
+    for node in nodes:
+        profiles = value[node]
+        if not isinstance(profiles, list) or not 1 <= len(profiles) <= 9:
+            return False
+        tuples = []
+        for profile in profiles:
+            if not _canonical_atoms(profile):
+                return False
+            tuples.append(tuple(profile))
+        if tuples != sorted(set(tuples)):
+            return False
+    return True
+
+
+def _valid_frontier_member(value: Any, nodes: list[str],
+                           domains: dict[str, list[list[str]]]) -> bool:
+    expected = {"box", "product_mass", "local_masses", "accepted_unique_profiles",
+                "accepted_profiles", "guard_terms"}
+    if not isinstance(value, dict) or set(value) != expected:
+        return False
+    if not _valid_frontier_box(value["box"], nodes):
+        return False
+    if not _strict_int(value["product_mass"], 0):
+        return False
+    if (not isinstance(value["local_masses"], dict) or
+            set(value["local_masses"]) != set(nodes)):
+        return False
+    if (not isinstance(value["accepted_unique_profiles"], dict) or
+            set(value["accepted_unique_profiles"]) != set(nodes)):
+        return False
+    if (not isinstance(value["accepted_profiles"], dict) or
+            set(value["accepted_profiles"]) != set(nodes)):
+        return False
+    for node in nodes:
+        if not _strict_int(value["local_masses"][node], 0, 8 * 10**9):
+            return False
+        domain = [tuple(profile) for profile in domains[node]]
+        count = value["accepted_unique_profiles"][node]
+        if not _strict_int(count, 1, len(domain)):
+            return False
+        profiles = value["accepted_profiles"][node]
+        if not isinstance(profiles, list) or len(profiles) != count:
+            return False
+        tuples = []
+        for profile in profiles:
+            if not _canonical_atoms(profile) or tuple(profile) not in domain:
+                return False
+            tuples.append(tuple(profile))
+        if tuples != sorted(set(tuples)):
+            return False
+    if not _strict_int(value["guard_terms"], 1, 48):
+        return False
+    if value["guard_terms"] != sum(len(value["box"][node]) for node in nodes):
+        return False
+    return value["product_mass"] == prod_int(
+        value["local_masses"][node] for node in nodes)
+
+
+def _valid_search(value: Any, combination_bound: int) -> bool:
+    fields = {"states", "complete", "safe_complete", "unsafe_pruned", "corner_pruned"}
+    if not isinstance(value, dict) or set(value) != fields:
+        return False
+    if not _strict_int(value["states"], 1, combination_bound):
+        return False
+    if not _strict_int(value["complete"], 1, value["states"]):
+        return False
+    if not _strict_int(value["safe_complete"], 1, value["complete"]):
+        return False
+    if value["safe_complete"] != value["complete"]:
+        return False
+    return (_strict_int(value["unsafe_pruned"], 0) and
+            _strict_int(value["corner_pruned"], 0))
+
+
+def _valid_frontier_certificate(value: Any) -> bool:
+    return (isinstance(value, dict) and set(value) == {"safe", "corners"} and
+            type(value["safe"]) is bool and value["safe"] is True and
+            _strict_int(value["corners"], 1, 4096))
+
+
 def frontier_certificate(branches: list[dict[str, list[str]]], current: dict[str, list[str]],
                          candidates: dict[str, list[list[str]]], plan: dict[str, Any],
                          weights: dict[str, list[int]] | None = None,
@@ -395,6 +513,33 @@ def frontier_certificate(branches: list[dict[str, list[str]]], current: dict[str
             "search", "objective", "candidate_domains", "certificate", "exact", "scope",
         }
         if set(plan) != expected_plan_fields:
+            return False
+        selected_view = {field: plan[field] for field in (
+            "box", "product_mass", "local_masses", "accepted_unique_profiles",
+            "accepted_profiles", "guard_terms")}
+        if not _valid_candidate_domains(plan["candidate_domains"], nodes):
+            return False
+        if not _valid_frontier_member(selected_view, nodes, plan["candidate_domains"]):
+            return False
+        if (not isinstance(plan["frontier"], list) or
+                not 1 <= len(plan["frontier"]) <= 4096 or
+                any(not _valid_frontier_member(member, nodes, plan["candidate_domains"])
+                    for member in plan["frontier"])):
+            return False
+        if (not _strict_int(plan["frontier_size"], 1, 4096) or
+                plan["frontier_size"] != len(plan["frontier"])):
+            return False
+        if not _valid_search(plan["search"], combination_bound):
+            return False
+        if not _valid_frontier_certificate(plan["certificate"]):
+            return False
+        if (not isinstance(plan["objective"], dict) or
+                set(plan["objective"]) != set(expected_objective) or
+                any(not isinstance(value, str) for value in plan["objective"].values())):
+            return False
+        if type(plan["exact"]) is not bool or plan["exact"] is not True:
+            return False
+        if not isinstance(plan["scope"], str):
             return False
         for field, value in expected_best.items():
             if plan.get(field) != value:

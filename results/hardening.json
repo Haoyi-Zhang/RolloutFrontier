@@ -26,10 +26,34 @@
       "frontier-extra-certificate-field",
       "frontier-extra-objective-field"
     ],
+    "rejected_numeric_type_aliases": [
+      "selected-frontier-size-true",
+      "selected-product-mass-true",
+      "selected-product-mass-float",
+      "selected-local-mass-true",
+      "selected-count-float",
+      "selected-guard-terms-float",
+      "member-product-mass-true",
+      "member-local-mass-float",
+      "member-count-float",
+      "member-guard-terms-float",
+      "search-zero-false",
+      "search-states-float",
+      "certificate-safe-one",
+      "certificate-corners-float",
+      "exact-one",
+      "selected-frontier-size-zero",
+      "selected-product-mass-negative",
+      "selected-count-zero",
+      "member-guard-terms-zero",
+      "search-states-zero",
+      "certificate-corners-zero"
+    ],
+    "strict_numeric_types": true,
     "strict_unknown_fields": true,
-    "valid_certificates": 3
+    "valid_certificates": 4
   },
-  "cpu_seconds": 0.09978425000000002,
+  "cpu_seconds": 0.09569898000000004,
   "endpoint_state": {
     "rejected_states": [
       "endpoint-policy-mismatch",
@@ -45,6 +69,22 @@
       "endpoint-shadow-schema-column"
     ],
     "valid_reopen": true
+  },
+  "fixed_branch_cleanup": {
+    "attempts_after_failed_close": 1,
+    "blocked_link": [
+      0,
+      1
+    ],
+    "branches": 2,
+    "delayed_hold_retired_after_healing": true,
+    "delayed_prepare_after_cleanup": "closed",
+    "delayed_prepare_before_cleanup": "held",
+    "duplicate_manifest_records": 0,
+    "fallback_stopped_at_branch": 0,
+    "reopen_succeeded": true,
+    "unresolved_retained_during_partition": true,
+    "window": 2
   },
   "origin_state": {
     "rejected_states": [
@@ -63,7 +103,7 @@
     ],
     "valid_reopen": true
   },
-  "peak_rss_kib": 98472,
+  "peak_rss_kib": 98688,
   "rpc_serialization": {
     "allowed_outcomes": [
       "held/blocked",
@@ -77,5 +117,5 @@
     "rpc_trace_request_snapshot": true,
     "scope": "two TCP clients, one serialized endpoint; not multi-writer origin failover"
   },
-  "wall_seconds": 0.10194588399997428
+  "wall_seconds": 0.09455327099999522
 }

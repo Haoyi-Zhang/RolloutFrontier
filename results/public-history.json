@@ -4,7 +4,7 @@
     34
   ],
   "boundary_presence_checks": 48,
-  "cpu_seconds": 0.00399996800000002,
+  "cpu_seconds": 0.0,
   "declaration_facts": 24,
   "distinct_introduction_levels": 18,
   "generated_lower_bound_distribution": {
@@ -25,8 +25,9 @@
     "9": 1
   },
   "generated_reference_sets": 96,
-  "lower_bound_checks": 192,
-  "peak_rss_kib": 93224,
+  "lower_bound_assertions": 192,
+  "lower_bound_computations": 96,
+  "peak_rss_kib": 92836,
   "scope": "curated official class-introduction metadata and generated reference sets; not an SDK corpus, real application sample, Android execution, behavioral equivalence, or production workload",
   "seed": 20260912,
   "source_file": "data/android-class-introductions.csv",
@@ -117,5 +118,5 @@
       "unsafe_pruned": 18
     }
   },
-  "wall_seconds": 0.001832250000006752
+  "wall_seconds": 0.0018915950000746307
 }

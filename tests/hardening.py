@@ -56,6 +56,20 @@ def certificate_schemas() -> dict:
     plan = frontier_synthesize(frontier_branches, current, candidates)
     assert frontier_certificate(frontier_branches, current, candidates, plan)
 
+    # A one-owner result exposes Python's numeric equality aliases most directly:
+    # True == 1, False == 0, and 1.0 == 1.  The checker must reject those
+    # substitutions even when ordinary dictionary equality would accept them.
+    typed_branches = [{"0": ["a"]}, {"0": ["b"]}]
+    typed_current = {"0": ["a"]}
+    typed_candidates = {"0": [["a"], ["b"]]}
+    typed_weights = {"0": [1, 0]}
+    typed_plan = frontier_synthesize(
+        typed_branches, typed_current, typed_candidates, weights=typed_weights)
+    assert typed_plan["frontier_size"] == 1
+    assert frontier_certificate(
+        typed_branches, typed_current, typed_candidates, typed_plan,
+        weights=typed_weights)
+
     rejected: list[str] = []
 
     def fixed_mutation(name, mutate):
@@ -86,8 +100,41 @@ def certificate_schemas() -> dict:
     frontier_mutation("frontier-extra-certificate-field", lambda p: p["certificate"].__setitem__("ignored", 1))
     frontier_mutation("frontier-extra-objective-field", lambda p: p["objective"].__setitem__("ignored", 1))
 
-    return dict(valid_certificates=3, rejected_mutations=rejected,
-                strict_unknown_fields=True, canonical_envelope_options=True)
+    type_rejected: list[str] = []
+
+    def typed_mutation(name, mutate):
+        value = copy.deepcopy(typed_plan); mutate(value)
+        assert not frontier_certificate(
+            typed_branches, typed_current, typed_candidates, value,
+            weights=typed_weights)
+        type_rejected.append(name)
+
+    typed_mutation("selected-frontier-size-true", lambda p: p.__setitem__("frontier_size", True))
+    typed_mutation("selected-product-mass-true", lambda p: p.__setitem__("product_mass", True))
+    typed_mutation("selected-product-mass-float", lambda p: p.__setitem__("product_mass", 1.0))
+    typed_mutation("selected-local-mass-true", lambda p: p["local_masses"].__setitem__("0", True))
+    typed_mutation("selected-count-float", lambda p: p["accepted_unique_profiles"].__setitem__("0", 2.0))
+    typed_mutation("selected-guard-terms-float", lambda p: p.__setitem__("guard_terms", 2.0))
+    typed_mutation("member-product-mass-true", lambda p: p["frontier"][0].__setitem__("product_mass", True))
+    typed_mutation("member-local-mass-float", lambda p: p["frontier"][0]["local_masses"].__setitem__("0", 1.0))
+    typed_mutation("member-count-float", lambda p: p["frontier"][0]["accepted_unique_profiles"].__setitem__("0", 2.0))
+    typed_mutation("member-guard-terms-float", lambda p: p["frontier"][0].__setitem__("guard_terms", 2.0))
+    typed_mutation("search-zero-false", lambda p: p["search"].__setitem__("corner_pruned", False))
+    typed_mutation("search-states-float", lambda p: p["search"].__setitem__("states", 3.0))
+    typed_mutation("certificate-safe-one", lambda p: p["certificate"].__setitem__("safe", 1))
+    typed_mutation("certificate-corners-float", lambda p: p["certificate"].__setitem__("corners", 2.0))
+    typed_mutation("exact-one", lambda p: p.__setitem__("exact", 1))
+    typed_mutation("selected-frontier-size-zero", lambda p: p.__setitem__("frontier_size", 0))
+    typed_mutation("selected-product-mass-negative", lambda p: p.__setitem__("product_mass", -1))
+    typed_mutation("selected-count-zero", lambda p: p["accepted_unique_profiles"].__setitem__("0", 0))
+    typed_mutation("member-guard-terms-zero", lambda p: p["frontier"][0].__setitem__("guard_terms", 0))
+    typed_mutation("search-states-zero", lambda p: p["search"].__setitem__("states", 0))
+    typed_mutation("certificate-corners-zero", lambda p: p["certificate"].__setitem__("corners", 0))
+
+    return dict(valid_certificates=4, rejected_mutations=rejected,
+                rejected_numeric_type_aliases=type_rejected,
+                strict_unknown_fields=True, canonical_envelope_options=True,
+                strict_numeric_types=True)
 
 
 def update_payload(path: Path, mutate: Callable[[dict], None]) -> None:
@@ -271,6 +318,78 @@ def atomic_installation() -> dict:
                 final_support=endpoint.state["support"], final_generation=1)
 
 
+async def fixed_branch_cleanup_recovery(root: Path) -> dict:
+    """Regression for uncertain branch cleanup followed by origin restart.
+
+    A lost prepare can still be delivered after the origin has observed failure.
+    Therefore a failed close must retain one durable attempt and stop fallback to
+    the next branch for the same manifest.  Healing then closes a deliberately
+    injected late hold, and the closed floor rejects another delayed prepare.
+    """
+    branches = [
+        {"0": ["a"], "1": ["a"]},
+        {"0": ["a"], "1": ["b"]},
+    ]
+    network = Network(root, [["a"], ["a"]], window=2)
+    await network.start()
+    client = Client(network, origin=0)
+    reopened = None
+    try:
+        network.blocked.add((0, 1))
+        answer = await client.acquire("m", branches)
+        assert answer["status"] == "not-justified"
+        assert answer["reasons"][-1] == {
+            "branch": 0, "reason": "retirement-unconfirmed"}
+        assert client.state["serial"] == 1
+        assert client.state["next"] == [1, 1]
+        assert len(client.state["attempts"]) == 1
+        key, record = next(iter(client.state["attempts"].items()))
+        assert key == "1" and record == {
+            "status": "retiring", "manifest": "m",
+            "sequences": {"0": 1, "1": 1}}
+
+        # Reopen must accept the unique unresolved record. Recovery while the
+        # partition remains cannot delete it merely because node 0 confirmed.
+        client.disconnect()
+        client = None
+        reopened = Client(network, origin=0)
+        assert len(reopened.state["attempts"]) == 1
+        await reopened.recover()
+        assert len(reopened.state["attempts"]) == 1
+
+        # The originally lost prepare may arrive once communication heals. It
+        # becomes a real hold and must be retired using the preserved record.
+        network.blocked.clear()
+        delayed_request = dict(op="prepare", origin=0, sequence=1,
+                               manifest="m", requires=["a"])
+        delayed = await network.rpc(0, 1, delayed_request)
+        assert delayed["status"] == "held"
+        assert network.nodes[1].state["slots"]["0:1"]["status"] == "held"
+        await reopened.recover()
+        assert reopened.state["attempts"] == {}
+        assert network.nodes[1].state["floor"][0] == 1
+        assert "0:1" not in network.nodes[1].state["slots"]
+
+        late_again = await network.rpc(0, 1, delayed_request)
+        assert late_again["status"] == "closed"
+        assert "0:1" not in network.nodes[1].state["slots"]
+        return dict(
+            branches=len(branches), window=2, blocked_link=[0, 1],
+            attempts_after_failed_close=1, fallback_stopped_at_branch=0,
+            reopen_succeeded=True, unresolved_retained_during_partition=True,
+            delayed_prepare_before_cleanup=delayed["status"],
+            delayed_hold_retired_after_healing=True,
+            delayed_prepare_after_cleanup=late_again["status"],
+            duplicate_manifest_records=0,
+        )
+    finally:
+        if client is not None:
+            client.disconnect()
+        if reopened is not None:
+            reopened.disconnect()
+        await network.stop()
+
+
 async def raw_pair(port: int, first: dict, second: dict) -> tuple[dict, dict]:
     reader_a, writer_a = await asyncio.open_connection("127.0.0.1", port)
     reader_b, writer_b = await asyncio.open_connection("127.0.0.1", port)
@@ -359,6 +478,8 @@ def run() -> dict:
             endpoint_state=endpoint_state_validation(root / "endpoint"),
             origin_state=client_state_validation(root / "origin"),
             atomic_install=atomic_installation(),
+            fixed_branch_cleanup=asyncio.run(
+                fixed_branch_cleanup_recovery(root / "fixed-branch-cleanup")),
             rpc_serialization=asyncio.run(rpc_and_serialization(root / "rpc")),
         )
     result.update(

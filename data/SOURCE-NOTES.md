@@ -23,11 +23,12 @@ corpus. It is therefore unsuitable for prevalence or representativeness claims.
 
 `tests/public_history.py` uses only the retained CSV. It verifies uniqueness and URL
 shape, checks that each declaration is absent immediately before and present at its
-recorded first level, generates 96 deterministic reference sets, and checks both the
-computed and an independent assembly-time lower bound (192 lower-bound checks). It
-also feeds the declarations into a separately labeled synthetic five-owner frontier
-fixture. These operations test source plumbing and finite logic; they do not execute
-Android or establish compatibility.
+recorded first level, and generates 96 deterministic reference sets. The test invokes
+one lower-bound implementation once per set (96 computations) and performs two
+properties per result (192 boundary/minimality assertions). It does not contain a
+second independent lower-bound implementation. The declarations also feed a
+separately labeled synthetic five-owner frontier fixture. These operations test source
+plumbing and finite logic; they do not execute Android or establish compatibility.
 
 ## Four VibrationEffect factory facts
 

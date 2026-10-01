@@ -56,9 +56,11 @@ and guard-corner safety.
 
 The retained exact domains include:
 
-- all 510 nonempty representable 3x3 relations and 2,295 seeded instances;
-- 9,369 directly enumerated safe boxes, 3,222 returned frontier members, and 19,071
-  planner states in that exhaustive domain;
+- all 510 nonempty representable 3x3 relations and 2,295 seeded instances, with the
+  complete returned frontier compared record by record to a direct rectangle oracle;
+- 9,369 independently enumerated safe boxes, 3,222 independently derived and 3,222
+  returned frontier members, and 19,071 planner states in that exhaustive domain;
+- a negative mutation that deletes a valid nonselected frontier member and is rejected;
 - 480 sparse seeded 4x4/5x5 cases and 192 sparse seeded 3x3x3 cases checked against
   independent subset oracles;
 - a high-pruning case with 260,876 raw local-choice combinations but 37 visited
@@ -106,25 +108,35 @@ holdout families and retains all 24 denser bounded-synthesis calls. It also exec
 200-proposal witness for the theorem that maximum candidate-product mass does not have
 a positive worst-case update-throughput ratio against another frozen safe product.
 
-`tests/replay.py` imports neither planner nor controller and reconstructs 40,992
-request/reply exchanges and 4,494,882 canonical serialized application bytes.
+`tests/replay.py` imports neither planner nor controller and reconstructs the network
+campaign's 40,992 request/reply exchanges and 4,494,882 canonical serialized
+application bytes. The top-level reproduction runner independently performs a second
+layer of assurance by comparing both `network-trace.jsonl` and
+`observation-trace.jsonl` record by record against retained semantic references; the
+observation trace is not claimed to have a separate state-machine replayer.
 `tests/multiprocess.py` uses five same-host owner processes and five SQLite files,
 records 89 RPCs, one origin reopen, and three SIGKILL events, and exercises restart,
 partitioned retirement, delayed prepare, and cleanup. This is not a WAN, power-loss,
 or independent-machine experiment.
 
-`tests/hardening.py` rejects certificate-schema mutations, malformed persistent stores,
-and unknown-field RPCs; checks async input detachment and 64 serialized two-client
-schedules; and verifies that a blocked three-contract update is atomic. These are
-implementation regressions, not Byzantine or permanent-disk-loss evidence.
+`tests/hardening.py` rejects 12 certificate-structure mutations and 21 Boolean,
+floating-point, or out-of-range substitutions across the selected plan, every frontier
+member, search metadata, and nested certificate. It also rejects malformed persistent
+stores and unknown-field RPCs, checks async input detachment and 64 serialized
+two-client schedules, and verifies that a blocked three-contract update is atomic. A
+two-owner fixed-branch interruption retains one unresolved manifest record, stops
+fallback when close is unconfirmed, reopens successfully, retires a delayed hold after
+healing, and rejects its later resurrection. These are implementation regressions, not
+Byzantine or permanent-disk-loss evidence.
 
 ## Public input boundary
 
 `data/android-class-introductions.csv` contains 24 curated class-introduction facts
 spanning API 8--34 at 18 introduction levels. `data/android-history.csv` contains four
-VibrationEffect factory facts. Tests perform declaration-presence boundaries and
-constructed assembly-time lower-bound recomputations. The slice is not random or
-representative and does not establish behavioral API compatibility.
+VibrationEffect factory facts. Tests perform 48 declaration-presence boundary checks and generate 96 reference sets.
+One implementation performs 96 lower-bound computations and then two checks per result,
+for 192 boundary/minimality assertions. The slice is not random or representative and
+does not establish behavioral API compatibility.
 
 The repository contains no complete AOSP API-history corpus, APK collection, SDK
 binary, emulator, device, production trace, or private application data. Immutable

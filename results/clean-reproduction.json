@@ -1,5 +1,5 @@
 {
-  "children_cpu_seconds": 32.126294,
+  "children_cpu_seconds": 27.931327,
   "compared_files": [
     "unit.json",
     "pilot.json",
@@ -66,7 +66,10 @@
     "scaling.json",
     "unit.json"
   ],
-  "largest_child_peak_rss_kib": 105956,
+  "independently_replayed_trace_files": [
+    "network-trace.jsonl"
+  ],
+  "largest_child_peak_rss_kib": 105960,
   "limits": {
     "affinity_cores": 1,
     "child_address_space_bytes": 536870912,
@@ -76,7 +79,11 @@
     "theoretical_aggregate_address_space_bytes": 3758096384
   },
   "numeric_claim_bindings_verified": 33,
-  "parent_cpu_seconds": 0.7334336090000001,
+  "parent_cpu_seconds": 0.735169117,
+  "reference_compared_trace_files": [
+    "network-trace.jsonl",
+    "observation-trace.jsonl"
+  ],
   "runs": [
     {
       "command": [
@@ -86,10 +93,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 0.020003981000000004,
-      "reported_peak_rss_kib": 97324,
+      "reported_cpu_seconds": 0.016000561000000024,
+      "reported_peak_rss_kib": 96556,
       "stderr": "",
-      "wall_seconds": 0.632399808999935
+      "wall_seconds": 0.5493216720000191
     },
     {
       "command": [
@@ -99,10 +106,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 0.03996450800000001,
-      "reported_peak_rss_kib": 96680,
+      "reported_cpu_seconds": 0.03595231900000001,
+      "reported_peak_rss_kib": 96288,
       "stderr": "",
-      "wall_seconds": 0.6360226399999647
+      "wall_seconds": 0.594600129000014
     },
     {
       "command": [
@@ -112,10 +119,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 1.149996366,
-      "reported_peak_rss_kib": 94756,
+      "reported_cpu_seconds": 1.115738368,
+      "reported_peak_rss_kib": 93988,
       "stderr": "",
-      "wall_seconds": 1.745073390000016
+      "wall_seconds": 1.6586425469999995
     },
     {
       "command": [
@@ -125,10 +132,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 1.15544486,
-      "reported_peak_rss_kib": 95528,
+      "reported_cpu_seconds": 1.171893506,
+      "reported_peak_rss_kib": 94888,
       "stderr": "",
-      "wall_seconds": 1.7548021659999904
+      "wall_seconds": 1.686668080000004
     },
     {
       "command": [
@@ -138,10 +145,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 0.6119615829999999,
-      "reported_peak_rss_kib": 95408,
+      "reported_cpu_seconds": 0.611948401,
+      "reported_peak_rss_kib": 95144,
       "stderr": "",
-      "wall_seconds": 1.1854356420001295
+      "wall_seconds": 1.1232364120000966
     },
     {
       "command": [
@@ -152,10 +159,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 2.031671139,
-      "reported_peak_rss_kib": 96292,
+      "reported_cpu_seconds": 2.011759985,
+      "reported_peak_rss_kib": 95788,
       "stderr": "",
-      "wall_seconds": 2.6904688729998725
+      "wall_seconds": 2.5259790860000066
     },
     {
       "command": [
@@ -166,10 +173,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 1.479981301,
-      "reported_peak_rss_kib": 97448,
+      "reported_cpu_seconds": 1.435850619,
+      "reported_peak_rss_kib": 96808,
       "stderr": "",
-      "wall_seconds": 2.0700373360000413
+      "wall_seconds": 1.9415555110000469
     },
     {
       "command": [
@@ -180,10 +187,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 0.33180975399999996,
-      "reported_peak_rss_kib": 95148,
+      "reported_cpu_seconds": 0.32393645,
+      "reported_peak_rss_kib": 94376,
       "stderr": "",
-      "wall_seconds": 0.921673114999976
+      "wall_seconds": 0.852184278999971
     },
     {
       "command": [
@@ -193,10 +200,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 0.023996373000000015,
-      "reported_peak_rss_kib": 93096,
+      "reported_cpu_seconds": 0.023990813,
+      "reported_peak_rss_kib": 93092,
       "stderr": "",
-      "wall_seconds": 0.5952104489999783
+      "wall_seconds": 0.5157223949998979
     },
     {
       "command": [
@@ -206,10 +213,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 0.0,
-      "reported_peak_rss_kib": 94248,
+      "reported_cpu_seconds": 0.003998014999999966,
+      "reported_peak_rss_kib": 92840,
       "stderr": "",
-      "wall_seconds": 0.5689094570000179
+      "wall_seconds": 0.5591579279999905
     },
     {
       "command": [
@@ -220,10 +227,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 5.442770938,
-      "reported_peak_rss_kib": 98724,
+      "reported_cpu_seconds": 4.581799085,
+      "reported_peak_rss_kib": 98092,
       "stderr": "",
-      "wall_seconds": 6.1112827489998836
+      "wall_seconds": 5.2167056299999786
     },
     {
       "command": [
@@ -232,11 +239,11 @@
         "tests.integration"
       ],
       "exit_code": 0,
-      "reported_child_cpu_seconds": 1.6616939999999998,
-      "reported_cpu_seconds": 0.062103998999999965,
-      "reported_peak_rss_kib": 105956,
+      "reported_child_cpu_seconds": 1.344461,
+      "reported_cpu_seconds": 0.05762258199999998,
+      "reported_peak_rss_kib": 105960,
       "stderr": "",
-      "wall_seconds": 2.3997158290001153
+      "wall_seconds": 1.9614001420000022
     },
     {
       "command": [
@@ -245,11 +252,11 @@
         "tests.multiprocess"
       ],
       "exit_code": 0,
-      "reported_child_cpu_seconds": 4.86555,
-      "reported_cpu_seconds": 0.03929579,
-      "reported_peak_rss_kib": 96936,
+      "reported_child_cpu_seconds": 3.415415,
+      "reported_cpu_seconds": 0.024137914000000038,
+      "reported_peak_rss_kib": 95652,
       "stderr": "",
-      "wall_seconds": 5.516002694000008
+      "wall_seconds": 3.988739230999954
     },
     {
       "command": [
@@ -260,10 +267,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 1.9098647809999998,
-      "reported_peak_rss_kib": 98084,
+      "reported_cpu_seconds": 1.6094521969999998,
+      "reported_peak_rss_kib": 98088,
       "stderr": "",
-      "wall_seconds": 2.553942713999959
+      "wall_seconds": 2.172030712000037
     },
     {
       "command": [
@@ -273,10 +280,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 0.49598688199999996,
-      "reported_peak_rss_kib": 96296,
+      "reported_cpu_seconds": 0.491959337,
+      "reported_peak_rss_kib": 95656,
       "stderr": "",
-      "wall_seconds": 1.1639925859999494
+      "wall_seconds": 1.0292378650000273
     },
     {
       "command": [
@@ -286,10 +293,10 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 0.10371266200000001,
-      "reported_peak_rss_kib": 98472,
+      "reported_cpu_seconds": 0.11168297599999999,
+      "reported_peak_rss_kib": 98600,
       "stderr": "",
-      "wall_seconds": 0.7085018600000694
+      "wall_seconds": 0.6652708359999906
     },
     {
       "command": [
@@ -300,14 +307,14 @@
       ],
       "exit_code": 0,
       "reported_child_cpu_seconds": 0,
-      "reported_cpu_seconds": 0.408019152,
-      "reported_peak_rss_kib": 93092,
+      "reported_cpu_seconds": 0.42795799100000004,
+      "reported_peak_rss_kib": 92204,
       "stderr": "",
-      "wall_seconds": 0.9944478519998938
+      "wall_seconds": 0.974780997000039
     }
   ],
   "scope": "semantic reproduction, not byte-identical timing or proof of model correctness",
   "semantic_reference": "matched",
   "status": "completed",
-  "wall_seconds": 32.939786240999865
+  "wall_seconds": 28.71557516000007
 }

@@ -459,7 +459,16 @@ class Client:
                 return dict(status="admitted", certificate=c)
             self.state["attempts"][key]["status"] = "retiring"
             self.persist()
-            await self._close(key)
+            # A failed close leaves a durable unresolved attempt because a
+            # prepare that was lost from the origin's point of view may still
+            # arrive later at an owner.  Do not fall back to another branch for
+            # the same manifest until every close is confirmed: doing so would
+            # create two durable records with one manifest and make restart
+            # validation fail, while dropping the first record would lose the
+            # authority needed to retire a delayed hold.
+            if not await self._close(key):
+                reasons.append(dict(branch=index, reason="retirement-unconfirmed"))
+                return dict(status="not-justified", reasons=reasons)
         return dict(status="not-justified", reasons=reasons)
 
     def _record(self, c: dict[str, Any]) -> str | None:

@@ -82,17 +82,20 @@ def run() -> dict:
     # deliberately impossible declared assembly level.
     rng = random.Random(SEED)
     contracts = sorted(by_contract)
-    lower_bound_checks = 0
+    lower_bound_computations = 0
+    lower_bound_assertions = 0
     observed_bounds: dict[int, int] = {}
     for case in range(96):
         size = 1 + case % 6
         references = sorted(rng.sample(contracts, size))
         bound = lower_bound(by_contract, references)
+        lower_bound_computations += 1
         assert all(int(by_contract[name]["first_public_api_level"]) <= bound
                    for name in references)
+        lower_bound_assertions += 1
         assert any(int(by_contract[name]["first_public_api_level"]) > bound - 1
                    for name in references)
-        lower_bound_checks += 2
+        lower_bound_assertions += 1
         observed_bounds[bound] = observed_bounds.get(bound, 0) + 1
 
     # Explicitly synthetic five-owner mapping.  Candidate profiles are cumulative
@@ -126,7 +129,8 @@ def run() -> dict:
         support_levels=levels,
         support_counts=counts,
         generated_reference_sets=96,
-        lower_bound_checks=lower_bound_checks,
+        lower_bound_computations=lower_bound_computations,
+        lower_bound_assertions=lower_bound_assertions,
         generated_lower_bound_distribution={str(k): observed_bounds[k]
                                             for k in sorted(observed_bounds)},
         synthetic_frontier=dict(

@@ -1,7 +1,8 @@
 {
+  "aggregate_reference_table": "network.csv",
   "cases": 144,
   "checked_rpc": 40992,
-  "cpu_seconds": 0.496593186,
+  "cpu_seconds": 0.411961695,
   "incompatible_snapshots": {
     "branch": 0,
     "envelope": 0,
@@ -10,8 +11,9 @@
     "marginal": 55,
     "unguarded": 484
   },
-  "peak_rss_kib": 93092,
+  "independently_replayed_trace": "network-trace.jsonl",
+  "peak_rss_kib": 92204,
   "scope": "full network campaign trace, separate state reconstruction",
   "serialized_bytes": 4494882,
-  "wall_seconds": 0.49447951500008
+  "wall_seconds": 0.41284188700001323
 }

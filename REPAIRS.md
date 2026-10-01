@@ -105,9 +105,13 @@ a missing `observed_generation` and Python booleans in integer sequence fields.
 frontier, selected plan, candidate domains, search counters, objective, scope, and
 corner certificate. Branch and envelope receipts require exact integer types,
 complete generation metadata, exact receipt cardinality, and canonical sequence
-maps. Eight frontier-output mutations, twelve strict certificate-schema mutations, and
-four receipt/certificate mutations are retained as negative regressions. Offline certificates remain structural evidence,
-not live use authority.
+maps. A direct relation oracle now compares the complete frontier record by record for all
+2,295 exhaustive 3x3 seed cases and rejects deletion of a valid nonselected member.
+Eight frontier-output mutations, twelve strict certificate-schema mutations, and 21
+Boolean, same-value floating-point, numeric-for-Boolean, or out-of-range substitutions
+across selected, frontier, search, and nested certificate fields are retained as
+negative regressions. Offline certificates remain structural evidence, not live use
+authority.
 
 ## R6 — one TCP connection per RPC exhausted ephemeral ports on repeated runs
 
@@ -237,6 +241,26 @@ question-mark references. The script had no final diagnostic gate.
 71-entry source inventory, runs three bounded LaTeX passes, and fails if undefined
 citations/references, overfull boxes, missing characters, or LaTeX errors remain. A
 clean build settles on the same 16-page rendering on passes two and three.
+
+
+
+## R14 — uncertain fixed-branch cleanup could create duplicate manifests
+
+**Severity:** P1 for restart-safe retirement under packet loss.
+
+**Defect.** After a fixed-branch prepare failed, acquisition persisted retirement but
+ignored a failed close and continued to the next branch for the same manifest. A lost
+prepare could later become a hold, while the second branch created another durable
+record with the same manifest. Restart validation correctly rejected that duplicate,
+so merely weakening validation or deleting the first record would have lost retirement
+authority.
+
+**Repair.** Fixed-branch fallback now stops whenever close is unconfirmed and retains
+exactly one retiring attempt. The directed regression uses two owners initially
+supporting `a`, window two, a blocked origin-to-owner-1 link, and same-manifest
+alternatives `{0:a,1:a}` and `{0:a,1:b}`. It confirms one durable record, successful
+reopen, retention while partitioned, retirement of an injected late hold after healing,
+and rejection of a second delayed prepare by the advanced closed floor.
 
 
 ## Specification and result-presentation corrections

@@ -1,8 +1,8 @@
 {
-  "cpu_seconds": 1.8576210140000002,
-  "delivered": 7655,
+  "cpu_seconds": 1.501430331,
+  "delivered": 7193,
   "paired_states": 576,
-  "peak_rss_kib": 98216,
+  "peak_rss_kib": 98088,
   "policies": {
     "central-latest": {
       "admitted": 450,
@@ -84,7 +84,7 @@
         "source": 0,
         "target": 1,
         "tick": 1,
-        "wall_ns": 320263
+        "wall_ns": 245875
       },
       {
         "bytes": 103,
@@ -104,12 +104,12 @@
         "source": 1,
         "target": 1,
         "tick": 2,
-        "wall_ns": 178359
+        "wall_ns": 232615
       }
     ],
     "update": "installed"
   },
-  "serialized_bytes": 801946,
+  "serialized_bytes": 774973,
   "tcp_connections_opened": 121,
-  "wall_seconds": 1.885048084999994
+  "wall_seconds": 1.5083916730000055
 }
