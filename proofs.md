@@ -213,8 +213,14 @@ currently false atoms. If some alternative has no false atom, the workload is
 compatible. Otherwise a rejection obstruction is a hitting set intersecting every
 false-atom set. The implementation's mask dynamic program stores, for each reached
 branch mask, the smallest chosen atom tuple and uses lexical order to break ties.
-Induction over processed atoms shows that each state is minimum for its mask; the
-full mask is therefore a minimum-cardinality obstruction. Deleting any returned atom
+The implementation expands coverage masks in increasing integer order. Each
+accepted transition adds a new bit, so all incoming states are finalized before
+a mask is expanded. Its added atom cannot already belong to a tuple for the
+source mask. Cardinality and sorted lexical order are preserved under adding
+the same absent atom. Every minimum-cardinality cover has no redundant atom,
+and therefore admits a path whose coverage strictly increases at each step.
+Induction over masks establishes the best tuple at each state; the full mask
+is therefore a minimum-cardinality obstruction. Deleting any returned atom
 is independently checked to uncover at least one alternative.
 
 This witness explains why the frozen vector fails. It is not proof that a delayed or
