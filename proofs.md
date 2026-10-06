@@ -103,6 +103,11 @@ canonicalizes terms to an antichain, requires the current profile to be accepted
 and enforces the public limits: at most ten library terms per endpoint, eight guard
 terms, 4,096 checked corners, 250,000 joint search states, and 4,096 returned frontier
 plans. The routine raises on exhaustion; it never labels a truncated search exact.
+The 96-atom bound applies to a branch-local requirement, not to a profile-derived
+guard term. Profiles and guard terms use the 12,000-atom support encoding bound;
+projection onto eight branch-local requirements retains at most 768 relevant atoms.
+The producer, independent checker, and durable hold/certificate encodings use this
+same distinction.
 
 **Theorem 3 (finite exactness).** If the bounded enumeration terminates, it returns
 all nondominated accepted-profile vectors expressible in the declared positive guard
@@ -136,7 +141,7 @@ only 37 visited prefix states; producer and checker agree under the same state-b
 semantics. Eight mutations of the selected plan, frontier, counters, certificate, or
 objective are rejected. The direct relation oracle represents each singleton-profile
 relation as allowed tuples and enumerates all seed-containing coordinate subsets. It
-exhausts the declared 3×3 domain, checks 480 deterministic sparse 4×4/5×5 instances,
+exhausts the declared edge-encoded 3×3 domain, checks 480 deterministic sparse 4×4/5×5 instances,
 and separately checks 192 seeded 3×3×3 instances. The larger and ternary instances
 are samples, not an exhaustive higher-dimensional proof.
 
@@ -252,9 +257,16 @@ network payloads, or the full SQLite/TCP implementation.
 
 ## 9. Evidence boundary and falsifiers
 
-The finite frontier evidence exhausts 510 nonempty representable 3×3 relations and
+The retained edge-encoded frontier evidence exhausts 510 nonempty 3×3 relations
+with at most eight allowed cells and
 2,295 seeded instances, independently enumerating 9,369 safe boxes and 3,222 frontier
-members. A post-development generated holdout adds 1,440 cases and 69,120 fixed
+members. The full nine-cell relation is nevertheless representable by one
+empty-requirement alternative. `tests/positive_oracle.py` checks all nine current
+cells of that encoding against direct support-vector enumeration. Projection
+combines three candidate profiles into one weight-three profile per owner, giving
+product mass nine and a single unrestricted guard product. Together these checks
+cover all 511 nonempty 3×3 relations and 2,304 current cells, without relabeling the
+retained edge-encoded counts. A post-development generated holdout adds 1,440 cases and 69,120 fixed
 proposals from six relation generators and seed range 1000--1239. Exact frontiers
 match direct subset enumeration in every holdout case; exact beats greedy on 206
 proposal schedules, loses on 156, and ties on 1,078. A centralized same-order reference

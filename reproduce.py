@@ -11,7 +11,6 @@ import csv
 import json
 import os
 from pathlib import Path
-import resource
 import subprocess
 import sys
 import time
@@ -35,9 +34,6 @@ JOBS = [('tests.unit','unit.json',False), ('tests.pilot','pilot.json',False), ('
         ('tests.observations','observations.json',True), ('tests.costs','costs.json',False),
         ('tests.hardening','hardening.json',False),
         ('tests.replay','replay.json',True)]
-GENERATED = ({filename for _, filename, _ in JOBS} |
-             {'network.csv','observations.csv','generalization.csv','scaling.csv','network-trace.jsonl',
-              'observation-trace.jsonl','execution.json','failure.txt'})
 
 
 def semantic(x):
@@ -67,6 +63,7 @@ def compare(destination: Path, reference: Path) -> list[str]:
 
 
 def limits():
+    import resource
     resource.setrlimit(resource.RLIMIT_AS,(MEMORY,MEMORY))
     resource.setrlimit(resource.RLIMIT_CPU,(90,95))
     resource.setrlimit(resource.RLIMIT_CORE,(0,0))
@@ -77,7 +74,7 @@ def limits():
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--out',type=Path,required=True,help='new or replaceable results directory')
+    parser.add_argument('--out',type=Path,required=True,help='new or empty results directory')
     parser.add_argument('--check-reference',type=Path,help='retained results directory (read only)')
     args=parser.parse_args()
     out=args.out.resolve()
@@ -86,13 +83,10 @@ def main():
         parser.error('output must be outside the repository')
     if reference is not None and (out == reference or reference in out.parents):
         parser.error('output must not be the reference directory or its descendant')
+    if out.exists() and (not out.is_dir() or any(out.iterdir())):
+        parser.error('output directory must be new or empty; existing evidence is not replaced')
     out.mkdir(parents=True,exist_ok=True)
-    for filename in GENERATED:
-        path = out / filename
-        if path.is_symlink() or path.is_file():
-            path.unlink()
-        elif path.exists():
-            parser.error(f'generated output path is not a file: {path}')
+    import resource  # POSIX measurements; output refusal is also testable on Windows.
     limits()  # Runner + one job + five endpoint children: at most 7 x 512 MiB = 3.5 GiB.
     env=dict(os.environ, PYTHONHASHSEED='0', PYTHONDONTWRITEBYTECODE='1',
              OMP_NUM_THREADS='1', OPENBLAS_NUM_THREADS='1', MKL_NUM_THREADS='1')

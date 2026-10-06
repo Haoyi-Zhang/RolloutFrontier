@@ -1,0 +1,41 @@
+name: Scientific checks
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-science:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      # Official action commits also used by the supplied integrity workflow.
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Profile encoding and evidence-preservation regressions
+        run: |
+          mkdir -p "$RUNNER_TEMP/P011-scientific-logs"
+          timeout --signal=TERM --kill-after=15s 120s python -B -m unittest tests.profile_bounds tests.output_paths -v > "$RUNNER_TEMP/P011-scientific-logs/regressions.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/regressions.stderr.log"
+      - name: Full-powerset positive-contract oracle
+        run: timeout --signal=TERM --kill-after=15s 120s python -B -m tests.positive_oracle > "$RUNNER_TEMP/P011-scientific-logs/positive.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/positive.stderr.log"
+      - name: Retained offline scientific suite and semantic comparison
+        run: timeout --signal=TERM --kill-after=15s 1500s python -B reproduce.py --out "$RUNNER_TEMP/P011-scientific-results" --check-reference results > "$RUNNER_TEMP/P011-scientific-logs/reproduction.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/reproduction.stderr.log"
+      - name: Retain actual scientific output and failure diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: rolloutfrontier-scientific-results
+          path: |
+            ${{ runner.temp }}/P011-scientific-results
+            ${{ runner.temp }}/P011-scientific-logs
+          if-no-files-found: warn
+          retention-days: 14

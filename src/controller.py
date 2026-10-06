@@ -161,7 +161,7 @@ class Endpoint:
                 options = hold["options"]
                 if hold["requires"] or not isinstance(options, list) or not 1 <= len(options) <= 8:
                     raise ValueError("invalid durable options")
-                normalized = sorted({tuple(atoms(option, MAX_REQUIREMENTS)) for option in options})
+                normalized = sorted({tuple(atoms(option, MAX_CONTRACTS)) for option in options})
                 if options != [list(option) for option in normalized]:
                     raise ValueError("noncanonical durable options")
             if policy != "unguarded" and not self.satisfies(hold, support):
@@ -220,7 +220,7 @@ class Endpoint:
         if options is not None:
             if requires or not isinstance(options, list) or not 1 <= len(options) <= 8:
                 raise ValueError("invalid envelope options")
-            options = sorted({tuple(atoms(x, MAX_REQUIREMENTS)) for x in options})
+            options = sorted({tuple(atoms(x, MAX_CONTRACTS)) for x in options})
             options = [list(x) for x in options]
         if not isinstance(manifest, str) or not manifest or len(manifest) > 256:
             raise ValueError("invalid manifest binding")

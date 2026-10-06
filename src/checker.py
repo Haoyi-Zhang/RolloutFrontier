@@ -117,7 +117,7 @@ def safe_envelope(branches: list[dict[str, list[str]]], box: dict[str, list[list
                 return False
             bound *= len(box[node])
             for option in box[node]:
-                if not isinstance(option, list) or len(option) > 96:
+                if not isinstance(option, list) or len(option) > 12000:
                     return False
                 if any(not isinstance(a, str) or not a or len(a) > 512 for a in option):
                     return False

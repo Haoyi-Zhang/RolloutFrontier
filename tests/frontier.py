@@ -65,7 +65,9 @@ def relation_oracle():
     states = returned_frontier_total = independent_frontier_total = 0
     complete_frontier_matches = 0
     deleted_member_mutation = None
-    # All nonempty 3x3 relations representable by the eight-branch manifest bound.
+    # Every nonempty 3x3 relation with at most eight allowed cells, encoded
+    # one alternative per cell. A true alternative separately represents the
+    # full nine-cell relation (tests.positive_oracle.full_relation_campaign).
     for bits in range(1, 511):
         pairs = {(i, j) for i in profiles for j in profiles if bits & (1 << (3 * i + j))}
         branches = [{'0': [f'a{i}'], '1': [f'b{j}']} for i, j in sorted(pairs)]

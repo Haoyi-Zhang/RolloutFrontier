@@ -278,7 +278,7 @@ class Client:
             for text, options in box.items():
                 if not isinstance(options, list) or not 1 <= len(options) <= 8:
                     raise ValueError("invalid durable envelope options")
-                normalized = sorted({tuple(atoms(option, MAX_REQUIREMENTS)) for option in options})
+                normalized = sorted({tuple(atoms(option, MAX_CONTRACTS)) for option in options})
                 if any(set(other) < set(option) for option in normalized for other in normalized):
                     raise ValueError("nonminimal durable envelope box")
                 normalized_box[text] = [list(option) for option in normalized]

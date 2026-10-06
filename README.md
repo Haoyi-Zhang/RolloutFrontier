@@ -14,7 +14,8 @@ From the artifact root:
 python reproduce.py --out /tmp/partition-safe-results --check-reference results
 ```
 
-The output directory must be outside the repository and reference tree. The runner
+The output directory must be new or empty and outside the repository and reference
+tree; existing evidence is never replaced. The runner
 executes 17 sequential bounded jobs, requires 23 semantic outputs (17 JSON, four CSV,
 and two JSONL traces), and verifies 33 numeric manuscript bindings. Each child has a
 120-second wall timeout, 90-second CPU soft limit, and 512 MiB address-space limit.
@@ -56,7 +57,8 @@ and guard-corner safety.
 
 The retained exact domains include:
 
-- all 510 nonempty representable 3x3 relations and 2,295 seeded instances, with the
+- the 510 nonempty edge-encoded 3x3 relations with at most eight allowed cells and
+  2,295 seeded instances, with the
   complete returned frontier compared record by record to a direct rectangle oracle;
 - 9,369 independently enumerated safe boxes, 3,222 independently derived and 3,222
   returned frontier members, and 19,071 planner states in that exhaustive domain;
@@ -71,6 +73,38 @@ A greedy counterexample returns mass 2 while the exact product has mass 7. A wei
 case selects objective value 80 where the unweighted choice has value 2. A zero-weight
 regression ensures selection remains on the nondominated frontier. These are finite
 algorithmic witnesses, not production workload claims.
+
+Branch-local requirements are limited to 96 atoms. Profile-derived guard terms use
+the 12,000-atom support encoding bound instead: projecting a profile onto eight
+branch requirements can retain up to 768 relevant atoms. The same guard encoding
+is used for synthesis, independent checking, durable acquisition, and recovery.
+The portable boundary regressions run separately from the retained five-test smoke
+denominator:
+
+```sh
+python -B -m unittest tests.profile_bounds -v
+```
+
+The complete positive-conjunction oracle and output-preservation checks are also
+portable standard-library jobs:
+
+```sh
+python -B -m tests.positive_oracle
+python -B -m unittest tests.output_paths -v
+```
+
+The positive oracle exhausts one/two-alternative manifests and compatible current
+supports over two atoms at each of two owners, with a fixed three-atom weighted
+extension. It checks arbitrary supports directly rather than reusing the producer's
+corner test. It also checks the full nine-cell 3x3 relation, represented by one
+empty-requirement alternative, at all nine current cells. Projection aggregates
+three candidates into one weight-three profile per owner, preserving product mass
+nine. Together with the edge-encoded cases, coverage is all 511 nonempty relations
+and 2,304 current cells; the retained edge-encoded result counts are unchanged.
+The `scientific-checks.yml` workflow runs these jobs and the retained
+17-job POSIX suite on pushes to `main`; it has no manual-dispatch trigger. Its
+scientific status requires the actual tests and semantic comparisons to succeed,
+not merely syntax or file-presence checks.
 
 ## Minimum obstruction
 

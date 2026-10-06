@@ -9,7 +9,7 @@ from __future__ import annotations
 from itertools import product
 from math import prod
 from typing import Iterable
-from .controller import atoms, MAX_REQUIREMENTS, MAX_NODES, MAX_BRANCHES
+from .controller import atoms, MAX_REQUIREMENTS, MAX_CONTRACTS, MAX_NODES, MAX_BRANCHES
 
 MAX_CORNERS = 4096
 MAX_OPTIONS = 8
@@ -34,7 +34,9 @@ def normalize(branches: list[dict[str, list[str]]]) -> list[dict[str, list[str]]
 def antichain(options: list[list[str]]) -> list[list[str]]:
     if not isinstance(options, list) or not 1 <= len(options) <= MAX_OPTIONS:
         raise ValueError("option bound")
-    values = sorted({tuple(atoms(x, MAX_REQUIREMENTS)) for x in options})
+    # A profile-derived term may contain requirements from several alternatives.
+    # The per-alternative requirement cap is not a cap on their projected union.
+    values = sorted({tuple(atoms(x, MAX_CONTRACTS)) for x in options})
     return [list(x) for x in values if not any(set(y) < set(x) for y in values)]
 
 
