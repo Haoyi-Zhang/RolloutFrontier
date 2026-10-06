@@ -9,6 +9,7 @@ import asyncio
 import json
 import random
 import time
+from copy import deepcopy
 from pathlib import Path
 from typing import Any
 from .controller import (Endpoint, canonical, atoms, initialize_state_table,
@@ -420,7 +421,7 @@ class Client:
         for r in self.state["attempts"].values():
             if r["manifest"] == manifest:
                 if r["status"] == "committed" and certificate(r["certificate"], branches):
-                    return dict(status="admitted", certificate=r["certificate"])
+                    return dict(status="admitted", certificate=deepcopy(r["certificate"]))
                 return dict(status="not-justified", reasons=[dict(reason="unresolved-or-conflicting-manifest")])
         reasons = []
         for index, branch in enumerate(branches):
@@ -456,7 +457,7 @@ class Client:
             if okay and certificate(c, branches):
                 self.state["attempts"][key].update(status="committed", certificate=c)
                 self.persist()  # A restarted origin preserves every reported admission.
-                return dict(status="admitted", certificate=c)
+                return dict(status="admitted", certificate=deepcopy(c))
             self.state["attempts"][key]["status"] = "retiring"
             self.persist()
             # A failed close leaves a durable unresolved attempt because a
@@ -478,7 +479,7 @@ class Client:
         return None
 
     async def retire(self, c: dict[str, Any]) -> bool:
-        key = self._record(c)
+        key = self._record(deepcopy(c))
         if key is None:
             return False
         self.state["attempts"][key]["status"] = "retiring"
@@ -486,11 +487,12 @@ class Client:
         return await self._close(key)
 
     async def use(self, c: dict[str, Any]) -> list[dict[str, Any] | None]:
-        key = self._record(c)
+        key = self._record(deepcopy(c))
         if key is None or self.state["attempts"][key]["status"] != "committed":
             return [dict(status="not-authorized")]
-        return [await self.net.rpc(self.origin, int(n), dict(op="use", origin=c["origin"],
-                sequence=seq, manifest=c["manifest"])) for n, seq in c["sequences"].items()]
+        private = deepcopy(self.state["attempts"][key]["certificate"])
+        return [await self.net.rpc(self.origin, int(n), dict(op="use", origin=private["origin"],
+                sequence=seq, manifest=private["manifest"])) for n, seq in private["sequences"].items()]
 
 
     async def acquire_box(self, manifest: str, branches: list[dict[str, list[str]]],
@@ -511,7 +513,7 @@ class Client:
             if r["manifest"] == manifest:
                 if (r["status"] == "committed" and r["certificate"].get("box") == box
                         and certificate(r["certificate"], branches)):
-                    return dict(status="admitted", certificate=r["certificate"])
+                    return dict(status="admitted", certificate=deepcopy(r["certificate"]))
                 return dict(status="not-justified", reasons=[dict(reason="unresolved-or-conflicting-manifest")])
         if len(self.state["attempts"]) >= self.net.window:
             return dict(status="not-justified", reasons=[dict(reason="origin-window")])
@@ -538,7 +540,7 @@ class Client:
         if reason is None and certificate(c, branches):
             self.state["attempts"][key].update(status="committed", certificate=c)
             self.persist()
-            return dict(status="admitted", certificate=c)
+            return dict(status="admitted", certificate=deepcopy(c))
         self.state["attempts"][key]["status"] = "retiring"
         self.persist()
         await self._close(key)

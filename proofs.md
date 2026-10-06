@@ -230,8 +230,10 @@ is independently checked to uncover at least one alternative.
 
 This witness explains why the frozen vector fails. It is not proof that a delayed or
 partitioned owner currently lacks an atom. A timeout means “not justified,” not
-“incompatible.” A rejected exact frontier plan additionally carries an unsafe corner,
-which is a direct product member outside `F`.
+"incompatible." The structural box checker returns an unsafe corner for an unsafe
+candidate product: a direct product member outside `F`. Exact synthesis instead
+refuses incompatible seeds or exceeded resource bounds, and the frontier-certificate
+API returns a Boolean rejection; neither interface promises an unsafe-corner witness.
 
 ## 8. Finite protocol exploration
 
