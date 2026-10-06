@@ -1,0 +1,162 @@
+{
+  "cpu_seconds": 2.045863673,
+  "greedy_counterexample": {
+    "exact_box": {
+      "0": [
+        [
+          "a0"
+        ]
+      ],
+      "1": [
+        [
+          "b0"
+        ],
+        [
+          "b1"
+        ],
+        [
+          "b2"
+        ],
+        [
+          "b3"
+        ],
+        [
+          "b4"
+        ],
+        [
+          "b5"
+        ],
+        [
+          "b6"
+        ]
+      ]
+    },
+    "exact_frontier_size": 2,
+    "exact_product_mass": 7,
+    "greedy_product_mass": 2,
+    "pairs": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "search": {
+      "complete": 65,
+      "corner_pruned": 0,
+      "safe_complete": 65,
+      "states": 68,
+      "unsafe_pruned": 63
+    }
+  },
+  "peak_rss_kib": 16884,
+  "relation_oracle": {
+    "complete_frontier_cases_compared": 2295,
+    "deleted_nonselected_member_mutation": {
+      "rejected": true,
+      "relation_bits": 11,
+      "remaining_members": 1,
+      "removed_product_mass": 2,
+      "seed": [
+        0,
+        0
+      ]
+    },
+    "independently_derived_frontier_members": 3222,
+    "independently_enumerated_safe_boxes": 9369,
+    "oracle": "enumerate every seeded safe row/column rectangle, independently remove dominated rectangles, and compare each complete frontier record",
+    "planner_search_states": 19071,
+    "relations": 510,
+    "returned_frontier_members": 3222,
+    "seeded_relations": 2295
+  },
+  "wall_seconds": 2.0459132630000028,
+  "weighted_case": {
+    "uniform_box": {
+      "0": [
+        [
+          "a0"
+        ]
+      ],
+      "1": [
+        [
+          "b0"
+        ],
+        [
+          "b1"
+        ]
+      ]
+    },
+    "uniform_product_mass": 2,
+    "weighted_box": {
+      "0": [
+        [
+          "a0"
+        ],
+        [
+          "a1"
+        ]
+      ],
+      "1": [
+        [
+          "b0"
+        ]
+      ]
+    },
+    "weighted_product_mass": 80
+  },
+  "zero_weight_frontier_case": {
+    "accepted_profiles": [
+      [
+        "a"
+      ],
+      [
+        "b"
+      ]
+    ],
+    "frontier_size": 1,
+    "product_mass": 1,
+    "regression": "selected plan is a nondominated frontier member",
+    "selected_box": {
+      "0": [
+        [
+          "a"
+        ],
+        [
+          "b"
+        ]
+      ]
+    },
+    "weights": [
+      1,
+      0
+    ]
+  }
+}

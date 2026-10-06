@@ -1,0 +1,40 @@
+{
+  "cpu_seconds": 1.5534494779999999,
+  "full_3x3_relation": {
+    "direct_safe_products": 9,
+    "encoding": "one empty-requirement alternative; three candidate weights aggregate per owner",
+    "frontier_members": 9,
+    "mismatches": 0,
+    "planner_states": 27,
+    "product_mass": 9,
+    "raw_current_cells": 9,
+    "relations": 1
+  },
+  "obstruction": {
+    "cases": 65536,
+    "incompatible": 26767,
+    "mismatches": 0,
+    "oracle": "all false-atom subsets in cardinality/lexical order"
+  },
+  "positive": {
+    "compatible_current_vectors": 1024,
+    "direct_safe_products": 2582,
+    "frontier_members": 1143,
+    "manifests": 136,
+    "mismatches": 0,
+    "planner_states": 5071
+  },
+  "scope": "complete declared two-atom domain plus fixed three-atom samples; no Linux/hardware claim",
+  "wall_seconds": 1.555436039,
+  "weighted": {
+    "cases": 48,
+    "direct_safe_products": 117,
+    "frontier_members": 48,
+    "mismatches": 0,
+    "owners_with_duplicate_candidates": 32,
+    "owners_with_empty_candidates": 16,
+    "planner_states": 237,
+    "seed": 4242,
+    "supplied_zero_weights": 60
+  }
+}

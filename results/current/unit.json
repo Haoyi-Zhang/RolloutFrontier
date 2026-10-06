@@ -1,0 +1,9 @@
+{
+  "cpu_seconds": 0.122018017,
+  "errors": 0,
+  "failures": 0,
+  "peak_rss_kib": 28356,
+  "skipped": 0,
+  "tests_run": 5,
+  "wall_seconds": 0.13565014800001052
+}

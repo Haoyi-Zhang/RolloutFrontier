@@ -1,0 +1,102 @@
+{
+  "cases": 144,
+  "cpu_seconds": 6.053325835,
+  "families": [
+    "independent",
+    "correlated",
+    "one-sided",
+    "bridge"
+  ],
+  "peak_rss_kib": 29032,
+  "policies": {
+    "branch": {
+      "blocked": 276,
+      "converged": 24,
+      "delivered": 6832,
+      "incompatible_snapshots": 0,
+      "installed": 136,
+      "local_incompatible_steps": 0,
+      "proposed": 576,
+      "serialized_bytes": 745842,
+      "tcp_connections_opened": 168,
+      "unchanged": 164,
+      "workloads": 24
+    },
+    "envelope": {
+      "blocked": 258,
+      "converged": 24,
+      "delivered": 6832,
+      "incompatible_snapshots": 0,
+      "installed": 150,
+      "local_incompatible_steps": 0,
+      "proposed": 576,
+      "serialized_bytes": 753607,
+      "tcp_connections_opened": 168,
+      "unchanged": 168,
+      "workloads": 24
+    },
+    "epoch": {
+      "blocked": 389,
+      "converged": 24,
+      "delivered": 6832,
+      "incompatible_snapshots": 0,
+      "installed": 0,
+      "local_incompatible_steps": 0,
+      "proposed": 576,
+      "serialized_bytes": 726110,
+      "tcp_connections_opened": 168,
+      "unchanged": 187,
+      "workloads": 24
+    },
+    "frontier": {
+      "blocked": 256,
+      "converged": 24,
+      "delivered": 6832,
+      "incompatible_snapshots": 0,
+      "installed": 154,
+      "local_incompatible_steps": 0,
+      "proposed": 576,
+      "serialized_bytes": 752259,
+      "tcp_connections_opened": 168,
+      "unchanged": 166,
+      "workloads": 24
+    },
+    "marginal": {
+      "blocked": 212,
+      "converged": 24,
+      "delivered": 6832,
+      "incompatible_snapshots": 55,
+      "installed": 192,
+      "local_incompatible_steps": 0,
+      "proposed": 576,
+      "serialized_bytes": 757148,
+      "tcp_connections_opened": 168,
+      "unchanged": 172,
+      "workloads": 24
+    },
+    "unguarded": {
+      "blocked": 0,
+      "converged": 24,
+      "delivered": 6832,
+      "incompatible_snapshots": 484,
+      "installed": 415,
+      "local_incompatible_steps": 500,
+      "proposed": 576,
+      "serialized_bytes": 759916,
+      "tcp_connections_opened": 168,
+      "unchanged": 161,
+      "workloads": 24
+    }
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "steps": 24,
+  "tcp_connections_opened": 1008,
+  "wall_seconds": 13.070852901999999
+}

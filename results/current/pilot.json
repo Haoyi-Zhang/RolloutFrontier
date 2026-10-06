@@ -1,0 +1,54 @@
+{
+  "cpu_seconds": 0.05333712500000001,
+  "marginal_counterexample": {
+    "corners": 2,
+    "counterexample": {
+      "0": [
+        "wire.new"
+      ],
+      "1": [
+        "wire.old"
+      ]
+    },
+    "safe": false
+  },
+  "peak_rss_kib": 27212,
+  "pilot": "completed",
+  "policies": {
+    "epoch": {
+      "breaking": "blocked",
+      "change": "blocked",
+      "converged": true,
+      "delivered": 62,
+      "serialized_bytes": 6124,
+      "use": [
+        "used",
+        "used"
+      ]
+    },
+    "predicate": {
+      "breaking": "blocked",
+      "change": "installed",
+      "converged": true,
+      "delivered": 62,
+      "serialized_bytes": 6170,
+      "use": [
+        "used",
+        "used"
+      ]
+    },
+    "unguarded": {
+      "breaking": "installed",
+      "change": "installed",
+      "converged": true,
+      "delivered": 62,
+      "serialized_bytes": 5983,
+      "use": [
+        "used",
+        "incompatible"
+      ]
+    }
+  },
+  "scope": "five TCP endpoints, one OS process, controlled close/reopen recovery",
+  "wall_seconds": 0.1681786209999956
+}

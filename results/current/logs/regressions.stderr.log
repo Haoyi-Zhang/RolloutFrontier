@@ -1,0 +1,16 @@
+test_eight_branch_projection_union_is_encodable (tests.profile_bounds.ProjectedProfileTests.test_eight_branch_projection_union_is_encodable) ... ok
+test_exact_requires_a_97_atom_guard (tests.profile_bounds.ProjectedProfileTests.test_exact_requires_a_97_atom_guard) ... ok
+test_exact_requires_two_disjoint_96_atom_requirements (tests.profile_bounds.ProjectedProfileTests.test_exact_requires_two_disjoint_96_atom_requirements) ... ok
+test_fixed_requirement_and_support_caps_are_preserved (tests.profile_bounds.ProjectedProfileTests.test_fixed_requirement_and_support_caps_are_preserved) ... ok
+test_greedy_uses_the_same_guard_encoding (tests.profile_bounds.ProjectedProfileTests.test_greedy_uses_the_same_guard_encoding) ... ok
+test_input_support_projection_keeps_the_12000_atom_domain (tests.profile_bounds.ProjectedProfileTests.test_input_support_projection_keeps_the_12000_atom_domain) ... ok
+test_large_guard_endpoint_reopen_and_retirement (tests.profile_bounds.ProjectedProfileTests.test_large_guard_endpoint_reopen_and_retirement) ... ok
+test_large_guard_loopback_admission_origin_reopen (tests.profile_bounds.ProjectedProfileTests.test_large_guard_loopback_admission_origin_reopen) ... ok
+test_nested_directory_is_also_nonempty (tests.output_paths.OutputRefusalTests.test_nested_directory_is_also_nonempty) ... ok
+test_prior_generated_result_is_not_removed (tests.output_paths.OutputRefusalTests.test_prior_generated_result_is_not_removed) ... ok
+test_unrelated_file_is_also_nonempty (tests.output_paths.OutputRefusalTests.test_unrelated_file_is_also_nonempty) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.094s
+
+OK

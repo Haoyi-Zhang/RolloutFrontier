@@ -1,0 +1,252 @@
+{
+  "cpu_seconds": 0.025971312000000003,
+  "guarded": {
+    "closed_to_held_edges": 0,
+    "committed_states": 4,
+    "committed_states_with_cleanup_path": 4,
+    "done_states": 16,
+    "explored_transitions": 1388,
+    "invariant_violations": 0,
+    "mode": "guarded",
+    "reachable_states": 296,
+    "retiring_states": 196,
+    "retiring_states_with_cleanup_path": 196,
+    "scope": "exact reachable-state enumeration for one attempt, two owners, one positive atom and one nonwrapping sequence",
+    "shortest_violation_trace": null
+  },
+  "interpretation": "guarded safety and no-resurrection are exhaustive only for the stated finite abstraction; cleanup is reachability, not a fairness proof",
+  "negative_controls": {
+    "unguarded-install": {
+      "closed_to_held_edges": 0,
+      "committed_states": 16,
+      "committed_states_with_cleanup_path": 16,
+      "done_states": 16,
+      "explored_transitions": 2232,
+      "invariant_violations": 12,
+      "mode": "unguarded",
+      "reachable_states": 448,
+      "retiring_states": 256,
+      "retiring_states_with_cleanup_path": 256,
+      "scope": "exact reachable-state enumeration for one attempt, two owners, one positive atom and one nonwrapping sequence",
+      "shortest_violation_trace": [
+        {
+          "action": "origin:start-and-persist-intent",
+          "state": {
+            "acks": 0,
+            "alive": [
+              true,
+              true
+            ],
+            "close_acks": 0,
+            "holds": [
+              "none",
+              "none"
+            ],
+            "phase": "acquiring",
+            "support": [
+              true,
+              true
+            ]
+          }
+        },
+        {
+          "action": "net:deliver-prepare0-and-reply",
+          "state": {
+            "acks": 1,
+            "alive": [
+              true,
+              true
+            ],
+            "close_acks": 0,
+            "holds": [
+              "held",
+              "none"
+            ],
+            "phase": "acquiring",
+            "support": [
+              true,
+              true
+            ]
+          }
+        },
+        {
+          "action": "owner0:remove-support",
+          "state": {
+            "acks": 1,
+            "alive": [
+              true,
+              true
+            ],
+            "close_acks": 0,
+            "holds": [
+              "held",
+              "none"
+            ],
+            "phase": "acquiring",
+            "support": [
+              false,
+              true
+            ]
+          }
+        },
+        {
+          "action": "net:deliver-prepare1-and-reply",
+          "state": {
+            "acks": 3,
+            "alive": [
+              true,
+              true
+            ],
+            "close_acks": 0,
+            "holds": [
+              "held",
+              "held"
+            ],
+            "phase": "acquiring",
+            "support": [
+              false,
+              true
+            ]
+          }
+        },
+        {
+          "action": "origin:durable-commit",
+          "state": {
+            "acks": 0,
+            "alive": [
+              true,
+              true
+            ],
+            "close_acks": 0,
+            "holds": [
+              "held",
+              "held"
+            ],
+            "phase": "committed",
+            "support": [
+              false,
+              true
+            ]
+          }
+        }
+      ]
+    },
+    "unsafe-timeout-reclamation": {
+      "closed_to_held_edges": 0,
+      "committed_states": 36,
+      "committed_states_with_cleanup_path": 36,
+      "done_states": 16,
+      "explored_transitions": 2096,
+      "invariant_violations": 32,
+      "mode": "timeout-reclaim",
+      "reachable_states": 408,
+      "retiring_states": 196,
+      "retiring_states_with_cleanup_path": 196,
+      "scope": "exact reachable-state enumeration for one attempt, two owners, one positive atom and one nonwrapping sequence",
+      "shortest_violation_trace": [
+        {
+          "action": "origin:start-and-persist-intent",
+          "state": {
+            "acks": 0,
+            "alive": [
+              true,
+              true
+            ],
+            "close_acks": 0,
+            "holds": [
+              "none",
+              "none"
+            ],
+            "phase": "acquiring",
+            "support": [
+              true,
+              true
+            ]
+          }
+        },
+        {
+          "action": "net:deliver-prepare0-and-reply",
+          "state": {
+            "acks": 1,
+            "alive": [
+              true,
+              true
+            ],
+            "close_acks": 0,
+            "holds": [
+              "held",
+              "none"
+            ],
+            "phase": "acquiring",
+            "support": [
+              true,
+              true
+            ]
+          }
+        },
+        {
+          "action": "owner0:unsafe-timeout-reclaim",
+          "state": {
+            "acks": 1,
+            "alive": [
+              true,
+              true
+            ],
+            "close_acks": 0,
+            "holds": [
+              "none",
+              "none"
+            ],
+            "phase": "acquiring",
+            "support": [
+              true,
+              true
+            ]
+          }
+        },
+        {
+          "action": "net:deliver-prepare1-and-reply",
+          "state": {
+            "acks": 3,
+            "alive": [
+              true,
+              true
+            ],
+            "close_acks": 0,
+            "holds": [
+              "none",
+              "held"
+            ],
+            "phase": "acquiring",
+            "support": [
+              true,
+              true
+            ]
+          }
+        },
+        {
+          "action": "origin:durable-commit",
+          "state": {
+            "acks": 0,
+            "alive": [
+              true,
+              true
+            ],
+            "close_acks": 0,
+            "holds": [
+              "none",
+              "held"
+            ],
+            "phase": "committed",
+            "support": [
+              true,
+              true
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "peak_rss_kib": 13104,
+  "wall_seconds": 0.026220655000003035
+}

@@ -1,0 +1,36 @@
+[01/17] start tests.unit
+[01/17] done  tests.unit (0.211s)
+[02/17] start tests.pilot
+[02/17] done  tests.pilot (0.317s)
+[03/17] start tests.finite
+[03/17] done  tests.finite (1.964s)
+[04/17] start tests.frontier
+[04/17] done  tests.frontier (2.098s)
+[05/17] start tests.frontier_stress
+[05/17] done  tests.frontier_stress (1.153s)
+[06/17] start tests.generalization
+[06/17] done  tests.generalization (3.763s)
+[07/17] start tests.journal_analysis
+[07/17] done  tests.journal_analysis (2.685s)
+[08/17] start tests.scaling
+[08/17] done  tests.scaling (0.630s)
+[09/17] start tests.modelcheck
+[09/17] done  tests.modelcheck (0.059s)
+[10/17] start tests.public_history
+[10/17] done  tests.public_history (0.055s)
+[11/17] start tests.campaign
+[11/17] done  tests.campaign (13.215s)
+[12/17] start tests.integration
+[12/17] done  tests.integration (0.442s)
+[13/17] start tests.multiprocess
+[13/17] done  tests.multiprocess (1.181s)
+[14/17] start tests.observations
+[14/17] done  tests.observations (8.500s)
+[15/17] start tests.costs
+[15/17] done  tests.costs (0.776s)
+[16/17] start tests.hardening
+[16/17] done  tests.hardening (0.484s)
+[17/17] start tests.replay
+[17/17] done  tests.replay (0.561s)
+[compare] semantic outputs
+[complete] execution.json written

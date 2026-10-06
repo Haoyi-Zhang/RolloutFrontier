@@ -1,0 +1,226 @@
+{
+  "cpu_seconds": 1.913937242,
+  "directed": {
+    "assertions": 17
+  },
+  "negative_control": {
+    "depth": 6,
+    "policy": "unguarded",
+    "states": 10,
+    "transitions": 17,
+    "violation": [
+      {
+        "request": {
+          "manifest": "m1",
+          "op": "prepare",
+          "origin": 0,
+          "requires": [
+            "a"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "m1",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        }
+      },
+      {
+        "request": {
+          "op": "install",
+          "support": []
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": []
+          },
+          "status": "installed"
+        }
+      }
+    ]
+  },
+  "peak_rss_kib": 17012,
+  "rectangles": {
+    "boxes_per_relation": 49,
+    "greedy_counterexample": {
+      "greedy_volume": 2,
+      "optimal_volume": 7,
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "plan": {
+        "bounded": [],
+        "box": {
+          "0": [
+            [
+              "a0"
+            ],
+            [
+              "a1"
+            ]
+          ],
+          "1": [
+            [
+              "b0"
+            ]
+          ]
+        },
+        "certificate": {
+          "corners": 2,
+          "safe": true
+        },
+        "rejected": [
+          {
+            "counterexample": {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b1"
+              ]
+            },
+            "node": "1",
+            "option": [
+              "b1"
+            ]
+          },
+          {
+            "counterexample": {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b2"
+              ]
+            },
+            "node": "1",
+            "option": [
+              "b2"
+            ]
+          },
+          {
+            "counterexample": {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b3"
+              ]
+            },
+            "node": "1",
+            "option": [
+              "b3"
+            ]
+          },
+          {
+            "counterexample": {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b4"
+              ]
+            },
+            "node": "1",
+            "option": [
+              "b4"
+            ]
+          },
+          {
+            "counterexample": {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b5"
+              ]
+            },
+            "node": "1",
+            "option": [
+              "b5"
+            ]
+          },
+          {
+            "counterexample": {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b6"
+              ]
+            },
+            "node": "1",
+            "option": [
+              "b6"
+            ]
+          }
+        ],
+        "tests": 8
+      },
+      "seed": [
+        0,
+        0
+      ]
+    },
+    "instances": 24990,
+    "relations": 510,
+    "safe": 5280
+  },
+  "state_space": {
+    "depth": 6,
+    "policy": "predicate",
+    "states": 445,
+    "transitions": 2790,
+    "violation": null
+  },
+  "wall_seconds": 1.9134976090000038,
+  "witness": {
+    "atoms": 4,
+    "branches": 3,
+    "incompatible": 26767,
+    "instances": 65536,
+    "oracle": "enumerate false-atom subsets by cardinality and lexical order"
+  }
+}
