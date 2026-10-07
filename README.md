@@ -127,6 +127,42 @@ test-local result cap exercises the refusal branch without changing the public c
 No files, endpoints, subprocesses, faults or timing jobs are used by this test;
 these checks do not constitute the retained full POSIX campaign or a speed claim.
 
+## Optional choice for an explicit proposal batch
+
+`src.batch.choose_batch_box(branches, current, candidates, proposals, weights=None)`
+compares the original canonical frontier members for a caller-supplied ordered
+batch of at most 256 proposals. Each item has exactly `node` (the canonical string
+owner ID) and `support` (an explicit finite atom collection). It counts installed,
+blocked and unchanged proposals separately, retaining the full batch denominator
+and final support vector. It keeps the max-mass box unless another member yields
+strictly more forecast installations; an empty batch or a tie retains max mass.
+
+The returned `frontier_plan` is the unmodified, independently checked max-mass
+result. The separate `box` is an optional static choice, not a new mass-optimality
+certificate. Admit it with the unchanged `Client.acquire_box` before updates;
+the independent strong-product check, every held guard and failed-close fallback
+remain mandatory. Search, encoding and certificate errors propagate, rather than
+returning a partial plan or silently falling back after a failed check.
+
+Forecasts assume the supplied current vector, one unchanged admission, no other
+holds or intervening updates, and sufficient generation headroom. They are not
+live receipts or predictions of an unknown schedule. Targets can contain atoms
+outside the finite candidate domain; comparison is only among the returned
+canonical frontier members, not all possible guard languages. An overlapping
+hold, stale current vector, exhausted generation or protocol failure can reduce
+actual installations. The original 0-versus-200 counterexample, 1,440-case holdout,
+156 greedy schedule wins and centralized comparison remain unchanged; this option
+does not repair the impossibility of a positive worst-case future-throughput ratio.
+
+```sh
+python -B -m unittest tests.batch_choice -v
+```
+
+This separate portable regression uses literal tiny rectangle enumeration and
+in-memory owned endpoint transitions, with a temporary origin journal for cleanup
+checks. It is required in CI separately from the retained result denominators;
+it supplies neither a timing measurement nor a full Linux campaign result.
+
 ## Minimum obstruction
 
 The controller's frozen-vector explanation problem selects a smallest set of currently
