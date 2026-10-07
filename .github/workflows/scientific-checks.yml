@@ -28,7 +28,7 @@ jobs:
       - name: Full-powerset positive-contract oracle
         run: timeout --signal=TERM --kill-after=15s 120s python -B -m tests.positive_oracle > "$RUNNER_TEMP/P011-scientific-logs/positive.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/positive.stderr.log"
       - name: Complete finite term-membership regressions
-        run: timeout --signal=TERM --kill-after=15s 180s python -B -m unittest discover -s tests -p test_term_membership.py -v > "$RUNNER_TEMP/P011-scientific-logs/term-membership.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/term-membership.stderr.log"
+        run: timeout --signal=TERM --kill-after=15s 180s python -B tests/term_membership_regression.py -v > "$RUNNER_TEMP/P011-scientific-logs/term-membership.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/term-membership.stderr.log"
       - name: Retained offline scientific suite and semantic comparison
         run: timeout --signal=TERM --kill-after=15s 1500s python -B reproduce.py --out "$RUNNER_TEMP/P011-scientific-results" --check-reference results > "$RUNNER_TEMP/P011-scientific-logs/reproduction.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/reproduction.stderr.log"
       - name: Retain actual scientific output and failure diagnostics

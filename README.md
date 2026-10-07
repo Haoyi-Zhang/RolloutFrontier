@@ -114,7 +114,7 @@ pruning and output order; search counters and all language/refusal caps are unch
 Local-guard construction and the independent checker do not share this map.
 
 ```sh
-python -B -m unittest discover -s tests -p test_term_membership.py -v
+python -B tests/term_membership_regression.py -v
 ```
 
 This pure standard-library regression compares complete frontier plans, including
