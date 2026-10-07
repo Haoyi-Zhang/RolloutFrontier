@@ -179,12 +179,17 @@ def candidate_volume(box: dict[str, list[list[str]]], candidates: dict[str, list
                 scope="supplied finite candidate profiles; not an execution probability")
 
 
-def _partial_safe(branch_sets: list[dict[str, set[str]]], assigned: list[tuple[str, tuple[tuple[str, ...], ...]]]) -> bool:
+def _partial_safe(branch_sets: list[dict[str, set[str]]],
+                  assigned: list[tuple[str, tuple[tuple[str, ...], ...]]],
+                  term_memberships: dict[tuple[str, ...], frozenset[str]] | None = None) -> bool:
     """Necessary-and-sufficient safety test once all nodes are assigned."""
+    if term_memberships is None:
+        term_memberships = {term: frozenset(term)
+                            for term in {term for _, guard in assigned for term in guard}}
     for local_values in product(*(guard for _, guard in assigned)):
         possible = False
         for branch in branch_sets:
-            if all(branch[node].issubset(set(value))
+            if all(branch[node].issubset(term_memberships[value])
                    for (node, _), value in zip(assigned, local_values)):
                 possible = True
                 break
@@ -265,6 +270,10 @@ def frontier_synthesize(branches: list[dict[str, list[str]]], current: dict[str,
         local[n], profile_domains[n] = _local_guards(
             n, branches, projected_current[n], projected_candidates[n], weights)
 
+    # Only membership is reused: canonical tuples still determine search/output order.
+    term_memberships = {term: frozenset(term)
+                        for term in {term for choices in local.values()
+                                     for choice in choices for term in choice["guard"]}}
     # Fewer local choices first reduces unsafe partial products; node ID breaks ties.
     order = sorted(nodes, key=lambda n: (len(local[n]), n))
     branch_sets = [{n: set(req) for n, req in b.items()} for b in branches]
@@ -320,7 +329,7 @@ def frontier_synthesize(branches: list[dict[str, list[str]]], current: dict[str,
                 counters["corner_pruned"] += 1
                 continue
             next_assigned = assigned + [(n, choice["guard"])]
-            if not _partial_safe(branch_sets, next_assigned):
+            if not _partial_safe(branch_sets, next_assigned, term_memberships):
                 counters["unsafe_pruned"] += 1
                 continue
             selected[n] = choice

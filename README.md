@@ -106,6 +106,27 @@ The `scientific-checks.yml` workflow runs these jobs and the retained
 scientific status requires the actual tests and semantic comparisons to succeed,
 not merely syntax or file-presence checks.
 
+## Portable term-membership regression
+
+During exact synthesis, one invocation-local map holds immutable membership views
+of canonical tuple terms for corner subset tests. Tuples still determine traversal,
+pruning and output order; search counters and all language/refusal caps are unchanged.
+Local-guard construction and the independent checker do not share this map.
+
+```sh
+python -B -m unittest discover -s tests -p test_term_membership.py -v
+```
+
+This pure standard-library regression compares complete frontier plans, including
+every member and search counter, with a test-local literal Cartesian oracle. It
+covers 2,295 edge-encoded seeds, nine full-relation cases, six named fixtures and
+24 bounded positive-contract variants under three weight schedules. Additional
+checks cover negative/zero weights, duplicate projections, input isolation,
+nonselected-member omission, type aliases and refusal boundaries. A reduced
+test-local result cap exercises the refusal branch without changing the public cap.
+No files, endpoints, subprocesses, faults or timing jobs are used by this test;
+these checks do not constitute the retained full POSIX campaign or a speed claim.
+
 ## Minimum obstruction
 
 The controller's frozen-vector explanation problem selects a smallest set of currently
