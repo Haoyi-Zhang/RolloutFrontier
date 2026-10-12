@@ -165,6 +165,28 @@ in `results/frontier.json` and documented in `REPAIRS.md`.
 
 ## 5. Durable acquisition and the lifetime invariant
 
+### Prefix safety by surviving-alternative masks
+
+The producer's optimized prefix test is equivalent to literal corner enumeration.
+For branch index j, owner i and term t, let C(i,t) contain j exactly when R_ji is
+a subset of t. For a k-owner corner, its surviving branches are the intersection
+of C(i,t_i) across those owners. Initially the sole reachable mask contains every
+branch. Extending a prefix by an owner's guard forms every intersection of a
+previously reachable mask and a term mask. Induction shows that the reachable mask
+set is exactly the image of all corners under this intersection map. Consequently
+zero is reachable iff some corner satisfies no whole alternative on the prefix.
+Equal masks can be merged because their future intersections are identical; no
+different masks are identified. At most 2^b-1 nonzero masks survive (b<=8).
+
+The owner index is part of each term-mask cache key, since the same atom tuple may
+satisfy different local requirements at different owners. This invocation-local
+optimization changes neither library enumeration nor guard/corner language caps,
+visited-state accounting, refusal behavior, frontier representatives or tie rules.
+The checker does not import the mask implementation. The complete selected box is
+still checked by the producer's literal corner routine. Paired complete-solver
+outputs and independent literal regressions are evidence of implementation
+agreement, not a replacement for the equivalence argument above.
+
 An advertisement is a planning hint, not authority. For origin `o` and sequence `q`,
 each selected owner durably records one hold for a specific manifest and local guard.
 The origin may commit admission only after it has durable receipts from every owner.

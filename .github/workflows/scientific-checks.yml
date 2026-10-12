@@ -31,6 +31,8 @@ jobs:
         run: timeout --signal=TERM --kill-after=15s 180s python -B tests/term_membership_regression.py -v > "$RUNNER_TEMP/P011-scientific-logs/term-membership.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/term-membership.stderr.log"
       - name: Explicit finite-batch choice regressions
         run: timeout --signal=TERM --kill-after=15s 120s python -B -m unittest tests.batch_choice -v > "$RUNNER_TEMP/P011-scientific-logs/batch-choice.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/batch-choice.stderr.log"
+      - name: Mask equivalence and complete durable lifecycle regression
+        run: timeout --signal=TERM --kill-after=15s 180s python -B -m unittest tests.mask_safety tests.cost_path_regression -v > "$RUNNER_TEMP/P011-scientific-logs/lifecycle.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/lifecycle.stderr.log"
       - name: Retained offline scientific suite and semantic comparison
         run: timeout --signal=TERM --kill-after=15s 1500s python -B reproduce.py --out "$RUNNER_TEMP/P011-scientific-results" --check-reference results > "$RUNNER_TEMP/P011-scientific-logs/reproduction.stdout.log" 2> "$RUNNER_TEMP/P011-scientific-logs/reproduction.stderr.log"
       - name: Retain actual scientific output and failure diagnostics

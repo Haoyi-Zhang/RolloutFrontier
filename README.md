@@ -163,6 +163,59 @@ in-memory owned endpoint transitions, with a temporary origin journal for cleanu
 checks. It is required in CI separately from the retained result denominators;
 it supplies neither a timing measurement nor a full Linux campaign result.
 
+## Same-semantic solver and durable lifecycle costs
+
+The prefix checker now collapses equal surviving-alternative masks. Its cache is
+owner/term indexed and invocation local; a reachable zero mask still refuses the
+prefix. The independent checker, literal selected-box check, objective, language
+caps and search counters are preserved. The mask equivalence argument is in
+`proofs.md`; portable literal and complete-frontier regressions run separately
+from the retained five-test smoke/17-job denominators:
+
+```sh
+python -B -m unittest tests.mask_safety tests.term_membership_regression -v
+python -B -m tests.optimizer_benchmark --out results/new-optimizer.json --repetitions 5
+python -B -m tests.full_path_costs --out results/new-full-path.json --repeats 3
+python -B -m unittest tests.cost_path_regression -v
+```
+
+Use a new output filename: the benchmark entry points refuse existing evidence.
+They require only the standard library and use the invoking interpreter for owned
+children. The lifecycle worker binds only `127.0.0.1` and writes temporary data
+under the output parent. Unlike the POSIX reproduction runner, these Windows
+samples have no CPU affinity or address-space cap. Five owner children run at a
+time, with one request per TCP connection and fresh stores for each trial.
+
+`results/repair-optimizer.json` retains all 25 predetermined cases, five paired
+complete-solver samples/backend/case and independent checks. The reference is the
+preceding membership-cache backend, not greedy. Nineteen inputs complete and six
+refuse identically; complete outputs and counters agree. The sum of case medians
+is 548.8 ms for that backend versus 330.4 ms for mask merging. This says nothing
+about a SAT/SMT optimizer, asymptotic scale or successful-update throughput.
+
+`results/repair-full-path-summary.json` and its raw 48-row source
+`results/repair-full-path.json` retain the five-process FULL/DELETE SQLite/TCP
+sample. Across 1,152 proposals, every status matches a literal reference, every
+placement stays compatible, held-owner and origin reopen succeed, and retirement
+closes all holds. Fixed, greedy, maximum-mass and batch choices share the same
+protocol and inputs. On matched batches batch/greedy install 24 and maximum mass
+zero; on withheld reverse batches maximum mass installs 24 and batch/greedy zero.
+Thus batch selection does not improve over greedy on this witness and is not a
+future-workload guarantee. Large-payload batch prediction/planning costs about
+123 ms, including its independent checker, rather than being free.
+
+Full-cycle intervals include setup, planning/checking, durable admission, TCP
+updates, reopen/use, retirement, invariant inspection, statistics and shutdown.
+Per-stage timings and owner persistence totals are retained. The raw sample has
+53 measured RPC connections plus six acknowledged management connections whose
+270 application bytes are accounted separately by the summary. The current
+entry point directly records both. Frame bytes are not packet-capture wire bytes;
+SQLite file sizes are not device-level write bytes. Instrumentation/reference
+overhead is included, origin persistence is included in lifecycle stages rather
+than owner-only totals, and graceful reopen is not a crash/power-loss experiment.
+These separate costs do not replace or relabel the retained 1,440-case holdout,
+17-job Linux reproduction or earlier in-memory timing sample.
+
 ## Minimum obstruction
 
 The controller's frozen-vector explanation problem selects a smallest set of currently
@@ -236,7 +289,7 @@ that the complete source was consumed.
 
 ## Reference and journal-positioning records
 
-The paper has 76 unique cited scholarly sources and 85 citation occurrences.
+The paper has 76 unique cited scholarly sources and 86 citation occurrences.
 `reference_audit.csv` and `reference_sources.csv` verify ordered inventory and state
 each record's verification depth. They do not claim fresh full-text validation of all
 76 sources. `literature.md` gives the novelty and applicability boundary.

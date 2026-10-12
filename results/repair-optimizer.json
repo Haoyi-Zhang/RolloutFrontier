@@ -1,0 +1,878 @@
+{
+  "cases": 25,
+  "completed": 19,
+  "paired_order": "alternating; one warmup/backend/case; fresh complete calls",
+  "platform": "Windows-11-10.0.28000-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "refused": 6,
+  "repetitions": 5,
+  "rows": [
+    {
+      "budget": 400,
+      "case": "dense-b3-n2-s3000-k400",
+      "checker_median_ns": 4408400.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 1,
+      "mask_median_ns": 2395100,
+      "previous_median_ns": 3048300,
+      "product_mass": 9,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          2395100,
+          2382800,
+          2425800,
+          2375800,
+          2443200
+        ],
+        "previous": [
+          3004200,
+          2970200,
+          3076700,
+          3052400,
+          3048300
+        ]
+      },
+      "search": {
+        "complete": 129,
+        "corner_pruned": 0,
+        "safe_complete": 129,
+        "states": 148,
+        "unsafe_pruned": 195
+      },
+      "speed_ratio": 1.2727234770990772
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b3-n2-s3000-k2000",
+      "checker_median_ns": 4369500.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 1,
+      "mask_median_ns": 2371100,
+      "previous_median_ns": 2996600,
+      "product_mass": 9,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          2350000,
+          2435900,
+          2365100,
+          2371100,
+          2442400
+        ],
+        "previous": [
+          2999500,
+          2963800,
+          2996600,
+          2987100,
+          3129600
+        ]
+      },
+      "search": {
+        "complete": 129,
+        "corner_pruned": 0,
+        "safe_complete": 129,
+        "states": 148,
+        "unsafe_pruned": 195
+      },
+      "speed_ratio": 1.2638016110665935
+    },
+    {
+      "budget": 400,
+      "case": "dense-b3-n2-s3001-k400",
+      "checker_median_ns": 4246700.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 1,
+      "mask_median_ns": 2489400,
+      "previous_median_ns": 3075600,
+      "product_mass": 9,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          2409400,
+          2350100,
+          2570400,
+          2527800,
+          2489400
+        ],
+        "previous": [
+          3075600,
+          3044800,
+          3160600,
+          3031300,
+          3579000
+        ]
+      },
+      "search": {
+        "complete": 129,
+        "corner_pruned": 0,
+        "safe_complete": 129,
+        "states": 148,
+        "unsafe_pruned": 195
+      },
+      "speed_ratio": 1.2354784285369969
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b3-n2-s3001-k2000",
+      "checker_median_ns": 4352000.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 1,
+      "mask_median_ns": 2478800,
+      "previous_median_ns": 3114400,
+      "product_mass": 9,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          2478800,
+          2411900,
+          2517800,
+          2497400,
+          2452400
+        ],
+        "previous": [
+          3114400,
+          3103000,
+          3094300,
+          3413900,
+          3121800
+        ]
+      },
+      "search": {
+        "complete": 129,
+        "corner_pruned": 0,
+        "safe_complete": 129,
+        "states": 148,
+        "unsafe_pruned": 195
+      },
+      "speed_ratio": 1.2564143940616428
+    },
+    {
+      "budget": 400,
+      "case": "dense-b3-n2-s3002-k400",
+      "checker_median_ns": 4329900.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 1,
+      "mask_median_ns": 2385900,
+      "previous_median_ns": 2989800,
+      "product_mass": 9,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          2384400,
+          2363900,
+          2385900,
+          2438800,
+          2485900
+        ],
+        "previous": [
+          2989800,
+          2981100,
+          3059400,
+          2967800,
+          3270100
+        ]
+      },
+      "search": {
+        "complete": 129,
+        "corner_pruned": 0,
+        "safe_complete": 129,
+        "states": 148,
+        "unsafe_pruned": 195
+      },
+      "speed_ratio": 1.2531120331950207
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b3-n2-s3002-k2000",
+      "checker_median_ns": 4415000.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 1,
+      "mask_median_ns": 2512900,
+      "previous_median_ns": 3068500,
+      "product_mass": 9,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          2431700,
+          2591100,
+          2512900,
+          2718300,
+          2380800
+        ],
+        "previous": [
+          2986100,
+          3100300,
+          3068500,
+          3131300,
+          3028800
+        ]
+      },
+      "search": {
+        "complete": 129,
+        "corner_pruned": 0,
+        "safe_complete": 129,
+        "states": 148,
+        "unsafe_pruned": 195
+      },
+      "speed_ratio": 1.2210991284969557
+    },
+    {
+      "budget": 400,
+      "case": "dense-b3-n3-s3000-k400",
+      "checker_median_ns": null,
+      "complete_plan_equal": true,
+      "completed": false,
+      "frontier_size": null,
+      "mask_median_ns": 6344600,
+      "previous_median_ns": 9849900,
+      "product_mass": null,
+      "refusal": "exact frontier search-state bound",
+      "samples_ns": {
+        "mask": [
+          6344600,
+          6361300,
+          6308600,
+          6441200,
+          6310700
+        ],
+        "previous": [
+          9931900,
+          9886800,
+          9849900,
+          9746600,
+          9756500
+        ]
+      },
+      "search": null,
+      "speed_ratio": 1.5524855782870473
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b3-n3-s3000-k2000",
+      "checker_median_ns": 31430600.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 15,
+      "mask_median_ns": 9404900,
+      "previous_median_ns": 14449100,
+      "product_mass": 8,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          9321100,
+          9313100,
+          9596900,
+          9404900,
+          9553600
+        ],
+        "previous": [
+          13990700,
+          16974600,
+          14449100,
+          14762700,
+          14412500
+        ]
+      },
+      "search": {
+        "complete": 568,
+        "corner_pruned": 0,
+        "safe_complete": 568,
+        "states": 716,
+        "unsafe_pruned": 1949
+      },
+      "speed_ratio": 1.5363374411211177
+    },
+    {
+      "budget": 400,
+      "case": "dense-b3-n3-s3001-k400",
+      "checker_median_ns": null,
+      "complete_plan_equal": true,
+      "completed": false,
+      "frontier_size": null,
+      "mask_median_ns": 6323400,
+      "previous_median_ns": 9707200,
+      "product_mass": null,
+      "refusal": "exact frontier search-state bound",
+      "samples_ns": {
+        "mask": [
+          6388800,
+          6521900,
+          6210400,
+          6323400,
+          6288200
+        ],
+        "previous": [
+          9707200,
+          10080900,
+          9745900,
+          9614300,
+          9537100
+        ]
+      },
+      "search": null,
+      "speed_ratio": 1.5351235095043805
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b3-n3-s3001-k2000",
+      "checker_median_ns": 30163400.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 15,
+      "mask_median_ns": 9321600,
+      "previous_median_ns": 14111200,
+      "product_mass": 8,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          9321600,
+          9279800,
+          9444700,
+          9410400,
+          9267300
+        ],
+        "previous": [
+          14067400,
+          13820900,
+          14843300,
+          14271000,
+          14111200
+        ]
+      },
+      "search": {
+        "complete": 568,
+        "corner_pruned": 0,
+        "safe_complete": 568,
+        "states": 716,
+        "unsafe_pruned": 1949
+      },
+      "speed_ratio": 1.5138173704085136
+    },
+    {
+      "budget": 400,
+      "case": "dense-b3-n3-s3002-k400",
+      "checker_median_ns": null,
+      "complete_plan_equal": true,
+      "completed": false,
+      "frontier_size": null,
+      "mask_median_ns": 6557800,
+      "previous_median_ns": 9819100,
+      "product_mass": null,
+      "refusal": "exact frontier search-state bound",
+      "samples_ns": {
+        "mask": [
+          6557800,
+          6423900,
+          6759800,
+          6560900,
+          6495000
+        ],
+        "previous": [
+          9819100,
+          9679500,
+          10290600,
+          9952400,
+          9562700
+        ]
+      },
+      "search": null,
+      "speed_ratio": 1.4973161731068345
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b3-n3-s3002-k2000",
+      "checker_median_ns": 30469700.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 15,
+      "mask_median_ns": 9354700,
+      "previous_median_ns": 14168500,
+      "product_mass": 8,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          9234700,
+          9187300,
+          9354700,
+          10754800,
+          9417400
+        ],
+        "previous": [
+          14096200,
+          14367800,
+          14168500,
+          14257300,
+          13993300
+        ]
+      },
+      "search": {
+        "complete": 568,
+        "corner_pruned": 0,
+        "safe_complete": 568,
+        "states": 716,
+        "unsafe_pruned": 1949
+      },
+      "speed_ratio": 1.5145862507616492
+    },
+    {
+      "budget": 400,
+      "case": "dense-b4-n2-s3000-k400",
+      "checker_median_ns": 26221650.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 4,
+      "mask_median_ns": 12224800,
+      "previous_median_ns": 18518300,
+      "product_mass": 9,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          12218500,
+          12929900,
+          12224800,
+          12480700,
+          12195700
+        ],
+        "previous": [
+          18429100,
+          19141000,
+          18499000,
+          18887700,
+          18518300
+        ]
+      },
+      "search": {
+        "complete": 286,
+        "corner_pruned": 0,
+        "safe_complete": 286,
+        "states": 336,
+        "unsafe_pruned": 2115
+      },
+      "speed_ratio": 1.5148141482887245
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b4-n2-s3000-k2000",
+      "checker_median_ns": 26523700.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 4,
+      "mask_median_ns": 12567600,
+      "previous_median_ns": 18746500,
+      "product_mass": 9,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          12567600,
+          12290100,
+          16866500,
+          12688400,
+          12408700
+        ],
+        "previous": [
+          18746500,
+          18571900,
+          18569800,
+          19963100,
+          18927900
+        ]
+      },
+      "search": {
+        "complete": 286,
+        "corner_pruned": 0,
+        "safe_complete": 286,
+        "states": 336,
+        "unsafe_pruned": 2115
+      },
+      "speed_ratio": 1.4916531398198543
+    },
+    {
+      "budget": 400,
+      "case": "dense-b4-n2-s3001-k400",
+      "checker_median_ns": 25216100.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 4,
+      "mask_median_ns": 12301000,
+      "previous_median_ns": 18281400,
+      "product_mass": 9,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          12524700,
+          12132000,
+          12547600,
+          12267500,
+          12301000
+        ],
+        "previous": [
+          17976600,
+          18411400,
+          18299700,
+          17831200,
+          18281400
+        ]
+      },
+      "search": {
+        "complete": 286,
+        "corner_pruned": 0,
+        "safe_complete": 286,
+        "states": 334,
+        "unsafe_pruned": 2017
+      },
+      "speed_ratio": 1.486171855946671
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b4-n2-s3001-k2000",
+      "checker_median_ns": 25308100.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 4,
+      "mask_median_ns": 12357700,
+      "previous_median_ns": 17978200,
+      "product_mass": 9,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          12584500,
+          12562400,
+          12357700,
+          12177300,
+          12254200
+        ],
+        "previous": [
+          18145700,
+          17982500,
+          17967800,
+          17872600,
+          17978200
+        ]
+      },
+      "search": {
+        "complete": 286,
+        "corner_pruned": 0,
+        "safe_complete": 286,
+        "states": 334,
+        "unsafe_pruned": 2017
+      },
+      "speed_ratio": 1.4548176440599787
+    },
+    {
+      "budget": 400,
+      "case": "dense-b4-n2-s3002-k400",
+      "checker_median_ns": 23131450.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 8,
+      "mask_median_ns": 12439900,
+      "previous_median_ns": 18135800,
+      "product_mass": 6,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          12384800,
+          12501300,
+          12439900,
+          12335100,
+          12636400
+        ],
+        "previous": [
+          18135800,
+          18151800,
+          17931700,
+          17981700,
+          18435400
+        ]
+      },
+      "search": {
+        "complete": 250,
+        "corner_pruned": 0,
+        "safe_complete": 250,
+        "states": 300,
+        "unsafe_pruned": 2151
+      },
+      "speed_ratio": 1.4578734555744017
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b4-n2-s3002-k2000",
+      "checker_median_ns": 23059050.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 8,
+      "mask_median_ns": 12492900,
+      "previous_median_ns": 18282400,
+      "product_mass": 6,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          12574300,
+          12639100,
+          12475900,
+          12364600,
+          12492900
+        ],
+        "previous": [
+          18702000,
+          18989500,
+          18064300,
+          18101100,
+          18282400
+        ]
+      },
+      "search": {
+        "complete": 250,
+        "corner_pruned": 0,
+        "safe_complete": 250,
+        "states": 300,
+        "unsafe_pruned": 2151
+      },
+      "speed_ratio": 1.4634232243914544
+    },
+    {
+      "budget": 400,
+      "case": "dense-b4-n3-s3000-k400",
+      "checker_median_ns": null,
+      "complete_plan_equal": true,
+      "completed": false,
+      "frontier_size": null,
+      "mask_median_ns": 21927900,
+      "previous_median_ns": 35437500,
+      "product_mass": null,
+      "refusal": "exact frontier search-state bound",
+      "samples_ns": {
+        "mask": [
+          21917500,
+          22293100,
+          21978300,
+          21597100,
+          21927900
+        ],
+        "previous": [
+          35433800,
+          35687100,
+          35318200,
+          35437500,
+          35622700
+        ]
+      },
+      "search": null,
+      "speed_ratio": 1.6160918282188446
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b4-n3-s3000-k2000",
+      "checker_median_ns": 247477300.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 19,
+      "mask_median_ns": 43324100,
+      "previous_median_ns": 82447700,
+      "product_mass": 27,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          42695500,
+          43324100,
+          43802400,
+          43215600,
+          43501100
+        ],
+        "previous": [
+          82417700,
+          82447700,
+          82310200,
+          92035600,
+          84038600
+        ]
+      },
+      "search": {
+        "complete": 1395,
+        "corner_pruned": 0,
+        "safe_complete": 1395,
+        "states": 1731,
+        "unsafe_pruned": 14734
+      },
+      "speed_ratio": 1.9030447256838572
+    },
+    {
+      "budget": 400,
+      "case": "dense-b4-n3-s3001-k400",
+      "checker_median_ns": null,
+      "complete_plan_equal": true,
+      "completed": false,
+      "frontier_size": null,
+      "mask_median_ns": 24421300,
+      "previous_median_ns": 39843800,
+      "product_mass": null,
+      "refusal": "exact frontier search-state bound",
+      "samples_ns": {
+        "mask": [
+          24114900,
+          24683200,
+          24152400,
+          24421300,
+          24677800
+        ],
+        "previous": [
+          38980200,
+          40038200,
+          40331300,
+          39259900,
+          39843800
+        ]
+      },
+      "search": null,
+      "speed_ratio": 1.6315183876370218
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b4-n3-s3001-k2000",
+      "checker_median_ns": 137997450.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 27,
+      "mask_median_ns": 42353300,
+      "previous_median_ns": 81010100,
+      "product_mass": 12,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          42039400,
+          44017400,
+          42011500,
+          42353300,
+          42410000
+        ],
+        "previous": [
+          81583900,
+          81010100,
+          81434600,
+          80416400,
+          80059900
+        ]
+      },
+      "search": {
+        "complete": 980,
+        "corner_pruned": 0,
+        "safe_complete": 980,
+        "states": 1314,
+        "unsafe_pruned": 15051
+      },
+      "speed_ratio": 1.912722267214125
+    },
+    {
+      "budget": 400,
+      "case": "dense-b4-n3-s3002-k400",
+      "checker_median_ns": null,
+      "complete_plan_equal": true,
+      "completed": false,
+      "frontier_size": null,
+      "mask_median_ns": 22869800,
+      "previous_median_ns": 37291400,
+      "product_mass": null,
+      "refusal": "exact frontier search-state bound",
+      "samples_ns": {
+        "mask": [
+          22988900,
+          23049300,
+          22869800,
+          22767400,
+          22598700
+        ],
+        "previous": [
+          38165300,
+          37291400,
+          38060200,
+          36774500,
+          36890000
+        ]
+      },
+      "search": null,
+      "speed_ratio": 1.6305958075715572
+    },
+    {
+      "budget": 2000,
+      "case": "dense-b4-n3-s3002-k2000",
+      "checker_median_ns": 127001600.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 26,
+      "mask_median_ns": 38850400,
+      "previous_median_ns": 72003600,
+      "product_mass": 12,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          38691000,
+          38850400,
+          38914100,
+          38547500,
+          39145700
+        ],
+        "previous": [
+          71781300,
+          71324800,
+          72236600,
+          72867700,
+          72003600
+        ]
+      },
+      "search": {
+        "complete": 979,
+        "corner_pruned": 0,
+        "safe_complete": 979,
+        "states": 1267,
+        "unsafe_pruned": 12844
+      },
+      "speed_ratio": 1.8533554352078743
+    },
+    {
+      "budget": 2000,
+      "case": "97-atom-projected-term",
+      "checker_median_ns": 510900.0,
+      "complete_plan_equal": true,
+      "completed": true,
+      "frontier_size": 1,
+      "mask_median_ns": 371500,
+      "previous_median_ns": 417700,
+      "product_mass": 2,
+      "refusal": null,
+      "samples_ns": {
+        "mask": [
+          366700,
+          441100,
+          380400,
+          365200,
+          371500
+        ],
+        "previous": [
+          392200,
+          436800,
+          417700,
+          426100,
+          396900
+        ]
+      },
+      "search": {
+        "complete": 3,
+        "corner_pruned": 0,
+        "safe_complete": 3,
+        "states": 6,
+        "unsafe_pruned": 5
+      },
+      "speed_ratio": 1.1243606998654105
+    }
+  ],
+  "scope": "local same-semantic complete solver comparison; no throughput, WAN or asymptotic claim",
+  "sum_mask_case_medians_ns": 330442400,
+  "sum_previous_case_medians_ns": 548792600
+}

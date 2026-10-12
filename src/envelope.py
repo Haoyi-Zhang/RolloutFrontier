@@ -181,21 +181,36 @@ def candidate_volume(box: dict[str, list[list[str]]], candidates: dict[str, list
 
 def _partial_safe(branch_sets: list[dict[str, set[str]]],
                   assigned: list[tuple[str, tuple[tuple[str, ...], ...]]],
-                  term_memberships: dict[tuple[str, ...], frozenset[str]] | None = None) -> bool:
-    """Necessary-and-sufficient safety test once all nodes are assigned."""
+                  term_memberships: dict[tuple[str, ...], frozenset[str]] | None = None,
+                  term_branch_masks: dict[tuple[str, tuple[str, ...]], int] | None = None) -> bool:
+    """Exact corner test, collapsing corners with identical surviving branches.
+
+    A mask names all alternatives satisfied on assigned coordinates. Intersection
+    composes independent local terms; a reachable zero mask is an unsafe corner.
+    Deduplication merges only equal masks, never different predicate behaviors.
+    """
     if term_memberships is None:
         term_memberships = {term: frozenset(term)
                             for term in {term for _, guard in assigned for term in guard}}
-    for local_values in product(*(guard for _, guard in assigned)):
-        possible = False
-        for branch in branch_sets:
-            if all(branch[node].issubset(term_memberships[value])
-                   for (node, _), value in zip(assigned, local_values)):
-                possible = True
-                break
-        if not possible:
+    if term_branch_masks is None:
+        term_branch_masks = _branch_masks(branch_sets, assigned, term_memberships)
+    reachable = {(1 << len(branch_sets)) - 1}
+    if 0 in reachable:
+        return False
+    for node, guard in assigned:
+        local_masks = {term_branch_masks[node, term] for term in guard}
+        following = {previous & local for previous in reachable for local in local_masks}
+        if 0 in following:
             return False
+        reachable = following
     return True
+
+
+def _branch_masks(branch_sets, guards, term_memberships):
+    """Invocation-local truth masks; node identity matters even for equal terms."""
+    return {(node, term): sum(1 << index for index, branch in enumerate(branch_sets)
+                             if branch[node].issubset(term_memberships[term]))
+            for node, term in {(node, term) for node, guard in guards for term in guard}}
 
 
 def _local_guards(node: str, branches: list[dict[str, list[str]]],
@@ -277,6 +292,9 @@ def frontier_synthesize(branches: list[dict[str, list[str]]], current: dict[str,
     # Fewer local choices first reduces unsafe partial products; node ID breaks ties.
     order = sorted(nodes, key=lambda n: (len(local[n]), n))
     branch_sets = [{n: set(req) for n, req in b.items()} for b in branches]
+    term_branch_masks = _branch_masks(
+        branch_sets, [(node, choice["guard"]) for node, choices in local.items()
+                      for choice in choices], term_memberships)
     frontier: list[dict] = []
     counters = dict(states=0, complete=0, safe_complete=0,
                     unsafe_pruned=0, corner_pruned=0)
@@ -329,7 +347,7 @@ def frontier_synthesize(branches: list[dict[str, list[str]]], current: dict[str,
                 counters["corner_pruned"] += 1
                 continue
             next_assigned = assigned + [(n, choice["guard"])]
-            if not _partial_safe(branch_sets, next_assigned, term_memberships):
+            if not _partial_safe(branch_sets, next_assigned, term_memberships, term_branch_masks):
                 counters["unsafe_pruned"] += 1
                 continue
             selected[n] = choice
