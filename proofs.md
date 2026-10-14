@@ -190,6 +190,10 @@ agreement, not a replacement for the equivalence argument above.
 An advertisement is a planning hint, not authority. For origin `o` and sequence `q`,
 each selected owner durably records one hold for a specific manifest and local guard.
 The origin may commit admission only after it has durable receipts from every owner.
+Owner and origin transitions stage a new complete state, commit it, and publish
+that state in memory afterward. A SQLite error makes the object unavailable until
+it is reopened from durable storage; the error may mean either an aborted write
+or an uncertain completion. Reopen uses the actual committed row in either case.
 Installation is serialized with hold checking and may proceed only when the new
 support satisfies every live local guard. Use is authorized only by a committed,
 nonretired origin record whose endpoint holds still exist.
@@ -339,3 +343,54 @@ threshold problem is NP-complete in this generalized formulation. This is not
 an NP-completeness claim for fixed constants such as eight branches or ten local
 library terms. Language caps restrict the exact domain; computational caps cause
 refusal and no truncated optimum.
+
+## Standard labelled-MSS bridge
+
+For a fixed finite candidate catalog, let Q_i be the finite local guard choices
+that already admit the current state and satisfy the local language cap. Hard
+exactly-one choice constraints select one q in Q_i per owner. Forbid each complete
+choice tuple that is strongly unsafe or exceeds the product-corner language cap.
+For profile d of owner i use a fresh z_(i,d), with hard implication from z_(i,d) to
+the disjunction of choices that accept d. The soft group for that profile is the
+unit clause z_(i,d). Hard clauses and auxiliary choice variables are not labels.
+An execution-limit refusal is not encoded as mathematical infeasibility.
+
+Let A(E) contain all accepted owner/profile labels of a legal product. A label
+set S is feasible iff S is a subset of some A(E). If S is an MSS, its witness E
+allows extension to all A(E), so S=A(E). If another product strictly dominates
+E's vector, its labels allow a strict extension, contradicting MSS maximality.
+Conversely, a feasible strict superset of nondominated A(E) has a witness whose
+acceptance set strictly dominates A(E), also a contradiction. Disjoint owner
+labels make ordinary set containment exactly componentwise acceptance containment.
+Thus the frontier vectors are precisely label-level MSSes of this encoding.
+This is a standard representation correspondence, not a new MSS algorithm.
+
+The map is many-to-one in guard representations: canonical minimum-term/lexical
+choice remains a separate step. Maximum label cardinality does not select maximum
+product of local masses. The seven-cell 2x4 relation with row neighborhoods
+{0,1,2,3} and {0,1,2} has two maximal products, each accepting five labels, but
+with masses four and six. Neither subset maximality nor their cardinality tie
+chooses between those products.
+
+Strong safety is essential in the hard constraints. Catalogs containing only
+{a,b} at both owners satisfy (a_0 AND a_1) OR (b_0 AND b_1). Guards a OR b at both
+owners accept the unsafe off-catalog corner ({a},{b}). Candidate-only forbidden
+tuple clauses therefore do not implement the general positive-guard frontier.
+The guard-choice encoding forbids that pair of guards explicitly. For singleton
+relation profiles, by contrast, forbidden row/column clauses plus seed units
+encode exactly the seeded safe rectangles. The literal Boolean-assignment and
+label-subset control agrees on 511 relations, 2,304 seeds, and 3,231 members;
+the old edge-encoded 2,295-case/3,222-member suite remains a separate cohort.
+One additional atomic two-clause soft group tests grouping rather than individual
+clause maximality. No certificate count in this control is a live admission.
+
+## Returned receipt snapshots
+
+The state-transition induction assumes caller-visible replies cannot mutate held
+predicates without a serialized owner transition. Both direct prepare-return paths
+now deep-copy the receipt; a shallow dictionary copy was insufficient for nested
+requires/options lists. Twelve first/duplicate, memory/SQLite, nested-list-edit
+cases fail before repair and pass afterward, including blocked installation and
+SQLite reopen equality. Network JSON serialization already detached TCP replies.
+This protects the return-value boundary, not intentional mutation of the public
+internal state object, arbitrary store corruption, or a malicious in-process actor.

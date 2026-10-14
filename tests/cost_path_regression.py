@@ -1,5 +1,6 @@
 """Untimed harness checks, separate from the retained five-test smoke job."""
 import asyncio
+from copy import deepcopy
 import json
 from pathlib import Path
 import tempfile
@@ -34,6 +35,24 @@ class CostPathRegression(unittest.TestCase):
         self.assertEqual(actual["groups"], expected["groups"])
         self.assertEqual((actual["trials"], actual["proposals_total"]), (48, 1152))
         self.assertEqual(actual["rows"], raw["rows"])
+
+    def test_repetition_disagreement_is_an_explicit_rejection(self):
+        root = Path(__file__).resolve().parents[1]
+        raw = json.loads((root / "results" / "repair-full-path.json").read_text(encoding="utf-8"))
+        rows = deepcopy(raw["rows"])
+        rows[0]["installed"] += 1
+        with self.assertRaises(ValueError):
+            summarize(rows, 3)
+
+    def test_missing_group_is_an_explicit_rejection(self):
+        root = Path(__file__).resolve().parents[1]
+        raw = json.loads((root / "results" / "repair-full-path.json").read_text(encoding="utf-8"))
+        rows = deepcopy(raw["rows"])
+        group = (rows[0]["padding_atoms"], rows[0]["mismatch"], rows[0]["policy"])
+        other = next(row for row in rows if (row["padding_atoms"], row["mismatch"], row["policy"]) != group)
+        rows = [deepcopy(other) if (row["padding_atoms"], row["mismatch"], row["policy"]) == group else row for row in rows]
+        with self.assertRaises(ValueError):
+            summarize(rows, 3)
 
 
 if __name__ == "__main__":

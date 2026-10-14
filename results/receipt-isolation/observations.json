@@ -1,0 +1,2681 @@
+{
+  "case_count": 12,
+  "cases": [
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-False-duplicate-False-requires",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": false,
+      "durable": false,
+      "edit": "requires",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": null,
+        "origin": 0,
+        "requires": [
+          "a"
+        ],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": null,
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "origin": 0,
+        "requires": [
+          "a"
+        ],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-False-duplicate-False-option-inner",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": false,
+      "durable": false,
+      "edit": "option-inner",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": null,
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ],
+          []
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-False-duplicate-False-options-outer",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": false,
+      "durable": false,
+      "edit": "options-outer",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": null,
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-False-duplicate-True-requires",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": true,
+      "durable": false,
+      "edit": "requires",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": null,
+        "origin": 0,
+        "requires": [
+          "a"
+        ],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": null,
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "origin": 0,
+        "requires": [
+          "a"
+        ],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-False-duplicate-True-option-inner",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": true,
+      "durable": false,
+      "edit": "option-inner",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": null,
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ],
+          []
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-False-duplicate-True-options-outer",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": true,
+      "durable": false,
+      "edit": "options-outer",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": null,
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-True-duplicate-False-requires",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": false,
+      "durable": true,
+      "edit": "requires",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": null,
+        "origin": 0,
+        "requires": [
+          "a"
+        ],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "origin": 0,
+        "requires": [
+          "a"
+        ],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-True-duplicate-False-option-inner",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": false,
+      "durable": true,
+      "edit": "option-inner",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ],
+          []
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-True-duplicate-False-options-outer",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": false,
+      "durable": true,
+      "edit": "options-outer",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-True-duplicate-True-requires",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": true,
+      "durable": true,
+      "edit": "requires",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": null,
+        "origin": 0,
+        "requires": [
+          "a"
+        ],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "origin": 0,
+        "requires": [
+          "a"
+        ],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-True-duplicate-True-option-inner",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": true,
+      "durable": true,
+      "edit": "option-inner",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      }
+    },
+    {
+      "after_caller_edit": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "after_install": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "caller_receipt_after_edit": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ],
+          []
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      },
+      "case": "disk-True-duplicate-True-options-outer",
+      "checks": {
+        "durable_preserved": true,
+        "installation_blocked": true,
+        "return_detached": true,
+        "whole_state_preserved": true
+      },
+      "duplicate": true,
+      "durable": true,
+      "edit": "options-outer",
+      "frozen_state": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "install_input": [
+        "noise"
+      ],
+      "install_reply": {
+        "holds": [
+          "0:1"
+        ],
+        "status": "blocked"
+      },
+      "passed": true,
+      "prepare_inputs": {
+        "manifest": "owned-snapshot",
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "reopen_error": null,
+      "reopened": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "noise"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-snapshot",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a"
+              ],
+              [
+                "b"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "noise"
+        ],
+        "window": 8
+      },
+      "returned_receipt": {
+        "manifest": "owned-snapshot",
+        "node": 0,
+        "observed_generation": 0,
+        "options": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1,
+        "status": "held"
+      }
+    }
+  ],
+  "environment": {
+    "observed_utc": "2026-10-14T01:43:59.455616+00:00",
+    "platform": "Windows-11-10.0.28000-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "sqlite": "3.53.1"
+  },
+  "failures": 0,
+  "scope": "owned direct Endpoint API and SQLite reopen; not TCP, origins, power loss or remote exploitation"
+}

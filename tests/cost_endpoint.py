@@ -20,7 +20,7 @@ class MeasuredEndpoint(Endpoint):
         super().__init__(*args, **kwargs)
 
     def persist(self):
-        size = len(canonical(self.state).encode("utf-8"))
+        size = len(canonical(self._persistence_image()).encode("utf-8"))
         begin = time.perf_counter_ns()
         super().persist()
         elapsed = time.perf_counter_ns()-begin

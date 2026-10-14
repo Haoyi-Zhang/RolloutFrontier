@@ -1,0 +1,203 @@
+{
+  "started_utc": "2026-10-14T03:00:11.912997+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.28000-SP0",
+  "sqlite": "3.53.1",
+  "cpu": {
+    "Name": "12th Gen Intel(R) Core(TM) i7-12700KF",
+    "NumberOfCores": 12,
+    "NumberOfLogicalProcessors": 20
+  },
+  "sources": [
+    {
+      "path": "src/batch.py",
+      "sha256": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f"
+    },
+    {
+      "path": "src/checker.py",
+      "sha256": "d1e1ec72926d6c8a28e5191aa758c36e7190ccdf0fc07c46b734aa42bcf9ad1e"
+    },
+    {
+      "path": "src/controller.py",
+      "sha256": "5f58632463e84a8a3a80c94f8bea61db7b24ab1d84f6d698db8ab1ec2d49e5d9"
+    },
+    {
+      "path": "src/envelope.py",
+      "sha256": "565a0f532076f528e5d4f54b71a805f71b56aa9d9076736eece4c93093a277da"
+    },
+    {
+      "path": "src/network.py",
+      "sha256": "a6ecad280440e13688edf1607fb016754640b6e4a6f2ab3a9f63cc603dd41ecc"
+    },
+    {
+      "path": "src/__init__.py",
+      "sha256": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca"
+    },
+    {
+      "path": "tests/batch_choice.py",
+      "sha256": "fb334b4d258c7ea62880eef695c3ce854a513cd5d7a120c318cc86765cf180a6"
+    },
+    {
+      "path": "tests/campaign.py",
+      "sha256": "fb1d60b28c85998bad711515ea291efe08cc15926a7fcdee2588d19ee5af4629"
+    },
+    {
+      "path": "tests/closed_objects.py",
+      "sha256": "138c4ee324535d736b3bbc5e3c409af792ef7df60ba8a7b0d7e16a2f29a7dd22"
+    },
+    {
+      "path": "tests/costs.py",
+      "sha256": "52cf6f03a66e64bca634430ec1cb4679d3d0e4c076217cf932e8ff41f0c9a6a7"
+    },
+    {
+      "path": "tests/cost_endpoint.py",
+      "sha256": "687b66235cf1c20554de30aa2702a81ccf0ee853701615784a4166e72ef53343"
+    },
+    {
+      "path": "tests/cost_path_regression.py",
+      "sha256": "bbed2be13b53312e7c1ed0d36c39114f2bc506be4815b5f31df22637e6038e7a"
+    },
+    {
+      "path": "tests/finite.py",
+      "sha256": "40fe0230f160a1f5a720f70ad9329df5eb34855529229d660ec40f97c6e4f533"
+    },
+    {
+      "path": "tests/frontier.py",
+      "sha256": "2df1214e47edf989ff7dbf75e2bc35ea8cd41dc652a01c0149e55d9981fff095"
+    },
+    {
+      "path": "tests/frontier_stress.py",
+      "sha256": "4f18475b88a5bcdbfc79d90ae21493f332213e55170497cf1a08f040cac6d037"
+    },
+    {
+      "path": "tests/full_path_costs.py",
+      "sha256": "23e598ac8faaedd39d9da849640331e34ae890eccec7f0cb539ce29a781f8981"
+    },
+    {
+      "path": "tests/generalization.py",
+      "sha256": "a664f09b10770f221af311d2321840a4bb7b8f00633d739a2aa6f1c5359b1bd9"
+    },
+    {
+      "path": "tests/hardening.py",
+      "sha256": "0db8d2e9ae9b93ccf9ffa65ae11ca05ae0053d4684813ea233a50d9c6f3bc710"
+    },
+    {
+      "path": "tests/integration.py",
+      "sha256": "e6696a8c632d7ebef55d538cb270fcf4bdaff7db99a49b934f7db8e85efde366"
+    },
+    {
+      "path": "tests/journal_analysis.py",
+      "sha256": "212a6e425e2fbed72683b887d889ca7ab82a780d041b8555c0d329778b2e143c"
+    },
+    {
+      "path": "tests/labelled_mss_bridge.py",
+      "sha256": "53bb27e44a8f95ed571fe8c1ff0f2d830ae31b183ed18809c5be016df401a310"
+    },
+    {
+      "path": "tests/mask_safety.py",
+      "sha256": "7041d80334849d8179026d751c9813c5f8ac4883dd5109d8553b95df1a54affc"
+    },
+    {
+      "path": "tests/modelcheck.py",
+      "sha256": "49a197e557e91097b1558c68704b651abc205b926d24170ed25c370a6d830ebc"
+    },
+    {
+      "path": "tests/multiprocess.py",
+      "sha256": "f076b4c7c77dd68af3a563552fd0cc8cb1cccb52a20777fed352f1c2b905b713"
+    },
+    {
+      "path": "tests/observations.py",
+      "sha256": "d9eedd8a81eba4c0ae1c7d7a12fe37061385df88971caac13a9a8315444cbb4a"
+    },
+    {
+      "path": "tests/optimizer_benchmark.py",
+      "sha256": "d1c85213dab9aac1029607200e4af4fd6750e6a8bb5acdfafe3c3c8d0a7225e6"
+    },
+    {
+      "path": "tests/oracle.py",
+      "sha256": "421804b0a2ca9c1639047b4a0e87161bc52a8ec926e46eca7b6e38ccb997cd3a"
+    },
+    {
+      "path": "tests/origin_persistence_failures.py",
+      "sha256": "e34fad443caaf7b8da281a9b1c81eea16ebc6aa15fbcf5d9b6cb64fbc22bbe48"
+    },
+    {
+      "path": "tests/output_paths.py",
+      "sha256": "2918e1f529683606947605a38e1acc107a92171deb23a636f3a9fbaac0f391b5"
+    },
+    {
+      "path": "tests/persistence_failures.py",
+      "sha256": "c7f73d86bee8e00b9c772935fe47076730e7ea409c7d2359c93040d547ce8543"
+    },
+    {
+      "path": "tests/pilot.py",
+      "sha256": "7f2001e164d3c9f00df1e3dce410aeba3b40f99b02b69896b229f6cabe4f8a05"
+    },
+    {
+      "path": "tests/positive_oracle.py",
+      "sha256": "59e3d4c93aed48492ec3c522a4ddf4bcae360d6803259e0899ed87ebb25f396b"
+    },
+    {
+      "path": "tests/process_endpoint.py",
+      "sha256": "f8bdd69967f05867aeb0c023f871ebd6c45596f840e658bbba964ab2b432b911"
+    },
+    {
+      "path": "tests/process_tcp_endpoint.py",
+      "sha256": "00d8e1f4d33012cc9b3c959fe4feade5f554c7afab6dd5ca80bf2a1e469cb560"
+    },
+    {
+      "path": "tests/profile_bounds.py",
+      "sha256": "77292571184869f5ca856ecb89afbb45c5244a841670ff6eb2b0b4409bae6a2b"
+    },
+    {
+      "path": "tests/public_history.py",
+      "sha256": "5bf2c3104b2d57063d3beffe327ccd2dc4c0827031db5fc3f6b81796ff7fa7c4"
+    },
+    {
+      "path": "tests/receipt_snapshots.py",
+      "sha256": "cd6dfee088a3064ef9161473cffacaa4afee6c294f1a5508e1309385797159bf"
+    },
+    {
+      "path": "tests/replay.py",
+      "sha256": "31bf79869ed7970aa7b6c77faa90911be28b2ed9079edf97623df17b7e47f38c"
+    },
+    {
+      "path": "tests/scaling.py",
+      "sha256": "aaa09e3ca9eb964636676e21c2069b779843b87ff5bc18cf8f388428c4097318"
+    },
+    {
+      "path": "tests/term_membership_regression.py",
+      "sha256": "b728f04f939c4c36e2972e1c0e9bc216938d769c22f3c776c4ad3d80ec9889d6"
+    },
+    {
+      "path": "tests/test_smoke.py",
+      "sha256": "68dc3ae3def07612792f1fcab6c1554d49be825eab1b7a3d0fccf708c773b5f1"
+    },
+    {
+      "path": "tests/unit.py",
+      "sha256": "0d47cfec9b618d52c290aeb7ef2ab014a0441664368921f51e589f91acfe4957"
+    },
+    {
+      "path": "tests/window_types.py",
+      "sha256": "26eae19b2394fbe09a8d2cbd17c82842ac1a8a599c95b1eb57f229f42c6baa0a"
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Owned five-process TCP and FULL/DELETE SQLite cold lifecycle, normal48 and optimized16 separate; not physical/WAN costs",
+  "finished_utc": "2026-10-14T03:00:52.648852+00:00",
+  "argv": [
+    "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "tests.full_path_costs",
+    "--out",
+    "D:\\CodexProjects\\wg-check\\substantive-library\\P011\\artifact\\results\\durable-state-costs\\measurements.json",
+    "--repeats",
+    "3"
+  ],
+  "returncode": 0,
+  "source_bytes_unchanged_during_run": true
+}

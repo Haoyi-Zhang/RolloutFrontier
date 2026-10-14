@@ -31,7 +31,7 @@ sample, not theorem correctness or production performance.
 
 - `src/envelope.py`: bounded exact frontier and greedy/fixed alternatives.
 - `src/checker.py`: independent certificate reconstruction and validation.
-- `src/controller.py`: persistent owner/origin state and lifecycle transitions.
+- `src/controller.py`: persistent owner state and serialized guard transitions.
 - `src/network.py`: loopback protocol, managed channels, event trace, and validation.
 - `tests/`: unit, oracle, generated-holdout, protocol, process, hardening, replay,
   cost, and source-boundary jobs.
@@ -102,7 +102,7 @@ three candidates into one weight-three profile per owner, preserving product mas
 nine. Together with the edge-encoded cases, coverage is all 511 nonempty relations
 and 2,304 current cells; the retained edge-encoded result counts are unchanged.
 The `scientific-checks.yml` workflow runs these jobs and the retained
-17-job POSIX suite on pushes to `main`; it has no manual-dispatch trigger. Its
+17-job POSIX suite on pushes to `main` or an explicit workflow dispatch. Its
 scientific status requires the actual tests and semantic comparisons to succeed,
 not merely syntax or file-presence checks.
 
@@ -289,21 +289,58 @@ that the complete source was consumed.
 
 ## Reference and journal-positioning records
 
-The paper has 76 unique cited scholarly sources and 86 citation occurrences.
+The paper has 78 unique cited scholarly sources and 88 citation occurrences.
 `reference_audit.csv` and `reference_sources.csv` verify ordered inventory and state
 each record's verification depth. They do not claim fresh full-text validation of all
-76 sources. `literature.md` gives the novelty and applicability boundary.
+inherited sources. The two added labelled-MSS papers were read in full;
+`literature.md` gives the scoped comparison and remaining applicability boundary.
 
 `tpds_calibration.csv` contains 12 real TPDS articles at metadata/abstract-level
 structural depth. It is used to check journal-native problem framing and evidence
 organization, not to infer acceptance probability or to pad the manuscript
 bibliography.
 
-## Nonclaims
+## Operational model
 
-This artifact does not establish behavioral API equivalence, representative fleet
-benefit, production deployment, WAN or cross-machine fault independence, Byzantine
-or permanent-disk-loss tolerance, concurrent failover for one identity, exactly-once
-application effects, safe timeout reclamation, unbounded/polynomial exact synthesis,
-or machine-checked refinement. General proofs are handwritten; finite oracles and
-models corroborate only their declared domains.
+The controller enforces declared positive-contract predicates at serialized,
+single-writer owners with recoverable SQLite state. Admissions may block during
+partitions; retirement explicitly closes held sequences, without timeout release.
+Application effects continuing beyond retirement require their own completion or
+fencing rule. Exact planning uses the documented finite language and refuses at
+resource bounds. Evidence consists of handwritten invariant arguments, finite
+oracles, generated schedules and same-host process/TCP measurements. Behavioral
+contract extraction and production-fleet deployment are separate engineering tasks.
+
+## Receipt isolation and standard MSS representation
+
+`results/receipt-isolation/` and `results/standard-mss-comparison/` record raw
+inputs and outcomes. `tests.receipt_snapshots` covers 12 direct-owner
+return-value isolation cases; `tests.labelled_mss_bridge` uses literal Boolean
+assignment and label-subset enumeration, not a new SAT engine. Both support fresh
+output directories. The labelled-MSS bridge concerns planning vectors only.
+The off-catalog unsafe corner and equal-cardinality/different-mass controls remain
+explicit. No new counts are folded into historical campaign denominators.
+Current full-lifecycle measurements include detached receipts and staged durable
+state publication. `results/durable-state-costs/` contains all48rows for1152
+proposals plus the actual hardware/environment and unchanged-during-run source
+bindings. Four policies share inputs and schedules, including the reversed
+evaluation batch. Application-frame counts include six acknowledged management
+exchanges; they are not TCP wire capture. The earlier measurements remain
+historical scientific records, separate from the current paper's cost table.
+
+`python -B -m tests.persistence_failures` exercises eight owner transaction
+controls and one owned localTCP recovery path. `python -B -m
+tests.origin_persistence_failures` covers16fixed/envelope origin phase controls.
+Actual SQLite write aborts and simulated postcommit errors are distinguished.
+The in-memory image is published after commit; a database error stops further
+authorization until durable reopen. `tests.window_types` checks exact integer
+window admission and rejects invalid measurement parameters before output creation.
+The lifecycle driver uses explicit execution and comparison checks in both normal
+and optimized Python. `tests.cost_path_regression` checks complete frame accounting,
+rejects contradictory repetitions and rejects incomplete policy groups.
+These tests concern the owned protocol, not power loss or physical device writes.
+
+OpenAI Codex assisted manuscript revision, implementation and regression-test
+development. The reported new costs come from executed local workflows; general
+results use the stated hand-proof and implementation premises. The manuscript
+records this assistance in its publisher-required Acknowledgment.

@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.28000-SP0",
+  "trials": 48,
+  "repeats": 3,
+  "proposals_total": 1152,
+  "scope": "same host; measured FULL/DELETE SQLite + TCP lifecycle incl setup/checks/reopen/retirement; no WAN/power-loss claim",
+  "measurement_boundary": "cold DB each trial; one TCP connection/RPC; stats instrumentation overhead included; application bytes not wire bytes; owner persist timers exclude stats sizing; origin persistence included in lifecycle stages, not owner totals; no fault injection"
+}

@@ -8,6 +8,7 @@ from __future__ import annotations
 import asyncio
 import json
 import random
+import sqlite3
 import time
 from copy import deepcopy
 from pathlib import Path
@@ -78,6 +79,8 @@ class Network:
                         response = self.nodes[n].handle(req)
                     except (ValueError, KeyError, TypeError) as error:
                         response = dict(status="invalid", reason=type(error).__name__)
+                    except sqlite3.DatabaseError:
+                        response = dict(status="unavailable", reason="durable-state-reopen-required")
                     encoded = (canonical(response) + "\n").encode()
                     if len(encoded) > LIMIT:
                         encoded = b'{"status":"response-too-large"}\n'
@@ -230,6 +233,9 @@ class Client:
         if type(origin) is not int or not 0 <= origin < MAX_NODES:
             raise ValueError("origin bound")
         self.net, self.origin = network, origin
+        self._persistence_failed = False
+        self._disconnected = False
+        self._pending_state = None
         self.db = sqlite3.connect(str(network.directory / f"origin-{origin}.sqlite"))
         try:
             self.db.execute("PRAGMA synchronous=FULL")
@@ -370,13 +376,35 @@ class Client:
                 self._validate_attempt_certificate(record)
 
     def persist(self) -> None:
+        self._require_healthy()
         with self.db:
-            self.db.execute("INSERT OR REPLACE INTO state VALUES (1,?)", (canonical(self.state),))
+            state = self.state if self._pending_state is None else self._pending_state
+            self.db.execute("INSERT OR REPLACE INTO state VALUES (1,?)", (canonical(state),))
+
+    def _require_healthy(self) -> None:
+        if self._disconnected:
+            raise sqlite3.DatabaseError("origin disconnected; reopen durable state")
+        if self._persistence_failed:
+            raise sqlite3.DatabaseError("origin persistence failed; reopen durable state")
+
+    def _commit_state(self, state: dict[str, Any]) -> None:
+        self._require_healthy()
+        self._pending_state = state
+        try:
+            self.persist()
+        except sqlite3.DatabaseError:
+            self._persistence_failed = True
+            raise
+        finally:
+            self._pending_state = None
+        self.state = state
 
     def disconnect(self) -> None:
+        self._disconnected = True
         self.db.close()
 
     async def _close(self, key: str) -> bool:
+        self._require_healthy()
         record = self.state["attempts"][key]
         okay = True
         for text, seq in record["sequences"].items():
@@ -385,21 +413,25 @@ class Client:
             if r is None or r["status"] != "closed":
                 okay = False
         if okay:
-            del self.state["attempts"][key]
-            self.persist()
+            state = deepcopy(self.state)
+            del state["attempts"][key]
+            self._commit_state(state)
         return okay
 
     async def recover(self) -> None:
+        self._require_healthy()
         # Serial use of this Client is part of the model.
         for key in list(self.state["attempts"]):
             record = self.state["attempts"][key]
             if record["status"] == "committed":
                 continue
-            record["status"] = "retiring"
-            self.persist()
+            state = deepcopy(self.state)
+            state["attempts"][key]["status"] = "retiring"
+            self._commit_state(state)
             await self._close(key)
 
     async def acquire(self, manifest: str, branches: list[dict[str, list[str]]]) -> dict[str, Any]:
+        self._require_healthy()
         from .checker import certificate
         from .controller import atoms, MAX_REQUIREMENTS, MAX_SEQ
         if not isinstance(manifest, str) or not manifest or len(manifest) > 256:
@@ -433,15 +465,15 @@ class Client:
                 break
             receipts, sequences = [], {}
             okay = True
+            state = deepcopy(self.state)
             for text in sorted(branch, key=int):
                 n = int(text)
-                self.state["next"][n] += 1
-                sequences[text] = self.state["next"][n]
-            self.state["serial"] += 1
-            key = str(self.state["serial"])
-            self.state["attempts"][key] = dict(status="acquiring", manifest=manifest,
-                                               sequences=sequences)
-            self.persist()  # Intent and nonreused sequence numbers precede network sends.
+                state["next"][n] += 1
+                sequences[text] = state["next"][n]
+            state["serial"] += 1
+            key = str(state["serial"])
+            state["attempts"][key] = dict(status="acquiring", manifest=manifest, sequences=sequences)
+            self._commit_state(state)  # Intent and sequence numbers precede sends.
             for text in sorted(branch, key=int):
                 n = int(text)
                 req = dict(op="prepare", origin=self.origin, sequence=sequences[text],
@@ -455,11 +487,13 @@ class Client:
             c = dict(manifest=manifest, origin=self.origin, branch=index,
                      sequences=sequences, receipts=receipts)
             if okay and certificate(c, branches):
-                self.state["attempts"][key].update(status="committed", certificate=c)
-                self.persist()  # A restarted origin preserves every reported admission.
+                state = deepcopy(self.state)
+                state["attempts"][key].update(status="committed", certificate=c)
+                self._commit_state(state)
                 return dict(status="admitted", certificate=deepcopy(c))
-            self.state["attempts"][key]["status"] = "retiring"
-            self.persist()
+            state = deepcopy(self.state)
+            state["attempts"][key]["status"] = "retiring"
+            self._commit_state(state)
             # A failed close leaves a durable unresolved attempt because a
             # prepare that was lost from the origin's point of view may still
             # arrive later at an owner.  Do not fall back to another branch for
@@ -473,6 +507,7 @@ class Client:
         return dict(status="not-justified", reasons=reasons)
 
     def _record(self, c: dict[str, Any]) -> str | None:
+        self._require_healthy()
         for key, record in self.state["attempts"].items():
             if record.get("certificate") == c:
                 return key
@@ -482,8 +517,9 @@ class Client:
         key = self._record(deepcopy(c))
         if key is None:
             return False
-        self.state["attempts"][key]["status"] = "retiring"
-        self.persist()
+        state = deepcopy(self.state)
+        state["attempts"][key]["status"] = "retiring"
+        self._commit_state(state)
         return await self._close(key)
 
     async def use(self, c: dict[str, Any]) -> list[dict[str, Any] | None]:
@@ -497,6 +533,7 @@ class Client:
 
     async def acquire_box(self, manifest: str, branches: list[dict[str, list[str]]],
                           box: dict[str, list[list[str]]]) -> dict[str, Any]:
+        self._require_healthy()
         from .checker import certificate, safe_envelope
         from .controller import MAX_SEQ
         from .envelope import antichain, normalize
@@ -520,13 +557,14 @@ class Client:
         if self.state["serial"] == MAX_SEQ or any(self.state["next"][int(n)] == MAX_SEQ for n in box):
             return dict(status="not-justified", reasons=[dict(reason="sequence-exhausted")])
         sequences = {}
+        state = deepcopy(self.state)
         for n in sorted(box, key=int):
-            self.state["next"][int(n)] += 1
-            sequences[n] = self.state["next"][int(n)]
-        self.state["serial"] += 1
-        key = str(self.state["serial"])
-        self.state["attempts"][key] = dict(status="acquiring", manifest=manifest, sequences=sequences)
-        self.persist()
+            state["next"][int(n)] += 1
+            sequences[n] = state["next"][int(n)]
+        state["serial"] += 1
+        key = str(state["serial"])
+        state["attempts"][key] = dict(status="acquiring", manifest=manifest, sequences=sequences)
+        self._commit_state(state)
         receipts, reason = [], None
         for n in sorted(box, key=int):
             reply = await self.net.rpc(self.origin, int(n), dict(op="prepare", origin=self.origin,
@@ -538,10 +576,12 @@ class Client:
         c = dict(mode="envelope", manifest=manifest, origin=self.origin, box=box,
                  sequences=sequences, receipts=receipts)
         if reason is None and certificate(c, branches):
-            self.state["attempts"][key].update(status="committed", certificate=c)
-            self.persist()
+            state = deepcopy(self.state)
+            state["attempts"][key].update(status="committed", certificate=c)
+            self._commit_state(state)
             return dict(status="admitted", certificate=deepcopy(c))
-        self.state["attempts"][key]["status"] = "retiring"
-        self.persist()
+        state = deepcopy(self.state)
+        state["attempts"][key]["status"] = "retiring"
+        self._commit_state(state)
         await self._close(key)
         return dict(status="not-justified", reasons=[reason or dict(reason="certificate-rejected")])

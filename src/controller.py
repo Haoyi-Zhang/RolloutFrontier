@@ -8,6 +8,7 @@ of the installed platform outside the guarded transition operation.
 from __future__ import annotations
 import json
 import sqlite3
+from copy import deepcopy
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -75,10 +76,13 @@ class Endpoint:
                  window: int = 8, policy: str = "predicate") -> None:
         if type(node) is not int or not 0 <= node < MAX_NODES:
             raise ValueError("invalid node")
-        if not 1 <= window <= 64 or policy not in ("predicate", "epoch", "unguarded"):
+        if type(window) is not int or not 1 <= window <= 64 or policy not in ("predicate", "epoch", "unguarded"):
             raise ValueError("invalid policy/window")
         self.node, self.path = node, path
         self.db = None
+        self._persistence_failed = False
+        self._disconnected = False
+        self._pending_state = None
         self.state = dict(node=node, generation=0, support=atoms(support, MAX_CONTRACTS),
                           window=window, policy=policy, floor=[0] * MAX_NODES,
                           slots={}, catalog={})
@@ -188,21 +192,47 @@ class Endpoint:
         if own != expected_own:
             raise ValueError("durable self profile mismatch")
 
+    def _require_healthy(self) -> None:
+        if self._disconnected:
+            raise sqlite3.DatabaseError("endpoint disconnected; reopen durable state")
+        if self._persistence_failed:
+            raise sqlite3.DatabaseError("endpoint persistence failed; reopen durable state")
+
     def profile(self) -> dict[str, Any]:
+        self._require_healthy()
         return dict(node=self.node, generation=self.state["generation"],
                     support=list(self.state["support"]))
 
+    def _persistence_image(self) -> dict[str, Any]:
+        return self.state if self._pending_state is None else self._pending_state
+
     def persist(self) -> None:
+        self._require_healthy()
         if self.db is not None:
             with self.db:
-                self.db.execute("INSERT OR REPLACE INTO state VALUES (1,?)", (canonical(self.state),))
+                self.db.execute("INSERT OR REPLACE INTO state VALUES (1,?)", (canonical(self._persistence_image()),))
+
+    def _commit_state(self, state: dict[str, Any]) -> None:
+        """Publish only after commit; uncertain errors require a durable reopen."""
+        self._require_healthy()
+        self._pending_state = state
+        try:
+            self.persist()
+        except sqlite3.DatabaseError:
+            self._persistence_failed = True
+            raise
+        finally:
+            self._pending_state = None
+        self.state = state
 
     def disconnect(self) -> None:
+        self._disconnected = True
         if self.db is not None:
             self.db.close()
             self.db = None
 
     def _key(self, origin: int, sequence: int) -> tuple[str, str | None]:
+        self._require_healthy()
         if type(origin) is not int or not 0 <= origin < MAX_NODES:
             raise ValueError("invalid origin")
         if type(sequence) is not int or not 1 <= sequence <= MAX_SEQ:
@@ -233,7 +263,7 @@ class Endpoint:
                 return dict(status="closed")
             if existing["manifest"] != manifest or existing["requires"] != requires or existing.get("options") != options:
                 return dict(status="binding-conflict")
-            return dict(status="held", receipt=dict(existing))
+            return dict(status="held", receipt=deepcopy(existing))
         missing = sorted(set(requires) - set(self.state["support"]))
         accepts = (not missing) if options is None else any(set(x).issubset(self.state["support"]) for x in options)
         if not accepts:
@@ -243,21 +273,23 @@ class Endpoint:
                     observed_generation=self.state["generation"])
         if options is not None:
             slot["options"] = options
-        self.state["slots"][key] = slot
-        self.persist()  # Acknowledgement follows durable installation of the guard.
-        return dict(status="held", receipt=dict(slot))
+        state = deepcopy(self.state)
+        state["slots"][key] = slot
+        self._commit_state(state)  # Acknowledgement follows durable commit.
+        return dict(status="held", receipt=deepcopy(slot))
 
     def close(self, origin: int, sequence: int) -> dict[str, Any]:
         key, error = self._key(origin, sequence)
         if error:
             return dict(status=error)
-        self.state["slots"][key] = dict(status="closed")
-        floor = self.state["floor"][origin]
-        while self.state["slots"].get(f"{origin}:{floor + 1}", {}).get("status") == "closed":
-            del self.state["slots"][f"{origin}:{floor + 1}"]
+        state = deepcopy(self.state)
+        state["slots"][key] = dict(status="closed")
+        floor = state["floor"][origin]
+        while state["slots"].get(f"{origin}:{floor + 1}", {}).get("status") == "closed":
+            del state["slots"][f"{origin}:{floor + 1}"]
             floor += 1
-        self.state["floor"][origin] = floor
-        self.persist()
+        state["floor"][origin] = floor
+        self._commit_state(state)
         return dict(status="closed", floor=floor)
 
     @staticmethod
@@ -265,6 +297,7 @@ class Endpoint:
         return any(set(option).issubset(support) for option in hold.get("options", [hold["requires"]]))
 
     def install(self, support: list[str]) -> dict[str, Any]:
+        self._require_healthy()
         new = atoms(support, MAX_CONTRACTS)
         if new == self.state["support"]:
             return dict(status="unchanged", observed=self.profile())
@@ -280,13 +313,15 @@ class Endpoint:
                 blocking.append(key)
         if blocking:
             return dict(status="blocked", holds=blocking)
-        self.state["generation"] += 1
-        self.state["support"] = new
-        self.state["catalog"][str(self.node)] = self.profile()
-        self.persist()
+        state = deepcopy(self.state)
+        state["generation"] += 1
+        state["support"] = new
+        state["catalog"][str(self.node)] = dict(node=self.node, generation=state["generation"], support=list(new))
+        self._commit_state(state)
         return dict(status="installed", observed=self.profile())
 
     def merge(self, profile: dict[str, Any]) -> dict[str, Any]:
+        self._require_healthy()
         owner, gen = profile.get("node"), profile.get("generation")
         if type(owner) is not int or not 0 <= owner < MAX_NODES:
             raise ValueError("invalid profile owner")
@@ -302,8 +337,9 @@ class Endpoint:
         if old and gen == old["generation"] and p != old:
             return dict(status="equivocation-rejected")
         if old is None or gen > old["generation"]:
-            self.state["catalog"][str(owner)] = p
-            self.persist()
+            state = deepcopy(self.state)
+            state["catalog"][str(owner)] = p
+            self._commit_state(state)
             return dict(status="merged")
         return dict(status="unchanged")
 
@@ -318,6 +354,7 @@ class Endpoint:
                     manifest=manifest, generation=self.state["generation"])
 
     def handle(self, req: dict[str, Any]) -> dict[str, Any]:
+        self._require_healthy()
         if not isinstance(req, dict):
             raise ValueError("object request required")
         op = req.get("op")

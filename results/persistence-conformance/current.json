@@ -1,0 +1,1460 @@
+{
+  "outcome": "PASS",
+  "tests": 3,
+  "failure_count": 0,
+  "error_count": 0,
+  "records": [
+    {
+      "kind": "actual owned loopback TCP with SQLite abort",
+      "request": {
+        "op": "prepare",
+        "origin": 0,
+        "sequence": 1,
+        "manifest": "owned-tcp",
+        "requires": [
+          "a"
+        ]
+      },
+      "first_reply": {
+        "reason": "durable-state-reopen-required",
+        "status": "unavailable"
+      },
+      "retry_reply": {
+        "reason": "durable-state-reopen-required",
+        "status": "unavailable"
+      },
+      "recovered_reply": {
+        "receipt": {
+          "manifest": "owned-tcp",
+          "node": 0,
+          "observed_generation": 0,
+          "origin": 0,
+          "requires": [
+            "a"
+          ],
+          "sequence": 1,
+          "status": "held"
+        },
+        "status": "held"
+      },
+      "trace": [
+        {
+          "event": "rpc",
+          "tick": 1,
+          "source": 0,
+          "target": 0,
+          "request": {
+            "manifest": "owned-tcp",
+            "op": "prepare",
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1
+          },
+          "response": {
+            "reason": "durable-state-reopen-required",
+            "status": "unavailable"
+          },
+          "bytes": 147,
+          "wall_ns": 980300
+        },
+        {
+          "event": "rpc",
+          "tick": 2,
+          "source": 0,
+          "target": 0,
+          "request": {
+            "manifest": "owned-tcp",
+            "op": "prepare",
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1
+          },
+          "response": {
+            "reason": "durable-state-reopen-required",
+            "status": "unavailable"
+          },
+          "bytes": 147,
+          "wall_ns": 109400
+        },
+        {
+          "event": "crash",
+          "node": 0,
+          "tick": 2
+        },
+        {
+          "event": "recover",
+          "node": 0,
+          "tick": 2
+        },
+        {
+          "event": "rpc",
+          "tick": 3,
+          "source": 0,
+          "target": 0,
+          "request": {
+            "manifest": "owned-tcp",
+            "op": "prepare",
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1
+          },
+          "response": {
+            "receipt": {
+              "manifest": "owned-tcp",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            },
+            "status": "held"
+          },
+          "bytes": 224,
+          "wall_ns": 1977900
+        }
+      ]
+    },
+    {
+      "kind": "simulated exception after actual commit",
+      "transition": "prepare",
+      "before": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "live": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "disk": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "0:2": {
+            "manifest": "owned-next",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 2,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "recovered": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "0:2": {
+            "manifest": "owned-next",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 2,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "acknowledged": false
+    },
+    {
+      "kind": "simulated exception after actual commit",
+      "transition": "close",
+      "before": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "live": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "disk": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "recovered": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "acknowledged": false
+    },
+    {
+      "kind": "simulated exception after actual commit",
+      "transition": "install",
+      "before": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "live": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "disk": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "b"
+        ],
+        "window": 8
+      },
+      "recovered": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a",
+              "b"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a",
+          "b"
+        ],
+        "window": 8
+      },
+      "acknowledged": false
+    },
+    {
+      "kind": "simulated exception after actual commit",
+      "transition": "merge",
+      "before": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "live": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "disk": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "recovered": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "acknowledged": false
+    },
+    {
+      "kind": "actual SQLite trigger abort",
+      "transition": "prepare",
+      "before": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "live": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "disk": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "recovered": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "acknowledged": false
+    },
+    {
+      "kind": "actual SQLite trigger abort",
+      "transition": "close",
+      "before": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "live": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "disk": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "recovered": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "acknowledged": false
+    },
+    {
+      "kind": "actual SQLite trigger abort",
+      "transition": "install",
+      "before": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "live": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "disk": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "recovered": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "acknowledged": false
+    },
+    {
+      "kind": "actual SQLite trigger abort",
+      "transition": "merge",
+      "before": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "live": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "a"
+        ],
+        "window": 8,
+        "policy": "predicate",
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "slots": {
+          "0:1": {
+            "status": "held",
+            "node": 0,
+            "origin": 0,
+            "sequence": 1,
+            "manifest": "owned-held",
+            "requires": [
+              "a"
+            ],
+            "observed_generation": 0
+          }
+        },
+        "catalog": {
+          "0": {
+            "node": 0,
+            "generation": 0,
+            "support": [
+              "a"
+            ]
+          }
+        }
+      },
+      "disk": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "recovered": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "owned-held",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a"
+        ],
+        "window": 8
+      },
+      "acknowledged": false
+    }
+  ],
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "sqlite": "3.53.1",
+    "platform": "Windows-11-10.0.28000-SP0",
+    "argv": [
+      "D:\\CodexProjects\\wg-check\\substantive-library\\P011\\artifact\\tests\\persistence_failures.py",
+      "--report",
+      "D:\\CodexProjects\\wg-check\\substantive-library\\P011\\artifact\\results\\persistence-conformance\\current.json"
+    ]
+  },
+  "source_bindings": [
+    {
+      "path": "src/controller.py",
+      "sha256": "5f58632463e84a8a3a80c94f8bea61db7b24ab1d84f6d698db8ab1ec2d49e5d9"
+    },
+    {
+      "path": "src/network.py",
+      "sha256": "a6ecad280440e13688edf1607fb016754640b6e4a6f2ab3a9f63cc603dd41ecc"
+    },
+    {
+      "path": "tests/cost_endpoint.py",
+      "sha256": "687b66235cf1c20554de30aa2702a81ccf0ee853701615784a4166e72ef53343"
+    },
+    {
+      "path": "tests/persistence_failures.py",
+      "sha256": "c7f73d86bee8e00b9c772935fe47076730e7ea409c7d2359c93040d547ce8543"
+    }
+  ],
+  "scope": "Owned local SQLite transactions and loopback TCP; post-commit uncertainty is a control exception, not actual power loss, disk hardware failure or a remote vulnerability"
+}

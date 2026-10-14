@@ -31,6 +31,11 @@ LIMIT = 1024 * 1024
 POLICIES = ("fixed", "greedy", "mass", "batch")
 
 
+def require(condition, reason):
+    if not condition:
+        raise ValueError(reason)
+
+
 class OwnedNetwork:
     def __init__(self, directory, supports):
         self.directory, self.supports = directory, deepcopy(supports)
@@ -74,7 +79,7 @@ class OwnedNetwork:
                     channel.sendall(request)
                     with channel.makefile("rb") as stream:
                         reply = stream.readline()
-                        assert json.loads(reply) == {"status": "stopped"}
+                        require(json.loads(reply) == {"status": "stopped"}, "shutdown acknowledgment mismatch")
                     self.management_calls += 1
                     self.management_bytes += len(request)+len(reply)
                 # These management frames are outside Client RPC totals but
@@ -146,9 +151,9 @@ async def trial(directory, policy, padding, mismatch, repeat):
         box = {node: [requirements] for node, requirements in branches[0].items()}
     timings["planning_ns"] = time.perf_counter_ns()-begin
     begin = time.perf_counter_ns()
-    assert checker.safe_envelope(branches, box)
+    require(checker.safe_envelope(branches, box), "unsafe planned envelope")
     if policy == "mass":
-        assert checker.frontier_certificate(branches, current, candidates, choice)
+        require(checker.frontier_certificate(branches, current, candidates, choice), "invalid planning certificate")
     timings["external_check_ns"] = time.perf_counter_ns()-begin
     # Literal per-target reference; runtime results below must match every status.
     state = deepcopy(current)
@@ -170,9 +175,9 @@ async def trial(directory, policy, padding, mismatch, repeat):
         begin = time.perf_counter_ns()
         admitted = await client.acquire_box("cost", branches, box)
         timings["acquisition_ns"] = time.perf_counter_ns()-begin
-        assert admitted["status"] == "admitted"
+        require(admitted["status"] == "admitted", "admission did not complete")
         cert = admitted["certificate"]
-        assert checker.certificate(cert, branches)
+        require(checker.certificate(cert, branches), "invalid admission certificate")
         begin = time.perf_counter_ns(); client.disconnect(); client = Client(net)
         timings["origin_reopen_ns"] = time.perf_counter_ns()-begin
         counts = dict(installed=0, blocked=0, unchanged=0)
@@ -180,35 +185,35 @@ async def trial(directory, policy, padding, mismatch, repeat):
         begin = time.perf_counter_ns()
         for proposal, status in zip(proposals, expected):
             reply = await net.rpc(0, int(proposal["node"]), dict(op="install", support=proposal["support"]))
-            assert reply["status"] == status
+            require(reply["status"] == status, "proposal differs from literal reference")
             counts[status] += 1
             if status == "installed":
                 live[proposal["node"]] = proposal["support"][:]
-            assert any(all(all(atom in live[node] for atom in req) for node, req in branch.items())
-                       for branch in branches)
+            require(any(all(all(atom in live[node] for atom in req) for node, req in branch.items())
+                        for branch in branches), "incompatible placement")
         timings["updates_ns"] = time.perf_counter_ns()-begin
-        assert sum(counts.values()) == len(proposals) == 24
+        require(sum(counts.values()) == len(proposals) == 24, "incomplete proposal accounting")
         before = (await net.rpc(0, 2, {"op": "inspect"}))["state"]
         measurements.append(await net.rpc(0, 2, {"op": "benchmark-stats"}))
         begin = time.perf_counter_ns(); net.stop_node(2); net.start_node(2)
         timings["owner_reopen_ns"] = time.perf_counter_ns()-begin
-        assert (await net.rpc(0, 2, {"op": "inspect"}))["state"] == before
+        require((await net.rpc(0, 2, {"op": "inspect"}))["state"] == before, "reopen changed held state")
         begin = time.perf_counter_ns()
-        assert all(reply["status"] == "used" for reply in await client.use(cert))
+        require(all(reply["status"] == "used" for reply in await client.use(cert)), "held use rejected")
         timings["use_ns"] = time.perf_counter_ns()-begin
         begin = time.perf_counter_ns()
-        assert await client.retire(cert)
+        require(await client.retire(cert), "retirement did not complete")
         timings["retirement_ns"] = time.perf_counter_ns()-begin
-        assert not client.state["attempts"]
-        assert (await client.use(cert))[0]["status"] == "not-authorized"
+        require(not client.state["attempts"], "origin retains an unresolved attempt")
+        require((await client.use(cert))[0]["status"] == "not-authorized", "retired admission authorized use")
         for node in range(5):
             actual = (await net.rpc(0, node, {"op": "inspect"}))["state"]
-            assert actual["support"] == state[str(node)] and checker.endpoint_invariant(actual)
-            assert actual["slots"] == {} and actual["floor"][0] == 1
+            require(actual["support"] == state[str(node)] and checker.endpoint_invariant(actual), "owner state/reference mismatch")
+            require(actual["slots"] == {} and actual["floor"][0] == 1, "retirement left a held slot or wrong floor")
             measurements.append(await net.rpc(0, node, {"op": "benchmark-stats"}))
-        assert (await net.rpc(0, 0, dict(op="prepare", origin=0, sequence=1, manifest="cost",
-                                      requires=[], options=box["0"])))["status"] == "closed"
-        assert all(row["synchronous"] == 2 and row["journal_mode"] == "delete" for row in measurements)
+        require((await net.rpc(0, 0, dict(op="prepare", origin=0, sequence=1, manifest="cost",
+                                       requires=[], options=box["0"])))["status"] == "closed", "delayed prepare resurrected a hold")
+        require(all(row["synchronous"] == 2 and row["journal_mode"] == "delete" for row in measurements), "durability mode mismatch")
         database_bytes = sum(path.stat().st_size for path in directory.glob("*.sqlite"))
         return_value = dict(policy=policy, padding_atoms=padding, mismatch=mismatch, repeat=repeat,
                             proposals=24, **counts, safety_violations=0, refused_admissions=0,
@@ -235,7 +240,7 @@ async def trial(directory, policy, padding, mismatch, repeat):
 
 
 def run(out, repeats):
-    if not 1 <= repeats <= 5:
+    if type(repeats) is not int or not 1 <= repeats <= 5:
         raise ValueError("1..5 repeats")
     rows = []
     for padding, mismatch, repeat in product((0, 11999), (False, True), range(repeats)):
@@ -256,15 +261,17 @@ def run(out, repeats):
 
 
 def summarize(rows, repeats):
-    if len(rows) != 16*repeats:
+    if type(repeats) is not int or not 1 <= repeats <= 5 or len(rows) != 16*repeats:
         raise ValueError("incomplete trial rows")
     groups = []
     for padding, mismatch, policy in product((0, 11999), (False, True), POLICIES):
         selected = [row for row in rows if (row["padding_atoms"], row["mismatch"], row["policy"]) == (padding, mismatch, policy)]
-        assert all((row["installed"], row["blocked"], row["unchanged"], row["rpc_count"],
-                    row["owner_persist_calls"]) ==
-                   tuple(selected[0][key] for key in ("installed", "blocked", "unchanged", "rpc_count",
-                                                      "owner_persist_calls")) for row in selected)
+        require(len(selected) == repeats, "incomplete policy/payload/schedule group")
+        require(all((row["installed"], row["blocked"], row["unchanged"], row["rpc_count"],
+                     row["owner_persist_calls"]) ==
+                    tuple(selected[0][key] for key in ("installed", "blocked", "unchanged", "rpc_count",
+                                                       "owner_persist_calls")) for row in selected),
+                "semantic disagreement across repetitions")
         groups.append(dict(policy=policy, padding_atoms=padding, mismatch=mismatch,
                            installed=selected[0]["installed"], blocked=selected[0]["blocked"], unchanged=selected[0]["unchanged"],
                            full_lifecycle_median_ms=median(row["full_lifecycle_ns"] for row in selected)/1e6,
@@ -281,7 +288,7 @@ def summarize(rows, repeats):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", required=True, type=Path)
-    parser.add_argument("--repeats", type=int, default=3)
+    parser.add_argument("--repeats", type=int, choices=range(1, 6), default=3)
     parser.add_argument("--finalize-from", type=Path,
                         help="summarize retained complete rows after an aggregation-only failure; no experiments")
     args = parser.parse_args()
