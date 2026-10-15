@@ -345,3 +345,13 @@ These tests concern the owned protocol, not power loss or physical device writes
 
 The reported new costs come from executed local workflows; general results use
 the stated mathematical-proof and implementation premises.
+
+## Manuscript diagrams
+
+The model and protocol schematics are drawn directly in Python as vector PDFs
+with embedded STIX fonts. They encode the stated relationships, not measured
+performance. To regenerate them with Python 3.9+ and Matplotlib:
+
+```sh
+python -B figures/draw_schematics.py --output figures
+```
