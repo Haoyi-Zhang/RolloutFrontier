@@ -343,7 +343,5 @@ fixture in both modes, without remeasuring the retained timing cohort.
 rejects contradictory repetitions and rejects incomplete policy groups.
 These tests concern the owned protocol, not power loss or physical device writes.
 
-OpenAI Codex assisted manuscript revision, implementation and regression-test
-development. The reported new costs come from executed local workflows; general
-results use the stated hand-proof and implementation premises. The manuscript
-records this assistance in its publisher-required Acknowledgment.
+The reported new costs come from executed local workflows; general results use
+the stated mathematical-proof and implementation premises.
