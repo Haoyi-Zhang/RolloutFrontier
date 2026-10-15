@@ -81,18 +81,21 @@ def run(repetitions):
     for name, branches, current, candidates, budget in cases():
         # One untimed warmup of each complete path. Both must agree before timing.
         reference = execute("previous", branches, current, candidates, budget)[0]
-        assert execute("mask", branches, current, candidates, budget)[0] == reference
+        if execute("mask", branches, current, candidates, budget)[0] != reference:
+            raise RuntimeError(f"warmup complete-plan mismatch: {name}")
         samples = {backend: [] for backend in ("previous", "mask")}
         checks = []
         for repeat in range(repetitions):
             for backend in (("previous", "mask") if repeat % 2 == 0 else ("mask", "previous")):
                 plan, elapsed = execute(backend, branches, current, candidates, budget)
-                assert plan == reference, (name, backend)
+                if plan != reference:
+                    raise RuntimeError(f"complete-plan mismatch: {name} {backend}")
                 samples[backend].append(elapsed)
                 if "refusal" not in plan:
                     begin = time.perf_counter_ns()
-                    assert checker.frontier_certificate(branches, current, candidates, plan,
-                                                        combination_bound=budget)
+                    if not checker.frontier_certificate(branches, current, candidates, plan,
+                                                        combination_bound=budget):
+                        raise RuntimeError(f"frontier certificate rejected: {name} {backend}")
                     checks.append(time.perf_counter_ns()-begin)
         rows.append(dict(case=name, budget=budget, completed="refusal" not in reference,
                          search=reference.get("search"), frontier_size=reference.get("frontier_size"),

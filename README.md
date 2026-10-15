@@ -336,7 +336,10 @@ The in-memory image is published after commit; a database error stops further
 authorization until durable reopen. `tests.window_types` checks exact integer
 window admission and rejects invalid measurement parameters before output creation.
 The lifecycle driver uses explicit execution and comparison checks in both normal
-and optimized Python. `tests.cost_path_regression` checks complete frame accounting,
+and optimized Python. The optimizer benchmark likewise uses explicit plan-equality
+and certificate checks; `tests.window_types` exercises these paths with one mocked
+fixture in both modes, without remeasuring the retained timing cohort.
+`tests.cost_path_regression` checks complete frame accounting,
 rejects contradictory repetitions and rejects incomplete policy groups.
 These tests concern the owned protocol, not power loss or physical device writes.
 
