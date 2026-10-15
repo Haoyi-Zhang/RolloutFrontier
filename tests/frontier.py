@@ -144,7 +144,7 @@ def weighted_case():
     uniform = frontier_synthesize(branches, current, candidates)
     weighted = frontier_synthesize(branches, current, candidates,
                                     weights={'0': [1, 9], '1': [8, 1]})
-    # Uniform objectives tie; lexical ordering chooses the wider left side.
+    # Uniform objectives tie; tuple-lex order chooses only a0 on the left.
     assert uniform['product_mass'] == 2
     # Weighted mass favors retaining a1 at the left and only b0 at the right.
     assert frontier_certificate(branches, current, candidates, uniform)
