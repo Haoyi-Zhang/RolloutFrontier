@@ -100,7 +100,7 @@ Belov, Morgado, and Marques-Silva, *SAT-based Preprocessing for MaxSAT (extended
 version)*, [author version 2](https://arxiv.org/abs/1310.2298v2): all 18 pages read.
 Section 3.2 defines label-induced clause selection, hard unlabelled clauses and
 label-level MSS/MCS; Section 4.1 gives selector-based weighted MaxSAT encoding.
-Labels can activate a multi-clause semantic group. P011's acceptance frontier is
+Labels can activate a multi-clause semantic group. RolloutFrontier's acceptance frontier is
 ordinary labelled-MSS machinery after hard constraints encode its finite guard
 choices and strong all-corner safety. The bridge proof is in `proofs.md` and the
 journal supplement, with a literal assignment/subset control in
@@ -109,14 +109,14 @@ profile-label sets constitute a new maximal-subset object.
 
 Bendik et al., [*Tunable Online MUS/MSS Enumeration*](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2016.50),
 all 13 pages read: Definition 1 distinguishes inclusion maximality from maximum
-cardinality; Section 3 searches a monotone subset space. P011 does not evaluate a
+cardinality; Section 3 searches a monotone subset space. RolloutFrontier does not evaluate a
 new MUS/MSS enumeration engine against that algorithm. Product mass differs from
 label cardinality, but can be supplied as an application objective on a standard
 frontier; it is not by itself an algorithmic novelty claim. Canonical positive
 guard representation and runtime durable obligations remain explicit additional
 requirements, not evidence that general SAT machinery cannot express them.
 
-The directly inspected sources do not implement P011's particular per-owner
+The directly inspected sources do not implement RolloutFrontier's particular per-owner
 durable hold lifecycle. That is a scoped observation, not a priority assertion:
 warranty/treaty literature remains material and this revision has not established
 an exhaustive novelty boundary.

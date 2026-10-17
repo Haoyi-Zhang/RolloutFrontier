@@ -1,6 +1,6 @@
 """Owned direct-Endpoint returned-data isolation; no sockets or third parties.
 
-Raw before/after observations live only in a fresh P011 candidate/private folder.
+Raw before/after observations live only in a fresh RolloutFrontier candidate/private folder.
 The journal and caller-copy edits are benign local conformance tests, not a test
 of remote compromise. The TCP boundary already serializes returned objects.
 """

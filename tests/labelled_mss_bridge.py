@@ -1,4 +1,4 @@
-"""Literal labelled-MSS control for P011 planning, not a new SAT algorithm.
+"""Literal labelled-MSS control for RolloutFrontier planning, not a new SAT algorithm.
 
 Enumerates Boolean assignments and soft label subsets independently of planner
 and checker internals. Original profile labels are retained before projection.
