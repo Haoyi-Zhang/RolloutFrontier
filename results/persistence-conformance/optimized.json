@@ -1433,9 +1433,9 @@
     "sqlite": "3.53.1",
     "platform": "Windows-11-10.0.28000-SP0",
     "argv": [
-      "D:\\CodexProjects\\wg-check\\substantive-library\\P011\\artifact\\tests\\persistence_failures.py",
+      "<PROJECTS_ROOT>\\wg-check\\substantive-library\\P011\\artifact\\tests\\persistence_failures.py",
       "--report",
-      "D:\\CodexProjects\\wg-check\\substantive-library\\P011\\artifact\\results\\persistence-conformance\\optimized.json"
+      "<PROJECTS_ROOT>\\wg-check\\substantive-library\\P011\\artifact\\results\\persistence-conformance\\optimized.json"
     ]
   },
   "source_bindings": [

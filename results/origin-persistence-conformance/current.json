@@ -2498,9 +2498,9 @@
     "platform": "Windows-11-10.0.28000-SP0",
     "sqlite": "3.53.1",
     "argv": [
-      "D:\\CodexProjects\\wg-check\\substantive-library\\P011\\artifact\\tests\\origin_persistence_failures.py",
+      "<PROJECTS_ROOT>\\wg-check\\substantive-library\\P011\\artifact\\tests\\origin_persistence_failures.py",
       "--report",
-      "D:\\CodexProjects\\wg-check\\substantive-library\\P011\\artifact\\results\\origin-persistence-conformance\\current.json"
+      "<PROJECTS_ROOT>\\wg-check\\substantive-library\\P011\\artifact\\results\\origin-persistence-conformance\\current.json"
     ]
   },
   "source_bindings": [
