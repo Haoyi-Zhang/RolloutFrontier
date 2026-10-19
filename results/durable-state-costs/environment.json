@@ -189,7 +189,7 @@
   "scope": "Owned five-process TCP and FULL/DELETE SQLite cold lifecycle, normal48 and optimized16 separate; not physical/WAN costs",
   "finished_utc": "2026-10-14T03:00:52.648852+00:00",
   "argv": [
-    "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+    "<PYTHON_ROOT>/Scripts/python.exe",
     "-B",
     "-m",
     "tests.full_path_costs",
