@@ -7,7 +7,7 @@
       "relations"
     ],
     "expected": 510,
-    "manuscript_section": "VII-A"
+    "manuscript_section": "sec:results — Exactness and counterexamples"
   },
   {
     "id": "oracle-seeds",
@@ -17,7 +17,7 @@
       "seeded_relations"
     ],
     "expected": 2295,
-    "manuscript_section": "VII-A"
+    "manuscript_section": "sec:results — Exactness and counterexamples"
   },
   {
     "id": "greedy-mass",
@@ -27,7 +27,7 @@
       "greedy_product_mass"
     ],
     "expected": 2,
-    "manuscript_section": "VII-A"
+    "manuscript_section": "sec:results — Exactness and counterexamples"
   },
   {
     "id": "exact-mass",
@@ -37,7 +37,7 @@
       "exact_product_mass"
     ],
     "expected": 7,
-    "manuscript_section": "VII-A"
+    "manuscript_section": "sec:results — Exactness and counterexamples"
   },
   {
     "id": "model-states",
@@ -47,7 +47,7 @@
       "reachable_states"
     ],
     "expected": 296,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "model-transitions",
@@ -57,7 +57,7 @@
       "explored_transitions"
     ],
     "expected": 1388,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "model-safety",
@@ -67,7 +67,7 @@
       "invariant_violations"
     ],
     "expected": 0,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "cases",
@@ -76,7 +76,7 @@
       "cases"
     ],
     "expected": 144,
-    "manuscript_section": "VI-B; VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "epoch-installed",
@@ -87,7 +87,7 @@
       "installed"
     ],
     "expected": 0,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "epoch-unsafe",
@@ -98,7 +98,7 @@
       "incompatible_snapshots"
     ],
     "expected": 0,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "branch-installed",
@@ -109,7 +109,7 @@
       "installed"
     ],
     "expected": 136,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "branch-unsafe",
@@ -120,7 +120,7 @@
       "incompatible_snapshots"
     ],
     "expected": 0,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "envelope-installed",
@@ -131,7 +131,7 @@
       "installed"
     ],
     "expected": 150,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "envelope-unsafe",
@@ -142,7 +142,7 @@
       "incompatible_snapshots"
     ],
     "expected": 0,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "frontier-installed",
@@ -153,7 +153,7 @@
       "installed"
     ],
     "expected": 154,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "frontier-unsafe",
@@ -164,7 +164,7 @@
       "incompatible_snapshots"
     ],
     "expected": 0,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "marginal-installed",
@@ -175,7 +175,7 @@
       "installed"
     ],
     "expected": 192,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "marginal-unsafe",
@@ -186,7 +186,7 @@
       "incompatible_snapshots"
     ],
     "expected": 55,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "unguarded-installed",
@@ -197,7 +197,7 @@
       "installed"
     ],
     "expected": 415,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "unguarded-unsafe",
@@ -208,7 +208,7 @@
       "incompatible_snapshots"
     ],
     "expected": 484,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "trace-rpc",
@@ -217,7 +217,7 @@
       "checked_rpc"
     ],
     "expected": 40992,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "trace-bytes",
@@ -226,7 +226,7 @@
       "serialized_bytes"
     ],
     "expected": 4494882,
-    "manuscript_section": "VII-B"
+    "manuscript_section": "sec:results — End-to-end changes and protocol safety"
   },
   {
     "id": "holdout-cases",
@@ -235,7 +235,7 @@
       "cases"
     ],
     "expected": 1440,
-    "manuscript_section": "VI-B; VII-C"
+    "manuscript_section": "sec:results — Holdout variation and schedule opportunity cost"
   },
   {
     "id": "holdout-exact",
@@ -244,7 +244,7 @@
       "exact_installed"
     ],
     "expected": 11256,
-    "manuscript_section": "VII-C"
+    "manuscript_section": "sec:results — Holdout variation and schedule opportunity cost"
   },
   {
     "id": "holdout-greedy",
@@ -253,7 +253,7 @@
       "greedy_installed"
     ],
     "expected": 10854,
-    "manuscript_section": "VII-C"
+    "manuscript_section": "sec:results — Holdout variation and schedule opportunity cost"
   },
   {
     "id": "holdout-central",
@@ -262,7 +262,7 @@
       "central_installed"
     ],
     "expected": 16170,
-    "manuscript_section": "VII-C"
+    "manuscript_section": "sec:results — Holdout variation and schedule opportunity cost"
   },
   {
     "id": "greedy-schedule-wins",
@@ -271,7 +271,7 @@
       "greedy_better_schedule_cases"
     ],
     "expected": 156,
-    "manuscript_section": "VII-C"
+    "manuscript_section": "sec:results — Holdout variation and schedule opportunity cost"
   },
   {
     "id": "counterexample-exact",
@@ -281,7 +281,7 @@
       "selected_installed"
     ],
     "expected": 0,
-    "manuscript_section": "V-C; VII-A"
+    "manuscript_section": "prop:schedule; sec:results — Holdout variation and schedule opportunity cost"
   },
   {
     "id": "counterexample-alternate",
@@ -291,7 +291,7 @@
       "alternative_installed"
     ],
     "expected": 200,
-    "manuscript_section": "V-C; VII-A"
+    "manuscript_section": "prop:schedule; sec:results — Holdout variation and schedule opportunity cost"
   },
   {
     "id": "dense-calls",
@@ -301,7 +301,7 @@
       "calls"
     ],
     "expected": 24,
-    "manuscript_section": "VII-D"
+    "manuscript_section": "sec:results — Search bounds, component cost, and API evidence"
   },
   {
     "id": "dense-refusals",
@@ -311,7 +311,7 @@
       "rejected"
     ],
     "expected": 6,
-    "manuscript_section": "VII-D"
+    "manuscript_section": "sec:results — Search bounds, component cost, and API evidence"
   },
   {
     "id": "dense-states",
@@ -321,7 +321,7 @@
       "max_completed_states"
     ],
     "expected": 1731,
-    "manuscript_section": "VII-D"
+    "manuscript_section": "sec:results — Search bounds, component cost, and API evidence"
   },
   {
     "id": "dense-frontier",
@@ -331,6 +331,6 @@
       "max_frontier_size"
     ],
     "expected": 27,
-    "manuscript_section": "VII-D"
+    "manuscript_section": "sec:results — Search bounds, component cost, and API evidence"
   }
 ]
