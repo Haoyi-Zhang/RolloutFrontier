@@ -1,3 +1,4 @@
+"""Explicit CI regression, separate from the retained five-test smoke denominator."""
 import json
 import unittest
 from lifecycle_table import ROOT,derive

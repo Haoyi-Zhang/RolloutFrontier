@@ -23,8 +23,8 @@ jobs:
           python-version: '3.12'
       - name: Current lifecycle table and full raw-row accounting
         run: |
-          python -B -m unittest tests.test_lifecycle_table -v
-          python -B -O -m unittest tests.test_lifecycle_table -v
+          python -B -m unittest tests.lifecycle_table_regression -v
+          python -B -O -m unittest tests.lifecycle_table_regression -v
       - name: Profile encoding and evidence-preservation regressions
         run: |
           mkdir -p "$RUNNER_TEMP/P011-scientific-logs"

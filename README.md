@@ -357,7 +357,7 @@ table during the complete project's paper build; no earlier measurements are
 silently replaced and no new timing result is inferred.
 
 ```sh
-python -B -m unittest tests.test_lifecycle_table -v
+python -B -m unittest tests.lifecycle_table_regression -v
 python -B lifecycle_table.py
 ```
 
