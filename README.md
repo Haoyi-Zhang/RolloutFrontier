@@ -346,6 +346,21 @@ These tests concern the owned protocol, not power loss or physical device writes
 The reported new costs come from executed local workflows; general results use
 the stated mathematical-proof and implementation premises.
 
+The current manuscript's cold-lifecycle table consumes only
+`results/durable-state-costs/measurements.json`: for example, its small-payload
+matched Fixed median is 582.4542 ms. The 882.8377 ms value in
+`results/repair-full-path-summary.json` belongs to the earlier measurement cohort.
+`lifecycle_table.py` independently recomputes all16group medians from all48raw
+rows, checks their1152proposals, and rejects mixing either cohort's summary with
+the other's measurements. `paper/generate_lifecycle.py` consumes this checked
+table during the complete project's paper build; no earlier measurements are
+silently replaced and no new timing result is inferred.
+
+```sh
+python -B -m unittest tests.test_lifecycle_table -v
+python -B lifecycle_table.py
+```
+
 ## Manuscript diagrams
 
 The model and protocol schematics are drawn directly in Python as vector PDFs
