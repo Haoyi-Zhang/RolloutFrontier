@@ -1,0 +1,12 @@
+{
+  "source_url": "https://android.googlesource.com/platform/development/+/a278b15cda8a07a97686370cb5e944fb4f6bc824/sdk/api-versions.xml",
+  "git_blob": "16316e39d865c417a0fcd9c630861d9c8cc75efb",
+  "source_bytes": 3539324,
+  "evaluation_api_range": [1, 25],
+  "contracts": [
+    {"atom":"api.base64","class_name":"android/util/Base64","since":8,"removed":null},
+    {"atom":"api.camera-manager","class_name":"android/hardware/camera2/CameraManager","since":21,"removed":null},
+    {"atom":"api.download-manager","class_name":"android/app/DownloadManager","since":9,"removed":null},
+    {"atom":"api.fragment","class_name":"android/app/Fragment","since":11,"removed":null}
+  ]
+}

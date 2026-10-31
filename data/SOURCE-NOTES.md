@@ -47,7 +47,7 @@ The three API-26 factory declarations occur there. A hidden `get(int)` is not th
 later public `createPredefined(int)` and is deliberately excluded. No source code from
 that file is included in the artifact.
 
-## Complete-history boundary
+## Earlier complete-history boundary
 
 A complete upstream declaration-history source was identified but not acquired or
 bundled:
@@ -59,12 +59,38 @@ bundled:
 - canonical source URL:
   https://android.googlesource.com/platform/development/+/a278b15cda8a07a97686370cb5e944fb4f6bc824/sdk/api-versions.xml
 
-The official Gitiles metadata view reports an exact file size of 3,539,324 bytes and
+For the archived campaigns, the official Gitiles metadata view reported an exact file size of 3,539,324 bytes and
 the blob identifier above. The available repository interfaces did not yield a
 reliable complete byte-for-byte local copy, so the file is not bundled or parsed. It
 is recorded only as a fixed future acquisition boundary, not counted as an
 experimental input, checksum-verified download, complete corpus, or basis for any
 result.
+
+## Separate authenticated declaration adapter
+
+The subsequent bounded review obtained the complete Gitiles `?format=TEXT`
+payload and decoded its bytes. Git's `SHA1("blob " + length + NUL + bytes)`
+equals `16316e39d865c417a0fcd9c630861d9c8cc75efb` at exactly 3,539,324 bytes.
+`src/android_contracts.py` checks both before parsing; no upstream code is
+executed. Only selected factual class metadata is redistributed in
+`android-pinned-class-contracts.json`, not source code or the complete file.
+
+This pinned file is stale relative to its repository commit date: its maximum
+explicit introduction level is 25 and it has no VibrationEffect class entry.
+It is not a complete history through API 34. The adapter explicitly refuses
+levels above 25; missing unselected classes are not negative capabilities.
+Base64, DownloadManager, Fragment and CameraManager rows yield introduction
+levels 8, 9, 11 and 21. Deprecation is not removal. These facts support only
+selected declaration availability, not behavior, permissions or hardware.
+
+The source-derived profiles are consumed by an owned two-owner SQLite/TCP
+authorization trace using caller-authored whole alternatives. It checks held
+rollback refusal, endpoint/origin reopen, retirement, allowed rollback and
+closed delayed prepare. This is separate evidence, not an extension or
+reinterpretation of the historical campaign. Replay with the complete original
+base64 payload uses `python -B -m tests.android_contract_bridge --history-base64
+<external-input>`; without that argument the command uses the retained selected
+facts and does not certify fresh acquisition. There is no live Android execution.
 
 ## Generated inputs
 

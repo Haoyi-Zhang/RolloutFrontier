@@ -1,5 +1,25 @@
 # Partition-safe API compatibility artifact
 
+## Pinned platform declaration bridge
+
+`src/android_contracts.py` authenticates the complete fixed AOSP history using
+its exact byte length and Git blob SHA before parsing four selected classes.
+`data/android-pinned-class-contracts.json` retains those consumed factual rows.
+`python -B -m tests.android_contract_bridge` feeds their declaration profiles
+through synthesis, independent checking, durable acquisition, blocked rollback,
+owner/origin reopen, retirement and closed delayed prepare. Add
+`--history-base64 <external-input>` to verify the selected facts against the full
+Gitiles `?format=TEXT` payload. That complete payload is not bundled.
+
+The pinned file's latest explicit introduction level is 25 and it omits
+VibrationEffect despite the later repository commit date. The adapter refuses
+later API levels; absence is not extrapolated. Branches and proposed rollbacks
+are caller-authored. Class presence is neither hardware availability nor
+behavioral compatibility; no Android code/device or physical installer runs.
+This is separate evidence, not a new holdout or a rewrite of historic results.
+Run the portable boundary and equal-catalog/different-runtime-predicate tests
+with `python -B -m unittest tests.android_contract_bridge -v`.
+
 This directory is the standalone research artifact for the TPDS regular-paper
 manuscript **Availability Frontiers for Partition-Safe API Rollouts**. It uses only
 Python's standard library and local loopback communication. It does not require the
