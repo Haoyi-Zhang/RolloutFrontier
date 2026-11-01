@@ -23,6 +23,8 @@ jobs:
           python-version: '3.12'
       - name: Current lifecycle table and full raw-row accounting
         run: |
+          python -B -m unittest tests.origin_serialization -v
+          python -B -O -m unittest tests.origin_serialization -v
           python -B -m unittest tests.lifecycle_table_regression -v
           python -B -O -m unittest tests.lifecycle_table_regression -v
       - name: Durable application effects drain before protocol retirement

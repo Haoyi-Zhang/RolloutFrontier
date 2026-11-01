@@ -204,6 +204,8 @@ def valid_manifest(branches: list[dict[str, list[str]]]) -> bool:
         for b in branches:
             if not isinstance(b, dict) or not 1 <= len(b) <= 6:
                 return False
+            if set(b) != set(branches[0]):
+                return False
             for n, req in b.items():
                 if not isinstance(n, str) or n != str(int(n)) or not 0 <= int(n) < 6:
                     return False

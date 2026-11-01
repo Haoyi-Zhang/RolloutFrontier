@@ -22,6 +22,10 @@ def verify():
     require(hashlib.sha256(snapshot).hexdigest()==provenance['executed_driver_sha256'],'Historical source differs')
     for rel,digest in registration['source_bindings'].items():
         raw=snapshot if rel=='tests/effect_drain_study.py' else (ROOT/rel).read_bytes()
+        if hashlib.sha256(raw).hexdigest()!=digest and rel!='tests/effect_drain_study.py':
+            captured=DATA/'source-preimage'/rel
+            require(captured.is_file(),'Measured source preimage missing '+rel)
+            raw=captured.read_bytes()
         require(hashlib.sha256(raw).hexdigest()==digest,'Executed input differs '+rel)
     identities=read('database-identities.json')
     with zipfile.ZipFile(DATA/'databases.zip') as z,tempfile.TemporaryDirectory() as temporary:

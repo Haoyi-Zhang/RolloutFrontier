@@ -10,6 +10,7 @@ import json
 import random
 import sqlite3
 import time
+from functools import wraps
 from copy import deepcopy
 from pathlib import Path
 from typing import Any
@@ -221,6 +222,16 @@ class Network:
         await self.drain()
 
 
+def serialized_lifecycle(method):
+    """One origin transition may span RPC awaits, but never another lifecycle."""
+    @wraps(method)
+    async def call(self, *args, **kwargs):
+        async with self._lifecycle_gate:
+            self._require_healthy()
+            return await method(self, *args, **kwargs)
+    return call
+
+
 class Client:
     """Single-writer durable coordinator, with bounded unresolved attempts.
 
@@ -233,6 +244,7 @@ class Client:
         if type(origin) is not int or not 0 <= origin < MAX_NODES:
             raise ValueError("origin bound")
         self.net, self.origin = network, origin
+        self._lifecycle_gate = asyncio.Lock()
         self._persistence_failed = False
         self._disconnected = False
         self._pending_state = None
@@ -418,9 +430,13 @@ class Client:
             self._commit_state(state)
         return okay
 
+    @serialized_lifecycle
     async def recover(self) -> None:
+        await self._recover_unlocked()
+
+    async def _recover_unlocked(self) -> None:
         self._require_healthy()
-        # Serial use of this Client is part of the model.
+        # The public entry points hold the same origin gate across RPC awaits.
         for key in list(self.state["attempts"]):
             record = self.state["attempts"][key]
             if record["status"] == "committed":
@@ -430,6 +446,7 @@ class Client:
             self._commit_state(state)
             await self._close(key)
 
+    @serialized_lifecycle
     async def acquire(self, manifest: str, branches: list[dict[str, list[str]]]) -> dict[str, Any]:
         self._require_healthy()
         from .checker import certificate
@@ -449,7 +466,9 @@ class Client:
                 normalized[text] = atoms(requires, MAX_REQUIREMENTS)
             normalized_branches.append(normalized)
         branches = normalized_branches
-        await self.recover()
+        if any(set(b) != set(branches[0]) for b in branches):
+            raise ValueError('alternatives require a common placement')
+        await self._recover_unlocked()
         for r in self.state["attempts"].values():
             if r["manifest"] == manifest:
                 if r["status"] == "committed" and certificate(r["certificate"], branches):
@@ -487,6 +506,8 @@ class Client:
             c = dict(manifest=manifest, origin=self.origin, branch=index,
                      sequences=sequences, receipts=receipts)
             if okay and certificate(c, branches):
+                if self.state['attempts'].get(key, {}).get('status') != 'acquiring':
+                    return dict(status='not-justified', reasons=[dict(reason='attempt-no-longer-acquiring')])
                 state = deepcopy(self.state)
                 state["attempts"][key].update(status="committed", certificate=c)
                 self._commit_state(state)
@@ -513,6 +534,7 @@ class Client:
                 return key
         return None
 
+    @serialized_lifecycle
     async def retire(self, c: dict[str, Any]) -> bool:
         key = self._record(deepcopy(c))
         if key is None:
@@ -522,6 +544,7 @@ class Client:
         self._commit_state(state)
         return await self._close(key)
 
+    @serialized_lifecycle
     async def use(self, c: dict[str, Any]) -> list[dict[str, Any] | None]:
         key = self._record(deepcopy(c))
         if key is None or self.state["attempts"][key]["status"] != "committed":
@@ -531,6 +554,7 @@ class Client:
                 sequence=seq, manifest=private["manifest"])) for n, seq in private["sequences"].items()]
 
 
+    @serialized_lifecycle
     async def acquire_box(self, manifest: str, branches: list[dict[str, list[str]]],
                           box: dict[str, list[list[str]]]) -> dict[str, Any]:
         self._require_healthy()
@@ -545,7 +569,7 @@ class Client:
             raise ValueError("placement outside network")
         if not isinstance(manifest, str) or not manifest or len(manifest) > 256:
             raise ValueError("manifest binding")
-        await self.recover()
+        await self._recover_unlocked()
         for r in self.state["attempts"].values():
             if r["manifest"] == manifest:
                 if (r["status"] == "committed" and r["certificate"].get("box") == box
@@ -576,6 +600,8 @@ class Client:
         c = dict(mode="envelope", manifest=manifest, origin=self.origin, box=box,
                  sequences=sequences, receipts=receipts)
         if reason is None and certificate(c, branches):
+            if self.state['attempts'].get(key, {}).get('status') != 'acquiring':
+                return dict(status='not-justified', reasons=[dict(reason='attempt-no-longer-acquiring')])
             state = deepcopy(self.state)
             state["attempts"][key].update(status="committed", certificate=c)
             self._commit_state(state)
