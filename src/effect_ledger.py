@@ -153,6 +153,9 @@ class DrainingClient:
         self.lock=asyncio.Lock()
 
     async def acquire(self,manifest,branches,box=None):
+        # This outer lock can block before the core client's own snapshot.
+        branches=deepcopy(branches)
+        box=deepcopy(box) if box is not None else None
         async with self.lock:
             result=(await self.client.acquire(manifest,branches) if box is None else
                     await self.client.acquire_box(manifest,branches,box))
@@ -165,8 +168,9 @@ class DrainingClient:
             return result,DrainingLease(self,certificate)
 
     async def resume(self,certificate):
+        certificate=deepcopy(certificate)
         async with self.lock:
-            if self.client._record(deepcopy(certificate)) is None:
+            if self.client._record(certificate) is None:
                 raise ValueError('no matching durable protocol authority')
             self.ledger.phase(lease_id(certificate))
             return DrainingLease(self,deepcopy(certificate))

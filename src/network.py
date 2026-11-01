@@ -12,6 +12,7 @@ import sqlite3
 import time
 from functools import wraps
 from copy import deepcopy
+from inspect import signature
 from pathlib import Path
 from typing import Any
 from .controller import (Endpoint, canonical, atoms, initialize_state_table,
@@ -222,14 +223,26 @@ class Network:
         await self.drain()
 
 
-def serialized_lifecycle(method):
-    """One origin transition may span RPC awaits, but never another lifecycle."""
-    @wraps(method)
-    async def call(self, *args, **kwargs):
-        async with self._lifecycle_gate:
-            self._require_healthy()
-            return await method(self, *args, **kwargs)
-    return call
+def serialized_lifecycle(*snapshot_inputs):
+    """Detach named scientific inputs before waiting; serialize all state work.
+
+    Copy only explicitly declared caller inputs, never self, a lock or an RPC
+    object. Positional and keyword calls use the same snapshot boundary when
+    the coroutine starts, before its first potentially blocking gate wait.
+    """
+    def decorate(method):
+        parameters = signature(method)
+        @wraps(method)
+        async def call(self, *args, **kwargs):
+            bound = parameters.bind(self, *args, **kwargs)
+            for name in snapshot_inputs:
+                if name in bound.arguments:
+                    bound.arguments[name] = deepcopy(bound.arguments[name])
+            async with self._lifecycle_gate:
+                self._require_healthy()
+                return await method(*bound.args, **bound.kwargs)
+        return call
+    return decorate
 
 
 class Client:
@@ -430,7 +443,7 @@ class Client:
             self._commit_state(state)
         return okay
 
-    @serialized_lifecycle
+    @serialized_lifecycle()
     async def recover(self) -> None:
         await self._recover_unlocked()
 
@@ -446,7 +459,7 @@ class Client:
             self._commit_state(state)
             await self._close(key)
 
-    @serialized_lifecycle
+    @serialized_lifecycle("branches")
     async def acquire(self, manifest: str, branches: list[dict[str, list[str]]]) -> dict[str, Any]:
         self._require_healthy()
         from .checker import certificate
@@ -534,7 +547,7 @@ class Client:
                 return key
         return None
 
-    @serialized_lifecycle
+    @serialized_lifecycle("c")
     async def retire(self, c: dict[str, Any]) -> bool:
         key = self._record(deepcopy(c))
         if key is None:
@@ -544,7 +557,7 @@ class Client:
         self._commit_state(state)
         return await self._close(key)
 
-    @serialized_lifecycle
+    @serialized_lifecycle("c")
     async def use(self, c: dict[str, Any]) -> list[dict[str, Any] | None]:
         key = self._record(deepcopy(c))
         if key is None or self.state["attempts"][key]["status"] != "committed":
@@ -554,7 +567,7 @@ class Client:
                 sequence=seq, manifest=private["manifest"])) for n, seq in private["sequences"].items()]
 
 
-    @serialized_lifecycle
+    @serialized_lifecycle("branches", "box")
     async def acquire_box(self, manifest: str, branches: list[dict[str, list[str]]],
                           box: dict[str, list[list[str]]]) -> dict[str, Any]:
         self._require_healthy()
