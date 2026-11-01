@@ -1,0 +1,8 @@
+{
+  "executed_driver_sha256": "7d1970757958ee1d8a2af94e8f357fffb39c3f4f860a68bb5369e019e20d41eb",
+  "snapshot": "execution-source.py.gz",
+  "observed_lifecycles_unchanged": 24,
+  "analysis_correction": "Do not publish the redundant expected-result arrays as an independently executed comparator. All actual protocol/application observations remain unchanged.",
+  "performance_comparison_claimed": false,
+  "new_executions_after_analysis_correction": 0
+}

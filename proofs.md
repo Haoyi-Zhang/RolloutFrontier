@@ -394,3 +394,31 @@ cases fail before repair and pass afterward, including blocked installation and
 SQLite reopen equality. Network JSON serialization already detached TCP replies.
 This protects the return-value boundary, not intentional mutation of the public
 internal state object, arbitrary store corruption, or a malicious in-process actor.
+
+## Owned transactional-effect composition
+
+The application adapter adds a reservation ledger for its own SQLite mutations.
+Each reservation is created only after a checked live use and is bound to the
+complete admission certificate and the exact key/value payload. A transaction
+finishes a reservation and applies its stored write together. Retirement first
+closes the lease to new reservations. If any reservation remains active, it
+returns `draining` without beginning protocol retirement. Otherwise it durably
+fences the lease before requesting any protocol close.
+
+For this owned effect interface, every actual write therefore occurs while its
+protocol guards remain held. Before the fence, an active reservation prevents
+protocol retirement; after the fence, no active reservation exists and no new
+reservation is admitted. Serialized owner actions preserve the old guards until
+their close, so the guarded-lifetime theorem covers each completed mutation.
+Writing the value and marking the reservation done in one transaction avoids a
+gap between application completion and the drain test. On reopen, durable active
+reservations still block retirement. An uncertain ledger commit stops use of
+that object and cannot trigger protocol release. A lost remote close leaves the
+local fence closed, making repeated cleanup safe.
+
+The argument assumes every owned mutation uses this interface, one coordinator
+writer, the existing SQLite durability premises, and no malicious in-process
+state modification. It does not cover detached callbacks, writes through another
+database, generic remote effects, multi-writer failover or physical power loss.
+The saved unfenced callback is a composition negative control that violates the
+drain premise, not a counterexample to the original protocol theorem.

@@ -25,6 +25,11 @@ jobs:
         run: |
           python -B -m unittest tests.lifecycle_table_regression -v
           python -B -O -m unittest tests.lifecycle_table_regression -v
+      - name: Durable application effects drain before protocol retirement
+        run: |
+          python -B -m unittest tests.effect_drain -v
+          python -O -B -m unittest tests.effect_drain -v
+          python -B -m tests.check_effect_drain
       - name: Profile encoding and evidence-preservation regressions
         run: |
           mkdir -p "$RUNNER_TEMP/P011-scientific-logs"

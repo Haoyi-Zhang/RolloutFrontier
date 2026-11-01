@@ -1,5 +1,35 @@
 # Partition-safe API compatibility artifact
 
+## Owned application effects
+
+`src/effect_ledger.py` adds one concrete application composition to the basic
+protocol markers. A guarded write reserves its payload in a durable SQLite
+ledger. Retirement stops new reservations, retains the protocol guard while any
+reservation is active, and persists a closed fence before releasing guards.
+Completing an admitted reservation and writing its actual key/value occur in
+one transaction. Lost release acknowledgements preserve the fence. Reopening
+the coordinator and application ledger does not turn an active operation into
+quiescence. This covers this owned store, not arbitrary remote effects,
+detached callbacks, Byzantine storage or concurrent coordinator failover.
+
+```sh
+python -B -m unittest tests.effect_drain -v
+python -O -B -m unittest tests.effect_drain -v
+python -B -m tests.check_effect_drain
+python -B -m tests.effect_drain_study --out /fresh/owned-effect-lifetimes
+```
+
+The separate bounded study retains all 24 registered lifecycle combinations:
+predicate/full-generation policy, commit/cancel, no restart/owner restart/
+coordinator restart, and successful/partitioned release. Twelve writes commit
+and twelve cancel without a value write. New work during drain and stale work
+after retirement reject in all 24 cases. The 96 final application, origin and
+owner database snapshots remain in `results/effect-drain/databases.zip`, with
+byte identities and a data-only checker. The negative control deliberately
+violates the caller drain premise by writing through an unfenced application
+after protocol retirement; it is not a counterexample to the guarded-lifetime
+theorem. No new performance or field-deployment result is claimed.
+
 ## Pinned platform declaration bridge
 
 `src/android_contracts.py` authenticates the complete fixed AOSP history using
