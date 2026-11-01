@@ -19,14 +19,14 @@ protocol with retained failure evidence.
 
 ## Reference integrity
 
-The manuscript bibliography contains 78 scholarly sources and 88 citation occurrences.
-All 78 sources are cited. `reference_audit.csv` records first-citation number, key,
+The manuscript bibliography contains 77 scholarly sources and 87 citation occurrences.
+All 77 sources are cited. `reference_audit.csv` records first-citation number, key,
 exact title, year, category, verification basis, argumentative role, and citation
 count. `reference_sources.csv` adds a publisher, DOI, official/institutional record,
 or exact-title bibliographic lookup for every ordered entry.
 
 This establishes a traceable bibliography and bounded claim use; it is not a claim
-that all 78 papers were freshly reread in full. Claim-level checks were concentrated
+that all 77 papers were freshly reread in full. Claim-level checks were concentrated
 on the closest predicate-preservation ancestors, the maximal-product novelty boundary,
 MoonlightBox's assembly-time result, and the TPDS papers used for direct journal
 positioning. Ordinary rule pages are workflow sources, not manuscript references.
