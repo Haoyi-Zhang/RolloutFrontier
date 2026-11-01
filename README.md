@@ -16,6 +16,9 @@ detached callbacks, Byzantine storage or concurrent coordinator failover.
 python -B -m unittest tests.effect_drain -v
 python -O -B -m unittest tests.effect_drain -v
 python -B -m tests.check_effect_drain
+python -O -B -m tests.check_effect_drain
+python -B -m unittest tests.effect_drain_bindings -v
+python -O -B -m unittest tests.effect_drain_bindings -v
 python -B -m tests.effect_drain_study --out /fresh/owned-effect-lifetimes
 ```
 
@@ -29,6 +32,16 @@ byte identities and a data-only checker. The negative control deliberately
 violates the caller drain premise by writing through an unfenced application
 after protocol retirement; it is not a counterexample to the guarded-lifetime
 theorem. No new performance or field-deployment result is claimed.
+
+These saved observations bind the historical bytes in the unchanged
+`registration.json`, not a rerun of today's code. The current lifecycle repair
+copies mutable inputs before waiting for the client/adapter locks. Its
+`src/network.py` and `src/effect_ledger.py` therefore differ from the measured
+sources, whose exact verified bytes are preserved under
+`results/effect-drain/source-preimage/`. The executed study driver remains in
+`execution-source.py.gz`; see `results/effect-drain/README.md` for the split.
+The checker and binding regressions inspect saved data only. The optional study
+command above would create a separate new run; it was not used for this repair.
 
 ## Pinned platform declaration bridge
 

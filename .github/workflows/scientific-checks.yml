@@ -32,6 +32,9 @@ jobs:
           python -B -m unittest tests.effect_drain -v
           python -O -B -m unittest tests.effect_drain -v
           python -B -m tests.check_effect_drain
+          python -O -B -m tests.check_effect_drain
+          python -B -m unittest tests.effect_drain_bindings -v
+          python -O -B -m unittest tests.effect_drain_bindings -v
       - name: Profile encoding and evidence-preservation regressions
         run: |
           mkdir -p "$RUNNER_TEMP/P011-scientific-logs"
