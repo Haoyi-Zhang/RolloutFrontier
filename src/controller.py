@@ -322,12 +322,17 @@ class Endpoint:
 
     def merge(self, profile: dict[str, Any]) -> dict[str, Any]:
         self._require_healthy()
-        owner, gen = profile.get("node"), profile.get("generation")
+        if not isinstance(profile, dict) or set(profile) != {"node", "generation", "support"}:
+            raise ValueError("invalid profile schema")
+        owner, gen = profile["node"], profile["generation"]
         if type(owner) is not int or not 0 <= owner < MAX_NODES:
             raise ValueError("invalid profile owner")
         if type(gen) is not int or not 0 <= gen <= MAX_SEQ:
             raise ValueError("invalid profile generation")
-        p = dict(node=owner, generation=gen, support=atoms(profile.get("support"), MAX_CONTRACTS))
+        support = profile["support"]
+        if not isinstance(support, list) or atoms(support, MAX_CONTRACTS) != support:
+            raise ValueError("noncanonical profile support")
+        p = dict(node=owner, generation=gen, support=list(support))
         # Another endpoint may not overwrite this endpoint's authoritative profile.
         if owner == self.node:
             if p != self.profile():

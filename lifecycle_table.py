@@ -30,7 +30,8 @@ def derive(data):
     for key,group in grouped.items():
         require(sorted(x['repeat'] for x in group)==[0,1,2],'missing/duplicate repetition')
         require(len({(x['installed'],x['blocked'],x['unchanged']) for x in group})==1,'inconsistent repeated outcome')
-        index[key]=(group[0]['installed'],round(median(x['full_lifecycle_ns'] for x in group)/1e6,4))
+        # Match the producer's ns-derived median exactly; round only for display.
+        index[key]=(group[0]['installed'],median(x['full_lifecycle_ns'] for x in group)/1e6)
     supplied={(x['padding_atoms'],x['mismatch'],x['policy']):x for x in data['groups']}
     require(len(supplied)==len(data['groups'])==16 and set(supplied)==set(index),'summary group product')
     for key,(installed,value) in index.items():

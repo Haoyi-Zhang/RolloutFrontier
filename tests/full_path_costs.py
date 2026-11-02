@@ -261,12 +261,23 @@ def run(out, repeats):
 
 
 def summarize(rows, repeats):
-    if type(repeats) is not int or not 1 <= repeats <= 5 or len(rows) != 16*repeats:
+    if (type(repeats) is not int or not 1 <= repeats <= 5 or
+            not isinstance(rows, list) or len(rows) != 16*repeats):
         raise ValueError("incomplete trial rows")
+    for row in rows:
+        require(isinstance(row, dict), "invalid trial row")
+        require(type(row.get("padding_atoms")) is int and row["padding_atoms"] in (0, 11999),
+                "invalid payload identity")
+        require(type(row.get("mismatch")) is bool and type(row.get("policy")) is str
+                and row["policy"] in POLICIES, "invalid policy/schedule identity")
+        require(type(row.get("repeat")) is int and 0 <= row["repeat"] < repeats,
+                "invalid repetition identity")
     groups = []
     for padding, mismatch, policy in product((0, 11999), (False, True), POLICIES):
         selected = [row for row in rows if (row["padding_atoms"], row["mismatch"], row["policy"]) == (padding, mismatch, policy)]
         require(len(selected) == repeats, "incomplete policy/payload/schedule group")
+        require(sorted(row["repeat"] for row in selected) == list(range(repeats)),
+                "missing/duplicate repetition identity")
         require(all((row["installed"], row["blocked"], row["unchanged"], row["rpc_count"],
                      row["owner_persist_calls"]) ==
                     tuple(selected[0][key] for key in ("installed", "blocked", "unchanged", "rpc_count",

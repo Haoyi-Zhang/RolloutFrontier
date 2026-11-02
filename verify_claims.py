@@ -6,12 +6,12 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 
 def verify(results: Path) -> int:
-    manifest=json.loads((ROOT/'claim_bindings.json').read_text())
+    manifest=json.loads((ROOT/'claim_bindings.json').read_text(encoding='utf-8'))
     cache={}
     for item in manifest:
         name=item['result_file']
         if Path(name).name != name: raise ValueError('result path must be a basename')
-        if name not in cache: cache[name]=json.loads((results/name).read_text())
+        if name not in cache: cache[name]=json.loads((results/name).read_text(encoding='utf-8'))
         value=cache[name]
         for part in item['path']: value=value[part]
         if type(value) is not type(item['expected']) or value != item['expected']:

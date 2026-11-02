@@ -434,6 +434,43 @@ performance. To regenerate them with Python 3.9+ and Matplotlib:
 python -B figures/draw_schematics.py --output figures
 ```
 
+## Pure delivery-contract checks
+
+The default scientific CI also runs these data-only controls in normal and
+optimized Python, separately from the retained five-test smoke denominator:
+
+```sh
+python -B -m unittest tests.delivery_contracts -v
+python -O -B -m unittest tests.delivery_contracts -v
+python -B verify_claims.py
+```
+
+They use in-memory owners and a stubbed stream adapter (no listening socket or
+durable store), copied retained rows and small schema fixtures. The binding CLI
+also runs in child interpreters with UTF-8 mode disabled/enabled and C-locale
+coercion disabled. Both manifest and result JSON reads explicitly use UTF-8;
+numeric type/value rejection remains mandatory. No benchmark is invoked.
+
+Advertisements require exactly `node`, `generation` and canonical list-valued
+`support`; malformed nested profiles follow the existing `invalid` response path.
+Lifecycle aggregation requires the complete typed policy/payload/schedule/repeat
+product, rejecting duplicate, missing and Boolean/float repetition identities.
+Its ns-derived median is checked without pre-rounding; only TeX display rounds.
+The current and older retained cohorts still reaggregate separately and unchanged.
+
+The current `tests/full_path_costs.py` has stricter aggregation than the measured
+producer. Its exact registered bytes are preserved, not executed, at
+`results/durable-state-costs/source-preimage/tests/full_path_costs.py` (SHA-256
+`23e598ac8faaedd39d9da849640331e34ae890eccec7f0cb539ce29a781f8981`). The current
+`src/controller.py` also differs after stricter profile admission; its registered
+preimage is at `results/effect-drain/source-preimage/src/controller.py` (SHA-256
+`5f58632463e84a8a3a80c94f8bea61db7b24ab1d84f6d698db8ab1ec2d49e5d9`). The existing
+effect-source checker resolves that preimage without relaxing its digest guard.
+The new pure controls reject missing/corrupt captures and substitution of current
+code for either recorded source. Historical source maps, raw measurements and
+failed attempts are not resealed or refreshed by these checks. They do not claim
+that every historical source in the environment inventory matches current code.
+
 ## Portable path notation
 
 Published execution records use `<PYTHON_ROOT>`, `<NODE_ROOT>` and `<RUNTIME_ROOT>` for local tool installations, `<DEPENDENCIES_ROOT>` for local dependencies, and `<PROJECTS_ROOT>`, `<ARTIFACT_ROOT>`, `<SOURCE_ROOT>` and `<WORK_ROOT>` for the workspace, artifact checkout, source checkout and temporary work directory of the recorded run. These are path aliases, not literal directories or claims that historical temporary files are included in this bundle. Substitute the corresponding local roots when replaying a command. Recorded tool versions, source/input identities, measurements, outcomes and failures are unchanged. Current file inventories bind the portable published bytes; any `recorded_` identity denotes pre-normalization bytes.

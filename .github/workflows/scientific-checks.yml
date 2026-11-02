@@ -21,6 +21,10 @@ jobs:
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.12'
+      - name: Pure delivery contracts and retained source identities
+        run: |
+          python -B -m unittest tests.delivery_contracts -v
+          python -O -B -m unittest tests.delivery_contracts -v
       - name: Current lifecycle table and full raw-row accounting
         run: |
           python -B -m unittest tests.origin_serialization -v
