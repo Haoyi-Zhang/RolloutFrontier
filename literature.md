@@ -19,7 +19,7 @@ protocol with retained failure evidence.
 
 ## Reference integrity
 
-The manuscript bibliography contains 78 scholarly sources and 88 citation occurrences.
+The manuscript bibliography contains 78 scholarly sources and 90 citation occurrences.
 All 78 sources are cited. `reference_audit.csv` records first-citation number, key,
 exact title, year, category, verification basis, argumentative role, and citation
 count. `reference_sources.csv` adds a publisher, DOI, official/institutional record,

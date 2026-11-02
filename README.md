@@ -352,7 +352,7 @@ that the complete source was consumed.
 
 ## Reference and journal-positioning records
 
-The paper has 78 unique cited scholarly sources and 88 citation occurrences.
+The paper has 78 unique cited scholarly sources and 90 citation occurrences.
 `reference_audit.csv` and `reference_sources.csv` verify ordered inventory and state
 each record's verification depth. They do not claim fresh full-text validation of all
 inherited sources. The two added labelled-MSS papers were read in full;
@@ -467,10 +467,12 @@ The other two, `src/controller.py` and `src/network.py`, reuse exact preimages a
 inventory's own hashes. See `results/durable-state-costs/README.md` for the paths.
 All preimages are data only, never imports or measurement entry points.
 
-The existing `lifecycle_table.py` receiver now verifies every recorded source
-path/SHA-256 before deriving the unchanged table. Its pure
+The existing `lifecycle_table.py` receiver anchors the complete original
+path/SHA-256 mapping and verifies every recorded source before deriving the unchanged table. Its pure
 `tests.lifecycle_table_regression` controls reject missing/corrupt bytes,
-current-source substitution and malformed inventory paths. The effect-source
+current-source substitution, rewritten inventories and malformed paths. Outcome
+counts must be bounded integers; Boolean, float and negative aliases reject.
+The effect-source
 checker retains its own digest guard. Historical source maps, raw measurements
 and failed attempts are not resealed or refreshed; this is not a rerun or a claim
 that every measured source matches current code.

@@ -1,5 +1,7 @@
 """Explicit CI regression, separate from the retained five-test smoke denominator."""
 import json
+import copy
+import hashlib
 from pathlib import Path
 import unittest
 from unittest.mock import patch
@@ -27,6 +29,44 @@ class LifecycleTable(unittest.TestCase):
     def test_omitted_trial(self):
         self.data['rows'].pop()
         with self.assertRaises(ValueError):derive(self.data)
+
+    def test_count_aliases_and_balanced_impossible_outcomes_reject_before_output(self):
+        original_read=Path.read_text
+        measurements=ROOT/'results/durable-state-costs/measurements.json'
+        def reject(data):
+            def read(path,*args,**kwargs):
+                return json.dumps(data) if path==measurements else original_read(path,*args,**kwargs)
+            with patch.object(Path,'read_text',new=read), self.assertRaises(ValueError):
+                receiver.table()
+        for field in ('repeats','trials','proposals_total'):
+            for value in (float(self.data[field]),True,None):
+                data=copy.deepcopy(self.data);data[field]=value
+                with self.subTest(top_count=field,value=value):reject(data)
+        for field in ('installed','blocked','unchanged','proposals','safety_violations','refused_admissions'):
+            for value in (bool(self.data['rows'][0][field]),float(self.data['rows'][0][field]),-1,25):
+                data=copy.deepcopy(self.data);data['rows'][0][field]=value
+                with self.subTest(row_count=field,value=value):reject(data)
+        for outcomes in ((-1,13,12),(25,-13,12)):
+            data=copy.deepcopy(self.data)
+            for row in data['rows']:
+                if (row['padding_atoms'],row['mismatch'],row['policy'])==(0,False,'fixed'):
+                    row.update(zip(('installed','blocked','unchanged'),outcomes))
+            data['groups'][0].update(zip(('installed','blocked','unchanged'),outcomes))
+            with self.subTest(balanced_outcomes=outcomes):reject(data)
+        for field in ('installed','blocked','unchanged'):
+            for value in (False,float(self.data['groups'][0][field]),-1,25):
+                data=copy.deepcopy(self.data);data['groups'][0][field]=value
+                with self.subTest(summary_count=field,value=value):reject(data)
+        data=copy.deepcopy(self.data)
+        data['groups'][0].update(blocked=11,unchanged=13)
+        reject(data)
+        # Match the generator's table-before-write expression without making
+        # the standalone artifact depend on the sibling paper directory.
+        data=copy.deepcopy(self.data);data['rows'][0]['installed']=False
+        with patch.object(receiver,'table',side_effect=lambda:derive(data)), \
+                patch.object(Path,'write_text') as write, self.assertRaises(ValueError):
+            Path('owned-output.tex').write_text(receiver.table(),encoding='utf-8')
+        write.assert_not_called()
 
 class RecordedSources(unittest.TestCase):
     def test_entire_inventory_and_existing_table_consumer(self):
@@ -92,5 +132,40 @@ class RecordedSources(unittest.TestCase):
                 self.assertRaisesRegex(ValueError,'owned missing source'):
             receiver.table()
         derive_table.assert_not_called()
+
+    def test_original_inventory_rejects_omission_rebinding_or_extra_entries(self):
+        environment_path=ROOT/'results/durable-state-costs/environment.json'
+        environment=json.loads(environment_path.read_text(encoding='utf-8'))
+        original_read=Path.read_text
+        bad=[]
+        for index in range(len(environment['sources'])):
+            value=copy.deepcopy(environment);value['sources'].pop(index);bad.append(value)
+        value=copy.deepcopy(environment);value['sources']=[environment['sources'][0]];bad.append(value)
+        value=copy.deepcopy(environment);value['sources'][0]['sha256']='0'*64;bad.append(value)
+        value=copy.deepcopy(environment);value['sources'][0]['path']='tests/other.py';bad.append(value)
+        value=copy.deepcopy(environment);value['sources'].append(dict(path='tests/other.py',sha256='0'*64));bad.append(value)
+        # Same cardinality and a new digest matching changed live bytes is not
+        # the original cohort inventory either.
+        value=copy.deepcopy(environment)
+        binding=next(e for e in value['sources'] if e['path']=='src/batch.py')
+        changed=(ROOT/binding['path']).read_bytes()+b'\n# changed source\n'
+        binding['sha256']=hashlib.sha256(changed).hexdigest();bad.append(value)
+        for value in bad:
+            def read(path,*args,**kwargs):
+                return json.dumps(value) if path==environment_path else original_read(path,*args,**kwargs)
+            with self.subTest(entries=len(value['sources'])), patch.object(Path,'read_text',new=read), \
+                    patch.object(Path,'read_bytes',side_effect=AssertionError('source read before original inventory gate')), \
+                    self.assertRaisesRegex(ValueError,'original source inventory differs'):
+                receiver.table()
+        # Entry order is not part of the path/hash mapping identity.
+        reversed_environment=copy.deepcopy(environment)
+        reversed_environment['sources'].reverse()
+        with patch.object(Path,'read_text',new=lambda path,*a,**k:json.dumps(reversed_environment)
+                          if path==environment_path else original_read(path,*a,**k)):
+            self.assertEqual(receiver.table(),derive(json.loads((ROOT/'results/durable-state-costs/measurements.json').read_text(encoding='utf-8'))))
+        with patch.object(receiver,'verify_sources',side_effect=ValueError('original source inventory differs')), \
+                patch.object(Path,'write_text') as write, self.assertRaises(ValueError):
+            Path('owned-output.tex').write_text(receiver.table(),encoding='utf-8')
+        write.assert_not_called()
 
 if __name__=='__main__':unittest.main()
