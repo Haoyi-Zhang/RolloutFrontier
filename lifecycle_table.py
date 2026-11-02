@@ -9,6 +9,22 @@ from statistics import median
 ROOT=Path(__file__).resolve().parent
 # Identity of the original sorted path/hash pairs, not of today's source tree.
 SOURCE_PAIRS_SHA256='f06a23a3641df0f075b73d1246662404ff2de96d7dc12879554546cbc16ef777'
+# Independent consequences of the retained tests/full_path_costs.py fixture,
+# NOT values learned from measurements.json or from today's planner execution.
+# Its branch cells are (a0,b0), (a0,b1), (a0,b2), (a1,b0). Fixed
+# keeps the first cell; greedy expands a first (2x1); mass chooses 1x3;
+# batch trains on a1/a0 and chooses 2x1. Test proposals alternate 1/0
+# twelve times on a (matched) or b (mismatched), starting at a0/b0.
+# A disallowed 1 leaves state at 0: twelve blocked and twelve unchanged;
+# an allowed 1 permits all 24 alternating installs. Unused padding atoms
+# change neither guards nor equality. Each pair is indexed by mismatch.
+# These count constraints do not authenticate the recorded timing values.
+FIXTURE_OUTCOMES={
+    'fixed':((0,12,12),(0,12,12)),
+    'greedy':((24,0,0),(0,12,12)),
+    'mass':((0,12,12),(24,0,0)),
+    'batch':((24,0,0),(0,12,12)),
+}
 def require(condition,message):
     if not condition:raise ValueError(message)
 
@@ -70,6 +86,9 @@ def derive(data):
             require(type(row.get(field)) is int and 0<=row[field]<=24,'outcome count '+field)
         require(type(row.get('proposals')) is int and row['proposals']==24,'proposal count')
         require(row['installed']+row['blocked']+row['unchanged']==24,'proposal accounting')
+        require(tuple(row[field] for field in ('installed','blocked','unchanged'))==
+                FIXTURE_OUTCOMES[row['policy']][row['mismatch']],
+                'fixture outcome mismatch for '+row['policy']+' mismatch='+str(row['mismatch']))
         require(all(type(row.get(field)) is int and row[field]==0
                     for field in ('safety_violations','refused_admissions')),'scientific outcome')
         require(type(row['full_lifecycle_ns']) is int and row['full_lifecycle_ns']>0,'lifecycle time')

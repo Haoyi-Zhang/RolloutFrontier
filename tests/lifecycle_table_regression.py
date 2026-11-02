@@ -1,12 +1,80 @@
 """Explicit CI regression, separate from the retained five-test smoke denominator."""
 import json
 import copy
+import contextlib
 import hashlib
+import io
 from pathlib import Path
+import runpy
+import shutil
+import sys
+import tempfile
 import unittest
 from unittest.mock import patch
 import lifecycle_table as receiver
 from lifecycle_table import ROOT,derive,verify_sources
+
+def literal_fixture_counts(policy,padding,mismatch):
+    """Independent static guards; never import/run a planner or a preimage.
+
+    The four branch cells are (a0,b0/b1/b2) and (a1,b0). Greedy
+    expands a first; mass prefers the three-cell b rectangle; training
+    alternates a1/a0, so batch chooses the same rectangle as greedy.
+    """
+    guards={
+        'fixed':{'0':({'a0'},),'1':({'b0'},)},
+        'greedy':{'0':({'a0'},{'a1'}),'1':({'b0'},)},
+        'mass':{'0':({'a0'},),'1':({'b0'},{'b1'},{'b2'})},
+        'batch':{'0':({'a0'},{'a1'}),'1':({'b0'},)},
+    }[policy]
+    extra={f'unused{i:05d}' for i in range(padding)}
+    current={'0':extra|{'a0'},'1':extra|{'b0'}}
+    node,prefix=('1','b') if mismatch else ('0','a')
+    counts=dict(installed=0,blocked=0,unchanged=0)
+    for _ in range(12):
+        for value in (1,0):
+            target=extra|{prefix+str(value)}
+            status=('unchanged' if current[node]==target else 'installed'
+                    if any(term<=target for term in guards[node]) else 'blocked')
+            counts[status]+=1
+            if status=='installed':current[node]=target
+    return counts
+
+def synthetic_measurements():
+    """Owned counts and invented timings, not a copy of measured results."""
+    stages=('acquisition_ns','external_check_ns','origin_reopen_ns','owner_reopen_ns',
+            'planning_ns','retirement_ns','shutdown_ns','startup_ns','updates_ns','use_ns')
+    rows,groups=[],[]
+    for padding in (0,11999):
+        for mismatch in (False,True):
+            for policy in ('fixed','greedy','mass','batch'):
+                key=dict(padding_atoms=padding,mismatch=mismatch,policy=policy)
+                counts=literal_fixture_counts(policy,padding,mismatch)
+                times=[]
+                for repeat in range(3):
+                    timings={stage:100+repeat for stage in stages}
+                    total=(len(groups)+1)*1_000_000+repeat*100_000+sum(timings.values())
+                    times.append(total)
+                    rows.append(dict(**key,**counts,repeat=repeat,proposals=24,
+                                     safety_violations=0,refused_admissions=0,
+                                     full_lifecycle_ns=total,timings_ns=timings))
+                groups.append(dict(**key,**counts,full_lifecycle_median_ms=sorted(times)[1]/1e6))
+    return dict(status='completed',repeats=3,trials=48,proposals_total=1152,rows=rows,groups=groups)
+
+def coherent_mutations(original):
+    data=copy.deepcopy(original)
+    for collection in (data['rows'],data['groups']):
+        for row in collection:
+            if row['policy']=='fixed' and not row['mismatch']:
+                row.update(installed=24,blocked=0,unchanged=0)
+    yield 'fixed_both_payloads',data
+    for schedule in (False,None):
+        data=copy.deepcopy(original)
+        for collection in (data['rows'],data['groups']):
+            for row in collection:
+                if row['policy'] in ('fixed','greedy') and (schedule is None or row['mismatch']==schedule):
+                    row['policy']={'fixed':'greedy','greedy':'fixed'}[row['policy']]
+        yield 'swapped_labels_'+str(schedule),data
 
 class LifecycleTable(unittest.TestCase):
     def setUp(self):
@@ -81,6 +149,125 @@ class LifecycleTable(unittest.TestCase):
                 patch.object(Path,'write_text') as write, self.assertRaises(ValueError):
             Path('owned-output.tex').write_text(receiver.table(),encoding='utf-8')
         write.assert_not_called()
+
+class FixtureSemantics(unittest.TestCase):
+    def test_literal_counts_for_every_policy_schedule_and_payload(self):
+        expected={'fixed':((0,12,12),(0,12,12)),
+                  'greedy':((24,0,0),(0,12,12)),
+                  'mass':((0,12,12),(24,0,0)),
+                  'batch':((24,0,0),(0,12,12))}
+        for padding in (0,11999):
+            for mismatch in (False,True):
+                for policy in expected:
+                    with self.subTest(padding=padding,mismatch=mismatch,policy=policy):
+                        counts=literal_fixture_counts(policy,padding,mismatch)
+                        self.assertEqual(tuple(counts.values()),expected[policy][mismatch])
+        data=synthetic_measurements();before=copy.deepcopy(data)
+        self.assertEqual(len(derive(data).splitlines()),5)
+        self.assertEqual(data,before)
+
+    def test_dual_payload_forgery_and_label_swaps(self):
+        retained=json.loads((ROOT/'results/durable-state-costs/measurements.json').read_text(encoding='utf-8'))
+        for name,original in (('retained',retained),('synthetic',synthetic_measurements())):
+            for mutation,data in coherent_mutations(original):
+                with self.subTest(dataset=name,mutation=mutation):
+                    if mutation=='fixed_both_payloads':
+                        self.assertEqual(sum(a!=b for a,b in zip(original['rows'],data['rows'])),6)
+                        self.assertEqual(sum(a!=b for a,b in zip(original['groups'],data['groups'])),2)
+                    with self.assertRaisesRegex(ValueError,'fixture outcome mismatch'):
+                        derive(data)
+
+    def test_all_policy_schedule_coherent_outcome_rewrites(self):
+        original=synthetic_measurements()
+        for mismatch in (False,True):
+            for policy in ('fixed','greedy','mass','batch'):
+                expected=tuple(literal_fixture_counts(policy,0,mismatch).values())
+                for outcomes in ((0,12,12),(24,0,0),(0,0,24),(12,12,0)):
+                    if outcomes==expected:continue
+                    data=copy.deepcopy(original)
+                    for collection in (data['rows'],data['groups']):
+                        for row in collection:
+                            if (row['mismatch'],row['policy'])==(mismatch,policy):
+                                row.update(zip(('installed','blocked','unchanged'),outcomes))
+                    with self.subTest(mismatch=mismatch,policy=policy,outcomes=outcomes), \
+                            self.assertRaisesRegex(ValueError,'fixture outcome mismatch'):
+                        derive(data)
+
+    def test_consistent_synthetic_times_are_not_authenticated(self):
+        # Count semantics and raw/summary consistency are not timing provenance.
+        data=synthetic_measurements();before=derive(data)
+        for row in data['rows']:row['full_lifecycle_ns']*=2
+        for group in data['groups']:group['full_lifecycle_median_ms']*=2
+        self.assertNotEqual(derive(data),before)
+
+class PaperGenerator(unittest.TestCase):
+    def setUp(self):
+        owned=tempfile.TemporaryDirectory(prefix='lifecycle-table-regression-')
+        self.addCleanup(owned.cleanup)
+        self.project=Path(owned.name).resolve()
+        self.assertFalse(self.project.is_relative_to(ROOT.parent.resolve()))
+        self.artifact=self.project/'artifact'
+        # Copy only table code, byte-bound sources and the original inventory.
+        # No source imports, producer executions, new hashes or measured writes.
+        self.resolved=verify_sources()
+        for relative in (*self.resolved.values(),'lifecycle_table.py',
+                         'results/durable-state-costs/environment.json'):
+            target=self.artifact/relative
+            target.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copyfile(ROOT/relative,target)
+        self.generator=self.project/'paper/generate_lifecycle.py'
+        self.generator.parent.mkdir(parents=True)
+        shutil.copyfile(ROOT.parent/'paper/generate_lifecycle.py',self.generator)
+        self.assertEqual(self.generator.read_bytes(),(ROOT.parent/'paper/generate_lifecycle.py').read_bytes())
+        self.output=self.generator.with_name('lifecycle-rows.tex')
+        self.measurements=self.artifact/'results/durable-state-costs/measurements.json'
+
+    def run_generator(self):
+        # Exercise the unchanged consumer AND its private copy of the receiver.
+        # Restore path/modules even when validation raises before write_text.
+        with patch.object(sys,'path',list(sys.path)), patch.dict(sys.modules), \
+                contextlib.redirect_stdout(io.StringIO()) as log:
+            sys.modules.pop('lifecycle_table',None)
+            try:
+                runpy.run_path(str(self.generator),run_name='__main__')
+            finally:
+                self.assertEqual(sys.modules['lifecycle_table'].ROOT,self.artifact)
+        return log.getvalue()
+
+    def test_retained_and_owned_synthetic_generation(self):
+        retained=ROOT/'results/durable-state-costs/measurements.json'
+        shutil.copyfile(retained,self.measurements)
+        self.assertIn('all48 retained rows',self.run_generator())
+        self.assertEqual(self.output.read_bytes(),(ROOT.parent/'paper/lifecycle-rows.tex').read_bytes())
+        data=synthetic_measurements()
+        self.measurements.write_text(json.dumps(data),encoding='utf-8')
+        self.run_generator()
+        self.assertEqual(self.output.read_text(encoding='utf-8'),derive(data))
+
+    def test_coherent_forgeries_reject_before_actual_consumer_write(self):
+        for mutation,data in coherent_mutations(synthetic_measurements()):
+            for existing in (False,True):
+                with self.subTest(mutation=mutation,existing_output=existing):
+                    self.measurements.write_text(json.dumps(data),encoding='utf-8')
+                    if existing:self.output.write_bytes(b'owned output must survive\n')
+                    elif self.output.exists():self.output.unlink()
+                    with patch.object(Path,'write_text') as write, \
+                            self.assertRaisesRegex(ValueError,'fixture outcome mismatch'):
+                        self.run_generator()
+                    write.assert_not_called()
+                    if existing:self.assertEqual(self.output.read_bytes(),b'owned output must survive\n')
+                    else:self.assertFalse(self.output.exists())
+
+    def test_original_source_binding_still_gates_actual_consumer(self):
+        self.measurements.write_text(json.dumps(synthetic_measurements()),encoding='utf-8')
+        relative=self.resolved['tests/full_path_costs.py']
+        source=self.artifact/relative
+        source.write_bytes(source.read_bytes()+b'\n# owned tamper\n')
+        with patch.object(Path,'write_text') as write, \
+                self.assertRaisesRegex(ValueError,'measured source missing or differs tests/full_path_costs.py'):
+            self.run_generator()
+        write.assert_not_called()
+        self.assertFalse(self.output.exists())
 
 class RecordedSources(unittest.TestCase):
     def test_entire_inventory_and_existing_table_consumer(self):
