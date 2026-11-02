@@ -60,6 +60,20 @@ class LifecycleTable(unittest.TestCase):
         data=copy.deepcopy(self.data)
         data['groups'][0].update(blocked=11,unchanged=13)
         reject(data)
+        for padding in (0,11999):
+            for mismatch in (False,True):
+                for policy in ('fixed','greedy','mass','batch'):
+                    data=copy.deepcopy(self.data)
+                    group=next(g for g in data['groups'] if
+                               (g['padding_atoms'],g['mismatch'],g['policy'])==(padding,mismatch,policy))
+                    installed=(group['installed']+1)%25
+                    outcomes=dict(installed=installed,blocked=24-installed,unchanged=0)
+                    group.update(outcomes)
+                    for row in data['rows']:
+                        if (row['padding_atoms'],row['mismatch'],row['policy'])==(padding,mismatch,policy):
+                            row.update(outcomes)
+                    with self.subTest(payload=padding,mismatch=mismatch,policy=policy):
+                        reject(data)
         # Match the generator's table-before-write expression without making
         # the standalone artifact depend on the sibling paper directory.
         data=copy.deepcopy(self.data);data['rows'][0]['installed']=False

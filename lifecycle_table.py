@@ -100,6 +100,12 @@ def derive(data):
         require(tuple(supplied[key][field] for field in ('installed','blocked','unchanged'))==outcomes
                 and type(supplied[key]['full_lifecycle_median_ms']) in (int,float)
                 and supplied[key]['full_lifecycle_median_ms']==value,'raw/summary disagreement')
+    # The table prints one shared outcome cell for both payload sizes. It must
+    # not silently discard a payload-dependent outcome hidden by that collapse.
+    for mismatch in (False,True):
+        for policy in ('fixed','greedy','mass','batch'):
+            require(index[(0,mismatch,policy)][0]==index[(11999,mismatch,policy)][0],
+                    'payload outcomes disagree for shared table cell')
     labels={'fixed':'Fixed','greedy':'Greedy','mass':'Max mass','batch':'Batch choice'}
     lines=['% Derived from results/durable-state-costs/measurements.json; all48rows/1152proposals.']
     for policy,label in labels.items():
