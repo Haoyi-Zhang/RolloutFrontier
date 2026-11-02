@@ -9,7 +9,23 @@ planning, checks, process startup, FULL/DELETE SQLite, TCP, reopen, use,
 retirement, inspection and shutdown. Application frames include six acknowledged
 management exchanges, separately from RPC frames; they are not packet capture.
 
-Regenerate to a fresh path with
+The 44 entries in the original `environment.json` source inventory bind measured
+bytes, not today's source tree. Currently 35 match live files. Seven exact
+preimages are retained under `source-preimage/`: `src/checker.py` and
+`tests/{frontier,full_path_costs,labelled_mss_bridge,optimizer_benchmark,receipt_snapshots,window_types}.py`.
+The remaining `src/controller.py` and `src/network.py` preimages are already
+preserved under `../effect-drain/source-preimage/` and match this inventory's own
+hashes. Preimages are data only: do not import or execute them.
+
+From the artifact root, `python -B lifecycle_table.py` checks every recorded
+path/SHA-256 against live bytes or those preserved preimages before consuming
+the measurements. `python -B -m unittest tests.lifecycle_table_regression -v`
+checks missing/tampered bytes, current-source substitution and invalid inventory
+paths using in-memory controls. Neither command reruns the measurement. Original
+measurements, environment and source bindings are unchanged and are not resealed.
+
+To create a separate new measurement using current code, not replay these exact
+historical bytes, use a fresh path with
 `python -B -m tests.full_path_costs --out ../lifecycle-measurements.json --repeats 3`.
 Scientific checks and lifecycle actions execute explicitly, including in optimized
 Python; malformed repeat counts are rejected before creating output directories.

@@ -1,12 +1,53 @@
-"""Derive the manuscript table independently from every current retained row."""
+"""Verify retained source bytes and derive the table, without executing sources."""
 from collections import defaultdict
+import hashlib
 import json
 from pathlib import Path
+import re
 from statistics import median
 
 ROOT=Path(__file__).resolve().parent
 def require(condition,message):
     if not condition:raise ValueError(message)
+
+def verify_sources():
+    """Resolve every recorded path/hash as data, not as an import or a rerun."""
+    data=ROOT/'results/durable-state-costs'
+    environment=json.loads((data/'environment.json').read_text(encoding='utf-8'))
+    require(type(environment) is dict,'source environment schema')
+    entries=environment.get('sources')
+    require(type(entries) is list and len(entries)>0,'source inventory schema')
+    seen=set()
+    for entry in entries:
+        require(type(entry) is dict and set(entry)=={'path','sha256'},'source entry schema')
+        rel,digest=entry['path'],entry['sha256']
+        require(type(rel) is str and re.fullmatch(r'(?:src|tests)/[a-z_][a-z0-9_]*\.py',rel)
+                is not None,'source path schema')
+        require(rel not in seen,'duplicate source path')
+        require(type(digest) is str and re.fullmatch(r'[0-9a-f]{64}',digest)
+                is not None,'source digest schema')
+        seen.add(rel)
+    # Reuse already-preserved controller/network bytes rather than duplicating
+    # them into this cohort. Each candidate must match this cohort's own hash.
+    bases=(ROOT,data/'source-preimage',ROOT/'results/effect-drain/source-preimage')
+    resolved={}
+    for entry in entries:
+        rel,digest=entry['path'],entry['sha256']
+        for base in bases:
+            candidate=base/rel
+            require(candidate.resolve().is_relative_to(base.resolve()),'source path escapes root '+rel)
+            try:
+                raw=candidate.read_bytes()
+            except FileNotFoundError:
+                continue
+            except OSError as error:
+                raise ValueError('measured source unreadable '+rel) from error
+            if hashlib.sha256(raw).hexdigest()==digest:
+                resolved[rel]=candidate.relative_to(ROOT).as_posix()
+                break
+        else:
+            raise ValueError('measured source missing or differs '+rel)
+    return resolved
 
 def derive(data):
     require(data['status']=='completed' and data['repeats']==3,'measurement completion')
@@ -45,6 +86,7 @@ def derive(data):
     return '\n'.join(lines)+'\n'
 
 def table():
+    verify_sources()
     return derive(json.loads((ROOT/'results/durable-state-costs/measurements.json').read_text(encoding='utf-8')))
 
 if __name__=='__main__':print(table(),end='')

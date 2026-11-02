@@ -458,18 +458,22 @@ product, rejecting duplicate, missing and Boolean/float repetition identities.
 Its ns-derived median is checked without pre-rounding; only TeX display rounds.
 The current and older retained cohorts still reaggregate separately and unchanged.
 
-The current `tests/full_path_costs.py` has stricter aggregation than the measured
-producer. Its exact registered bytes are preserved, not executed, at
-`results/durable-state-costs/source-preimage/tests/full_path_costs.py` (SHA-256
-`23e598ac8faaedd39d9da849640331e34ae890eccec7f0cb539ce29a781f8981`). The current
-`src/controller.py` also differs after stricter profile admission; its registered
-preimage is at `results/effect-drain/source-preimage/src/controller.py` (SHA-256
-`5f58632463e84a8a3a80c94f8bea61db7b24ab1d84f6d698db8ab1ec2d49e5d9`). The existing
-effect-source checker resolves that preimage without relaxing its digest guard.
-The new pure controls reject missing/corrupt captures and substitution of current
-code for either recorded source. Historical source maps, raw measurements and
-failed attempts are not resealed or refreshed by these checks. They do not claim
-that every historical source in the environment inventory matches current code.
+The durable-cost cohort's original `environment.json` binds measured bytes, not
+today's source tree. Of its 44 sources, 35 currently match live files; seven
+preimages are preserved under `results/durable-state-costs/source-preimage/`,
+including the measured `tests/full_path_costs.py` before stricter aggregation.
+The other two, `src/controller.py` and `src/network.py`, reuse exact preimages at
+`results/effect-drain/source-preimage/`, checked against the durable-cost
+inventory's own hashes. See `results/durable-state-costs/README.md` for the paths.
+All preimages are data only, never imports or measurement entry points.
+
+The existing `lifecycle_table.py` receiver now verifies every recorded source
+path/SHA-256 before deriving the unchanged table. Its pure
+`tests.lifecycle_table_regression` controls reject missing/corrupt bytes,
+current-source substitution and malformed inventory paths. The effect-source
+checker retains its own digest guard. Historical source maps, raw measurements
+and failed attempts are not resealed or refreshed; this is not a rerun or a claim
+that every measured source matches current code.
 
 ## Portable path notation
 
