@@ -202,3 +202,6 @@ def emit_supplemental(out,previews=None):
     path=Path(__file__).with_name('argument_plate.json')
     for item in json.loads(path.read_text(encoding='utf-8'))['figures']:
         draw(item,out,previews)
+    from expansion_diagrams import FIGURES
+    for name, build in FIGURES.items():
+        build().audited_save(out,name,previews)
