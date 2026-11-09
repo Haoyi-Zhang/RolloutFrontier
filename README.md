@@ -426,9 +426,10 @@ python -B lifecycle_table.py
 
 ## Manuscript diagrams
 
-The model and protocol schematics are drawn directly in Python as vector PDFs
-with embedded STIX fonts. They encode the stated relationships, not measured
-performance. To regenerate them with Python 3.9+ and Matplotlib:
+The architecture and relation matrix are drawn as native vector PDFs. They encode the
+stated relationships, not measured performance. Use Python 3.9+, Matplotlib
+and the manuscript's URW Times fonts (discoverable through `kpsewhich` or
+`FIGURE_TEX_FONT_DIR`):
 
 ```sh
 python -B figures/draw_schematics.py --output figures
