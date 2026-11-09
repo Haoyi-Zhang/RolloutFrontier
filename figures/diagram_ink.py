@@ -1,6 +1,7 @@
 """Small vector primitives for the paper's domain-specific diagrams."""
 from math import cos, pi, sin
 from matplotlib.patches import Circle, Polygon, Rectangle, FancyArrowPatch
+from matplotlib.transforms import Bbox
 from figure_style import Plate, BLUE, TEAL, AMBER, INK, MUTED, RULE, LIGHT, MINT, SAND
 
 S = BLUE
@@ -33,6 +34,7 @@ class Diagram(Plate):
         super().__init__(w,h)
         self.words=[]
         self.wires=[]
+        self.boundaries=[]
 
     def txt(self,x,y,label,sz=9.3,*,ha='center',color=K,bold=False):
         t=self.text(x,y,label,sz,ha=ha,color=color,weight='bold' if bold else 'normal')
@@ -40,39 +42,41 @@ class Diagram(Plate):
         return t
 
     def tag(self,x,y,label):
-        return self.txt(x,y,label,10,ha='left',bold=True)
+        return self.txt(x,y,label,9.8,ha='left',bold=True)
 
-    def wire(self,*pts,c=G,dash=False,arrow=True,lw=.82):
+    def wire(self,*pts,c=G,dash=False,arrow=True,lw=.75):
         self.wires.extend(zip(pts,pts[1:]))
         for a,b in zip(pts,pts[1:]):
             if arrow and b==pts[-1]:
                 self.ax.add_patch(FancyArrowPatch(a,b,arrowstyle='-|>',shrinkA=0,shrinkB=0,
-                    linewidth=lw,mutation_scale=6.8,linestyle='--' if dash else '-',color=c,zorder=2))
+                    linewidth=lw,mutation_scale=6.0,linestyle='--' if dash else '-',color=c,zorder=2))
             else:self.rule(*a,*b,c=c,lw=lw,ls='--' if dash else '-')
 
     def dotmark(self,x,y,r=3,*,c=S,fill='white'):
-        self.ax.add_patch(Circle((x,y),r,facecolor=fill,edgecolor=c,linewidth=.9,zorder=4))
+        self.ax.add_patch(Circle((x,y),r,facecolor=fill,edgecolor=c,linewidth=.78,zorder=4))
 
     def diamond(self,x,y,r=6,c=S):
         self.ax.add_patch(Polygon([(x-r,y),(x,y+r),(x+r,y),(x,y-r)],closed=True,
-                                 facecolor='white',edgecolor=c,lw=.95,zorder=4))
+                                 facecolor='white',edgecolor=c,lw=.83,zorder=4))
 
     def zone(self,x,y,w,h,*,c=F,fill='white',dash=True):
+        self.boundaries.append(Bbox.from_bounds(x,y,w,h))
         self.frame(x,y,w,h,fill,c,dash)
 
     def block(self,x,y,w,h,c=S,fill=L):
-        self.ax.add_patch(Rectangle((x,y),w,h,edgecolor=c,facecolor=fill,lw=.85,zorder=3))
+        self.boundaries.append(Bbox.from_bounds(x,y,w,h))
+        self.ax.add_patch(Rectangle((x,y),w,h,edgecolor=c,facecolor=fill,lw=.74,zorder=3))
 
     def mark(self,kind,x,y,size=21,c=S):
         """Glyphs for actual data objects and observable state, not task cards."""
         def path(*points,fill=None):
             poly=[(x+size*u,y+size*v) for u,v in points]
             if fill:
-                self.ax.add_patch(Polygon(poly,closed=True,edgecolor=c,facecolor=fill,lw=.9,
+                self.ax.add_patch(Polygon(poly,closed=True,edgecolor=c,facecolor=fill,lw=.72,
                     joinstyle='round',zorder=3))
             else:
                 xx,yy=zip(*poly)
-                self.ax.plot(xx,yy,color=c,linewidth=.9,solid_capstyle='round',solid_joinstyle='round',zorder=4)
+                self.ax.plot(xx,yy,color=c,linewidth=.72,solid_capstyle='round',solid_joinstyle='round',zorder=4)
         def circ(u,v,r=.105,solid=False):
             self.dotmark(x+size*u,y+size*v,r*size,c=c,fill=c if solid else 'white')
         if kind in {'doc','code','cert','trace','keyed','vector','patch'}:
@@ -132,8 +136,46 @@ class Diagram(Plate):
             circ(0,0,.34);path((0,.20),(0,0),(.16,-.09))
         else:raise ValueError(kind)
 
+    def fit_print_labels(self):
+        """Enlarge each label only if its own printed clearance permits it."""
+        renderer=self.fig.canvas.get_renderer()
+        inv=self.ax.transData.inverted()
+        extent=lambda text:text.get_window_extent(renderer).transformed(inv)
+        limits=self.ax.get_xlim()[1],self.ax.get_ylim()[1]
+        boxes={w:extent(w) for w in self.words}
+        def sign(a,b):
+            if a.x0>=b.x0 and a.y0>=b.y0 and a.x1<=b.x1 and a.y1<=b.y1:
+                return 1
+            return -1 if not a.overlaps(b) else 0
+        for w in sorted(self.words,key=lambda t:t.get_fontsize()):
+            size=w.get_fontsize()
+            label=w.get_text()
+            base=boxes[w]
+            # Symbols inside graph vertices and math scripts are not prose labels.
+            goal=size+.35 if len(label)<=3 else min(size+1.2,max(10.15,size+.45))
+            if w.get_fontweight()=='bold':goal=min(goal,10.8)
+            candidates=sorted({round(size+(goal-size)*r,2) for r in (1,.67,.34)
+                               if round(size+(goal-size)*r,2)>size},reverse=True)
+            for new in candidates:
+                w.set_fontsize(new)
+                b=extent(w)
+                pad=b.padded(.42)
+                if pad.x0<0 or pad.y0<0 or pad.x1>limits[0] or pad.y1>limits[1]:
+                    continue
+                if any(pad.overlaps(other) for text,other in boxes.items() if text is not w):
+                    continue
+                if any(crosses_box(a,c,pad) for a,c in self.wires):
+                    continue
+                if any(sign(base,zone)!=sign(pad,zone) for zone in self.boundaries):
+                    continue
+                boxes[w]=b
+                break
+            else:
+                w.set_fontsize(size)
+
     def audited_save(self,out,name,previews=None):
         self.fig.canvas.draw()
+        self.fit_print_labels()
         renderer=self.fig.canvas.get_renderer()
         inv=self.ax.transData.inverted()
         groups=[]

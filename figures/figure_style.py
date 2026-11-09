@@ -10,6 +10,7 @@ mpl.use("Agg")
 from matplotlib import pyplot as plt
 from matplotlib import font_manager
 from matplotlib.patches import FancyArrowPatch, Rectangle, Circle, FancyBboxPatch
+from matplotlib.text import Text
 
 INK = "#15202c"
 MUTED = "#485461"
@@ -74,8 +75,46 @@ def paper_style(venue="tosem", font_dir=None):
     return family
 
 
+def promote_chart_labels(fig):
+    """Use available axis and legend clearance instead of shrinking all type."""
+    renderer = fig.canvas.get_renderer()
+    window = fig.bbox
+    all_text = [t for t in fig.findobj(Text) if t.get_visible() and t.get_text().strip()]
+    bounds = {t:t.get_window_extent(renderer) for t in all_text}
+    targets = {}
+    for ax in fig.axes:
+        if not ax.axison:
+            continue
+        for t in [*ax.get_xticklabels(), *ax.get_yticklabels()]:
+            targets[t] = 9.1
+        for t in (ax.xaxis.label, ax.yaxis.label):
+            targets[t] = 9.6
+        if (legend := ax.get_legend()) is not None:
+            for t in legend.get_texts():
+                targets[t] = 9.2
+    for legend in fig.legends:
+        for t in legend.get_texts():
+            targets[t] = 9.2
+    for t, goal in targets.items():
+        old = t.get_fontsize()
+        if t not in bounds or old >= goal:
+            continue
+        for size in (goal, round((old + goal) / 2, 2)):
+            t.set_fontsize(size)
+            b = t.get_window_extent(renderer)
+            pad = b.padded(.35 * fig.dpi / 72)
+            if (window.contains(pad.x0, pad.y0) and window.contains(pad.x1, pad.y1)
+                and not any(pad.overlaps(other) for w, other in bounds.items() if w is not t)):
+                bounds[t] = b
+                break
+        else:
+            t.set_fontsize(old)
+
+
 def save(fig, out, name, previews=None):
     out.mkdir(parents=True, exist_ok=True)
+    fig.canvas.draw()
+    promote_chart_labels(fig)
     fig.canvas.draw()
     render = fig.canvas.get_renderer()
     for a in fig.axes:
