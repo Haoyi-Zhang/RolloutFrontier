@@ -4,21 +4,21 @@ from matplotlib.patches import Rectangle
 
 def mass_schedule():
     d=Diagram(248,88)
-    xs=(41,69,97)
-    for x,b in zip(xs,range(3)):d.txt(x,70,str(b),9.6)
-    for y,a in ((48,0),(23,1)):d.txt(15,y,str(a),9.6)
-    d.txt(70,82,'Owner B',9.5,bold=True)
-    d.txt(15,80,'A',9.5,bold=True)
-    d.ax.add_patch(Rectangle((28,38),83,20,fill=False,lw=.95,edgecolor=S))
-    d.ax.add_patch(Rectangle((32,12),17,50,fill=False,lw=.95,edgecolor=T,ls='--'))
-    for b,x in enumerate(xs):
-        for a,y in ((0,48),(1,23)):
-            if a==0 or b==0:d.dotmark(x,y,2.6,c=S,fill=S)
-    d.txt(183,78,'A toggles; B stays at 0',9.2,bold=True)
-    d.wire((130,53),(149,53),c=S,arrow=False)
-    d.txt(158,53,'Mass 3: 0 changes',9.0,ha='left',color=S)
-    d.wire((130,25),(149,25),c=T,dash=True,arrow=False)
-    d.txt(158,25,r'Mass 2: $2T$ changes',9.0,ha='left',color=T)
+    xs=(42,68,94)
+    for x,b in zip(xs,range(3)):d.txt(x,70,str(b),9.4)
+    for y,a in ((48,0),(23,1)):d.txt(16,y,str(a),9.4)
+    d.txt(68,82,'Owner B',9.3)
+    d.txt(20,82,'Owner A',9.3)
+    d.ax.add_patch(Rectangle((30,40),76,16,fill=False,lw=.8,edgecolor=S))
+    d.ax.add_patch(Rectangle((35,13),14,48,fill=False,lw=.8,edgecolor=T,ls='--'))
+    for x in xs:d.dotmark(x,48,2.45,c=S,fill=S)
+    d.dotmark(42,23,2.45,c=T,fill=T)
+    d.txt(183,80,r'A proposes $1$ then $0$',9.1)
+    d.txt(183,67,r'B stays at $0$',8.7)
+    d.wire((116,46),(130,46),c=S,arrow=False)
+    d.txt(136,46,'Mass 3: block, no-op',8.8,ha='left',color=S)
+    d.wire((116,22),(130,22),c=T,dash=True,arrow=False)
+    d.txt(136,22,'Mass 2: install twice',8.8,ha='left',color=T)
     return d
 
 FIGURES={'mass-schedule':mass_schedule}

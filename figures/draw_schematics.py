@@ -8,26 +8,32 @@ from figure_style import AMBER, BLUE, INK, LIGHT, MINT, MUTED, RULE, SAND, TEAL,
 def draw(out):
     from diagram_ink import emit
     emit('architecture',out)
+    relation(out)
 
+
+def relation(out):
     d=Plate(217,118)
-    d.text(123,105,'Endpoint 1',10.3,weight='bold')
-    d.text(8,54,'Endpoint 0',10.1,ha='left',weight='bold')
-    d.frame(84,22,78,60,'white',RULE,dash=True)
-    for i,x in enumerate((104,142)):
+    d.text(127,105,'Endpoint 1',9.6)
+    d.text(5,52,'Endpoint 0',9.6,ha='left')
+    d.frame(80,22,96,60,'white',MUTED,dash=True)
+    for i,x in enumerate((104,152)):
         d.text(x,92,('Old','New')[i],9.6)
     for j,y in enumerate((66,38)):
-        d.text(77,y,('Old','New')[j],9.6,ha='right')
-        for i,x in enumerate((104,142)):
+        d.text(73,y,('Old','New')[j],9.6,ha='right')
+        for i,x in enumerate((104,152)):
             if i==j:
-                d.dot(x,y,'',fill=TEAL,edge=TEAL,r=4.3)
+                d.frame(x-12,y-9,24,18,MINT,MINT)
+                d.dot(x,y,'',fill=TEAL,edge=TEAL,r=3.9)
             else:
                 d.rule(x-4,y-4,x+4,y+4,c=AMBER,lw=1.35)
                 d.rule(x-4,y+4,x+4,y-4,c=AMBER,lw=1.35)
-    d.dot(66,10,'',fill=TEAL,edge=TEAL,r=3.3)
-    d.text(74,10,'Allowed',9.2,ha='left')
-    d.rule(133,7,139,13,c=AMBER,lw=1.25)
-    d.rule(133,13,139,7,c=AMBER,lw=1.25)
-    d.text(144,10,'Unsafe',9.2,ha='left')
+    d.dot(12,10,'',fill=TEAL,edge=TEAL,r=3.1)
+    d.text(20,10,'Allowed',8.7,ha='left')
+    d.rule(68,7,74,13,c=AMBER,lw=1.2)
+    d.rule(68,13,74,7,c=AMBER,lw=1.2)
+    d.text(79,10,'Incompatible',8.7,ha='left')
+    d.frame(135,7,13,6,'white',MUTED,dash=True)
+    d.text(153,10,'Marginal product',8.7,ha='left')
     d.save(out,'relation')
 
 

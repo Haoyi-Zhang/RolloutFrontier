@@ -1,6 +1,6 @@
 # Complete same-host durable lifecycle costs
 
-`measurements.json` contains48fresh-store trials and1152proposals across four
+`measurements.json` contains 48 fresh-store trials and 1,152 proposals across four
 policies, two payload scales, matched/reverse batches and three repetitions.
 `environment.json` records actual hardware, operating system, Python/SQLite and
 source bytes captured before execution and checked unchanged after execution.
@@ -33,6 +33,6 @@ The historical cohorts remain separate. All policies share the relation and
 schedules; counts retain blocked changes and no-ops. Batch selection and greedy
 install the same number in the matched case; maximum mass wins the reverse case.
 
-This Windows11/Python3.12.14/SQLite3.53.1 sample uses an i7-12700KF12core/20logical
-host. Scope is an owned same-host lifecycle, with retained SQLite files, not
+This Windows 11, Python 3.12.14, and SQLite 3.53.1 sample uses an i7-12700KF
+with 12 cores and 20 logical processors. Scope is an owned same-host lifecycle, with retained SQLite files, not
 WAN or power-loss behavior. CPU time and energy were not measured.

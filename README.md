@@ -384,7 +384,7 @@ output directories. The labelled-MSS bridge concerns planning vectors only.
 The off-catalog unsafe corner and equal-cardinality/different-mass controls remain
 explicit. No new counts are folded into historical campaign denominators.
 Current full-lifecycle measurements include detached receipts and staged durable
-state publication. `results/durable-state-costs/` contains all48rows for1152
+state publication. `results/durable-state-costs/` contains all 48 rows for 1,152
 proposals plus the actual hardware/environment and unchanged-during-run source
 bindings. Four policies share inputs and schedules, including the reversed
 evaluation batch. Application-frame counts include six acknowledged management
@@ -392,8 +392,8 @@ exchanges; they are not TCP wire capture. The earlier measurements remain
 historical scientific records, separate from the current paper's cost table.
 
 `python -B -m tests.persistence_failures` exercises eight owner transaction
-controls and one owned localTCP recovery path. `python -B -m
-tests.origin_persistence_failures` covers16fixed/envelope origin phase controls.
+controls and one owned local TCP recovery path. `python -B -m
+tests.origin_persistence_failures` covers 16 fixed/envelope origin phase controls.
 Actual SQLite write aborts and simulated postcommit errors are distinguished.
 The in-memory image is published after commit; a database error stops further
 authorization until durable reopen. `tests.window_types` checks exact integer
@@ -413,8 +413,8 @@ The current manuscript's cold-lifecycle table consumes only
 `results/durable-state-costs/measurements.json`: for example, its small-payload
 matched Fixed median is 582.4542 ms. The 882.8377 ms value in
 `results/repair-full-path-summary.json` belongs to the earlier measurement cohort.
-`lifecycle_table.py` independently recomputes all16group medians from all48raw
-rows, checks their1152proposals, and rejects mixing either cohort's summary with
+`lifecycle_table.py` independently recomputes all 16 group medians from all 48 raw
+rows, checks their 1,152 proposals, and rejects mixing either cohort's summary with
 the other's measurements. `paper/generate_lifecycle.py` consumes this checked
 table during the complete project's paper build; no earlier measurements are
 silently replaced and no new timing result is inferred.
