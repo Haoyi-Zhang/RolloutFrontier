@@ -1,0 +1,311 @@
+{
+  "evidence_corruption_controls": [
+    {
+      "mode": "normal",
+      "name": "session-birth",
+      "reason": "session certificate manifest differs from its immutable binding",
+      "rejected": true
+    },
+    {
+      "mode": "normal",
+      "name": "completed-input",
+      "reason": "completed input differs from its durable physical effect",
+      "rejected": true
+    },
+    {
+      "mode": "normal",
+      "name": "completed-output",
+      "reason": "completed output differs from its durable physical effect",
+      "rejected": true
+    },
+    {
+      "mode": "normal",
+      "name": "missing-committed-operation",
+      "reason": "operation trace omits or reorders an owner audit row",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "name": "session-birth",
+      "reason": "session certificate manifest differs from its immutable binding",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "name": "completed-input",
+      "reason": "completed input differs from its durable physical effect",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "name": "completed-output",
+      "reason": "completed output differs from its durable physical effect",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "name": "missing-committed-operation",
+      "reason": "operation trace omits or reorders an owner audit row",
+      "rejected": true
+    }
+  ],
+  "modes": {
+    "normal": {
+      "groups": {
+        "acquisition_cancellation": {
+          "admitted_sessions": 1,
+          "completed_requests": 1,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 0,
+          "durable_effects": 2,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 3,
+          "independently_invalid_altered_journals": 0,
+          "origin_databases": 2,
+          "owner_audit_rows": 8,
+          "owner_databases": 2,
+          "session_databases": 1,
+          "trace_operations": 8
+        },
+        "fresh_and_repeated_journal": {
+          "admitted_sessions": 2,
+          "completed_requests": 2,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 1,
+          "durable_effects": 4,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 6,
+          "independently_invalid_altered_journals": 0,
+          "origin_databases": 2,
+          "owner_audit_rows": 17,
+          "owner_databases": 2,
+          "session_databases": 2,
+          "trace_operations": 17
+        },
+        "precreated_journal": {
+          "admitted_sessions": 2,
+          "completed_requests": 1,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 1,
+          "durable_effects": 2,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 3,
+          "independently_invalid_altered_journals": 0,
+          "origin_databases": 2,
+          "owner_audit_rows": 13,
+          "owner_databases": 2,
+          "session_databases": 2,
+          "trace_operations": 13
+        },
+        "request_cancellation": {
+          "admitted_sessions": 1,
+          "completed_requests": 1,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 1,
+          "durable_effects": 2,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 3,
+          "independently_invalid_altered_journals": 0,
+          "origin_databases": 2,
+          "owner_audit_rows": 9,
+          "owner_databases": 2,
+          "session_databases": 1,
+          "trace_operations": 9
+        },
+        "retirement_cancellation": {
+          "admitted_sessions": 1,
+          "completed_requests": 0,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 0,
+          "durable_effects": 0,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 0,
+          "independently_invalid_altered_journals": 0,
+          "origin_databases": 2,
+          "owner_audit_rows": 7,
+          "owner_databases": 2,
+          "session_databases": 1,
+          "trace_operations": 7
+        },
+        "workflow_binding": {
+          "admitted_sessions": 1,
+          "completed_requests": 1,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 1,
+          "durable_effects": 3,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 5,
+          "independently_invalid_altered_journals": 4,
+          "origin_databases": 2,
+          "owner_audit_rows": 12,
+          "owner_databases": 2,
+          "session_databases": 6,
+          "trace_operations": 12
+        }
+      },
+      "producer_recorded": {
+        "altered_journal_rejections": 4,
+        "foreign_journal_rejections": 4,
+        "post_commit_task_cancellations": 3,
+        "withheld_effect_replies": 3
+      },
+      "reconstructed": {
+        "admitted_sessions": 8,
+        "captured_sources": 10,
+        "completed_requests": 6,
+        "control_groups": 6,
+        "cut_state_reconstructions": 6,
+        "duplicate_receipts": 4,
+        "durable_effects": 13,
+        "final_held_obligations": 0,
+        "independent_births": 9,
+        "independent_wire_decodes": 20,
+        "independently_invalid_altered_journals": 4,
+        "origin_databases": 12,
+        "owner_audit_rows": 66,
+        "owner_databases": 12,
+        "session_databases": 13,
+        "trace_operations": 66
+      }
+    },
+    "optimized": {
+      "groups": {
+        "acquisition_cancellation": {
+          "admitted_sessions": 1,
+          "completed_requests": 1,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 0,
+          "durable_effects": 2,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 3,
+          "independently_invalid_altered_journals": 0,
+          "origin_databases": 2,
+          "owner_audit_rows": 8,
+          "owner_databases": 2,
+          "session_databases": 1,
+          "trace_operations": 8
+        },
+        "fresh_and_repeated_journal": {
+          "admitted_sessions": 2,
+          "completed_requests": 2,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 1,
+          "durable_effects": 4,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 6,
+          "independently_invalid_altered_journals": 0,
+          "origin_databases": 2,
+          "owner_audit_rows": 17,
+          "owner_databases": 2,
+          "session_databases": 2,
+          "trace_operations": 17
+        },
+        "precreated_journal": {
+          "admitted_sessions": 2,
+          "completed_requests": 1,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 1,
+          "durable_effects": 2,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 3,
+          "independently_invalid_altered_journals": 0,
+          "origin_databases": 2,
+          "owner_audit_rows": 13,
+          "owner_databases": 2,
+          "session_databases": 2,
+          "trace_operations": 13
+        },
+        "request_cancellation": {
+          "admitted_sessions": 1,
+          "completed_requests": 1,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 1,
+          "durable_effects": 2,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 3,
+          "independently_invalid_altered_journals": 0,
+          "origin_databases": 2,
+          "owner_audit_rows": 9,
+          "owner_databases": 2,
+          "session_databases": 1,
+          "trace_operations": 9
+        },
+        "retirement_cancellation": {
+          "admitted_sessions": 1,
+          "completed_requests": 0,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 0,
+          "durable_effects": 0,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 0,
+          "independently_invalid_altered_journals": 0,
+          "origin_databases": 2,
+          "owner_audit_rows": 7,
+          "owner_databases": 2,
+          "session_databases": 1,
+          "trace_operations": 7
+        },
+        "workflow_binding": {
+          "admitted_sessions": 1,
+          "completed_requests": 1,
+          "cut_state_reconstructions": 1,
+          "duplicate_receipts": 1,
+          "durable_effects": 3,
+          "final_held_obligations": 0,
+          "independent_wire_decodes": 5,
+          "independently_invalid_altered_journals": 4,
+          "origin_databases": 2,
+          "owner_audit_rows": 12,
+          "owner_databases": 2,
+          "session_databases": 6,
+          "trace_operations": 12
+        }
+      },
+      "producer_recorded": {
+        "altered_journal_rejections": 4,
+        "foreign_journal_rejections": 4,
+        "post_commit_task_cancellations": 3,
+        "withheld_effect_replies": 3
+      },
+      "reconstructed": {
+        "admitted_sessions": 8,
+        "captured_sources": 10,
+        "completed_requests": 6,
+        "control_groups": 6,
+        "cut_state_reconstructions": 6,
+        "duplicate_receipts": 4,
+        "durable_effects": 13,
+        "final_held_obligations": 0,
+        "independent_births": 9,
+        "independent_wire_decodes": 20,
+        "independently_invalid_altered_journals": 4,
+        "origin_databases": 12,
+        "owner_audit_rows": 66,
+        "owner_databases": 12,
+        "session_databases": 13,
+        "trace_operations": 66
+      }
+    }
+  },
+  "recorded_outcome_scope": "producer-recorded constructor rejection and task/response-cut outcomes; faults are not rerun",
+  "scope": "independent replay of saved journals, owner audits, effects and operation bindings",
+  "status": "pass",
+  "totals": {
+    "admitted_sessions": 16,
+    "captured_sources": 20,
+    "completed_requests": 12,
+    "control_groups": 12,
+    "cut_state_reconstructions": 12,
+    "duplicate_receipts": 8,
+    "durable_effects": 26,
+    "final_held_obligations": 0,
+    "independent_births": 18,
+    "independent_wire_decodes": 40,
+    "independently_invalid_altered_journals": 8,
+    "origin_databases": 24,
+    "owner_audit_rows": 132,
+    "owner_databases": 24,
+    "session_databases": 26,
+    "trace_operations": 132
+  }
+}

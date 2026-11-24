@@ -1,0 +1,35 @@
+{
+  "corruption_controls": [
+    {
+      "case": "policy_flag",
+      "reason": "Compatibility differs",
+      "rejected": true
+    },
+    {
+      "case": "missing_frontier_member",
+      "reason": "Synthesized frontier differs",
+      "rejected": true
+    },
+    {
+      "case": "event_status",
+      "reason": "Lifecycle event differs from literal replay",
+      "rejected": true
+    },
+    {
+      "case": "rehashed_database_floor",
+      "reason": "Final owner states differ from literal execution",
+      "rejected": true
+    },
+    {
+      "case": "handoff_overlap_event",
+      "reason": "Handoff event differs from live-guard replay",
+      "rejected": true
+    },
+    {
+      "case": "rehashed_handoff_live_guard",
+      "reason": "Handoff checkpoint owner guards/floors differ: both-held",
+      "rejected": true
+    }
+  ],
+  "status": "PASS"
+}

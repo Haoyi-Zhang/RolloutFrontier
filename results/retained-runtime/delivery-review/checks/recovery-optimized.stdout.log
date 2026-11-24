@@ -1,0 +1,25 @@
+{
+  "modes": {
+    "normal": {
+      "cuts_checked": 6,
+      "databases_checked": 60,
+      "observations": 23,
+      "other_observations_not_independently_replayed": 17,
+      "recorded_test_methods": 24
+    },
+    "optimized": {
+      "cuts_checked": 6,
+      "databases_checked": 60,
+      "observations": 23,
+      "other_observations_not_independently_replayed": 17,
+      "recorded_test_methods": 24
+    }
+  },
+  "not_reexecuted": [
+    "OS signals and live recovery",
+    "remaining fault-test methods"
+  ],
+  "qualification": "Stored records do not attest that an OS event occurred; no fault rerun is claimed.",
+  "scope": "Independent witness, SQLite-payload, live-guard and terminal-state consistency for six retained cuts per mode; source/log identities for the suite.",
+  "status": "PASS"
+}

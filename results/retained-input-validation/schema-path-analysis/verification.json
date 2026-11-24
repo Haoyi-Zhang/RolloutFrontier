@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "normal_and_optimized_outputs_identical": true,
+  "application_queries": 186174,
+  "finite_queries": 7835,
+  "input_files": 8,
+  "corruption_controls_rejected": 6,
+  "analyzer_matches_retained_source": true,
+  "scope": "Independent reconstruction from retained input records; no new timing or process experiment."
+}

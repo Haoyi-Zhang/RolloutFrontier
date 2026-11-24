@@ -1,0 +1,148 @@
+{
+  "context": 0,
+  "dependency_cycle": [
+    "e_cb0",
+    "p_ac0",
+    "p_bc0",
+    "e_bc0",
+    "p_ab0",
+    "p_ab1",
+    "p_cb0",
+    "e_cb0"
+  ],
+  "endpoints": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "exact": null,
+  "literal_verification": {
+    "catalog_cells": 180,
+    "compatible_cells": 2,
+    "optimal_phases": null,
+    "phase_graph": [
+      {
+        "source": [
+          0,
+          0,
+          0
+        ],
+        "targets": []
+      },
+      {
+        "source": [
+          5,
+          5,
+          4
+        ],
+        "targets": []
+      }
+    ],
+    "relation": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        5,
+        4
+      ]
+    ],
+    "safe_phase_edges": 0
+  },
+  "orders": [
+    [
+      "e_ab0",
+      "e_ab1",
+      "e_ac0",
+      "p_ba0",
+      "p_ca0"
+    ],
+    [
+      "e_ba0",
+      "e_bc0",
+      "p_ab0",
+      "p_ab1",
+      "p_cb0"
+    ],
+    [
+      "e_ca0",
+      "e_cb0",
+      "p_ac0",
+      "p_bc0"
+    ]
+  ],
+  "production": {
+    "context": 0,
+    "cost": null,
+    "phases": [],
+    "rank_iterates": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "reason": "greatest safe endpoint is a fixed point before target",
+    "selection": "fixed_even_grid",
+    "status": "unreachable"
+  },
+  "thresholds": [
+    [
+      0,
+      1,
+      1,
+      3
+    ],
+    [
+      1,
+      1,
+      0,
+      4
+    ],
+    [
+      1,
+      2,
+      2,
+      4
+    ],
+    [
+      2,
+      2,
+      1,
+      5
+    ],
+    [
+      2,
+      1,
+      0,
+      5
+    ],
+    [
+      0,
+      3,
+      2,
+      3
+    ],
+    [
+      0,
+      2,
+      1,
+      4
+    ]
+  ]
+}

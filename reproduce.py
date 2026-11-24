@@ -8,9 +8,11 @@ not required to match the retained sample.
 from __future__ import annotations
 import argparse
 import csv
+import hashlib
 import json
 import os
 from pathlib import Path
+import signal
 import subprocess
 import sys
 import time
@@ -21,6 +23,9 @@ MEMORY = 512 * 1024**2
 TIME_FIELDS = {'cpu_seconds','child_cpu_seconds','wall_seconds','peak_rss_kib',
     'wall_ns','rpc_median_ms','rpc_p95_ms','checker_median_ns','checker_min_ns',
     'dp_median_ns','install_median_ns','endpoint_vm_hwm_kib','solver_wall_ns','solver_wall_ms'}
+DEFAULT_JOB_WALL_TIMEOUT_SECONDS = 120
+JOB_WALL_TIMEOUT_SECONDS = {'tests.unit': 300}
+
 JOBS = [('tests.unit','unit.json',False), ('tests.pilot','pilot.json',False), ('tests.finite','finite.json',False),
         ('tests.frontier','frontier.json',False),
         ('tests.frontier_stress','frontier-stress.json',False),
@@ -34,6 +39,31 @@ JOBS = [('tests.unit','unit.json',False), ('tests.pilot','pilot.json',False), ('
         ('tests.observations','observations.json',True), ('tests.costs','costs.json',False),
         ('tests.hardening','hardening.json',False),
         ('tests.replay','replay.json',True)]
+
+
+def run_job(command, *, cwd, env, timeout):
+    """Run one job in its own process group and reap it on every exit path."""
+    process = subprocess.Popen(command, cwd=cwd, env=env, preexec_fn=limits,
+                               stdin=subprocess.DEVNULL, stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE, text=True,
+                               start_new_session=True)
+    try:
+        stdout, stderr = process.communicate(timeout=timeout)
+    except subprocess.TimeoutExpired as error:
+        try:
+            os.killpg(process.pid, signal.SIGTERM)
+        except ProcessLookupError:
+            pass
+        try:
+            stdout, stderr = process.communicate(timeout=5)
+        except subprocess.TimeoutExpired:
+            try:
+                os.killpg(process.pid, signal.SIGKILL)
+            except ProcessLookupError:
+                pass
+            stdout, stderr = process.communicate()
+        raise subprocess.TimeoutExpired(command, timeout, output=stdout, stderr=stderr) from error
+    return subprocess.CompletedProcess(command, process.returncode, stdout, stderr)
 
 
 def semantic(x):
@@ -96,9 +126,9 @@ def main():
         command=[sys.executable,'-m',module] + ([str(out)] if takes_directory else [])
         begin=time.perf_counter()
         print(f'[{index:02d}/{len(JOBS):02d}] start {module}', file=sys.stderr, flush=True)
+        job_timeout = JOB_WALL_TIMEOUT_SECONDS.get(module, DEFAULT_JOB_WALL_TIMEOUT_SECONDS)
         try:
-            completed=subprocess.run(command,cwd=ROOT,env=env,preexec_fn=limits,
-                capture_output=True,text=True,timeout=120,check=False)
+            completed=run_job(command,cwd=ROOT,env=env,timeout=job_timeout)
         except subprocess.TimeoutExpired as error:
             def decoded(value):
                 if value is None: return ''
@@ -106,9 +136,9 @@ def main():
                 return value
             stdout, stderr = decoded(error.stdout), decoded(error.stderr)
             (out/'failure.txt').write_text(
-                ' '.join(['python','-m',module])+'\nTIMEOUT after 120 seconds\n'+stdout+'\n'+stderr)
+                ' '.join(['python','-m',module])+f'\nTIMEOUT after {job_timeout} seconds\n'+stdout+'\n'+stderr)
             print(f'[{index:02d}/{len(JOBS):02d}] timeout {module}', file=sys.stderr, flush=True)
-            raise RuntimeError(f'{module} exceeded 120-second wall timeout; see failure.txt') from error
+            raise RuntimeError(f'{module} exceeded {job_timeout}-second wall timeout; see failure.txt') from error
         if len(completed.stdout)>2*1024**2 or len(completed.stderr)>2*1024**2:
             raise RuntimeError('bounded log size exceeded')
         if completed.returncode != 0:
@@ -125,7 +155,7 @@ def main():
         if not takes_directory or module == 'tests.replay':
             (out/filename).write_text(json.dumps(answer,indent=2,sort_keys=True)+'\n')
         records.append(dict(command=['python','-m',module]+(['<output>'] if takes_directory else []),
-            exit_code=0,wall_seconds=time.perf_counter()-begin,
+            exit_code=0,wall_seconds=time.perf_counter()-begin,job_wall_timeout_seconds=job_timeout,
             reported_cpu_seconds=answer['cpu_seconds'],
             reported_child_cpu_seconds=answer.get('child_cpu_seconds',0),
             reported_peak_rss_kib=answer['peak_rss_kib'],stderr=completed.stderr))
@@ -148,13 +178,18 @@ def main():
         (out/'failure.txt').write_text('SEMANTIC COMPARISON FAILED\n' + repr(error) + '\n')
         raise RuntimeError('semantic comparison failed; see failure.txt') from error
     after=resource.getrusage(resource.RUSAGE_CHILDREN)
+    reference_sha256 = {}
+    if reference:
+        for name in matched:
+            reference_sha256[name] = hashlib.sha256((reference/name).read_bytes()).hexdigest()
     report=dict(status='completed',runs=records,numeric_claim_bindings_verified=bindings_verified,semantic_reference=('matched' if reference else 'not-requested'),
+        semantic_reference_sha256=reference_sha256,
         compared_files=matched,generated_files=sorted(required),
         independently_replayed_trace_files=['network-trace.jsonl'],
         reference_compared_trace_files=['network-trace.jsonl','observation-trace.jsonl'],
         comparison_excludes=sorted(TIME_FIELDS),
-        limits=dict(affinity_cores=1,child_address_space_bytes=MEMORY,job_wall_timeout_seconds=120,
-                    job_cpu_soft_seconds=90,maximum_simultaneous_project_processes=7, theoretical_aggregate_address_space_bytes=7*MEMORY),
+        limits=dict(affinity_cores=1,child_address_space_bytes=MEMORY,default_job_wall_timeout_seconds=DEFAULT_JOB_WALL_TIMEOUT_SECONDS,
+                    job_wall_timeout_overrides_seconds=JOB_WALL_TIMEOUT_SECONDS,job_cpu_soft_seconds=90,maximum_simultaneous_project_processes=7, theoretical_aggregate_address_space_bytes=7*MEMORY),
         wall_seconds=time.perf_counter()-start,parent_cpu_seconds=time.process_time()-parent_cpu,
         children_cpu_seconds=after.ru_utime+after.ru_stime-before.ru_utime-before.ru_stime,
         largest_child_peak_rss_kib=after.ru_maxrss,

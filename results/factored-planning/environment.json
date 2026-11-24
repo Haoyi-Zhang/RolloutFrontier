@@ -1,0 +1,20 @@
+{
+  "inventory": {
+    "binary-triple": 255,
+    "overlapping-binary-pairs": 225,
+    "ternary-pair": 511
+  },
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "scope": "complete finite relation and overlapping-factor oracle campaign; no execution latency measurement",
+  "sources": {
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/factored_planner.py": "b8971360df79d7437c7bb9f1976c6c3e915396ca37fd975cc291901c35cc71ef",
+    "tests/check_factored_planning.py": "74b678b955c03497c820ea8c6081c8986df96da3ea0444607f2122eba991462c",
+    "tests/factored_planning_oracle.py": "523704d0aa00eaf9f2d8e587f237535b79ef888a95428206956bb541d3c8d307",
+    "tests/factored_planning_regression.py": "a474240df8a28320292e264941f20de848ab8282eda2ae47fcc41e8350b4928c",
+    "tests/factored_planning_study.py": "af48cc550e66528f038941e01aa54578a099e6764a360756612d60ca917629bb",
+    "tests/goal_planner_oracle.py": "515ae758f19694bcc994cf6585b71a7f49441faf03523059fb2955f3316f3221"
+  }
+}

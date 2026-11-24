@@ -1,0 +1,12 @@
+{
+  "catalog_placements": 64,
+  "checked_placements": 64,
+  "compatible_placements": 36,
+  "hull_counterexample": [
+    0,
+    1,
+    3
+  ],
+  "reason": "difference hull adds an incompatible placement",
+  "recognized": false
+}

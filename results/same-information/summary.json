@@ -1,0 +1,939 @@
+{
+  "by_demand": {
+    "50": {
+      "same-demand": {
+        "exact_vs_greedy": {
+          "losses": 3,
+          "ties": 229,
+          "wins": 8
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 6845,
+            "installed": 1825,
+            "regret": 127,
+            "unchanged": 2850
+          },
+          "batch_greedy": {
+            "blocked": 6901,
+            "installed": 1788,
+            "regret": 164,
+            "unchanged": 2831
+          },
+          "mass": {
+            "blocked": 6884,
+            "installed": 1773,
+            "regret": 179,
+            "unchanged": 2863
+          }
+        },
+        "proposals_per_policy": 11520,
+        "schedules": 240,
+        "static_hindsight_installed": 1952
+      },
+      "supplied": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 230,
+          "wins": 10
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 6743,
+            "installed": 2062,
+            "regret": 0,
+            "unchanged": 2715
+          },
+          "batch_greedy": {
+            "blocked": 6795,
+            "installed": 2012,
+            "regret": 50,
+            "unchanged": 2713
+          },
+          "mass": {
+            "blocked": 6843,
+            "installed": 1904,
+            "regret": 158,
+            "unchanged": 2773
+          }
+        },
+        "proposals_per_policy": 11520,
+        "schedules": 240,
+        "static_hindsight_installed": 2062
+      },
+      "swapped-owner": {
+        "exact_vs_greedy": {
+          "losses": 2,
+          "ties": 226,
+          "wins": 12
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 6873,
+            "installed": 1811,
+            "regret": 174,
+            "unchanged": 2836
+          },
+          "batch_greedy": {
+            "blocked": 6940,
+            "installed": 1743,
+            "regret": 242,
+            "unchanged": 2837
+          },
+          "mass": {
+            "blocked": 6837,
+            "installed": 1842,
+            "regret": 143,
+            "unchanged": 2841
+          }
+        },
+        "proposals_per_policy": 11520,
+        "schedules": 240,
+        "static_hindsight_installed": 1985
+      }
+    },
+    "70": {
+      "same-demand": {
+        "exact_vs_greedy": {
+          "losses": 4,
+          "ties": 235,
+          "wins": 1
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 6445,
+            "installed": 2141,
+            "regret": 91,
+            "unchanged": 2934
+          },
+          "batch_greedy": {
+            "blocked": 6412,
+            "installed": 2157,
+            "regret": 75,
+            "unchanged": 2951
+          },
+          "mass": {
+            "blocked": 6713,
+            "installed": 1887,
+            "regret": 345,
+            "unchanged": 2920
+          }
+        },
+        "proposals_per_policy": 11520,
+        "schedules": 240,
+        "static_hindsight_installed": 2232
+      },
+      "supplied": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 236,
+          "wins": 4
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 6504,
+            "installed": 2159,
+            "regret": 0,
+            "unchanged": 2857
+          },
+          "batch_greedy": {
+            "blocked": 6516,
+            "installed": 2151,
+            "regret": 8,
+            "unchanged": 2853
+          },
+          "mass": {
+            "blocked": 6813,
+            "installed": 1799,
+            "regret": 360,
+            "unchanged": 2908
+          }
+        },
+        "proposals_per_policy": 11520,
+        "schedules": 240,
+        "static_hindsight_installed": 2159
+      },
+      "swapped-owner": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 234,
+          "wins": 6
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 7101,
+            "installed": 1542,
+            "regret": 563,
+            "unchanged": 2877
+          },
+          "batch_greedy": {
+            "blocked": 7162,
+            "installed": 1485,
+            "regret": 620,
+            "unchanged": 2873
+          },
+          "mass": {
+            "blocked": 6774,
+            "installed": 1857,
+            "regret": 248,
+            "unchanged": 2889
+          }
+        },
+        "proposals_per_policy": 11520,
+        "schedules": 240,
+        "static_hindsight_installed": 2105
+      }
+    },
+    "90": {
+      "same-demand": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 240,
+          "wins": 0
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 6198,
+            "installed": 2408,
+            "regret": 0,
+            "unchanged": 2914
+          },
+          "batch_greedy": {
+            "blocked": 6198,
+            "installed": 2408,
+            "regret": 0,
+            "unchanged": 2914
+          },
+          "mass": {
+            "blocked": 6868,
+            "installed": 1723,
+            "regret": 685,
+            "unchanged": 2929
+          }
+        },
+        "proposals_per_policy": 11520,
+        "schedules": 240,
+        "static_hindsight_installed": 2408
+      },
+      "supplied": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 240,
+          "wins": 0
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 6071,
+            "installed": 2490,
+            "regret": 0,
+            "unchanged": 2959
+          },
+          "batch_greedy": {
+            "blocked": 6071,
+            "installed": 2490,
+            "regret": 0,
+            "unchanged": 2959
+          },
+          "mass": {
+            "blocked": 6735,
+            "installed": 1826,
+            "regret": 664,
+            "unchanged": 2959
+          }
+        },
+        "proposals_per_policy": 11520,
+        "schedules": 240,
+        "static_hindsight_installed": 2490
+      },
+      "swapped-owner": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 240,
+          "wins": 0
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 7606,
+            "installed": 1115,
+            "regret": 1353,
+            "unchanged": 2799
+          },
+          "batch_greedy": {
+            "blocked": 7606,
+            "installed": 1115,
+            "regret": 1353,
+            "unchanged": 2799
+          },
+          "mass": {
+            "blocked": 6781,
+            "installed": 1908,
+            "regret": 560,
+            "unchanged": 2831
+          }
+        },
+        "proposals_per_policy": 11520,
+        "schedules": 240,
+        "static_hindsight_installed": 2468
+      }
+    }
+  },
+  "by_family": {
+    "capped-random": {
+      "same-demand": {
+        "exact_vs_greedy": {
+          "losses": 1,
+          "ties": 117,
+          "wins": 2
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 2651,
+            "installed": 1666,
+            "regret": 25,
+            "unchanged": 1443
+          },
+          "batch_greedy": {
+            "blocked": 2647,
+            "installed": 1662,
+            "regret": 29,
+            "unchanged": 1451
+          },
+          "mass": {
+            "blocked": 2869,
+            "installed": 1433,
+            "regret": 258,
+            "unchanged": 1458
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1691
+      },
+      "supplied": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 116,
+          "wins": 4
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 2635,
+            "installed": 1684,
+            "regret": 0,
+            "unchanged": 1441
+          },
+          "batch_greedy": {
+            "blocked": 2649,
+            "installed": 1673,
+            "regret": 11,
+            "unchanged": 1438
+          },
+          "mass": {
+            "blocked": 2852,
+            "installed": 1427,
+            "regret": 257,
+            "unchanged": 1481
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1684
+      },
+      "swapped-owner": {
+        "exact_vs_greedy": {
+          "losses": 2,
+          "ties": 114,
+          "wins": 4
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 3189,
+            "installed": 1147,
+            "regret": 483,
+            "unchanged": 1424
+          },
+          "batch_greedy": {
+            "blocked": 3232,
+            "installed": 1104,
+            "regret": 526,
+            "unchanged": 1424
+          },
+          "mass": {
+            "blocked": 2894,
+            "installed": 1453,
+            "regret": 177,
+            "unchanged": 1413
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1630
+      }
+    },
+    "cycle": {
+      "same-demand": {
+        "exact_vs_greedy": {
+          "losses": 1,
+          "ties": 119,
+          "wins": 0
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 3349,
+            "installed": 1000,
+            "regret": 87,
+            "unchanged": 1411
+          },
+          "batch_greedy": {
+            "blocked": 3345,
+            "installed": 1005,
+            "regret": 82,
+            "unchanged": 1410
+          },
+          "mass": {
+            "blocked": 3653,
+            "installed": 690,
+            "regret": 397,
+            "unchanged": 1417
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1087
+      },
+      "supplied": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 120,
+          "wins": 0
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 3286,
+            "installed": 1119,
+            "regret": 0,
+            "unchanged": 1355
+          },
+          "batch_greedy": {
+            "blocked": 3283,
+            "installed": 1119,
+            "regret": 0,
+            "unchanged": 1358
+          },
+          "mass": {
+            "blocked": 3610,
+            "installed": 742,
+            "regret": 377,
+            "unchanged": 1408
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1119
+      },
+      "swapped-owner": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 119,
+          "wins": 1
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 3898,
+            "installed": 431,
+            "regret": 573,
+            "unchanged": 1431
+          },
+          "batch_greedy": {
+            "blocked": 3898,
+            "installed": 430,
+            "regret": 574,
+            "unchanged": 1432
+          },
+          "mass": {
+            "blocked": 3592,
+            "installed": 725,
+            "regret": 279,
+            "unchanged": 1443
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1004
+      }
+    },
+    "diagonal": {
+      "same-demand": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 120,
+          "wins": 0
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 4317,
+            "installed": 0,
+            "regret": 0,
+            "unchanged": 1443
+          },
+          "batch_greedy": {
+            "blocked": 4317,
+            "installed": 0,
+            "regret": 0,
+            "unchanged": 1443
+          },
+          "mass": {
+            "blocked": 4317,
+            "installed": 0,
+            "regret": 0,
+            "unchanged": 1443
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 0
+      },
+      "supplied": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 120,
+          "wins": 0
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 4327,
+            "installed": 0,
+            "regret": 0,
+            "unchanged": 1433
+          },
+          "batch_greedy": {
+            "blocked": 4327,
+            "installed": 0,
+            "regret": 0,
+            "unchanged": 1433
+          },
+          "mass": {
+            "blocked": 4327,
+            "installed": 0,
+            "regret": 0,
+            "unchanged": 1433
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 0
+      },
+      "swapped-owner": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 120,
+          "wins": 0
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 4319,
+            "installed": 0,
+            "regret": 0,
+            "unchanged": 1441
+          },
+          "batch_greedy": {
+            "blocked": 4319,
+            "installed": 0,
+            "regret": 0,
+            "unchanged": 1441
+          },
+          "mass": {
+            "blocked": 4319,
+            "installed": 0,
+            "regret": 0,
+            "unchanged": 1441
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 0
+      }
+    },
+    "planted": {
+      "same-demand": {
+        "exact_vs_greedy": {
+          "losses": 3,
+          "ties": 113,
+          "wins": 4
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 2490,
+            "installed": 1810,
+            "regret": 30,
+            "unchanged": 1460
+          },
+          "batch_greedy": {
+            "blocked": 2497,
+            "installed": 1799,
+            "regret": 41,
+            "unchanged": 1464
+          },
+          "mass": {
+            "blocked": 2621,
+            "installed": 1663,
+            "regret": 177,
+            "unchanged": 1476
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1840
+      },
+      "supplied": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 113,
+          "wins": 7
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 2351,
+            "installed": 1929,
+            "regret": 0,
+            "unchanged": 1480
+          },
+          "batch_greedy": {
+            "blocked": 2369,
+            "installed": 1909,
+            "regret": 20,
+            "unchanged": 1482
+          },
+          "mass": {
+            "blocked": 2540,
+            "installed": 1746,
+            "regret": 183,
+            "unchanged": 1474
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1929
+      },
+      "swapped-owner": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 112,
+          "wins": 8
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 2748,
+            "installed": 1618,
+            "regret": 355,
+            "unchanged": 1394
+          },
+          "batch_greedy": {
+            "blocked": 2810,
+            "installed": 1562,
+            "regret": 411,
+            "unchanged": 1388
+          },
+          "mass": {
+            "blocked": 2534,
+            "installed": 1827,
+            "regret": 146,
+            "unchanged": 1399
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1973
+      }
+    },
+    "sparse": {
+      "same-demand": {
+        "exact_vs_greedy": {
+          "losses": 1,
+          "ties": 117,
+          "wins": 2
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 3314,
+            "installed": 1002,
+            "regret": 16,
+            "unchanged": 1444
+          },
+          "batch_greedy": {
+            "blocked": 3326,
+            "installed": 991,
+            "regret": 27,
+            "unchanged": 1443
+          },
+          "mass": {
+            "blocked": 3393,
+            "installed": 916,
+            "regret": 102,
+            "unchanged": 1451
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1018
+      },
+      "supplied": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 117,
+          "wins": 3
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 3293,
+            "installed": 1068,
+            "regret": 0,
+            "unchanged": 1399
+          },
+          "batch_greedy": {
+            "blocked": 3323,
+            "installed": 1041,
+            "regret": 27,
+            "unchanged": 1396
+          },
+          "mass": {
+            "blocked": 3384,
+            "installed": 971,
+            "regret": 97,
+            "unchanged": 1405
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1068
+      },
+      "swapped-owner": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 117,
+          "wins": 3
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 3640,
+            "installed": 714,
+            "regret": 201,
+            "unchanged": 1406
+          },
+          "batch_greedy": {
+            "blocked": 3651,
+            "installed": 698,
+            "regret": 217,
+            "unchanged": 1411
+          },
+          "mass": {
+            "blocked": 3510,
+            "installed": 817,
+            "regret": 98,
+            "unchanged": 1433
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 915
+      }
+    },
+    "staircase": {
+      "same-demand": {
+        "exact_vs_greedy": {
+          "losses": 1,
+          "ties": 118,
+          "wins": 1
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 3367,
+            "installed": 896,
+            "regret": 60,
+            "unchanged": 1497
+          },
+          "batch_greedy": {
+            "blocked": 3379,
+            "installed": 896,
+            "regret": 60,
+            "unchanged": 1485
+          },
+          "mass": {
+            "blocked": 3612,
+            "installed": 681,
+            "regret": 275,
+            "unchanged": 1467
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 956
+      },
+      "supplied": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 120,
+          "wins": 0
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 3426,
+            "installed": 911,
+            "regret": 0,
+            "unchanged": 1423
+          },
+          "batch_greedy": {
+            "blocked": 3431,
+            "installed": 911,
+            "regret": 0,
+            "unchanged": 1418
+          },
+          "mass": {
+            "blocked": 3678,
+            "installed": 643,
+            "regret": 268,
+            "unchanged": 1439
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 911
+      },
+      "swapped-owner": {
+        "exact_vs_greedy": {
+          "losses": 0,
+          "ties": 118,
+          "wins": 2
+        },
+        "policies": {
+          "batch_exact": {
+            "blocked": 3786,
+            "installed": 558,
+            "regret": 478,
+            "unchanged": 1416
+          },
+          "batch_greedy": {
+            "blocked": 3798,
+            "installed": 549,
+            "regret": 487,
+            "unchanged": 1413
+          },
+          "mass": {
+            "blocked": 3543,
+            "installed": 785,
+            "regret": 251,
+            "unchanged": 1432
+          }
+        },
+        "proposals_per_policy": 5760,
+        "schedules": 120,
+        "static_hindsight_installed": 1036
+      }
+    }
+  },
+  "by_regime": {
+    "same-demand": {
+      "exact_vs_greedy": {
+        "losses": 7,
+        "ties": 704,
+        "wins": 9
+      },
+      "policies": {
+        "batch_exact": {
+          "blocked": 19488,
+          "installed": 6374,
+          "regret": 218,
+          "unchanged": 8698
+        },
+        "batch_greedy": {
+          "blocked": 19511,
+          "installed": 6353,
+          "regret": 239,
+          "unchanged": 8696
+        },
+        "mass": {
+          "blocked": 20465,
+          "installed": 5383,
+          "regret": 1209,
+          "unchanged": 8712
+        }
+      },
+      "proposals_per_policy": 34560,
+      "schedules": 720,
+      "static_hindsight_installed": 6592
+    },
+    "supplied": {
+      "exact_vs_greedy": {
+        "losses": 0,
+        "ties": 706,
+        "wins": 14
+      },
+      "policies": {
+        "batch_exact": {
+          "blocked": 19318,
+          "installed": 6711,
+          "regret": 0,
+          "unchanged": 8531
+        },
+        "batch_greedy": {
+          "blocked": 19382,
+          "installed": 6653,
+          "regret": 58,
+          "unchanged": 8525
+        },
+        "mass": {
+          "blocked": 20391,
+          "installed": 5529,
+          "regret": 1182,
+          "unchanged": 8640
+        }
+      },
+      "proposals_per_policy": 34560,
+      "schedules": 720,
+      "static_hindsight_installed": 6711
+    },
+    "swapped-owner": {
+      "exact_vs_greedy": {
+        "losses": 2,
+        "ties": 700,
+        "wins": 18
+      },
+      "policies": {
+        "batch_exact": {
+          "blocked": 21580,
+          "installed": 4468,
+          "regret": 2090,
+          "unchanged": 8512
+        },
+        "batch_greedy": {
+          "blocked": 21708,
+          "installed": 4343,
+          "regret": 2215,
+          "unchanged": 8509
+        },
+        "mass": {
+          "blocked": 20392,
+          "installed": 5607,
+          "regret": 951,
+          "unchanged": 8561
+        }
+      },
+      "proposals_per_policy": 34560,
+      "schedules": 720,
+      "static_hindsight_installed": 6558
+    }
+  },
+  "completed_conditions": 720,
+  "mismatches": 0,
+  "per_event_policy_observations": 311040,
+  "planned_conditions": 720,
+  "proposals_per_policy": 103680,
+  "refusals": [],
+  "refused_conditions": 0,
+  "schedules": 2160,
+  "scope": "Fixed generated same-information comparison; shared contexts; no field inference.",
+  "source_unchanged": true,
+  "status": "PASS",
+  "unsafe_guarded_snapshots": 0,
+  "wall_seconds": 4.821175657999902
+}

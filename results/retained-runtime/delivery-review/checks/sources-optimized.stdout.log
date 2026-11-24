@@ -1,0 +1,121 @@
+{
+  "cohorts": [
+    {
+      "binding_file_sha256": "4f9854104872b3ed775e75499a05cc984ba3bb736e8d1d559b9d79e5bfc684ed",
+      "cohort": "goal-planning",
+      "source_files": 6
+    },
+    {
+      "binding_file_sha256": "059c5530a8856b3e3d02aabd950b3b6e28f027138db466cad75e02d330daafa3",
+      "cohort": "goal-policy",
+      "source_files": 11
+    },
+    {
+      "binding_file_sha256": "021cccfc67daa1b6d01f1a8b6e05e30aee879578db1fd5b9aaf53373085786ad",
+      "cohort": "phase-granularity",
+      "source_files": 17
+    },
+    {
+      "binding_file_sha256": "0fcc546236b0860ec24bfd2ef0402162dd119d929354ca81a7179dfaa674122f",
+      "cohort": "direct-optimization",
+      "source_files": 9
+    },
+    {
+      "binding_file_sha256": "7ff3beede2f28b72bb88e4f215c0e65f70cb560e825e8a64e6e793ffb8d56da9",
+      "cohort": "same-information",
+      "source_files": 8
+    },
+    {
+      "binding_file_sha256": "2b3427237a9dd23d33ad7209926968edc7578eecd3537ba0f042af19710d60ed",
+      "cohort": "policy-boundaries",
+      "source_files": 15
+    },
+    {
+      "binding_file_sha256": "ae565fddaaa2b13325a1452d581e1e53d5430fbdecec57d3ed96730078321e48",
+      "cohort": "kubernetes-skew",
+      "source_files": 13
+    },
+    {
+      "binding_file_sha256": "57dc2db25181c5271d6f680baa197d37233a5004f18d4c8e0329b9c8e5480760",
+      "cohort": "theory-review",
+      "source_files": 5
+    },
+    {
+      "binding_file_sha256": "a6a6e2d9f70747a60e8f6f5328ee80b1121244b4f045fe60210e24f718596b24",
+      "cohort": "adversarial-frontier",
+      "source_files": 6
+    },
+    {
+      "binding_file_sha256": "1814e973ae238a27ad71cfc3c1441f5ff87c0b34b2976c7c008ea2d61198e143",
+      "cohort": "deep-protocol-review/normal",
+      "source_files": 26
+    },
+    {
+      "binding_file_sha256": "c1776a18abe525e40712451898d18d093cddfde415a37c7b1845265aba42f95a",
+      "cohort": "deep-protocol-review/optimized",
+      "source_files": 26
+    },
+    {
+      "binding_file_sha256": "6fa541268509be22c2ea45e390af835e4d7b9c9df7be83ea4e32b1e9bf443d9d",
+      "cohort": "supporting-studies/batch-generalization",
+      "source_files": 7
+    },
+    {
+      "binding_file_sha256": "0b15df043907deffa1d6836002e82a5d6b02dc5fa41912a28271390a53785bdc",
+      "cohort": "supporting-studies/semantic",
+      "source_files": 30
+    },
+    {
+      "binding_file_sha256": "4a6ccc62daed21f02cd7dd0a76e9e4a697a74aa102642e8949e7efa8623dbda4",
+      "cohort": "supporting-studies/effect-drain",
+      "source_files": 9
+    },
+    {
+      "binding_file_sha256": "bb91794e8211f2714088116fafa679aa530567dc7a35ff3d006d84cd84430100",
+      "cohort": "supporting-studies/lifecycle-costs",
+      "source_files": 11
+    },
+    {
+      "binding_file_sha256": "b8d0c1009787e5552eb7d76836546fada535246c40786e23855d158fc22a8386",
+      "cohort": "goal-baselines",
+      "source_files": 18
+    },
+    {
+      "binding_file_sha256": "8e34b9efd750cbbeec16e81f378b3a995e4de5e7db55b53688cf4fd96c2bad57",
+      "cohort": "goal-recovery/normal",
+      "source_files": 10
+    },
+    {
+      "binding_file_sha256": "82875d9252d4e2b4bb7dfc48a14fca0527b2b736d2de2b3e4b7cfae255217b8b",
+      "cohort": "goal-recovery/optimized",
+      "source_files": 10
+    },
+    {
+      "binding_file_sha256": "0b15cf30d7899aa27213595614de94c8c9140aa3bfd1fb385d206fd3688e7cd0",
+      "cohort": "factored-planning",
+      "source_files": 8
+    },
+    {
+      "binding_file_sha256": "48fd57de25c9a4969c312402697806025e1fde9330374fdb9a0711c8341abd00",
+      "cohort": "schema-census",
+      "source_files": 7
+    },
+    {
+      "binding_file_sha256": "207043c7edcedd0c1fb0c2746a1fc7d953dcbfb985aec45e767f796e6b4bc270",
+      "cohort": "factored-scale",
+      "source_files": 7
+    },
+    {
+      "binding_file_sha256": "d98dcb0fb3be43852a575da5130ea89b809bb70ab2f09ef266728a92d33b410e",
+      "cohort": "factored-runtime-review",
+      "source_files": 10
+    },
+    {
+      "binding_file_sha256": "064f5a49d51d6da0e160f0001cfe28a546a822e7b435a4efe03d92a35ac3bb03",
+      "cohort": "factored-runtime",
+      "source_files": 29
+    }
+  ],
+  "scope": "Measured runtime/producer and retained-preimage identities; the independently maintained policy acceptance checker is checked through its retained preimage. Result semantics are checked by separate tasks.",
+  "status": "PASS"
+}

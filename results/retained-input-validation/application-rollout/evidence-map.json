@@ -1,0 +1,8 @@
+{
+  "collection_sources": "sources/ records producer, runtime and initial verification inputs at collection.",
+  "failure_path_validation": "The distributed handler additionally closes TCP channels in a finally block on storage or connection failure. A live SQLite-abort test verifies this path. The collected successful traffic retains its original source snapshots.",
+  "independent_verification": "Current tests/check_application_rollout.py additionally validates phase counts, source guards, full path witnesses and physical catalog transitions; this checker imports no runtime or handler.",
+  "latency_interval": "Pipeline request invocation through durable origin completion; includes origin input/output commits and local gate waits; excludes batch admission/retirement.",
+  "measurements": "Original request/RPC timestamps, responses and SQLite databases are retained unchanged.",
+  "planning_controls": "../application-planning/ contains separate path-order and automatic-fallback observations, without performance measurements."
+}

@@ -1,0 +1,44 @@
+{
+  "families": {
+    "bidirectional-chain": {
+      "contexts": 511,
+      "fixed_shortest_path_phase_gaps": 8,
+      "no_op": 2304,
+      "nontrivial_reachable": 6792,
+      "queries": 11520,
+      "unreachable": 2424
+    },
+    "complete-directed": {
+      "contexts": 511,
+      "fixed_shortest_path_phase_gaps": 36,
+      "no_op": 2304,
+      "nontrivial_reachable": 8640,
+      "queries": 11520,
+      "unreachable": 576
+    },
+    "forward-chain": {
+      "contexts": 511,
+      "fixed_shortest_path_phase_gaps": 2,
+      "no_op": 2304,
+      "nontrivial_reachable": 2611,
+      "queries": 11520,
+      "unreachable": 6605
+    },
+    "reverse-chain": {
+      "contexts": 511,
+      "fixed_shortest_path_phase_gaps": 2,
+      "no_op": 2304,
+      "nontrivial_reachable": 2611,
+      "queries": 11520,
+      "unreachable": 6605
+    }
+  },
+  "totals": {
+    "contexts": 2044,
+    "fixed_shortest_path_phase_gaps": 48,
+    "no_op": 9216,
+    "nontrivial_reachable": 20654,
+    "queries": 46080,
+    "unreachable": 16210
+  }
+}

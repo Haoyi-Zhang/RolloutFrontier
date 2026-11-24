@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "case": "independent two-owner target, phase-candidate budget three",
+  "before_source_sha256": "c2508af84685013cad2b85a15df276dd1997ac54b61971aba4851d0a1aed0260",
+  "after_source_sha256": "7489b4ffe8f62195dc0d054eac3c6d49452109077714203eb4a357405ca8f28d",
+  "before": {
+    "status": "refused",
+    "reason": "goal phase-edge bound",
+    "statistics": {
+      "catalog_placements": 4,
+      "cached_state_expansions": 1,
+      "frontier_calls": 2,
+      "frontier_search_states": 12,
+      "phase_candidates": 4,
+      "phase_edge_budget_exhausted": true
+    }
+  },
+  "after": {
+    "status": "planned",
+    "cost": {
+      "phases": 1,
+      "installations": 2,
+      "handoffs": 0
+    },
+    "statistics": {
+      "catalog_placements": 4,
+      "cached_state_expansions": 1,
+      "frontier_calls": 1,
+      "frontier_search_states": 6,
+      "phase_candidates": 3,
+      "phase_edge_budget_exhausted": false
+    },
+    "query": {
+      "settled_states": 4,
+      "new_state_expansions": 1,
+      "cached_state_expansions": 0,
+      "incumbent_pruned_states": 2
+    }
+  },
+  "all_65792_query_witnesses_unchanged": true,
+  "scope": "Bounded search-work control, not a wall-clock speed claim."
+}

@@ -1,0 +1,17 @@
+{
+  "actual_tcp_owner_processes": 1,
+  "begin_errors": [
+    {
+      "exception": "FactoredExecutionError",
+      "message": "dataflow size"
+    },
+    {
+      "exception": "FactoredExecutionError",
+      "message": "invalid physical codec placement"
+    }
+  ],
+  "state_rows_after_corrected_begin": 0,
+  "request_rows_after_corrected_begin": 0,
+  "holds_before_explicit_recovery": 0,
+  "explicit_constructor_recovery": true
+}

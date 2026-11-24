@@ -1,0 +1,187 @@
+{
+  "budget_controls": [
+    {
+      "kind": "placement",
+      "max_placements": 1
+    },
+    {
+      "kind": "phase-edge",
+      "max_phase_edges": 1
+    }
+  ],
+  "design_id": "kubernetes-goal-phases-v1",
+  "execution_amendment": {
+    "added_after": "initial three-case execution cohort",
+    "date": "2026-11-19",
+    "fault": "none",
+    "id": "all-existing-scaling-goals",
+    "reason": "Review requested that the 4-, 5- and 6-owner semantic extension also enter the actual TCP/SQLite execution path. No planning task, target, transition or default bound was changed.",
+    "selection": "all six already-fixed goal templates in each of the three already-fixed scaling domains"
+  },
+  "execution_cases": [
+    {
+      "fault": "none",
+      "initial": [
+        35,
+        35,
+        35
+      ],
+      "name": "normal-two-minor",
+      "target": [
+        37,
+        37,
+        37
+      ]
+    },
+    {
+      "fault": "block next-phase acquisition, preserve old authority, then reconnect",
+      "initial": [
+        36,
+        36,
+        36
+      ],
+      "name": "new-phase-unavailable",
+      "target": [
+        37,
+        37,
+        37
+      ]
+    },
+    {
+      "fault": "lose old-phase close completion, reopen coordinator and retry",
+      "initial": [
+        36,
+        36,
+        36
+      ],
+      "name": "close-reply-lost",
+      "target": [
+        37,
+        37,
+        37
+      ]
+    }
+  ],
+  "execution_coverage_amended_after_initial_cohort": true,
+  "original_design_frozen_before_initial_execution": true,
+  "planner_bounds": {
+    "max_frontier_states": 250000,
+    "max_phase_edges": 250000,
+    "max_placements": 4096
+  },
+  "policy": {
+    "kubelet_max_older_minor_gap": 3,
+    "kubelet_not_newer_than_any_server": true,
+    "minimum_client_minor": 25,
+    "server_minor_gap": 1
+  },
+  "primary_domain": {
+    "client_owners": 1,
+    "client_versions": [
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "name": "boundary-three-owner",
+    "server_owners": 2,
+    "server_versions": [
+      35,
+      36,
+      37
+    ],
+    "tasks": "all ordered pairs of numerically compatible placements, including equal pairs and direction-infeasible pairs"
+  },
+  "scaling_domains": {
+    "client_owner_counts": [
+      2,
+      3,
+      4
+    ],
+    "client_versions": [
+      35,
+      36,
+      37
+    ],
+    "server_owners": 2,
+    "server_versions": [
+      35,
+      36,
+      37
+    ],
+    "tasks": [
+      {
+        "initial_clients": 35,
+        "initial_servers": 35,
+        "name": "two-minor-all",
+        "target_clients": 37,
+        "target_servers": 37
+      },
+      {
+        "initial_clients": 35,
+        "initial_servers": 35,
+        "name": "first-minor-all",
+        "target_clients": 36,
+        "target_servers": 36
+      },
+      {
+        "initial_clients": 36,
+        "initial_servers": 36,
+        "name": "second-minor-all",
+        "target_clients": 37,
+        "target_servers": 37
+      },
+      {
+        "initial_clients": 35,
+        "initial_servers": 35,
+        "name": "servers-ahead",
+        "target_clients": 36,
+        "target_servers": 37
+      },
+      {
+        "initial_clients": 35,
+        "initial_servers": 36,
+        "name": "catch-up-all",
+        "target_clients": 37,
+        "target_servers": 37
+      },
+      {
+        "initial_clients": 35,
+        "initial_servers": 37,
+        "name": "clients-only",
+        "target_clients": 37,
+        "target_servers": 37
+      }
+    ]
+  },
+  "schema": 1,
+  "scope": "A numerical policy-and-transition model with executable durable admission, not Kubernetes binaries. Phase count is the number of independently safe guard regions needed for an explicit endpoint target; it is not a claim about kubeadm speed, available capacity, quorum, node draining, webhook safety or real installation downtime. The official control-plane-before-worker order and one-control-plane-at-a-time workflow are existing mechanisms, not contributions of this study.",
+  "source_checked_date": "2026-11-18",
+  "sources": [
+    {
+      "read_depth": "official policy body",
+      "sections": [
+        "Supported version skew / kube-apiserver",
+        "Supported version skew / kubelet",
+        "Supported component upgrade order / kube-apiserver"
+      ],
+      "url": "https://kubernetes.io/releases/version-skew-policy/"
+    },
+    {
+      "read_depth": "official upgrade-workflow body",
+      "sections": [
+        "Upgrading kubeadm clusters",
+        "Upgrading control plane nodes",
+        "Upgrade worker nodes"
+      ],
+      "url": "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/"
+    }
+  ],
+  "transitions": {
+    "changed_owners_per_installation": 1,
+    "downgrades": false,
+    "minor_increment": 1,
+    "self_updates": false
+  }
+}

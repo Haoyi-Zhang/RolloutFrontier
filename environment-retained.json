@@ -1,0 +1,16 @@
+{
+  "schema": "rolloutfrontier-retained-environment-v1",
+  "campaign": "source-bound Linux application and runtime evidence",
+  "python": "3.12.14",
+  "protobuf": "7.36.2",
+  "sqlite": "3.53.1",
+  "operating_system": "Linux 6.18.57 x86_64",
+  "requirements_lock": "requirements-application.lock",
+  "evidence": [
+    "results/application-rollout/environment.json",
+    "results/factored-runtime/environment.json",
+    "results/session-identity/normal/summary.json",
+    "results/session-identity/optimized/summary.json"
+  ],
+  "scope": "This records the retained campaign environment. A run on a different interpreter or library version is a separate host-environment run, not an exact fixed-environment reproduction."
+}

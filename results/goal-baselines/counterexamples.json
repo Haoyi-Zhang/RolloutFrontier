@@ -1,0 +1,1172 @@
+[
+  {
+    "all_shortest_installation_paths": [
+      {
+        "best_segmentation": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "cost": [
+          3,
+          4
+        ],
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "best_segmentation": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "cost": [
+          2,
+          4
+        ],
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      }
+    ],
+    "graphs": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    ],
+    "name": "shortest-path-choice",
+    "optimal_cost": [
+      2,
+      4
+    ],
+    "production_plan": {
+      "branches": [
+        {
+          "0": [
+            "row_0"
+          ],
+          "1": [
+            "column_for_0"
+          ]
+        },
+        {
+          "0": [
+            "row_1"
+          ],
+          "1": [
+            "column_for_1"
+          ]
+        },
+        {
+          "0": [
+            "row_2"
+          ],
+          "1": [
+            "column_for_2"
+          ]
+        }
+      ],
+      "budgets": {
+        "frontier_states_per_expansion": 250000,
+        "phase_candidates": 250000,
+        "placements": 4096
+      },
+      "catalog": {
+        "0": [
+          [
+            "identity_0_0",
+            "row_0"
+          ],
+          [
+            "identity_0_1",
+            "row_1"
+          ],
+          [
+            "identity_0_2",
+            "row_2"
+          ]
+        ],
+        "1": [
+          [
+            "column_for_0",
+            "column_for_1",
+            "column_for_2",
+            "identity_1_2"
+          ],
+          [
+            "column_for_0",
+            "column_for_1",
+            "identity_1_1"
+          ],
+          [
+            "column_for_0",
+            "identity_1_0"
+          ]
+        ]
+      },
+      "cost": {
+        "handoffs": 1,
+        "installations": 4,
+        "phases": 2
+      },
+      "initial": {
+        "0": [
+          "identity_0_0",
+          "row_0"
+        ],
+        "1": [
+          "column_for_0",
+          "identity_1_0"
+        ]
+      },
+      "objective": [
+        "fewest guard phases",
+        "fewest installations"
+      ],
+      "phases": [
+        {
+          "box": {
+            "0": [
+              [
+                "row_0"
+              ]
+            ],
+            "1": [
+              [
+                "column_for_0"
+              ]
+            ]
+          },
+          "local_paths": {
+            "0": [
+              [
+                "identity_0_0",
+                "row_0"
+              ]
+            ],
+            "1": [
+              [
+                "column_for_0",
+                "identity_1_0"
+              ],
+              [
+                "column_for_0",
+                "column_for_1",
+                "identity_1_1"
+              ],
+              [
+                "column_for_0",
+                "column_for_1",
+                "column_for_2",
+                "identity_1_2"
+              ]
+            ]
+          },
+          "source": {
+            "0": [
+              "identity_0_0",
+              "row_0"
+            ],
+            "1": [
+              "column_for_0",
+              "identity_1_0"
+            ]
+          },
+          "steps": [
+            {
+              "node": "1",
+              "support": [
+                "column_for_0",
+                "column_for_1",
+                "identity_1_1"
+              ]
+            },
+            {
+              "node": "1",
+              "support": [
+                "column_for_0",
+                "column_for_1",
+                "column_for_2",
+                "identity_1_2"
+              ]
+            }
+          ],
+          "target": {
+            "0": [
+              "identity_0_0",
+              "row_0"
+            ],
+            "1": [
+              "column_for_0",
+              "column_for_1",
+              "column_for_2",
+              "identity_1_2"
+            ]
+          }
+        },
+        {
+          "box": {
+            "0": [
+              [
+                "row_0"
+              ],
+              [
+                "row_1"
+              ],
+              [
+                "row_2"
+              ]
+            ],
+            "1": [
+              [
+                "column_for_0",
+                "column_for_1",
+                "column_for_2"
+              ]
+            ]
+          },
+          "local_paths": {
+            "0": [
+              [
+                "identity_0_0",
+                "row_0"
+              ],
+              [
+                "identity_0_1",
+                "row_1"
+              ],
+              [
+                "identity_0_2",
+                "row_2"
+              ]
+            ],
+            "1": [
+              [
+                "column_for_0",
+                "column_for_1",
+                "column_for_2",
+                "identity_1_2"
+              ]
+            ]
+          },
+          "source": {
+            "0": [
+              "identity_0_0",
+              "row_0"
+            ],
+            "1": [
+              "column_for_0",
+              "column_for_1",
+              "column_for_2",
+              "identity_1_2"
+            ]
+          },
+          "steps": [
+            {
+              "node": "0",
+              "support": [
+                "identity_0_1",
+                "row_1"
+              ]
+            },
+            {
+              "node": "0",
+              "support": [
+                "identity_0_2",
+                "row_2"
+              ]
+            }
+          ],
+          "target": {
+            "0": [
+              "identity_0_2",
+              "row_2"
+            ],
+            "1": [
+              "column_for_0",
+              "column_for_1",
+              "column_for_2",
+              "identity_1_2"
+            ]
+          }
+        }
+      ],
+      "schema": "rollout-goal-plan-v1",
+      "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+      "search": {
+        "after": {
+          "cached_state_expansions": 3,
+          "catalog_placements": 9,
+          "frontier_calls": 3,
+          "frontier_search_states": 26,
+          "phase_candidates": 9,
+          "phase_edge_budget_exhausted": false
+        },
+        "before": {
+          "cached_state_expansions": 0,
+          "catalog_placements": 9,
+          "frontier_calls": 0,
+          "frontier_search_states": 0,
+          "phase_candidates": 0,
+          "phase_edge_budget_exhausted": false
+        },
+        "query": {
+          "cached_state_expansions": 0,
+          "incumbent_pruned_states": 2,
+          "new_state_expansions": 3,
+          "settled_states": 6
+        }
+      },
+      "status": "planned",
+      "target": {
+        "0": [
+          "identity_0_2",
+          "row_2"
+        ],
+        "1": [
+          "column_for_0",
+          "column_for_1",
+          "column_for_2",
+          "identity_1_2"
+        ]
+      },
+      "transitions": {
+        "0": [
+          {
+            "source": [
+              "identity_0_0",
+              "row_0"
+            ],
+            "target": [
+              "identity_0_1",
+              "row_1"
+            ]
+          },
+          {
+            "source": [
+              "identity_0_1",
+              "row_1"
+            ],
+            "target": [
+              "identity_0_2",
+              "row_2"
+            ]
+          }
+        ],
+        "1": [
+          {
+            "source": [
+              "column_for_0",
+              "column_for_1",
+              "identity_1_1"
+            ],
+            "target": [
+              "column_for_0",
+              "column_for_1",
+              "column_for_2",
+              "identity_1_2"
+            ]
+          },
+          {
+            "source": [
+              "column_for_0",
+              "identity_1_0"
+            ],
+            "target": [
+              "column_for_0",
+              "column_for_1",
+              "identity_1_1"
+            ]
+          }
+        ]
+      }
+    },
+    "relation": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "safe_product_count": 17,
+    "source": [
+      0,
+      0
+    ],
+    "target": [
+      2,
+      2
+    ],
+    "two_phase_witness": {
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "segmentation": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "all_shortest_installation_paths": [
+      {
+        "best_segmentation": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cost": [
+          3,
+          3
+        ],
+        "path": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "best_segmentation": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cost": [
+          3,
+          3
+        ],
+        "path": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      }
+    ],
+    "graphs": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    ],
+    "name": "phase-write-tradeoff",
+    "optimal_cost": [
+      2,
+      4
+    ],
+    "production_plan": {
+      "branches": [
+        {
+          "0": [
+            "row_0"
+          ],
+          "1": [
+            "column_for_0"
+          ]
+        },
+        {
+          "0": [
+            "row_1"
+          ],
+          "1": [
+            "column_for_1"
+          ]
+        },
+        {
+          "0": [
+            "row_2"
+          ],
+          "1": [
+            "column_for_2"
+          ]
+        }
+      ],
+      "budgets": {
+        "frontier_states_per_expansion": 250000,
+        "phase_candidates": 250000,
+        "placements": 4096
+      },
+      "catalog": {
+        "0": [
+          [
+            "identity_0_0",
+            "row_0"
+          ],
+          [
+            "identity_0_1",
+            "row_1"
+          ],
+          [
+            "identity_0_2",
+            "row_2"
+          ]
+        ],
+        "1": [
+          [
+            "column_for_0",
+            "column_for_1",
+            "column_for_2",
+            "identity_1_0"
+          ],
+          [
+            "column_for_0",
+            "column_for_1",
+            "identity_1_2"
+          ],
+          [
+            "column_for_0",
+            "column_for_2",
+            "identity_1_1"
+          ]
+        ]
+      },
+      "cost": {
+        "handoffs": 1,
+        "installations": 4,
+        "phases": 2
+      },
+      "initial": {
+        "0": [
+          "identity_0_1",
+          "row_1"
+        ],
+        "1": [
+          "column_for_0",
+          "column_for_1",
+          "identity_1_2"
+        ]
+      },
+      "objective": [
+        "fewest guard phases",
+        "fewest installations"
+      ],
+      "phases": [
+        {
+          "box": {
+            "0": [
+              [
+                "row_0"
+              ],
+              [
+                "row_1"
+              ]
+            ],
+            "1": [
+              [
+                "column_for_0",
+                "column_for_1"
+              ]
+            ]
+          },
+          "local_paths": {
+            "0": [
+              [
+                "identity_0_1",
+                "row_1"
+              ],
+              [
+                "identity_0_0",
+                "row_0"
+              ]
+            ],
+            "1": [
+              [
+                "column_for_0",
+                "column_for_1",
+                "identity_1_2"
+              ],
+              [
+                "column_for_0",
+                "column_for_1",
+                "column_for_2",
+                "identity_1_0"
+              ]
+            ]
+          },
+          "source": {
+            "0": [
+              "identity_0_1",
+              "row_1"
+            ],
+            "1": [
+              "column_for_0",
+              "column_for_1",
+              "identity_1_2"
+            ]
+          },
+          "steps": [
+            {
+              "node": "0",
+              "support": [
+                "identity_0_0",
+                "row_0"
+              ]
+            },
+            {
+              "node": "1",
+              "support": [
+                "column_for_0",
+                "column_for_1",
+                "column_for_2",
+                "identity_1_0"
+              ]
+            }
+          ],
+          "target": {
+            "0": [
+              "identity_0_0",
+              "row_0"
+            ],
+            "1": [
+              "column_for_0",
+              "column_for_1",
+              "column_for_2",
+              "identity_1_0"
+            ]
+          }
+        },
+        {
+          "box": {
+            "0": [
+              [
+                "row_0"
+              ],
+              [
+                "row_2"
+              ]
+            ],
+            "1": [
+              [
+                "column_for_0",
+                "column_for_2"
+              ]
+            ]
+          },
+          "local_paths": {
+            "0": [
+              [
+                "identity_0_0",
+                "row_0"
+              ],
+              [
+                "identity_0_2",
+                "row_2"
+              ]
+            ],
+            "1": [
+              [
+                "column_for_0",
+                "column_for_1",
+                "column_for_2",
+                "identity_1_0"
+              ],
+              [
+                "column_for_0",
+                "column_for_2",
+                "identity_1_1"
+              ]
+            ]
+          },
+          "source": {
+            "0": [
+              "identity_0_0",
+              "row_0"
+            ],
+            "1": [
+              "column_for_0",
+              "column_for_1",
+              "column_for_2",
+              "identity_1_0"
+            ]
+          },
+          "steps": [
+            {
+              "node": "0",
+              "support": [
+                "identity_0_2",
+                "row_2"
+              ]
+            },
+            {
+              "node": "1",
+              "support": [
+                "column_for_0",
+                "column_for_2",
+                "identity_1_1"
+              ]
+            }
+          ],
+          "target": {
+            "0": [
+              "identity_0_2",
+              "row_2"
+            ],
+            "1": [
+              "column_for_0",
+              "column_for_2",
+              "identity_1_1"
+            ]
+          }
+        }
+      ],
+      "schema": "rollout-goal-plan-v1",
+      "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+      "search": {
+        "after": {
+          "cached_state_expansions": 4,
+          "catalog_placements": 9,
+          "frontier_calls": 4,
+          "frontier_search_states": 44,
+          "phase_candidates": 23,
+          "phase_edge_budget_exhausted": false
+        },
+        "before": {
+          "cached_state_expansions": 0,
+          "catalog_placements": 9,
+          "frontier_calls": 0,
+          "frontier_search_states": 0,
+          "phase_candidates": 0,
+          "phase_edge_budget_exhausted": false
+        },
+        "query": {
+          "cached_state_expansions": 0,
+          "incumbent_pruned_states": 2,
+          "new_state_expansions": 4,
+          "settled_states": 7
+        }
+      },
+      "status": "planned",
+      "target": {
+        "0": [
+          "identity_0_2",
+          "row_2"
+        ],
+        "1": [
+          "column_for_0",
+          "column_for_2",
+          "identity_1_1"
+        ]
+      },
+      "transitions": {
+        "0": [
+          {
+            "source": [
+              "identity_0_0",
+              "row_0"
+            ],
+            "target": [
+              "identity_0_1",
+              "row_1"
+            ]
+          },
+          {
+            "source": [
+              "identity_0_0",
+              "row_0"
+            ],
+            "target": [
+              "identity_0_2",
+              "row_2"
+            ]
+          },
+          {
+            "source": [
+              "identity_0_1",
+              "row_1"
+            ],
+            "target": [
+              "identity_0_0",
+              "row_0"
+            ]
+          },
+          {
+            "source": [
+              "identity_0_1",
+              "row_1"
+            ],
+            "target": [
+              "identity_0_2",
+              "row_2"
+            ]
+          },
+          {
+            "source": [
+              "identity_0_2",
+              "row_2"
+            ],
+            "target": [
+              "identity_0_0",
+              "row_0"
+            ]
+          },
+          {
+            "source": [
+              "identity_0_2",
+              "row_2"
+            ],
+            "target": [
+              "identity_0_1",
+              "row_1"
+            ]
+          }
+        ],
+        "1": [
+          {
+            "source": [
+              "column_for_0",
+              "column_for_1",
+              "column_for_2",
+              "identity_1_0"
+            ],
+            "target": [
+              "column_for_0",
+              "column_for_1",
+              "identity_1_2"
+            ]
+          },
+          {
+            "source": [
+              "column_for_0",
+              "column_for_1",
+              "column_for_2",
+              "identity_1_0"
+            ],
+            "target": [
+              "column_for_0",
+              "column_for_2",
+              "identity_1_1"
+            ]
+          },
+          {
+            "source": [
+              "column_for_0",
+              "column_for_1",
+              "identity_1_2"
+            ],
+            "target": [
+              "column_for_0",
+              "column_for_1",
+              "column_for_2",
+              "identity_1_0"
+            ]
+          },
+          {
+            "source": [
+              "column_for_0",
+              "column_for_1",
+              "identity_1_2"
+            ],
+            "target": [
+              "column_for_0",
+              "column_for_2",
+              "identity_1_1"
+            ]
+          },
+          {
+            "source": [
+              "column_for_0",
+              "column_for_2",
+              "identity_1_1"
+            ],
+            "target": [
+              "column_for_0",
+              "column_for_1",
+              "column_for_2",
+              "identity_1_0"
+            ]
+          },
+          {
+            "source": [
+              "column_for_0",
+              "column_for_2",
+              "identity_1_1"
+            ],
+            "target": [
+              "column_for_0",
+              "column_for_1",
+              "identity_1_2"
+            ]
+          }
+        ]
+      }
+    },
+    "relation": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "safe_product_count": 21,
+    "source": [
+      1,
+      2
+    ],
+    "target": [
+      2,
+      1
+    ],
+    "two_phase_witness": {
+      "path": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "segmentation": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    }
+  }
+]

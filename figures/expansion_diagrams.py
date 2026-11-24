@@ -1,50 +1,71 @@
-"""The two safe boxes in the schedule counterexample."""
-from diagram_ink import Diagram, S, T, A, F, G
-from matplotlib.patches import Rectangle
+"""Compatibility projection and a two-proposal execution trace."""
+from diagram_ink import Diagram, S, T, A, F, G, P, O, L
+
 
 def relation():
-    d=Diagram(248,111)
-    d.txt(143,99,'Endpoint B',9.4,bold=True)
-    d.txt(11,63,'Endpoint A',9.4,ha='left',bold=True)
-    for x,label in ((115,'Old'),(170,'New')):
-        d.txt(x,84,label,9.2)
-    for y,label in ((63,'Old'),(39,'New')):
-        d.txt(87,y,label,9.2,ha='right')
-    for row,y in enumerate((63,39)):
-        for col,x in enumerate((115,170)):
-            same=row==col
-            d.block(x-23,y-10,46,20,T if same else F,'white')
-            d.mark('check' if same else 'reject',x,y,11,T if same else A)
-    d.mark('check',52,16,10,T)
-    d.txt(63,16,'Allowed',9.0,ha='left',color=T)
-    d.mark('reject',130,16,10,A)
-    d.txt(141,16,'Incompatible',9.0,ha='left',color=A)
+    # Enumerating the two whole alternatives gives a diagonal relation.
+    # Their Cartesian projection also contains both off-diagonal pairs.
+    d = Diagram(248, 111)
+    d.mark('array', 75, 99, 16, S)
+    d.txt(88, 99, 'B projection', 9.5, ha='left', bold=True)
+    for x, token in ((91,'old'),(134,'new')):
+        d.txt(x, 82, token, 9.7, color=S)
+    d.wire((91,89),(91,92),(134,92),(134,89),c=F,arrow=False,lw=.7)
+    d.mark('array', 17, 77, 15, S)
+    d.txt(6, 65, 'A projection', 8.7, ha='left', bold=True)
+    for i,(y, token) in enumerate(((54,'old'),(29,'new'))):
+        d.txt(64, y, token, 9.7, ha='right',color=S)
+        for j,x in enumerate((91,134)):
+            valid = i == j
+            d.block(x-19,y-11,38,22,F,P if valid else O)
+            if valid:
+                d.mark('check',x-11.5,y,13,T)
+                d.txt(x+7,y,rf'$j={1+i}$',8.3,color=T)
+            else:
+                d.mark('reject',x,y,16,A)
+    d.txt(165, 82, 'Whole placement', 9.6, ha='left', bold=True)
+    for y,mark,color,label in ((62,'check',T,'Shared branch'),
+                               (37,'reject',A,'Incompatible mix')):
+        d.mark(mark,174,y,14,color)
+        d.txt(185,y,label,8.6,ha='left',color=color)
+    d.txt(112, 8, 'Each projection accepts both profiles', 9.1, color=G)
     return d
 
+
 def mass_schedule():
-    d=Diagram(248,88)
-    xs=(42,68,94)
-    for x,b in zip(xs,range(3)):d.txt(x,70,str(b),9.4)
-    for y,a in ((48,0),(23,1)):d.txt(16,y,str(a),9.4)
-    d.txt(68,82,'Owner B',9.3)
-    d.txt(20,82,'Owner A',9.3)
-    d.ax.add_patch(Rectangle((30,40),76,16,fill=False,lw=.8,edgecolor=S))
-    d.ax.add_patch(Rectangle((35,13),14,48,fill=False,lw=.8,edgecolor=T,ls='--'))
-    for x in xs:d.dotmark(x,48,2.45,c=S,fill=S)
-    d.dotmark(42,23,2.45,c=T,fill=T)
-    d.txt(170,82,r'A proposes $1$ then $0$',9.0,bold=True)
-    for x,t in ((113,'Mass'),(138,'Start'),(173,'After 1'),(207,'After 0')):
-        d.txt(x,64,t,8.3,color=G)
-    for y,c,mass,states,outcomes in ((46,S,'3',(0,0,0),('Blocked','No-op')),
-                                    (22,T,'2',(0,1,0),('Install','Install'))):
-        d.txt(113,y,mass,8.4,color=c,bold=True)
-        for x,state in zip((138,173,207),states):
-            d.dotmark(x,y,5,c=c)
-            d.txt(x,y,str(state),7.6,color=c)
-        for (x1,x2),outcome in zip(((145,166),(180,200)),outcomes):
-            d.wire((x1,y),(x2,y),c=c,dash=mass=='3',lw=.67)
-            d.txt((x1+x2)/2,y-9,outcome,6.8,color=c)
-    d.txt(65,5,r'B stays at $0$',8.2,color=G)
+    d=Diagram(252,89.088)
+    d.txt(44,80,'Guard product',9.7,bold=True)
+    d.txt(117,80,r'Propose $A := 1$',8.8)
+    d.txt(185,80,r'Then $A := 0$',8.8)
+    d.txt(233,80,'Installs',8.3,bold=True)
+    # Separate the tall math products from their mass labels.  The 30-point
+    # row pitch preserves clearance between both two-line groups without
+    # changing the type sizes or the column-width canvas.
+    for y,product,mass,states,events,ink,tint in (
+        (58,r'\{0\}\times\{0,1,2\}',3,(0,0,0),('reject','noop'),S,L),
+        (28,r'\{0,1\}\times\{0\}',2,(0,1,0),('check','check'),T,P),
+    ):
+        d.txt(44,y+6,f'${product}$',10.0,color=ink)
+        d.txt(44,y-9,f'Mass {mass}',8.5,color=ink)
+        for x,before,after,event in zip((117,185),states,states[1:],events):
+            d.block(x-29,y-8.5,58,17,F,tint)
+            symbol(d,event,x-20,y,12.5)
+            d.txt(x+6,y,rf'${before}\to{after}$',10.05,color=ink)
+        d.block(224,y-7.5,18,15,F,'white')
+        d.txt(233,y,str(events.count('check')),10.6,color=ink,bold=True)
+    for x,event,label in ((14,'reject','Blocked'),(76,'noop','No-op'),(128,'check','Installed')):
+        symbol(d,event,x,8,11.5)
+        d.txt(x+8,8,label,8.2,ha='left')
+    d.txt(242,8,r'$B=0$ throughout',8.2,ha='right',color=G)
     return d
+
+
+def symbol(d, kind, x, y, size):
+    if kind == 'noop':
+        d.dotmark(x,y,.28*size,c=G)
+        d.ax.plot((x-.15*size,x+.15*size),(y,y),color=G,lw=.78,zorder=5)
+    else:
+        d.mark(kind,x,y,size,A if kind=='reject' else T)
+
 
 FIGURES={'mass-schedule':mass_schedule,'relation':relation}

@@ -1,0 +1,353 @@
+[
+  {
+    "owner": "a",
+    "source": 2,
+    "request": {
+      "op": "read"
+    },
+    "response": {
+      "status": "observed",
+      "observed": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "accept:old-name",
+          "emit:old-name",
+          "program:enum-alias:legacy"
+        ]
+      }
+    },
+    "owner_order": 1,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "b",
+    "source": 2,
+    "request": {
+      "op": "read"
+    },
+    "response": {
+      "status": "observed",
+      "observed": {
+        "node": 0,
+        "generation": 0,
+        "support": [
+          "accept:old-name",
+          "emit:old-name",
+          "program:enum-alias:legacy"
+        ]
+      }
+    },
+    "owner_order": 1,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "a",
+    "source": 2,
+    "request": {
+      "op": "prepare",
+      "origin": 2,
+      "sequence": 1,
+      "manifest": "same-label:session:b2c6640dddb688373cb5b0eba8732d3c96b1f0365005614341db048ee7594486",
+      "requires": [],
+      "options": [
+        [
+          "emit:old-name"
+        ]
+      ]
+    },
+    "response": {
+      "status": "held",
+      "receipt": {
+        "status": "held",
+        "node": 0,
+        "origin": 2,
+        "sequence": 1,
+        "manifest": "same-label:session:b2c6640dddb688373cb5b0eba8732d3c96b1f0365005614341db048ee7594486",
+        "requires": [],
+        "observed_generation": 0,
+        "options": [
+          [
+            "emit:old-name"
+          ]
+        ]
+      }
+    },
+    "owner_order": 2,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "b",
+    "source": 2,
+    "request": {
+      "op": "prepare",
+      "origin": 2,
+      "sequence": 1,
+      "manifest": "same-label:session:b2c6640dddb688373cb5b0eba8732d3c96b1f0365005614341db048ee7594486",
+      "requires": [],
+      "options": [
+        [
+          "accept:old-name",
+          "emit:old-name"
+        ]
+      ]
+    },
+    "response": {
+      "status": "held",
+      "receipt": {
+        "status": "held",
+        "node": 0,
+        "origin": 2,
+        "sequence": 1,
+        "manifest": "same-label:session:b2c6640dddb688373cb5b0eba8732d3c96b1f0365005614341db048ee7594486",
+        "requires": [],
+        "observed_generation": 0,
+        "options": [
+          [
+            "accept:old-name",
+            "emit:old-name"
+          ]
+        ]
+      }
+    },
+    "owner_order": 2,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "a",
+    "source": 2,
+    "request": {
+      "op": "schema",
+      "origin": 2,
+      "sequence": 1,
+      "manifest": "same-label:session:b2c6640dddb688373cb5b0eba8732d3c96b1f0365005614341db048ee7594486",
+      "request_id": "retained-request:source",
+      "input_classes": [],
+      "emit_class": "old-name",
+      "inputs": [],
+      "seed": {
+        "key": "retained-\u03ba",
+        "value": 17,
+        "status": 1
+      }
+    },
+    "response": {
+      "status": "applied",
+      "duplicate": false,
+      "output": {
+        "wire": "{\"key\":\"retained-\u03ba\",\"status\":\"ACTIVE\",\"value\":\"17\"}",
+        "record": {
+          "key": "retained-\u03ba",
+          "value": 17,
+          "status": 1
+        }
+      },
+      "applied_generation": 0,
+      "applied_rank": 0
+    },
+    "owner_order": 3,
+    "response_disposition": "withheld-after-commit"
+  },
+  {
+    "owner": "a",
+    "source": 2,
+    "request": {
+      "op": "schema",
+      "origin": 2,
+      "sequence": 1,
+      "manifest": "same-label:session:b2c6640dddb688373cb5b0eba8732d3c96b1f0365005614341db048ee7594486",
+      "request_id": "retained-request:source",
+      "input_classes": [],
+      "emit_class": "old-name",
+      "inputs": [],
+      "seed": {
+        "key": "retained-\u03ba",
+        "value": 17,
+        "status": 1
+      }
+    },
+    "response": {
+      "status": "applied",
+      "duplicate": true,
+      "output": {
+        "record": {
+          "key": "retained-\u03ba",
+          "status": 1,
+          "value": 17
+        },
+        "wire": "{\"key\":\"retained-\u03ba\",\"status\":\"ACTIVE\",\"value\":\"17\"}"
+      },
+      "applied_generation": 0,
+      "applied_rank": 0
+    },
+    "owner_order": 4,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "b",
+    "source": 2,
+    "request": {
+      "op": "schema",
+      "origin": 2,
+      "sequence": 1,
+      "manifest": "same-label:session:b2c6640dddb688373cb5b0eba8732d3c96b1f0365005614341db048ee7594486",
+      "request_id": "retained-request:sink",
+      "input_classes": [
+        "old-name"
+      ],
+      "emit_class": "old-name",
+      "inputs": [
+        "{\"key\":\"retained-\u03ba\",\"status\":\"ACTIVE\",\"value\":\"17\"}"
+      ],
+      "seed": null
+    },
+    "response": {
+      "status": "applied",
+      "duplicate": false,
+      "output": {
+        "wire": "{\"key\":\"retained-\u03ba\",\"status\":\"ACTIVE\",\"value\":\"17\"}",
+        "record": {
+          "key": "retained-\u03ba",
+          "value": 17,
+          "status": 1
+        }
+      },
+      "applied_generation": 0,
+      "applied_rank": 0
+    },
+    "owner_order": 3,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "a",
+    "source": 2,
+    "request": {
+      "op": "close",
+      "origin": 2,
+      "sequence": 1
+    },
+    "response": {
+      "status": "closed",
+      "floor": 1
+    },
+    "owner_order": 5,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "b",
+    "source": 2,
+    "request": {
+      "op": "close",
+      "origin": 2,
+      "sequence": 1
+    },
+    "response": {
+      "status": "closed",
+      "floor": 1
+    },
+    "owner_order": 4,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "a",
+    "source": 2,
+    "request": {
+      "op": "prepare",
+      "origin": 2,
+      "sequence": 2,
+      "manifest": "same-label:session:843b23a25f02ae88adf53f5a371f5d9673988fcccde1080a2b6b37255605f12e",
+      "requires": [],
+      "options": [
+        [
+          "emit:old-name"
+        ]
+      ]
+    },
+    "response": {
+      "status": "held",
+      "receipt": {
+        "status": "held",
+        "node": 0,
+        "origin": 2,
+        "sequence": 2,
+        "manifest": "same-label:session:843b23a25f02ae88adf53f5a371f5d9673988fcccde1080a2b6b37255605f12e",
+        "requires": [],
+        "observed_generation": 0,
+        "options": [
+          [
+            "emit:old-name"
+          ]
+        ]
+      }
+    },
+    "owner_order": 6,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "b",
+    "source": 2,
+    "request": {
+      "op": "prepare",
+      "origin": 2,
+      "sequence": 2,
+      "manifest": "same-label:session:843b23a25f02ae88adf53f5a371f5d9673988fcccde1080a2b6b37255605f12e",
+      "requires": [],
+      "options": [
+        [
+          "accept:old-name",
+          "emit:old-name"
+        ]
+      ]
+    },
+    "response": {
+      "status": "held",
+      "receipt": {
+        "status": "held",
+        "node": 0,
+        "origin": 2,
+        "sequence": 2,
+        "manifest": "same-label:session:843b23a25f02ae88adf53f5a371f5d9673988fcccde1080a2b6b37255605f12e",
+        "requires": [],
+        "observed_generation": 0,
+        "options": [
+          [
+            "accept:old-name",
+            "emit:old-name"
+          ]
+        ]
+      }
+    },
+    "owner_order": 5,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "a",
+    "source": 2,
+    "request": {
+      "op": "close",
+      "origin": 2,
+      "sequence": 2
+    },
+    "response": {
+      "status": "closed",
+      "floor": 2
+    },
+    "owner_order": 7,
+    "response_disposition": "returned"
+  },
+  {
+    "owner": "b",
+    "source": 2,
+    "request": {
+      "op": "close",
+      "origin": 2,
+      "sequence": 2
+    },
+    "response": {
+      "status": "closed",
+      "floor": 2
+    },
+    "owner_order": 6,
+    "response_disposition": "returned"
+  }
+]

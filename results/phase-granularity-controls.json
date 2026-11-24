@@ -1,0 +1,1 @@
+{"controls": [{"case": "omitted_execution", "reason": "Paired execution inventory differs", "rejected": true}, {"case": "changed_paired_step", "reason": "Split phase changes the ordered installations", "rejected": true}, {"case": "unbacked_target_observation", "reason": "Target observation differs from replayed owner state", "rejected": true}], "status": "PASS"}

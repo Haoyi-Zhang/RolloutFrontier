@@ -1,0 +1,78 @@
+{
+  "contexts": 394560,
+  "corruption_controls": [
+    {
+      "name": "compatibility matrix cell",
+      "rejected": true
+    },
+    {
+      "name": "emitted wire semantic value",
+      "rejected": true
+    },
+    {
+      "name": "production phase cost",
+      "rejected": true
+    },
+    {
+      "name": "unsafe positive phase guard",
+      "rejected": true
+    },
+    {
+      "name": "skipped physical release",
+      "rejected": true
+    },
+    {
+      "name": "duplicated prepare or emit event",
+      "rejected": true
+    }
+  ],
+  "domains": [
+    {
+      "contexts": 576,
+      "domain": "two_owner",
+      "examples": 5,
+      "production_checked": 576,
+      "reachable": 244,
+      "unreachable": 332
+    },
+    {
+      "contexts": 34560,
+      "domain": "three_owner",
+      "examples": 6,
+      "production_checked": 34560,
+      "reachable": 10980,
+      "unreachable": 23580
+    },
+    {
+      "contexts": 13824,
+      "domain": "three_owner_complete",
+      "examples": 7,
+      "production_checked": 13824,
+      "reachable": 5316,
+      "unreachable": 8508
+    },
+    {
+      "contexts": 345600,
+      "domain": "three_owner_complete_extra",
+      "examples": 7,
+      "production_checked": 20,
+      "reachable": 105580,
+      "unreachable": 240020
+    }
+  ],
+  "imports_production_or_producer": false,
+  "independent_optimality": "weighted-constraint relaxation and serial-event phase recurrence",
+  "probes": {
+    "accepted": 180,
+    "channel_catalogs": 8,
+    "descriptors": 20,
+    "event_effect_parser_invocations": 28,
+    "event_effect_witnesses": 14,
+    "matrix_parser_invocations": 280,
+    "rejected": 100,
+    "wires": 100
+  },
+  "production_checked": 48980,
+  "scope": "all retained event contexts; exact production coverage reported per domain",
+  "status": "PASS"
+}

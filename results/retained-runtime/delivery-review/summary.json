@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "Scientific saved-data checks from a clean ZIP extraction, publication regression records, source-to-PDF checks and complete visual review. Fresh runtime and measurement campaigns are retained separately.",
+  "evidence_checks": {
+    "tasks": 23,
+    "modes": [
+      "normal",
+      "optimized"
+    ],
+    "passed": 46,
+    "failed": 0,
+    "not_run": 0,
+    "code_unchanged": true
+  },
+  "publication_regression_tests": 12,
+  "document_pages": {
+    "main": 12,
+    "supplement": 28,
+    "title_sheet": 1,
+    "figure_atlas": 9
+  },
+  "active_figures": {
+    "main": 5,
+    "supplement": 4,
+    "total": 9,
+    "all_inspected_in_color_and_grayscale_at_printed_size": true
+  },
+  "reference_inventory": {
+    "entries": 43,
+    "citation_occurrences": 51,
+    "unknown": 0,
+    "unused": 0,
+    "claim_reading_scopes_retained": true
+  },
+  "ordinary_prose": {
+    "matched_main": 74,
+    "matched_supplement": 210,
+    "short_tail_candidates": 0,
+    "unmatched_source_passages": 0
+  },
+  "prior_scientific_evidence_files_unchanged": 7652,
+  "atlas_inputs_verified": 42,
+  "archive_acceptance": "CRC, exact extracted file inventory, all extracted bytes, root structure and standalone/archived PDF equality passed before verification. After adding these acceptance records, the final archive is extracted and checked again.",
+  "visual_review": "All 12 main and 28 supplement pages inspected. All nine figures inspected in color and grayscale. Final reference columns balanced; the isolated supplement continuation was reunited with its paragraph. No remaining clipping, collisions or unreadable labels observed."
+}

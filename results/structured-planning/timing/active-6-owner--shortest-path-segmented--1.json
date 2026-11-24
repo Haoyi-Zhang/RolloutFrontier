@@ -1,0 +1,116 @@
+{
+  "cohorts": [
+    {
+      "preparation_cpu_seconds": 0.006822782,
+      "query_cpu_seconds": 0.003869558,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.01069234
+    },
+    {
+      "preparation_cpu_seconds": 0.016033809,
+      "query_cpu_seconds": 0.008371262,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.024405071
+    },
+    {
+      "preparation_cpu_seconds": 0.011580438,
+      "query_cpu_seconds": 0.003995706,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.015576144
+    },
+    {
+      "preparation_cpu_seconds": 0.00879634,
+      "query_cpu_seconds": 0.001905525,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.010701865
+    },
+    {
+      "preparation_cpu_seconds": 0.008030571,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.008030571
+    },
+    {
+      "preparation_cpu_seconds": 0.007959644,
+      "query_cpu_seconds": 0.004003538,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.011963182
+    },
+    {
+      "preparation_cpu_seconds": 0.008007886,
+      "query_cpu_seconds": 0.004526245,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.012534131
+    },
+    {
+      "preparation_cpu_seconds": 0.006312293,
+      "query_cpu_seconds": 0.004008926,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.010321219
+    }
+  ],
+  "costs": [
+    {
+      "cost": {
+        "handoffs": 2,
+        "installations": 12,
+        "phases": 3
+      },
+      "status": "planned",
+      "task": "two-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 6,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "first-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 6,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "second-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 8,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "servers-ahead"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 10,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "catch-up-all"
+    },
+    {
+      "cost": {
+        "handoffs": 0,
+        "installations": 8,
+        "phases": 1
+      },
+      "status": "planned",
+      "task": "clients-only"
+    }
+  ],
+  "cpu": 0,
+  "cpu_budget_seconds": 30,
+  "domain": "active-6-owner",
+  "mean_preparation_cpu_seconds": 0.009192970375,
+  "mean_query_cpu_seconds": 0.003835095,
+  "mean_total_cpu_seconds": 0.013028065375,
+  "repetition": 1,
+  "route": "shortest-path-segmented"
+}

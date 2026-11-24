@@ -1,0 +1,10 @@
+{
+  "documentation_changed": [
+    "artifact/docs/RESEARCH-REVIEW.md"
+  ],
+  "files_deleted": [],
+  "scientific_payload_unchanged": true,
+  "scope": "All candidate scientific files remain unchanged; final acceptance-file inventory is checked after repacking.",
+  "verified_files": 11192,
+  "verified_files_unchanged": 11191
+}

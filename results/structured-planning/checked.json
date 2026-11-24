@@ -1,0 +1,91 @@
+{
+  "checks": [
+    "exact manifest relation",
+    "directed chain identity",
+    "tight hull equivalence",
+    "independent interval phase graph",
+    "positive guard corners",
+    "directed execution witnesses",
+    "complete query coverage",
+    "reported totals"
+  ],
+  "contexts": 785,
+  "corruption_controls": [
+    {
+      "name": "false-structure",
+      "reason": "Incorrect difference-bound certificate",
+      "rejected": true
+    },
+    {
+      "name": "false-cost",
+      "reason": "Incorrect optimal plan cost",
+      "rejected": true
+    },
+    {
+      "name": "missing-query",
+      "reason": "Saved query coverage differs",
+      "rejected": true
+    }
+  ],
+  "groups": {
+    "binary-three": {
+      "contexts": 255,
+      "fallback_queries": 3692,
+      "installations": 1482,
+      "maximum_phase_count": 3,
+      "noops": 1024,
+      "phases": 1360,
+      "planned_nontrivial": 1102,
+      "queries": 4608,
+      "recognized_contexts": 73,
+      "structured_queries": 916,
+      "unreachable": 2482
+    },
+    "difference-network": {
+      "contexts": 15,
+      "fallback_queries": 0,
+      "installations": 901,
+      "maximum_phase_count": 6,
+      "noops": 105,
+      "phases": 635,
+      "planned_nontrivial": 384,
+      "queries": 1035,
+      "recognized_contexts": 15,
+      "structured_queries": 1035,
+      "unreachable": 546
+    },
+    "policy": {
+      "contexts": 4,
+      "fallback_queries": 0,
+      "installations": 710,
+      "maximum_phase_count": 3,
+      "noops": 23,
+      "phases": 345,
+      "planned_nontrivial": 214,
+      "queries": 547,
+      "recognized_contexts": 4,
+      "structured_queries": 547,
+      "unreachable": 310
+    },
+    "three-by-three": {
+      "contexts": 511,
+      "fallback_queries": 10460,
+      "installations": 4044,
+      "maximum_phase_count": 4,
+      "noops": 2304,
+      "phases": 3197,
+      "planned_nontrivial": 2611,
+      "queries": 11520,
+      "recognized_contexts": 68,
+      "structured_queries": 1060,
+      "unreachable": 6605
+    }
+  },
+  "queries": 17710,
+  "recognized_contexts": 160,
+  "status": "pass",
+  "timing": {
+    "state": "pass",
+    "workers": 105
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "study_exit_code": 0,
+  "checker_normal_exit_code": 0,
+  "checker_optimized_exit_code": 0,
+  "checker_outputs_identical": true,
+  "regression_methods_per_mode": 12,
+  "summary_sha256": "0fcc546236b0860ec24bfd2ef0402162dd119d929354ca81a7179dfaa674122f",
+  "checked_sha256": "e666f133b0196f4874a457d4cb5d84d9326f515cb697f9d2667a80a950430c31",
+  "source_unchanged": true,
+  "measurement_command": "python -B -m tests.direct_optimizer_study --out NEW_OUTPUT",
+  "validation_commands": [
+    "python -B -m tests.check_direct_optimizer --results OUTPUT",
+    "python -B -O -m tests.check_direct_optimizer --results OUTPUT"
+  ],
+  "scope": "48 independent same-host three-repeat worker records; no development records pooled; per-route budget includes timed preparation and queries."
+}

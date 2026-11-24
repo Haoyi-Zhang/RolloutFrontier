@@ -1,0 +1,22 @@
+[
+  {
+    "arguments": {
+      "max_frontier_states": 250000,
+      "max_phase_edges": 250000,
+      "max_placements": 1
+    },
+    "kind": "placement",
+    "reason": "goal placement bound",
+    "status": "refused"
+  },
+  {
+    "arguments": {
+      "max_frontier_states": 250000,
+      "max_phase_edges": 1,
+      "max_placements": 4096
+    },
+    "kind": "phase-edge",
+    "reason": "goal phase-edge bound",
+    "status": "refused"
+  }
+]

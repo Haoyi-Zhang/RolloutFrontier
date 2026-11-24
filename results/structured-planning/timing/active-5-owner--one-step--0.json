@@ -1,0 +1,164 @@
+{
+  "cohorts": [
+    {
+      "preparation_cpu_seconds": 0.000634905,
+      "query_cpu_seconds": 0.009202674,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.009837579
+    },
+    {
+      "preparation_cpu_seconds": 0.006771116,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.006771116
+    },
+    {
+      "preparation_cpu_seconds": 0.004041644,
+      "query_cpu_seconds": 0.004009276,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.00805092
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.004023257,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004023257
+    },
+    {
+      "preparation_cpu_seconds": 0.003932873,
+      "query_cpu_seconds": 0.004011619,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.007944492
+    },
+    {
+      "preparation_cpu_seconds": 0.003913324,
+      "query_cpu_seconds": 0.001128329,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.005041653
+    },
+    {
+      "preparation_cpu_seconds": 0.002793126,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.002793126
+    },
+    {
+      "preparation_cpu_seconds": 0.004005982,
+      "query_cpu_seconds": 0.003995665,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.008001647
+    },
+    {
+      "preparation_cpu_seconds": 0.003993042,
+      "query_cpu_seconds": 0.001693831,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.005686873
+    },
+    {
+      "preparation_cpu_seconds": 0.001587222,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.001587222
+    },
+    {
+      "preparation_cpu_seconds": 0.006069647,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.006069647
+    },
+    {
+      "preparation_cpu_seconds": 0.003413665,
+      "query_cpu_seconds": 0.003883949,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.007297614
+    },
+    {
+      "preparation_cpu_seconds": 0.0097069,
+      "query_cpu_seconds": 0.002281625,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.011988525
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.003993723,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003993723
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.004114423,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004114423
+    },
+    {
+      "preparation_cpu_seconds": 0.003997284,
+      "query_cpu_seconds": 0.003903919,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.007901203
+    }
+  ],
+  "costs": [
+    {
+      "cost": {
+        "handoffs": 9,
+        "installations": 10,
+        "phases": 10
+      },
+      "status": "planned",
+      "task": "two-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 4,
+        "installations": 5,
+        "phases": 5
+      },
+      "status": "planned",
+      "task": "first-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 4,
+        "installations": 5,
+        "phases": 5
+      },
+      "status": "planned",
+      "task": "second-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 6,
+        "installations": 7,
+        "phases": 7
+      },
+      "status": "planned",
+      "task": "servers-ahead"
+    },
+    {
+      "cost": {
+        "handoffs": 7,
+        "installations": 8,
+        "phases": 8
+      },
+      "status": "planned",
+      "task": "catch-up-all"
+    },
+    {
+      "cost": {
+        "handoffs": 5,
+        "installations": 6,
+        "phases": 6
+      },
+      "status": "planned",
+      "task": "clients-only"
+    }
+  ],
+  "cpu": 0,
+  "cpu_budget_seconds": 30,
+  "domain": "active-5-owner",
+  "mean_preparation_cpu_seconds": 0.0034287956249999998,
+  "mean_query_cpu_seconds": 0.002890143125,
+  "mean_total_cpu_seconds": 0.00631893875,
+  "repetition": 0,
+  "route": "one-step"
+}

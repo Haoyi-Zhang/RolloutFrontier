@@ -1,0 +1,727 @@
+test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) ... 
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='absolute', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='absolute', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='absolute', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='absolute', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='relative', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='relative', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='relative', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='relative', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='absolute', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='absolute', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='absolute', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='absolute', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='relative', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='relative', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='relative', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='relative', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='absolute', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='absolute', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='absolute', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='absolute', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='relative', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='relative', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='relative', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='relative', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='absolute', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='absolute', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='absolute', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='absolute', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='relative', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='relative', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='relative', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='relative', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='absolute', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='absolute', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='absolute', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='absolute', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='relative', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='relative', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='relative', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='relative', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='absolute', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='absolute', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='absolute', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='absolute', reader='backup') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='relative', reader='state') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='relative', reader='ledger') ... ERROR
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='relative', reader='Unicode reader') ... FAIL
+  test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='relative', reader='backup') ... FAIL
+test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) ... 
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='ordinary space', path_form='absolute') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='ordinary space', path_form='relative') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='hash#fragment', path_form='absolute') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='hash#fragment', path_form='relative') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='query?mode=rw', path_form='absolute') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='query?mode=rw', path_form='relative') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='percent%23encoded%3F', path_form='absolute') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='percent%23encoded%3F', path_form='relative') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='中文-κ-🧪', path_form='absolute') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='中文-κ-🧪', path_form='relative') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='combined #?% 中文', path_form='absolute') ... FAIL
+  test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='combined #?% 中文', path_form='relative') ... FAIL
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='absolute', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='relative', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='absolute', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='relative', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='absolute', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='relative', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='absolute', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='relative', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='absolute', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='relative', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='absolute', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+ERROR: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='relative', reader='ledger')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 120, in test_missing_database_is_rejected_without_creating_files
+    call()
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 112, in <lambda>
+    ('ledger', lambda: db_rows(argument)),
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_session_identity.py", line 95, in db_rows
+    require(shape == [('request_id', 'TEXT', 0, 1), ('input', 'TEXT', 1, 0),
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 28, in require
+    if not value: raise ValueError(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: session request ledger schema
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='absolute', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='absolute', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='absolute', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='relative', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='relative', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='ordinary space', path_form='relative', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='absolute', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='absolute', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='absolute', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='relative', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='relative', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='hash#fragment', path_form='relative', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='absolute', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='absolute', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='absolute', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='relative', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='relative', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='query?mode=rw', path_form='relative', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='absolute', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='absolute', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='absolute', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='relative', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='relative', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='percent%23encoded%3F', path_form='relative', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='absolute', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='absolute', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='absolute', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='relative', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='relative', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='中文-κ-🧪', path_form='relative', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='absolute', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='absolute', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='absolute', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='relative', reader='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='relative', reader='Unicode reader')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 121, in test_missing_database_is_rejected_without_creating_files
+    self.assertEqual(failure.exception.sqlite_errorcode, sqlite3.SQLITE_CANTOPEN)
+AssertionError: 1 != 14
+
+======================================================================
+FAIL: test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) (name='combined #?% 中文', path_form='relative', reader='backup')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 119, in test_missing_database_is_rejected_without_creating_files
+    with self.assertRaises(sqlite3.OperationalError) as failure:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError not raised
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='ordinary space', path_form='absolute')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/ordin[28 chars]ite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='ordinary space', path_form='relative')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/ordin[28 chars]ite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='hash#fragment', path_form='absolute')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/hash#[26 chars]ite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='hash#fragment', path_form='relative')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/hash#[26 chars]ite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='query?mode=rw', path_form='absolute')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/query[26 chars]ite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='query?mode=rw', path_form='relative')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/query[26 chars]ite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='percent%23encoded%3F', path_form='absolute')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/perce[40 chars]ite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='percent%23encoded%3F', path_form='relative')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/perce[40 chars]ite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='中文-κ-🧪', path_form='absolute')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/中文-κ-🧪/中文-κ-🧪.sqlite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='中文-κ-🧪', path_form='relative')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/中文-κ-🧪/中文-κ-🧪.sqlite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='combined #?% 中文', path_form='absolute')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/combi[30 chars]ite')
+
+======================================================================
+FAIL: test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) (name='combined #?% 中文', path_form='relative')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 86, in test_readers_open_literal_database_and_remain_read_only
+    self.assertEqual(read_state(argument), payload)
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/check_factored_execution.py", line 39, in read_state
+    with sqlite3.connect('file:'+str(Path(path).resolve())+'?mode=ro',uri=True) as db:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control/tests/test_sqlite_paths.py", line 75, in checked_connect
+    self.assertEqual(Path(actual).resolve(), path)
+AssertionError: Posix[76 chars]rary ') != Posix[76 chars]rary #?% 中文/sqlite-path-control-2sgjh_7t/combi[30 chars]ite')
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.072s
+
+FAILED (failures=48, errors=12)

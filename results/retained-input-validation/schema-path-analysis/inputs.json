@@ -1,0 +1,16 @@
+{
+  "analyzer": "601dbed82af74f4420c42c3cbc9f40d929047003c07f34257fbf42a787a3c1b8",
+  "input_location": "artifact/results",
+  "inputs": {
+    "factored-planning/contexts.json.gz": "e9cfe0e397f9b533ec60becb6c10b3eb398df1699cda407249dabd6bbc099f19",
+    "factored-planning/plans.jsonl.gz": "78216a54a5168156ac9bfd059167da9f884916b8e9e4cbd46707fa7b57452772",
+    "schema-census/contexts.json": "dae21e1788555863040a1faac460fc7975549e1336cb29652b390b1aa146e928",
+    "schema-census/enum-alias.jsonl.gz": "3f773eea014156d90f9079f5a02769b2809452fd8e76e34852ee782e700ac61d",
+    "schema-census/field-addition.jsonl.gz": "fb62a9c30c251f24c24575ca0845fa474b3cbb599b212f40edfbde2b0eaa29b5",
+    "schema-census/field-key.jsonl.gz": "d989c729d8ee6131d739f08e8775f187cf0a4db835f655eabf42941bbef38b88",
+    "schema-census/integer-widening.jsonl.gz": "6c918c4a095eb838408bbdece6022f21f140f778c004749c2115313f8fa38cb6",
+    "schema-census/probes.json": "fa356c8188257d881ec6b6a26482e6dc4f78d5353f2be4791a07df8e0529597c"
+  },
+  "measurement": "none; analysis of retained exact state and path records",
+  "producer": "analyze_schema_paths.py"
+}

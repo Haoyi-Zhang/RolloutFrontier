@@ -1,0 +1,170 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-c",
+      "import json,sys,site,google.protobuf; print(json.dumps({\"python\":sys.version,\"executable\":sys.executable,\"prefix\":sys.prefix,\"base_prefix\":sys.base_prefix,\"user_site_enabled\":site.ENABLE_USER_SITE,\"protobuf\":google.protobuf.__version__,\"protobuf_file\":google.protobuf.__file__,\"sys_path\":sys.path},indent=2))"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+    "elapsed_seconds": 0.03242461300396826,
+    "exit_code": 0,
+    "name": "isolated-environment",
+    "stderr": "isolated-environment.stderr.log",
+    "stdout": "isolated-environment.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "tests.factored_execution",
+      "--help"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+    "elapsed_seconds": 0.21472115301003214,
+    "exit_code": 0,
+    "name": "execution-help",
+    "stderr": "execution-help.stderr.log",
+    "stdout": "execution-help.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "tests.factored_execution",
+      "--smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/uri-path #capture"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+    "elapsed_seconds": 1.372196576994611,
+    "exit_code": 1,
+    "name": "uri-path-execution",
+    "stderr": "uri-path-execution.stderr.log",
+    "stdout": "uri-path-execution.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "tests.factored_execution",
+      "--smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh execution"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+    "elapsed_seconds": 2.620831519991043,
+    "exit_code": 0,
+    "name": "fresh-execution",
+    "stderr": "fresh-execution.stderr.log",
+    "stdout": "fresh-execution.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "tests.check_factored_execution",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh execution/smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/check-smoke-normal.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+    "elapsed_seconds": 0.11449950200039893,
+    "exit_code": 0,
+    "name": "check-smoke-normal",
+    "stderr": "check-smoke-normal.stderr.log",
+    "stdout": "check-smoke-normal.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-O",
+      "-m",
+      "tests.check_factored_execution",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh execution/smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/check-smoke-optimized.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+    "elapsed_seconds": 0.3157587589957984,
+    "exit_code": 0,
+    "name": "check-smoke-optimized",
+    "stderr": "check-smoke-optimized.stderr.log",
+    "stdout": "check-smoke-optimized.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "tests.check_factored_execution",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh execution/recovery",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/check-recovery-normal.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+    "elapsed_seconds": 0.11517683899728581,
+    "exit_code": 0,
+    "name": "check-recovery-normal",
+    "stderr": "check-recovery-normal.stderr.log",
+    "stdout": "check-recovery-normal.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-O",
+      "-m",
+      "tests.check_factored_execution",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh execution/recovery",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/check-recovery-optimized.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+    "elapsed_seconds": 0.26494570600334555,
+    "exit_code": 0,
+    "name": "check-recovery-optimized",
+    "stderr": "check-recovery-optimized.stderr.log",
+    "stdout": "check-recovery-optimized.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "tests.factored_checker_controls",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh execution/smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/corruption-normal.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+    "elapsed_seconds": 0.2147484750021249,
+    "exit_code": 0,
+    "name": "corruption-normal",
+    "stderr": "corruption-normal.stderr.log",
+    "stdout": "corruption-normal.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-O",
+      "-m",
+      "tests.factored_checker_controls",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh execution/smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/corruption-optimized.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+    "elapsed_seconds": 0.365195644000778,
+    "exit_code": 0,
+    "name": "corruption-optimized",
+    "stderr": "corruption-optimized.stderr.log",
+    "stdout": "corruption-optimized.stdout.log"
+  }
+]

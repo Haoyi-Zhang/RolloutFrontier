@@ -1,0 +1,53 @@
+{
+  "actual_tcp_owner_processes": 1,
+  "manifest_code_points": [
+    108,
+    97,
+    98,
+    101,
+    108,
+    45,
+    55296
+  ],
+  "admitted_before_requests": true,
+  "attempts": [
+    {
+      "exception": "SchemaRequestPending",
+      "message": "physical schema effect unconfirmed at only"
+    },
+    {
+      "exception": "SchemaRequestPending",
+      "message": "physical schema effect unconfirmed at only"
+    },
+    {
+      "exception": "SchemaRequestPending",
+      "message": "physical schema effect unconfirmed at only"
+    }
+  ],
+  "retired_before_reopen": false,
+  "retired_after_reopen": false,
+  "request_rows": [
+    [
+      "valid-request",
+      "{\"key\":\"well-formed\",\"status\":1,\"value\":7}",
+      "pending",
+      null
+    ]
+  ],
+  "owner_effects": 0,
+  "held_guards": 1,
+  "invalid_replies": [
+    {
+      "reason": "UnicodeEncodeError",
+      "status": "invalid"
+    },
+    {
+      "reason": "UnicodeEncodeError",
+      "status": "invalid"
+    },
+    {
+      "reason": "UnicodeEncodeError",
+      "status": "invalid"
+    }
+  ]
+}

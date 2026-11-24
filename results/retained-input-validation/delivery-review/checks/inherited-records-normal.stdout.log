@@ -1,0 +1,11 @@
+{
+  "cohorts": [
+    "theory-review",
+    "adversarial-frontier",
+    "deep-protocol-review/normal",
+    "deep-protocol-review/optimized"
+  ],
+  "not_reexecuted": "The theory, adversarial and protocol suites are not rerun by this record check; it does not independently prove their recorded outcomes.",
+  "scope": "Source, invocation, recorded-count and retained-log consistency only.",
+  "status": "PASS"
+}

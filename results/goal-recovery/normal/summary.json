@@ -1,0 +1,24 @@
+{
+  "coordinator_sigkills": 6,
+  "errors": 0,
+  "failures": 0,
+  "mode": "normal",
+  "observations": 23,
+  "owner_sigkills": 6,
+  "scope": "Single-host independent owner processes, durable coordinator recovery and SQLite state; not physical power loss or WAN failure.",
+  "skipped": 0,
+  "source_sha256": {
+    "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/goal_planner.py": "7489b4ffe8f62195dc0d054eac3c6d49452109077714203eb4a357405ca8f28d",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+    "src/rollout.py": "952e5a4811bcce107207df6cbd33e960014316dd2c334e89f52469c6d6085d2b",
+    "tests/multiprocess.py": "f076b4c7c77dd68af3a563552fd0cc8cb1cccb52a20777fed352f1c2b905b713",
+    "tests/process_tcp_endpoint.py": "00d8e1f4d33012cc9b3c959fe4feade5f554c7afab6dd5ca80bf2a1e469cb560",
+    "tests/rollout_recovery.py": "1364082935d36ed7e937f8a2feeabc053eca33b8e6c45924c17e589b11d27c7c"
+  },
+  "status": "PASS",
+  "tests_run": 24
+}

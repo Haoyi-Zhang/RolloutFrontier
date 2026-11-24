@@ -1,0 +1,777 @@
+{
+  "catalog": {
+    "a": [
+      [
+        "accept:base",
+        "emit:base",
+        "program:field-addition:legacy"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:base",
+        "program:field-addition:accepting"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:extended",
+        "program:field-addition:emitting"
+      ]
+    ],
+    "b": [
+      [
+        "accept:base",
+        "emit:base",
+        "program:field-addition:legacy"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:base",
+        "program:field-addition:accepting"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:extended",
+        "program:field-addition:emitting"
+      ]
+    ],
+    "c": [
+      [
+        "accept:base",
+        "emit:base",
+        "program:field-addition:legacy"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:base",
+        "program:field-addition:accepting"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:extended",
+        "program:field-addition:emitting"
+      ]
+    ]
+  },
+  "factors": [
+    {
+      "branches": [
+        {
+          "a": [
+            "emit:base"
+          ],
+          "b": [
+            "accept:base"
+          ],
+          "c": []
+        },
+        {
+          "a": [
+            "emit:extended"
+          ],
+          "b": [
+            "accept:extended"
+          ],
+          "c": []
+        },
+        {
+          "a": [
+            "emit:base"
+          ],
+          "b": [],
+          "c": [
+            "accept:base"
+          ]
+        },
+        {
+          "a": [
+            "emit:extended"
+          ],
+          "b": [],
+          "c": [
+            "accept:extended"
+          ]
+        }
+      ],
+      "id": "either-reader"
+    }
+  ],
+  "input": {
+    "key": "selected-c-κλειδί",
+    "tag": "migrated-δ",
+    "value": 7
+  },
+  "manifest": "fixed-compatible-reader",
+  "recognition": {
+    "checked_factor_placements": 27,
+    "checked_join_pairs": 351,
+    "criterion": "factorwise componentwise-maximum closure",
+    "factors": [
+      {
+        "axis_limits": [
+          {
+            "source": [
+              0,
+              0,
+              0
+            ],
+            "upper": [
+              1,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              0,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              0,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              1,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              1,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              1,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              2,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              2,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              2,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              0,
+              0
+            ],
+            "upper": [
+              1,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              0,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              0,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              1,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              1,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              1,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              2,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              2,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              2,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              0,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              0,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              1,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              1,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              1,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              2,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              2,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              2,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "catalog_placements": 27,
+        "checked_join_pairs": 351,
+        "compatible_placements": 26,
+        "id": "either-reader",
+        "owners": [
+          "a",
+          "b",
+          "c"
+        ],
+        "relation": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "shape": [
+          3,
+          3,
+          3
+        ]
+      }
+    ],
+    "global_catalog_enumerated": false,
+    "owners": 3,
+    "recognized": true
+  },
+  "registry": {
+    "deployment": "alternate-reader-c",
+    "owners": {
+      "a": {
+        "catalog": [
+          [
+            "accept:base",
+            "emit:base",
+            "program:field-addition:legacy"
+          ],
+          [
+            "accept:base",
+            "accept:extended",
+            "emit:base",
+            "program:field-addition:accepting"
+          ],
+          [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        ],
+        "family": "field-addition",
+        "initial": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ]
+      },
+      "b": {
+        "catalog": [
+          [
+            "accept:base",
+            "emit:base",
+            "program:field-addition:legacy"
+          ],
+          [
+            "accept:base",
+            "accept:extended",
+            "emit:base",
+            "program:field-addition:accepting"
+          ],
+          [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        ],
+        "family": "field-addition",
+        "initial": [
+          "accept:base",
+          "emit:base",
+          "program:field-addition:legacy"
+        ]
+      },
+      "c": {
+        "catalog": [
+          [
+            "accept:base",
+            "emit:base",
+            "program:field-addition:legacy"
+          ],
+          [
+            "accept:base",
+            "accept:extended",
+            "emit:base",
+            "program:field-addition:accepting"
+          ],
+          [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        ],
+        "family": "field-addition",
+        "initial": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ]
+      }
+    }
+  },
+  "request_id": "retained-choice",
+  "scope": "Two owner choices in separate three-owner deployments; no route changes after a request is pending. The first unused-reader update is a direct guard control; the final update is a new global rollout.",
+  "selected": "c",
+  "transitions": {
+    "a": [
+      {
+        "source": [
+          "accept:base",
+          "emit:base",
+          "program:field-addition:legacy"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ]
+      },
+      {
+        "source": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ]
+      }
+    ],
+    "b": [
+      {
+        "source": [
+          "accept:base",
+          "emit:base",
+          "program:field-addition:legacy"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ]
+      },
+      {
+        "source": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ]
+      }
+    ],
+    "c": [
+      {
+        "source": [
+          "accept:base",
+          "emit:base",
+          "program:field-addition:legacy"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ]
+      },
+      {
+        "source": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ]
+      }
+    ]
+  },
+  "unused": "b",
+  "workflow": [
+    {
+      "id": "source",
+      "owner": "a",
+      "parents": []
+    },
+    {
+      "id": "selected",
+      "owner": "c",
+      "parents": [
+        "source"
+      ]
+    }
+  ]
+}

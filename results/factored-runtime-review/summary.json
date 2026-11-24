@@ -1,0 +1,92 @@
+{
+  "controls": {
+    "admission_identity_and_recovery": [
+      {
+        "admission_sequences": {
+          "a": 1,
+          "b": 1
+        },
+        "drained": true,
+        "effects": 2,
+        "session": 1
+      },
+      {
+        "admission_sequences": {
+          "a": 2,
+          "b": 2
+        },
+        "drained": true,
+        "effects": 4,
+        "session": 2
+      },
+      {
+        "case": "pending-recovery",
+        "drained": true,
+        "effects": 6,
+        "same_admissions": true,
+        "source_duplicate": true
+      }
+    ],
+    "concurrent_exact_retries": {
+      "drained": true,
+      "effects": 2,
+      "first_completion_preserved": true,
+      "identical_complete_outputs": true,
+      "request_records": 1
+    },
+    "retained_integer_domains": [
+      {
+        "drained": true,
+        "effects": 0,
+        "pending_requests": 0,
+        "ranks": {
+          "a": 0,
+          "b": 0
+        },
+        "request": "rejected-before-binding"
+      },
+      {
+        "drained": true,
+        "effects": 0,
+        "pending_requests": 0,
+        "ranks": {
+          "a": 2,
+          "b": 1
+        },
+        "request": "rejected-before-binding"
+      },
+      {
+        "drained": true,
+        "effects": 2,
+        "pending_requests": 0,
+        "ranks": {
+          "a": 2,
+          "b": 2
+        },
+        "request": "complete"
+      }
+    ],
+    "successive_rollouts": [
+      {
+        "source_rank": 0,
+        "status": "complete",
+        "target_rank": 1
+      },
+      {
+        "source_rank": 1,
+        "status": "complete",
+        "target_rank": 2
+      },
+      {
+        "case": "stale-source",
+        "owners_unchanged": true,
+        "status": "deviation"
+      }
+    ]
+  },
+  "normal_and_optimized_agree": true,
+  "response_loss": "one-shot unit injection after an actual source effect commit",
+  "scope": "actual in-process Endpoint, SQLite, and ProtoJSON controls",
+  "source_files": 10,
+  "status": "pass"
+}

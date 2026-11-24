@@ -1,0 +1,191 @@
+{
+  "checked_at_utc": "2026-11-20T05:09:36.197300+00:00",
+  "capture": "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh output #?% \u4e2d\u6587",
+  "current_artifact": "/workspace/scratch/e34480916f53/completion/project/artifact",
+  "status": "MATCH",
+  "captured_files": 30,
+  "production_source_files": 19,
+  "mismatches": [],
+  "bindings": [
+    {
+      "path": "src/__init__.py",
+      "captured_sha256": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+      "current_sha256": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+      "matches_current": true
+    },
+    {
+      "path": "src/android_contracts.py",
+      "captured_sha256": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+      "current_sha256": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+      "matches_current": true
+    },
+    {
+      "path": "src/application.py",
+      "captured_sha256": "ea4da7087b00fe14f4ce5e31b36c31dff2d4ca12291ce14c2f647b9555e88749",
+      "current_sha256": "ea4da7087b00fe14f4ce5e31b36c31dff2d4ca12291ce14c2f647b9555e88749",
+      "matches_current": true
+    },
+    {
+      "path": "src/batch.py",
+      "captured_sha256": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+      "current_sha256": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+      "matches_current": true
+    },
+    {
+      "path": "src/checker.py",
+      "captured_sha256": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+      "current_sha256": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+      "matches_current": true
+    },
+    {
+      "path": "src/controller.py",
+      "captured_sha256": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+      "current_sha256": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+      "matches_current": true
+    },
+    {
+      "path": "src/direct_batch.py",
+      "captured_sha256": "f980854a6d7b789a540011eba94ad4970ab92565f183316384063c2a5418052e",
+      "current_sha256": "f980854a6d7b789a540011eba94ad4970ab92565f183316384063c2a5418052e",
+      "matches_current": true
+    },
+    {
+      "path": "src/effect_ledger.py",
+      "captured_sha256": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+      "current_sha256": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+      "matches_current": true
+    },
+    {
+      "path": "src/envelope.py",
+      "captured_sha256": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+      "current_sha256": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+      "matches_current": true
+    },
+    {
+      "path": "src/factored_planner.py",
+      "captured_sha256": "b8971360df79d7437c7bb9f1976c6c3e915396ca37fd975cc291901c35cc71ef",
+      "current_sha256": "b8971360df79d7437c7bb9f1976c6c3e915396ca37fd975cc291901c35cc71ef",
+      "matches_current": true
+    },
+    {
+      "path": "src/factored_runtime.py",
+      "captured_sha256": "6b3bc1dd0d9250714069586d3438dcdbf7888889319536d84ee6e7f3746c1891",
+      "current_sha256": "6b3bc1dd0d9250714069586d3438dcdbf7888889319536d84ee6e7f3746c1891",
+      "matches_current": true
+    },
+    {
+      "path": "src/factored_session.py",
+      "captured_sha256": "52f0bce42fabdbf6bb075a5a90028213bac916bfd3cb86280b907d1253115717",
+      "current_sha256": "52f0bce42fabdbf6bb075a5a90028213bac916bfd3cb86280b907d1253115717",
+      "matches_current": true
+    },
+    {
+      "path": "src/goal_planner.py",
+      "captured_sha256": "7489b4ffe8f62195dc0d054eac3c6d49452109077714203eb4a357405ca8f28d",
+      "current_sha256": "7489b4ffe8f62195dc0d054eac3c6d49452109077714203eb4a357405ca8f28d",
+      "matches_current": true
+    },
+    {
+      "path": "src/heterogeneous_contracts.py",
+      "captured_sha256": "84cf6698054add581658adbb2f52937305760a9eb2bb9f68158a9822ab10189f",
+      "current_sha256": "84cf6698054add581658adbb2f52937305760a9eb2bb9f68158a9822ab10189f",
+      "matches_current": true
+    },
+    {
+      "path": "src/network.py",
+      "captured_sha256": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+      "current_sha256": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+      "matches_current": true
+    },
+    {
+      "path": "src/rollout.py",
+      "captured_sha256": "952e5a4811bcce107207df6cbd33e960014316dd2c334e89f52469c6d6085d2b",
+      "current_sha256": "952e5a4811bcce107207df6cbd33e960014316dd2c334e89f52469c6d6085d2b",
+      "matches_current": true
+    },
+    {
+      "path": "src/schema_contracts.py",
+      "captured_sha256": "d6b6344f80465e4e22a4af016b9baa07b6e18e6ffeb2f6552bce1b6bbda44e50",
+      "current_sha256": "d6b6344f80465e4e22a4af016b9baa07b6e18e6ffeb2f6552bce1b6bbda44e50",
+      "matches_current": true
+    },
+    {
+      "path": "src/schema_runtime.py",
+      "captured_sha256": "cb969ea68828f5df28fc2a4d936d024510828d2f62c1664089acc3786665edd6",
+      "current_sha256": "cb969ea68828f5df28fc2a4d936d024510828d2f62c1664089acc3786665edd6",
+      "matches_current": true
+    },
+    {
+      "path": "src/structured_planner.py",
+      "captured_sha256": "9377f3c16b7d2a87a17176a33e7d1be15190543bb93ecdbb825dffaf3ee1de70",
+      "current_sha256": "9377f3c16b7d2a87a17176a33e7d1be15190543bb93ecdbb825dffaf3ee1de70",
+      "matches_current": true
+    },
+    {
+      "path": "tests/__init__.py",
+      "captured_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_current": true
+    },
+    {
+      "path": "tests/check_factored_execution.py",
+      "captured_sha256": "afacfdd7124c1008e2f54ed5ebb76022b790a9ae7b812953f7151d15fd34c6c1",
+      "current_sha256": "afacfdd7124c1008e2f54ed5ebb76022b790a9ae7b812953f7151d15fd34c6c1",
+      "matches_current": true
+    },
+    {
+      "path": "tests/factored_cases.py",
+      "captured_sha256": "7ef39c182e4771471135c003e03ff78f2a75bd640a39b77070a2074f13292b22",
+      "current_sha256": "7ef39c182e4771471135c003e03ff78f2a75bd640a39b77070a2074f13292b22",
+      "matches_current": true
+    },
+    {
+      "path": "tests/factored_checker_controls.py",
+      "captured_sha256": "73a71bfefb36f697da0e8ca369e078b31b8ad3911a80caf1cd3cd6f0bdf5c1b0",
+      "current_sha256": "73a71bfefb36f697da0e8ca369e078b31b8ad3911a80caf1cd3cd6f0bdf5c1b0",
+      "matches_current": true
+    },
+    {
+      "path": "tests/factored_coordinator_worker.py",
+      "captured_sha256": "934474bcfc70eb50a2244df653ad64c12476148bce7a3ffd12009d8f59ca39fd",
+      "current_sha256": "934474bcfc70eb50a2244df653ad64c12476148bce7a3ffd12009d8f59ca39fd",
+      "matches_current": true
+    },
+    {
+      "path": "tests/factored_execution.py",
+      "captured_sha256": "9a5b60e2a5c9f8e2346fdc43b253257e7988843d4c4126403cf3044b766f8c12",
+      "current_sha256": "9a5b60e2a5c9f8e2346fdc43b253257e7988843d4c4126403cf3044b766f8c12",
+      "matches_current": true
+    },
+    {
+      "path": "tests/factored_followon_regression.py",
+      "captured_sha256": "fb3edfd66c02eebf7e9aa11b26c3ffdf0bf45a24c39471a1e0ef78e8f1a3ff08",
+      "current_sha256": "fb3edfd66c02eebf7e9aa11b26c3ffdf0bf45a24c39471a1e0ef78e8f1a3ff08",
+      "matches_current": true
+    },
+    {
+      "path": "tests/factored_network.py",
+      "captured_sha256": "fdbf7e8743b0e6878a1ae396a785d728ac07ab0e099954a7b3a9f2d91d80c77c",
+      "current_sha256": "fdbf7e8743b0e6878a1ae396a785d728ac07ab0e099954a7b3a9f2d91d80c77c",
+      "matches_current": true
+    },
+    {
+      "path": "tests/factored_planning_oracle.py",
+      "captured_sha256": "523704d0aa00eaf9f2d8e587f237535b79ef888a95428206956bb541d3c8d307",
+      "current_sha256": "523704d0aa00eaf9f2d8e587f237535b79ef888a95428206956bb541d3c8d307",
+      "matches_current": true
+    },
+    {
+      "path": "tests/factored_tcp_relay.py",
+      "captured_sha256": "162bf9536b859e4735ea34f342882251e35b5568f152c1c80563a652835f6aa4",
+      "current_sha256": "162bf9536b859e4735ea34f342882251e35b5568f152c1c80563a652835f6aa4",
+      "matches_current": true
+    },
+    {
+      "path": "tests/test_factored_runtime.py",
+      "captured_sha256": "9731c17d06f81ab720a920379c4249d008ec06732a0321b95b4ab6456b033d1c",
+      "current_sha256": "9731c17d06f81ab720a920379c4249d008ec06732a0321b95b4ab6456b033d1c",
+      "matches_current": true
+    }
+  ]
+}

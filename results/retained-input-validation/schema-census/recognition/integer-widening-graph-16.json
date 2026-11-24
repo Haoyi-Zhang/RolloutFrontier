@@ -1,0 +1,189 @@
+{
+  "checked_factor_placements": 12,
+  "checked_join_pairs": 42,
+  "criterion": "factorwise componentwise-maximum closure",
+  "factors": [
+    {
+      "axis_limits": [
+        {
+          "source": [
+            0
+          ],
+          "upper": [
+            2
+          ]
+        },
+        {
+          "source": [
+            1
+          ],
+          "upper": [
+            2
+          ]
+        },
+        {
+          "source": [
+            2
+          ],
+          "upper": [
+            2
+          ]
+        }
+      ],
+      "catalog_placements": 3,
+      "checked_join_pairs": 6,
+      "compatible_placements": 3,
+      "id": "isolated-1",
+      "owners": [
+        "1"
+      ],
+      "relation": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "shape": [
+        3
+      ]
+    },
+    {
+      "axis_limits": [
+        {
+          "source": [
+            0,
+            0
+          ],
+          "upper": [
+            2,
+            1
+          ]
+        },
+        {
+          "source": [
+            0,
+            1
+          ],
+          "upper": [
+            2,
+            1
+          ]
+        },
+        {
+          "source": [
+            1,
+            0
+          ],
+          "upper": [
+            2,
+            2
+          ]
+        },
+        {
+          "source": [
+            1,
+            1
+          ],
+          "upper": [
+            2,
+            2
+          ]
+        },
+        {
+          "source": [
+            1,
+            2
+          ],
+          "upper": [
+            2,
+            2
+          ]
+        },
+        {
+          "source": [
+            2,
+            0
+          ],
+          "upper": [
+            2,
+            2
+          ]
+        },
+        {
+          "source": [
+            2,
+            1
+          ],
+          "upper": [
+            2,
+            2
+          ]
+        },
+        {
+          "source": [
+            2,
+            2
+          ],
+          "upper": [
+            2,
+            2
+          ]
+        }
+      ],
+      "catalog_placements": 9,
+      "checked_join_pairs": 36,
+      "compatible_placements": 8,
+      "id": "link-2-0",
+      "owners": [
+        "0",
+        "2"
+      ],
+      "relation": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "shape": [
+        3,
+        3
+      ]
+    }
+  ],
+  "global_catalog_enumerated": false,
+  "owners": 3,
+  "recognized": true
+}

@@ -1,0 +1,9 @@
+test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) ... ok
+test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) ... ok
+test_sigint_stops_group_and_finalizes_report (tests.test_verify_interruption.VerificationInterruptionTests.test_sigint_stops_group_and_finalizes_report) ... ok
+test_timeout_stops_group_and_preserves_remaining_check (tests.test_verify_interruption.VerificationInterruptionTests.test_timeout_stops_group_and_preserves_remaining_check) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 4.234s
+
+OK

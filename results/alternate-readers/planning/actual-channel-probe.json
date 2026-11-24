@@ -1,0 +1,372 @@
+{
+  "descriptors": [
+    {
+      "prepared_fields": [],
+      "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322150a065265636f7264120b0a036b6579180120012809620670726f746f33"
+    },
+    {
+      "prepared_fields": [
+        "choice"
+      ],
+      "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322290a065265636f7264120b0a036b657918012001280912120a0a7461675f63686f696365180220012809620670726f746f33"
+    }
+  ],
+  "event_effect_witnesses": [
+    {
+      "after_emit_wire": "{\"key\":\"alpha\",\"tagChoice\":\"choice:present\"}",
+      "after_subset": [
+        "choice"
+      ],
+      "before_emit_wire": "{\"key\":\"alpha\"}",
+      "before_subset": [],
+      "feature": "choice",
+      "prepare_witness_wire": "{\"key\":\"alpha\",\"tagChoice\":\"choice:present\"}",
+      "reader_after_preserves_semantics": true,
+      "reader_before_rejects": true
+    }
+  ],
+  "fields": [
+    "choice"
+  ],
+  "matrix": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "matrix_axes": [
+    "prepared_subset",
+    "emitted_subset"
+  ],
+  "parses": [
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "",
+        "key": "alpha"
+      },
+      "prepared_fields": [],
+      "semantic_equal": true,
+      "wire_id": "0"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "",
+        "key": "κλειδί"
+      },
+      "prepared_fields": [],
+      "semantic_equal": true,
+      "wire_id": "1"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "",
+        "key": "中文"
+      },
+      "prepared_fields": [],
+      "semantic_equal": true,
+      "wire_id": "2"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "",
+        "key": "quoted\"key"
+      },
+      "prepared_fields": [],
+      "semantic_equal": true,
+      "wire_id": "3"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "",
+        "key": "emoji-λ"
+      },
+      "prepared_fields": [],
+      "semantic_equal": true,
+      "wire_id": "4"
+    },
+    {
+      "accepted": false,
+      "error": "Message type \"events.Record\" has no field named \"tagChoice\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+      "error_type": "ParseError",
+      "prepared_fields": [],
+      "wire_id": "5"
+    },
+    {
+      "accepted": false,
+      "error": "Message type \"events.Record\" has no field named \"tagChoice\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+      "error_type": "ParseError",
+      "prepared_fields": [],
+      "wire_id": "6"
+    },
+    {
+      "accepted": false,
+      "error": "Message type \"events.Record\" has no field named \"tagChoice\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+      "error_type": "ParseError",
+      "prepared_fields": [],
+      "wire_id": "7"
+    },
+    {
+      "accepted": false,
+      "error": "Message type \"events.Record\" has no field named \"tagChoice\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+      "error_type": "ParseError",
+      "prepared_fields": [],
+      "wire_id": "8"
+    },
+    {
+      "accepted": false,
+      "error": "Message type \"events.Record\" has no field named \"tagChoice\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+      "error_type": "ParseError",
+      "prepared_fields": [],
+      "wire_id": "9"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "",
+        "key": "alpha"
+      },
+      "prepared_fields": [
+        "choice"
+      ],
+      "semantic_equal": true,
+      "wire_id": "0"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "",
+        "key": "κλειδί"
+      },
+      "prepared_fields": [
+        "choice"
+      ],
+      "semantic_equal": true,
+      "wire_id": "1"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "",
+        "key": "中文"
+      },
+      "prepared_fields": [
+        "choice"
+      ],
+      "semantic_equal": true,
+      "wire_id": "2"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "",
+        "key": "quoted\"key"
+      },
+      "prepared_fields": [
+        "choice"
+      ],
+      "semantic_equal": true,
+      "wire_id": "3"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "",
+        "key": "emoji-λ"
+      },
+      "prepared_fields": [
+        "choice"
+      ],
+      "semantic_equal": true,
+      "wire_id": "4"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "choice:present",
+        "key": "alpha"
+      },
+      "prepared_fields": [
+        "choice"
+      ],
+      "semantic_equal": true,
+      "wire_id": "5"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "choice:migrated-δ",
+        "key": "κλειδί"
+      },
+      "prepared_fields": [
+        "choice"
+      ],
+      "semantic_equal": true,
+      "wire_id": "6"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "choice:扩展字段",
+        "key": "中文"
+      },
+      "prepared_fields": [
+        "choice"
+      ],
+      "semantic_equal": true,
+      "wire_id": "7"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "choice:line\nbreak\\path",
+        "key": "quoted\"key"
+      },
+      "prepared_fields": [
+        "choice"
+      ],
+      "semantic_equal": true,
+      "wire_id": "8"
+    },
+    {
+      "accepted": true,
+      "decoded": {
+        "choice": "choice:field-🙂",
+        "key": "emoji-λ"
+      },
+      "prepared_fields": [
+        "choice"
+      ],
+      "semantic_equal": true,
+      "wire_id": "9"
+    }
+  ],
+  "receiver": 1,
+  "sender": 0,
+  "subsets": [
+    [],
+    [
+      "choice"
+    ]
+  ],
+  "wires": [
+    {
+      "emitted_fields": [],
+      "id": "0",
+      "sample": 0,
+      "semantic": {
+        "choice": "",
+        "key": "alpha"
+      },
+      "wire": "{\"key\":\"alpha\"}"
+    },
+    {
+      "emitted_fields": [],
+      "id": "1",
+      "sample": 1,
+      "semantic": {
+        "choice": "",
+        "key": "κλειδί"
+      },
+      "wire": "{\"key\":\"κλειδί\"}"
+    },
+    {
+      "emitted_fields": [],
+      "id": "2",
+      "sample": 2,
+      "semantic": {
+        "choice": "",
+        "key": "中文"
+      },
+      "wire": "{\"key\":\"中文\"}"
+    },
+    {
+      "emitted_fields": [],
+      "id": "3",
+      "sample": 3,
+      "semantic": {
+        "choice": "",
+        "key": "quoted\"key"
+      },
+      "wire": "{\"key\":\"quoted\\\"key\"}"
+    },
+    {
+      "emitted_fields": [],
+      "id": "4",
+      "sample": 4,
+      "semantic": {
+        "choice": "",
+        "key": "emoji-λ"
+      },
+      "wire": "{\"key\":\"emoji-λ\"}"
+    },
+    {
+      "emitted_fields": [
+        "choice"
+      ],
+      "id": "5",
+      "sample": 0,
+      "semantic": {
+        "choice": "choice:present",
+        "key": "alpha"
+      },
+      "wire": "{\"key\":\"alpha\",\"tagChoice\":\"choice:present\"}"
+    },
+    {
+      "emitted_fields": [
+        "choice"
+      ],
+      "id": "6",
+      "sample": 1,
+      "semantic": {
+        "choice": "choice:migrated-δ",
+        "key": "κλειδί"
+      },
+      "wire": "{\"key\":\"κλειδί\",\"tagChoice\":\"choice:migrated-δ\"}"
+    },
+    {
+      "emitted_fields": [
+        "choice"
+      ],
+      "id": "7",
+      "sample": 2,
+      "semantic": {
+        "choice": "choice:扩展字段",
+        "key": "中文"
+      },
+      "wire": "{\"key\":\"中文\",\"tagChoice\":\"choice:扩展字段\"}"
+    },
+    {
+      "emitted_fields": [
+        "choice"
+      ],
+      "id": "8",
+      "sample": 3,
+      "semantic": {
+        "choice": "choice:line\nbreak\\path",
+        "key": "quoted\"key"
+      },
+      "wire": "{\"key\":\"quoted\\\"key\",\"tagChoice\":\"choice:line\\nbreak\\\\path\"}"
+    },
+    {
+      "emitted_fields": [
+        "choice"
+      ],
+      "id": "9",
+      "sample": 4,
+      "semantic": {
+        "choice": "choice:field-🙂",
+        "key": "emoji-λ"
+      },
+      "wire": "{\"key\":\"emoji-λ\",\"tagChoice\":\"choice:field-🙂\"}"
+    }
+  ]
+}

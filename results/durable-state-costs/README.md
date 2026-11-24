@@ -10,10 +10,11 @@ retirement, inspection and shutdown. Application frames include six acknowledged
 management exchanges, separately from RPC frames; they are not packet capture.
 
 The 44 entries in the original `environment.json` source inventory bind measured
-bytes, not today's source tree. Currently 35 match live files. Seven exact
-preimages are retained under `source-preimage/`: `src/checker.py` and
-`tests/{frontier,full_path_costs,labelled_mss_bridge,optimizer_benchmark,receipt_snapshots,window_types}.py`.
-The remaining `src/controller.py` and `src/network.py` preimages are already
+bytes, not today's source tree. A matching live file can supply the same bytes;
+later edits resolve to the exact retained preimage. This cohort preserves
+`src/checker.py`, `src/envelope.py` and
+`tests/{frontier,full_path_costs,labelled_mss_bridge,optimizer_benchmark,receipt_snapshots,window_types}.py`
+under `source-preimage/`. The `src/controller.py` and `src/network.py` preimages are already
 preserved under `../effect-drain/source-preimage/` and match this inventory's own
 hashes. Preimages are data only: do not import or execute them.
 

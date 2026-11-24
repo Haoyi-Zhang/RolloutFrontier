@@ -1,0 +1,7519 @@
+{
+  "contexts": 252,
+  "corruption_controls": [
+    {
+      "name": "changed parser output",
+      "rejected": true
+    },
+    {
+      "name": "changed factor relation",
+      "rejected": true
+    },
+    {
+      "name": "missing graph context",
+      "rejected": true
+    },
+    {
+      "name": "wrong optimal phase cost",
+      "rejected": true
+    },
+    {
+      "name": "changed ranked search trace",
+      "rejected": true
+    },
+    {
+      "name": "guard excludes phase source",
+      "rejected": true
+    },
+    {
+      "name": "changed priority path",
+      "rejected": true
+    },
+    {
+      "name": "missing partition boundary",
+      "rejected": true
+    }
+  ],
+  "frontier_cycle_controls": 2,
+  "full_migration_gap_counts": {
+    "enum-alias": 8,
+    "field-addition": 2,
+    "field-key": 8,
+    "integer-widening": 2
+  },
+  "full_migrations": [
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-1",
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 1,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-2",
+      "edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 2,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-3",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 3,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-4",
+      "edges": [
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 4,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-5",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 5,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-6",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 6,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-7",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 7,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-8",
+      "edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 8,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-9",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 9,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-10",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 10,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-11",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 11,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-12",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 12,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-13",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 13,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-14",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 14,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-15",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 15,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-16",
+      "edges": [
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 16,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-17",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 17,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-18",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 18,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-19",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 19,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-20",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 20,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-21",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 21,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-22",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 22,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-23",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 23,
+      "priority_phases": [
+        5,
+        5,
+        5,
+        3,
+        5,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-24",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 24,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "enum-alias-graph-25",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 25,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-26",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 26,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "enum-alias-graph-27",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 27,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-28",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 28,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "enum-alias-graph-29",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 29,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-30",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 30,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-31",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 31,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-32",
+      "edges": [
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 32,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-33",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 33,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-34",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 34,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-35",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 35,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-36",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 36,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-37",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 37,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "enum-alias-graph-38",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 38,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "enum-alias-graph-39",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 39,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-40",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 40,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-41",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 41,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-42",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 42,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-43",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 43,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-44",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 44,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-45",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 45,
+      "priority_phases": [
+        5,
+        3,
+        5,
+        5,
+        3,
+        5
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "enum-alias-graph-46",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 46,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-47",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 47,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-48",
+      "edges": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 48,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-49",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 49,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-50",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 50,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-51",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 51,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-52",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 52,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-53",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 53,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "enum-alias-graph-54",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 54,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-55",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 55,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-56",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 56,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "enum-alias-graph-57",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 57,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-58",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 58,
+      "priority_phases": [
+        3,
+        5,
+        3,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-59",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 59,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-60",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 60,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-61",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 61,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-62",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 62,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "enum-alias-graph-63",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "graph_mask": 63,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-1",
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 1,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-2",
+      "edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 2,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-3",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 3,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-4",
+      "edges": [
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 4,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-5",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 5,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-6",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 6,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-7",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 7,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-8",
+      "edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 8,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-9",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 9,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-10",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 10,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-11",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 11,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-12",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 12,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-13",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 13,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-14",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 14,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-15",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 15,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-16",
+      "edges": [
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 16,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-17",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 17,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-18",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 18,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-19",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 19,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-20",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 20,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-21",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 21,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-22",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 22,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-23",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 23,
+      "priority_phases": [
+        5,
+        5,
+        5,
+        3,
+        5,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-24",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 24,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "field-key-graph-25",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 25,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-26",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 26,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "field-key-graph-27",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 27,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-28",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 28,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "field-key-graph-29",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 29,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-30",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 30,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-31",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 31,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-32",
+      "edges": [
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 32,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-33",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 33,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-34",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 34,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-35",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 35,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-36",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 36,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-37",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 37,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "field-key-graph-38",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 38,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "field-key-graph-39",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 39,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-40",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 40,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-41",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 41,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-42",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 42,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-43",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 43,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-44",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 44,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-45",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 45,
+      "priority_phases": [
+        5,
+        3,
+        5,
+        5,
+        3,
+        5
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "field-key-graph-46",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 46,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-47",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 47,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-48",
+      "edges": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 48,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-49",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 49,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-50",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 50,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-51",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 51,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-52",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 52,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-53",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 53,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "field-key-graph-54",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 54,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-55",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 55,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-56",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 56,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 4,
+      "context": "field-key-graph-57",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 57,
+      "priority_phases": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-58",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 58,
+      "priority_phases": [
+        3,
+        5,
+        3,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-59",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 59,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-60",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 60,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-61",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 61,
+      "priority_phases": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-62",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 62,
+      "priority_phases": [
+        3,
+        4,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-key-graph-63",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "graph_mask": 63,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-1",
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 1,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-2",
+      "edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 2,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-3",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 3,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-4",
+      "edges": [
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 4,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-5",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 5,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-6",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 6,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-7",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 7,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-8",
+      "edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 8,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-9",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 9,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-10",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 10,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-11",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 11,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-12",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 12,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-13",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 13,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-14",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 14,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-15",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 15,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-16",
+      "edges": [
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 16,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-17",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 17,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-18",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 18,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-19",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 19,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-20",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 20,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-21",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 21,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-22",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 22,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-23",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 23,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-24",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 24,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-addition-graph-25",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 25,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-26",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 26,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-27",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 27,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-28",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 28,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-29",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 29,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-30",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 30,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-31",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 31,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-32",
+      "edges": [
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 32,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-33",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 33,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-34",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 34,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-35",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 35,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-36",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 36,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-37",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 37,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "field-addition-graph-38",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 38,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-39",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 39,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-40",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 40,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-41",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 41,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-42",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 42,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-43",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 43,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-44",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 44,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-45",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 45,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-46",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 46,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-47",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 47,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-48",
+      "edges": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 48,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-49",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 49,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-50",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 50,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-51",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 51,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-52",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 52,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-53",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 53,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-54",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 54,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-55",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 55,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-56",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 56,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-57",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 57,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-58",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 58,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-59",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 59,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-60",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 60,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-61",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 61,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-62",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 62,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "field-addition-graph-63",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "graph_mask": 63,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-1",
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 1,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-2",
+      "edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 2,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-3",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 3,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-4",
+      "edges": [
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 4,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-5",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 5,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-6",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 6,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-7",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 7,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-8",
+      "edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 8,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-9",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 9,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-10",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 10,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-11",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 11,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-12",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 12,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-13",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 13,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-14",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 14,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-15",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 15,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-16",
+      "edges": [
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 16,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-17",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 17,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-18",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 18,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-19",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 19,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-20",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 20,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-21",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 21,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-22",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 22,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-23",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 23,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-24",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 24,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "integer-widening-graph-25",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 25,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-26",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 26,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-27",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 27,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-28",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 28,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-29",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 29,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-30",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 30,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-31",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 31,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-32",
+      "edges": [
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 32,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-33",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 33,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-34",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 34,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-35",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 35,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-36",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 36,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-37",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 37,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 3,
+      "context": "integer-widening-graph-38",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 38,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-39",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 39,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-40",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 40,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-41",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 41,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-42",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 42,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-43",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 43,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-44",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 44,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-45",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 45,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-46",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 46,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-47",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 47,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-48",
+      "edges": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 48,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-49",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 49,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-50",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 50,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-51",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 51,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-52",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 52,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-53",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 53,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-54",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 54,
+      "priority_phases": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-55",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 55,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-56",
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 56,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-57",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 57,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-58",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 58,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-59",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 59,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-60",
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 60,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-61",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 61,
+      "priority_phases": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-62",
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 62,
+      "priority_phases": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "best_priority_phases": 2,
+      "context": "integer-widening-graph-63",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "graph_mask": 63,
+      "priority_phases": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "groups": {
+    "enum-alias": {
+      "best_priority_gap_goals": 30,
+      "best_priority_phases": 39096,
+      "contexts": 63,
+      "exact_phases": 39066,
+      "no_op": 2040,
+      "priority_gaps": [
+        781,
+        781,
+        781,
+        781,
+        781,
+        781
+      ],
+      "priority_phases": [
+        39857,
+        39857,
+        39857,
+        39857,
+        39857,
+        39857
+      ],
+      "queries": 69072,
+      "reachable_nontrivial": 23238,
+      "unreachable": 43794
+    },
+    "field-addition": {
+      "best_priority_gap_goals": 2,
+      "best_priority_phases": 10340,
+      "contexts": 63,
+      "exact_phases": 10338,
+      "no_op": 1221,
+      "priority_gaps": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "priority_phases": [
+        10402,
+        10402,
+        10402,
+        10402,
+        10402,
+        10402
+      ],
+      "queries": 24015,
+      "reachable_nontrivial": 7731,
+      "unreachable": 15063
+    },
+    "field-key": {
+      "best_priority_gap_goals": 30,
+      "best_priority_phases": 39096,
+      "contexts": 63,
+      "exact_phases": 39066,
+      "no_op": 2040,
+      "priority_gaps": [
+        781,
+        781,
+        781,
+        781,
+        781,
+        781
+      ],
+      "priority_phases": [
+        39857,
+        39857,
+        39857,
+        39857,
+        39857,
+        39857
+      ],
+      "queries": 69072,
+      "reachable_nontrivial": 23238,
+      "unreachable": 43794
+    },
+    "integer-widening": {
+      "best_priority_gap_goals": 2,
+      "best_priority_phases": 10340,
+      "contexts": 63,
+      "exact_phases": 10338,
+      "no_op": 1221,
+      "priority_gaps": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "priority_phases": [
+        10402,
+        10402,
+        10402,
+        10402,
+        10402,
+        10402
+      ],
+      "queries": 24015,
+      "reachable_nontrivial": 7731,
+      "unreachable": 15063
+    }
+  },
+  "independent_oracle_disagreements": 0,
+  "probes": {
+    "distinct_relation_shapes": 2,
+    "encoded_wires": 74,
+    "families": 4,
+    "parser_invocations": 262,
+    "rejected_parser_invocations": 49
+  },
+  "queries": 186174,
+  "scope": "actual library probes; complete registered three-owner graph/goal census, not deployment prevalence",
+  "status": "pass"
+}

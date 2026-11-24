@@ -1,0 +1,40 @@
+{
+  "generated_utc": "2026-11-22T06:08:33.145816+00:00",
+  "retained_environment": {
+    "python": "3.12.14",
+    "protobuf": "7.36.2",
+    "sqlite": "3.53.1"
+  },
+  "strict_environment_probe_passed": false,
+  "critical_checks_all_passed": false,
+  "passed_checks": [],
+  "failed_or_unfinished_checks": [
+    "strict_environment",
+    "review_acceptance",
+    "unit_discovery",
+    "semantic_reproduce"
+  ],
+  "interpretation": "exact environment reconstruction incomplete; retained evidence remains source-bound",
+  "checks": {
+    "strict_environment": {
+      "exit_code": 127,
+      "classification": "not_run",
+      "log": "/mnt/data/rollout_frontier_round9/logs/exact-env-build.log"
+    },
+    "review_acceptance": {
+      "exit_code": 127,
+      "classification": "not_run",
+      "log": "/mnt/data/rollout_frontier_round9/logs/exact-env-build.log"
+    },
+    "unit_discovery": {
+      "exit_code": 127,
+      "classification": "not_run",
+      "log": "/mnt/data/rollout_frontier_round9/logs/exact-env-build.log"
+    },
+    "semantic_reproduce": {
+      "exit_code": 127,
+      "classification": "not_run",
+      "log": "/mnt/data/rollout_frontier_round9/logs/exact-env-build.log"
+    }
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "children_cpu_seconds": 102.187209,
+  "compared_files": [],
+  "comparison_excludes": [
+    "checker_median_ns",
+    "checker_min_ns",
+    "child_cpu_seconds",
+    "cpu_seconds",
+    "dp_median_ns",
+    "endpoint_vm_hwm_kib",
+    "install_median_ns",
+    "peak_rss_kib",
+    "rpc_median_ms",
+    "rpc_p95_ms",
+    "solver_wall_ms",
+    "solver_wall_ns",
+    "wall_ns",
+    "wall_seconds"
+  ],
+  "generated_files": [
+    "costs.json",
+    "finite.json",
+    "frontier-stress.json",
+    "frontier.json",
+    "generalization.csv",
+    "generalization.json",
+    "hardening.json",
+    "integration.json",
+    "journal-analysis.json",
+    "modelcheck.json",
+    "multiprocess.json",
+    "network-trace.jsonl",
+    "network.csv",
+    "network.json",
+    "observation-trace.jsonl",
+    "observations.csv",
+    "observations.json",
+    "pilot.json",
+    "public-history.json",
+    "replay.json",
+    "scaling.csv",
+    "scaling.json",
+    "unit.json"
+  ],
+  "independently_replayed_trace_files": [
+    "network-trace.jsonl"
+  ],
+  "largest_child_peak_rss_kib": 109048,
+  "limits": {
+    "affinity_cores": 1,
+    "child_address_space_bytes": 536870912,
+    "default_job_wall_timeout_seconds": 120,
+    "job_cpu_soft_seconds": 90,
+    "job_wall_timeout_overrides_seconds": {
+      "tests.unit": 300
+    },
+    "maximum_simultaneous_project_processes": 7,
+    "theoretical_aggregate_address_space_bytes": 3758096384
+  },
+  "numeric_claim_bindings_verified": 33,
+  "parent_cpu_seconds": 0.04826018799999998,
+  "reference_compared_trace_files": [
+    "network-trace.jsonl",
+    "observation-trace.jsonl"
+  ],
+  "runs": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.unit"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 300,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 63.69149427399999,
+      "reported_peak_rss_kib": 106264,
+      "stderr": "",
+      "wall_seconds": 69.82713162700065
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.pilot"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.06880957999999998,
+      "reported_peak_rss_kib": 99468,
+      "stderr": "",
+      "wall_seconds": 0.9295952180000313
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.finite"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 1.119915711,
+      "reported_peak_rss_kib": 97172,
+      "stderr": "",
+      "wall_seconds": 1.7344568879998405
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.frontier"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 1.1599379109999999,
+      "reported_peak_rss_kib": 98184,
+      "stderr": "",
+      "wall_seconds": 1.8037066789993332
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.frontier_stress"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.6119218819999999,
+      "reported_peak_rss_kib": 98460,
+      "stderr": "",
+      "wall_seconds": 1.3043616029999612
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.generalization",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 1.909436546,
+      "reported_peak_rss_kib": 98964,
+      "stderr": "",
+      "wall_seconds": 2.512594686000739
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.journal_analysis",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 1.414669204,
+      "reported_peak_rss_kib": 100892,
+      "stderr": "",
+      "wall_seconds": 2.010571665999123
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.scaling",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.287966055,
+      "reported_peak_rss_kib": 97680,
+      "stderr": "",
+      "wall_seconds": 0.8977165730002525
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.modelcheck"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.019982047000000003,
+      "reported_peak_rss_kib": 96152,
+      "stderr": "",
+      "wall_seconds": 0.6273072460007825
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.public_history"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.0,
+      "reported_peak_rss_kib": 96416,
+      "stderr": "",
+      "wall_seconds": 0.5736211869998442
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.campaign",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 6.47823017,
+      "reported_peak_rss_kib": 101664,
+      "stderr": "",
+      "wall_seconds": 13.46708818100069
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.integration"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 1.5702399999999999,
+      "reported_cpu_seconds": 0.11210348299999995,
+      "reported_peak_rss_kib": 109048,
+      "stderr": "",
+      "wall_seconds": 2.4157660449991454
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.multiprocess"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 4.358928000000001,
+      "reported_cpu_seconds": 0.029910442999999953,
+      "reported_peak_rss_kib": 98712,
+      "stderr": "",
+      "wall_seconds": 5.043686725000043
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.observations",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 3.5147390529999996,
+      "reported_peak_rss_kib": 101264,
+      "stderr": "",
+      "wall_seconds": 9.885305195
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.costs"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 4.539193911,
+      "reported_peak_rss_kib": 99460,
+      "stderr": "",
+      "wall_seconds": 5.1428337200004535
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.hardening"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.169517959,
+      "reported_peak_rss_kib": 101908,
+      "stderr": "",
+      "wall_seconds": 1.0877722820005147
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.replay",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "job_wall_timeout_seconds": 120,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.44778067099999996,
+      "reported_peak_rss_kib": 96276,
+      "stderr": "",
+      "wall_seconds": 1.0405535420004526
+    }
+  ],
+  "scope": "semantic reproduction, not byte-identical timing or proof of model correctness",
+  "semantic_reference": "not-requested",
+  "semantic_reference_sha256": {},
+  "status": "completed",
+  "wall_seconds": 120.30666637700006
+}

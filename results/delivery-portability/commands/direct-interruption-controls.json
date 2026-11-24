@@ -1,0 +1,33 @@
+[
+  {
+    "mode": "normal",
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "tests.test_verify_interruption"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "output": "/workspace/scratch/e34480916f53/finalization/review/reproduction/interruption-controls-normal",
+    "exit_code": 0,
+    "elapsed_seconds": 3.95305992399517
+  },
+  {
+    "mode": "optimized",
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-O",
+      "-m",
+      "unittest",
+      "-v",
+      "tests.test_verify_interruption"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "output": "/workspace/scratch/e34480916f53/finalization/review/reproduction/interruption-controls-optimized",
+    "exit_code": 0,
+    "elapsed_seconds": 4.544506061007269
+  }
+]

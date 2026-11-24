@@ -1,0 +1,29 @@
+{
+  "batch": {
+    "contexts": 480,
+    "per_event_policy_observations": 207360,
+    "schedules": 1440,
+    "snapshot_scope": "in-memory owner conformance, no network faults",
+    "source_files": 7,
+    "status": "PASS"
+  },
+  "costs": {
+    "lifecycles": 48,
+    "proposals": 1152,
+    "source_files": 11,
+    "status": "PASS"
+  },
+  "effects": {
+    "database_snapshots": 96,
+    "lifecycles": 24,
+    "source_files": 9,
+    "status": "PASS"
+  },
+  "semantic": {
+    "jobs": 17,
+    "numeric_bindings": 33,
+    "semantic_outputs": 23,
+    "source_files": 30,
+    "status": "PASS"
+  }
+}

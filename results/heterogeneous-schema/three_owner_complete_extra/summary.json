@@ -1,0 +1,807 @@
+{
+  "all_context_validation": "weighted-event-DAG versus greatest-contiguous-prefix iteration",
+  "context_count_formula": [
+    120,
+    120,
+    24
+  ],
+  "cost_vectors": [
+    {
+      "contexts": 336,
+      "exact_owner_stage_prepare_preparestage": [
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "contexts": 240,
+      "exact_owner_stage_prepare_preparestage": [
+        2,
+        4,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "contexts": 3112,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 3218,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 740,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "contexts": 728,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        5,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 36,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        5,
+        3,
+        4
+      ]
+    },
+    {
+      "contexts": 86,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        6,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 5848,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 48,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "contexts": 7566,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 942,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "contexts": 4,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        4,
+        4,
+        3
+      ]
+    },
+    {
+      "contexts": 1912,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        5,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 250,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        5,
+        3,
+        4
+      ]
+    },
+    {
+      "contexts": 182,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        6,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 8,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        6,
+        3,
+        4
+      ]
+    },
+    {
+      "contexts": 62,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        5,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 48,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        5,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 8,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        5,
+        5,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 2,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        5,
+        6,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 19094,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 6,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        4,
+        4,
+        5
+      ]
+    },
+    {
+      "contexts": 13820,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 1746,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        5,
+        4,
+        5
+      ]
+    },
+    {
+      "contexts": 2636,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        6,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 302,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        6,
+        4,
+        5
+      ]
+    },
+    {
+      "contexts": 154,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        7,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 6,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        7,
+        4,
+        5
+      ]
+    },
+    {
+      "contexts": 2908,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 12,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        4,
+        4,
+        5
+      ]
+    },
+    {
+      "contexts": 5230,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 456,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        5,
+        4,
+        5
+      ]
+    },
+    {
+      "contexts": 1574,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        6,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 138,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        6,
+        4,
+        5
+      ]
+    },
+    {
+      "contexts": 120,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        7,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 22,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        7,
+        4,
+        5
+      ]
+    },
+    {
+      "contexts": 2,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        8,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 6,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        6,
+        6,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 15292,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 14,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        5,
+        5,
+        6
+      ]
+    },
+    {
+      "contexts": 8010,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 680,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        6,
+        5,
+        6
+      ]
+    },
+    {
+      "contexts": 794,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        7,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 100,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        7,
+        5,
+        6
+      ]
+    },
+    {
+      "contexts": 8,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        8,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 266,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        6,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 2,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        6,
+        5,
+        5,
+        6
+      ]
+    },
+    {
+      "contexts": 656,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        6,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 62,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        6,
+        6,
+        5,
+        6
+      ]
+    },
+    {
+      "contexts": 316,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        6,
+        7,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 22,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        6,
+        7,
+        5,
+        6
+      ]
+    },
+    {
+      "contexts": 24,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        6,
+        8,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 3810,
+      "exact_owner_stage_prepare_preparestage": [
+        6,
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "contexts": 1106,
+      "exact_owner_stage_prepare_preparestage": [
+        6,
+        6,
+        7,
+        6,
+        6
+      ]
+    },
+    {
+      "contexts": 36,
+      "exact_owner_stage_prepare_preparestage": [
+        6,
+        6,
+        7,
+        6,
+        7
+      ]
+    },
+    {
+      "contexts": 56,
+      "exact_owner_stage_prepare_preparestage": [
+        6,
+        6,
+        8,
+        6,
+        6
+      ]
+    },
+    {
+      "contexts": 2,
+      "exact_owner_stage_prepare_preparestage": [
+        6,
+        6,
+        8,
+        6,
+        7
+      ]
+    },
+    {
+      "contexts": 16,
+      "exact_owner_stage_prepare_preparestage": [
+        6,
+        7,
+        7,
+        6,
+        6
+      ]
+    },
+    {
+      "contexts": 12,
+      "exact_owner_stage_prepare_preparestage": [
+        6,
+        7,
+        8,
+        6,
+        6
+      ]
+    },
+    {
+      "contexts": 574,
+      "exact_owner_stage_prepare_preparestage": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "contexts": 94,
+      "exact_owner_stage_prepare_preparestage": [
+        7,
+        7,
+        8,
+        7,
+        7
+      ]
+    },
+    {
+      "contexts": 20,
+      "exact_owner_stage_prepare_preparestage": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    }
+  ],
+  "counts": {
+    "all_tie": 105580,
+    "attempted": 345600,
+    "owner_gap": 29300,
+    "owner_stage_gap": 19578,
+    "owner_stage_tie": 86002,
+    "owner_tie": 76280,
+    "prepare_first_gap": 52,
+    "prepare_first_stage_gap": 5582,
+    "prepare_first_stage_tie": 99998,
+    "prepare_first_tie": 105528,
+    "reachable": 105580,
+    "stage_gap": 53936,
+    "stage_tie": 51644,
+    "unreachable": 240020
+  },
+  "domain": "three_owner_complete_extra",
+  "elapsed_seconds": 333.49706292999326,
+  "events_by_owner": [
+    [
+      "e_ab0",
+      "p_ba0",
+      "p_ca0",
+      "e_ac0",
+      "e_ab1"
+    ],
+    [
+      "p_ab0",
+      "e_ba0",
+      "e_bc0",
+      "p_cb0",
+      "p_ab1"
+    ],
+    [
+      "p_bc0",
+      "e_cb0",
+      "e_ca0",
+      "p_ac0"
+    ]
+  ],
+  "field_edges": [
+    [
+      "ab0",
+      0,
+      1
+    ],
+    [
+      "ba0",
+      1,
+      0
+    ],
+    [
+      "bc0",
+      1,
+      2
+    ],
+    [
+      "cb0",
+      2,
+      1
+    ],
+    [
+      "ca0",
+      2,
+      0
+    ],
+    [
+      "ac0",
+      0,
+      2
+    ],
+    [
+      "ab1",
+      0,
+      1
+    ]
+  ],
+  "installations": 14,
+  "optimal_phase_counts": {
+    "2": 576,
+    "3": 24800,
+    "4": 48232,
+    "5": 26246,
+    "6": 5038,
+    "7": 668,
+    "8": 20
+  },
+  "priorities": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      0
+    ]
+  ],
+  "production_counts": {
+    "checked": 20,
+    "discovery_first_outcome": 4,
+    "fixed_even_grid": 16,
+    "planned": 12,
+    "unreachable": 8
+  },
+  "production_fixed_grid": [
+    0,
+    23040,
+    46080,
+    69120,
+    92160,
+    115200,
+    138240,
+    161280,
+    184319,
+    207359,
+    230399,
+    253439,
+    276479,
+    299519,
+    322559,
+    345599
+  ],
+  "production_scope": "fixed_grid_and_outcome_witnesses",
+  "retained_example_validation": "literal catalog cells and safe-phase rectangles plus BFS",
+  "retained_examples": [
+    "first_unreachable",
+    "first_reachable",
+    "first_stage_gap",
+    "first_owner_gap",
+    "first_owner_stage_gap",
+    "first_prepare_first_stage_gap",
+    "first_prepare_first_gap"
+  ],
+  "scope": "discovery_extension",
+  "state_shape": [
+    6,
+    6,
+    5
+  ],
+  "strategies": [
+    "owner",
+    "stage",
+    "prepare_first",
+    "prepare_first_stage"
+  ]
+}

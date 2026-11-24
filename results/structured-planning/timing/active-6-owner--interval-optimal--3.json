@@ -1,0 +1,86 @@
+{
+  "cohorts": [
+    {
+      "preparation_cpu_seconds": 0.035855195,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.035855195
+    },
+    {
+      "preparation_cpu_seconds": 0.028000051,
+      "query_cpu_seconds": 0.004089665,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.032089716
+    },
+    {
+      "preparation_cpu_seconds": 0.031911487,
+      "query_cpu_seconds": 0.004002496,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.035913983
+    }
+  ],
+  "costs": [
+    {
+      "cost": {
+        "handoffs": 2,
+        "installations": 12,
+        "phases": 3
+      },
+      "status": "planned",
+      "task": "two-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 6,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "first-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 6,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "second-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 8,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "servers-ahead"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 10,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "catch-up-all"
+    },
+    {
+      "cost": {
+        "handoffs": 0,
+        "installations": 8,
+        "phases": 1
+      },
+      "status": "planned",
+      "task": "clients-only"
+    }
+  ],
+  "cpu": 0,
+  "cpu_budget_seconds": 30,
+  "domain": "active-6-owner",
+  "mean_preparation_cpu_seconds": 0.031922244333333336,
+  "mean_query_cpu_seconds": 0.0026973870000000003,
+  "mean_total_cpu_seconds": 0.03461963133333333,
+  "repetition": 3,
+  "route": "interval-optimal"
+}

@@ -1,0 +1,22 @@
+{
+  "bibliography": {
+    "type": "article",
+    "key": "mouawad2017shortest",
+    "author": "Amer E. Mouawad and Naomi Nishimura and Vinayak Pathak and Venkatesh Raman",
+    "title": "Shortest Reconfiguration Paths in the Solution Space of Boolean Formulas",
+    "journal": "SIAM Journal on Discrete Mathematics",
+    "volume": "31",
+    "number": "3",
+    "pages": "2185--2200",
+    "year": "2017",
+    "doi": "10.1137/16M1065288"
+  },
+  "claim": "Shortest satisfying-assignment reconfiguration minimizes individual valid variable flips.",
+  "primary_url": "https://epubs.siam.org/doi/10.1137/16M1065288",
+  "supplementary_urls": "https://arxiv.org/html/1404.3801v2",
+  "read_depth_category": "full_text_passages",
+  "read_depth": "publisher_abstract_and_metadata_with_author_preprint_passages",
+  "support_location": "Publisher abstract and Information/Authors metadata; author preprint Introduction, Section 2 and Section 3 valid-flip sequence definitions.",
+  "correction_or_boundary": "The accessible body was the author preprint. The claimed objective is explicitly confirmed by the published abstract. No minimum safe-product phase result is attributed to this source.",
+  "checked_date": "2026-11-19"
+}

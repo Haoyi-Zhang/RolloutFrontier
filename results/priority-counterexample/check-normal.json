@@ -1,0 +1,70 @@
+{
+  "corruption_controls": [
+    {
+      "name": "changed production phase cost",
+      "rejected": true
+    },
+    {
+      "name": "changed unique two-phase handoff",
+      "rejected": true
+    },
+    {
+      "name": "unsafe priority-path state",
+      "rejected": true
+    },
+    {
+      "name": "changed declared threshold",
+      "rejected": true
+    }
+  ],
+  "exact_phase_count": 2,
+  "installations_per_path": 10,
+  "max_closed": true,
+  "portfolio_paths": 4,
+  "portfolio_phase_counts": [
+    3,
+    3,
+    3,
+    3
+  ],
+  "production_cost": {
+    "handoffs": 1,
+    "installations": 10,
+    "phases": 2
+  },
+  "production_rank_trace": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      6
+    ]
+  ],
+  "relation_cells": 27,
+  "safe_phase_edges": 177,
+  "scope": "Declared algebraic counterexample; no workload-frequency or timing claim",
+  "shape": [
+    5,
+    7
+  ],
+  "source": [
+    0,
+    0
+  ],
+  "source_files": 6,
+  "status": "PASS",
+  "target": [
+    4,
+    6
+  ],
+  "unique_two_phase_handoff": [
+    2,
+    4
+  ]
+}

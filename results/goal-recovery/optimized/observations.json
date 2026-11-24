@@ -1,0 +1,7728 @@
+[
+  {
+    "case": "execution-plan negative controls",
+    "rejected": 5
+  },
+  {
+    "case": "old close committed but acknowledgement lost",
+    "closed_floor_before_recovery": 1,
+    "recovered": true
+  },
+  {
+    "before": {
+      "cut": {
+        "event": "acquire-returned",
+        "phase_index": 0
+      },
+      "events": [
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "acquire-returned",
+          "phase_index": 0,
+          "stage": "acquire",
+          "step_index": 0
+        }
+      ],
+      "job": {
+        "acknowledged_installs": 0,
+        "certificates": {},
+        "journal_revision": 0,
+        "manifest": "process-cut-goal",
+        "network": {
+          "node_count": 2,
+          "policy": "predicate",
+          "window": 8
+        },
+        "origins": [
+          0,
+          1
+        ],
+        "phase_index": 0,
+        "plan": {
+          "branches": [
+            {
+              "0": [
+                "a0"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b1"
+              ]
+            }
+          ],
+          "budgets": {
+            "frontier_states_per_expansion": 250000,
+            "phase_candidates": 250000,
+            "placements": 4096
+          },
+          "catalog": {
+            "0": [
+              [
+                "a0"
+              ],
+              [
+                "a1"
+              ]
+            ],
+            "1": [
+              [
+                "b0"
+              ],
+              [
+                "b1"
+              ]
+            ]
+          },
+          "cost": {
+            "handoffs": 1,
+            "installations": 2,
+            "phases": 2
+          },
+          "initial": {
+            "0": [
+              "a0"
+            ],
+            "1": [
+              "b0"
+            ]
+          },
+          "objective": [
+            "fewest guard phases",
+            "fewest installations"
+          ],
+          "phases": [
+            {
+              "box": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a0"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "0",
+                  "support": [
+                    "a1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              }
+            },
+            {
+              "box": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "1",
+                  "support": [
+                    "b1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b1"
+                ]
+              }
+            }
+          ],
+          "schema": "rollout-goal-plan-v1",
+          "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+          "search": {
+            "after": {
+              "cached_state_expansions": 2,
+              "catalog_placements": 4,
+              "frontier_calls": 2,
+              "frontier_search_states": 11,
+              "phase_candidates": 2,
+              "phase_edge_budget_exhausted": false
+            },
+            "before": {
+              "cached_state_expansions": 0,
+              "catalog_placements": 4,
+              "frontier_calls": 0,
+              "frontier_search_states": 0,
+              "phase_candidates": 0,
+              "phase_edge_budget_exhausted": false
+            },
+            "query": {
+              "cached_state_expansions": 0,
+              "incumbent_pruned_states": 0,
+              "new_state_expansions": 2,
+              "settled_states": 3
+            }
+          },
+          "status": "planned",
+          "target": {
+            "0": [
+              "a1"
+            ],
+            "1": [
+              "b1"
+            ]
+          },
+          "transitions": {
+            "0": [
+              {
+                "source": [
+                  "a0"
+                ],
+                "target": [
+                  "a1"
+                ]
+              }
+            ],
+            "1": [
+              {
+                "source": [
+                  "b0"
+                ],
+                "target": [
+                  "b1"
+                ]
+              }
+            ]
+          }
+        },
+        "plan_sha256": "972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4",
+        "reconciled_steps": 0,
+        "schema": "durable-rollout-v1",
+        "stage": "acquire",
+        "step_index": 0
+      },
+      "origins": {
+        "0": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a0"
+                    ],
+                    [
+                      "a1"
+                    ]
+                  ],
+                  "1": [
+                    [
+                      "b0"
+                    ]
+                  ]
+                },
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a0"
+                      ],
+                      [
+                        "a1"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  },
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                    "node": 1,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "b0"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1,
+                  "1": 1
+                }
+              },
+              "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+              "sequences": {
+                "0": 1,
+                "1": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1,
+            1
+          ],
+          "node_count": 2,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "1": {
+          "attempts": {},
+          "next": [
+            0,
+            0
+          ],
+          "node_count": 2,
+          "origin": 1,
+          "policy": "predicate",
+          "serial": 0,
+          "window": 8
+        }
+      }
+    },
+    "case": "independent coordinator process cut",
+    "coordinator_returncode": -9,
+    "coordinator_sigkills": 1,
+    "cut": {
+      "event": "acquire-returned",
+      "phase_index": 0
+    },
+    "database_snapshots": {
+      "after": [
+        {
+          "path": "databases/cut-0/after/network/origin-0.sqlite",
+          "sha256": "7f8d993981bd5ebe325237856a8d8f14e434b7715be0f80bbad6071731f1a9ee"
+        },
+        {
+          "path": "databases/cut-0/after/network/origin-1.sqlite",
+          "sha256": "bea60da05e9574dff5dfe6ce5c37696317ab868e9c9b053579a93ae8e5fea170"
+        },
+        {
+          "path": "databases/cut-0/after/network/process-node-0.sqlite",
+          "sha256": "dc3a659e4816afc852629be8b7d9a7c25d1ce8a9029a7e5107886d6bd9200052"
+        },
+        {
+          "path": "databases/cut-0/after/network/process-node-1.sqlite",
+          "sha256": "15b3f2a8415d430001c94d0a911a38d85d40fb5761c8c73348379beae032cff8"
+        },
+        {
+          "path": "databases/cut-0/after/rollout.sqlite",
+          "sha256": "f3487f1b09440ecfe65a0cd684987be724b40dd2dd4441a131b9d6c48338d8de"
+        }
+      ],
+      "before": [
+        {
+          "path": "databases/cut-0/before/network/origin-0.sqlite",
+          "sha256": "768d98b5a8449e37b1046fa8481e7a01e65d5885c97e629b314706f387ad9dea"
+        },
+        {
+          "path": "databases/cut-0/before/network/origin-1.sqlite",
+          "sha256": "d82dc94a9d9ad8bc3e148278ce9bd3936ad9d734d2a2439afbf77f1f1391ce58"
+        },
+        {
+          "path": "databases/cut-0/before/network/process-node-0.sqlite",
+          "sha256": "918fc3e77357e326dd5a0e7588d743792dd0f571c2ff245b802f70d20970c437"
+        },
+        {
+          "path": "databases/cut-0/before/network/process-node-1.sqlite",
+          "sha256": "474c7ca4d9b801c8a4a3ff4a141376c1a4c8088352c0e947eb0fdbadc1ac9142"
+        },
+        {
+          "path": "databases/cut-0/before/rollout.sqlite",
+          "sha256": "c89750dfe9039c4a0e76403ca6d75137cc7e610f63a2fafc585e5bad9bafb6ad"
+        }
+      ]
+    },
+    "owner_sigkills": 1,
+    "owner_states_after": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "b1"
+        ],
+        "window": 8
+      }
+    },
+    "owner_states_before": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a0"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a0"
+              ],
+              [
+                "a1"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a0"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "b0"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "node": 1,
+            "observed_generation": 0,
+            "options": [
+              [
+                "b0"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "b0"
+        ],
+        "window": 8
+      }
+    },
+    "owners_remained_alive_at_coordinator_cut": true,
+    "result": {
+      "acknowledged_installs": 2,
+      "goal_reached": true,
+      "phase_index": 2,
+      "planned_cost": {
+        "handoffs": 1,
+        "installations": 2,
+        "phases": 2
+      },
+      "reconciled_steps": 0,
+      "stage": "complete",
+      "status": "complete",
+      "step_index": 0,
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        }
+      }
+    },
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "before": {
+      "cut": {
+        "event": "install-returned",
+        "phase_index": 0
+      },
+      "events": [
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "acquire-returned",
+          "phase_index": 0,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "phase-recorded",
+          "phase_index": 0,
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "install-returned",
+          "node": "0",
+          "phase_index": 0,
+          "response": {
+            "observed": {
+              "generation": 1,
+              "node": 0,
+              "support": [
+                "a1"
+              ]
+            },
+            "status": "installed"
+          },
+          "stage": "install",
+          "step_index": 0
+        }
+      ],
+      "job": {
+        "acknowledged_installs": 0,
+        "certificates": {
+          "0": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        },
+        "journal_revision": 1,
+        "manifest": "process-cut-goal",
+        "network": {
+          "node_count": 2,
+          "policy": "predicate",
+          "window": 8
+        },
+        "origins": [
+          0,
+          1
+        ],
+        "phase_index": 0,
+        "plan": {
+          "branches": [
+            {
+              "0": [
+                "a0"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b1"
+              ]
+            }
+          ],
+          "budgets": {
+            "frontier_states_per_expansion": 250000,
+            "phase_candidates": 250000,
+            "placements": 4096
+          },
+          "catalog": {
+            "0": [
+              [
+                "a0"
+              ],
+              [
+                "a1"
+              ]
+            ],
+            "1": [
+              [
+                "b0"
+              ],
+              [
+                "b1"
+              ]
+            ]
+          },
+          "cost": {
+            "handoffs": 1,
+            "installations": 2,
+            "phases": 2
+          },
+          "initial": {
+            "0": [
+              "a0"
+            ],
+            "1": [
+              "b0"
+            ]
+          },
+          "objective": [
+            "fewest guard phases",
+            "fewest installations"
+          ],
+          "phases": [
+            {
+              "box": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a0"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "0",
+                  "support": [
+                    "a1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              }
+            },
+            {
+              "box": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "1",
+                  "support": [
+                    "b1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b1"
+                ]
+              }
+            }
+          ],
+          "schema": "rollout-goal-plan-v1",
+          "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+          "search": {
+            "after": {
+              "cached_state_expansions": 2,
+              "catalog_placements": 4,
+              "frontier_calls": 2,
+              "frontier_search_states": 11,
+              "phase_candidates": 2,
+              "phase_edge_budget_exhausted": false
+            },
+            "before": {
+              "cached_state_expansions": 0,
+              "catalog_placements": 4,
+              "frontier_calls": 0,
+              "frontier_search_states": 0,
+              "phase_candidates": 0,
+              "phase_edge_budget_exhausted": false
+            },
+            "query": {
+              "cached_state_expansions": 0,
+              "incumbent_pruned_states": 0,
+              "new_state_expansions": 2,
+              "settled_states": 3
+            }
+          },
+          "status": "planned",
+          "target": {
+            "0": [
+              "a1"
+            ],
+            "1": [
+              "b1"
+            ]
+          },
+          "transitions": {
+            "0": [
+              {
+                "source": [
+                  "a0"
+                ],
+                "target": [
+                  "a1"
+                ]
+              }
+            ],
+            "1": [
+              {
+                "source": [
+                  "b0"
+                ],
+                "target": [
+                  "b1"
+                ]
+              }
+            ]
+          }
+        },
+        "plan_sha256": "972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4",
+        "reconciled_steps": 0,
+        "schema": "durable-rollout-v1",
+        "stage": "install",
+        "step_index": 0
+      },
+      "origins": {
+        "0": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a0"
+                    ],
+                    [
+                      "a1"
+                    ]
+                  ],
+                  "1": [
+                    [
+                      "b0"
+                    ]
+                  ]
+                },
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a0"
+                      ],
+                      [
+                        "a1"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  },
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                    "node": 1,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "b0"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1,
+                  "1": 1
+                }
+              },
+              "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+              "sequences": {
+                "0": 1,
+                "1": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1,
+            1
+          ],
+          "node_count": 2,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "1": {
+          "attempts": {},
+          "next": [
+            0,
+            0
+          ],
+          "node_count": 2,
+          "origin": 1,
+          "policy": "predicate",
+          "serial": 0,
+          "window": 8
+        }
+      }
+    },
+    "case": "independent coordinator process cut",
+    "coordinator_returncode": -9,
+    "coordinator_sigkills": 1,
+    "cut": {
+      "event": "install-returned",
+      "phase_index": 0
+    },
+    "database_snapshots": {
+      "after": [
+        {
+          "path": "databases/cut-1/after/network/origin-0.sqlite",
+          "sha256": "7f8d993981bd5ebe325237856a8d8f14e434b7715be0f80bbad6071731f1a9ee"
+        },
+        {
+          "path": "databases/cut-1/after/network/origin-1.sqlite",
+          "sha256": "bea60da05e9574dff5dfe6ce5c37696317ab868e9c9b053579a93ae8e5fea170"
+        },
+        {
+          "path": "databases/cut-1/after/network/process-node-0.sqlite",
+          "sha256": "dc3a659e4816afc852629be8b7d9a7c25d1ce8a9029a7e5107886d6bd9200052"
+        },
+        {
+          "path": "databases/cut-1/after/network/process-node-1.sqlite",
+          "sha256": "15b3f2a8415d430001c94d0a911a38d85d40fb5761c8c73348379beae032cff8"
+        },
+        {
+          "path": "databases/cut-1/after/rollout.sqlite",
+          "sha256": "e39507632b83d7dfe869e8444ce30ad61f8959db1144df986adec2b3a63e59fe"
+        }
+      ],
+      "before": [
+        {
+          "path": "databases/cut-1/before/network/origin-0.sqlite",
+          "sha256": "768d98b5a8449e37b1046fa8481e7a01e65d5885c97e629b314706f387ad9dea"
+        },
+        {
+          "path": "databases/cut-1/before/network/origin-1.sqlite",
+          "sha256": "d82dc94a9d9ad8bc3e148278ce9bd3936ad9d734d2a2439afbf77f1f1391ce58"
+        },
+        {
+          "path": "databases/cut-1/before/network/process-node-0.sqlite",
+          "sha256": "784dfdb53d6a156b8f7ca2d688fda03660031c66ae958f55805dd1a54d688954"
+        },
+        {
+          "path": "databases/cut-1/before/network/process-node-1.sqlite",
+          "sha256": "474c7ca4d9b801c8a4a3ff4a141376c1a4c8088352c0e947eb0fdbadc1ac9142"
+        },
+        {
+          "path": "databases/cut-1/before/rollout.sqlite",
+          "sha256": "1ab1aa8d5ef24ee0d58e1f23c120d6cfd5162c068e27e807e66ca801aa15d8c9"
+        }
+      ]
+    },
+    "owner_sigkills": 1,
+    "owner_states_after": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "b1"
+        ],
+        "window": 8
+      }
+    },
+    "owner_states_before": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a0"
+              ],
+              [
+                "a1"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "b0"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "node": 1,
+            "observed_generation": 0,
+            "options": [
+              [
+                "b0"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "b0"
+        ],
+        "window": 8
+      }
+    },
+    "owners_remained_alive_at_coordinator_cut": true,
+    "result": {
+      "acknowledged_installs": 1,
+      "goal_reached": true,
+      "phase_index": 2,
+      "planned_cost": {
+        "handoffs": 1,
+        "installations": 2,
+        "phases": 2
+      },
+      "reconciled_steps": 1,
+      "stage": "complete",
+      "status": "complete",
+      "step_index": 0,
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        }
+      }
+    },
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "before": {
+      "cut": {
+        "event": "acquire-returned",
+        "phase_index": 1
+      },
+      "events": [
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "acquire-returned",
+          "phase_index": 0,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "phase-recorded",
+          "phase_index": 0,
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "install-returned",
+          "node": "0",
+          "phase_index": 0,
+          "response": {
+            "observed": {
+              "generation": 1,
+              "node": 0,
+              "support": [
+                "a1"
+              ]
+            },
+            "status": "installed"
+          },
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "installation-recorded",
+          "node": "0",
+          "outcome": "installed",
+          "phase_index": 0,
+          "stage": "install",
+          "step_index": 1
+        },
+        {
+          "completed_phase": 0,
+          "event": "phase-completed",
+          "phase_index": 1,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ],
+                [
+                  "b1"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "acquire-returned",
+          "phase_index": 1,
+          "stage": "acquire",
+          "step_index": 0
+        }
+      ],
+      "job": {
+        "acknowledged_installs": 1,
+        "certificates": {
+          "0": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        },
+        "journal_revision": 3,
+        "manifest": "process-cut-goal",
+        "network": {
+          "node_count": 2,
+          "policy": "predicate",
+          "window": 8
+        },
+        "origins": [
+          0,
+          1
+        ],
+        "phase_index": 1,
+        "plan": {
+          "branches": [
+            {
+              "0": [
+                "a0"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b1"
+              ]
+            }
+          ],
+          "budgets": {
+            "frontier_states_per_expansion": 250000,
+            "phase_candidates": 250000,
+            "placements": 4096
+          },
+          "catalog": {
+            "0": [
+              [
+                "a0"
+              ],
+              [
+                "a1"
+              ]
+            ],
+            "1": [
+              [
+                "b0"
+              ],
+              [
+                "b1"
+              ]
+            ]
+          },
+          "cost": {
+            "handoffs": 1,
+            "installations": 2,
+            "phases": 2
+          },
+          "initial": {
+            "0": [
+              "a0"
+            ],
+            "1": [
+              "b0"
+            ]
+          },
+          "objective": [
+            "fewest guard phases",
+            "fewest installations"
+          ],
+          "phases": [
+            {
+              "box": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a0"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "0",
+                  "support": [
+                    "a1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              }
+            },
+            {
+              "box": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "1",
+                  "support": [
+                    "b1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b1"
+                ]
+              }
+            }
+          ],
+          "schema": "rollout-goal-plan-v1",
+          "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+          "search": {
+            "after": {
+              "cached_state_expansions": 2,
+              "catalog_placements": 4,
+              "frontier_calls": 2,
+              "frontier_search_states": 11,
+              "phase_candidates": 2,
+              "phase_edge_budget_exhausted": false
+            },
+            "before": {
+              "cached_state_expansions": 0,
+              "catalog_placements": 4,
+              "frontier_calls": 0,
+              "frontier_search_states": 0,
+              "phase_candidates": 0,
+              "phase_edge_budget_exhausted": false
+            },
+            "query": {
+              "cached_state_expansions": 0,
+              "incumbent_pruned_states": 0,
+              "new_state_expansions": 2,
+              "settled_states": 3
+            }
+          },
+          "status": "planned",
+          "target": {
+            "0": [
+              "a1"
+            ],
+            "1": [
+              "b1"
+            ]
+          },
+          "transitions": {
+            "0": [
+              {
+                "source": [
+                  "a0"
+                ],
+                "target": [
+                  "a1"
+                ]
+              }
+            ],
+            "1": [
+              {
+                "source": [
+                  "b0"
+                ],
+                "target": [
+                  "b1"
+                ]
+              }
+            ]
+          }
+        },
+        "plan_sha256": "972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4",
+        "reconciled_steps": 0,
+        "schema": "durable-rollout-v1",
+        "stage": "acquire",
+        "step_index": 0
+      },
+      "origins": {
+        "0": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a0"
+                    ],
+                    [
+                      "a1"
+                    ]
+                  ],
+                  "1": [
+                    [
+                      "b0"
+                    ]
+                  ]
+                },
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a0"
+                      ],
+                      [
+                        "a1"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  },
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                    "node": 1,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "b0"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1,
+                  "1": 1
+                }
+              },
+              "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+              "sequences": {
+                "0": 1,
+                "1": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1,
+            1
+          ],
+          "node_count": 2,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "1": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a1"
+                    ]
+                  ],
+                  "1": [
+                    [
+                      "b0"
+                    ],
+                    [
+                      "b1"
+                    ]
+                  ]
+                },
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "mode": "envelope",
+                "origin": 1,
+                "receipts": [
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                    "node": 0,
+                    "observed_generation": 1,
+                    "options": [
+                      [
+                        "a1"
+                      ]
+                    ],
+                    "origin": 1,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  },
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                    "node": 1,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "b0"
+                      ],
+                      [
+                        "b1"
+                      ]
+                    ],
+                    "origin": 1,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1,
+                  "1": 1
+                }
+              },
+              "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+              "sequences": {
+                "0": 1,
+                "1": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1,
+            1
+          ],
+          "node_count": 2,
+          "origin": 1,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        }
+      }
+    },
+    "case": "independent coordinator process cut",
+    "coordinator_returncode": -9,
+    "coordinator_sigkills": 1,
+    "cut": {
+      "event": "acquire-returned",
+      "phase_index": 1
+    },
+    "database_snapshots": {
+      "after": [
+        {
+          "path": "databases/cut-2/after/network/origin-0.sqlite",
+          "sha256": "7f8d993981bd5ebe325237856a8d8f14e434b7715be0f80bbad6071731f1a9ee"
+        },
+        {
+          "path": "databases/cut-2/after/network/origin-1.sqlite",
+          "sha256": "bea60da05e9574dff5dfe6ce5c37696317ab868e9c9b053579a93ae8e5fea170"
+        },
+        {
+          "path": "databases/cut-2/after/network/process-node-0.sqlite",
+          "sha256": "dc3a659e4816afc852629be8b7d9a7c25d1ce8a9029a7e5107886d6bd9200052"
+        },
+        {
+          "path": "databases/cut-2/after/network/process-node-1.sqlite",
+          "sha256": "15b3f2a8415d430001c94d0a911a38d85d40fb5761c8c73348379beae032cff8"
+        },
+        {
+          "path": "databases/cut-2/after/rollout.sqlite",
+          "sha256": "f3487f1b09440ecfe65a0cd684987be724b40dd2dd4441a131b9d6c48338d8de"
+        }
+      ],
+      "before": [
+        {
+          "path": "databases/cut-2/before/network/origin-0.sqlite",
+          "sha256": "768d98b5a8449e37b1046fa8481e7a01e65d5885c97e629b314706f387ad9dea"
+        },
+        {
+          "path": "databases/cut-2/before/network/origin-1.sqlite",
+          "sha256": "3c2ebbdb18c4eb4c2b88f0f628adac1b3efd576f4e2d182a8d040c440be5ee08"
+        },
+        {
+          "path": "databases/cut-2/before/network/process-node-0.sqlite",
+          "sha256": "ffdb3aad437785eda9f93d5865a590a6c0c9853958fcaa434caf57a5c7680df6"
+        },
+        {
+          "path": "databases/cut-2/before/network/process-node-1.sqlite",
+          "sha256": "2c9436d49d08621c96c771c2e6836f8bf598ed3e81971c5191d09c6a79c7a20e"
+        },
+        {
+          "path": "databases/cut-2/before/rollout.sqlite",
+          "sha256": "9c9667c6fac461fe61a1999a8a71be1635dbda95cd0684c3a017a8944e34a7f0"
+        }
+      ]
+    },
+    "owner_sigkills": 1,
+    "owner_states_after": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "b1"
+        ],
+        "window": 8
+      }
+    },
+    "owner_states_before": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a0"
+              ],
+              [
+                "a1"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          },
+          "1:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "node": 0,
+            "observed_generation": 1,
+            "options": [
+              [
+                "a1"
+              ]
+            ],
+            "origin": 1,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "b0"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "node": 1,
+            "observed_generation": 0,
+            "options": [
+              [
+                "b0"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          },
+          "1:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "node": 1,
+            "observed_generation": 0,
+            "options": [
+              [
+                "b0"
+              ],
+              [
+                "b1"
+              ]
+            ],
+            "origin": 1,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "b0"
+        ],
+        "window": 8
+      }
+    },
+    "owners_remained_alive_at_coordinator_cut": true,
+    "result": {
+      "acknowledged_installs": 2,
+      "goal_reached": true,
+      "phase_index": 2,
+      "planned_cost": {
+        "handoffs": 1,
+        "installations": 2,
+        "phases": 2
+      },
+      "reconciled_steps": 0,
+      "stage": "complete",
+      "status": "complete",
+      "step_index": 0,
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        }
+      }
+    },
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "before": {
+      "cut": {
+        "event": "phase-recorded",
+        "phase_index": 1
+      },
+      "events": [
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "acquire-returned",
+          "phase_index": 0,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "phase-recorded",
+          "phase_index": 0,
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "install-returned",
+          "node": "0",
+          "phase_index": 0,
+          "response": {
+            "observed": {
+              "generation": 1,
+              "node": 0,
+              "support": [
+                "a1"
+              ]
+            },
+            "status": "installed"
+          },
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "installation-recorded",
+          "node": "0",
+          "outcome": "installed",
+          "phase_index": 0,
+          "stage": "install",
+          "step_index": 1
+        },
+        {
+          "completed_phase": 0,
+          "event": "phase-completed",
+          "phase_index": 1,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ],
+                [
+                  "b1"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "acquire-returned",
+          "phase_index": 1,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ],
+                [
+                  "b1"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "phase-recorded",
+          "phase_index": 1,
+          "stage": "release-old",
+          "step_index": 0
+        }
+      ],
+      "job": {
+        "acknowledged_installs": 1,
+        "certificates": {
+          "0": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "1": {
+            "box": {
+              "0": [
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ],
+                [
+                  "b1"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        },
+        "journal_revision": 4,
+        "manifest": "process-cut-goal",
+        "network": {
+          "node_count": 2,
+          "policy": "predicate",
+          "window": 8
+        },
+        "origins": [
+          0,
+          1
+        ],
+        "phase_index": 1,
+        "plan": {
+          "branches": [
+            {
+              "0": [
+                "a0"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b1"
+              ]
+            }
+          ],
+          "budgets": {
+            "frontier_states_per_expansion": 250000,
+            "phase_candidates": 250000,
+            "placements": 4096
+          },
+          "catalog": {
+            "0": [
+              [
+                "a0"
+              ],
+              [
+                "a1"
+              ]
+            ],
+            "1": [
+              [
+                "b0"
+              ],
+              [
+                "b1"
+              ]
+            ]
+          },
+          "cost": {
+            "handoffs": 1,
+            "installations": 2,
+            "phases": 2
+          },
+          "initial": {
+            "0": [
+              "a0"
+            ],
+            "1": [
+              "b0"
+            ]
+          },
+          "objective": [
+            "fewest guard phases",
+            "fewest installations"
+          ],
+          "phases": [
+            {
+              "box": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a0"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "0",
+                  "support": [
+                    "a1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              }
+            },
+            {
+              "box": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "1",
+                  "support": [
+                    "b1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b1"
+                ]
+              }
+            }
+          ],
+          "schema": "rollout-goal-plan-v1",
+          "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+          "search": {
+            "after": {
+              "cached_state_expansions": 2,
+              "catalog_placements": 4,
+              "frontier_calls": 2,
+              "frontier_search_states": 11,
+              "phase_candidates": 2,
+              "phase_edge_budget_exhausted": false
+            },
+            "before": {
+              "cached_state_expansions": 0,
+              "catalog_placements": 4,
+              "frontier_calls": 0,
+              "frontier_search_states": 0,
+              "phase_candidates": 0,
+              "phase_edge_budget_exhausted": false
+            },
+            "query": {
+              "cached_state_expansions": 0,
+              "incumbent_pruned_states": 0,
+              "new_state_expansions": 2,
+              "settled_states": 3
+            }
+          },
+          "status": "planned",
+          "target": {
+            "0": [
+              "a1"
+            ],
+            "1": [
+              "b1"
+            ]
+          },
+          "transitions": {
+            "0": [
+              {
+                "source": [
+                  "a0"
+                ],
+                "target": [
+                  "a1"
+                ]
+              }
+            ],
+            "1": [
+              {
+                "source": [
+                  "b0"
+                ],
+                "target": [
+                  "b1"
+                ]
+              }
+            ]
+          }
+        },
+        "plan_sha256": "972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4",
+        "reconciled_steps": 0,
+        "schema": "durable-rollout-v1",
+        "stage": "release-old",
+        "step_index": 0
+      },
+      "origins": {
+        "0": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a0"
+                    ],
+                    [
+                      "a1"
+                    ]
+                  ],
+                  "1": [
+                    [
+                      "b0"
+                    ]
+                  ]
+                },
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a0"
+                      ],
+                      [
+                        "a1"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  },
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                    "node": 1,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "b0"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1,
+                  "1": 1
+                }
+              },
+              "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+              "sequences": {
+                "0": 1,
+                "1": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1,
+            1
+          ],
+          "node_count": 2,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "1": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a1"
+                    ]
+                  ],
+                  "1": [
+                    [
+                      "b0"
+                    ],
+                    [
+                      "b1"
+                    ]
+                  ]
+                },
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "mode": "envelope",
+                "origin": 1,
+                "receipts": [
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                    "node": 0,
+                    "observed_generation": 1,
+                    "options": [
+                      [
+                        "a1"
+                      ]
+                    ],
+                    "origin": 1,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  },
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                    "node": 1,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "b0"
+                      ],
+                      [
+                        "b1"
+                      ]
+                    ],
+                    "origin": 1,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1,
+                  "1": 1
+                }
+              },
+              "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+              "sequences": {
+                "0": 1,
+                "1": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1,
+            1
+          ],
+          "node_count": 2,
+          "origin": 1,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        }
+      }
+    },
+    "case": "independent coordinator process cut",
+    "coordinator_returncode": -9,
+    "coordinator_sigkills": 1,
+    "cut": {
+      "event": "phase-recorded",
+      "phase_index": 1
+    },
+    "database_snapshots": {
+      "after": [
+        {
+          "path": "databases/cut-3/after/network/origin-0.sqlite",
+          "sha256": "7f8d993981bd5ebe325237856a8d8f14e434b7715be0f80bbad6071731f1a9ee"
+        },
+        {
+          "path": "databases/cut-3/after/network/origin-1.sqlite",
+          "sha256": "bea60da05e9574dff5dfe6ce5c37696317ab868e9c9b053579a93ae8e5fea170"
+        },
+        {
+          "path": "databases/cut-3/after/network/process-node-0.sqlite",
+          "sha256": "dc3a659e4816afc852629be8b7d9a7c25d1ce8a9029a7e5107886d6bd9200052"
+        },
+        {
+          "path": "databases/cut-3/after/network/process-node-1.sqlite",
+          "sha256": "15b3f2a8415d430001c94d0a911a38d85d40fb5761c8c73348379beae032cff8"
+        },
+        {
+          "path": "databases/cut-3/after/rollout.sqlite",
+          "sha256": "f3487f1b09440ecfe65a0cd684987be724b40dd2dd4441a131b9d6c48338d8de"
+        }
+      ],
+      "before": [
+        {
+          "path": "databases/cut-3/before/network/origin-0.sqlite",
+          "sha256": "768d98b5a8449e37b1046fa8481e7a01e65d5885c97e629b314706f387ad9dea"
+        },
+        {
+          "path": "databases/cut-3/before/network/origin-1.sqlite",
+          "sha256": "3c2ebbdb18c4eb4c2b88f0f628adac1b3efd576f4e2d182a8d040c440be5ee08"
+        },
+        {
+          "path": "databases/cut-3/before/network/process-node-0.sqlite",
+          "sha256": "ffdb3aad437785eda9f93d5865a590a6c0c9853958fcaa434caf57a5c7680df6"
+        },
+        {
+          "path": "databases/cut-3/before/network/process-node-1.sqlite",
+          "sha256": "2c9436d49d08621c96c771c2e6836f8bf598ed3e81971c5191d09c6a79c7a20e"
+        },
+        {
+          "path": "databases/cut-3/before/rollout.sqlite",
+          "sha256": "09d1679027123aa128c811df749a6a670717d0fddadcde4d0a0c54a1326678af"
+        }
+      ]
+    },
+    "owner_sigkills": 1,
+    "owner_states_after": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "b1"
+        ],
+        "window": 8
+      }
+    },
+    "owner_states_before": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "a0"
+              ],
+              [
+                "a1"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          },
+          "1:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "node": 0,
+            "observed_generation": 1,
+            "options": [
+              [
+                "a1"
+              ]
+            ],
+            "origin": 1,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "b0"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {
+          "0:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "node": 1,
+            "observed_generation": 0,
+            "options": [
+              [
+                "b0"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          },
+          "1:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "node": 1,
+            "observed_generation": 0,
+            "options": [
+              [
+                "b0"
+              ],
+              [
+                "b1"
+              ]
+            ],
+            "origin": 1,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "b0"
+        ],
+        "window": 8
+      }
+    },
+    "owners_remained_alive_at_coordinator_cut": true,
+    "result": {
+      "acknowledged_installs": 2,
+      "goal_reached": true,
+      "phase_index": 2,
+      "planned_cost": {
+        "handoffs": 1,
+        "installations": 2,
+        "phases": 2
+      },
+      "reconciled_steps": 0,
+      "stage": "complete",
+      "status": "complete",
+      "step_index": 0,
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        }
+      }
+    },
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "before": {
+      "cut": {
+        "event": "retire-returned",
+        "phase_index": 1,
+        "retired_phase": 0
+      },
+      "events": [
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "acquire-returned",
+          "phase_index": 0,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "phase-recorded",
+          "phase_index": 0,
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "install-returned",
+          "node": "0",
+          "phase_index": 0,
+          "response": {
+            "observed": {
+              "generation": 1,
+              "node": 0,
+              "support": [
+                "a1"
+              ]
+            },
+            "status": "installed"
+          },
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "installation-recorded",
+          "node": "0",
+          "outcome": "installed",
+          "phase_index": 0,
+          "stage": "install",
+          "step_index": 1
+        },
+        {
+          "completed_phase": 0,
+          "event": "phase-completed",
+          "phase_index": 1,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ],
+                [
+                  "b1"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "acquire-returned",
+          "phase_index": 1,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ],
+                [
+                  "b1"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "phase-recorded",
+          "phase_index": 1,
+          "stage": "release-old",
+          "step_index": 0
+        },
+        {
+          "event": "retire-returned",
+          "phase_index": 1,
+          "retired": true,
+          "retired_phase": 0,
+          "stage": "release-old",
+          "step_index": 0
+        }
+      ],
+      "job": {
+        "acknowledged_installs": 1,
+        "certificates": {
+          "0": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "1": {
+            "box": {
+              "0": [
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ],
+                [
+                  "b1"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        },
+        "journal_revision": 4,
+        "manifest": "process-cut-goal",
+        "network": {
+          "node_count": 2,
+          "policy": "predicate",
+          "window": 8
+        },
+        "origins": [
+          0,
+          1
+        ],
+        "phase_index": 1,
+        "plan": {
+          "branches": [
+            {
+              "0": [
+                "a0"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b1"
+              ]
+            }
+          ],
+          "budgets": {
+            "frontier_states_per_expansion": 250000,
+            "phase_candidates": 250000,
+            "placements": 4096
+          },
+          "catalog": {
+            "0": [
+              [
+                "a0"
+              ],
+              [
+                "a1"
+              ]
+            ],
+            "1": [
+              [
+                "b0"
+              ],
+              [
+                "b1"
+              ]
+            ]
+          },
+          "cost": {
+            "handoffs": 1,
+            "installations": 2,
+            "phases": 2
+          },
+          "initial": {
+            "0": [
+              "a0"
+            ],
+            "1": [
+              "b0"
+            ]
+          },
+          "objective": [
+            "fewest guard phases",
+            "fewest installations"
+          ],
+          "phases": [
+            {
+              "box": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a0"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "0",
+                  "support": [
+                    "a1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              }
+            },
+            {
+              "box": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "1",
+                  "support": [
+                    "b1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b1"
+                ]
+              }
+            }
+          ],
+          "schema": "rollout-goal-plan-v1",
+          "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+          "search": {
+            "after": {
+              "cached_state_expansions": 2,
+              "catalog_placements": 4,
+              "frontier_calls": 2,
+              "frontier_search_states": 11,
+              "phase_candidates": 2,
+              "phase_edge_budget_exhausted": false
+            },
+            "before": {
+              "cached_state_expansions": 0,
+              "catalog_placements": 4,
+              "frontier_calls": 0,
+              "frontier_search_states": 0,
+              "phase_candidates": 0,
+              "phase_edge_budget_exhausted": false
+            },
+            "query": {
+              "cached_state_expansions": 0,
+              "incumbent_pruned_states": 0,
+              "new_state_expansions": 2,
+              "settled_states": 3
+            }
+          },
+          "status": "planned",
+          "target": {
+            "0": [
+              "a1"
+            ],
+            "1": [
+              "b1"
+            ]
+          },
+          "transitions": {
+            "0": [
+              {
+                "source": [
+                  "a0"
+                ],
+                "target": [
+                  "a1"
+                ]
+              }
+            ],
+            "1": [
+              {
+                "source": [
+                  "b0"
+                ],
+                "target": [
+                  "b1"
+                ]
+              }
+            ]
+          }
+        },
+        "plan_sha256": "972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4",
+        "reconciled_steps": 0,
+        "schema": "durable-rollout-v1",
+        "stage": "release-old",
+        "step_index": 0
+      },
+      "origins": {
+        "0": {
+          "attempts": {},
+          "next": [
+            1,
+            1
+          ],
+          "node_count": 2,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "1": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a1"
+                    ]
+                  ],
+                  "1": [
+                    [
+                      "b0"
+                    ],
+                    [
+                      "b1"
+                    ]
+                  ]
+                },
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "mode": "envelope",
+                "origin": 1,
+                "receipts": [
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                    "node": 0,
+                    "observed_generation": 1,
+                    "options": [
+                      [
+                        "a1"
+                      ]
+                    ],
+                    "origin": 1,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  },
+                  {
+                    "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                    "node": 1,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "b0"
+                      ],
+                      [
+                        "b1"
+                      ]
+                    ],
+                    "origin": 1,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1,
+                  "1": 1
+                }
+              },
+              "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+              "sequences": {
+                "0": 1,
+                "1": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1,
+            1
+          ],
+          "node_count": 2,
+          "origin": 1,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        }
+      }
+    },
+    "case": "independent coordinator process cut",
+    "coordinator_returncode": -9,
+    "coordinator_sigkills": 1,
+    "cut": {
+      "event": "retire-returned",
+      "phase_index": 1,
+      "retired_phase": 0
+    },
+    "database_snapshots": {
+      "after": [
+        {
+          "path": "databases/cut-4/after/network/origin-0.sqlite",
+          "sha256": "7f8d993981bd5ebe325237856a8d8f14e434b7715be0f80bbad6071731f1a9ee"
+        },
+        {
+          "path": "databases/cut-4/after/network/origin-1.sqlite",
+          "sha256": "bea60da05e9574dff5dfe6ce5c37696317ab868e9c9b053579a93ae8e5fea170"
+        },
+        {
+          "path": "databases/cut-4/after/network/process-node-0.sqlite",
+          "sha256": "dc3a659e4816afc852629be8b7d9a7c25d1ce8a9029a7e5107886d6bd9200052"
+        },
+        {
+          "path": "databases/cut-4/after/network/process-node-1.sqlite",
+          "sha256": "15b3f2a8415d430001c94d0a911a38d85d40fb5761c8c73348379beae032cff8"
+        },
+        {
+          "path": "databases/cut-4/after/rollout.sqlite",
+          "sha256": "f3487f1b09440ecfe65a0cd684987be724b40dd2dd4441a131b9d6c48338d8de"
+        }
+      ],
+      "before": [
+        {
+          "path": "databases/cut-4/before/network/origin-0.sqlite",
+          "sha256": "7f8d993981bd5ebe325237856a8d8f14e434b7715be0f80bbad6071731f1a9ee"
+        },
+        {
+          "path": "databases/cut-4/before/network/origin-1.sqlite",
+          "sha256": "3c2ebbdb18c4eb4c2b88f0f628adac1b3efd576f4e2d182a8d040c440be5ee08"
+        },
+        {
+          "path": "databases/cut-4/before/network/process-node-0.sqlite",
+          "sha256": "a1056a5c3ba3d411e39d8d6e49c9ecacfff7129704f6f5908e711f8ca579102a"
+        },
+        {
+          "path": "databases/cut-4/before/network/process-node-1.sqlite",
+          "sha256": "2dab16d05a412840d6048a42a86ff783b87bf8642598d0738b2d1b9a6ec178b8"
+        },
+        {
+          "path": "databases/cut-4/before/rollout.sqlite",
+          "sha256": "09d1679027123aa128c811df749a6a670717d0fddadcde4d0a0c54a1326678af"
+        }
+      ]
+    },
+    "owner_sigkills": 1,
+    "owner_states_after": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "b1"
+        ],
+        "window": 8
+      }
+    },
+    "owner_states_before": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "1:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "node": 0,
+            "observed_generation": 1,
+            "options": [
+              [
+                "a1"
+              ]
+            ],
+            "origin": 1,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "b0"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {
+          "1:1": {
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "node": 1,
+            "observed_generation": 0,
+            "options": [
+              [
+                "b0"
+              ],
+              [
+                "b1"
+              ]
+            ],
+            "origin": 1,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "b0"
+        ],
+        "window": 8
+      }
+    },
+    "owners_remained_alive_at_coordinator_cut": true,
+    "result": {
+      "acknowledged_installs": 2,
+      "goal_reached": true,
+      "phase_index": 2,
+      "planned_cost": {
+        "handoffs": 1,
+        "installations": 2,
+        "phases": 2
+      },
+      "reconciled_steps": 0,
+      "stage": "complete",
+      "status": "complete",
+      "step_index": 0,
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        }
+      }
+    },
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "before": {
+      "cut": {
+        "event": "retire-returned",
+        "phase_index": 1,
+        "retired_phase": 1
+      },
+      "events": [
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "acquire-returned",
+          "phase_index": 0,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a0"
+                ],
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:0",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "phase-recorded",
+          "phase_index": 0,
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "install-returned",
+          "node": "0",
+          "phase_index": 0,
+          "response": {
+            "observed": {
+              "generation": 1,
+              "node": 0,
+              "support": [
+                "a1"
+              ]
+            },
+            "status": "installed"
+          },
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "installation-recorded",
+          "node": "0",
+          "outcome": "installed",
+          "phase_index": 0,
+          "stage": "install",
+          "step_index": 1
+        },
+        {
+          "completed_phase": 0,
+          "event": "phase-completed",
+          "phase_index": 1,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ],
+                [
+                  "b1"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "acquire-returned",
+          "phase_index": 1,
+          "stage": "acquire",
+          "step_index": 0
+        },
+        {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ],
+                [
+                  "b1"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "event": "phase-recorded",
+          "phase_index": 1,
+          "stage": "release-old",
+          "step_index": 0
+        },
+        {
+          "event": "retire-returned",
+          "phase_index": 1,
+          "retired": true,
+          "retired_phase": 0,
+          "stage": "release-old",
+          "step_index": 0
+        },
+        {
+          "event": "old-phase-released",
+          "phase_index": 1,
+          "retired_phase": 0,
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "install-returned",
+          "node": "1",
+          "phase_index": 1,
+          "response": {
+            "observed": {
+              "generation": 1,
+              "node": 1,
+              "support": [
+                "b1"
+              ]
+            },
+            "status": "installed"
+          },
+          "stage": "install",
+          "step_index": 0
+        },
+        {
+          "event": "installation-recorded",
+          "node": "1",
+          "outcome": "installed",
+          "phase_index": 1,
+          "stage": "install",
+          "step_index": 1
+        },
+        {
+          "completed_phase": 1,
+          "event": "phase-completed",
+          "phase_index": 1,
+          "stage": "release-final",
+          "step_index": 1
+        },
+        {
+          "event": "retire-returned",
+          "phase_index": 1,
+          "retired": true,
+          "retired_phase": 1,
+          "stage": "release-final",
+          "step_index": 1
+        }
+      ],
+      "job": {
+        "acknowledged_installs": 2,
+        "certificates": {
+          "1": {
+            "box": {
+              "0": [
+                [
+                  "a1"
+                ]
+              ],
+              "1": [
+                [
+                  "b0"
+                ],
+                [
+                  "b1"
+                ]
+              ]
+            },
+            "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "process-cut-goal:r:972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4:p:1",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        },
+        "journal_revision": 7,
+        "manifest": "process-cut-goal",
+        "network": {
+          "node_count": 2,
+          "policy": "predicate",
+          "window": 8
+        },
+        "origins": [
+          0,
+          1
+        ],
+        "phase_index": 1,
+        "plan": {
+          "branches": [
+            {
+              "0": [
+                "a0"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b0"
+              ]
+            },
+            {
+              "0": [
+                "a1"
+              ],
+              "1": [
+                "b1"
+              ]
+            }
+          ],
+          "budgets": {
+            "frontier_states_per_expansion": 250000,
+            "phase_candidates": 250000,
+            "placements": 4096
+          },
+          "catalog": {
+            "0": [
+              [
+                "a0"
+              ],
+              [
+                "a1"
+              ]
+            ],
+            "1": [
+              [
+                "b0"
+              ],
+              [
+                "b1"
+              ]
+            ]
+          },
+          "cost": {
+            "handoffs": 1,
+            "installations": 2,
+            "phases": 2
+          },
+          "initial": {
+            "0": [
+              "a0"
+            ],
+            "1": [
+              "b0"
+            ]
+          },
+          "objective": [
+            "fewest guard phases",
+            "fewest installations"
+          ],
+          "phases": [
+            {
+              "box": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a0"
+                  ],
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a0"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "0",
+                  "support": [
+                    "a1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              }
+            },
+            {
+              "box": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "local_paths": {
+                "0": [
+                  [
+                    "a1"
+                  ]
+                ],
+                "1": [
+                  [
+                    "b0"
+                  ],
+                  [
+                    "b1"
+                  ]
+                ]
+              },
+              "source": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b0"
+                ]
+              },
+              "steps": [
+                {
+                  "node": "1",
+                  "support": [
+                    "b1"
+                  ]
+                }
+              ],
+              "target": {
+                "0": [
+                  "a1"
+                ],
+                "1": [
+                  "b1"
+                ]
+              }
+            }
+          ],
+          "schema": "rollout-goal-plan-v1",
+          "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+          "search": {
+            "after": {
+              "cached_state_expansions": 2,
+              "catalog_placements": 4,
+              "frontier_calls": 2,
+              "frontier_search_states": 11,
+              "phase_candidates": 2,
+              "phase_edge_budget_exhausted": false
+            },
+            "before": {
+              "cached_state_expansions": 0,
+              "catalog_placements": 4,
+              "frontier_calls": 0,
+              "frontier_search_states": 0,
+              "phase_candidates": 0,
+              "phase_edge_budget_exhausted": false
+            },
+            "query": {
+              "cached_state_expansions": 0,
+              "incumbent_pruned_states": 0,
+              "new_state_expansions": 2,
+              "settled_states": 3
+            }
+          },
+          "status": "planned",
+          "target": {
+            "0": [
+              "a1"
+            ],
+            "1": [
+              "b1"
+            ]
+          },
+          "transitions": {
+            "0": [
+              {
+                "source": [
+                  "a0"
+                ],
+                "target": [
+                  "a1"
+                ]
+              }
+            ],
+            "1": [
+              {
+                "source": [
+                  "b0"
+                ],
+                "target": [
+                  "b1"
+                ]
+              }
+            ]
+          }
+        },
+        "plan_sha256": "972506e5c568e9b37ec4b082bde91f3d2e13f92f42fbf027a636b16d74badcb4",
+        "reconciled_steps": 0,
+        "schema": "durable-rollout-v1",
+        "stage": "release-final",
+        "step_index": 1
+      },
+      "origins": {
+        "0": {
+          "attempts": {},
+          "next": [
+            1,
+            1
+          ],
+          "node_count": 2,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "1": {
+          "attempts": {},
+          "next": [
+            1,
+            1
+          ],
+          "node_count": 2,
+          "origin": 1,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        }
+      }
+    },
+    "case": "independent coordinator process cut",
+    "coordinator_returncode": -9,
+    "coordinator_sigkills": 1,
+    "cut": {
+      "event": "retire-returned",
+      "phase_index": 1,
+      "retired_phase": 1
+    },
+    "database_snapshots": {
+      "after": [
+        {
+          "path": "databases/cut-5/after/network/origin-0.sqlite",
+          "sha256": "7f8d993981bd5ebe325237856a8d8f14e434b7715be0f80bbad6071731f1a9ee"
+        },
+        {
+          "path": "databases/cut-5/after/network/origin-1.sqlite",
+          "sha256": "bea60da05e9574dff5dfe6ce5c37696317ab868e9c9b053579a93ae8e5fea170"
+        },
+        {
+          "path": "databases/cut-5/after/network/process-node-0.sqlite",
+          "sha256": "dc3a659e4816afc852629be8b7d9a7c25d1ce8a9029a7e5107886d6bd9200052"
+        },
+        {
+          "path": "databases/cut-5/after/network/process-node-1.sqlite",
+          "sha256": "15b3f2a8415d430001c94d0a911a38d85d40fb5761c8c73348379beae032cff8"
+        },
+        {
+          "path": "databases/cut-5/after/rollout.sqlite",
+          "sha256": "f3487f1b09440ecfe65a0cd684987be724b40dd2dd4441a131b9d6c48338d8de"
+        }
+      ],
+      "before": [
+        {
+          "path": "databases/cut-5/before/network/origin-0.sqlite",
+          "sha256": "7f8d993981bd5ebe325237856a8d8f14e434b7715be0f80bbad6071731f1a9ee"
+        },
+        {
+          "path": "databases/cut-5/before/network/origin-1.sqlite",
+          "sha256": "bea60da05e9574dff5dfe6ce5c37696317ab868e9c9b053579a93ae8e5fea170"
+        },
+        {
+          "path": "databases/cut-5/before/network/process-node-0.sqlite",
+          "sha256": "dc3a659e4816afc852629be8b7d9a7c25d1ce8a9029a7e5107886d6bd9200052"
+        },
+        {
+          "path": "databases/cut-5/before/network/process-node-1.sqlite",
+          "sha256": "15b3f2a8415d430001c94d0a911a38d85d40fb5761c8c73348379beae032cff8"
+        },
+        {
+          "path": "databases/cut-5/before/rollout.sqlite",
+          "sha256": "af6eb4541e524c4f135b5050cd9d2aec1b10d624c4d3c76a7cd41619d66a9b88"
+        }
+      ]
+    },
+    "owner_sigkills": 1,
+    "owner_states_after": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "b1"
+        ],
+        "window": 8
+      }
+    },
+    "owner_states_before": {
+      "0": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "a1"
+        ],
+        "window": 8
+      },
+      "1": {
+        "catalog": {
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 1,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "b1"
+        ],
+        "window": 8
+      }
+    },
+    "owners_remained_alive_at_coordinator_cut": true,
+    "result": {
+      "acknowledged_installs": 2,
+      "goal_reached": true,
+      "phase_index": 2,
+      "planned_cost": {
+        "handoffs": 1,
+        "installations": 2,
+        "phases": 2
+      },
+      "reconciled_steps": 0,
+      "stage": "complete",
+      "status": "complete",
+      "step_index": 0,
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "a1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b1"
+            ]
+          }
+        }
+      }
+    },
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "attempted_trace": [
+      {
+        "event": "unreachable",
+        "request": {
+          "op": "read"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 7
+      }
+    ],
+    "case": "current target TCP partition does not skip the planned step",
+    "healed_result": {
+      "acknowledged_installs": 2,
+      "goal_reached": true,
+      "phase_index": 1,
+      "planned_cost": {
+        "handoffs": 0,
+        "installations": 2,
+        "phases": 1
+      },
+      "reconciled_steps": 0,
+      "stage": "complete",
+      "status": "complete",
+      "step_index": 0,
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "2": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "2": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          }
+        }
+      }
+    },
+    "owner_probe": {
+      "catalog": {
+        "0": {
+          "generation": 0,
+          "node": 0,
+          "support": [
+            "cap0",
+            "v0"
+          ]
+        }
+      },
+      "floor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "generation": 0,
+      "node": 0,
+      "policy": "predicate",
+      "slots": {
+        "0:1": {
+          "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+          "node": 0,
+          "observed_generation": 0,
+          "options": [
+            [
+              "cap0"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        }
+      },
+      "support": [
+        "cap0",
+        "v0"
+      ],
+      "window": 8
+    },
+    "result": {
+      "acknowledged_installs": 0,
+      "node": "0",
+      "phase_index": 0,
+      "planned_cost": {
+        "handoffs": 0,
+        "installations": 2,
+        "phases": 1
+      },
+      "reason": "owner-unreachable",
+      "reconciled_steps": 0,
+      "stage": "install",
+      "status": "pending",
+      "step_index": 0
+    }
+  },
+  {
+    "case": "external writer reached next planned support",
+    "controller_installations": 0,
+    "reconciled_steps": 1
+  },
+  {
+    "case": "foreign origin authority",
+    "cleanup_rpcs_sent": 0,
+    "foreign_authority_preserved": true,
+    "job_rejected": true
+  },
+  {
+    "case": "four-phase origin reuse",
+    "completed_reopen_extra_generations": 0,
+    "goal_reached": true,
+    "phases": 4
+  },
+  {
+    "acknowledged_installs": 0,
+    "case": "installation committed but acknowledgement lost",
+    "owner_generations": 1,
+    "reconciled_steps": 1
+  },
+  {
+    "case": "real job SQLite abort after core commitment",
+    "continued_use_rejected": true,
+    "reopened_completion": true
+  },
+  {
+    "case": "late prepare after completed owner reopen",
+    "phase_tokens": 2,
+    "rejected_prepares": 4
+  },
+  {
+    "case": "new-phase admission lost",
+    "healed_reopen_completed": true,
+    "old_guard_preserved": true
+  },
+  {
+    "case": "old close lost before delivery",
+    "healed_reopen_completed": true,
+    "next_guard_continuously_held": true
+  },
+  {
+    "boundary_result": {
+      "acknowledged_installs": 2,
+      "observed": {
+        "0": [
+          "cap0",
+          "v1"
+        ],
+        "1": [
+          "cap1",
+          "v1"
+        ],
+        "2": [
+          "cap2",
+          "v1"
+        ]
+      },
+      "phase_index": 0,
+      "planned_cost": {
+        "handoffs": 0,
+        "installations": 2,
+        "phases": 1
+      },
+      "reason": "phase-endpoint-differs",
+      "reconciled_steps": 0,
+      "stage": "install",
+      "status": "deviation",
+      "step_index": 2
+    },
+    "case": "non-target owner external deviation is detected at the phase boundary",
+    "external_update": {
+      "observed": {
+        "generation": 1,
+        "node": 2,
+        "support": [
+          "cap2",
+          "v1"
+        ]
+      },
+      "status": "installed"
+    },
+    "guard_retained_until_restored": true,
+    "result": {
+      "acknowledged_installs": 2,
+      "goal_reached": true,
+      "phase_index": 1,
+      "planned_cost": {
+        "handoffs": 0,
+        "installations": 2,
+        "phases": 1
+      },
+      "reconciled_steps": 0,
+      "stage": "complete",
+      "status": "complete",
+      "step_index": 0,
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "2": {
+            "generation": 2,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "2": {
+            "generation": 2,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          }
+        }
+      }
+    },
+    "trace": [
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 1,
+        "wall_ns": 2109572
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 2,
+        "wall_ns": 1642870
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 3,
+        "wall_ns": 1660967
+      },
+      {
+        "bytes": 416,
+        "event": "rpc",
+        "request": {
+          "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+          "op": "prepare",
+          "options": [
+            [
+              "cap0"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "cap0"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 4,
+        "wall_ns": 571188
+      },
+      {
+        "bytes": 416,
+        "event": "rpc",
+        "request": {
+          "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+          "op": "prepare",
+          "options": [
+            [
+              "cap1"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+            "node": 1,
+            "observed_generation": 0,
+            "options": [
+              [
+                "cap1"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 5,
+        "wall_ns": 481184
+      },
+      {
+        "bytes": 416,
+        "event": "rpc",
+        "request": {
+          "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+          "op": "prepare",
+          "options": [
+            [
+              "cap2"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+            "node": 2,
+            "observed_generation": 0,
+            "options": [
+              [
+                "cap2"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 6,
+        "wall_ns": 397427
+      },
+      {
+        "bytes": 125,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "cap2",
+            "v1"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v1"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 5,
+        "target": 2,
+        "tick": 7,
+        "wall_ns": 636186
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 8,
+        "wall_ns": 557358
+      },
+      {
+        "bytes": 193,
+        "event": "rpc",
+        "request": {
+          "expected_generation": 0,
+          "expected_support": [
+            "cap0",
+            "v0"
+          ],
+          "op": "install_if_current",
+          "support": [
+            "cap0",
+            "v1"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 9,
+        "wall_ns": 508324
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 10,
+        "wall_ns": 407062
+      },
+      {
+        "bytes": 193,
+        "event": "rpc",
+        "request": {
+          "expected_generation": 0,
+          "expected_support": [
+            "cap1",
+            "v0"
+          ],
+          "op": "install_if_current",
+          "support": [
+            "cap1",
+            "v1"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 11,
+        "wall_ns": 561424
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 12,
+        "wall_ns": 435545
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 13,
+        "wall_ns": 409115
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 14,
+        "wall_ns": 290217
+      },
+      {
+        "bytes": 125,
+        "event": "rpc",
+        "request": {
+          "op": "install",
+          "support": [
+            "cap2",
+            "v0"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 2,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 5,
+        "target": 2,
+        "tick": 15,
+        "wall_ns": 507934
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 16,
+        "wall_ns": 361033
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 17,
+        "wall_ns": 287933
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 2,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 18,
+        "wall_ns": 365709
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 19,
+        "wall_ns": 409927
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 20,
+        "wall_ns": 471138
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 2,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 21,
+        "wall_ns": 423586
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 22,
+        "wall_ns": 340723
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 23,
+        "wall_ns": 291558
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 2,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 24,
+        "wall_ns": 273661
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 25,
+        "wall_ns": 461714
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 26,
+        "wall_ns": 404378
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 27,
+        "wall_ns": 404848
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 28,
+        "wall_ns": 537407
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 29,
+        "wall_ns": 304858
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 2,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 30,
+        "wall_ns": 319790
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 31,
+        "wall_ns": 291989
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 32,
+        "wall_ns": 278689
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 2,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 33,
+        "wall_ns": 300181
+      }
+    ]
+  },
+  {
+    "case": "external write between read and conditional install",
+    "controller_installations": 0,
+    "external_profile_preserved": true,
+    "first_result": "owner-profile-changed",
+    "second_result": "deviation"
+  },
+  {
+    "actual_vectors": [
+      [
+        [
+          "a",
+          "shared"
+        ],
+        [
+          "other-b",
+          "shared"
+        ]
+      ],
+      [
+        [
+          "other-a",
+          "shared"
+        ],
+        [
+          "other-b",
+          "shared"
+        ]
+      ],
+      [
+        [
+          "other-a",
+          "shared"
+        ],
+        [
+          "b",
+          "shared"
+        ]
+      ]
+    ],
+    "case": "single collect would invent a joint target",
+    "joint_target_ever_present": false,
+    "result": {
+      "acknowledged_installs": 0,
+      "phase_index": 0,
+      "planned_cost": {
+        "handoffs": 0,
+        "installations": 0,
+        "phases": 0
+      },
+      "reason": "target-snapshot-changed",
+      "reconciled_steps": 0,
+      "stage": "complete",
+      "status": "pending",
+      "step_index": 0,
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "shared"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b",
+              "shared"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "other-a",
+              "shared"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b",
+              "shared"
+            ]
+          }
+        }
+      }
+    },
+    "target": [
+      [
+        "a",
+        "shared"
+      ],
+      [
+        "b",
+        "shared"
+      ]
+    ]
+  },
+  {
+    "case": "target collect with external ABA",
+    "generations": [
+      0,
+      2
+    ],
+    "initial_result": "target-snapshot-changed",
+    "stable_retry_completed": true
+  },
+  {
+    "case": "job commit reported an error after commit",
+    "completed": true,
+    "reopened_durable_stage": "install",
+    "stale_memory_stage": "acquire"
+  },
+  {
+    "boundary_result": {
+      "acknowledged_installs": 2,
+      "phase_index": 0,
+      "planned_cost": {
+        "handoffs": 0,
+        "installations": 2,
+        "phases": 1
+      },
+      "reason": "owner-unreachable",
+      "reconciled_steps": 0,
+      "stage": "install",
+      "status": "pending",
+      "step_index": 2
+    },
+    "case": "unrelated owner TCP partition inside a committed phase",
+    "local_step_trace": [
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 7,
+        "wall_ns": 466121
+      },
+      {
+        "bytes": 193,
+        "event": "rpc",
+        "request": {
+          "expected_generation": 0,
+          "expected_support": [
+            "cap0",
+            "v0"
+          ],
+          "op": "install_if_current",
+          "support": [
+            "cap0",
+            "v1"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 8,
+        "wall_ns": 465220
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 9,
+        "wall_ns": 421583
+      },
+      {
+        "bytes": 193,
+        "event": "rpc",
+        "request": {
+          "expected_generation": 0,
+          "expected_support": [
+            "cap1",
+            "v0"
+          ],
+          "op": "install_if_current",
+          "support": [
+            "cap1",
+            "v1"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 10,
+        "wall_ns": 458049
+      }
+    ],
+    "owner_probe_before": {
+      "catalog": {
+        "2": {
+          "generation": 0,
+          "node": 2,
+          "support": [
+            "cap2",
+            "v0"
+          ]
+        }
+      },
+      "floor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "generation": 0,
+      "node": 2,
+      "policy": "predicate",
+      "slots": {
+        "0:1": {
+          "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+          "node": 2,
+          "observed_generation": 0,
+          "options": [
+            [
+              "cap2"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        }
+      },
+      "support": [
+        "cap2",
+        "v0"
+      ],
+      "window": 8
+    },
+    "owner_probe_during": {
+      "catalog": {
+        "2": {
+          "generation": 0,
+          "node": 2,
+          "support": [
+            "cap2",
+            "v0"
+          ]
+        }
+      },
+      "floor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "generation": 0,
+      "node": 2,
+      "policy": "predicate",
+      "slots": {
+        "0:1": {
+          "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+          "node": 2,
+          "observed_generation": 0,
+          "options": [
+            [
+              "cap2"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        }
+      },
+      "support": [
+        "cap2",
+        "v0"
+      ],
+      "window": 8
+    },
+    "partitioned_owner": 2,
+    "result": {
+      "acknowledged_installs": 2,
+      "goal_reached": true,
+      "phase_index": 1,
+      "planned_cost": {
+        "handoffs": 0,
+        "installations": 2,
+        "phases": 1
+      },
+      "reconciled_steps": 0,
+      "stage": "complete",
+      "status": "complete",
+      "step_index": 0,
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "2": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "2": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          }
+        }
+      }
+    },
+    "trace": [
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 1,
+        "wall_ns": 1647818
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 2,
+        "wall_ns": 1801469
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 3,
+        "wall_ns": 3453251
+      },
+      {
+        "bytes": 416,
+        "event": "rpc",
+        "request": {
+          "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+          "op": "prepare",
+          "options": [
+            [
+              "cap0"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "cap0"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 4,
+        "wall_ns": 490888
+      },
+      {
+        "bytes": 416,
+        "event": "rpc",
+        "request": {
+          "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+          "op": "prepare",
+          "options": [
+            [
+              "cap1"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+            "node": 1,
+            "observed_generation": 0,
+            "options": [
+              [
+                "cap1"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 5,
+        "wall_ns": 443387
+      },
+      {
+        "bytes": 416,
+        "event": "rpc",
+        "request": {
+          "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+          "op": "prepare",
+          "options": [
+            [
+              "cap2"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "recovery-control:r:fbdf157898080725512179d16a1e2c63ff375bb54db54b9d9a4ce932a003641c:p:0",
+            "node": 2,
+            "observed_generation": 0,
+            "options": [
+              [
+                "cap2"
+              ]
+            ],
+            "origin": 0,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 6,
+        "wall_ns": 998952
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 7,
+        "wall_ns": 466121
+      },
+      {
+        "bytes": 193,
+        "event": "rpc",
+        "request": {
+          "expected_generation": 0,
+          "expected_support": [
+            "cap0",
+            "v0"
+          ],
+          "op": "install_if_current",
+          "support": [
+            "cap0",
+            "v1"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 8,
+        "wall_ns": 465220
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 9,
+        "wall_ns": 421583
+      },
+      {
+        "bytes": 193,
+        "event": "rpc",
+        "request": {
+          "expected_generation": 0,
+          "expected_support": [
+            "cap1",
+            "v0"
+          ],
+          "op": "install_if_current",
+          "support": [
+            "cap1",
+            "v1"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 10,
+        "wall_ns": 458049
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 11,
+        "wall_ns": 413672
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 12,
+        "wall_ns": 415234
+      },
+      {
+        "event": "unreachable",
+        "request": {
+          "op": "read"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 13
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 14,
+        "wall_ns": 539421
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 15,
+        "wall_ns": 329606
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 16,
+        "wall_ns": 3130617
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 17,
+        "wall_ns": 498770
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 18,
+        "wall_ns": 306460
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 19,
+        "wall_ns": 482495
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 20,
+        "wall_ns": 283887
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 21,
+        "wall_ns": 332099
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 22,
+        "wall_ns": 655806
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 23,
+        "wall_ns": 613222
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 24,
+        "wall_ns": 547563
+      },
+      {
+        "bytes": 69,
+        "event": "rpc",
+        "request": {
+          "op": "close",
+          "origin": 0,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 25,
+        "wall_ns": 659061
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 26,
+        "wall_ns": 974625
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 27,
+        "wall_ns": 612230
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 28,
+        "wall_ns": 550958
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 0,
+        "tick": 29,
+        "wall_ns": 382415
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 1,
+        "tick": 30,
+        "wall_ns": 391609
+      },
+      {
+        "bytes": 97,
+        "event": "rpc",
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "cap2",
+              "v0"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "target": 2,
+        "tick": 31,
+        "wall_ns": 620133
+      }
+    ]
+  }
+]

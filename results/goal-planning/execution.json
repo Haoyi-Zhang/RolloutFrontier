@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-11-19T03:34:33.596866+00:00",
+  "normal_exit_code": 0,
+  "optimized_exit_code": 0,
+  "normal_command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "-m",
+    "tests.goal_planner_study",
+    "--out",
+    "/workspace/scratch/e34480916f53/verification/r3-theory/pruned-normal"
+  ],
+  "optimized_command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-O",
+    "-B",
+    "-m",
+    "tests.goal_planner_study",
+    "--out",
+    "/workspace/scratch/e34480916f53/verification/r3-theory/pruned-optimized"
+  ],
+  "semantic_results_identical": true,
+  "summary_sha256": "4f9854104872b3ed775e75499a05cc984ba3bb736e8d1d559b9d79e5bfc684ed",
+  "queries_sha256": "5cf1ac836ffea541fd26ed3f0f603da234c3d84891e0b59cb416f5564ad99047",
+  "source_unchanged": true,
+  "regression_methods_per_mode": 16,
+  "regression_source_sha256": "da4dc6dc09b87ae6638bcf8c6cb41eae00f24cb60b01a652d7ccee626a57a2fa",
+  "encoding_truth_table_cells": 6699,
+  "followup_runs": [
+    {
+      "name": "regressions-normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.goal_planner_regression",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "regressions-optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-O",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.goal_planner_regression",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "check-normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-m",
+        "tests.goal_planner_study",
+        "--check",
+        "/workspace/scratch/e34480916f53/work/artifact/results/goal-planning"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "check-optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-O",
+        "-B",
+        "-m",
+        "tests.goal_planner_study",
+        "--check",
+        "/workspace/scratch/e34480916f53/work/artifact/results/goal-planning"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "timing_scope": "No timings are claimed; duration of the two original campaign invocations was not captured."
+}

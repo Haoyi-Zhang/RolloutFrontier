@@ -1,0 +1,1868 @@
+{
+  "design": "all 36 policy-catalog vectors and every compatible seed; three owned TCP/SQLite lifecycles",
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14"
+  },
+  "exhaustive": [
+    {
+      "compatible_vectors": 9,
+      "frontier_members_across_seeds": 11,
+      "role": "kubelet",
+      "rows": [
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                35,
+                36
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.35"
+              ],
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            36,
+            35
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                35,
+                36
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.35"
+              ],
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            36,
+            36
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            36,
+            36,
+            37
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                35,
+                36
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.35"
+              ],
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            37,
+            35
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                35,
+                36
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.35"
+              ],
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            37,
+            36
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            36,
+            37,
+            37
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                35,
+                36
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.35"
+              ],
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            36,
+            35
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                35,
+                36
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.35"
+              ],
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            36,
+            36
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            37,
+            36,
+            37
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                35,
+                36
+              ]
+            ],
+            [
+              [
+                37
+              ],
+              [
+                37
+              ],
+              [
+                35,
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.35"
+              ],
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            37,
+            35
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                35,
+                36
+              ]
+            ],
+            [
+              [
+                37
+              ],
+              [
+                37
+              ],
+              [
+                35,
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.35"
+              ],
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                37
+              ],
+              [
+                37
+              ],
+              [
+                35,
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 3,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ]
+            ],
+            "2": [
+              [
+                "client.35"
+              ],
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            37,
+            37
+          ]
+        }
+      ],
+      "vectors": 12
+    },
+    {
+      "compatible_vectors": 5,
+      "frontier_members_across_seeds": 6,
+      "role": "controller",
+      "rows": [
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36
+              ]
+            ]
+          ],
+          "product_mass": 4,
+          "selected": {
+            "0": [
+              [
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            36,
+            36
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            36,
+            36,
+            37
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36
+              ]
+            ]
+          ],
+          "product_mass": 4,
+          "selected": {
+            "0": [
+              [
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            37,
+            36
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            36,
+            37,
+            37
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36
+              ]
+            ]
+          ],
+          "product_mass": 4,
+          "selected": {
+            "0": [
+              [
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            36,
+            36
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            37,
+            36,
+            37
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36
+              ]
+            ],
+            [
+              [
+                37
+              ],
+              [
+                37
+              ],
+              [
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 4,
+          "selected": {
+            "0": [
+              [
+                "allows.36"
+              ]
+            ],
+            "1": [
+              [
+                "allows.36"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                37
+              ],
+              [
+                37
+              ],
+              [
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 2,
+          "selected": {
+            "0": [
+              [
+                "allows.36",
+                "allows.37"
+              ]
+            ],
+            "1": [
+              [
+                "allows.36",
+                "allows.37"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            37,
+            37
+          ]
+        }
+      ],
+      "vectors": 8
+    },
+    {
+      "compatible_vectors": 10,
+      "frontier_members_across_seeds": 14,
+      "role": "kubectl",
+      "rows": [
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36
+              ],
+              [
+                36
+              ],
+              [
+                35,
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 3,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ]
+            ],
+            "2": [
+              [
+                "client.35"
+              ],
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            36,
+            35
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36
+              ],
+              [
+                36
+              ],
+              [
+                35,
+                36,
+                37
+              ]
+            ],
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            36,
+            36
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36
+              ],
+              [
+                36
+              ],
+              [
+                35,
+                36,
+                37
+              ]
+            ],
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            36,
+            37
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            36,
+            36,
+            38
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            36,
+            37,
+            35
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            37,
+            36
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            36,
+            37,
+            37
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            36,
+            37,
+            38
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            37,
+            36,
+            35
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            36,
+            36
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            36,
+            37
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            37,
+            36,
+            38
+          ]
+        },
+        {
+          "compatible": false,
+          "versions": [
+            37,
+            37,
+            35
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ]
+            ],
+            [
+              [
+                37
+              ],
+              [
+                37
+              ],
+              [
+                36,
+                37,
+                38
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                36,
+                37
+              ]
+            ],
+            [
+              [
+                37
+              ],
+              [
+                37
+              ],
+              [
+                36,
+                37,
+                38
+              ]
+            ]
+          ],
+          "product_mass": 8,
+          "selected": {
+            "0": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "1": [
+              [
+                "allows.35",
+                "allows.36",
+                "allows.37"
+              ],
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            37,
+            37
+          ]
+        },
+        {
+          "compatible": true,
+          "frontier": [
+            [
+              [
+                37
+              ],
+              [
+                37
+              ],
+              [
+                36,
+                37,
+                38
+              ]
+            ]
+          ],
+          "product_mass": 3,
+          "selected": {
+            "0": [
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "1": [
+              [
+                "allows.36",
+                "allows.37",
+                "allows.38"
+              ]
+            ],
+            "2": [
+              [
+                "client.36"
+              ],
+              [
+                "client.37"
+              ],
+              [
+                "client.38"
+              ]
+            ]
+          },
+          "versions": [
+            37,
+            37,
+            38
+          ]
+        }
+      ],
+      "vectors": 16
+    }
+  ],
+  "lifecycles": [
+    {
+      "box": {
+        "0": [
+          [
+            "allows.35",
+            "allows.36"
+          ]
+        ],
+        "1": [
+          [
+            "allows.35",
+            "allows.36"
+          ]
+        ],
+        "2": [
+          [
+            "client.35"
+          ],
+          [
+            "client.36"
+          ]
+        ]
+      },
+      "current": [
+        37,
+        37,
+        36
+      ],
+      "delayed_prepare": "closed",
+      "frontier_size": 2,
+      "owner_and_origin_reopen": "authorized",
+      "product_mass": 8,
+      "retirement": "closed",
+      "role": "kubelet",
+      "trace": [
+        {
+          "owner": 0,
+          "policy_safe": true,
+          "proposed_minor": 36,
+          "status": "installed",
+          "versions_after": [
+            36,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 0,
+          "policy_safe": true,
+          "proposed_minor": 37,
+          "status": "installed",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 1,
+          "policy_safe": true,
+          "proposed_minor": 36,
+          "status": "installed",
+          "versions_after": [
+            37,
+            36,
+            36
+          ]
+        },
+        {
+          "owner": 1,
+          "policy_safe": true,
+          "proposed_minor": 37,
+          "status": "installed",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 2,
+          "policy_safe": true,
+          "proposed_minor": 35,
+          "status": "installed",
+          "versions_after": [
+            37,
+            37,
+            35
+          ]
+        },
+        {
+          "owner": 2,
+          "policy_safe": true,
+          "proposed_minor": 36,
+          "status": "installed",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 2,
+          "policy_safe": true,
+          "proposed_minor": 37,
+          "status": "blocked",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "box": {
+        "0": [
+          [
+            "allows.36"
+          ]
+        ],
+        "1": [
+          [
+            "allows.36"
+          ]
+        ],
+        "2": [
+          [
+            "client.36"
+          ]
+        ]
+      },
+      "current": [
+        37,
+        37,
+        36
+      ],
+      "delayed_prepare": "closed",
+      "frontier_size": 2,
+      "owner_and_origin_reopen": "authorized",
+      "product_mass": 4,
+      "retirement": "closed",
+      "role": "controller",
+      "trace": [
+        {
+          "owner": 0,
+          "policy_safe": true,
+          "proposed_minor": 36,
+          "status": "installed",
+          "versions_after": [
+            36,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 0,
+          "policy_safe": true,
+          "proposed_minor": 37,
+          "status": "installed",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 1,
+          "policy_safe": true,
+          "proposed_minor": 36,
+          "status": "installed",
+          "versions_after": [
+            37,
+            36,
+            36
+          ]
+        },
+        {
+          "owner": 1,
+          "policy_safe": true,
+          "proposed_minor": 37,
+          "status": "installed",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 2,
+          "policy_safe": true,
+          "proposed_minor": 36,
+          "status": "unchanged",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 2,
+          "policy_safe": true,
+          "proposed_minor": 37,
+          "status": "blocked",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "box": {
+        "0": [
+          [
+            "allows.35",
+            "allows.36",
+            "allows.37"
+          ],
+          [
+            "allows.36",
+            "allows.37",
+            "allows.38"
+          ]
+        ],
+        "1": [
+          [
+            "allows.35",
+            "allows.36",
+            "allows.37"
+          ],
+          [
+            "allows.36",
+            "allows.37",
+            "allows.38"
+          ]
+        ],
+        "2": [
+          [
+            "client.36"
+          ],
+          [
+            "client.37"
+          ]
+        ]
+      },
+      "current": [
+        37,
+        37,
+        36
+      ],
+      "delayed_prepare": "closed",
+      "frontier_size": 2,
+      "owner_and_origin_reopen": "authorized",
+      "product_mass": 8,
+      "retirement": "closed",
+      "role": "kubectl",
+      "trace": [
+        {
+          "owner": 0,
+          "policy_safe": true,
+          "proposed_minor": 36,
+          "status": "installed",
+          "versions_after": [
+            36,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 0,
+          "policy_safe": true,
+          "proposed_minor": 37,
+          "status": "installed",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 1,
+          "policy_safe": true,
+          "proposed_minor": 36,
+          "status": "installed",
+          "versions_after": [
+            37,
+            36,
+            36
+          ]
+        },
+        {
+          "owner": 1,
+          "policy_safe": true,
+          "proposed_minor": 37,
+          "status": "installed",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 2,
+          "policy_safe": true,
+          "proposed_minor": 35,
+          "status": "blocked",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 2,
+          "policy_safe": true,
+          "proposed_minor": 36,
+          "status": "unchanged",
+          "versions_after": [
+            37,
+            37,
+            36
+          ]
+        },
+        {
+          "owner": 2,
+          "policy_safe": true,
+          "proposed_minor": 37,
+          "status": "installed",
+          "versions_after": [
+            37,
+            37,
+            37
+          ]
+        },
+        {
+          "owner": 2,
+          "policy_safe": true,
+          "proposed_minor": 38,
+          "status": "blocked",
+          "versions_after": [
+            37,
+            37,
+            37
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Documented three-component version constraints executed as abstract support declarations, not Kubernetes binaries, cluster benchmarks or incident prevalence.",
+  "source": {
+    "cases": [
+      {
+        "client_minor_catalog": [
+          35,
+          36,
+          37
+        ],
+        "current": [
+          37,
+          37,
+          36
+        ],
+        "role": "kubelet"
+      },
+      {
+        "client_minor_catalog": [
+          36,
+          37
+        ],
+        "current": [
+          37,
+          37,
+          36
+        ],
+        "role": "controller"
+      },
+      {
+        "client_minor_catalog": [
+          35,
+          36,
+          37,
+          38
+        ],
+        "current": [
+          37,
+          37,
+          36
+        ],
+        "role": "kubectl"
+      }
+    ],
+    "checked_date": "2026-11-18",
+    "representation": "Manually transcribed numerical policy facts, not a downloaded cluster trace or an implementation-derived compatibility measurement.",
+    "rules": {
+      "controller_max_older_minor_distance": 1,
+      "controller_not_newer_than_each_contacted_apiserver": true,
+      "ha_apiserver_max_minor_distance": 1,
+      "kubectl_max_absolute_minor_distance_from_each_apiserver": 1,
+      "kubelet_max_older_minor_distance_at_or_above_1_25": 3,
+      "kubelet_not_newer_than_each_apiserver": true
+    },
+    "schema": 1,
+    "scope": "Three-component policy slices with two HA API servers. Additional deployment-tool restrictions, patch requirements, admission-webhook compatibility, node draining, upgrade sequencing, and Kubernetes execution are outside this fixture. The client can contact either API server.",
+    "server_minor_catalog": [
+      36,
+      37
+    ],
+    "source_sections": [
+      "Supported version skew / kube-apiserver",
+      "Supported version skew / kubelet",
+      "Supported version skew / kube-controller-manager, kube-scheduler, and cloud-controller-manager",
+      "Supported version skew / kubectl"
+    ],
+    "source_url": "https://kubernetes.io/releases/version-skew-policy/"
+  },
+  "source_sha256": {
+    "data/kubernetes-version-skew.json": "87fcbc771d0d54c590f6f7e770af0b8a38bb35e7ec22d16eb587bd79b6fdaa99",
+    "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+    "src/android_contracts.py": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+    "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/direct_batch.py": "f980854a6d7b789a540011eba94ad4970ab92565f183316384063c2a5418052e",
+    "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/goal_planner.py": "7489b4ffe8f62195dc0d054eac3c6d49452109077714203eb4a357405ca8f28d",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+    "src/rollout.py": "952e5a4811bcce107207df6cbd33e960014316dd2c334e89f52469c6d6085d2b",
+    "tests/kubernetes_skew_study.py": "f7b090dae471282778c5ab624d4dfcd79be329bfc455c27b78f142f7b6edc2a5"
+  },
+  "totals": {
+    "compatible_vectors": 24,
+    "frontier_members_across_seeds": 31,
+    "lifecycle_proposals": 21,
+    "vectors": 36
+  }
+}

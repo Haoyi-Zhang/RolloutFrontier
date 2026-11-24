@@ -1,0 +1,41 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-O",
+    "-B",
+    "-m",
+    "tests.protocol_boundary_suite",
+    "--out",
+    "/workspace/scratch/e34480916f53/verification/r3-integration/final-broad-refresh/runs/protocol-optimized"
+  ],
+  "core_source_after": {
+    "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+    "src/android_contracts.py": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+    "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae"
+  },
+  "core_source_before": {
+    "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+    "src/android_contracts.py": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+    "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae"
+  },
+  "core_source_scope": "The eight inherited src modules; each study also retains and checks its own declared source inventory.",
+  "core_source_unchanged": true,
+  "cwd": "/workspace/scratch/e34480916f53/work/artifact",
+  "elapsed_seconds": 3.181699507000303,
+  "exit_code": 0,
+  "finished_utc": "2026-11-19T03:58:24.045787+00:00",
+  "label": "protocol-optimized",
+  "started_utc": "2026-11-19T03:58:20.864107+00:00",
+  "stderr_log": "protocol-optimized.stderr.log",
+  "stdout_log": "protocol-optimized.stdout.log"
+}

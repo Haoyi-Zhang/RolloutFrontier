@@ -1,0 +1,42 @@
+{
+  "scope": "Locate short prose tails in compiled PDFs for manual layout review.\n\nThis is a candidate finder, not a proof of perfect typography. It matches the\nlast forty letters of source prose to PDF text. Mathematical/proof environments,\ntables, figures and lists are excluded; unmatched source passages remain listed.\nThe PDF must first be built from the current source. No paper file is changed.",
+  "documents": {
+    "main": {
+      "pdf": "main.pdf",
+      "sha256": "f70491752718adb5b2e241b7fe2dcf329da5d2f81fcc8530eb5483879f15d102",
+      "pages": 12,
+      "matched_passages": 74,
+      "short_tail_candidates": [],
+      "unmatched_source_passages": [],
+      "source_sha256": {
+        "main.tex": "6548beccda26e2dfa56a762e6eda42f5759008b92933de3139896b077f52ad54",
+        "structured-planning.tex": "1f6c8f783864132b80206892ceaa63f38f099a3c438a086441d147d548cd95d0",
+        "application-evaluation.tex": "c626cb1413dcb53ae4f0904791b0df274adbe33ffac0bae993487ac8bb6b8e49",
+        "factored-scale-evaluation.tex": "0b49b465947637b6d36b3fda356293aa8ecb1b8604063c27870333feaea524d7"
+      }
+    },
+    "supplement": {
+      "pdf": "supplement.pdf",
+      "sha256": "5872ef94b92f6a79a24703faee1ef962cd90519dcf4161183ecd0d3101b5d1b9",
+      "pages": 28,
+      "matched_passages": 210,
+      "short_tail_candidates": [],
+      "unmatched_source_passages": [],
+      "source_sha256": {
+        "supplement.tex": "20fa82c6a8f996a38c500ba37e67c212fde1cd3a5d0ff9a02901c19ee54ba2d4",
+        "goal-proofs-supplement.tex": "7b2a8e581ea3952bf7bfc04442af10aae07f52d6b6478f95be00ca393792a6d3",
+        "factored-proofs-supplement.tex": "f48dcd3390efbea894d778fe7819544e40c99ffe06a512cb10365ede258adb97",
+        "factored-evidence-supplement.tex": "06de478f0459fa4e94527470b3d0f081257868bbe1356d46121dc9555b4be603",
+        "goal-evaluation-supplement.tex": "95b91092bb2d940bbfbb85af39ec52249431b2cbcbf0ba8355e0b5d7bfd6ad52",
+        "goal-baseline-proofs.tex": "cf3219b857c94dbd162a3f6d8c615e4955c0c22b88b7b9414f92ba28fc4d6cb5",
+        "goal-phase-execution-supplement.tex": "c43b5ba7c45089b4436d967237c5ea227faeea4ded3cdf894358c4780f0bbf09",
+        "extensions-supplement.tex": "1cccbb9855956d281d8019aa1825790c929d8acf80aeb476bca41232b12f5944",
+        "schema-evidence-supplement.tex": "ac66ef48ed2d1637936caacbf9879789808e9ff9a7f9e671e0cb282f76209f93",
+        "factored-execution-supplement.tex": "c6a36564f2bd6781284013f3a04a514228d6c32e759a310cf4dd3f9b2839359a",
+        "supporting-studies.tex": "49f5a3095bbb75a218710eca1126c2a706342017e4e0678a39ee6ae513bc541a",
+        "deep-review-supplement.tex": "b4c1e2a126dce6e74178e48f365b870db2dccc6112ece00a1213b0095ea98b3c",
+        "deep-policy-supplement.tex": "691db06fe0f1bf2eba9616bdfd82febe1e4d48fd54604db345b1dbfa17ebfb82"
+      }
+    }
+  }
+}

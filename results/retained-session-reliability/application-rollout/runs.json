@@ -1,0 +1,74 @@
+[
+  {
+    "name": "fixed-clients-1-trial-1",
+    "path": "runs/fixed-clients-1-trial-1.json"
+  },
+  {
+    "name": "rollout-clients-1-trial-1",
+    "path": "runs/rollout-clients-1-trial-1.json"
+  },
+  {
+    "name": "rollout-clients-1-trial-2",
+    "path": "runs/rollout-clients-1-trial-2.json"
+  },
+  {
+    "name": "fixed-clients-1-trial-2",
+    "path": "runs/fixed-clients-1-trial-2.json"
+  },
+  {
+    "name": "fixed-clients-1-trial-3",
+    "path": "runs/fixed-clients-1-trial-3.json"
+  },
+  {
+    "name": "rollout-clients-1-trial-3",
+    "path": "runs/rollout-clients-1-trial-3.json"
+  },
+  {
+    "name": "fixed-clients-4-trial-1",
+    "path": "runs/fixed-clients-4-trial-1.json"
+  },
+  {
+    "name": "rollout-clients-4-trial-1",
+    "path": "runs/rollout-clients-4-trial-1.json"
+  },
+  {
+    "name": "rollout-clients-4-trial-2",
+    "path": "runs/rollout-clients-4-trial-2.json"
+  },
+  {
+    "name": "fixed-clients-4-trial-2",
+    "path": "runs/fixed-clients-4-trial-2.json"
+  },
+  {
+    "name": "fixed-clients-4-trial-3",
+    "path": "runs/fixed-clients-4-trial-3.json"
+  },
+  {
+    "name": "rollout-clients-4-trial-3",
+    "path": "runs/rollout-clients-4-trial-3.json"
+  },
+  {
+    "name": "fixed-clients-16-trial-1",
+    "path": "runs/fixed-clients-16-trial-1.json"
+  },
+  {
+    "name": "rollout-clients-16-trial-1",
+    "path": "runs/rollout-clients-16-trial-1.json"
+  },
+  {
+    "name": "rollout-clients-16-trial-2",
+    "path": "runs/rollout-clients-16-trial-2.json"
+  },
+  {
+    "name": "fixed-clients-16-trial-2",
+    "path": "runs/fixed-clients-16-trial-2.json"
+  },
+  {
+    "name": "fixed-clients-16-trial-3",
+    "path": "runs/fixed-clients-16-trial-3.json"
+  },
+  {
+    "name": "rollout-clients-16-trial-3",
+    "path": "runs/rollout-clients-16-trial-3.json"
+  }
+]

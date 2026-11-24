@@ -1,0 +1,48 @@
+{
+  "bindings": [
+    {
+      "binding": "goal-evidence-bindings.json",
+      "generated_files": 4,
+      "inputs": 8,
+      "numeric_macros": 20
+    },
+    {
+      "binding": "goal-review-bindings.json",
+      "generated_files": 7,
+      "inputs": 13,
+      "numeric_macros": 17
+    },
+    {
+      "binding": "extensions-bindings.json",
+      "generated_files": 5,
+      "inputs": 11,
+      "numeric_macros": 26
+    },
+    {
+      "binding": "schema-bindings.json",
+      "generated_files": 3,
+      "inputs": 7,
+      "numeric_macros": 13
+    },
+    {
+      "binding": "stage-bindings.json",
+      "generated_files": 3,
+      "inputs": 19,
+      "numeric_macros": 6
+    },
+    {
+      "binding": "factored-bindings.json",
+      "generated_files": 3,
+      "inputs": 9,
+      "numeric_macros": 25
+    },
+    {
+      "binding": "execution-bindings.json",
+      "generated_files": 3,
+      "inputs": 74,
+      "numeric_macros": 10
+    }
+  ],
+  "scope": "Publication source/data and macro bindings; independent semantic checkers run separately. No PDF or timing regeneration.",
+  "status": "PASS"
+}

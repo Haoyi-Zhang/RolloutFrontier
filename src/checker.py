@@ -464,7 +464,7 @@ def frontier_certificate(branches: list[dict[str, list[str]]], current: dict[str
         def dominates(left, right):
             return all((a | b) == a for a, b in zip(left, right))
 
-        # Equal candidate-acceptance vectors retain the least-metadata lexical guard.
+        # Equal candidate-acceptance vectors minimize term count, then lexical order.
         by_masks: dict[tuple[int, ...], dict[str, Any]] = {}
         for record in safe:
             old = by_masks.get(record["masks"])

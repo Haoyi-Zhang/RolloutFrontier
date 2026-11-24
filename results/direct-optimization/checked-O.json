@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "contexts": 16,
+  "repetitions_per_context": 3,
+  "queries_per_repetition": 32,
+  "distinct_batches_per_context": 32,
+  "proposals_per_batch": 96,
+  "worker_records": 48,
+  "completed_workers": 48,
+  "route_budget_seconds": 30,
+  "wall_time_limited_workers": 0,
+  "frontier_construction_refusals": 0,
+  "frontier_preparation_wall_budgets": 6,
+  "direct_completed_queries": 1536,
+  "frontier_completed_queries": 1344,
+  "direct_query_refusals": 0,
+  "comparable_optima": 1344,
+  "direct_query_wall_budgets": 0,
+  "frontier_query_wall_budgets": 0,
+  "distinct_frontiers_checked": 14,
+  "uncertified_frontier_preparations": 6,
+  "scope": "Independent design reconstruction, completed-frontier completeness checks, literal forecasts and timing aggregation; unfinished frontier preparations are retained without an offline completeness or large-case optimum claim; no timing remeasurement."
+}

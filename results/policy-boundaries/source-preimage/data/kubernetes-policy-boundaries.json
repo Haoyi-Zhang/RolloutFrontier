@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "source_url": "https://kubernetes.io/releases/version-skew-policy/",
+  "checked_date": "2026-11-18",
+  "source_sections": ["Supported version skew / kube-apiserver", "Supported version skew / kubelet"],
+  "representation": "Manually transcribed numerical policy facts and a finite positive encoding; not cluster traces or Kubernetes execution.",
+  "server_minor_catalog": [35, 36, 37],
+  "client_minor_catalog": [33, 34, 35, 36, 37],
+  "rules": {
+    "ha_gap": {"max_minor_distance": 1},
+    "not_newer": {"client_not_newer_than_each_contacted_server": true},
+    "max_lag": {"max_older_minor_distance": 3, "applies_at_or_above_minor": 25}
+  },
+  "ha_windows": {"35_36": [35, 36], "36_37": [36, 37]},
+  "server_profiles": {
+    "35": ["allows.33", "allows.34", "allows.35", "ha.35_36"],
+    "36": ["allows.33", "allows.34", "allows.35", "allows.36", "ha.35_36", "ha.36_37"],
+    "37": ["allows.34", "allows.35", "allows.36", "allows.37", "ha.36_37"]
+  },
+  "alternative_windows": {
+    "33": ["35_36"],
+    "34": ["35_36", "36_37"],
+    "35": ["35_36", "36_37"],
+    "36": ["36_37"],
+    "37": ["36_37"]
+  },
+  "boundary_cases": [
+    {"omitted_rule": "ha_gap", "incompatible": [35, 37, 35], "compatible": [36, 37, 35], "changed_owner": 0},
+    {"omitted_rule": "not_newer", "incompatible": [36, 36, 37], "compatible": [36, 36, 36], "changed_owner": 2},
+    {"omitted_rule": "max_lag", "incompatible": [37, 37, 33], "compatible": [37, 37, 34], "changed_owner": 2}
+  ],
+  "handoff": {
+    "manifest": "kubernetes-policy-handoff",
+    "old_origin": 0,
+    "new_origin": 1,
+    "initial": [36, 36, 36],
+    "target": [37, 37, 37],
+    "goal_proposals": [{"owner": 0, "minor": 37}, {"owner": 1, "minor": 37}, {"owner": 2, "minor": 37}],
+    "remaining_goal_proposals": [{"owner": 2, "minor": 37}],
+    "handoff_planning_state": [37, 37, 36],
+    "scope": "A coordinated handoff between two distinct origin identities using the same manifest predicate and identifier; not same-identity failover or autonomous replanning during a partition."
+  },
+  "scope": "Two contacted HA API servers and one kubelet, all at major version 1. Patch support, component upgrade sequencing, webhook compatibility, node draining, deployment-tool restrictions, other cluster components, Kubernetes binaries and incident prevalence are outside this fixture."
+}

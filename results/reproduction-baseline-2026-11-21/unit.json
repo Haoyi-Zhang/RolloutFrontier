@@ -1,0 +1,111 @@
+{
+  "cpu_seconds": 15.365208544,
+  "errors": 0,
+  "failures": 0,
+  "linux_child_subreaper_enabled": true,
+  "module_isolation": "fresh subprocess per test module",
+  "module_results": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "module": "tests.test_application_rollout",
+      "skipped": 0,
+      "tests_run": 12
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "module": "tests.test_factored_runtime",
+      "skipped": 0,
+      "tests_run": 16
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "module": "tests.test_schema_contracts",
+      "skipped": 0,
+      "tests_run": 8
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "module": "tests.test_smoke",
+      "skipped": 0,
+      "tests_run": 5
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "module": "tests.test_sqlite_paths",
+      "skipped": 0,
+      "tests_run": 2
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "module": "tests.test_verify_interruption",
+      "skipped": 0,
+      "tests_run": 2
+    }
+  ],
+  "module_wall_timeout_seconds": 180,
+  "peak_rss_kib": 35092,
+  "skipped": 0,
+  "test_ids": [
+    "tests.test_application_rollout.HandlerTests.test_broad_rollout_authority_does_not_authorize_business_codec",
+    "tests.test_application_rollout.HandlerTests.test_real_protojson_alias_order_and_removal",
+    "tests.test_application_rollout.HandlerTests.test_reopen_detects_corrupted_application_output",
+    "tests.test_application_rollout.HandlerTests.test_same_request_id_cannot_change_input",
+    "tests.test_application_rollout.HandlerTests.test_sqlite_effect_abort_is_fail_closed_and_reopens_without_effect",
+    "tests.test_application_rollout.HandlerTests.test_transform_domain_boundaries",
+    "tests.test_application_rollout.HandlerTests.test_unregistered_program_cannot_change_durable_profile",
+    "tests.test_application_rollout.PipelineTests.test_lost_sink_reply_is_recovered_from_actual_committed_effect",
+    "tests.test_application_rollout.PipelineTests.test_owner_sqlite_abort_closes_channel_and_preserves_retry_authority",
+    "tests.test_application_rollout.PipelineTests.test_removing_guard_rejects_real_downstream_work",
+    "tests.test_application_rollout.PipelineTests.test_retirement_drains_inflight_request_before_codec_removal",
+    "tests.test_application_rollout.PipelineTests.test_sixteen_concurrent_requests_have_distinct_durable_results",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_active_phase_authority_is_bound_to_its_complete_plan",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_actual_coordinator_kill_after_install_receipt",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_actual_coordinator_kill_after_partial_acquisition",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_actual_coordinator_kill_after_partial_old_retirement",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_actual_field_addition_join_normalizes_declared_metadata",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_actual_tcp_cut_preserves_live_owner_and_recovers",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_concurrent_exact_retries_share_first_complete_result",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_global_certificate_substitution_rejected",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_install_reply_lost_then_reconciled_once",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_integer_domain_rejected_before_pending_binding",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_manifest_limit_and_actual_cycle",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_old_retirement_reply_lost_keeps_new_global_phase",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_pending_dataflow_retains_all_guards_across_owner_death",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_registry_catalog_and_wrong_owner_rejected",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_request_input_snapshot_and_sequential_session_sequences",
+    "tests.test_factored_runtime.PhysicalRuntimeTests.test_successive_rollouts_reuse_bootstrap_registry_and_allocators",
+    "tests.test_schema_contracts.SchemaContracts.test_alias_removal_rejects_old_name",
+    "tests.test_schema_contracts.SchemaContracts.test_common_narrow_domain_handles_number_and_string_wires",
+    "tests.test_schema_contracts.SchemaContracts.test_every_retained_success_preserves_exact_record",
+    "tests.test_schema_contracts.SchemaContracts.test_int64_boundaries_round_trip_exactly",
+    "tests.test_schema_contracts.SchemaContracts.test_invalid_producer_record_rejected",
+    "tests.test_schema_contracts.SchemaContracts.test_key_bridge_accepts_both_emitted_names",
+    "tests.test_schema_contracts.SchemaContracts.test_narrow_writer_contract_remains_until_activation",
+    "tests.test_schema_contracts.SchemaContracts.test_unknown_field_is_not_silently_dropped",
+    "tests.test_smoke.CoreSmokeTests.test_delayed_prepare_cannot_resurrect",
+    "tests.test_smoke.CoreSmokeTests.test_exact_frontier_is_checkable",
+    "tests.test_smoke.CoreSmokeTests.test_greedy_result_is_safe",
+    "tests.test_smoke.CoreSmokeTests.test_marginal_cross_product_is_rejected",
+    "tests.test_smoke.CoreSmokeTests.test_search_bound_fails_closed",
+    "tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files",
+    "tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only",
+    "tests.test_verify_interruption.VerificationInterruptionTests.test_sigint_stops_group_and_finalizes_report",
+    "tests.test_verify_interruption.VerificationInterruptionTests.test_timeout_stops_group_and_preserves_remaining_check"
+  ],
+  "test_source_sha256": {
+    "tests/test_application_rollout.py": "ad214d34392b71276dfdc37d73998f05080dfd200c9f22afb2e66256c69efc47",
+    "tests/test_factored_runtime.py": "f782a1d9287a69175106bcaa28b3aed3319dcaada4074aaff89dc30afb13c869",
+    "tests/test_schema_contracts.py": "54a8384b87ff1ac72eebbf954e964118acd1e7360595287d932b3230bb03755a",
+    "tests/test_smoke.py": "68dc3ae3def07612792f1fcab6c1554d49be825eab1b7a3d0fccf708c773b5f1",
+    "tests/test_sqlite_paths.py": "32cd583da3b25b17635a9eeece9bc48dbb1c80a9d78d8aa755f090eed609f24d",
+    "tests/test_verify_interruption.py": "26c5d0e09b24200bb309f093296e328604cfda48b5a8a69df6cd7f264033c751"
+  },
+  "tests_run": 45,
+  "wall_seconds": 34.809818769997946
+}

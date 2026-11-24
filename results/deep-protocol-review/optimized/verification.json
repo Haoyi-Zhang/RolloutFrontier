@@ -1,0 +1,4416 @@
+{
+  "status": "PASS",
+  "tests": 56,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "tests_by_module": {
+    "tests.cancellation_lifecycle": 4,
+    "tests.recovery_type_aliases": 1,
+    "tests.origin_serialization": 11,
+    "tests.effect_drain": 14,
+    "tests.closed_objects": 2,
+    "tests.persistence_failures": 3,
+    "tests.origin_persistence_failures": 1,
+    "tests.receipt_snapshots": 0,
+    "tests.window_types": 5,
+    "tests.live_certificate_types": 3,
+    "tests.effect_registration": 12
+  },
+  "source_sha256": {
+    "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+    "src/android_contracts.py": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+    "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/direct_batch.py": "f980854a6d7b789a540011eba94ad4970ab92565f183316384063c2a5418052e",
+    "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/goal_planner.py": "7489b4ffe8f62195dc0d054eac3c6d49452109077714203eb4a357405ca8f28d",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+    "src/rollout.py": "952e5a4811bcce107207df6cbd33e960014316dd2c334e89f52469c6d6085d2b",
+    "tests/cancellation_lifecycle.py": "de02b915398ef49791ab11a4a34d40c781631f77959adc04c6169e2c6fc7f414",
+    "tests/closed_objects.py": "138c4ee324535d736b3bbc5e3c409af792ef7df60ba8a7b0d7e16a2f29a7dd22",
+    "tests/effect_drain.py": "599805b2783362982e52e6caa6b859151614348d6ba95a0f67002d82effe119b",
+    "tests/effect_registration.py": "92217c80501a8dbd8d2718c58210c346ea2d46ddce927cea0f8da427df35eddf",
+    "tests/full_path_costs.py": "e90a204cac1f9dc25fbb566c5f1991c2b3e60fd225060117484f3bafa630d115",
+    "tests/live_certificate_types.py": "c27cc38333bd67a64800d2594b4a532945e0fd4bc01fd8ac11d72b0cf512511b",
+    "tests/memory_lifecycle.py": "46bdd733e9664facd407464fdac3b0dbd46cf1352317bff1fa55c2f56c340290",
+    "tests/optimizer_benchmark.py": "4e925639c36bc5cf62b2c698e1563dcf5614efedcacfeefa7e144618ea27dfa5",
+    "tests/origin_persistence_failures.py": "e34fad443caaf7b8da281a9b1c81eea16ebc6aa15fbcf5d9b6cb64fbc22bbe48",
+    "tests/origin_serialization.py": "2429d52d4d1d6f99fc9de6c61221b7389cbbfed1ab62e27106edc440ff3ddf7b",
+    "tests/persistence_failures.py": "c7f73d86bee8e00b9c772935fe47076730e7ea409c7d2359c93040d547ce8543",
+    "tests/protocol_boundary_suite.py": "3878b8b04a27ae55eb25cefe7fe72c96748f36e4019339e9168ffc56add7baa2",
+    "tests/receipt_snapshots.py": "f7dcde7aef557dd6aed401de77a02e91e719a72be88839d152249c890100df70",
+    "tests/recovery_type_aliases.py": "ac7e7b1d37478050f9f39d795b6cb79d52c73bc438d8668dca800c5854b3b159",
+    "tests/window_types.py": "db2a489c97fd1e01069326999e7108d86db0d5a9f5016897d7c6f289e641ebf6"
+  },
+  "source_bytes_unchanged_during_run": true,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "optimized": 1,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "sqlite": "3.53.1"
+  },
+  "observations": {
+    "tests.persistence_failures": [
+      {
+        "kind": "actual owned loopback TCP with SQLite abort",
+        "request": {
+          "op": "prepare",
+          "origin": 0,
+          "sequence": 1,
+          "manifest": "owned-tcp",
+          "requires": [
+            "a"
+          ]
+        },
+        "first_reply": {
+          "reason": "durable-state-reopen-required",
+          "status": "unavailable"
+        },
+        "retry_reply": {
+          "reason": "durable-state-reopen-required",
+          "status": "unavailable"
+        },
+        "recovered_reply": {
+          "receipt": {
+            "manifest": "owned-tcp",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 0,
+            "requires": [
+              "a"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-tcp",
+              "op": "prepare",
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1
+            },
+            "response": {
+              "reason": "durable-state-reopen-required",
+              "status": "unavailable"
+            },
+            "bytes": 147,
+            "wall_ns": 441915
+          },
+          {
+            "event": "rpc",
+            "tick": 2,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-tcp",
+              "op": "prepare",
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1
+            },
+            "response": {
+              "reason": "durable-state-reopen-required",
+              "status": "unavailable"
+            },
+            "bytes": 147,
+            "wall_ns": 53150
+          },
+          {
+            "event": "crash",
+            "node": 0,
+            "tick": 2
+          },
+          {
+            "event": "recover",
+            "node": 0,
+            "tick": 2
+          },
+          {
+            "event": "rpc",
+            "tick": 3,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-tcp",
+              "op": "prepare",
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-tcp",
+                "node": 0,
+                "observed_generation": 0,
+                "origin": 0,
+                "requires": [
+                  "a"
+                ],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 224,
+            "wall_ns": 324798
+          }
+        ]
+      },
+      {
+        "kind": "simulated exception after actual commit",
+        "transition": "prepare",
+        "before": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "live": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "disk": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            },
+            "0:2": {
+              "manifest": "owned-next",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 2,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "recovered": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            },
+            "0:2": {
+              "manifest": "owned-next",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 2,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "acknowledged": false
+      },
+      {
+        "kind": "simulated exception after actual commit",
+        "transition": "close",
+        "before": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "live": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "disk": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {},
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "recovered": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {},
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "acknowledged": false
+      },
+      {
+        "kind": "simulated exception after actual commit",
+        "transition": "install",
+        "before": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "live": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "disk": {
+          "catalog": {
+            "0": {
+              "generation": 1,
+              "node": 0,
+              "support": [
+                "a",
+                "b"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 1,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a",
+            "b"
+          ],
+          "window": 8
+        },
+        "recovered": {
+          "catalog": {
+            "0": {
+              "generation": 1,
+              "node": 0,
+              "support": [
+                "a",
+                "b"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 1,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a",
+            "b"
+          ],
+          "window": 8
+        },
+        "acknowledged": false
+      },
+      {
+        "kind": "simulated exception after actual commit",
+        "transition": "merge",
+        "before": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "live": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "disk": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            },
+            "1": {
+              "generation": 1,
+              "node": 1,
+              "support": [
+                "b"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "recovered": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            },
+            "1": {
+              "generation": 1,
+              "node": 1,
+              "support": [
+                "b"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "acknowledged": false
+      },
+      {
+        "kind": "actual SQLite trigger abort",
+        "transition": "prepare",
+        "before": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "live": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "disk": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "recovered": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "acknowledged": false
+      },
+      {
+        "kind": "actual SQLite trigger abort",
+        "transition": "close",
+        "before": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "live": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "disk": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "recovered": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "acknowledged": false
+      },
+      {
+        "kind": "actual SQLite trigger abort",
+        "transition": "install",
+        "before": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "live": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "disk": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "recovered": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "acknowledged": false
+      },
+      {
+        "kind": "actual SQLite trigger abort",
+        "transition": "merge",
+        "before": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "live": {
+          "node": 0,
+          "generation": 0,
+          "support": [
+            "a"
+          ],
+          "window": 8,
+          "policy": "predicate",
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slots": {
+            "0:1": {
+              "status": "held",
+              "node": 0,
+              "origin": 0,
+              "sequence": 1,
+              "manifest": "owned-held",
+              "requires": [
+                "a"
+              ],
+              "observed_generation": 0
+            }
+          },
+          "catalog": {
+            "0": {
+              "node": 0,
+              "generation": 0,
+              "support": [
+                "a"
+              ]
+            }
+          }
+        },
+        "disk": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "recovered": {
+          "catalog": {
+            "0": {
+              "generation": 0,
+              "node": 0,
+              "support": [
+                "a"
+              ]
+            }
+          },
+          "floor": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generation": 0,
+          "node": 0,
+          "policy": "predicate",
+          "slots": {
+            "0:1": {
+              "manifest": "owned-held",
+              "node": 0,
+              "observed_generation": 0,
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1,
+              "status": "held"
+            }
+          },
+          "support": [
+            "a"
+          ],
+          "window": 8
+        },
+        "acknowledged": false
+      }
+    ],
+    "tests.origin_persistence_failures": [
+      {
+        "mode": "fixed",
+        "phase": "allocation",
+        "control": "actual SQLite trigger abort",
+        "before_write": {
+          "attempts": {},
+          "next": [
+            0
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 0,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            0
+          ],
+          "serial": 0,
+          "attempts": {}
+        },
+        "disk_after_error": {
+          "attempts": {},
+          "next": [
+            0
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 0,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            0
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 0,
+          "window": 8
+        },
+        "trace": [],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "fixed",
+        "phase": "allocation",
+        "control": "simulated error after actual commit",
+        "before_write": {
+          "attempts": {},
+          "next": [
+            0
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 0,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            0
+          ],
+          "serial": 0,
+          "attempts": {}
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "acquiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "floor": 1,
+              "status": "closed"
+            },
+            "bytes": 69,
+            "wall_ns": 429386
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "fixed",
+        "phase": "commit",
+        "control": "actual SQLite trigger abort",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "acquiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "acquiring",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "acquiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "origin": 0,
+                "requires": [
+                  "a"
+                ],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 230,
+            "wall_ns": 427123
+          },
+          {
+            "event": "rpc",
+            "tick": 2,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "floor": 1,
+              "status": "closed"
+            },
+            "bytes": 69,
+            "wall_ns": 155213
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "fixed",
+        "phase": "commit",
+        "control": "simulated error after actual commit",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "acquiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "acquiring",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "branch": 0,
+                "manifest": "owned-origin",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "branch": 0,
+                "manifest": "owned-origin",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "origin": 0,
+                "requires": [
+                  "a"
+                ],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 230,
+            "wall_ns": 501094
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "fixed",
+        "phase": "retire",
+        "control": "actual SQLite trigger abort",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "branch": 0,
+                "manifest": "owned-origin",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "committed",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "certificate": {
+                "manifest": "owned-origin",
+                "origin": 0,
+                "branch": 0,
+                "sequences": {
+                  "0": 1
+                },
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "branch": 0,
+                "manifest": "owned-origin",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "branch": 0,
+                "manifest": "owned-origin",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "origin": 0,
+                "requires": [
+                  "a"
+                ],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 230,
+            "wall_ns": 339991
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "fixed",
+        "phase": "retire",
+        "control": "simulated error after actual commit",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "branch": 0,
+                "manifest": "owned-origin",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "committed",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "certificate": {
+                "manifest": "owned-origin",
+                "origin": 0,
+                "branch": 0,
+                "sequences": {
+                  "0": 1
+                },
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "branch": 0,
+                "manifest": "owned-origin",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "retiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "origin": 0,
+                "requires": [
+                  "a"
+                ],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 230,
+            "wall_ns": 449405
+          },
+          {
+            "event": "rpc",
+            "tick": 2,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "floor": 1,
+              "status": "closed"
+            },
+            "bytes": 69,
+            "wall_ns": 194643
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "fixed",
+        "phase": "cleanup",
+        "control": "actual SQLite trigger abort",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "branch": 0,
+                "manifest": "owned-origin",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "retiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "retiring",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "certificate": {
+                "manifest": "owned-origin",
+                "origin": 0,
+                "branch": 0,
+                "sequences": {
+                  "0": 1
+                },
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "branch": 0,
+                "manifest": "owned-origin",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "retiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "origin": 0,
+                "requires": [
+                  "a"
+                ],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 230,
+            "wall_ns": 418639
+          },
+          {
+            "event": "rpc",
+            "tick": 2,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "floor": 1,
+              "status": "closed"
+            },
+            "bytes": 69,
+            "wall_ns": 184848
+          },
+          {
+            "event": "rpc",
+            "tick": 3,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "status": "closed"
+            },
+            "bytes": 59,
+            "wall_ns": 162213
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "fixed",
+        "phase": "cleanup",
+        "control": "simulated error after actual commit",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "branch": 0,
+                "manifest": "owned-origin",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "retiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "retiring",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "certificate": {
+                "manifest": "owned-origin",
+                "origin": 0,
+                "branch": 0,
+                "sequences": {
+                  "0": 1
+                },
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "origin": 0,
+                    "requires": [
+                      "a"
+                    ],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "origin": 0,
+              "requires": [
+                "a"
+              ],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "origin": 0,
+                "requires": [
+                  "a"
+                ],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 230,
+            "wall_ns": 464098
+          },
+          {
+            "event": "rpc",
+            "tick": 2,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "floor": 1,
+              "status": "closed"
+            },
+            "bytes": 69,
+            "wall_ns": 146651
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "envelope",
+        "phase": "allocation",
+        "control": "actual SQLite trigger abort",
+        "before_write": {
+          "attempts": {},
+          "next": [
+            0
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 0,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            0
+          ],
+          "serial": 0,
+          "attempts": {}
+        },
+        "disk_after_error": {
+          "attempts": {},
+          "next": [
+            0
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 0,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            0
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 0,
+          "window": 8
+        },
+        "trace": [],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "envelope",
+        "phase": "allocation",
+        "control": "simulated error after actual commit",
+        "before_write": {
+          "attempts": {},
+          "next": [
+            0
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 0,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            0
+          ],
+          "serial": 0,
+          "attempts": {}
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "acquiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "floor": 1,
+              "status": "closed"
+            },
+            "bytes": 69,
+            "wall_ns": 398209
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "envelope",
+        "phase": "commit",
+        "control": "actual SQLite trigger abort",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "acquiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "acquiring",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "acquiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "options": [
+                [
+                  "a"
+                ]
+              ],
+              "origin": 0,
+              "requires": [],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 260,
+            "wall_ns": 354804
+          },
+          {
+            "event": "rpc",
+            "tick": 2,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "floor": 1,
+              "status": "closed"
+            },
+            "bytes": 69,
+            "wall_ns": 148173
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "envelope",
+        "phase": "commit",
+        "control": "simulated error after actual commit",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "acquiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "acquiring",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "manifest": "owned-origin",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "manifest": "owned-origin",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "options": [
+                [
+                  "a"
+                ]
+              ],
+              "origin": 0,
+              "requires": [],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 260,
+            "wall_ns": 405029
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "envelope",
+        "phase": "retire",
+        "control": "actual SQLite trigger abort",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "manifest": "owned-origin",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "committed",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "certificate": {
+                "mode": "envelope",
+                "manifest": "owned-origin",
+                "origin": 0,
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "sequences": {
+                  "0": 1
+                },
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "manifest": "owned-origin",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "manifest": "owned-origin",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "options": [
+                [
+                  "a"
+                ]
+              ],
+              "origin": 0,
+              "requires": [],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 260,
+            "wall_ns": 393672
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "envelope",
+        "phase": "retire",
+        "control": "simulated error after actual commit",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "manifest": "owned-origin",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "committed"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "committed",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "certificate": {
+                "mode": "envelope",
+                "manifest": "owned-origin",
+                "origin": 0,
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "sequences": {
+                  "0": 1
+                },
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "manifest": "owned-origin",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "retiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "options": [
+                [
+                  "a"
+                ]
+              ],
+              "origin": 0,
+              "requires": [],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 260,
+            "wall_ns": 361663
+          },
+          {
+            "event": "rpc",
+            "tick": 2,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "floor": 1,
+              "status": "closed"
+            },
+            "bytes": 69,
+            "wall_ns": 192650
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "envelope",
+        "phase": "cleanup",
+        "control": "actual SQLite trigger abort",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "manifest": "owned-origin",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "retiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "retiring",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "certificate": {
+                "mode": "envelope",
+                "manifest": "owned-origin",
+                "origin": 0,
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "sequences": {
+                  "0": 1
+                },
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "manifest": "owned-origin",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "retiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "options": [
+                [
+                  "a"
+                ]
+              ],
+              "origin": 0,
+              "requires": [],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 260,
+            "wall_ns": 517197
+          },
+          {
+            "event": "rpc",
+            "tick": 2,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "floor": 1,
+              "status": "closed"
+            },
+            "bytes": 69,
+            "wall_ns": 160922
+          },
+          {
+            "event": "rpc",
+            "tick": 3,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "status": "closed"
+            },
+            "bytes": 59,
+            "wall_ns": 85819
+          }
+        ],
+        "later_authorization_stopped": true
+      },
+      {
+        "mode": "envelope",
+        "phase": "cleanup",
+        "control": "simulated error after actual commit",
+        "before_write": {
+          "attempts": {
+            "1": {
+              "certificate": {
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "manifest": "owned-origin",
+                "mode": "envelope",
+                "origin": 0,
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ],
+                "sequences": {
+                  "0": 1
+                }
+              },
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "status": "retiring"
+            }
+          },
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "live_after_error": {
+          "origin": 0,
+          "node_count": 1,
+          "window": 8,
+          "policy": "predicate",
+          "next": [
+            1
+          ],
+          "serial": 1,
+          "attempts": {
+            "1": {
+              "status": "retiring",
+              "manifest": "owned-origin",
+              "sequences": {
+                "0": 1
+              },
+              "certificate": {
+                "mode": "envelope",
+                "manifest": "owned-origin",
+                "origin": 0,
+                "box": {
+                  "0": [
+                    [
+                      "a"
+                    ]
+                  ]
+                },
+                "sequences": {
+                  "0": 1
+                },
+                "receipts": [
+                  {
+                    "manifest": "owned-origin",
+                    "node": 0,
+                    "observed_generation": 0,
+                    "options": [
+                      [
+                        "a"
+                      ]
+                    ],
+                    "origin": 0,
+                    "requires": [],
+                    "sequence": 1,
+                    "status": "held"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "disk_after_error": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "recovered": {
+          "attempts": {},
+          "next": [
+            1
+          ],
+          "node_count": 1,
+          "origin": 0,
+          "policy": "predicate",
+          "serial": 1,
+          "window": 8
+        },
+        "trace": [
+          {
+            "event": "rpc",
+            "tick": 1,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "manifest": "owned-origin",
+              "op": "prepare",
+              "options": [
+                [
+                  "a"
+                ]
+              ],
+              "origin": 0,
+              "requires": [],
+              "sequence": 1
+            },
+            "response": {
+              "receipt": {
+                "manifest": "owned-origin",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "a"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              "status": "held"
+            },
+            "bytes": 260,
+            "wall_ns": 346121
+          },
+          {
+            "event": "rpc",
+            "tick": 2,
+            "source": 0,
+            "target": 0,
+            "request": {
+              "op": "close",
+              "origin": 0,
+              "sequence": 1
+            },
+            "response": {
+              "floor": 1,
+              "status": "closed"
+            },
+            "bytes": 69,
+            "wall_ns": 155093
+          }
+        ],
+        "later_authorization_stopped": true
+      }
+    ],
+    "tests.live_certificate_types": [
+      {
+        "mode": "envelope",
+        "aliases": [
+          {
+            "path": [
+              "origin"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "origin"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "sequences",
+              "0"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "sequences",
+              "0"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "node"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "node"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "origin"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "origin"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "sequence"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "sequence"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "observed_generation"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "observed_generation"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          }
+        ]
+      },
+      {
+        "mode": "fixed",
+        "aliases": [
+          {
+            "path": [
+              "origin"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "origin"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "sequences",
+              "0"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "sequences",
+              "0"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "node"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "node"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "origin"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "origin"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "sequence"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "sequence"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "observed_generation"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "receipts",
+              0,
+              "observed_generation"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "branch"
+            ],
+            "replacement_type": "bool",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          },
+          {
+            "path": [
+              "branch"
+            ],
+            "replacement_type": "float",
+            "offline_rejected": true,
+            "live_rejected": true,
+            "no_rpc": true
+          }
+        ]
+      },
+      {
+        "case": "uncertified attempt",
+        "malformed_inputs": 6,
+        "denied_without_rpc": true,
+        "explicit_recovery_completed": true
+      }
+    ],
+    "tests.effect_registration": [
+      {
+        "case": "inconsistent active orphan negative control",
+        "recovery_rejected": true,
+        "reservation_preserved": true,
+        "write_absent": true
+      },
+      {
+        "case": "cancelled before registration",
+        "mode": "fixed",
+        "acquiring_journal_retained": true,
+        "explicit_recovery": true
+      },
+      {
+        "case": "cancelled before registration",
+        "mode": "envelope",
+        "acquiring_journal_retained": true,
+        "explicit_recovery": true
+      },
+      {
+        "case": "lease capacity",
+        "completed": 64,
+        "refused_before_allocation": true,
+        "retained_closed_leases": 64,
+        "live_holds": 0
+      },
+      {
+        "case": "operation capacity",
+        "completed": 2048,
+        "refused_before_next_admission": true,
+        "retirement_succeeded": true
+      },
+      {
+        "case": "capacity with existing authority",
+        "leases": 64,
+        "existing_reused": true,
+        "new_sequence_allocated": false
+      },
+      {
+        "case": "origin commit reported error",
+        "mode": "fixed",
+        "durable_commit": false,
+        "ledger_phase_after_reopen": "closed",
+        "fenced": 1
+      },
+      {
+        "case": "origin commit reported error",
+        "mode": "fixed",
+        "durable_commit": true,
+        "ledger_phase_after_reopen": "open",
+        "fenced": 0
+      },
+      {
+        "case": "origin commit reported error",
+        "mode": "envelope",
+        "durable_commit": false,
+        "ledger_phase_after_reopen": "closed",
+        "fenced": 1
+      },
+      {
+        "case": "origin commit reported error",
+        "mode": "envelope",
+        "durable_commit": true,
+        "ledger_phase_after_reopen": "open",
+        "fenced": 0
+      },
+      {
+        "case": "actual owned SIGKILL",
+        "mode": "fixed",
+        "cut": "registered",
+        "process_returncode": -9,
+        "fenced": 1,
+        "committed_work_resumable": false
+      },
+      {
+        "case": "actual owned SIGKILL",
+        "mode": "fixed",
+        "cut": "committed",
+        "process_returncode": -9,
+        "fenced": 0,
+        "committed_work_resumable": true
+      },
+      {
+        "case": "actual owned SIGKILL",
+        "mode": "envelope",
+        "cut": "registered",
+        "process_returncode": -9,
+        "fenced": 1,
+        "committed_work_resumable": false
+      },
+      {
+        "case": "actual owned SIGKILL",
+        "mode": "envelope",
+        "cut": "committed",
+        "process_returncode": -9,
+        "fenced": 0,
+        "committed_work_resumable": true
+      },
+      {
+        "case": "committed work during adapter recovery",
+        "open_preserved": true,
+        "closing_preserved": true,
+        "write_completed": true
+      },
+      {
+        "case": "registration failure and lost close",
+        "mode": "fixed",
+        "partial_hold_retained": true,
+        "healed_recovery": true,
+        "delayed_prepare": "closed"
+      },
+      {
+        "case": "registration failure and lost close",
+        "mode": "envelope",
+        "partial_hold_retained": true,
+        "healed_recovery": true,
+        "delayed_prepare": "closed"
+      },
+      {
+        "case": "actual registration abort",
+        "mode": "fixed",
+        "guard_cleanup": true,
+        "reopened_retry": true,
+        "first_lease_rows": 0
+      },
+      {
+        "case": "actual registration abort",
+        "mode": "envelope",
+        "guard_cleanup": true,
+        "reopened_retry": true,
+        "first_lease_rows": 0
+      },
+      {
+        "case": "registration committed then reported error",
+        "mode": "fixed",
+        "guard_cleanup": true,
+        "orphan_fenced": true,
+        "closed_row_retained": true,
+        "retry": true
+      },
+      {
+        "case": "registration committed then reported error",
+        "mode": "envelope",
+        "guard_cleanup": true,
+        "orphan_fenced": true,
+        "closed_row_retained": true,
+        "retry": true
+      },
+      {
+        "case": "bare admission attachment",
+        "refused_without_mutation": true,
+        "original_authority_preserved": true,
+        "new_adapter_admission": true
+      }
+    ]
+  },
+  "scope": "Actual local SQLite and TCP; deterministic schema, lifetime and failure controls. SIGKILL cuts are same-host process loss. No physical power-loss or production claim."
+}

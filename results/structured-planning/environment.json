@@ -1,0 +1,12 @@
+{
+  "clock": "time.process_time_ns",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "sources": [
+    "src/structured_planner.py",
+    "tests/structured_planning_study.py",
+    "tests/check_structured_planning.py",
+    "tests/structured_planning_regression.py",
+    "docs/STRUCTURED-PLANNING.md"
+  ]
+}

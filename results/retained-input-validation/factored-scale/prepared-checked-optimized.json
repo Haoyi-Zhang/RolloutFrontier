@@ -1,0 +1,155 @@
+{
+  "corruption_controls": [
+    {
+      "name": "changed exact optimum",
+      "rejected": true
+    },
+    {
+      "name": "changed synchronized endpoint",
+      "rejected": true
+    },
+    {
+      "name": "missing owner installation",
+      "rejected": true
+    },
+    {
+      "name": "unsafe positive owner guard",
+      "rejected": true
+    },
+    {
+      "name": "changed local axis certificate",
+      "rejected": true
+    }
+  ],
+  "optimality": "three-phase literal witnesses plus full-graph single-edge lower bound",
+  "semantic_evidence": [
+    {
+      "cost": {
+        "handoffs": 2,
+        "installations": 6,
+        "phases": 3
+      },
+      "global_catalog_cells": 16,
+      "name": "single-edge-2"
+    },
+    {
+      "cost": {
+        "handoffs": 2,
+        "installations": 9,
+        "phases": 3
+      },
+      "global_catalog_cells": 64,
+      "name": "ring-3"
+    },
+    {
+      "cost": {
+        "handoffs": 2,
+        "installations": 9,
+        "phases": 3
+      },
+      "global_catalog_cells": 64,
+      "name": "complete-digraph-3"
+    },
+    {
+      "factors": 8,
+      "installations": 24,
+      "join_pairs": 624,
+      "local_catalog_cells": 128,
+      "name": "ring-8",
+      "owners": 8,
+      "phases": 3,
+      "positive_guard_corners": 32
+    },
+    {
+      "factors": 32,
+      "installations": 24,
+      "join_pairs": 2496,
+      "local_catalog_cells": 512,
+      "name": "circulant-four-8",
+      "owners": 8,
+      "phases": 3,
+      "positive_guard_corners": 128
+    },
+    {
+      "factors": 32,
+      "installations": 96,
+      "join_pairs": 2496,
+      "local_catalog_cells": 512,
+      "name": "ring-32",
+      "owners": 32,
+      "phases": 3,
+      "positive_guard_corners": 128
+    },
+    {
+      "factors": 128,
+      "installations": 96,
+      "join_pairs": 9984,
+      "local_catalog_cells": 2048,
+      "name": "circulant-four-32",
+      "owners": 32,
+      "phases": 3,
+      "positive_guard_corners": 512
+    },
+    {
+      "factors": 128,
+      "installations": 384,
+      "join_pairs": 9984,
+      "local_catalog_cells": 2048,
+      "name": "ring-128",
+      "owners": 128,
+      "phases": 3,
+      "positive_guard_corners": 512
+    },
+    {
+      "factors": 512,
+      "installations": 384,
+      "join_pairs": 39936,
+      "local_catalog_cells": 8192,
+      "name": "circulant-four-128",
+      "owners": 128,
+      "phases": 3,
+      "positive_guard_corners": 2048
+    },
+    {
+      "factors": 512,
+      "installations": 1536,
+      "join_pairs": 39936,
+      "local_catalog_cells": 8192,
+      "name": "ring-512",
+      "owners": 512,
+      "phases": 3,
+      "positive_guard_corners": 2048
+    },
+    {
+      "factors": 2048,
+      "installations": 1536,
+      "join_pairs": 159744,
+      "local_catalog_cells": 32768,
+      "name": "circulant-four-512",
+      "owners": 512,
+      "phases": 3,
+      "positive_guard_corners": 8192
+    },
+    {
+      "factors": 1024,
+      "installations": 3072,
+      "join_pairs": 79872,
+      "local_catalog_cells": 16384,
+      "name": "ring-1024",
+      "owners": 1024,
+      "phases": 3,
+      "positive_guard_corners": 4096
+    },
+    {
+      "factors": 4096,
+      "installations": 3072,
+      "join_pairs": 319488,
+      "local_catalog_cells": 65536,
+      "name": "circulant-four-1024",
+      "owners": 1024,
+      "phases": 3,
+      "positive_guard_corners": 16384
+    }
+  ],
+  "status": "prepared-pass"
+}

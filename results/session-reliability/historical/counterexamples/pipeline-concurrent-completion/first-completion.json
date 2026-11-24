@@ -1,0 +1,41 @@
+{
+  "record": {
+    "amount": 58,
+    "key": "same-logical-request"
+  },
+  "owner_replies": [
+    {
+      "applied_generation": 0,
+      "applied_program": "accepting",
+      "duplicate": true,
+      "output": {
+        "wire": "{\"amount\":\"17\",\"key\":\"same-logical-request\",\"state\":\"ACTIVE\"}"
+      },
+      "role": "encode",
+      "status": "applied"
+    },
+    {
+      "applied_generation": 0,
+      "applied_program": "accepting",
+      "duplicate": false,
+      "output": {
+        "wire": "{\"amount\":\"58\",\"key\":\"same-logical-request\",\"state\":\"ACTIVE\"}"
+      },
+      "role": "transform",
+      "status": "applied"
+    },
+    {
+      "applied_generation": 0,
+      "applied_program": "accepting",
+      "duplicate": false,
+      "output": {
+        "record": {
+          "amount": 58,
+          "key": "same-logical-request"
+        }
+      },
+      "role": "store",
+      "status": "applied"
+    }
+  ]
+}

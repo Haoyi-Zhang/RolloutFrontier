@@ -1,0 +1,49 @@
+{
+  "counterexamples": [
+    {
+      "minimum_installations": 4,
+      "name": "shortest-path-choice",
+      "number_of_shortest_paths": 2,
+      "optimal_cost": [
+        2,
+        4
+      ],
+      "shortest_path_phase_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "minimum_installations": 3,
+      "name": "phase-write-tradeoff",
+      "number_of_shortest_paths": 2,
+      "optimal_cost": [
+        2,
+        4
+      ],
+      "shortest_path_phase_counts": [
+        3
+      ]
+    }
+  ],
+  "finite_relations": {
+    "contexts": 2044,
+    "fixed_shortest_path_phase_gaps": 48,
+    "no_op": 9216,
+    "nontrivial_reachable": 20654,
+    "queries": 46080,
+    "unreachable": 16210
+  },
+  "policy": {
+    "tasks": 547,
+    "verified_plans_including_reference": 2717
+  },
+  "positive_product_closures": {
+    "maximum_normalized_term_corners": 4,
+    "maximum_normalized_terms_per_owner": 2,
+    "safe_physical_products": 147,
+    "strictly_widened_products": 118
+  },
+  "status": "pass",
+  "verified_timing_records": 85
+}

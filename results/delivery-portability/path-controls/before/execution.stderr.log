@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/tests/factored_execution.py", line 404, in <module>
+    asyncio.run(campaign(args))
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/tests/factored_execution.py", line 363, in campaign
+    result.append(await live_cohort(root/'smoke',case,concurrency=2,steady_requests=4))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/tests/factored_execution.py", line 179, in live_cohort
+    assurance = check_directory(directory); save(directory/'check.json',assurance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/tests/check_factored_execution.py", line 265, in check_directory
+    states = {owner:check_owner(directory/f'owner-{i:04d}.sqlite',owner,registry,probe) for i,owner in enumerate(owners)}
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/tests/check_factored_execution.py", line 160, in check_owner
+    actual = json.loads(db.execute('SELECT payload FROM state').fetchone()[0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: state

@@ -320,6 +320,29 @@ class Endpoint:
         self._commit_state(state)
         return dict(status="installed", observed=self.profile())
 
+    def install_if_current(self, expected_generation: int,
+                           expected_support: list[str],
+                           support: list[str]) -> dict[str, Any]:
+        """Compare an authoritative profile and install at one serialization point.
+
+        Goal plans use directed profile transitions. A prior read alone cannot
+        justify the edge's source if another installation can occur before the
+        write. A mismatched profile is returned without mutating durable state;
+        a match still passes every ordinary guard and persistence check.
+        """
+        self._require_healthy()
+        if (type(expected_generation) is not int or
+                not 0 <= expected_generation <= MAX_SEQ):
+            raise ValueError("invalid expected generation")
+        if (not isinstance(expected_support, list) or
+                atoms(expected_support, MAX_CONTRACTS) != expected_support):
+            raise ValueError("noncanonical expected support")
+        new = atoms(support, MAX_CONTRACTS)
+        if (expected_generation != self.state["generation"] or
+                expected_support != self.state["support"]):
+            return dict(status="stale", observed=self.profile())
+        return self.install(new)
+
     def merge(self, profile: dict[str, Any]) -> dict[str, Any]:
         self._require_healthy()
         if not isinstance(profile, dict) or set(profile) != {"node", "generation", "support"}:
@@ -367,6 +390,7 @@ class Endpoint:
             "read": {"op"},
             "close": {"op", "origin", "sequence"},
             "install": {"op", "support"},
+            "install_if_current": {"op", "expected_generation", "expected_support", "support"},
             "merge": {"op", "profile"},
             "use": {"op", "origin", "sequence", "manifest"},
             "inspect": {"op"},
@@ -385,6 +409,9 @@ class Endpoint:
             return self.close(req["origin"], req["sequence"])
         if op == "install":
             return self.install(req["support"])
+        if op == "install_if_current":
+            return self.install_if_current(req["expected_generation"],
+                                           req["expected_support"], req["support"])
         if op == "merge":
             return self.merge(req["profile"])
         if op == "use":

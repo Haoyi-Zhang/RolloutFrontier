@@ -1,0 +1,26 @@
+{
+  "exact_environment_built": false,
+  "critical_checks_all_pass": false,
+  "checks": {
+    "strict_environment": {
+      "exit_code": 127,
+      "classification": "not_run",
+      "log": "/mnt/data/rollout_frontier_round9/logs/exact-env-build.log"
+    },
+    "review_acceptance": {
+      "exit_code": 127,
+      "classification": "not_run",
+      "log": "/mnt/data/rollout_frontier_round9/logs/exact-env-build.log"
+    },
+    "unit_discovery": {
+      "exit_code": 127,
+      "classification": "not_run",
+      "log": "/mnt/data/rollout_frontier_round9/logs/exact-env-build.log"
+    },
+    "semantic_reproduce": {
+      "exit_code": 127,
+      "classification": "not_run",
+      "log": "/mnt/data/rollout_frontier_round9/logs/exact-env-build.log"
+    }
+  }
+}

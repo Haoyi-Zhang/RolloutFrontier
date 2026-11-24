@@ -1,0 +1,35 @@
+{
+  "controls": [
+    {
+      "case": "missing_task",
+      "reason": "Registered goal-task inventory differs",
+      "rejected": true
+    },
+    {
+      "case": "wrong_cost",
+      "reason": "Goal optimum differs from integer interval graph",
+      "rejected": true
+    },
+    {
+      "case": "skipped_minor",
+      "reason": "Illegal skipped/reversed minor transition",
+      "rejected": true
+    },
+    {
+      "case": "profile_identity",
+      "reason": "Plan target profile differs",
+      "rejected": true
+    },
+    {
+      "case": "unsafe_guard",
+      "reason": "Unsafe positive guard corner",
+      "rejected": true
+    },
+    {
+      "case": "rehashed_owner_state",
+      "reason": "Saved owner state differs from literal RPC execution",
+      "rejected": true
+    }
+  ],
+  "status": "PASS"
+}

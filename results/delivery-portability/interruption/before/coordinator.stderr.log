@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/verify.py", line 819, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/verify.py", line 796, in main
+    row = run_task(task, mode, output, min(limit, remaining))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/verify.py", line 717, in run_task
+    record['exit_code'] = process.wait(timeout=timeout)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 2047, in _wait
+    time.sleep(delay)
+KeyboardInterrupt

@@ -1,0 +1,130 @@
+{
+  "capture_kind": "retained-pre-fix-counterexamples",
+  "cases": [
+    "utf8-observed",
+    "utf8-pipeline-observed"
+  ],
+  "file_inventory_excludes_manifest_itself": true,
+  "full_historical_source_tree": false,
+  "historical_drivers": [
+    "historical-drivers/repro_invalid_utf8.py",
+    "historical-drivers/repro_invalid_utf8_pipeline.py"
+  ],
+  "historical_drivers_standalone": false,
+  "included_in_post_fix_counts": false,
+  "payload_files": [
+    {
+      "bytes": 3689,
+      "path": "historical-drivers/repro_invalid_utf8.py",
+      "role": "historical-driver"
+    },
+    {
+      "bytes": 3139,
+      "path": "historical-drivers/repro_invalid_utf8_pipeline.py",
+      "role": "historical-driver"
+    },
+    {
+      "bytes": 19635,
+      "path": "source-preimages/src/application.py",
+      "role": "source-preimage"
+    },
+    {
+      "bytes": 9012,
+      "path": "source-preimages/src/schema_contracts.py",
+      "role": "source-preimage"
+    },
+    {
+      "bytes": 8192,
+      "path": "utf8-observed/network/application-origins/owner-0000/origin-2.sqlite",
+      "role": "durable-database"
+    },
+    {
+      "bytes": 483,
+      "path": "utf8-observed/network/identity-0000.json",
+      "role": "configuration"
+    },
+    {
+      "bytes": 24576,
+      "path": "utf8-observed/network/owner-0000.sqlite",
+      "role": "durable-database"
+    },
+    {
+      "bytes": 456,
+      "path": "utf8-observed/network/registry.json",
+      "role": "configuration"
+    },
+    {
+      "bytes": 3091,
+      "path": "utf8-observed/network/relay-events.jsonl",
+      "role": "relay-trace"
+    },
+    {
+      "bytes": 16,
+      "path": "utf8-observed/network/relay-routes.json",
+      "role": "configuration"
+    },
+    {
+      "bytes": 16,
+      "path": "utf8-observed/network/relay-targets.json",
+      "role": "configuration"
+    },
+    {
+      "bytes": 5412,
+      "path": "utf8-observed/network/transport.jsonl",
+      "role": "transport-trace"
+    },
+    {
+      "bytes": 1147,
+      "path": "utf8-observed/observations.json",
+      "role": "recorded-outcomes"
+    },
+    {
+      "bytes": 16384,
+      "path": "utf8-observed/session.sqlite",
+      "role": "durable-database"
+    },
+    {
+      "bytes": 694,
+      "path": "utf8-pipeline-observed/observations.json",
+      "role": "recorded-outcomes"
+    },
+    {
+      "bytes": 24576,
+      "path": "utf8-pipeline-observed/origin-2.sqlite",
+      "role": "durable-database"
+    },
+    {
+      "bytes": 20480,
+      "path": "utf8-pipeline-observed/process-node-0.sqlite",
+      "role": "durable-database"
+    },
+    {
+      "bytes": 20480,
+      "path": "utf8-pipeline-observed/process-node-1.sqlite",
+      "role": "durable-database"
+    },
+    {
+      "bytes": 20480,
+      "path": "utf8-pipeline-observed/process-node-2.sqlite",
+      "role": "durable-database"
+    },
+    {
+      "bytes": 5737,
+      "path": "utf8-pipeline-observed/transport.jsonl",
+      "role": "transport-trace"
+    }
+  ],
+  "source_preimages": [
+    {
+      "current_source": "src/schema_contracts.py",
+      "function": "validate_payload",
+      "path": "source-preimages/src/schema_contracts.py"
+    },
+    {
+      "current_source": "src/application.py",
+      "function": "semantic_record",
+      "path": "source-preimages/src/application.py"
+    }
+  ],
+  "verification": "Read-only consistency of retained historical observations, durable request/owner state, and changed-source preimages; no execution of old code."
+}

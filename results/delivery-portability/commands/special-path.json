@@ -1,0 +1,183 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "tests.test_sqlite_paths"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/finalization/review/reproduction/pre-fix-path-control",
+    "elapsed_seconds": 0.31484092300524935,
+    "exit_code": 1,
+    "expected": "nonzero",
+    "name": "path-regression-before-fix",
+    "stderr": "/workspace/scratch/e34480916f53/finalization/review/reproduction/path-regression-before-fix.stderr.log",
+    "stdout": "/workspace/scratch/e34480916f53/finalization/review/reproduction/path-regression-before-fix.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "tests.test_sqlite_paths"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "elapsed_seconds": 0.26478850199782755,
+    "exit_code": 0,
+    "expected": 0,
+    "name": "path-regression-normal",
+    "stderr": "/workspace/scratch/e34480916f53/finalization/review/reproduction/path-regression-normal.stderr.log",
+    "stdout": "/workspace/scratch/e34480916f53/finalization/review/reproduction/path-regression-normal.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-O",
+      "-m",
+      "unittest",
+      "-v",
+      "tests.test_sqlite_paths"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "elapsed_seconds": 0.8845871950034052,
+    "exit_code": 0,
+    "expected": 0,
+    "name": "path-regression-optimized",
+    "stderr": "/workspace/scratch/e34480916f53/finalization/review/reproduction/path-regression-optimized.stderr.log",
+    "stdout": "/workspace/scratch/e34480916f53/finalization/review/reproduction/path-regression-optimized.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "tests.factored_execution",
+      "--smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh output #?% \u4e2d\u6587"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "elapsed_seconds": 3.2376499270030763,
+    "exit_code": 0,
+    "expected": 0,
+    "name": "special-path-execution",
+    "stderr": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-execution.stderr.log",
+    "stdout": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-execution.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "tests.check_factored_execution",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh output #?% \u4e2d\u6587/smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-smoke-normal.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "elapsed_seconds": 0.11436928299372084,
+    "exit_code": 0,
+    "expected": 0,
+    "name": "special-path-check-smoke-normal",
+    "stderr": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-smoke-normal.stderr.log",
+    "stdout": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-smoke-normal.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-O",
+      "-m",
+      "tests.check_factored_execution",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh output #?% \u4e2d\u6587/smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-smoke-optimized.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "elapsed_seconds": 0.2647868339990964,
+    "exit_code": 0,
+    "expected": 0,
+    "name": "special-path-check-smoke-optimized",
+    "stderr": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-smoke-optimized.stderr.log",
+    "stdout": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-smoke-optimized.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "tests.check_factored_execution",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh output #?% \u4e2d\u6587/recovery",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-recovery-normal.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "elapsed_seconds": 0.06435323700134177,
+    "exit_code": 0,
+    "expected": 0,
+    "name": "special-path-check-recovery-normal",
+    "stderr": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-recovery-normal.stderr.log",
+    "stdout": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-recovery-normal.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-O",
+      "-m",
+      "tests.check_factored_execution",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh output #?% \u4e2d\u6587/recovery",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-recovery-optimized.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "elapsed_seconds": 0.3169911599979969,
+    "exit_code": 0,
+    "expected": 0,
+    "name": "special-path-check-recovery-optimized",
+    "stderr": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-recovery-optimized.stderr.log",
+    "stdout": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-check-recovery-optimized.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-m",
+      "tests.factored_checker_controls",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh output #?% \u4e2d\u6587/smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-corruption-normal.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "elapsed_seconds": 0.21526692000043113,
+    "exit_code": 0,
+    "expected": 0,
+    "name": "special-path-corruption-normal",
+    "stderr": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-corruption-normal.stderr.log",
+    "stdout": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-corruption-normal.stdout.log"
+  },
+  {
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-O",
+      "-m",
+      "tests.factored_checker_controls",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/fresh output #?% \u4e2d\u6587/smoke",
+      "--output",
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-corruption-optimized.json"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "elapsed_seconds": 0.4152705089945812,
+    "exit_code": 0,
+    "expected": 0,
+    "name": "special-path-corruption-optimized",
+    "stderr": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-corruption-optimized.stderr.log",
+    "stdout": "/workspace/scratch/e34480916f53/finalization/review/reproduction/special-path-corruption-optimized.stdout.log"
+  }
+]

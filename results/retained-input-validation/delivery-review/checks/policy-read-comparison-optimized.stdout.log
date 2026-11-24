@@ -1,0 +1,311 @@
+{
+  "after_manifest_sha256": "059c5530a8856b3e3d02aabd950b3b6e28f027138db466cad75e02d330daafa3",
+  "before_manifest_sha256": "00cd8d8074ac9ad33bf75e68f645346b78ff2eabbf50470c3e8ff081c5852695",
+  "cases": [
+    {
+      "installations": 6,
+      "name": "normal-two-minor",
+      "other_rpc_counts": {
+        "rpc:close": 9,
+        "rpc:install_if_current": 6,
+        "rpc:prepare": 9
+      },
+      "owner_read_rpc_after": 36,
+      "owner_read_rpc_before": 48,
+      "owner_read_rpc_reduction": 12,
+      "owners": 3,
+      "phases": 3
+    },
+    {
+      "installations": 3,
+      "name": "new-phase-unavailable",
+      "other_rpc_counts": {
+        "lost:close": 1,
+        "lost:prepare": 1,
+        "rpc:close": 11,
+        "rpc:install_if_current": 3,
+        "rpc:prepare": 8
+      },
+      "owner_read_rpc_after": 30,
+      "owner_read_rpc_before": 36,
+      "owner_read_rpc_reduction": 6,
+      "owners": 3,
+      "phases": 2
+    },
+    {
+      "installations": 3,
+      "name": "close-reply-lost",
+      "other_rpc_counts": {
+        "rpc:close": 9,
+        "rpc:install_if_current": 3,
+        "rpc:prepare": 6
+      },
+      "owner_read_rpc_after": 27,
+      "owner_read_rpc_before": 33,
+      "owner_read_rpc_reduction": 6,
+      "owners": 3,
+      "phases": 2
+    },
+    {
+      "installations": 8,
+      "name": "active-4-owner--two-minor-all",
+      "other_rpc_counts": {
+        "rpc:close": 12,
+        "rpc:install_if_current": 8,
+        "rpc:prepare": 12
+      },
+      "owner_read_rpc_after": 48,
+      "owner_read_rpc_before": 72,
+      "owner_read_rpc_reduction": 24,
+      "owners": 4,
+      "phases": 3
+    },
+    {
+      "installations": 4,
+      "name": "active-4-owner--first-minor-all",
+      "other_rpc_counts": {
+        "rpc:close": 8,
+        "rpc:install_if_current": 4,
+        "rpc:prepare": 8
+      },
+      "owner_read_rpc_after": 36,
+      "owner_read_rpc_before": 48,
+      "owner_read_rpc_reduction": 12,
+      "owners": 4,
+      "phases": 2
+    },
+    {
+      "installations": 4,
+      "name": "active-4-owner--second-minor-all",
+      "other_rpc_counts": {
+        "rpc:close": 8,
+        "rpc:install_if_current": 4,
+        "rpc:prepare": 8
+      },
+      "owner_read_rpc_after": 36,
+      "owner_read_rpc_before": 48,
+      "owner_read_rpc_reduction": 12,
+      "owners": 4,
+      "phases": 2
+    },
+    {
+      "installations": 6,
+      "name": "active-4-owner--servers-ahead",
+      "other_rpc_counts": {
+        "rpc:close": 8,
+        "rpc:install_if_current": 6,
+        "rpc:prepare": 8
+      },
+      "owner_read_rpc_after": 38,
+      "owner_read_rpc_before": 56,
+      "owner_read_rpc_reduction": 18,
+      "owners": 4,
+      "phases": 2
+    },
+    {
+      "installations": 6,
+      "name": "active-4-owner--catch-up-all",
+      "other_rpc_counts": {
+        "rpc:close": 8,
+        "rpc:install_if_current": 6,
+        "rpc:prepare": 8
+      },
+      "owner_read_rpc_after": 38,
+      "owner_read_rpc_before": 56,
+      "owner_read_rpc_reduction": 18,
+      "owners": 4,
+      "phases": 2
+    },
+    {
+      "installations": 4,
+      "name": "active-4-owner--clients-only",
+      "other_rpc_counts": {
+        "rpc:close": 4,
+        "rpc:install_if_current": 4,
+        "rpc:prepare": 4
+      },
+      "owner_read_rpc_after": 28,
+      "owner_read_rpc_before": 40,
+      "owner_read_rpc_reduction": 12,
+      "owners": 4,
+      "phases": 1
+    },
+    {
+      "installations": 10,
+      "name": "active-5-owner--two-minor-all",
+      "other_rpc_counts": {
+        "rpc:close": 15,
+        "rpc:install_if_current": 10,
+        "rpc:prepare": 15
+      },
+      "owner_read_rpc_after": 60,
+      "owner_read_rpc_before": 100,
+      "owner_read_rpc_reduction": 40,
+      "owners": 5,
+      "phases": 3
+    },
+    {
+      "installations": 5,
+      "name": "active-5-owner--first-minor-all",
+      "other_rpc_counts": {
+        "rpc:close": 10,
+        "rpc:install_if_current": 5,
+        "rpc:prepare": 10
+      },
+      "owner_read_rpc_after": 45,
+      "owner_read_rpc_before": 65,
+      "owner_read_rpc_reduction": 20,
+      "owners": 5,
+      "phases": 2
+    },
+    {
+      "installations": 5,
+      "name": "active-5-owner--second-minor-all",
+      "other_rpc_counts": {
+        "rpc:close": 10,
+        "rpc:install_if_current": 5,
+        "rpc:prepare": 10
+      },
+      "owner_read_rpc_after": 45,
+      "owner_read_rpc_before": 65,
+      "owner_read_rpc_reduction": 20,
+      "owners": 5,
+      "phases": 2
+    },
+    {
+      "installations": 7,
+      "name": "active-5-owner--servers-ahead",
+      "other_rpc_counts": {
+        "rpc:close": 10,
+        "rpc:install_if_current": 7,
+        "rpc:prepare": 10
+      },
+      "owner_read_rpc_after": 47,
+      "owner_read_rpc_before": 75,
+      "owner_read_rpc_reduction": 28,
+      "owners": 5,
+      "phases": 2
+    },
+    {
+      "installations": 8,
+      "name": "active-5-owner--catch-up-all",
+      "other_rpc_counts": {
+        "rpc:close": 10,
+        "rpc:install_if_current": 8,
+        "rpc:prepare": 10
+      },
+      "owner_read_rpc_after": 48,
+      "owner_read_rpc_before": 80,
+      "owner_read_rpc_reduction": 32,
+      "owners": 5,
+      "phases": 2
+    },
+    {
+      "installations": 6,
+      "name": "active-5-owner--clients-only",
+      "other_rpc_counts": {
+        "rpc:close": 5,
+        "rpc:install_if_current": 6,
+        "rpc:prepare": 5
+      },
+      "owner_read_rpc_after": 36,
+      "owner_read_rpc_before": 60,
+      "owner_read_rpc_reduction": 24,
+      "owners": 5,
+      "phases": 1
+    },
+    {
+      "installations": 12,
+      "name": "active-6-owner--two-minor-all",
+      "other_rpc_counts": {
+        "rpc:close": 18,
+        "rpc:install_if_current": 12,
+        "rpc:prepare": 18
+      },
+      "owner_read_rpc_after": 72,
+      "owner_read_rpc_before": 132,
+      "owner_read_rpc_reduction": 60,
+      "owners": 6,
+      "phases": 3
+    },
+    {
+      "installations": 6,
+      "name": "active-6-owner--first-minor-all",
+      "other_rpc_counts": {
+        "rpc:close": 12,
+        "rpc:install_if_current": 6,
+        "rpc:prepare": 12
+      },
+      "owner_read_rpc_after": 54,
+      "owner_read_rpc_before": 84,
+      "owner_read_rpc_reduction": 30,
+      "owners": 6,
+      "phases": 2
+    },
+    {
+      "installations": 6,
+      "name": "active-6-owner--second-minor-all",
+      "other_rpc_counts": {
+        "rpc:close": 12,
+        "rpc:install_if_current": 6,
+        "rpc:prepare": 12
+      },
+      "owner_read_rpc_after": 54,
+      "owner_read_rpc_before": 84,
+      "owner_read_rpc_reduction": 30,
+      "owners": 6,
+      "phases": 2
+    },
+    {
+      "installations": 8,
+      "name": "active-6-owner--servers-ahead",
+      "other_rpc_counts": {
+        "rpc:close": 12,
+        "rpc:install_if_current": 8,
+        "rpc:prepare": 12
+      },
+      "owner_read_rpc_after": 56,
+      "owner_read_rpc_before": 96,
+      "owner_read_rpc_reduction": 40,
+      "owners": 6,
+      "phases": 2
+    },
+    {
+      "installations": 10,
+      "name": "active-6-owner--catch-up-all",
+      "other_rpc_counts": {
+        "rpc:close": 12,
+        "rpc:install_if_current": 10,
+        "rpc:prepare": 12
+      },
+      "owner_read_rpc_after": 58,
+      "owner_read_rpc_before": 108,
+      "owner_read_rpc_reduction": 50,
+      "owners": 6,
+      "phases": 2
+    },
+    {
+      "installations": 8,
+      "name": "active-6-owner--clients-only",
+      "other_rpc_counts": {
+        "rpc:close": 6,
+        "rpc:install_if_current": 8,
+        "rpc:prepare": 6
+      },
+      "owner_read_rpc_after": 44,
+      "owner_read_rpc_before": 84,
+      "owner_read_rpc_reduction": 40,
+      "owners": 6,
+      "phases": 1
+    }
+  ],
+  "scope": "Matched retained traces for identical goal plans and faults; owner-read RPC counts only, with unchanged non-read work. This is not a latency or throughput measurement.",
+  "status": "PASS",
+  "totals": {
+    "cases": 21,
+    "installations": 135,
+    "owner_read_rpc_after": 936,
+    "owner_read_rpc_before": 1470,
+    "owner_read_rpc_reduction": 534
+  }
+}

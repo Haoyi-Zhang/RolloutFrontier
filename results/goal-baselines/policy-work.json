@@ -1,0 +1,262 @@
+[
+  {
+    "domain": "boundary-three-owner",
+    "route": "one-step",
+    "work": {
+      "catalog_cells": 45,
+      "compatible_vertices": 23,
+      "interval_pair_candidates": 0,
+      "phase_edge_candidates": 0,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 529,
+      "safe_edge_candidates": 69,
+      "safe_edges": 40,
+      "safe_profile_products": 0,
+      "search_edge_visits": 316,
+      "segment_candidates": 0,
+      "source_searches": 23,
+      "unique_phase_edges": 40
+    }
+  },
+  {
+    "domain": "boundary-three-owner",
+    "route": "shortest-path-segmented",
+    "work": {
+      "catalog_cells": 45,
+      "compatible_vertices": 23,
+      "interval_pair_candidates": 0,
+      "phase_edge_candidates": 0,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 529,
+      "safe_edge_candidates": 69,
+      "safe_edges": 40,
+      "safe_profile_products": 0,
+      "search_edge_visits": 316,
+      "segment_candidates": 1421,
+      "source_searches": 23,
+      "unique_phase_edges": 40
+    }
+  },
+  {
+    "domain": "boundary-three-owner",
+    "route": "interval-optimal",
+    "work": {
+      "catalog_cells": 45,
+      "compatible_vertices": 23,
+      "interval_pair_candidates": 506,
+      "phase_edge_candidates": 93,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 529,
+      "safe_edge_candidates": 0,
+      "safe_edges": 0,
+      "safe_profile_products": 0,
+      "search_edge_visits": 638,
+      "segment_candidates": 0,
+      "source_searches": 23,
+      "unique_phase_edges": 93
+    }
+  },
+  {
+    "domain": "boundary-three-owner",
+    "route": "literal-products-optimal",
+    "work": {
+      "catalog_cells": 45,
+      "compatible_vertices": 23,
+      "interval_pair_candidates": 0,
+      "phase_edge_candidates": 525,
+      "product_corner_tests": 3640,
+      "profile_products": 1519,
+      "queries": 529,
+      "safe_edge_candidates": 0,
+      "safe_edges": 0,
+      "safe_profile_products": 147,
+      "search_edge_visits": 638,
+      "segment_candidates": 0,
+      "source_searches": 23,
+      "unique_phase_edges": 93
+    }
+  },
+  {
+    "domain": "active-4-owner",
+    "route": "one-step",
+    "work": {
+      "catalog_cells": 81,
+      "compatible_vertices": 24,
+      "interval_pair_candidates": 0,
+      "phase_edge_candidates": 0,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 6,
+      "safe_edge_candidates": 96,
+      "safe_edges": 44,
+      "safe_profile_products": 0,
+      "search_edge_visits": 104,
+      "segment_candidates": 0,
+      "source_searches": 4,
+      "unique_phase_edges": 44
+    }
+  },
+  {
+    "domain": "active-4-owner",
+    "route": "shortest-path-segmented",
+    "work": {
+      "catalog_cells": 81,
+      "compatible_vertices": 24,
+      "interval_pair_candidates": 0,
+      "phase_edge_candidates": 0,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 6,
+      "safe_edge_candidates": 96,
+      "safe_edges": 44,
+      "safe_profile_products": 0,
+      "search_edge_visits": 104,
+      "segment_candidates": 108,
+      "source_searches": 4,
+      "unique_phase_edges": 44
+    }
+  },
+  {
+    "domain": "active-4-owner",
+    "route": "interval-optimal",
+    "work": {
+      "catalog_cells": 81,
+      "compatible_vertices": 24,
+      "interval_pair_candidates": 552,
+      "phase_edge_candidates": 94,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 6,
+      "safe_edge_candidates": 0,
+      "safe_edges": 0,
+      "safe_profile_products": 0,
+      "search_edge_visits": 218,
+      "segment_candidates": 0,
+      "source_searches": 4,
+      "unique_phase_edges": 94
+    }
+  },
+  {
+    "domain": "active-5-owner",
+    "route": "one-step",
+    "work": {
+      "catalog_cells": 243,
+      "compatible_vertices": 54,
+      "interval_pair_candidates": 0,
+      "phase_edge_candidates": 0,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 6,
+      "safe_edge_candidates": 270,
+      "safe_edges": 126,
+      "safe_profile_products": 0,
+      "search_edge_visits": 318,
+      "segment_candidates": 0,
+      "source_searches": 4,
+      "unique_phase_edges": 126
+    }
+  },
+  {
+    "domain": "active-5-owner",
+    "route": "shortest-path-segmented",
+    "work": {
+      "catalog_cells": 243,
+      "compatible_vertices": 54,
+      "interval_pair_candidates": 0,
+      "phase_edge_candidates": 0,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 6,
+      "safe_edge_candidates": 270,
+      "safe_edges": 126,
+      "safe_profile_products": 0,
+      "search_edge_visits": 318,
+      "segment_candidates": 170,
+      "source_searches": 4,
+      "unique_phase_edges": 126
+    }
+  },
+  {
+    "domain": "active-5-owner",
+    "route": "interval-optimal",
+    "work": {
+      "catalog_cells": 243,
+      "compatible_vertices": 54,
+      "interval_pair_candidates": 2862,
+      "phase_edge_candidates": 388,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 6,
+      "safe_edge_candidates": 0,
+      "safe_edges": 0,
+      "safe_profile_products": 0,
+      "search_edge_visits": 982,
+      "segment_candidates": 0,
+      "source_searches": 4,
+      "unique_phase_edges": 388
+    }
+  },
+  {
+    "domain": "active-6-owner",
+    "route": "one-step",
+    "work": {
+      "catalog_cells": 729,
+      "compatible_vertices": 132,
+      "interval_pair_candidates": 0,
+      "phase_edge_candidates": 0,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 6,
+      "safe_edge_candidates": 792,
+      "safe_edges": 380,
+      "safe_profile_products": 0,
+      "search_edge_visits": 1008,
+      "segment_candidates": 0,
+      "source_searches": 4,
+      "unique_phase_edges": 380
+    }
+  },
+  {
+    "domain": "active-6-owner",
+    "route": "shortest-path-segmented",
+    "work": {
+      "catalog_cells": 729,
+      "compatible_vertices": 132,
+      "interval_pair_candidates": 0,
+      "phase_edge_candidates": 0,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 6,
+      "safe_edge_candidates": 792,
+      "safe_edges": 380,
+      "safe_profile_products": 0,
+      "search_edge_visits": 1008,
+      "segment_candidates": 247,
+      "source_searches": 4,
+      "unique_phase_edges": 380
+    }
+  },
+  {
+    "domain": "active-6-owner",
+    "route": "interval-optimal",
+    "work": {
+      "catalog_cells": 729,
+      "compatible_vertices": 132,
+      "interval_pair_candidates": 17292,
+      "phase_edge_candidates": 1822,
+      "product_corner_tests": 0,
+      "profile_products": 0,
+      "queries": 6,
+      "safe_edge_candidates": 0,
+      "safe_edges": 0,
+      "safe_profile_products": 0,
+      "search_edge_visits": 4922,
+      "segment_candidates": 0,
+      "source_searches": 4,
+      "unique_phase_edges": 1822
+    }
+  }
+]

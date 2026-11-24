@@ -1,0 +1,21 @@
+{
+  "data_files": {
+    "checker-controls.json": "effe1d52212931468e6a5f81d7345446087cb4e54419de4c1e5b979e185aa5c0",
+    "model.json": "ec3654b7a27f10b0c32d95cacfb57583fe207c3fd6d3c524b8b6f6a7bf800db4",
+    "observation.json": "b2e180c2efd6565ffe01ad57f7d18a1049e2c8f0d19c20a3347381b1be543de1",
+    "production-plan.json": "08c7b458b49a44f26bce79e29c3d034fff95717b620752f8106d21278bd8e1ae",
+    "summary.json": "56e7cf973f890089af8b039e56e21db613277a5f362c4f3c9a655319a9f751ae"
+  },
+  "implementation": "CPython",
+  "optimized": 0,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scope": "Declared algebraic counterexample; no workload-frequency or timing claim",
+  "sources": {
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/factored_planner.py": "b8971360df79d7437c7bb9f1976c6c3e915396ca37fd975cc291901c35cc71ef",
+    "tests/check_priority_counterexample.py": "19c4bfecd1a1e934b949209831ddf4734a619ae2a7d77b0b0a5c9788ae3b7259",
+    "tests/factored_planning_oracle.py": "523704d0aa00eaf9f2d8e587f237535b79ef888a95428206956bb541d3c8d307",
+    "tests/goal_planner_oracle.py": "515ae758f19694bcc994cf6585b71a7f49441faf03523059fb2955f3316f3221"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "exit_code": 1,
+  "source_sha256": "5d9611857f259ae9b8c02c03b2960c421728c08e175f42ab2ae4e025ed61f21a",
+  "scope": "Deterministic loopback cancellation regression before repair; not a performance benchmark."
+}

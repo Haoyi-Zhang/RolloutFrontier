@@ -1,0 +1,6 @@
+{
+  "installation_after_retirement": "installed",
+  "interpretation": "Application composition negative control, not a violation of the protocol theorem",
+  "unfenced_late_effect": "late effect after retirement",
+  "use_before_retirement": "used"
+}

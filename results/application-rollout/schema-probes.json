@@ -1,0 +1,84 @@
+[
+  {
+    "accepted": true,
+    "emitted_name": "ACTIVE",
+    "exception": null,
+    "input_name": "ACTIVE",
+    "output": {
+      "amount": 23,
+      "key": "probe"
+    },
+    "program": "legacy"
+  },
+  {
+    "accepted": false,
+    "emitted_name": "ACTIVE",
+    "exception": "ParseError",
+    "input_name": "ENABLED",
+    "output": null,
+    "program": "legacy"
+  },
+  {
+    "accepted": true,
+    "emitted_name": "ACTIVE",
+    "exception": null,
+    "input_name": "ACTIVE",
+    "output": {
+      "amount": 23,
+      "key": "probe"
+    },
+    "program": "accepting"
+  },
+  {
+    "accepted": true,
+    "emitted_name": "ACTIVE",
+    "exception": null,
+    "input_name": "ENABLED",
+    "output": {
+      "amount": 23,
+      "key": "probe"
+    },
+    "program": "accepting"
+  },
+  {
+    "accepted": true,
+    "emitted_name": "ENABLED",
+    "exception": null,
+    "input_name": "ACTIVE",
+    "output": {
+      "amount": 23,
+      "key": "probe"
+    },
+    "program": "emitting"
+  },
+  {
+    "accepted": true,
+    "emitted_name": "ENABLED",
+    "exception": null,
+    "input_name": "ENABLED",
+    "output": {
+      "amount": 23,
+      "key": "probe"
+    },
+    "program": "emitting"
+  },
+  {
+    "accepted": false,
+    "emitted_name": "ENABLED",
+    "exception": "ParseError",
+    "input_name": "ACTIVE",
+    "output": null,
+    "program": "current"
+  },
+  {
+    "accepted": true,
+    "emitted_name": "ENABLED",
+    "exception": null,
+    "input_name": "ENABLED",
+    "output": {
+      "amount": 23,
+      "key": "probe"
+    },
+    "program": "current"
+  }
+]

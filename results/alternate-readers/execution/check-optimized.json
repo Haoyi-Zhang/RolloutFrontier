@@ -1,0 +1,82 @@
+{
+  "blocked_selected_regressions": 2,
+  "corruption_controls": [
+    {
+      "name": "omitted original unused owner",
+      "rejected": true
+    },
+    {
+      "name": "changed selected reader",
+      "rejected": true
+    },
+    {
+      "name": "selected regression falsely installed",
+      "rejected": true
+    },
+    {
+      "name": "pending guard omitted",
+      "rejected": true
+    },
+    {
+      "name": "recovered output value changed",
+      "rejected": true
+    },
+    {
+      "name": "source effect repeated on retry",
+      "rejected": true
+    },
+    {
+      "name": "pending reroute accepted",
+      "rejected": true
+    },
+    {
+      "name": "owner kill evidence omitted",
+      "rejected": true
+    },
+    {
+      "name": "request left pending",
+      "rejected": true
+    }
+  ],
+  "deployments": [
+    {
+      "blocked_selected_regressions": 1,
+      "durable_effects": 2,
+      "follow_on_installations": 1,
+      "follow_on_phases": 1,
+      "held_guards_at_end": 0,
+      "logical_requests": 1,
+      "owner_restarts": 1,
+      "pending_requests_at_end": 0,
+      "pending_route_changes_rejected": 1,
+      "physical_owners": 3,
+      "selected": "b",
+      "unused_reader_preparations": 1
+    },
+    {
+      "blocked_selected_regressions": 1,
+      "durable_effects": 2,
+      "follow_on_installations": 1,
+      "follow_on_phases": 1,
+      "held_guards_at_end": 0,
+      "logical_requests": 1,
+      "owner_restarts": 1,
+      "pending_requests_at_end": 0,
+      "pending_route_changes_rejected": 1,
+      "physical_owners": 3,
+      "selected": "c",
+      "unused_reader_preparations": 1
+    }
+  ],
+  "durable_effects": 4,
+  "follow_on_installations": 2,
+  "follow_on_phases": 2,
+  "held_guards_at_end": 0,
+  "logical_requests": 2,
+  "owner_restarts": 2,
+  "pending_requests_at_end": 0,
+  "pending_route_changes_rejected": 2,
+  "physical_owners_per_deployment": 3,
+  "status": "PASS",
+  "unused_reader_preparations": 2
+}

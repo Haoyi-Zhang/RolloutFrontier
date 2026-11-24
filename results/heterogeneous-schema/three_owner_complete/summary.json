@@ -1,0 +1,418 @@
+{
+  "all_context_validation": "weighted-event-DAG versus greatest-contiguous-prefix iteration",
+  "context_count_formula": [
+    24,
+    24,
+    24
+  ],
+  "cost_vectors": [
+    {
+      "contexts": 48,
+      "exact_owner_stage_prepare_preparestage": [
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "contexts": 16,
+      "exact_owner_stage_prepare_preparestage": [
+        2,
+        4,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "contexts": 432,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 222,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 42,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        5,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 516,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 2,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "contexts": 372,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 60,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        5,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 1374,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 660,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 18,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        5,
+        4,
+        5
+      ]
+    },
+    {
+      "contexts": 54,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        6,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 138,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 126,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 6,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        5,
+        4,
+        5
+      ]
+    },
+    {
+      "contexts": 18,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        5,
+        6,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 840,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 180,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 24,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        6,
+        5,
+        6
+      ]
+    },
+    {
+      "contexts": 6,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        6,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 6,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        6,
+        7,
+        5,
+        5
+      ]
+    },
+    {
+      "contexts": 120,
+      "exact_owner_stage_prepare_preparestage": [
+        6,
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "contexts": 18,
+      "exact_owner_stage_prepare_preparestage": [
+        6,
+        6,
+        7,
+        6,
+        6
+      ]
+    },
+    {
+      "contexts": 18,
+      "exact_owner_stage_prepare_preparestage": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ]
+    }
+  ],
+  "counts": {
+    "all_tie": 5316,
+    "attempted": 13824,
+    "owner_gap": 1314,
+    "owner_stage_gap": 594,
+    "owner_stage_tie": 4722,
+    "owner_tie": 4002,
+    "prepare_first_gap": 2,
+    "prepare_first_stage_gap": 48,
+    "prepare_first_stage_tie": 5268,
+    "prepare_first_tie": 5314,
+    "reachable": 5316,
+    "stage_gap": 1812,
+    "stage_tie": 3504,
+    "unreachable": 8508
+  },
+  "domain": "three_owner_complete",
+  "elapsed_seconds": 63.964437069007545,
+  "events_by_owner": [
+    [
+      "e_ab0",
+      "p_ba0",
+      "p_ca0",
+      "e_ac0"
+    ],
+    [
+      "p_ab0",
+      "e_ba0",
+      "e_bc0",
+      "p_cb0"
+    ],
+    [
+      "p_bc0",
+      "e_cb0",
+      "e_ca0",
+      "p_ac0"
+    ]
+  ],
+  "field_edges": [
+    [
+      "ab0",
+      0,
+      1
+    ],
+    [
+      "ba0",
+      1,
+      0
+    ],
+    [
+      "bc0",
+      1,
+      2
+    ],
+    [
+      "cb0",
+      2,
+      1
+    ],
+    [
+      "ca0",
+      2,
+      0
+    ],
+    [
+      "ac0",
+      0,
+      2
+    ]
+  ],
+  "installations": 12,
+  "optimal_phase_counts": {
+    "2": 64,
+    "3": 1646,
+    "4": 2394,
+    "5": 1056,
+    "6": 138,
+    "7": 18
+  },
+  "priorities": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      0
+    ]
+  ],
+  "production_counts": {
+    "all_contexts": 13824,
+    "checked": 13824,
+    "planned": 5316,
+    "unreachable": 8508
+  },
+  "production_fixed_grid": [
+    0,
+    922,
+    1843,
+    2765,
+    3686,
+    4608,
+    5529,
+    6451,
+    7372,
+    8294,
+    9215,
+    10137,
+    11058,
+    11980,
+    12901,
+    13823
+  ],
+  "production_scope": "every_context",
+  "retained_example_validation": "literal catalog cells and safe-phase rectangles plus BFS",
+  "retained_examples": [
+    "first_unreachable",
+    "first_reachable",
+    "first_stage_gap",
+    "first_owner_gap",
+    "first_owner_stage_gap",
+    "first_prepare_first_stage_gap",
+    "first_prepare_first_gap"
+  ],
+  "scope": "declared_finite_domain",
+  "state_shape": [
+    5,
+    5,
+    5
+  ],
+  "strategies": [
+    "owner",
+    "stage",
+    "prepare_first",
+    "prepare_first_stage"
+  ]
+}

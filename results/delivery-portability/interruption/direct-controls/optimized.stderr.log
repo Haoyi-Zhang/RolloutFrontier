@@ -1,0 +1,7 @@
+test_sigint_stops_group_and_finalizes_report (tests.test_verify_interruption.VerificationInterruptionTests.test_sigint_stops_group_and_finalizes_report) ... ok
+test_timeout_stops_group_and_preserves_remaining_check (tests.test_verify_interruption.VerificationInterruptionTests.test_timeout_stops_group_and_preserves_remaining_check) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 4.247s
+
+OK

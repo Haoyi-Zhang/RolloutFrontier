@@ -1,0 +1,17 @@
+{"control_port":46497,"event":"relay-start","pid":13,"ports":{"only":41835},"time_ns":93815164126396}
+{"connection":1,"event":"socket-accepted","owner":"only","peer":["127.0.0.1",38304],"pid":13,"time_ns":93815166794549}
+{"connection":1,"event":"request-forwarded","operation":"read","owner":"only","pid":13,"request_bytes":534,"target_port":41005,"time_ns":93815167448111}
+{"connection":1,"event":"reply-forwarded","operation":"read","owner":"only","pid":13,"response_bytes":670,"time_ns":93815169277022}
+{"connection":1,"event":"socket-closed","owner":"only","pid":13,"time_ns":93815169736413}
+{"connection":2,"event":"socket-accepted","owner":"only","peer":["127.0.0.1",38310],"pid":13,"time_ns":93815182317488}
+{"connection":2,"event":"request-forwarded","operation":"prepare","owner":"only","pid":13,"request_bytes":703,"target_port":41005,"time_ns":93815183055888}
+{"connection":2,"event":"reply-forwarded","operation":"prepare","owner":"only","pid":13,"response_bytes":782,"time_ns":93815185587255}
+{"connection":2,"event":"socket-closed","owner":"only","pid":13,"time_ns":93815186299556}
+{"connection":3,"event":"socket-accepted","owner":"only","peer":["127.0.0.1",38320],"pid":13,"time_ns":93815191205584}
+{"connection":3,"event":"request-forwarded","operation":"schema","owner":"only","pid":13,"request_bytes":795,"target_port":41005,"time_ns":93815191732236}
+{"connection":3,"event":"reply-forwarded","operation":"schema","owner":"only","pid":13,"response_bytes":752,"time_ns":93815193951443}
+{"connection":3,"event":"socket-closed","owner":"only","pid":13,"time_ns":93815194370373}
+{"connection":4,"event":"socket-accepted","owner":"only","peer":["127.0.0.1",38324],"pid":13,"time_ns":93815198648127}
+{"connection":4,"event":"request-forwarded","operation":"close","owner":"only","pid":13,"request_bytes":559,"target_port":41005,"time_ns":93815199197362}
+{"connection":4,"event":"reply-forwarded","operation":"close","owner":"only","pid":13,"response_bytes":567,"time_ns":93815201052242}
+{"connection":4,"event":"socket-closed","owner":"only","pid":13,"time_ns":93815201443130}

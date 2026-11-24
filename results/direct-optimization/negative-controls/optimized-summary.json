@@ -1,0 +1,52 @@
+{
+  "checker_sha256": "b35f4742e6d6ba9ab64184007a453c966bdd0524516ae32047f7108b10e52a64",
+  "controls": 6,
+  "driver_sha256": "2d314a8eed59f8dfe452d3e4b6d163cd8a2eec0f8966095827c39a67e668d835",
+  "records": [
+    {
+      "case": "missing-query",
+      "mutated_record": "missing-query.json",
+      "mutated_sha256": "962580d4793f309d4c2bee4966db27bcd9175cd87c2254b5dfe8ecfd67bb5a42",
+      "reason": "Query count",
+      "status": "REJECTED"
+    },
+    {
+      "case": "changed-stream",
+      "mutated_record": "changed-stream.json",
+      "mutated_sha256": "e1fb1ed12532fbe0ce98b4db7a2668e84be128d523f1d7ec11b6493e23125264",
+      "reason": "Registered proposal stream differs",
+      "status": "REJECTED"
+    },
+    {
+      "case": "unsafe-selected-guard",
+      "mutated_record": "unsafe-selected-guard.json",
+      "mutated_sha256": "69023d8b5b3807d73fbf89a38bf6902f19f924efca6bff9b8630b01b91cd9816",
+      "reason": "Unsafe output product",
+      "status": "REJECTED"
+    },
+    {
+      "case": "false-installation-count",
+      "mutated_record": "false-installation-count.json",
+      "mutated_sha256": "aa5b31d24a3898249e37dbf96ec23bce9d825c4dd902064634eade382b84aa59",
+      "reason": "Saved forecast differs from literal replay",
+      "status": "REJECTED"
+    },
+    {
+      "case": "incorrect-route-budget",
+      "mutated_record": "incorrect-route-budget.json",
+      "mutated_sha256": "378e37282df06b156e790919d3f439c7285f9bf3228d3f26ebdd526f88b44d8a",
+      "reason": "Route budget accounting differs",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing-frontier-member",
+      "mutated_record": "missing-frontier-member.json",
+      "mutated_sha256": "4052993cb64e6a6dca44d86f7bbbe9d7f0bf0d6988d72bb0aedba9e3469814bd",
+      "reason": "Frontier completeness rejected",
+      "status": "REJECTED"
+    }
+  ],
+  "scope": "Each altered record is supplied directly to semantic validation; its current SHA is retained. No integrity-manifest failure stands in for the stated semantic rejection.",
+  "source_summary_sha256": "0fcc546236b0860ec24bfd2ef0402162dd119d929354ca81a7179dfaa674122f",
+  "status": "PASS"
+}

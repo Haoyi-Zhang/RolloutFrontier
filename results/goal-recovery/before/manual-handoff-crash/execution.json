@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "/workspace/scratch/e34480916f53/verification/r3-systems/manual_handoff_crash.py",
+    "--child",
+    "/workspace/scratch/e34480916f53/verification/r3-systems/manual-handoff-crash"
+  ],
+  "returncode": -9,
+  "signal": "SIGKILL",
+  "source_sha256": {
+    "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+    "src/android_contracts.py": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+    "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "982fcce934fb783d46edd5a4514806b0e744d6ef4bc63edcc80e23fdc9cb4634",
+    "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/kubernetes_policy_boundaries.py": "765073ee76b959fb8cd2d901d0daf8467654e49bbf0e66dd6cd08d28ea5fc759"
+  },
+  "status": "OBSERVED_GAP",
+  "stderr": "",
+  "stdout": ""
+}

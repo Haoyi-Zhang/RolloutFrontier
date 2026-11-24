@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "executable": "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+  "prefix": "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment",
+  "base_prefix": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+  "user_site_enabled": false,
+  "protobuf": "7.36.2",
+  "protobuf_file": "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/lib/python3.12/site-packages/google/protobuf/__init__.py",
+  "sys_path": [
+    "",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python312.zip",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/lib-dynload",
+    "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/lib/python3.12/site-packages"
+  ]
+}

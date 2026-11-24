@@ -1,0 +1,285 @@
+{
+  "cases": [
+    {
+      "completion": {
+        "acknowledged_installs": 96,
+        "collections_bound_to_final_state": 2,
+        "owners_checked": 32,
+        "reconciled_steps": 0
+      },
+      "directory": "enum-alias-cycle/trial-01",
+      "verification": {
+        "bound_application_sessions": 3,
+        "checked": true,
+        "complete_requests": 24,
+        "cut_requests": 0,
+        "deployment": "separate processes and TCP relays on one host",
+        "duplicate_receipts": 0,
+        "durable_effects": 792,
+        "factor_corners": 128,
+        "factors": 32,
+        "installations": 96,
+        "installations_with_application_holds": 64,
+        "max_owner_slots": 3,
+        "owner_audit_rows": 1914,
+        "owners": 32,
+        "parser_calls": 768,
+        "phases": 3,
+        "relay_socket_accepts": 1914,
+        "reply_cuts": 0,
+        "session_isolation_controls": 0
+      }
+    },
+    {
+      "completion": {
+        "acknowledged_installs": 96,
+        "collections_bound_to_final_state": 2,
+        "owners_checked": 32,
+        "reconciled_steps": 0
+      },
+      "directory": "enum-alias-cycle/trial-02",
+      "verification": {
+        "bound_application_sessions": 3,
+        "checked": true,
+        "complete_requests": 24,
+        "cut_requests": 0,
+        "deployment": "separate processes and TCP relays on one host",
+        "duplicate_receipts": 0,
+        "durable_effects": 792,
+        "factor_corners": 128,
+        "factors": 32,
+        "installations": 96,
+        "installations_with_application_holds": 64,
+        "max_owner_slots": 3,
+        "owner_audit_rows": 1914,
+        "owners": 32,
+        "parser_calls": 768,
+        "phases": 3,
+        "relay_socket_accepts": 1914,
+        "reply_cuts": 0,
+        "session_isolation_controls": 0
+      }
+    },
+    {
+      "completion": {
+        "acknowledged_installs": 96,
+        "collections_bound_to_final_state": 2,
+        "owners_checked": 32,
+        "reconciled_steps": 0
+      },
+      "directory": "enum-alias-cycle/trial-03",
+      "verification": {
+        "bound_application_sessions": 3,
+        "checked": true,
+        "complete_requests": 24,
+        "cut_requests": 0,
+        "deployment": "separate processes and TCP relays on one host",
+        "duplicate_receipts": 0,
+        "durable_effects": 792,
+        "factor_corners": 128,
+        "factors": 32,
+        "installations": 96,
+        "installations_with_application_holds": 64,
+        "max_owner_slots": 3,
+        "owner_audit_rows": 1914,
+        "owners": 32,
+        "parser_calls": 768,
+        "phases": 3,
+        "relay_socket_accepts": 1914,
+        "reply_cuts": 0,
+        "session_isolation_controls": 0
+      }
+    },
+    {
+      "completion": {
+        "acknowledged_installs": 96,
+        "collections_bound_to_final_state": 2,
+        "owners_checked": 32,
+        "reconciled_steps": 0
+      },
+      "directory": "field-key-fanout-join/trial-01",
+      "verification": {
+        "bound_application_sessions": 3,
+        "checked": true,
+        "complete_requests": 24,
+        "cut_requests": 0,
+        "deployment": "separate processes and TCP relays on one host",
+        "duplicate_receipts": 0,
+        "durable_effects": 768,
+        "factor_corners": 348,
+        "factors": 87,
+        "installations": 96,
+        "installations_with_application_holds": 63,
+        "max_owner_slots": 3,
+        "owner_audit_rows": 1890,
+        "owners": 32,
+        "parser_calls": 2088,
+        "phases": 3,
+        "relay_socket_accepts": 1890,
+        "reply_cuts": 0,
+        "session_isolation_controls": 0
+      }
+    },
+    {
+      "completion": {
+        "acknowledged_installs": 96,
+        "collections_bound_to_final_state": 2,
+        "owners_checked": 32,
+        "reconciled_steps": 0
+      },
+      "directory": "field-key-fanout-join/trial-02",
+      "verification": {
+        "bound_application_sessions": 3,
+        "checked": true,
+        "complete_requests": 24,
+        "cut_requests": 0,
+        "deployment": "separate processes and TCP relays on one host",
+        "duplicate_receipts": 0,
+        "durable_effects": 768,
+        "factor_corners": 348,
+        "factors": 87,
+        "installations": 96,
+        "installations_with_application_holds": 63,
+        "max_owner_slots": 3,
+        "owner_audit_rows": 1890,
+        "owners": 32,
+        "parser_calls": 2088,
+        "phases": 3,
+        "relay_socket_accepts": 1890,
+        "reply_cuts": 0,
+        "session_isolation_controls": 0
+      }
+    },
+    {
+      "completion": {
+        "acknowledged_installs": 96,
+        "collections_bound_to_final_state": 2,
+        "owners_checked": 32,
+        "reconciled_steps": 0
+      },
+      "directory": "field-key-fanout-join/trial-03",
+      "verification": {
+        "bound_application_sessions": 3,
+        "checked": true,
+        "complete_requests": 24,
+        "cut_requests": 0,
+        "deployment": "separate processes and TCP relays on one host",
+        "duplicate_receipts": 0,
+        "durable_effects": 768,
+        "factor_corners": 348,
+        "factors": 87,
+        "installations": 96,
+        "installations_with_application_holds": 63,
+        "max_owner_slots": 3,
+        "owner_audit_rows": 1890,
+        "owners": 32,
+        "parser_calls": 2088,
+        "phases": 3,
+        "relay_socket_accepts": 1890,
+        "reply_cuts": 0,
+        "session_isolation_controls": 0
+      }
+    },
+    {
+      "completion": {
+        "acknowledged_installs": 10,
+        "collections_bound_to_final_state": 2,
+        "owners_checked": 5,
+        "reconciled_steps": 0
+      },
+      "directory": "field-addition-control",
+      "verification": {
+        "bound_application_sessions": 2,
+        "checked": true,
+        "complete_requests": 20,
+        "cut_requests": 0,
+        "deployment": "separate processes and TCP relays on one host",
+        "duplicate_receipts": 0,
+        "durable_effects": 100,
+        "factor_corners": 18,
+        "factors": 6,
+        "installations": 10,
+        "installations_with_application_holds": 5,
+        "max_owner_slots": 2,
+        "owner_audit_rows": 222,
+        "owners": 5,
+        "parser_calls": 120,
+        "phases": 2,
+        "relay_socket_accepts": 222,
+        "reply_cuts": 0,
+        "session_isolation_controls": 0
+      }
+    },
+    {
+      "completion": {
+        "acknowledged_installs": 10,
+        "collections_bound_to_final_state": 2,
+        "owners_checked": 5,
+        "reconciled_steps": 0
+      },
+      "directory": "integer-widening-control",
+      "verification": {
+        "bound_application_sessions": 2,
+        "checked": true,
+        "complete_requests": 20,
+        "cut_requests": 0,
+        "deployment": "separate processes and TCP relays on one host",
+        "duplicate_receipts": 0,
+        "durable_effects": 100,
+        "factor_corners": 18,
+        "factors": 6,
+        "installations": 10,
+        "installations_with_application_holds": 5,
+        "max_owner_slots": 2,
+        "owner_audit_rows": 222,
+        "owners": 5,
+        "parser_calls": 120,
+        "phases": 2,
+        "relay_socket_accepts": 222,
+        "reply_cuts": 0,
+        "session_isolation_controls": 0
+      }
+    },
+    {
+      "completion": {
+        "acknowledged_installs": 8,
+        "collections_bound_to_final_state": 2,
+        "owners_checked": 3,
+        "reconciled_steps": 1
+      },
+      "directory": "recovery-controls",
+      "verification": {
+        "bound_application_sessions": 1,
+        "checked": true,
+        "complete_requests": 1,
+        "cut_requests": 1,
+        "deployment": "separate processes and TCP relays on one host",
+        "duplicate_receipts": 2,
+        "durable_effects": 4,
+        "factor_corners": 12,
+        "factors": 3,
+        "installations": 9,
+        "installations_with_application_holds": 0,
+        "max_owner_slots": 2,
+        "owner_audit_rows": 109,
+        "owners": 3,
+        "parser_calls": 3,
+        "phases": 3,
+        "relay_socket_accepts": 112,
+        "reply_cuts": 2,
+        "session_isolation_controls": 2
+      }
+    }
+  ],
+  "not_reexecuted": [
+    "live owner processes",
+    "TCP interruptions and process kills",
+    "request latency measurements"
+  ],
+  "scope": "Independent saved-message, SQLite, descriptor/parser, guard, installation and completion replay; source bindings and retained request interval checks.",
+  "source_files": 29,
+  "status": "PASS",
+  "total_conditional_installations": 605,
+  "total_effects": 4884,
+  "total_requests": 185
+}

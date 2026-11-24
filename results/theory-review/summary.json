@@ -1,0 +1,47 @@
+{
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "monotonicity": {
+    "comparisons": 147420,
+    "maximum_schedule_length": 5,
+    "mismatches": 0,
+    "nested_set_seed_triples": 108,
+    "schedules_per_triple": 1365,
+    "strict_gains": 84732,
+    "support_values": 4
+  },
+  "positive_catalog": {
+    "all_product_vs_frontier_batches": 599040,
+    "canonical_frontier_members": 1143,
+    "chooser_calls": 1024,
+    "compatible_seed_contexts": 1024,
+    "integrated_chooser_batch_length": 16,
+    "legal_products_before_quotient": 2582,
+    "manifests": 136,
+    "maximum_exhaustive_batch_length": 3,
+    "mismatches": 0,
+    "schedules_per_context": 585
+  },
+  "projection_and_boundary": {
+    "augmented_catalog_selected_installs": 1,
+    "covered_full_support_noops": 2,
+    "covered_irrelevant_change_proposals": 5,
+    "covered_irrelevant_changes": 3,
+    "empty_catalog_anchor_controls": 1,
+    "equal_catalog_legal_products": 4,
+    "off_catalog_alternate_installs": 1,
+    "off_catalog_selected_installs": 0,
+    "scope": "coverage uses relevant projections; installations use complete supports"
+  },
+  "schema": "rolloutfrontier-static-batch-optimality-v1",
+  "scope": "finite logical checks of isolated static predicate guards with catalog-covered proposal projections and sufficient generation headroom; no timing, network, failure, deployment, or unseen-schedule claim",
+  "source_sha256": {
+    "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "tests/static_batch_optimality.py": "21e30ce93984f34603c4771aed64c9efdef1ee451f4937d2333349bffe862bbb"
+  }
+}

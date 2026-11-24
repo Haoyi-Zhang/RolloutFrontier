@@ -1,0 +1,50 @@
+[
+  {
+    "domain": "boundary-three-owner",
+    "statistics": {
+      "cached_state_expansions": 23,
+      "catalog_placements": 45,
+      "frontier_calls": 23,
+      "frontier_search_states": 1277,
+      "phase_candidates": 120,
+      "phase_edge_budget_exhausted": false
+    },
+    "tasks": 529
+  },
+  {
+    "domain": "active-4-owner",
+    "statistics": {
+      "cached_state_expansions": 19,
+      "catalog_placements": 81,
+      "frontier_calls": 19,
+      "frontier_search_states": 1911,
+      "phase_candidates": 97,
+      "phase_edge_budget_exhausted": false
+    },
+    "tasks": 6
+  },
+  {
+    "domain": "active-5-owner",
+    "statistics": {
+      "cached_state_expansions": 35,
+      "catalog_placements": 243,
+      "frontier_calls": 35,
+      "frontier_search_states": 8592,
+      "phase_candidates": 339,
+      "phase_edge_budget_exhausted": false
+    },
+    "tasks": 6
+  },
+  {
+    "domain": "active-6-owner",
+    "statistics": {
+      "cached_state_expansions": 67,
+      "catalog_placements": 729,
+      "frontier_calls": 67,
+      "frontier_search_states": 40571,
+      "phase_candidates": 1285,
+      "phase_edge_budget_exhausted": false
+    },
+    "tasks": 6
+  }
+]

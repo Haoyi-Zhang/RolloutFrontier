@@ -1,0 +1,4776 @@
+[
+  {
+    "descriptors": [
+      {
+        "prepared_fields": [],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322150a065265636f7264120b0a036b6579180120012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "ab0"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322260a065265636f7264120b0a036b6579180120012809120f0a077461675f616230180220012809620670726f746f33"
+      }
+    ],
+    "event_effect_witnesses": [
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\"}",
+        "after_subset": [
+          "ab0"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\"}",
+        "before_subset": [],
+        "feature": "ab0",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      }
+    ],
+    "fields": [
+      "ab0"
+    ],
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "matrix_axes": [
+      "prepared_subset",
+      "emitted_subset"
+    ],
+    "parses": [
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "5"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "6"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "7"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "8"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "9"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "5"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "6"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "7"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "8"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "9"
+      }
+    ],
+    "receiver": 1,
+    "sender": 0,
+    "subsets": [
+      [],
+      [
+        "ab0"
+      ]
+    ],
+    "wires": [
+      {
+        "emitted_fields": [],
+        "id": "0",
+        "sample": 0,
+        "semantic": {
+          "ab0": "",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "1",
+        "sample": 1,
+        "semantic": {
+          "ab0": "",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "2",
+        "sample": 2,
+        "semantic": {
+          "ab0": "",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "3",
+        "sample": 3,
+        "semantic": {
+          "ab0": "",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "4",
+        "sample": 4,
+        "semantic": {
+          "ab0": "",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0"
+        ],
+        "id": "5",
+        "sample": 0,
+        "semantic": {
+          "ab0": "ab0:present",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0"
+        ],
+        "id": "6",
+        "sample": 1,
+        "semantic": {
+          "ab0": "ab0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagAb0\":\"ab0:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0"
+        ],
+        "id": "7",
+        "sample": 2,
+        "semantic": {
+          "ab0": "ab0:扩展字段",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagAb0\":\"ab0:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0"
+        ],
+        "id": "8",
+        "sample": 3,
+        "semantic": {
+          "ab0": "ab0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagAb0\":\"ab0:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0"
+        ],
+        "id": "9",
+        "sample": 4,
+        "semantic": {
+          "ab0": "ab0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagAb0\":\"ab0:field-🙂\"}"
+      }
+    ]
+  },
+  {
+    "descriptors": [
+      {
+        "prepared_fields": [],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322150a065265636f7264120b0a036b6579180120012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "ab0"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322260a065265636f7264120b0a036b6579180120012809120f0a077461675f616230180220012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "ab1"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322260a065265636f7264120b0a036b6579180120012809120f0a077461675f616231180320012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322370a065265636f7264120b0a036b6579180120012809120f0a077461675f616230180220012809120f0a077461675f616231180320012809620670726f746f33"
+      }
+    ],
+    "event_effect_witnesses": [
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\"}",
+        "after_subset": [
+          "ab0"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\"}",
+        "before_subset": [],
+        "feature": "ab0",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      },
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\",\"tagAb1\":\"ab1:present\"}",
+        "after_subset": [
+          "ab0",
+          "ab1"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\",\"tagAb1\":\"ab1:present\"}",
+        "before_subset": [
+          "ab1"
+        ],
+        "feature": "ab0",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      },
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagAb1\":\"ab1:present\"}",
+        "after_subset": [
+          "ab1"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\"}",
+        "before_subset": [],
+        "feature": "ab1",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagAb1\":\"ab1:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      },
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\",\"tagAb1\":\"ab1:present\"}",
+        "after_subset": [
+          "ab0",
+          "ab1"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\"}",
+        "before_subset": [
+          "ab0"
+        ],
+        "feature": "ab1",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagAb1\":\"ab1:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      }
+    ],
+    "fields": [
+      "ab0",
+      "ab1"
+    ],
+    "matrix": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "matrix_axes": [
+      "prepared_subset",
+      "emitted_subset"
+    ],
+    "parses": [
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "5"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "6"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "7"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "8"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "9"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "10"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "11"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "12"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "13"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "14"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "15"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "16"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "17"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "18"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "19"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:present",
+          "ab1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "5"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:migrated-δ",
+          "ab1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "6"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:扩展字段",
+          "ab1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "7"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:line\nbreak\\path",
+          "ab1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "8"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:field-🙂",
+          "ab1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ab0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "9"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab0"
+        ],
+        "wire_id": "10"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab0"
+        ],
+        "wire_id": "11"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab0"
+        ],
+        "wire_id": "12"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab0"
+        ],
+        "wire_id": "13"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab0"
+        ],
+        "wire_id": "14"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab0"
+        ],
+        "wire_id": "15"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab0"
+        ],
+        "wire_id": "16"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab0"
+        ],
+        "wire_id": "17"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab0"
+        ],
+        "wire_id": "18"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab0"
+        ],
+        "wire_id": "19"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab1"
+        ],
+        "wire_id": "5"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab1"
+        ],
+        "wire_id": "6"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab1"
+        ],
+        "wire_id": "7"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab1"
+        ],
+        "wire_id": "8"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab1"
+        ],
+        "wire_id": "9"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "ab1:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "10"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "ab1:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "11"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "ab1:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "12"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "ab1:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "13"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "ab1:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "14"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab1"
+        ],
+        "wire_id": "15"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab1"
+        ],
+        "wire_id": "16"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab1"
+        ],
+        "wire_id": "17"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab1"
+        ],
+        "wire_id": "18"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAb0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagAb1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ab1"
+        ],
+        "wire_id": "19"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:present",
+          "ab1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "5"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:migrated-δ",
+          "ab1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "6"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:扩展字段",
+          "ab1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "7"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:line\nbreak\\path",
+          "ab1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "8"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:field-🙂",
+          "ab1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "9"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "ab1:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "10"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "ab1:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "11"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "ab1:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "12"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "ab1:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "13"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "",
+          "ab1": "ab1:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "14"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:present",
+          "ab1": "ab1:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "15"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:migrated-δ",
+          "ab1": "ab1:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "16"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:扩展字段",
+          "ab1": "ab1:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "17"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:line\nbreak\\path",
+          "ab1": "ab1:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "18"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ab0": "ab0:field-🙂",
+          "ab1": "ab1:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "19"
+      }
+    ],
+    "receiver": 1,
+    "sender": 0,
+    "subsets": [
+      [],
+      [
+        "ab0"
+      ],
+      [
+        "ab1"
+      ],
+      [
+        "ab0",
+        "ab1"
+      ]
+    ],
+    "wires": [
+      {
+        "emitted_fields": [],
+        "id": "0",
+        "sample": 0,
+        "semantic": {
+          "ab0": "",
+          "ab1": "",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "1",
+        "sample": 1,
+        "semantic": {
+          "ab0": "",
+          "ab1": "",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "2",
+        "sample": 2,
+        "semantic": {
+          "ab0": "",
+          "ab1": "",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "3",
+        "sample": 3,
+        "semantic": {
+          "ab0": "",
+          "ab1": "",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "4",
+        "sample": 4,
+        "semantic": {
+          "ab0": "",
+          "ab1": "",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0"
+        ],
+        "id": "5",
+        "sample": 0,
+        "semantic": {
+          "ab0": "ab0:present",
+          "ab1": "",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0"
+        ],
+        "id": "6",
+        "sample": 1,
+        "semantic": {
+          "ab0": "ab0:migrated-δ",
+          "ab1": "",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagAb0\":\"ab0:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0"
+        ],
+        "id": "7",
+        "sample": 2,
+        "semantic": {
+          "ab0": "ab0:扩展字段",
+          "ab1": "",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagAb0\":\"ab0:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0"
+        ],
+        "id": "8",
+        "sample": 3,
+        "semantic": {
+          "ab0": "ab0:line\nbreak\\path",
+          "ab1": "",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagAb0\":\"ab0:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0"
+        ],
+        "id": "9",
+        "sample": 4,
+        "semantic": {
+          "ab0": "ab0:field-🙂",
+          "ab1": "",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagAb0\":\"ab0:field-🙂\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab1"
+        ],
+        "id": "10",
+        "sample": 0,
+        "semantic": {
+          "ab0": "",
+          "ab1": "ab1:present",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagAb1\":\"ab1:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab1"
+        ],
+        "id": "11",
+        "sample": 1,
+        "semantic": {
+          "ab0": "",
+          "ab1": "ab1:migrated-δ",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagAb1\":\"ab1:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab1"
+        ],
+        "id": "12",
+        "sample": 2,
+        "semantic": {
+          "ab0": "",
+          "ab1": "ab1:扩展字段",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagAb1\":\"ab1:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab1"
+        ],
+        "id": "13",
+        "sample": 3,
+        "semantic": {
+          "ab0": "",
+          "ab1": "ab1:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagAb1\":\"ab1:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab1"
+        ],
+        "id": "14",
+        "sample": 4,
+        "semantic": {
+          "ab0": "",
+          "ab1": "ab1:field-🙂",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagAb1\":\"ab1:field-🙂\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "id": "15",
+        "sample": 0,
+        "semantic": {
+          "ab0": "ab0:present",
+          "ab1": "ab1:present",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagAb0\":\"ab0:present\",\"tagAb1\":\"ab1:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "id": "16",
+        "sample": 1,
+        "semantic": {
+          "ab0": "ab0:migrated-δ",
+          "ab1": "ab1:migrated-δ",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagAb0\":\"ab0:migrated-δ\",\"tagAb1\":\"ab1:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "id": "17",
+        "sample": 2,
+        "semantic": {
+          "ab0": "ab0:扩展字段",
+          "ab1": "ab1:扩展字段",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagAb0\":\"ab0:扩展字段\",\"tagAb1\":\"ab1:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "id": "18",
+        "sample": 3,
+        "semantic": {
+          "ab0": "ab0:line\nbreak\\path",
+          "ab1": "ab1:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagAb0\":\"ab0:line\\nbreak\\\\path\",\"tagAb1\":\"ab1:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "ab0",
+          "ab1"
+        ],
+        "id": "19",
+        "sample": 4,
+        "semantic": {
+          "ab0": "ab0:field-🙂",
+          "ab1": "ab1:field-🙂",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagAb0\":\"ab0:field-🙂\",\"tagAb1\":\"ab1:field-🙂\"}"
+      }
+    ]
+  },
+  {
+    "descriptors": [
+      {
+        "prepared_fields": [],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322150a065265636f7264120b0a036b6579180120012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "ac0"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322260a065265636f7264120b0a036b6579180120012809120f0a077461675f616330180220012809620670726f746f33"
+      }
+    ],
+    "event_effect_witnesses": [
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagAc0\":\"ac0:present\"}",
+        "after_subset": [
+          "ac0"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\"}",
+        "before_subset": [],
+        "feature": "ac0",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagAc0\":\"ac0:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      }
+    ],
+    "fields": [
+      "ac0"
+    ],
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "matrix_axes": [
+      "prepared_subset",
+      "emitted_subset"
+    ],
+    "parses": [
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAc0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "5"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAc0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "6"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAc0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "7"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAc0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "8"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagAc0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "9"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ac0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ac0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ac0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ac0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ac0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "ac0:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ac0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "5"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "ac0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ac0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "6"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "ac0:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ac0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "7"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "ac0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ac0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "8"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ac0": "ac0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ac0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "9"
+      }
+    ],
+    "receiver": 2,
+    "sender": 0,
+    "subsets": [
+      [],
+      [
+        "ac0"
+      ]
+    ],
+    "wires": [
+      {
+        "emitted_fields": [],
+        "id": "0",
+        "sample": 0,
+        "semantic": {
+          "ac0": "",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "1",
+        "sample": 1,
+        "semantic": {
+          "ac0": "",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "2",
+        "sample": 2,
+        "semantic": {
+          "ac0": "",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "3",
+        "sample": 3,
+        "semantic": {
+          "ac0": "",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "4",
+        "sample": 4,
+        "semantic": {
+          "ac0": "",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ac0"
+        ],
+        "id": "5",
+        "sample": 0,
+        "semantic": {
+          "ac0": "ac0:present",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagAc0\":\"ac0:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "ac0"
+        ],
+        "id": "6",
+        "sample": 1,
+        "semantic": {
+          "ac0": "ac0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagAc0\":\"ac0:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ac0"
+        ],
+        "id": "7",
+        "sample": 2,
+        "semantic": {
+          "ac0": "ac0:扩展字段",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagAc0\":\"ac0:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "ac0"
+        ],
+        "id": "8",
+        "sample": 3,
+        "semantic": {
+          "ac0": "ac0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagAc0\":\"ac0:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "ac0"
+        ],
+        "id": "9",
+        "sample": 4,
+        "semantic": {
+          "ac0": "ac0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagAc0\":\"ac0:field-🙂\"}"
+      }
+    ]
+  },
+  {
+    "descriptors": [
+      {
+        "prepared_fields": [],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322150a065265636f7264120b0a036b6579180120012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "ba0"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322260a065265636f7264120b0a036b6579180120012809120f0a077461675f626130180220012809620670726f746f33"
+      }
+    ],
+    "event_effect_witnesses": [
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\"}",
+        "after_subset": [
+          "ba0"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\"}",
+        "before_subset": [],
+        "feature": "ba0",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      }
+    ],
+    "fields": [
+      "ba0"
+    ],
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "matrix_axes": [
+      "prepared_subset",
+      "emitted_subset"
+    ],
+    "parses": [
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "5"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "6"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "7"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "8"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "9"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "5"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "6"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "7"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "8"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "9"
+      }
+    ],
+    "receiver": 0,
+    "sender": 1,
+    "subsets": [
+      [],
+      [
+        "ba0"
+      ]
+    ],
+    "wires": [
+      {
+        "emitted_fields": [],
+        "id": "0",
+        "sample": 0,
+        "semantic": {
+          "ba0": "",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "1",
+        "sample": 1,
+        "semantic": {
+          "ba0": "",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "2",
+        "sample": 2,
+        "semantic": {
+          "ba0": "",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "3",
+        "sample": 3,
+        "semantic": {
+          "ba0": "",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "4",
+        "sample": 4,
+        "semantic": {
+          "ba0": "",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0"
+        ],
+        "id": "5",
+        "sample": 0,
+        "semantic": {
+          "ba0": "ba0:present",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0"
+        ],
+        "id": "6",
+        "sample": 1,
+        "semantic": {
+          "ba0": "ba0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagBa0\":\"ba0:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0"
+        ],
+        "id": "7",
+        "sample": 2,
+        "semantic": {
+          "ba0": "ba0:扩展字段",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagBa0\":\"ba0:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0"
+        ],
+        "id": "8",
+        "sample": 3,
+        "semantic": {
+          "ba0": "ba0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagBa0\":\"ba0:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0"
+        ],
+        "id": "9",
+        "sample": 4,
+        "semantic": {
+          "ba0": "ba0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagBa0\":\"ba0:field-🙂\"}"
+      }
+    ]
+  },
+  {
+    "descriptors": [
+      {
+        "prepared_fields": [],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322150a065265636f7264120b0a036b6579180120012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "ba0"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322260a065265636f7264120b0a036b6579180120012809120f0a077461675f626130180220012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "ba1"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322260a065265636f7264120b0a036b6579180120012809120f0a077461675f626131180320012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322370a065265636f7264120b0a036b6579180120012809120f0a077461675f626130180220012809120f0a077461675f626131180320012809620670726f746f33"
+      }
+    ],
+    "event_effect_witnesses": [
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\"}",
+        "after_subset": [
+          "ba0"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\"}",
+        "before_subset": [],
+        "feature": "ba0",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      },
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\",\"tagBa1\":\"ba1:present\"}",
+        "after_subset": [
+          "ba0",
+          "ba1"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\",\"tagBa1\":\"ba1:present\"}",
+        "before_subset": [
+          "ba1"
+        ],
+        "feature": "ba0",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      },
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagBa1\":\"ba1:present\"}",
+        "after_subset": [
+          "ba1"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\"}",
+        "before_subset": [],
+        "feature": "ba1",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagBa1\":\"ba1:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      },
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\",\"tagBa1\":\"ba1:present\"}",
+        "after_subset": [
+          "ba0",
+          "ba1"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\"}",
+        "before_subset": [
+          "ba0"
+        ],
+        "feature": "ba1",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagBa1\":\"ba1:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      }
+    ],
+    "fields": [
+      "ba0",
+      "ba1"
+    ],
+    "matrix": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "matrix_axes": [
+      "prepared_subset",
+      "emitted_subset"
+    ],
+    "parses": [
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "5"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "6"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "7"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "8"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "9"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "10"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "11"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "12"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "13"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "14"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "15"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "16"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "17"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "18"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "19"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:present",
+          "ba1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "5"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:migrated-δ",
+          "ba1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "6"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:扩展字段",
+          "ba1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "7"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:line\nbreak\\path",
+          "ba1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "8"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:field-🙂",
+          "ba1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ba0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "9"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba0"
+        ],
+        "wire_id": "10"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba0"
+        ],
+        "wire_id": "11"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba0"
+        ],
+        "wire_id": "12"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba0"
+        ],
+        "wire_id": "13"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba0"
+        ],
+        "wire_id": "14"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba0"
+        ],
+        "wire_id": "15"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba0"
+        ],
+        "wire_id": "16"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba0"
+        ],
+        "wire_id": "17"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba0"
+        ],
+        "wire_id": "18"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa1\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa0']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba0"
+        ],
+        "wire_id": "19"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba1"
+        ],
+        "wire_id": "5"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba1"
+        ],
+        "wire_id": "6"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba1"
+        ],
+        "wire_id": "7"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba1"
+        ],
+        "wire_id": "8"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba1"
+        ],
+        "wire_id": "9"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "ba1:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "10"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "ba1:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "11"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "ba1:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "12"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "ba1:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "13"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "ba1:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "14"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba1"
+        ],
+        "wire_id": "15"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba1"
+        ],
+        "wire_id": "16"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba1"
+        ],
+        "wire_id": "17"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba1"
+        ],
+        "wire_id": "18"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBa0\" at \"Record\".\n Available Fields(except extensions): \"['key', 'tagBa1']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [
+          "ba1"
+        ],
+        "wire_id": "19"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:present",
+          "ba1": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "5"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:migrated-δ",
+          "ba1": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "6"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:扩展字段",
+          "ba1": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "7"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:line\nbreak\\path",
+          "ba1": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "8"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:field-🙂",
+          "ba1": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "9"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "ba1:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "10"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "ba1:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "11"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "ba1:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "12"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "ba1:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "13"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "",
+          "ba1": "ba1:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "14"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:present",
+          "ba1": "ba1:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "15"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:migrated-δ",
+          "ba1": "ba1:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "16"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:扩展字段",
+          "ba1": "ba1:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "17"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:line\nbreak\\path",
+          "ba1": "ba1:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "18"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ba0": "ba0:field-🙂",
+          "ba1": "ba1:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "semantic_equal": true,
+        "wire_id": "19"
+      }
+    ],
+    "receiver": 0,
+    "sender": 1,
+    "subsets": [
+      [],
+      [
+        "ba0"
+      ],
+      [
+        "ba1"
+      ],
+      [
+        "ba0",
+        "ba1"
+      ]
+    ],
+    "wires": [
+      {
+        "emitted_fields": [],
+        "id": "0",
+        "sample": 0,
+        "semantic": {
+          "ba0": "",
+          "ba1": "",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "1",
+        "sample": 1,
+        "semantic": {
+          "ba0": "",
+          "ba1": "",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "2",
+        "sample": 2,
+        "semantic": {
+          "ba0": "",
+          "ba1": "",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "3",
+        "sample": 3,
+        "semantic": {
+          "ba0": "",
+          "ba1": "",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "4",
+        "sample": 4,
+        "semantic": {
+          "ba0": "",
+          "ba1": "",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0"
+        ],
+        "id": "5",
+        "sample": 0,
+        "semantic": {
+          "ba0": "ba0:present",
+          "ba1": "",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0"
+        ],
+        "id": "6",
+        "sample": 1,
+        "semantic": {
+          "ba0": "ba0:migrated-δ",
+          "ba1": "",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagBa0\":\"ba0:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0"
+        ],
+        "id": "7",
+        "sample": 2,
+        "semantic": {
+          "ba0": "ba0:扩展字段",
+          "ba1": "",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagBa0\":\"ba0:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0"
+        ],
+        "id": "8",
+        "sample": 3,
+        "semantic": {
+          "ba0": "ba0:line\nbreak\\path",
+          "ba1": "",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagBa0\":\"ba0:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0"
+        ],
+        "id": "9",
+        "sample": 4,
+        "semantic": {
+          "ba0": "ba0:field-🙂",
+          "ba1": "",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagBa0\":\"ba0:field-🙂\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba1"
+        ],
+        "id": "10",
+        "sample": 0,
+        "semantic": {
+          "ba0": "",
+          "ba1": "ba1:present",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagBa1\":\"ba1:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba1"
+        ],
+        "id": "11",
+        "sample": 1,
+        "semantic": {
+          "ba0": "",
+          "ba1": "ba1:migrated-δ",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagBa1\":\"ba1:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba1"
+        ],
+        "id": "12",
+        "sample": 2,
+        "semantic": {
+          "ba0": "",
+          "ba1": "ba1:扩展字段",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagBa1\":\"ba1:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba1"
+        ],
+        "id": "13",
+        "sample": 3,
+        "semantic": {
+          "ba0": "",
+          "ba1": "ba1:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagBa1\":\"ba1:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba1"
+        ],
+        "id": "14",
+        "sample": 4,
+        "semantic": {
+          "ba0": "",
+          "ba1": "ba1:field-🙂",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagBa1\":\"ba1:field-🙂\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "id": "15",
+        "sample": 0,
+        "semantic": {
+          "ba0": "ba0:present",
+          "ba1": "ba1:present",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagBa0\":\"ba0:present\",\"tagBa1\":\"ba1:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "id": "16",
+        "sample": 1,
+        "semantic": {
+          "ba0": "ba0:migrated-δ",
+          "ba1": "ba1:migrated-δ",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagBa0\":\"ba0:migrated-δ\",\"tagBa1\":\"ba1:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "id": "17",
+        "sample": 2,
+        "semantic": {
+          "ba0": "ba0:扩展字段",
+          "ba1": "ba1:扩展字段",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagBa0\":\"ba0:扩展字段\",\"tagBa1\":\"ba1:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "id": "18",
+        "sample": 3,
+        "semantic": {
+          "ba0": "ba0:line\nbreak\\path",
+          "ba1": "ba1:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagBa0\":\"ba0:line\\nbreak\\\\path\",\"tagBa1\":\"ba1:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "ba0",
+          "ba1"
+        ],
+        "id": "19",
+        "sample": 4,
+        "semantic": {
+          "ba0": "ba0:field-🙂",
+          "ba1": "ba1:field-🙂",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagBa0\":\"ba0:field-🙂\",\"tagBa1\":\"ba1:field-🙂\"}"
+      }
+    ]
+  },
+  {
+    "descriptors": [
+      {
+        "prepared_fields": [],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322150a065265636f7264120b0a036b6579180120012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "bc0"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322260a065265636f7264120b0a036b6579180120012809120f0a077461675f626330180220012809620670726f746f33"
+      }
+    ],
+    "event_effect_witnesses": [
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagBc0\":\"bc0:present\"}",
+        "after_subset": [
+          "bc0"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\"}",
+        "before_subset": [],
+        "feature": "bc0",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagBc0\":\"bc0:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      }
+    ],
+    "fields": [
+      "bc0"
+    ],
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "matrix_axes": [
+      "prepared_subset",
+      "emitted_subset"
+    ],
+    "parses": [
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBc0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "5"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBc0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "6"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBc0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "7"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBc0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "8"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagBc0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "9"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "bc0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "bc0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "bc0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "bc0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "bc0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "bc0:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "bc0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "5"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "bc0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "bc0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "6"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "bc0:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "bc0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "7"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "bc0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "bc0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "8"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "bc0": "bc0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "bc0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "9"
+      }
+    ],
+    "receiver": 2,
+    "sender": 1,
+    "subsets": [
+      [],
+      [
+        "bc0"
+      ]
+    ],
+    "wires": [
+      {
+        "emitted_fields": [],
+        "id": "0",
+        "sample": 0,
+        "semantic": {
+          "bc0": "",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "1",
+        "sample": 1,
+        "semantic": {
+          "bc0": "",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "2",
+        "sample": 2,
+        "semantic": {
+          "bc0": "",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "3",
+        "sample": 3,
+        "semantic": {
+          "bc0": "",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "4",
+        "sample": 4,
+        "semantic": {
+          "bc0": "",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\"}"
+      },
+      {
+        "emitted_fields": [
+          "bc0"
+        ],
+        "id": "5",
+        "sample": 0,
+        "semantic": {
+          "bc0": "bc0:present",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagBc0\":\"bc0:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "bc0"
+        ],
+        "id": "6",
+        "sample": 1,
+        "semantic": {
+          "bc0": "bc0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagBc0\":\"bc0:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "bc0"
+        ],
+        "id": "7",
+        "sample": 2,
+        "semantic": {
+          "bc0": "bc0:扩展字段",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagBc0\":\"bc0:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "bc0"
+        ],
+        "id": "8",
+        "sample": 3,
+        "semantic": {
+          "bc0": "bc0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagBc0\":\"bc0:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "bc0"
+        ],
+        "id": "9",
+        "sample": 4,
+        "semantic": {
+          "bc0": "bc0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagBc0\":\"bc0:field-🙂\"}"
+      }
+    ]
+  },
+  {
+    "descriptors": [
+      {
+        "prepared_fields": [],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322150a065265636f7264120b0a036b6579180120012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "ca0"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322260a065265636f7264120b0a036b6579180120012809120f0a077461675f636130180220012809620670726f746f33"
+      }
+    ],
+    "event_effect_witnesses": [
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagCa0\":\"ca0:present\"}",
+        "after_subset": [
+          "ca0"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\"}",
+        "before_subset": [],
+        "feature": "ca0",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagCa0\":\"ca0:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      }
+    ],
+    "fields": [
+      "ca0"
+    ],
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "matrix_axes": [
+      "prepared_subset",
+      "emitted_subset"
+    ],
+    "parses": [
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagCa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "5"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagCa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "6"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagCa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "7"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagCa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "8"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagCa0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "9"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ca0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ca0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ca0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ca0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ca0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "ca0:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "ca0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "5"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "ca0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "ca0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "6"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "ca0:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "ca0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "7"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "ca0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "ca0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "8"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "ca0": "ca0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "ca0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "9"
+      }
+    ],
+    "receiver": 0,
+    "sender": 2,
+    "subsets": [
+      [],
+      [
+        "ca0"
+      ]
+    ],
+    "wires": [
+      {
+        "emitted_fields": [],
+        "id": "0",
+        "sample": 0,
+        "semantic": {
+          "ca0": "",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "1",
+        "sample": 1,
+        "semantic": {
+          "ca0": "",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "2",
+        "sample": 2,
+        "semantic": {
+          "ca0": "",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "3",
+        "sample": 3,
+        "semantic": {
+          "ca0": "",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "4",
+        "sample": 4,
+        "semantic": {
+          "ca0": "",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ca0"
+        ],
+        "id": "5",
+        "sample": 0,
+        "semantic": {
+          "ca0": "ca0:present",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagCa0\":\"ca0:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "ca0"
+        ],
+        "id": "6",
+        "sample": 1,
+        "semantic": {
+          "ca0": "ca0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagCa0\":\"ca0:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "ca0"
+        ],
+        "id": "7",
+        "sample": 2,
+        "semantic": {
+          "ca0": "ca0:扩展字段",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagCa0\":\"ca0:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "ca0"
+        ],
+        "id": "8",
+        "sample": 3,
+        "semantic": {
+          "ca0": "ca0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagCa0\":\"ca0:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "ca0"
+        ],
+        "id": "9",
+        "sample": 4,
+        "semantic": {
+          "ca0": "ca0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagCa0\":\"ca0:field-🙂\"}"
+      }
+    ]
+  },
+  {
+    "descriptors": [
+      {
+        "prepared_fields": [],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322150a065265636f7264120b0a036b6579180120012809620670726f746f33"
+      },
+      {
+        "prepared_fields": [
+          "cb0"
+        ],
+        "serialized_hex": "0a136576656e745f6368616e6e656c2e70726f746f12066576656e747322260a065265636f7264120b0a036b6579180120012809120f0a077461675f636230180220012809620670726f746f33"
+      }
+    ],
+    "event_effect_witnesses": [
+      {
+        "after_emit_wire": "{\"key\":\"alpha\",\"tagCb0\":\"cb0:present\"}",
+        "after_subset": [
+          "cb0"
+        ],
+        "before_emit_wire": "{\"key\":\"alpha\"}",
+        "before_subset": [],
+        "feature": "cb0",
+        "prepare_witness_wire": "{\"key\":\"alpha\",\"tagCb0\":\"cb0:present\"}",
+        "reader_after_preserves_semantics": true,
+        "reader_before_rejects": true
+      }
+    ],
+    "fields": [
+      "cb0"
+    ],
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "matrix_axes": [
+      "prepared_subset",
+      "emitted_subset"
+    ],
+    "parses": [
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagCb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "5"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagCb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "6"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagCb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "7"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagCb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "8"
+      },
+      {
+        "accepted": false,
+        "error": "Message type \"events.Record\" has no field named \"tagCb0\" at \"Record\".\n Available Fields(except extensions): \"['key']\"",
+        "error_type": "ParseError",
+        "prepared_fields": [],
+        "wire_id": "9"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "cb0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "0"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "cb0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "1"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "cb0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "2"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "cb0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "3"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "cb0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "4"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "cb0:present",
+          "key": "alpha"
+        },
+        "prepared_fields": [
+          "cb0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "5"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "cb0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "prepared_fields": [
+          "cb0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "6"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "cb0:扩展字段",
+          "key": "中文"
+        },
+        "prepared_fields": [
+          "cb0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "7"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "cb0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "prepared_fields": [
+          "cb0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "8"
+      },
+      {
+        "accepted": true,
+        "decoded": {
+          "cb0": "cb0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "prepared_fields": [
+          "cb0"
+        ],
+        "semantic_equal": true,
+        "wire_id": "9"
+      }
+    ],
+    "receiver": 1,
+    "sender": 2,
+    "subsets": [
+      [],
+      [
+        "cb0"
+      ]
+    ],
+    "wires": [
+      {
+        "emitted_fields": [],
+        "id": "0",
+        "sample": 0,
+        "semantic": {
+          "cb0": "",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "1",
+        "sample": 1,
+        "semantic": {
+          "cb0": "",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "2",
+        "sample": 2,
+        "semantic": {
+          "cb0": "",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "3",
+        "sample": 3,
+        "semantic": {
+          "cb0": "",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\"}"
+      },
+      {
+        "emitted_fields": [],
+        "id": "4",
+        "sample": 4,
+        "semantic": {
+          "cb0": "",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\"}"
+      },
+      {
+        "emitted_fields": [
+          "cb0"
+        ],
+        "id": "5",
+        "sample": 0,
+        "semantic": {
+          "cb0": "cb0:present",
+          "key": "alpha"
+        },
+        "wire": "{\"key\":\"alpha\",\"tagCb0\":\"cb0:present\"}"
+      },
+      {
+        "emitted_fields": [
+          "cb0"
+        ],
+        "id": "6",
+        "sample": 1,
+        "semantic": {
+          "cb0": "cb0:migrated-δ",
+          "key": "κλειδί"
+        },
+        "wire": "{\"key\":\"κλειδί\",\"tagCb0\":\"cb0:migrated-δ\"}"
+      },
+      {
+        "emitted_fields": [
+          "cb0"
+        ],
+        "id": "7",
+        "sample": 2,
+        "semantic": {
+          "cb0": "cb0:扩展字段",
+          "key": "中文"
+        },
+        "wire": "{\"key\":\"中文\",\"tagCb0\":\"cb0:扩展字段\"}"
+      },
+      {
+        "emitted_fields": [
+          "cb0"
+        ],
+        "id": "8",
+        "sample": 3,
+        "semantic": {
+          "cb0": "cb0:line\nbreak\\path",
+          "key": "quoted\"key"
+        },
+        "wire": "{\"key\":\"quoted\\\"key\",\"tagCb0\":\"cb0:line\\nbreak\\\\path\"}"
+      },
+      {
+        "emitted_fields": [
+          "cb0"
+        ],
+        "id": "9",
+        "sample": 4,
+        "semantic": {
+          "cb0": "cb0:field-🙂",
+          "key": "emoji-λ"
+        },
+        "wire": "{\"key\":\"emoji-λ\",\"tagCb0\":\"cb0:field-🙂\"}"
+      }
+    ]
+  }
+]

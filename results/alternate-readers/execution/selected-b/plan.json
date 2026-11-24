@@ -1,0 +1,850 @@
+{
+  "budgets": {
+    "closure_pairs": 4000000,
+    "factor_placements": 4096,
+    "factors": 4096,
+    "owners": 1024,
+    "steps": 8192,
+    "total_factor_placements": 262144
+  },
+  "catalog": {
+    "a": [
+      [
+        "accept:base",
+        "emit:base",
+        "program:field-addition:legacy"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:base",
+        "program:field-addition:accepting"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:extended",
+        "program:field-addition:emitting"
+      ]
+    ],
+    "b": [
+      [
+        "accept:base",
+        "emit:base",
+        "program:field-addition:legacy"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:base",
+        "program:field-addition:accepting"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:extended",
+        "program:field-addition:emitting"
+      ]
+    ],
+    "c": [
+      [
+        "accept:base",
+        "emit:base",
+        "program:field-addition:legacy"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:base",
+        "program:field-addition:accepting"
+      ],
+      [
+        "accept:base",
+        "accept:extended",
+        "emit:extended",
+        "program:field-addition:emitting"
+      ]
+    ]
+  },
+  "cost": {
+    "handoffs": 0,
+    "installations": 1,
+    "phases": 1
+  },
+  "factors": [
+    {
+      "branches": [
+        {
+          "a": [
+            "emit:base"
+          ],
+          "b": [
+            "accept:base"
+          ],
+          "c": []
+        },
+        {
+          "a": [
+            "emit:extended"
+          ],
+          "b": [
+            "accept:extended"
+          ],
+          "c": []
+        },
+        {
+          "a": [
+            "emit:base"
+          ],
+          "b": [],
+          "c": [
+            "accept:base"
+          ]
+        },
+        {
+          "a": [
+            "emit:extended"
+          ],
+          "b": [],
+          "c": [
+            "accept:extended"
+          ]
+        }
+      ],
+      "id": "either-reader"
+    }
+  ],
+  "initial": {
+    "a": [
+      "accept:base",
+      "accept:extended",
+      "emit:extended",
+      "program:field-addition:emitting"
+    ],
+    "b": [
+      "accept:base",
+      "accept:extended",
+      "emit:extended",
+      "program:field-addition:emitting"
+    ],
+    "c": [
+      "accept:base",
+      "accept:extended",
+      "emit:base",
+      "program:field-addition:accepting"
+    ]
+  },
+  "objective": [
+    "fewest guard phases",
+    "fewest installations"
+  ],
+  "phases": [
+    {
+      "box": {
+        "a": [
+          [
+            "emit:extended"
+          ]
+        ],
+        "b": [
+          [
+            "accept:base",
+            "accept:extended"
+          ]
+        ],
+        "c": [
+          [
+            "accept:base",
+            "accept:extended"
+          ]
+        ]
+      },
+      "factor_checks": [
+        {
+          "corners": 1,
+          "id": "either-reader"
+        }
+      ],
+      "local_paths": {
+        "a": [
+          [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        ],
+        "b": [
+          [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        ],
+        "c": [
+          [
+            "accept:base",
+            "accept:extended",
+            "emit:base",
+            "program:field-addition:accepting"
+          ],
+          [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        ]
+      },
+      "source": {
+        "a": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "b": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "c": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ]
+      },
+      "steps": [
+        {
+          "node": "c",
+          "support": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        }
+      ],
+      "target": {
+        "a": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "b": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "c": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ]
+      }
+    }
+  ],
+  "recognition": {
+    "checked_factor_placements": 27,
+    "checked_join_pairs": 351,
+    "criterion": "factorwise componentwise-maximum closure",
+    "factors": [
+      {
+        "axis_limits": [
+          {
+            "source": [
+              0,
+              0,
+              0
+            ],
+            "upper": [
+              1,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              0,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              0,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              1,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              1,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              1,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              2,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              2,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              0,
+              2,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              0,
+              0
+            ],
+            "upper": [
+              1,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              0,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              0,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              1,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              1,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              1,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              2,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              2,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              1,
+              2,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              0,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              0,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              1,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              1,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              1,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              2,
+              0
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              2,
+              1
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "source": [
+              2,
+              2,
+              2
+            ],
+            "upper": [
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "catalog_placements": 27,
+        "checked_join_pairs": 351,
+        "compatible_placements": 26,
+        "id": "either-reader",
+        "owners": [
+          "a",
+          "b",
+          "c"
+        ],
+        "relation": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "shape": [
+          3,
+          3,
+          3
+        ]
+      }
+    ],
+    "global_catalog_enumerated": false,
+    "owners": 3,
+    "recognized": true
+  },
+  "schema": "factored-chain-plan",
+  "search": {
+    "rank_iterates": [
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ]
+    ]
+  },
+  "status": "planned",
+  "target": {
+    "a": [
+      "accept:base",
+      "accept:extended",
+      "emit:extended",
+      "program:field-addition:emitting"
+    ],
+    "b": [
+      "accept:base",
+      "accept:extended",
+      "emit:extended",
+      "program:field-addition:emitting"
+    ],
+    "c": [
+      "accept:base",
+      "accept:extended",
+      "emit:extended",
+      "program:field-addition:emitting"
+    ]
+  },
+  "transitions": {
+    "a": [
+      {
+        "source": [
+          "accept:base",
+          "emit:base",
+          "program:field-addition:legacy"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ]
+      },
+      {
+        "source": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ]
+      }
+    ],
+    "b": [
+      {
+        "source": [
+          "accept:base",
+          "emit:base",
+          "program:field-addition:legacy"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ]
+      },
+      {
+        "source": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ]
+      }
+    ],
+    "c": [
+      {
+        "source": [
+          "accept:base",
+          "emit:base",
+          "program:field-addition:legacy"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ]
+      },
+      {
+        "source": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ],
+        "target": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ]
+      }
+    ]
+  }
+}

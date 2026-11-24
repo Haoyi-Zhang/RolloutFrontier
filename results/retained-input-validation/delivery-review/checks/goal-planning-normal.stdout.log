@@ -1,0 +1,10 @@
+{
+  "all_witnesses_checked": true,
+  "centralized_reachability_agrees": true,
+  "contexts": 3304,
+  "goal_queries": 65792,
+  "independent_all_safe_product_optima": true,
+  "reachable": 40517,
+  "status": "PASS",
+  "unreachable": 25275
+}

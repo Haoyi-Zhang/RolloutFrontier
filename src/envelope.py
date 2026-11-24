@@ -96,7 +96,7 @@ def _projected_inputs(branches: list[dict[str, list[str]]], current: dict[str, l
 
 def synthesize(branches: list[dict[str, list[str]]], current: dict[str, list[str]],
                candidates: dict[str, list[list[str]]]) -> dict:
-    """Greedy inclusion-maximal planning baseline over supplied candidates.
+    """Greedy fixed-order planning baseline over supplied candidates.
 
     Current support and candidate profiles are projected onto declared atoms.
     This is neither a maximum-volume rectangle nor a maximum-availability plan.
@@ -313,7 +313,7 @@ def frontier_synthesize(branches: list[dict[str, list[str]]], current: dict[str,
         masks = tuple(selected[n]["accepted_mask"] for n in nodes)
         key = canonical_box(selected)
         record = dict(masks=masks, key=key, selected=dict(selected), score=score(selected))
-        # Equal finite acceptance sets keep the lowest-metadata, lexical guard.
+        # Equal finite acceptance sets minimize term count, then lexical guard order.
         same = next((x for x in frontier if x["masks"] == masks), None)
         if same is not None:
             same_terms = -same["score"][2]
@@ -359,7 +359,7 @@ def frontier_synthesize(branches: list[dict[str, list[str]]], current: dict[str,
         raise AssertionError("current-safe seed did not produce a frontier plan")
     # Selection is deliberately restricted to nondominated accepted-profile
     # vectors. With zero-weight candidates, optimizing over all safe guards can
-    # otherwise prefer a smaller dominated guard under the metadata tie-break.
+    # otherwise prefer a smaller dominated guard under the term-count tie-break.
     best_score = max(record["score"] for record in frontier)
     best = min((record for record in frontier if record["score"] == best_score),
                key=lambda record: record["key"])

@@ -1,0 +1,79 @@
+{
+  "scope": "Cancellation framing and existing durable lifecycle regressions; no timing comparison.",
+  "runs": [
+    {
+      "mode": "current",
+      "exit_code": 0,
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.cancellation_lifecycle",
+        "tests.origin_serialization",
+        "tests.effect_drain",
+        "tests.closed_objects",
+        "tests.persistence_failures",
+        "tests.origin_persistence_failures",
+        "tests.receipt_snapshots",
+        "tests.window_types",
+        "-v"
+      ],
+      "stderr_tail": [
+        "----------------------------------------------------------------------",
+        "Ran 40 tests in 1.327s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "mode": "optimized",
+      "exit_code": 0,
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.cancellation_lifecycle",
+        "tests.origin_serialization",
+        "tests.effect_drain",
+        "tests.closed_objects",
+        "tests.persistence_failures",
+        "tests.origin_persistence_failures",
+        "tests.receipt_snapshots",
+        "tests.window_types",
+        "-v"
+      ],
+      "stderr_tail": [
+        "----------------------------------------------------------------------",
+        "Ran 40 tests in 1.562s",
+        "",
+        "OK"
+      ]
+    }
+  ],
+  "source_bindings": [
+    {
+      "path": "src/controller.py",
+      "sha256": "982fcce934fb783d46edd5a4514806b0e744d6ef4bc63edcc80e23fdc9cb4634"
+    },
+    {
+      "path": "src/network.py",
+      "sha256": "4ccd3876d300f909957b9352e030bd920a018752e000f4d25e00664bf6cb2122"
+    },
+    {
+      "path": "src/effect_ledger.py",
+      "sha256": "b9ad1d007f88d9d2b550a66fb5cd4fd7e1f4baa63073ae812438385b446fd4e7"
+    },
+    {
+      "path": "tests/cancellation_lifecycle.py",
+      "sha256": "de02b915398ef49791ab11a4a34d40c781631f77959adc04c6169e2c6fc7f414"
+    }
+  ],
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "sqlite": "3.53.1",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  }
+}

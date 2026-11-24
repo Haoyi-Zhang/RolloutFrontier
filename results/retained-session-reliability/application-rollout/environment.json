@@ -1,0 +1,32 @@
+{
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "concurrencies": [
+    1,
+    4,
+    16
+  ],
+  "condition_order": "alternated within each concurrency",
+  "coordinator_pid": 58,
+  "latency_interval": "pipeline request invocation through durable origin completion, excludes batch admission/retirement",
+  "logical_cpus": 9,
+  "owners": "three separate OS processes",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "protobuf": "7.36.2",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "repetitions": 3,
+  "request_audit": "durable owner audit enabled for all conditions",
+  "requests_per_trial": 96,
+  "sqlite": "3.53.1",
+  "sqlite_synchronous": "FULL",
+  "transport": "loopback TCP"
+}

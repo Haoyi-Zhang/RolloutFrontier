@@ -1,0 +1,108 @@
+{
+  "controls": {
+    "admission_identity_and_recovery": [
+      {
+        "admission_sequences": {
+          "a": 1,
+          "b": 1
+        },
+        "drained": true,
+        "effects": 2,
+        "session": 1
+      },
+      {
+        "admission_sequences": {
+          "a": 2,
+          "b": 2
+        },
+        "drained": true,
+        "effects": 4,
+        "session": 2
+      },
+      {
+        "case": "pending-recovery",
+        "drained": true,
+        "effects": 6,
+        "same_admissions": true,
+        "source_duplicate": true
+      }
+    ],
+    "concurrent_exact_retries": {
+      "drained": true,
+      "effects": 2,
+      "first_completion_preserved": true,
+      "identical_complete_outputs": true,
+      "request_records": 1
+    },
+    "retained_integer_domains": [
+      {
+        "drained": true,
+        "effects": 0,
+        "pending_requests": 0,
+        "ranks": {
+          "a": 0,
+          "b": 0
+        },
+        "request": "rejected-before-binding"
+      },
+      {
+        "drained": true,
+        "effects": 0,
+        "pending_requests": 0,
+        "ranks": {
+          "a": 2,
+          "b": 1
+        },
+        "request": "rejected-before-binding"
+      },
+      {
+        "drained": true,
+        "effects": 2,
+        "pending_requests": 0,
+        "ranks": {
+          "a": 2,
+          "b": 2
+        },
+        "request": "complete"
+      }
+    ],
+    "successive_rollouts": [
+      {
+        "source_rank": 0,
+        "status": "complete",
+        "target_rank": 1
+      },
+      {
+        "source_rank": 1,
+        "status": "complete",
+        "target_rank": 2
+      },
+      {
+        "case": "stale-source",
+        "owners_unchanged": true,
+        "status": "deviation"
+      }
+    ]
+  },
+  "response_loss": "one-shot unit injection after an actual source effect commit",
+  "runtime": {
+    "optimized": 0,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "protobuf": "7.36.2",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "scope": "actual in-process Endpoint, SQLite, and ProtoJSON controls",
+  "source_sha256": {
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/factored_planner.py": "b8971360df79d7437c7bb9f1976c6c3e915396ca37fd975cc291901c35cc71ef",
+    "src/factored_runtime.py": "6b3bc1dd0d9250714069586d3438dcdbf7888889319536d84ee6e7f3746c1891",
+    "src/factored_session.py": "8cb139e0e21c0a9fb6b242077395235eb9bc4de8058a8e060ef3f572c5542241",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+    "src/schema_contracts.py": "85be1a0065985cbc6fc1ad24c71fc9f31f89c24117941de3a369daee94e94a73",
+    "src/schema_runtime.py": "cb969ea68828f5df28fc2a4d936d024510828d2f62c1664089acc3786665edd6",
+    "tests/factored_followon_regression.py": "fb3edfd66c02eebf7e9aa11b26c3ffdf0bf45a24c39471a1e0ef78e8f1a3ff08"
+  },
+  "status": "pass"
+}

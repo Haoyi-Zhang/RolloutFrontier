@@ -1,0 +1,173 @@
+{
+  "contexts": 252,
+  "corruption_controls_rejected": 8,
+  "frontier_cycle_controls": 2,
+  "full_migration": {
+    "enum-alias": {
+      "best_priority_phases": 197,
+      "exact_phases": 189,
+      "portfolio_gap_graph_masks": [
+        25,
+        27,
+        29,
+        38,
+        39,
+        46,
+        54,
+        57
+      ],
+      "queries": 63
+    },
+    "field-addition": {
+      "best_priority_phases": 128,
+      "exact_phases": 126,
+      "portfolio_gap_graph_masks": [
+        25,
+        38
+      ],
+      "queries": 63
+    },
+    "field-key": {
+      "best_priority_phases": 197,
+      "exact_phases": 189,
+      "portfolio_gap_graph_masks": [
+        25,
+        27,
+        29,
+        38,
+        39,
+        46,
+        54,
+        57
+      ],
+      "queries": 63
+    },
+    "integer-widening": {
+      "best_priority_phases": 128,
+      "exact_phases": 126,
+      "portfolio_gap_graph_masks": [
+        25,
+        38
+      ],
+      "queries": 63
+    }
+  },
+  "groups": {
+    "enum-alias": {
+      "best_priority_gap_goals": 30,
+      "best_priority_phases": 39096,
+      "contexts": 63,
+      "exact_phases": 39066,
+      "no_op": 2040,
+      "priority_gaps": [
+        781,
+        781,
+        781,
+        781,
+        781,
+        781
+      ],
+      "priority_phases": [
+        39857,
+        39857,
+        39857,
+        39857,
+        39857,
+        39857
+      ],
+      "queries": 69072,
+      "reachable_nontrivial": 23238,
+      "unreachable": 43794
+    },
+    "field-addition": {
+      "best_priority_gap_goals": 2,
+      "best_priority_phases": 10340,
+      "contexts": 63,
+      "exact_phases": 10338,
+      "no_op": 1221,
+      "priority_gaps": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "priority_phases": [
+        10402,
+        10402,
+        10402,
+        10402,
+        10402,
+        10402
+      ],
+      "queries": 24015,
+      "reachable_nontrivial": 7731,
+      "unreachable": 15063
+    },
+    "field-key": {
+      "best_priority_gap_goals": 30,
+      "best_priority_phases": 39096,
+      "contexts": 63,
+      "exact_phases": 39066,
+      "no_op": 2040,
+      "priority_gaps": [
+        781,
+        781,
+        781,
+        781,
+        781,
+        781
+      ],
+      "priority_phases": [
+        39857,
+        39857,
+        39857,
+        39857,
+        39857,
+        39857
+      ],
+      "queries": 69072,
+      "reachable_nontrivial": 23238,
+      "unreachable": 43794
+    },
+    "integer-widening": {
+      "best_priority_gap_goals": 2,
+      "best_priority_phases": 10340,
+      "contexts": 63,
+      "exact_phases": 10338,
+      "no_op": 1221,
+      "priority_gaps": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "priority_phases": [
+        10402,
+        10402,
+        10402,
+        10402,
+        10402,
+        10402
+      ],
+      "queries": 24015,
+      "reachable_nontrivial": 7731,
+      "unreachable": 15063
+    }
+  },
+  "independent_oracle_disagreements": 0,
+  "normal_and_optimized_agree": true,
+  "probes": {
+    "distinct_relation_shapes": 2,
+    "encoded_wires": 74,
+    "families": 4,
+    "parser_invocations": 262,
+    "rejected_parser_invocations": 49
+  },
+  "queries": 186174,
+  "scope": "actual library probes; complete registered three-owner graph/goal census, not deployment prevalence",
+  "status": "pass"
+}

@@ -1,0 +1,13 @@
+{"control_port":37479,"event":"relay-start","pid":10,"ports":{"only":45217},"time_ns":94118284963875}
+{"connection":1,"event":"socket-accepted","owner":"only","peer":["127.0.0.1",41894],"pid":10,"time_ns":94118287649113}
+{"connection":1,"event":"request-forwarded","operation":"read","owner":"only","pid":10,"request_bytes":515,"target_port":45941,"time_ns":94118288457518}
+{"connection":1,"event":"reply-forwarded","operation":"read","owner":"only","pid":10,"response_bytes":651,"time_ns":94118290048060}
+{"connection":1,"event":"socket-closed","owner":"only","pid":10,"time_ns":94118290659569}
+{"connection":2,"event":"socket-accepted","owner":"only","peer":["127.0.0.1",41910],"pid":10,"time_ns":94118298817585}
+{"connection":2,"event":"request-forwarded","operation":"prepare","owner":"only","pid":10,"request_bytes":685,"target_port":45941,"time_ns":94118299588775}
+{"connection":2,"event":"reply-forwarded","operation":"prepare","owner":"only","pid":10,"response_bytes":764,"time_ns":94118301889905}
+{"connection":2,"event":"socket-closed","owner":"only","pid":10,"time_ns":94118302304188}
+{"connection":3,"event":"socket-accepted","owner":"only","peer":["127.0.0.1",41924],"pid":10,"time_ns":94118306850063}
+{"connection":3,"event":"request-forwarded","operation":"schema","owner":"only","pid":10,"request_bytes":771,"target_port":45941,"time_ns":94118307591237}
+{"connection":3,"event":"reply-forwarded","operation":"schema","owner":"only","pid":10,"response_bytes":561,"time_ns":94118309042779}
+{"connection":3,"event":"socket-closed","owner":"only","pid":10,"time_ns":94118309504824}

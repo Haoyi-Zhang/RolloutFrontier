@@ -38,7 +38,7 @@ def verify():
             require(row['first_release']==('release-pending' if row['release_partition'] else 'retired') and row['final_release']=='retired','Incorrect release outcome')
             require(row['actual_stored_value']==('committed' if row['completion']=='commit' else None),'Unexpected application value')
             rel='case-'+str(index)+'/effects.sqlite';path=Path(temporary)/'effects.sqlite';path.write_bytes(z.read(rel))
-            db=sqlite3.connect('file:'+path.as_posix()+'?mode=ro',uri=True)
+            db=sqlite3.connect(path.resolve().as_uri()+'?mode=ro',uri=True)
             try:
                 require(db.execute('SELECT phase FROM leases').fetchall()==[('closed',)],'Final lease is not fenced')
                 require(db.execute('SELECT phase FROM operations').fetchall()==[('done' if row['completion']=='commit' else 'cancelled',)],'Recorded application operation differs')
@@ -46,7 +46,7 @@ def verify():
             finally:db.close()
             for suffix in ('net/node-0.sqlite','net/node-1.sqlite','net/origin-0.sqlite'):
                 path.write_bytes(z.read('case-'+str(index)+'/'+suffix))
-                db=sqlite3.connect('file:'+path.as_posix()+'?mode=ro',uri=True)
+                db=sqlite3.connect(path.resolve().as_uri()+'?mode=ro',uri=True)
                 try:
                     states=db.execute('SELECT id,payload FROM state').fetchall()
                     require(len(states)==1 and states[0][0]==1,'Malformed final protocol singleton')

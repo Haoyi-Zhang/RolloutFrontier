@@ -1,0 +1,3 @@
+Checking blocking-control (normal)
+Checking remaining-control (normal)
+{"status": "INCOMPLETE", "counts": {"TIMEOUT": 1, "PASS": 1}, "report": "/workspace/scratch/e34480916f53/finalization/review/reproduction/interruption-controls-normal/test_timeout_stops_group_and_preserves_remaining_check/report/report.json"}

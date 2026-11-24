@@ -1,0 +1,37 @@
+{
+  "figure_atlas.pdf": {
+    "all_pages_extractable": true,
+    "pages": 9,
+    "rendered_pages": [
+      "figure_atlas-page-1.png",
+      "figure_atlas-page-9.png"
+    ],
+    "sha256": "d02b68c9deaa0224acb33acbfbb04fff2f4a379adf65b377c69c2bc36306d117"
+  },
+  "main.pdf": {
+    "all_pages_extractable": true,
+    "pages": 12,
+    "rendered_pages": [
+      "main-page-1.png",
+      "main-page-12.png"
+    ],
+    "sha256": "a7af033d776a503ef397689542c50253db43370eb1e3742dac00be4ad1808f7c"
+  },
+  "supplement.pdf": {
+    "all_pages_extractable": true,
+    "pages": 29,
+    "rendered_pages": [
+      "supplement-page-1.png",
+      "supplement-page-29.png"
+    ],
+    "sha256": "4d047c871bbe04f9149cbcf77c2e2f284ac62c68841cab629d17a12541d57635"
+  },
+  "titlepage.pdf": {
+    "all_pages_extractable": true,
+    "pages": 1,
+    "rendered_pages": [
+      "titlepage-page-1.png"
+    ],
+    "sha256": "b4d705d76b5a934823d982f7dc964cab7bc9223a45bc949351e5555c5bff5e6c"
+  }
+}

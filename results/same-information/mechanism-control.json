@@ -1,0 +1,375 @@
+{
+  "context": {
+    "boxes": {
+      "batch_exact": {
+        "0": [
+          [
+            "left.0"
+          ],
+          [
+            "left.1"
+          ],
+          [
+            "left.2"
+          ]
+        ],
+        "1": [
+          [
+            "right.0"
+          ]
+        ]
+      },
+      "batch_greedy": {
+        "0": [
+          [
+            "left.0"
+          ]
+        ],
+        "1": [
+          [
+            "right.0"
+          ],
+          [
+            "right.1"
+          ],
+          [
+            "right.2"
+          ],
+          [
+            "right.3"
+          ]
+        ]
+      },
+      "mass": {
+        "0": [
+          [
+            "left.0"
+          ]
+        ],
+        "1": [
+          [
+            "right.0"
+          ],
+          [
+            "right.1"
+          ],
+          [
+            "right.2"
+          ],
+          [
+            "right.3"
+          ]
+        ]
+      }
+    },
+    "family": "mechanism-control",
+    "frontier_size": 2,
+    "greedy_trace": [
+      {
+        "accepted": [
+          [
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "gain": 2,
+        "mass": 2,
+        "owner": 1,
+        "profile": 1,
+        "training_installed": 2
+      },
+      {
+        "accepted": [
+          [
+            0
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "gain": 0,
+        "mass": 3,
+        "owner": 1,
+        "profile": 2,
+        "training_installed": 2
+      },
+      {
+        "accepted": [
+          [
+            0
+          ],
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "gain": 0,
+        "mass": 4,
+        "owner": 1,
+        "profile": 3,
+        "training_installed": 2
+      }
+    ],
+    "greedy_trial_evaluations": 8,
+    "initial": [
+      0,
+      0
+    ],
+    "observations": {
+      "supplied": {
+        "batch_exact": {
+          "blocked": 1,
+          "final": [
+            2,
+            0
+          ],
+          "installed": 20,
+          "statuses": [
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "installed",
+            "blocked",
+            "unchanged"
+          ],
+          "unchanged": 1
+        },
+        "batch_greedy": {
+          "blocked": 20,
+          "final": [
+            0,
+            0
+          ],
+          "installed": 2,
+          "statuses": [
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "installed",
+            "installed"
+          ],
+          "unchanged": 0
+        },
+        "mass": {
+          "blocked": 20,
+          "final": [
+            0,
+            0
+          ],
+          "installed": 2,
+          "statuses": [
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "blocked",
+            "installed",
+            "installed"
+          ],
+          "unchanged": 0
+        }
+      }
+    },
+    "preferred_owner_percent": null,
+    "relation": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "safe_products": 11,
+    "schedules": {
+      "supplied": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "seed": 0,
+    "status": "completed"
+  },
+  "row": {
+    "batch_exact_blocked": 1,
+    "batch_exact_installed": 20,
+    "batch_exact_regret": 0,
+    "batch_exact_unchanged": 1,
+    "batch_greedy_blocked": 20,
+    "batch_greedy_installed": 2,
+    "batch_greedy_regret": 18,
+    "batch_greedy_unchanged": 0,
+    "exact_minus_greedy": 18,
+    "family": "mechanism-control",
+    "frontier_size": 2,
+    "greedy_trial_evaluations": 8,
+    "mass_blocked": 20,
+    "mass_installed": 2,
+    "mass_regret": 18,
+    "mass_unchanged": 0,
+    "preferred_owner_percent": null,
+    "proposals": 22,
+    "regime": "supplied",
+    "seed": 0,
+    "static_hindsight_installed": 20
+  },
+  "scope": "Separate deterministic control; excluded from generated aggregates."
+}

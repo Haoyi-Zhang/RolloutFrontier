@@ -1,0 +1,8 @@
+{
+  "control_groups": 4,
+  "modes": 2,
+  "not_reexecuted": "Owner endpoints, SQLite operations, missing-response injection and concurrent requests are not rerun by this record check.",
+  "scope": "Captured source, registered outcome and normal/optimized agreement checks for four in-process control groups.",
+  "source_files": 10,
+  "status": "PASS"
+}

@@ -1,0 +1,23 @@
+{
+  "elapsed_seconds": 2.0333608360001563,
+  "returncode": 0,
+  "source_bytes_unchanged_during_run": true,
+  "source_sha256": {
+    "data/kubernetes-policy-boundaries.json": "3225bb792912143bbc25a116e45278a4c14101a2d44e025329730e682bb73dca",
+    "docs/POLICY-BOUNDARY-DESIGN.md": "4911fcea2ca613ae4f95d62b76d4cf5328f918a144df65e26da41b8713aafb88",
+    "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+    "src/android_contracts.py": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+    "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/direct_batch.py": "f980854a6d7b789a540011eba94ad4970ab92565f183316384063c2a5418052e",
+    "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/goal_planner.py": "7489b4ffe8f62195dc0d054eac3c6d49452109077714203eb4a357405ca8f28d",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+    "src/rollout.py": "952e5a4811bcce107207df6cbd33e960014316dd2c334e89f52469c6d6085d2b",
+    "tests/check_policy_boundaries.py": "6866961eb9ae05a8ae7923e2e735b93fca25694bbab6bcabf7d81c18b83d8988",
+    "tests/kubernetes_policy_boundaries.py": "765073ee76b959fb8cd2d901d0daf8467654e49bbf0e66dd6cd08d28ea5fc759"
+  },
+  "status": "PASS"
+}

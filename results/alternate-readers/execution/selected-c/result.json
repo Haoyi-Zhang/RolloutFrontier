@@ -1,0 +1,1271 @@
+{
+  "admitted_session": {
+    "admission_certificates": {
+      "a": {
+        "box": {
+          "0": [
+            [
+              "emit:extended"
+            ]
+          ]
+        },
+        "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+        "mode": "envelope",
+        "origin": 2,
+        "receipts": [
+          {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        ],
+        "sequences": {
+          "0": 1
+        }
+      },
+      "c": {
+        "box": {
+          "0": [
+            [
+              "accept:extended",
+              "emit:extended"
+            ]
+          ]
+        },
+        "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+        "mode": "envelope",
+        "origin": 2,
+        "receipts": [
+          {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "accept:extended",
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        ],
+        "sequences": {
+          "0": 1
+        }
+      }
+    },
+    "birth_token": "c2774a0ce69d44e695e7d04c142fc463",
+    "certificates": {
+      "a": {
+        "box": {
+          "0": [
+            [
+              "emit:extended"
+            ]
+          ]
+        },
+        "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+        "mode": "envelope",
+        "origin": 2,
+        "receipts": [
+          {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        ],
+        "sequences": {
+          "0": 1
+        }
+      },
+      "c": {
+        "box": {
+          "0": [
+            [
+              "accept:extended",
+              "emit:extended"
+            ]
+          ]
+        },
+        "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+        "mode": "envelope",
+        "origin": 2,
+        "receipts": [
+          {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "accept:extended",
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        ],
+        "sequences": {
+          "0": 1
+        }
+      }
+    },
+    "codecs": {
+      "a": "extended",
+      "c": "extended"
+    },
+    "family": "field-addition",
+    "journal_sequence": 1,
+    "manifest": "fixed-compatible-reader",
+    "registry": {
+      "deployment": "alternate-reader-c",
+      "owners": {
+        "a": {
+          "catalog": [
+            [
+              "accept:base",
+              "emit:base",
+              "program:field-addition:legacy"
+            ],
+            [
+              "accept:base",
+              "accept:extended",
+              "emit:base",
+              "program:field-addition:accepting"
+            ],
+            [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          ],
+          "family": "field-addition",
+          "initial": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        },
+        "c": {
+          "catalog": [
+            [
+              "accept:base",
+              "emit:base",
+              "program:field-addition:legacy"
+            ],
+            [
+              "accept:base",
+              "accept:extended",
+              "emit:base",
+              "program:field-addition:accepting"
+            ],
+            [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          ],
+          "family": "field-addition",
+          "initial": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        }
+      }
+    },
+    "schema": "factored-schema-session",
+    "stage": "open",
+    "window": 8,
+    "workflow": [
+      {
+        "id": "source",
+        "owner": "a",
+        "parents": []
+      },
+      {
+        "id": "selected",
+        "owner": "c",
+        "parents": [
+          "source"
+        ]
+      }
+    ]
+  },
+  "blocked_selected_regression": {
+    "owner": "c",
+    "request": {
+      "expected_generation": 0,
+      "expected_support": [
+        "accept:base",
+        "accept:extended",
+        "emit:extended",
+        "program:field-addition:emitting"
+      ],
+      "op": "install_if_current",
+      "support": [
+        "accept:base",
+        "emit:base",
+        "program:field-addition:legacy"
+      ]
+    },
+    "response": {
+      "holds": [
+        "2:1"
+      ],
+      "status": "blocked"
+    }
+  },
+  "cached_retry_unchanged": true,
+  "checkpoints": {
+    "after-controls": {
+      "a": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "2:1": {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      },
+      "b": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:base",
+              "program:field-addition:accepting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ],
+        "window": 8
+      },
+      "c": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "2:1": {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "accept:extended",
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      }
+    },
+    "after-drain": {
+      "a": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      },
+      "b": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:base",
+              "program:field-addition:accepting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ],
+        "window": 8
+      },
+      "c": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      }
+    },
+    "after-restart": {
+      "a": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "2:1": {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      },
+      "b": {
+        "catalog": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:base",
+              "program:field-addition:accepting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 1,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ],
+        "window": 8
+      },
+      "c": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "2:1": {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "accept:extended",
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      }
+    },
+    "final": {
+      "a": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      },
+      "b": {
+        "catalog": {
+          "0": {
+            "generation": 2,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 2,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      },
+      "c": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      }
+    },
+    "initial": {
+      "a": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      },
+      "b": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "emit:base",
+              "program:field-addition:legacy"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "emit:base",
+          "program:field-addition:legacy"
+        ],
+        "window": 8
+      },
+      "c": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      }
+    },
+    "pending": {
+      "a": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "2:1": {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      },
+      "b": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "emit:base",
+              "program:field-addition:legacy"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {},
+        "support": [
+          "accept:base",
+          "emit:base",
+          "program:field-addition:legacy"
+        ],
+        "window": 8
+      },
+      "c": {
+        "catalog": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          }
+        },
+        "floor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "generation": 0,
+        "node": 0,
+        "policy": "predicate",
+        "slots": {
+          "2:1": {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "accept:extended",
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        },
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:extended",
+          "program:field-addition:emitting"
+        ],
+        "window": 8
+      }
+    }
+  },
+  "eligible_readers": [
+    "c"
+  ],
+  "initial_source_receipt": {
+    "applied_generation": 0,
+    "applied_rank": 2,
+    "duplicate": false,
+    "output": {
+      "record": {
+        "key": "selected-c-κλειδί",
+        "tag": "migrated-δ",
+        "value": 7
+      },
+      "wire": "{\"key\":\"selected-c-κλειδί\",\"tag\":\"migrated-δ\",\"value\":\"7\"}"
+    },
+    "status": "applied"
+  },
+  "output": {
+    "records": {
+      "selected": {
+        "key": "selected-c-κλειδί",
+        "tag": "migrated-δ",
+        "value": 7
+      }
+    },
+    "steps": {
+      "selected": {
+        "applied_generation": 0,
+        "applied_rank": 2,
+        "duplicate": false,
+        "output": {
+          "record": {
+            "key": "selected-c-κλειδί",
+            "tag": "migrated-δ",
+            "value": 7
+          },
+          "wire": "{\"key\":\"selected-c-κλειδί\",\"tag\":\"migrated-δ\",\"value\":\"7\"}"
+        },
+        "status": "applied"
+      },
+      "source": {
+        "applied_generation": 0,
+        "applied_rank": 2,
+        "duplicate": true,
+        "output": {
+          "record": {
+            "key": "selected-c-κλειδί",
+            "tag": "migrated-δ",
+            "value": 7
+          },
+          "wire": "{\"key\":\"selected-c-κλειδί\",\"tag\":\"migrated-δ\",\"value\":\"7\"}"
+        },
+        "status": "applied"
+      }
+    }
+  },
+  "pending_reroute": {
+    "attempted": "b",
+    "exception": "FactoredExecutionError",
+    "rejected": true,
+    "selected": "c"
+  },
+  "request_paused_after_source": true,
+  "retired_session": {
+    "admission_certificates": {
+      "a": {
+        "box": {
+          "0": [
+            [
+              "emit:extended"
+            ]
+          ]
+        },
+        "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+        "mode": "envelope",
+        "origin": 2,
+        "receipts": [
+          {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        ],
+        "sequences": {
+          "0": 1
+        }
+      },
+      "c": {
+        "box": {
+          "0": [
+            [
+              "accept:extended",
+              "emit:extended"
+            ]
+          ]
+        },
+        "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+        "mode": "envelope",
+        "origin": 2,
+        "receipts": [
+          {
+            "manifest": "fixed-compatible-reader:session:b8ee22ea5d23eb430663e4145b73d00ee84e4f4ddd90d966eab891d9bb4bdf55",
+            "node": 0,
+            "observed_generation": 0,
+            "options": [
+              [
+                "accept:extended",
+                "emit:extended"
+              ]
+            ],
+            "origin": 2,
+            "requires": [],
+            "sequence": 1,
+            "status": "held"
+          }
+        ],
+        "sequences": {
+          "0": 1
+        }
+      }
+    },
+    "birth_token": "c2774a0ce69d44e695e7d04c142fc463",
+    "certificates": {},
+    "codecs": {
+      "a": "extended",
+      "c": "extended"
+    },
+    "family": "field-addition",
+    "journal_sequence": 3,
+    "manifest": "fixed-compatible-reader",
+    "registry": {
+      "deployment": "alternate-reader-c",
+      "owners": {
+        "a": {
+          "catalog": [
+            [
+              "accept:base",
+              "emit:base",
+              "program:field-addition:legacy"
+            ],
+            [
+              "accept:base",
+              "accept:extended",
+              "emit:base",
+              "program:field-addition:accepting"
+            ],
+            [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          ],
+          "family": "field-addition",
+          "initial": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        },
+        "c": {
+          "catalog": [
+            [
+              "accept:base",
+              "emit:base",
+              "program:field-addition:legacy"
+            ],
+            [
+              "accept:base",
+              "accept:extended",
+              "emit:base",
+              "program:field-addition:accepting"
+            ],
+            [
+              "accept:base",
+              "accept:extended",
+              "emit:extended",
+              "program:field-addition:emitting"
+            ]
+          ],
+          "family": "field-addition",
+          "initial": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        }
+      }
+    },
+    "schema": "factored-schema-session",
+    "stage": "retired",
+    "window": 8,
+    "workflow": [
+      {
+        "id": "source",
+        "owner": "a",
+        "parents": []
+      },
+      {
+        "id": "selected",
+        "owner": "c",
+        "parents": [
+          "source"
+        ]
+      }
+    ]
+  },
+  "rollout": {
+    "acknowledged_installs": 1,
+    "goal_reached": true,
+    "phase_index": 1,
+    "reconciled_steps": 0,
+    "status": "complete",
+    "step_index": 0,
+    "target_observation": {
+      "first": {
+        "a": {
+          "generation": 0,
+          "node": "a",
+          "support": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        },
+        "b": {
+          "generation": 2,
+          "node": "b",
+          "support": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        },
+        "c": {
+          "generation": 0,
+          "node": "c",
+          "support": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        }
+      },
+      "second": {
+        "a": {
+          "generation": 0,
+          "node": "a",
+          "support": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        },
+        "b": {
+          "generation": 2,
+          "node": "b",
+          "support": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        },
+        "c": {
+          "generation": 0,
+          "node": "c",
+          "support": [
+            "accept:base",
+            "accept:extended",
+            "emit:extended",
+            "program:field-addition:emitting"
+          ]
+        }
+      }
+    }
+  },
+  "same_session_after_reopen": true,
+  "selected": "c",
+  "status": "PASS",
+  "unused": "b",
+  "unused_reader_preparation": {
+    "owner": "b",
+    "request": {
+      "expected_generation": 0,
+      "expected_support": [
+        "accept:base",
+        "emit:base",
+        "program:field-addition:legacy"
+      ],
+      "op": "install_if_current",
+      "support": [
+        "accept:base",
+        "accept:extended",
+        "emit:base",
+        "program:field-addition:accepting"
+      ]
+    },
+    "response": {
+      "observed": {
+        "generation": 1,
+        "node": 0,
+        "support": [
+          "accept:base",
+          "accept:extended",
+          "emit:base",
+          "program:field-addition:accepting"
+        ]
+      },
+      "status": "installed"
+    }
+  }
+}

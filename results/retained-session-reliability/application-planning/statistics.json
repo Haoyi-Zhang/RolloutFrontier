@@ -1,0 +1,8 @@
+{
+  "fallback_queries": 1296,
+  "greedy_iterations": 0,
+  "guard_corners": 0,
+  "queries": 1296,
+  "recognition_placements": 64,
+  "structured_queries": 0
+}

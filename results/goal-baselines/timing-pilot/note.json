@@ -1,0 +1,9 @@
+{
+  "status": "retained pilot; excluded from final timing summary",
+  "reasons": [
+    "Some short six-query cohorts produced zero process-CPU deltas; final timing repeats complete cold cohorts to exceed 0.1 process-CPU second.",
+    "Figure worker reported residual rendering for approximately the first two seconds; final run follows explicit quiet notifications."
+  ],
+  "zero_total_cpu_records": 8,
+  "records": 85
+}

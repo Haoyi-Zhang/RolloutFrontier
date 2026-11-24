@@ -1,0 +1,1 @@
+{"concurrency":4,"cpu_affinity":[0,1,2,3,4,5,6,7,8],"deployment":"one host; independent owner processes; actual loopback TCP relay","large_cohort_repetitions":3,"logical_cpus":9,"machine":"x86_64","protobuf":"7.36.2","python":"3.12.14","release":"6.18.57","steady_requests":16,"system":"Linux"}

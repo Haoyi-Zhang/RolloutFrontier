@@ -12,7 +12,7 @@ import sqlite3
 import time
 from functools import wraps
 from copy import deepcopy
-from inspect import signature
+from inspect import isawaitable, iscoroutine, signature
 from pathlib import Path
 from typing import Any
 from .controller import (Endpoint, canonical, atoms, initialize_state_table,
@@ -182,6 +182,15 @@ class Network:
                         raise ValueError("encoded response exceeds frame bound")
                     response = json.loads(answer)
                     break
+                except asyncio.CancelledError:
+                    # The request may already be durable at the owner.  Its
+                    # unread response must never be assigned to the next
+                    # request on this serialized channel.  Drop only after
+                    # acquiring the lock: a cancelled waiter must not close
+                    # another caller's active exchange.  The origin's durable
+                    # acquiring/retiring record remains available to recover.
+                    await self._drop_connection(target)
+                    raise
                 except (ConnectionError, OSError, asyncio.TimeoutError):
                     await self._drop_connection(target)
                     if attempt == 1:
@@ -296,6 +305,8 @@ class Client:
         if (certificate.get("origin") != self.origin or
                 type(certificate.get("origin")) is not int or
                 certificate.get("manifest") != record["manifest"] or
+                not self._canonical_sequence_map(certificate.get("sequences"),
+                                                 len(self.net.supports)) or
                 certificate.get("sequences") != sequences):
             raise ValueError("durable certificate binding mismatch")
         envelope = certificate.get("mode") == "envelope"
@@ -428,6 +439,24 @@ class Client:
         self._disconnected = True
         self.db.close()
 
+    @staticmethod
+    def _run_commit_hook(hook, certificate: dict[str, Any]) -> None:
+        """Register an owned effect while the durable attempt is still acquiring.
+
+        The internal hook runs synchronously under the origin lifecycle gate.
+        Failure leaves the existing acquisition journal available for recovery;
+        it cannot create a committed admission without its registration.
+        """
+        if hook is None:
+            return
+        result = hook(deepcopy(certificate))
+        if isawaitable(result):
+            if iscoroutine(result):
+                result.close()
+            raise TypeError("admission commit hook must be synchronous")
+        if result is not None:
+            raise TypeError("admission commit hook must return None")
+
     async def _close(self, key: str) -> bool:
         self._require_healthy()
         record = self.state["attempts"][key]
@@ -460,12 +489,15 @@ class Client:
             await self._close(key)
 
     @serialized_lifecycle("branches")
-    async def acquire(self, manifest: str, branches: list[dict[str, list[str]]]) -> dict[str, Any]:
+    async def acquire(self, manifest: str, branches: list[dict[str, list[str]]],
+                      *, _before_commit=None) -> dict[str, Any]:
         self._require_healthy()
         from .checker import certificate
         from .controller import atoms, MAX_REQUIREMENTS, MAX_SEQ
         if not isinstance(manifest, str) or not manifest or len(manifest) > 256:
             raise ValueError("manifest binding")
+        if _before_commit is not None and not callable(_before_commit):
+            raise ValueError("invalid admission commit hook")
         if not 1 <= len(branches) <= 8:
             raise ValueError("branch bound")
         normalized_branches = []
@@ -521,6 +553,7 @@ class Client:
             if okay and certificate(c, branches):
                 if self.state['attempts'].get(key, {}).get('status') != 'acquiring':
                     return dict(status='not-justified', reasons=[dict(reason='attempt-no-longer-acquiring')])
+                self._run_commit_hook(_before_commit, c)
                 state = deepcopy(self.state)
                 state["attempts"][key].update(status="committed", certificate=c)
                 self._commit_state(state)
@@ -542,9 +575,18 @@ class Client:
 
     def _record(self, c: dict[str, Any]) -> str | None:
         self._require_healthy()
+        if not isinstance(c, dict):
+            return None
         for key, record in self.state["attempts"].items():
-            if record.get("certificate") == c:
-                return key
+            if "certificate" not in record or record["certificate"] != c:
+                continue
+            # Python equality aliases bool/int and equal-valued floats. The
+            # durable certificate schema also applies to supplied live tokens.
+            try:
+                self._validate_attempt_certificate(dict(record, certificate=c))
+            except (KeyError, TypeError, ValueError):
+                return None
+            return key
         return None
 
     @serialized_lifecycle("c")
@@ -569,7 +611,7 @@ class Client:
 
     @serialized_lifecycle("branches", "box")
     async def acquire_box(self, manifest: str, branches: list[dict[str, list[str]]],
-                          box: dict[str, list[list[str]]]) -> dict[str, Any]:
+                          box: dict[str, list[list[str]]], *, _before_commit=None) -> dict[str, Any]:
         self._require_healthy()
         from .checker import certificate, safe_envelope
         from .controller import MAX_SEQ
@@ -582,6 +624,8 @@ class Client:
             raise ValueError("placement outside network")
         if not isinstance(manifest, str) or not manifest or len(manifest) > 256:
             raise ValueError("manifest binding")
+        if _before_commit is not None and not callable(_before_commit):
+            raise ValueError("invalid admission commit hook")
         await self._recover_unlocked()
         for r in self.state["attempts"].values():
             if r["manifest"] == manifest:
@@ -615,6 +659,7 @@ class Client:
         if reason is None and certificate(c, branches):
             if self.state['attempts'].get(key, {}).get('status') != 'acquiring':
                 return dict(status='not-justified', reasons=[dict(reason='attempt-no-longer-acquiring')])
+            self._run_commit_hook(_before_commit, c)
             state = deepcopy(self.state)
             state["attempts"][key].update(status="committed", certificate=c)
             self._commit_state(state)

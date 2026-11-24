@@ -1,0 +1,14 @@
+{
+  "cancelled_without_write": 12,
+  "cases": 24,
+  "independent_experimental_drain_comparator": false,
+  "new_effects_during_drain_rejected": 24,
+  "planned_cases": 24,
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scope": "Owned SQLite application effect, not production deployment, remote arbitrary-effect fencing or performance comparison",
+  "stale_effects_after_retirement_rejected": 24,
+  "status": "PASS",
+  "stored_commits": 12,
+  "wall_seconds": 0.9347039560002486
+}

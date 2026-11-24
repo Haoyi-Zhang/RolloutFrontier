@@ -1,0 +1,481 @@
+{
+  "budget_controls": 2,
+  "default_refusals": 0,
+  "domains": [
+    {
+      "catalog_placements": 45,
+      "compatible_placements": 23,
+      "domain": "boundary-three-owner",
+      "per_proposal_coordination_total": 587,
+      "planned_installations_total": 587,
+      "planned_phase_histogram": {
+        "0": 23,
+        "1": 93,
+        "2": 93,
+        "3": 10
+      },
+      "single_static_reachable_planned_tasks": 116,
+      "statuses": {
+        "already_target": 23,
+        "direction_infeasible": 310,
+        "planned": 219,
+        "unreachable": 310
+      },
+      "tasks": 529
+    },
+    {
+      "catalog_placements": 81,
+      "compatible_placements": 24,
+      "domain": "active-4-owner",
+      "per_proposal_coordination_total": 32,
+      "planned_installations_total": 32,
+      "planned_phase_histogram": {
+        "1": 1,
+        "2": 4,
+        "3": 1
+      },
+      "single_static_reachable_planned_tasks": 1,
+      "statuses": {
+        "already_target": 0,
+        "direction_infeasible": 0,
+        "planned": 6
+      },
+      "tasks": 6
+    },
+    {
+      "catalog_placements": 243,
+      "compatible_placements": 54,
+      "domain": "active-5-owner",
+      "per_proposal_coordination_total": 41,
+      "planned_installations_total": 41,
+      "planned_phase_histogram": {
+        "1": 1,
+        "2": 4,
+        "3": 1
+      },
+      "single_static_reachable_planned_tasks": 1,
+      "statuses": {
+        "already_target": 0,
+        "direction_infeasible": 0,
+        "planned": 6
+      },
+      "tasks": 6
+    },
+    {
+      "catalog_placements": 729,
+      "compatible_placements": 132,
+      "domain": "active-6-owner",
+      "per_proposal_coordination_total": 50,
+      "planned_installations_total": 50,
+      "planned_phase_histogram": {
+        "1": 1,
+        "2": 4,
+        "3": 1
+      },
+      "single_static_reachable_planned_tasks": 1,
+      "statuses": {
+        "already_target": 0,
+        "direction_infeasible": 0,
+        "planned": 6
+      },
+      "tasks": 6
+    }
+  ],
+  "execution": {
+    "cases": [
+      {
+        "committed_guard_phases": 3,
+        "domain": "boundary-three-owner",
+        "handoffs": 2,
+        "installations": 6,
+        "name": "normal-two-minor",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 9,
+          "rpc:install_if_current": 6,
+          "rpc:prepare": 9,
+          "rpc:read": 36
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 6
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "boundary-three-owner",
+        "handoffs": 1,
+        "installations": 3,
+        "name": "new-phase-unavailable",
+        "pending_returns": 1,
+        "reopened": true,
+        "rpc_counts": {
+          "lost:close": 1,
+          "lost:prepare": 1,
+          "rpc:close": 11,
+          "rpc:install_if_current": 3,
+          "rpc:prepare": 8,
+          "rpc:read": 30
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 3
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "boundary-three-owner",
+        "handoffs": 1,
+        "installations": 3,
+        "name": "close-reply-lost",
+        "pending_returns": 1,
+        "reopened": true,
+        "rpc_counts": {
+          "rpc:close": 9,
+          "rpc:install_if_current": 3,
+          "rpc:prepare": 6,
+          "rpc:read": 27
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 1,
+        "verified_step_segments": 3
+      },
+      {
+        "committed_guard_phases": 3,
+        "domain": "active-4-owner",
+        "handoffs": 2,
+        "installations": 8,
+        "name": "active-4-owner--two-minor-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 12,
+          "rpc:install_if_current": 8,
+          "rpc:prepare": 12,
+          "rpc:read": 48
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 8
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-4-owner",
+        "handoffs": 1,
+        "installations": 4,
+        "name": "active-4-owner--first-minor-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 8,
+          "rpc:install_if_current": 4,
+          "rpc:prepare": 8,
+          "rpc:read": 36
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 4
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-4-owner",
+        "handoffs": 1,
+        "installations": 4,
+        "name": "active-4-owner--second-minor-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 8,
+          "rpc:install_if_current": 4,
+          "rpc:prepare": 8,
+          "rpc:read": 36
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 4
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-4-owner",
+        "handoffs": 1,
+        "installations": 6,
+        "name": "active-4-owner--servers-ahead",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 8,
+          "rpc:install_if_current": 6,
+          "rpc:prepare": 8,
+          "rpc:read": 38
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 6
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-4-owner",
+        "handoffs": 1,
+        "installations": 6,
+        "name": "active-4-owner--catch-up-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 8,
+          "rpc:install_if_current": 6,
+          "rpc:prepare": 8,
+          "rpc:read": 38
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 6
+      },
+      {
+        "committed_guard_phases": 1,
+        "domain": "active-4-owner",
+        "handoffs": 0,
+        "installations": 4,
+        "name": "active-4-owner--clients-only",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 4,
+          "rpc:install_if_current": 4,
+          "rpc:prepare": 4,
+          "rpc:read": 28
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 4
+      },
+      {
+        "committed_guard_phases": 3,
+        "domain": "active-5-owner",
+        "handoffs": 2,
+        "installations": 10,
+        "name": "active-5-owner--two-minor-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 15,
+          "rpc:install_if_current": 10,
+          "rpc:prepare": 15,
+          "rpc:read": 60
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 10
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-5-owner",
+        "handoffs": 1,
+        "installations": 5,
+        "name": "active-5-owner--first-minor-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 10,
+          "rpc:install_if_current": 5,
+          "rpc:prepare": 10,
+          "rpc:read": 45
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 5
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-5-owner",
+        "handoffs": 1,
+        "installations": 5,
+        "name": "active-5-owner--second-minor-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 10,
+          "rpc:install_if_current": 5,
+          "rpc:prepare": 10,
+          "rpc:read": 45
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 5
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-5-owner",
+        "handoffs": 1,
+        "installations": 7,
+        "name": "active-5-owner--servers-ahead",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 10,
+          "rpc:install_if_current": 7,
+          "rpc:prepare": 10,
+          "rpc:read": 47
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 7
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-5-owner",
+        "handoffs": 1,
+        "installations": 8,
+        "name": "active-5-owner--catch-up-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 10,
+          "rpc:install_if_current": 8,
+          "rpc:prepare": 10,
+          "rpc:read": 48
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 8
+      },
+      {
+        "committed_guard_phases": 1,
+        "domain": "active-5-owner",
+        "handoffs": 0,
+        "installations": 6,
+        "name": "active-5-owner--clients-only",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 5,
+          "rpc:install_if_current": 6,
+          "rpc:prepare": 5,
+          "rpc:read": 36
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 6
+      },
+      {
+        "committed_guard_phases": 3,
+        "domain": "active-6-owner",
+        "handoffs": 2,
+        "installations": 12,
+        "name": "active-6-owner--two-minor-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 18,
+          "rpc:install_if_current": 12,
+          "rpc:prepare": 18,
+          "rpc:read": 72
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 12
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-6-owner",
+        "handoffs": 1,
+        "installations": 6,
+        "name": "active-6-owner--first-minor-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 12,
+          "rpc:install_if_current": 6,
+          "rpc:prepare": 12,
+          "rpc:read": 54
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 6
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-6-owner",
+        "handoffs": 1,
+        "installations": 6,
+        "name": "active-6-owner--second-minor-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 12,
+          "rpc:install_if_current": 6,
+          "rpc:prepare": 12,
+          "rpc:read": 54
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 6
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-6-owner",
+        "handoffs": 1,
+        "installations": 8,
+        "name": "active-6-owner--servers-ahead",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 12,
+          "rpc:install_if_current": 8,
+          "rpc:prepare": 12,
+          "rpc:read": 56
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 8
+      },
+      {
+        "committed_guard_phases": 2,
+        "domain": "active-6-owner",
+        "handoffs": 1,
+        "installations": 10,
+        "name": "active-6-owner--catch-up-all",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 12,
+          "rpc:install_if_current": 10,
+          "rpc:prepare": 12,
+          "rpc:read": 58
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 10
+      },
+      {
+        "committed_guard_phases": 1,
+        "domain": "active-6-owner",
+        "handoffs": 0,
+        "installations": 8,
+        "name": "active-6-owner--clients-only",
+        "pending_returns": 0,
+        "reopened": false,
+        "rpc_counts": {
+          "rpc:close": 6,
+          "rpc:install_if_current": 8,
+          "rpc:prepare": 6,
+          "rpc:read": 44
+        },
+        "step_read_policy": "current-owner-only",
+        "suppressed_close_replies": 0,
+        "verified_step_segments": 8
+      }
+    ],
+    "completed": 21,
+    "database_snapshots": 2250,
+    "guard_phases": 43,
+    "handoffs": 22,
+    "installations": 135,
+    "scope": "Three original cases and all eighteen already-fixed scaling goals executed over TCP/SQLite; phase admissions and per-proposal global checks are distinct operations, not measured equal-cost units.",
+    "snapshots": 289,
+    "status": "PASS",
+    "step_read_policy": "current-owner-only",
+    "verified_step_segments": 135
+  },
+  "scope": "Independent integer-policy and interval-graph oracle, literal positive corners, registered task inventory and durable-state replay; no planner/runtime imports.",
+  "status": "PASS",
+  "tasks": 547
+}

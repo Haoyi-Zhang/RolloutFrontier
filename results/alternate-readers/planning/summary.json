@@ -1,0 +1,3078 @@
+{
+  "actual_emitted_wire_records": 10,
+  "actual_emitter_calls": 13,
+  "actual_parser_matrix_calls": 20,
+  "additional_parser_event_witness_calls": 2,
+  "all_compatible_source_target_pairs_covered": true,
+  "catalogs": [
+    {
+      "chosen_graphs": 275,
+      "compatible_states": 26,
+      "direction_refusals": 471,
+      "forward_queries": 205,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "1-pe-pe-pe",
+      "noops": 26,
+      "not_min_closed_witness": {
+        "first": [
+          2,
+          0,
+          1
+        ],
+        "minimum": [
+          2,
+          0,
+          0
+        ],
+        "second": [
+          2,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 163,
+      "queries": 676,
+      "reachable_changes": 179,
+      "unreachable": 471
+    },
+    {
+      "chosen_graphs": 261,
+      "compatible_states": 25,
+      "direction_refusals": 430,
+      "forward_queries": 195,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "1-pe-pe-ep",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          2,
+          0,
+          2
+        ],
+        "minimum": [
+          2,
+          0,
+          0
+        ],
+        "second": [
+          2,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 146,
+      "queries": 625,
+      "reachable_changes": 170,
+      "unreachable": 430
+    },
+    {
+      "chosen_graphs": 261,
+      "compatible_states": 25,
+      "direction_refusals": 430,
+      "forward_queries": 195,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "1-pe-ep-pe",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          2,
+          0,
+          1
+        ],
+        "minimum": [
+          2,
+          0,
+          0
+        ],
+        "second": [
+          2,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 146,
+      "queries": 625,
+      "reachable_changes": 170,
+      "unreachable": 430
+    },
+    {
+      "chosen_graphs": 227,
+      "compatible_states": 23,
+      "direction_refusals": 356,
+      "forward_queries": 173,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "1-pe-ep-ep",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          2,
+          0,
+          2
+        ],
+        "minimum": [
+          2,
+          0,
+          0
+        ],
+        "second": [
+          2,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 118,
+      "queries": 529,
+      "reachable_changes": 150,
+      "unreachable": 356
+    },
+    {
+      "chosen_graphs": 257,
+      "compatible_states": 25,
+      "direction_refusals": 438,
+      "forward_queries": 187,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "1-ep-pe-pe",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          1,
+          0,
+          1
+        ],
+        "minimum": [
+          1,
+          0,
+          0
+        ],
+        "second": [
+          1,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 146,
+      "queries": 625,
+      "reachable_changes": 162,
+      "unreachable": 438
+    },
+    {
+      "chosen_graphs": 231,
+      "compatible_states": 23,
+      "direction_refusals": 364,
+      "forward_queries": 165,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "1-ep-pe-ep",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          1,
+          0,
+          2
+        ],
+        "minimum": [
+          1,
+          0,
+          0
+        ],
+        "second": [
+          1,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 118,
+      "queries": 529,
+      "reachable_changes": 142,
+      "unreachable": 364
+    },
+    {
+      "chosen_graphs": 231,
+      "compatible_states": 23,
+      "direction_refusals": 364,
+      "forward_queries": 165,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "1-ep-ep-pe",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          1,
+          0,
+          1
+        ],
+        "minimum": [
+          1,
+          0,
+          0
+        ],
+        "second": [
+          1,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 118,
+      "queries": 529,
+      "reachable_changes": 142,
+      "unreachable": 364
+    },
+    {
+      "chosen_graphs": 177,
+      "compatible_states": 19,
+      "direction_refusals": 238,
+      "forward_queries": 123,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "1-ep-ep-ep",
+      "noops": 19,
+      "not_min_closed_witness": {
+        "first": [
+          1,
+          0,
+          2
+        ],
+        "minimum": [
+          1,
+          0,
+          0
+        ],
+        "second": [
+          1,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 72,
+      "queries": 361,
+      "reachable_changes": 104,
+      "unreachable": 238
+    },
+    {
+      "chosen_graphs": 275,
+      "compatible_states": 26,
+      "direction_refusals": 471,
+      "forward_queries": 205,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "2-pe-pe-pe",
+      "noops": 26,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          1
+        ],
+        "minimum": [
+          0,
+          2,
+          0
+        ],
+        "second": [
+          1,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 163,
+      "queries": 676,
+      "reachable_changes": 179,
+      "unreachable": 471
+    },
+    {
+      "chosen_graphs": 261,
+      "compatible_states": 25,
+      "direction_refusals": 430,
+      "forward_queries": 195,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "2-pe-pe-ep",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          2,
+          0
+        ],
+        "second": [
+          1,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 146,
+      "queries": 625,
+      "reachable_changes": 170,
+      "unreachable": 430
+    },
+    {
+      "chosen_graphs": 257,
+      "compatible_states": 25,
+      "direction_refusals": 438,
+      "forward_queries": 187,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "2-pe-ep-pe",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          1,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 146,
+      "queries": 625,
+      "reachable_changes": 162,
+      "unreachable": 438
+    },
+    {
+      "chosen_graphs": 231,
+      "compatible_states": 23,
+      "direction_refusals": 364,
+      "forward_queries": 165,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "2-pe-ep-ep",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          1,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 118,
+      "queries": 529,
+      "reachable_changes": 142,
+      "unreachable": 364
+    },
+    {
+      "chosen_graphs": 261,
+      "compatible_states": 25,
+      "direction_refusals": 430,
+      "forward_queries": 195,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "2-ep-pe-pe",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          1
+        ],
+        "minimum": [
+          0,
+          2,
+          0
+        ],
+        "second": [
+          2,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 146,
+      "queries": 625,
+      "reachable_changes": 170,
+      "unreachable": 430
+    },
+    {
+      "chosen_graphs": 227,
+      "compatible_states": 23,
+      "direction_refusals": 356,
+      "forward_queries": 173,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "2-ep-pe-ep",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          2,
+          0
+        ],
+        "second": [
+          2,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 118,
+      "queries": 529,
+      "reachable_changes": 150,
+      "unreachable": 356
+    },
+    {
+      "chosen_graphs": 231,
+      "compatible_states": 23,
+      "direction_refusals": 364,
+      "forward_queries": 165,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "2-ep-ep-pe",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          2,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 118,
+      "queries": 529,
+      "reachable_changes": 142,
+      "unreachable": 364
+    },
+    {
+      "chosen_graphs": 177,
+      "compatible_states": 19,
+      "direction_refusals": 238,
+      "forward_queries": 123,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "2-ep-ep-ep",
+      "noops": 19,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          2,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 72,
+      "queries": 361,
+      "reachable_changes": 104,
+      "unreachable": 238
+    },
+    {
+      "chosen_graphs": 352,
+      "compatible_states": 25,
+      "direction_refusals": 431,
+      "forward_queries": 194,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "3-pe-pe-pe",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          1
+        ],
+        "minimum": [
+          0,
+          2,
+          0
+        ],
+        "second": [
+          1,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 140,
+      "queries": 625,
+      "reachable_changes": 169,
+      "unreachable": 431
+    },
+    {
+      "chosen_graphs": 320,
+      "compatible_states": 23,
+      "direction_refusals": 355,
+      "forward_queries": 174,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "3-pe-pe-ep",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          2,
+          0
+        ],
+        "second": [
+          1,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 108,
+      "queries": 529,
+      "reachable_changes": 151,
+      "unreachable": 355
+    },
+    {
+      "chosen_graphs": 309,
+      "compatible_states": 23,
+      "direction_refusals": 362,
+      "forward_queries": 167,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "3-pe-ep-pe",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          1,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 115,
+      "queries": 529,
+      "reachable_changes": 144,
+      "unreachable": 362
+    },
+    {
+      "chosen_graphs": 235,
+      "compatible_states": 19,
+      "direction_refusals": 236,
+      "forward_queries": 125,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "3-pe-ep-ep",
+      "noops": 19,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          1,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 67,
+      "queries": 361,
+      "reachable_changes": 106,
+      "unreachable": 236
+    },
+    {
+      "chosen_graphs": 309,
+      "compatible_states": 23,
+      "direction_refusals": 362,
+      "forward_queries": 167,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "3-ep-pe-pe",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          1
+        ],
+        "minimum": [
+          0,
+          2,
+          0
+        ],
+        "second": [
+          2,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 115,
+      "queries": 529,
+      "reachable_changes": 144,
+      "unreachable": 362
+    },
+    {
+      "chosen_graphs": 235,
+      "compatible_states": 19,
+      "direction_refusals": 236,
+      "forward_queries": 125,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "3-ep-pe-ep",
+      "noops": 19,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          2,
+          0
+        ],
+        "second": [
+          2,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 67,
+      "queries": 361,
+      "reachable_changes": 106,
+      "unreachable": 236
+    },
+    {
+      "chosen_graphs": 250,
+      "compatible_states": 20,
+      "direction_refusals": 269,
+      "forward_obstructions": 1,
+      "forward_queries": 131,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "3-ep-ep-pe",
+      "noops": 20,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          2,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 94,
+      "queries": 400,
+      "reachable_changes": 110,
+      "unreachable": 270
+    },
+    {
+      "chosen_graphs": 134,
+      "compatible_states": 13,
+      "direction_refusals": 104,
+      "forward_obstructions": 3,
+      "forward_queries": 65,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "3-ep-ep-ep",
+      "noops": 13,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          2,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 33,
+      "queries": 169,
+      "reachable_changes": 49,
+      "unreachable": 107
+    },
+    {
+      "chosen_graphs": 275,
+      "compatible_states": 26,
+      "direction_refusals": 471,
+      "forward_queries": 205,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "4-pe-pe-pe",
+      "noops": 26,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          1,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 163,
+      "queries": 676,
+      "reachable_changes": 179,
+      "unreachable": 471
+    },
+    {
+      "chosen_graphs": 257,
+      "compatible_states": 25,
+      "direction_refusals": 438,
+      "forward_queries": 187,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "4-pe-pe-ep",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          1,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 146,
+      "queries": 625,
+      "reachable_changes": 162,
+      "unreachable": 438
+    },
+    {
+      "chosen_graphs": 261,
+      "compatible_states": 25,
+      "direction_refusals": 430,
+      "forward_queries": 195,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "4-pe-ep-pe",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          1,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 146,
+      "queries": 625,
+      "reachable_changes": 170,
+      "unreachable": 430
+    },
+    {
+      "chosen_graphs": 231,
+      "compatible_states": 23,
+      "direction_refusals": 364,
+      "forward_queries": 165,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "4-pe-ep-ep",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          1,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 118,
+      "queries": 529,
+      "reachable_changes": 142,
+      "unreachable": 364
+    },
+    {
+      "chosen_graphs": 261,
+      "compatible_states": 25,
+      "direction_refusals": 430,
+      "forward_queries": 195,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "4-ep-pe-pe",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          2,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 146,
+      "queries": 625,
+      "reachable_changes": 170,
+      "unreachable": 430
+    },
+    {
+      "chosen_graphs": 231,
+      "compatible_states": 23,
+      "direction_refusals": 364,
+      "forward_queries": 165,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "4-ep-pe-ep",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          2,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 118,
+      "queries": 529,
+      "reachable_changes": 142,
+      "unreachable": 364
+    },
+    {
+      "chosen_graphs": 227,
+      "compatible_states": 23,
+      "direction_refusals": 356,
+      "forward_queries": 173,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "4-ep-ep-pe",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          2,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 118,
+      "queries": 529,
+      "reachable_changes": 150,
+      "unreachable": 356
+    },
+    {
+      "chosen_graphs": 177,
+      "compatible_states": 19,
+      "direction_refusals": 238,
+      "forward_queries": 123,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "4-ep-ep-ep",
+      "noops": 19,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          2,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 72,
+      "queries": 361,
+      "reachable_changes": 104,
+      "unreachable": 238
+    },
+    {
+      "chosen_graphs": 352,
+      "compatible_states": 25,
+      "direction_refusals": 431,
+      "forward_queries": 194,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "5-pe-pe-pe",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          1,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 140,
+      "queries": 625,
+      "reachable_changes": 169,
+      "unreachable": 431
+    },
+    {
+      "chosen_graphs": 309,
+      "compatible_states": 23,
+      "direction_refusals": 362,
+      "forward_queries": 167,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "5-pe-pe-ep",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          1,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 115,
+      "queries": 529,
+      "reachable_changes": 144,
+      "unreachable": 362
+    },
+    {
+      "chosen_graphs": 320,
+      "compatible_states": 23,
+      "direction_refusals": 355,
+      "forward_queries": 174,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "5-pe-ep-pe",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          1,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 108,
+      "queries": 529,
+      "reachable_changes": 151,
+      "unreachable": 355
+    },
+    {
+      "chosen_graphs": 235,
+      "compatible_states": 19,
+      "direction_refusals": 236,
+      "forward_queries": 125,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "5-pe-ep-ep",
+      "noops": 19,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          1,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 67,
+      "queries": 361,
+      "reachable_changes": 106,
+      "unreachable": 236
+    },
+    {
+      "chosen_graphs": 309,
+      "compatible_states": 23,
+      "direction_refusals": 362,
+      "forward_queries": 167,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "5-ep-pe-pe",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          2,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 115,
+      "queries": 529,
+      "reachable_changes": 144,
+      "unreachable": 362
+    },
+    {
+      "chosen_graphs": 250,
+      "compatible_states": 20,
+      "direction_refusals": 269,
+      "forward_obstructions": 1,
+      "forward_queries": 131,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "5-ep-pe-ep",
+      "noops": 20,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          2,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 94,
+      "queries": 400,
+      "reachable_changes": 110,
+      "unreachable": 270
+    },
+    {
+      "chosen_graphs": 235,
+      "compatible_states": 19,
+      "direction_refusals": 236,
+      "forward_queries": 125,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "5-ep-ep-pe",
+      "noops": 19,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          2,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 67,
+      "queries": 361,
+      "reachable_changes": 106,
+      "unreachable": 236
+    },
+    {
+      "chosen_graphs": 134,
+      "compatible_states": 13,
+      "direction_refusals": 104,
+      "forward_obstructions": 3,
+      "forward_queries": 65,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "5-ep-ep-ep",
+      "noops": 13,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          2,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 33,
+      "queries": 169,
+      "reachable_changes": 49,
+      "unreachable": 107
+    },
+    {
+      "chosen_graphs": 352,
+      "compatible_states": 25,
+      "direction_refusals": 431,
+      "forward_queries": 194,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "6-pe-pe-pe",
+      "noops": 25,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          1,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 140,
+      "queries": 625,
+      "reachable_changes": 169,
+      "unreachable": 431
+    },
+    {
+      "chosen_graphs": 309,
+      "compatible_states": 23,
+      "direction_refusals": 362,
+      "forward_queries": 167,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "6-pe-pe-ep",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          1,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 115,
+      "queries": 529,
+      "reachable_changes": 144,
+      "unreachable": 362
+    },
+    {
+      "chosen_graphs": 309,
+      "compatible_states": 23,
+      "direction_refusals": 362,
+      "forward_queries": 167,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "6-pe-ep-pe",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          1,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 115,
+      "queries": 529,
+      "reachable_changes": 144,
+      "unreachable": 362
+    },
+    {
+      "chosen_graphs": 250,
+      "compatible_states": 20,
+      "direction_refusals": 269,
+      "forward_obstructions": 1,
+      "forward_queries": 131,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "6-pe-ep-ep",
+      "noops": 20,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          1,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 94,
+      "queries": 400,
+      "reachable_changes": 110,
+      "unreachable": 270
+    },
+    {
+      "chosen_graphs": 320,
+      "compatible_states": 23,
+      "direction_refusals": 355,
+      "forward_queries": 174,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "6-ep-pe-pe",
+      "noops": 23,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          2,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 108,
+      "queries": 529,
+      "reachable_changes": 151,
+      "unreachable": 355
+    },
+    {
+      "chosen_graphs": 235,
+      "compatible_states": 19,
+      "direction_refusals": 236,
+      "forward_queries": 125,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "6-ep-pe-ep",
+      "noops": 19,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          2,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 67,
+      "queries": 361,
+      "reachable_changes": 106,
+      "unreachable": 236
+    },
+    {
+      "chosen_graphs": 235,
+      "compatible_states": 19,
+      "direction_refusals": 236,
+      "forward_queries": 125,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "6-ep-ep-pe",
+      "noops": 19,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          2,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 67,
+      "queries": 361,
+      "reachable_changes": 106,
+      "unreachable": 236
+    },
+    {
+      "chosen_graphs": 134,
+      "compatible_states": 13,
+      "direction_refusals": 104,
+      "forward_obstructions": 3,
+      "forward_queries": 65,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "6-ep-ep-ep",
+      "noops": 13,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          2,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 33,
+      "queries": 169,
+      "reachable_changes": 49,
+      "unreachable": 107
+    },
+    {
+      "chosen_graphs": 452,
+      "compatible_states": 24,
+      "direction_refusals": 393,
+      "forward_queries": 183,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "7-pe-pe-pe",
+      "noops": 24,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          1,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 119,
+      "queries": 576,
+      "reachable_changes": 159,
+      "unreachable": 393
+    },
+    {
+      "chosen_graphs": 376,
+      "compatible_states": 21,
+      "direction_refusals": 294,
+      "forward_queries": 147,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "7-pe-pe-ep",
+      "noops": 21,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          1,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 85,
+      "queries": 441,
+      "reachable_changes": 126,
+      "unreachable": 294
+    },
+    {
+      "chosen_graphs": 376,
+      "compatible_states": 21,
+      "direction_refusals": 294,
+      "forward_queries": 147,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "7-pe-ep-pe",
+      "noops": 21,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          1,
+          1,
+          0
+        ]
+      },
+      "phase_edges": 85,
+      "queries": 441,
+      "reachable_changes": 126,
+      "unreachable": 294
+    },
+    {
+      "chosen_graphs": 241,
+      "compatible_states": 16,
+      "direction_refusals": 163,
+      "forward_obstructions": 1,
+      "forward_queries": 93,
+      "full_migration": {
+        "cost": {
+          "handoffs": 2,
+          "installations": 6,
+          "phases": 3
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "7-pe-ep-ep",
+      "noops": 16,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          1,
+          0,
+          1
+        ]
+      },
+      "phase_edges": 47,
+      "queries": 256,
+      "reachable_changes": 76,
+      "unreachable": 164
+    },
+    {
+      "chosen_graphs": 376,
+      "compatible_states": 21,
+      "direction_refusals": 294,
+      "forward_queries": 147,
+      "full_migration": {
+        "cost": {
+          "handoffs": 1,
+          "installations": 6,
+          "phases": 2
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "7-ep-pe-pe",
+      "noops": 21,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          2,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 85,
+      "queries": 441,
+      "reachable_changes": 126,
+      "unreachable": 294
+    },
+    {
+      "chosen_graphs": 241,
+      "compatible_states": 16,
+      "direction_refusals": 163,
+      "forward_obstructions": 1,
+      "forward_queries": 93,
+      "full_migration": {
+        "cost": {
+          "handoffs": 2,
+          "installations": 6,
+          "phases": 3
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "7-ep-pe-ep",
+      "noops": 16,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          0,
+          1
+        ],
+        "second": [
+          2,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 47,
+      "queries": 256,
+      "reachable_changes": 76,
+      "unreachable": 164
+    },
+    {
+      "chosen_graphs": 241,
+      "compatible_states": 16,
+      "direction_refusals": 163,
+      "forward_obstructions": 1,
+      "forward_queries": 93,
+      "full_migration": {
+        "cost": {
+          "handoffs": 2,
+          "installations": 6,
+          "phases": 3
+        },
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "status": "planned"
+      },
+      "id": "7-ep-ep-pe",
+      "noops": 16,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          1,
+          1
+        ],
+        "minimum": [
+          0,
+          1,
+          0
+        ],
+        "second": [
+          2,
+          2,
+          0
+        ]
+      },
+      "phase_edges": 47,
+      "queries": 256,
+      "reachable_changes": 76,
+      "unreachable": 164
+    },
+    {
+      "chosen_graphs": 67,
+      "compatible_states": 8,
+      "direction_refusals": 40,
+      "forward_obstructions": 7,
+      "forward_queries": 24,
+      "full_migration": {
+        "cost": null,
+        "rank_iterates": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "status": "unreachable"
+      },
+      "id": "7-ep-ep-ep",
+      "noops": 8,
+      "not_min_closed_witness": {
+        "first": [
+          0,
+          2,
+          2
+        ],
+        "minimum": [
+          0,
+          0,
+          2
+        ],
+        "second": [
+          2,
+          0,
+          2
+        ]
+      },
+      "phase_edges": 9,
+      "queries": 64,
+      "reachable_changes": 9,
+      "unreachable": 47
+    }
+  ],
+  "contexts": 56,
+  "contexts_not_min_closed": 56,
+  "counts": {
+    "chosen_graphs": 14562,
+    "direction_refusals": 18142,
+    "forward_obstructions": 22,
+    "forward_queries": 8595,
+    "noops": 1205,
+    "queries": 26737,
+    "reachable_changes": 7368,
+    "unreachable": 18164
+  },
+  "every_context_max_closed": true,
+  "forward_phase_counts": {
+    "0": 1205,
+    "1": 5822,
+    "2": 1501,
+    "3": 45,
+    "unreachable": 22
+  },
+  "full_migrations": {
+    "2 phases": 52,
+    "3 phases": 3,
+    "unreachable": 1
+  },
+  "or_fixed_point_equals_literal_and_best_selected_dag": true,
+  "planning_compared_to_actual_codec_derived_relations": true,
+  "production_planner_queries": 26737,
+  "status": "PASS"
+}

@@ -1,0 +1,10 @@
+{
+  "all_candidate_files_unchanged_during_verification": true,
+  "candidate_payload_sha256": "2db81d2a7f6682fd945f71bbbc3592908f8cff71be6911fa175fb82550833085",
+  "checks_passed": 52,
+  "files": 11192,
+  "finished_utc": "2026-11-19T18:03:59.963114+00:00",
+  "report_sha256": "959ee2caefca1b968865774baa594102bc8943cd8d3aac273ea852f5b37b9666",
+  "status": "PASS",
+  "verification_directory": "/workspace/scratch/e34480916f53/continuation/review/full-package-verification"
+}

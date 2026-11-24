@@ -1,0 +1,33 @@
+{
+  "actual_tcp_owner_processes": 3,
+  "same_input": {
+    "key": "same-logical-request",
+    "amount": 17
+  },
+  "first_completion_was_durable": true,
+  "later_completion_matches_final_row": true,
+  "completed_response_changed": true,
+  "returned_response_changed_on_exact_retry": true,
+  "business_record_preserved": true,
+  "first_duplicate_flags": [
+    true,
+    false,
+    false
+  ],
+  "later_duplicate_flags": [
+    false,
+    true,
+    true
+  ],
+  "effects_per_owner": [
+    1,
+    1,
+    1
+  ],
+  "retired": true,
+  "final_holds_per_owner": [
+    0,
+    0,
+    0
+  ]
+}

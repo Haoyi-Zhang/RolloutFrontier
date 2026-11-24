@@ -1,0 +1,297 @@
+{
+  "clocks": {
+    "perf_counter": {
+      "adjustable": false,
+      "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+      "monotonic": true,
+      "resolution": 1e-09
+    },
+    "process_time": {
+      "adjustable": false,
+      "implementation": "clock_gettime(CLOCK_PROCESS_CPUTIME_ID)",
+      "monotonic": true,
+      "resolution": 1e-09
+    },
+    "thread_time": {
+      "adjustable": false,
+      "implementation": "clock_gettime(CLOCK_THREAD_CPUTIME_ID)",
+      "monotonic": true,
+      "resolution": 1e-09
+    }
+  },
+  "interpretation": "Observed identical CLOCK_PROCESS_CPUTIME_ID readings on short cohorts despite positive wall durations. Nominal resolution is one nanosecond; the accounting cause was not determined. Final timing aggregates independently reconstructed cold cohorts for at least 0.1 process-CPU second.",
+  "observed_zero_cpu_deltas": [
+    {
+      "costs_sha256": "902a14146f082b46323285b0c4942ad1960d5045a5d7d6ac06855e45d15f2c9e",
+      "cpu_affinity": [
+        0
+      ],
+      "cpu_budget_seconds": 30.0,
+      "domain": "active-4-owner",
+      "maximum_rss_kib": 14592,
+      "order": 0,
+      "preparation_cpu_seconds": 0.0,
+      "queries": 6,
+      "queries_cpu_seconds": 0.0,
+      "repetition": 0,
+      "route": "one-step",
+      "status": "completed",
+      "total_cpu_seconds": 0.0,
+      "wall_seconds": 0.002892527998483274,
+      "work": {
+        "catalog_cells": 81,
+        "compatible_vertices": 24,
+        "interval_pair_candidates": 0,
+        "phase_edge_candidates": 0,
+        "product_corner_tests": 0,
+        "profile_products": 0,
+        "queries": 6,
+        "safe_edge_candidates": 96,
+        "safe_edges": 44,
+        "safe_profile_products": 0,
+        "search_edge_visits": 104,
+        "segment_candidates": 0,
+        "source_searches": 4,
+        "unique_phase_edges": 44
+      }
+    },
+    {
+      "costs_sha256": "7d7fee1033f14cd3f113e6b0d249ce36c0db3ac4539c6737e262983c742cee7a",
+      "cpu_affinity": [
+        0
+      ],
+      "cpu_budget_seconds": 30.0,
+      "domain": "active-4-owner",
+      "maximum_rss_kib": 14336,
+      "order": 1,
+      "preparation_cpu_seconds": 0.0,
+      "queries": 6,
+      "queries_cpu_seconds": 0.0,
+      "repetition": 0,
+      "route": "shortest-path-segmented",
+      "status": "completed",
+      "total_cpu_seconds": 0.0,
+      "wall_seconds": 0.0022952500003157184,
+      "work": {
+        "catalog_cells": 81,
+        "compatible_vertices": 24,
+        "interval_pair_candidates": 0,
+        "phase_edge_candidates": 0,
+        "product_corner_tests": 0,
+        "profile_products": 0,
+        "queries": 6,
+        "safe_edge_candidates": 96,
+        "safe_edges": 44,
+        "safe_profile_products": 0,
+        "search_edge_visits": 104,
+        "segment_candidates": 108,
+        "source_searches": 4,
+        "unique_phase_edges": 44
+      }
+    },
+    {
+      "costs_sha256": "902a14146f082b46323285b0c4942ad1960d5045a5d7d6ac06855e45d15f2c9e",
+      "cpu_affinity": [
+        0
+      ],
+      "cpu_budget_seconds": 30.0,
+      "domain": "active-4-owner",
+      "maximum_rss_kib": 14592,
+      "order": 3,
+      "preparation_cpu_seconds": 0.0,
+      "queries": 6,
+      "queries_cpu_seconds": 0.0,
+      "repetition": 1,
+      "route": "one-step",
+      "status": "completed",
+      "total_cpu_seconds": 0.0,
+      "wall_seconds": 0.00379605700072716,
+      "work": {
+        "catalog_cells": 81,
+        "compatible_vertices": 24,
+        "interval_pair_candidates": 0,
+        "phase_edge_candidates": 0,
+        "product_corner_tests": 0,
+        "profile_products": 0,
+        "queries": 6,
+        "safe_edge_candidates": 96,
+        "safe_edges": 44,
+        "safe_profile_products": 0,
+        "search_edge_visits": 104,
+        "segment_candidates": 0,
+        "source_searches": 4,
+        "unique_phase_edges": 44
+      }
+    },
+    {
+      "costs_sha256": "7d7fee1033f14cd3f113e6b0d249ce36c0db3ac4539c6737e262983c742cee7a",
+      "cpu_affinity": [
+        0
+      ],
+      "cpu_budget_seconds": 30.0,
+      "domain": "active-4-owner",
+      "maximum_rss_kib": 14720,
+      "order": 0,
+      "preparation_cpu_seconds": 0.0,
+      "queries": 6,
+      "queries_cpu_seconds": 0.0,
+      "repetition": 2,
+      "route": "interval-optimal",
+      "status": "completed",
+      "total_cpu_seconds": 0.0,
+      "wall_seconds": 0.002293437999469461,
+      "work": {
+        "catalog_cells": 81,
+        "compatible_vertices": 24,
+        "interval_pair_candidates": 552,
+        "phase_edge_candidates": 94,
+        "product_corner_tests": 0,
+        "profile_products": 0,
+        "queries": 6,
+        "safe_edge_candidates": 0,
+        "safe_edges": 0,
+        "safe_profile_products": 0,
+        "search_edge_visits": 218,
+        "segment_candidates": 0,
+        "source_searches": 4,
+        "unique_phase_edges": 94
+      }
+    },
+    {
+      "costs_sha256": "fd61ebfd26e1cba41b41c4ad4635715d378dfcbf173fac9122e665b3ee68d657",
+      "cpu_affinity": [
+        0
+      ],
+      "cpu_budget_seconds": 30.0,
+      "domain": "active-5-owner",
+      "maximum_rss_kib": 14720,
+      "order": 2,
+      "preparation_cpu_seconds": 0.0,
+      "queries": 6,
+      "queries_cpu_seconds": 0.0,
+      "repetition": 2,
+      "route": "one-step",
+      "status": "completed",
+      "total_cpu_seconds": 0.0,
+      "wall_seconds": 0.0035499069999787025,
+      "work": {
+        "catalog_cells": 243,
+        "compatible_vertices": 54,
+        "interval_pair_candidates": 0,
+        "phase_edge_candidates": 0,
+        "product_corner_tests": 0,
+        "profile_products": 0,
+        "queries": 6,
+        "safe_edge_candidates": 270,
+        "safe_edges": 126,
+        "safe_profile_products": 0,
+        "search_edge_visits": 318,
+        "segment_candidates": 0,
+        "source_searches": 4,
+        "unique_phase_edges": 126
+      }
+    },
+    {
+      "costs_sha256": "7d7fee1033f14cd3f113e6b0d249ce36c0db3ac4539c6737e262983c742cee7a",
+      "cpu_affinity": [
+        0
+      ],
+      "cpu_budget_seconds": 30.0,
+      "domain": "active-4-owner",
+      "maximum_rss_kib": 14720,
+      "order": 3,
+      "preparation_cpu_seconds": 0.0,
+      "queries": 6,
+      "queries_cpu_seconds": 0.0,
+      "repetition": 3,
+      "route": "interval-optimal",
+      "status": "completed",
+      "total_cpu_seconds": 0.0,
+      "wall_seconds": 0.002210774000559468,
+      "work": {
+        "catalog_cells": 81,
+        "compatible_vertices": 24,
+        "interval_pair_candidates": 552,
+        "phase_edge_candidates": 94,
+        "product_corner_tests": 0,
+        "profile_products": 0,
+        "queries": 6,
+        "safe_edge_candidates": 0,
+        "safe_edges": 0,
+        "safe_profile_products": 0,
+        "search_edge_visits": 218,
+        "segment_candidates": 0,
+        "source_searches": 4,
+        "unique_phase_edges": 94
+      }
+    },
+    {
+      "costs_sha256": "902a14146f082b46323285b0c4942ad1960d5045a5d7d6ac06855e45d15f2c9e",
+      "cpu_affinity": [
+        0
+      ],
+      "cpu_budget_seconds": 30.0,
+      "domain": "active-4-owner",
+      "maximum_rss_kib": 14720,
+      "order": 0,
+      "preparation_cpu_seconds": 0.0,
+      "queries": 6,
+      "queries_cpu_seconds": 0.0,
+      "repetition": 4,
+      "route": "one-step",
+      "status": "completed",
+      "total_cpu_seconds": 0.0,
+      "wall_seconds": 0.0027832739979203325,
+      "work": {
+        "catalog_cells": 81,
+        "compatible_vertices": 24,
+        "interval_pair_candidates": 0,
+        "phase_edge_candidates": 0,
+        "product_corner_tests": 0,
+        "profile_products": 0,
+        "queries": 6,
+        "safe_edge_candidates": 96,
+        "safe_edges": 44,
+        "safe_profile_products": 0,
+        "search_edge_visits": 104,
+        "segment_candidates": 0,
+        "source_searches": 4,
+        "unique_phase_edges": 44
+      }
+    },
+    {
+      "costs_sha256": "7d7fee1033f14cd3f113e6b0d249ce36c0db3ac4539c6737e262983c742cee7a",
+      "cpu_affinity": [
+        0
+      ],
+      "cpu_budget_seconds": 30.0,
+      "domain": "active-4-owner",
+      "maximum_rss_kib": 14356,
+      "order": 1,
+      "preparation_cpu_seconds": 0.0,
+      "queries": 6,
+      "queries_cpu_seconds": 0.0,
+      "repetition": 4,
+      "route": "shortest-path-segmented",
+      "status": "completed",
+      "total_cpu_seconds": 0.0,
+      "wall_seconds": 0.0018099809967679903,
+      "work": {
+        "catalog_cells": 81,
+        "compatible_vertices": 24,
+        "interval_pair_candidates": 0,
+        "phase_edge_candidates": 0,
+        "product_corner_tests": 0,
+        "profile_products": 0,
+        "queries": 6,
+        "safe_edge_candidates": 96,
+        "safe_edges": 44,
+        "safe_profile_products": 0,
+        "search_edge_visits": 104,
+        "segment_candidates": 108,
+        "source_searches": 4,
+        "unique_phase_edges": 44
+      }
+    }
+  ]
+}

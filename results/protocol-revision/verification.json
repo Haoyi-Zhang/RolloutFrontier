@@ -1,0 +1,158 @@
+{
+  "original_argv_recorded": true,
+  "runs": [
+    {
+      "exit_code": 0,
+      "mode": "current",
+      "observed_optimization_level": 0,
+      "original_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-m",
+        "tests.protocol_boundary_suite",
+        "--out",
+        "/workspace/scratch/e34480916f53/verification/r3-integration/final-broad-refresh/runs/protocol-normal"
+      ],
+      "source_log": "results/deep-protocol-review/normal/unittest.log",
+      "source_record": "results/deep-protocol-review/normal/verification.json",
+      "stderr_tail": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 56 tests in 1.583s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "mode": "optimized",
+      "observed_optimization_level": 1,
+      "original_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-O",
+        "-B",
+        "-m",
+        "tests.protocol_boundary_suite",
+        "--out",
+        "/workspace/scratch/e34480916f53/verification/r3-integration/final-broad-refresh/runs/protocol-optimized"
+      ],
+      "source_log": "results/deep-protocol-review/optimized/unittest.log",
+      "source_record": "results/deep-protocol-review/optimized/verification.json",
+      "stderr_tail": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 56 tests in 2.668s",
+        "",
+        "OK"
+      ]
+    }
+  ],
+  "scope": "Fresh 56-method normal and optimized runs after final rollout source freeze.",
+  "source_bindings": [
+    {
+      "path": "src/__init__.py",
+      "sha256": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca"
+    },
+    {
+      "path": "src/android_contracts.py",
+      "sha256": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b"
+    },
+    {
+      "path": "src/batch.py",
+      "sha256": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f"
+    },
+    {
+      "path": "src/checker.py",
+      "sha256": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318"
+    },
+    {
+      "path": "src/controller.py",
+      "sha256": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6"
+    },
+    {
+      "path": "src/direct_batch.py",
+      "sha256": "f980854a6d7b789a540011eba94ad4970ab92565f183316384063c2a5418052e"
+    },
+    {
+      "path": "src/effect_ledger.py",
+      "sha256": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b"
+    },
+    {
+      "path": "src/envelope.py",
+      "sha256": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856"
+    },
+    {
+      "path": "src/goal_planner.py",
+      "sha256": "7489b4ffe8f62195dc0d054eac3c6d49452109077714203eb4a357405ca8f28d"
+    },
+    {
+      "path": "src/network.py",
+      "sha256": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae"
+    },
+    {
+      "path": "src/rollout.py",
+      "sha256": "952e5a4811bcce107207df6cbd33e960014316dd2c334e89f52469c6d6085d2b"
+    },
+    {
+      "path": "tests/cancellation_lifecycle.py",
+      "sha256": "de02b915398ef49791ab11a4a34d40c781631f77959adc04c6169e2c6fc7f414"
+    },
+    {
+      "path": "tests/closed_objects.py",
+      "sha256": "138c4ee324535d736b3bbc5e3c409af792ef7df60ba8a7b0d7e16a2f29a7dd22"
+    },
+    {
+      "path": "tests/effect_drain.py",
+      "sha256": "599805b2783362982e52e6caa6b859151614348d6ba95a0f67002d82effe119b"
+    },
+    {
+      "path": "tests/effect_registration.py",
+      "sha256": "92217c80501a8dbd8d2718c58210c346ea2d46ddce927cea0f8da427df35eddf"
+    },
+    {
+      "path": "tests/full_path_costs.py",
+      "sha256": "e90a204cac1f9dc25fbb566c5f1991c2b3e60fd225060117484f3bafa630d115"
+    },
+    {
+      "path": "tests/live_certificate_types.py",
+      "sha256": "c27cc38333bd67a64800d2594b4a532945e0fd4bc01fd8ac11d72b0cf512511b"
+    },
+    {
+      "path": "tests/memory_lifecycle.py",
+      "sha256": "46bdd733e9664facd407464fdac3b0dbd46cf1352317bff1fa55c2f56c340290"
+    },
+    {
+      "path": "tests/optimizer_benchmark.py",
+      "sha256": "4e925639c36bc5cf62b2c698e1563dcf5614efedcacfeefa7e144618ea27dfa5"
+    },
+    {
+      "path": "tests/origin_persistence_failures.py",
+      "sha256": "e34fad443caaf7b8da281a9b1c81eea16ebc6aa15fbcf5d9b6cb64fbc22bbe48"
+    },
+    {
+      "path": "tests/origin_serialization.py",
+      "sha256": "2429d52d4d1d6f99fc9de6c61221b7389cbbfed1ab62e27106edc440ff3ddf7b"
+    },
+    {
+      "path": "tests/persistence_failures.py",
+      "sha256": "c7f73d86bee8e00b9c772935fe47076730e7ea409c7d2359c93040d547ce8543"
+    },
+    {
+      "path": "tests/protocol_boundary_suite.py",
+      "sha256": "3878b8b04a27ae55eb25cefe7fe72c96748f36e4019339e9168ffc56add7baa2"
+    },
+    {
+      "path": "tests/receipt_snapshots.py",
+      "sha256": "f7dcde7aef557dd6aed401de77a02e91e719a72be88839d152249c890100df70"
+    },
+    {
+      "path": "tests/recovery_type_aliases.py",
+      "sha256": "ac7e7b1d37478050f9f39d795b6cb79d52c73bc438d8668dca800c5854b3b159"
+    },
+    {
+      "path": "tests/window_types.py",
+      "sha256": "db2a489c97fd1e01069326999e7108d86db0d5a9f5016897d7c6f289e641ebf6"
+    }
+  ],
+  "source_records_preserved": true
+}

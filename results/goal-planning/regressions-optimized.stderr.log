@@ -1,0 +1,21 @@
+test_all_relation_encodings_match_literal_truth_tables (tests.goal_planner_regression.GoalPlanningTests.test_all_relation_encodings_match_literal_truth_tables) ... ok
+test_budget_accepts_exact_boundary (tests.goal_planner_regression.GoalPlanningTests.test_budget_accepts_exact_boundary) ... ok
+test_cache_does_not_change_optimum_or_leak_mutable_results (tests.goal_planner_regression.GoalPlanningTests.test_cache_does_not_change_optimum_or_leak_mutable_results) ... ok
+test_compatible_endpoints_can_be_unreachable (tests.goal_planner_regression.GoalPlanningTests.test_compatible_endpoints_can_be_unreachable) ... ok
+test_complete_transition_graph_has_shorter_local_path (tests.goal_planner_regression.GoalPlanningTests.test_complete_transition_graph_has_shorter_local_path) ... ok
+test_directed_edges_disallow_reverse_upgrade (tests.goal_planner_regression.GoalPlanningTests.test_directed_edges_disallow_reverse_upgrade) ... ok
+test_independent_updates_share_one_phase (tests.goal_planner_regression.GoalPlanningTests.test_independent_updates_share_one_phase) ... ok
+test_input_errors_and_nonresource_failures_propagate (tests.goal_planner_regression.GoalPlanningTests.test_input_errors_and_nonresource_failures_propagate) ... ok
+test_intermediate_versions_and_full_profiles_are_retained (tests.goal_planner_regression.GoalPlanningTests.test_intermediate_versions_and_full_profiles_are_retained) ... ok
+test_known_one_phase_goal_does_not_expand_other_one_phase_states (tests.goal_planner_regression.GoalPlanningTests.test_known_one_phase_goal_does_not_expand_other_one_phase_states) ... ok
+test_noop_needs_no_admission (tests.goal_planner_regression.GoalPlanningTests.test_noop_needs_no_admission) ... ok
+test_phase_may_need_to_end_before_its_maximal_progress (tests.goal_planner_regression.GoalPlanningTests.test_phase_may_need_to_end_before_its_maximal_progress) ... ok
+test_resource_refusals_are_not_unreachable_answers (tests.goal_planner_regression.GoalPlanningTests.test_resource_refusals_are_not_unreachable_answers) ... ok
+test_witness_checker_rejects_changed_cost_and_path (tests.goal_planner_regression.GoalPlanningTests.test_witness_checker_rejects_changed_cost_and_path) ... ok
+test_witness_checker_rejects_consistently_recounted_illegal_jump (tests.goal_planner_regression.GoalPlanningTests.test_witness_checker_rejects_consistently_recounted_illegal_jump) ... ok
+test_witness_checker_rejects_unsafe_enlargement (tests.goal_planner_regression.GoalPlanningTests.test_witness_checker_rejects_unsafe_enlargement) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.039s
+
+OK

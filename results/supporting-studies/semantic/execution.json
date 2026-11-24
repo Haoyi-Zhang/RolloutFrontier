@@ -1,0 +1,320 @@
+{
+  "children_cpu_seconds": 23.24512,
+  "compared_files": [
+    "unit.json",
+    "pilot.json",
+    "finite.json",
+    "frontier.json",
+    "frontier-stress.json",
+    "generalization.json",
+    "journal-analysis.json",
+    "scaling.json",
+    "modelcheck.json",
+    "public-history.json",
+    "network.json",
+    "integration.json",
+    "multiprocess.json",
+    "observations.json",
+    "costs.json",
+    "hardening.json",
+    "replay.json",
+    "network.csv",
+    "observations.csv",
+    "generalization.csv",
+    "scaling.csv",
+    "network-trace.jsonl",
+    "observation-trace.jsonl"
+  ],
+  "comparison_excludes": [
+    "checker_median_ns",
+    "checker_min_ns",
+    "child_cpu_seconds",
+    "cpu_seconds",
+    "dp_median_ns",
+    "endpoint_vm_hwm_kib",
+    "install_median_ns",
+    "peak_rss_kib",
+    "rpc_median_ms",
+    "rpc_p95_ms",
+    "solver_wall_ms",
+    "solver_wall_ns",
+    "wall_ns",
+    "wall_seconds"
+  ],
+  "generated_files": [
+    "costs.json",
+    "finite.json",
+    "frontier-stress.json",
+    "frontier.json",
+    "generalization.csv",
+    "generalization.json",
+    "hardening.json",
+    "integration.json",
+    "journal-analysis.json",
+    "modelcheck.json",
+    "multiprocess.json",
+    "network-trace.jsonl",
+    "network.csv",
+    "network.json",
+    "observation-trace.jsonl",
+    "observations.csv",
+    "observations.json",
+    "pilot.json",
+    "public-history.json",
+    "replay.json",
+    "scaling.csv",
+    "scaling.json",
+    "unit.json"
+  ],
+  "independently_replayed_trace_files": [
+    "network-trace.jsonl"
+  ],
+  "largest_child_peak_rss_kib": 27344,
+  "limits": {
+    "affinity_cores": 1,
+    "child_address_space_bytes": 536870912,
+    "job_cpu_soft_seconds": 90,
+    "job_wall_timeout_seconds": 120,
+    "maximum_simultaneous_project_processes": 7,
+    "theoretical_aggregate_address_space_bytes": 3758096384
+  },
+  "numeric_claim_bindings_verified": 33,
+  "parent_cpu_seconds": 0.882778835,
+  "reference_compared_trace_files": [
+    "network-trace.jsonl",
+    "observation-trace.jsonl"
+  ],
+  "runs": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.unit"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.05197842800000001,
+      "reported_peak_rss_kib": 19968,
+      "stderr": "",
+      "wall_seconds": 0.1680170449999423
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.pilot"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.04399554900000001,
+      "reported_peak_rss_kib": 18560,
+      "stderr": "",
+      "wall_seconds": 0.14084157400020558
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.finite"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 1.712790129,
+      "reported_peak_rss_kib": 10752,
+      "stderr": "",
+      "wall_seconds": 1.7725754359998973
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.frontier"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 1.362822349,
+      "reported_peak_rss_kib": 11136,
+      "stderr": "",
+      "wall_seconds": 1.3971609000000171
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.frontier_stress"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.729833145,
+      "reported_peak_rss_kib": 11904,
+      "stderr": "",
+      "wall_seconds": 0.7848703239997121
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.generalization",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 2.379890997,
+      "reported_peak_rss_kib": 12288,
+      "stderr": "",
+      "wall_seconds": 2.4295381290003206
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.journal_analysis",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 1.801185718,
+      "reported_peak_rss_kib": 15616,
+      "stderr": "",
+      "wall_seconds": 1.861928817000262
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.scaling",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.303995309,
+      "reported_peak_rss_kib": 11776,
+      "stderr": "",
+      "wall_seconds": 0.3374692259999392
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.modelcheck"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.019990227,
+      "reported_peak_rss_kib": 10112,
+      "stderr": "",
+      "wall_seconds": 0.052517103999889514
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.public_history"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.0,
+      "reported_peak_rss_kib": 11264,
+      "stderr": "",
+      "wall_seconds": 0.03464536000001317
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.campaign",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 4.922733373,
+      "reported_peak_rss_kib": 20468,
+      "stderr": "",
+      "wall_seconds": 5.0389841989999695
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.integration"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0.10559,
+      "reported_cpu_seconds": 0.07662533499999999,
+      "reported_peak_rss_kib": 27344,
+      "stderr": "",
+      "wall_seconds": 0.2848721589998604
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.multiprocess"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0.7227049999999999,
+      "reported_cpu_seconds": 0.042774791000000006,
+      "reported_peak_rss_kib": 18432,
+      "stderr": "",
+      "wall_seconds": 0.8874952520000079
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.observations",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 1.880773998,
+      "reported_peak_rss_kib": 19836,
+      "stderr": "",
+      "wall_seconds": 2.0658582579999347
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.costs"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 5.4093883929999995,
+      "reported_peak_rss_kib": 13464,
+      "stderr": "",
+      "wall_seconds": 5.469315248999919
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.hardening"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.080013362,
+      "reported_peak_rss_kib": 20060,
+      "stderr": "",
+      "wall_seconds": 0.17815922399995543
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tests.replay",
+        "<output>"
+      ],
+      "exit_code": 0,
+      "reported_child_cpu_seconds": 0,
+      "reported_cpu_seconds": 0.581830053,
+      "reported_peak_rss_kib": 9472,
+      "stderr": "",
+      "wall_seconds": 0.628315441000268
+    }
+  ],
+  "scope": "semantic reproduction, not byte-identical timing or proof of model correctness",
+  "semantic_reference": "matched",
+  "status": "completed",
+  "wall_seconds": 24.391054980999797
+}

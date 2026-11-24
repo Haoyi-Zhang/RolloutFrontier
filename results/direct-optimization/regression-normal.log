@@ -1,0 +1,17 @@
+test_all_511_relations_against_literal_products (tests.direct_optimizer_regression.DirectOptimizerRegression.test_all_511_relations_against_literal_products) ... ok
+test_cached_frontier_and_direct_have_same_optimum (tests.direct_optimizer_regression.DirectOptimizerRegression.test_cached_frontier_and_direct_have_same_optimum) ... ok
+test_catalog_coverage_and_strict_bounds (tests.direct_optimizer_regression.DirectOptimizerRegression.test_catalog_coverage_and_strict_bounds) ... ok
+test_completed_prefix_survives_later_worker_failure (tests.direct_optimizer_regression.DirectOptimizerRegression.test_completed_prefix_survives_later_worker_failure) ... ok
+test_corrupt_or_cross_context_frontier_refused (tests.direct_optimizer_regression.DirectOptimizerRegression.test_corrupt_or_cross_context_frontier_refused) ... ok
+test_empty_batch_zero_weight_duplicates (tests.direct_optimizer_regression.DirectOptimizerRegression.test_empty_batch_zero_weight_duplicates) ... ok
+test_frontier_timeout_leaves_direct_route_available (tests.direct_optimizer_regression.DirectOptimizerRegression.test_frontier_timeout_leaves_direct_route_available) ... ok
+test_input_snapshot_and_output_isolation (tests.direct_optimizer_regression.DirectOptimizerRegression.test_input_snapshot_and_output_isolation) ... ok
+test_irrelevant_atom_changes_still_count_as_full_installs (tests.direct_optimizer_regression.DirectOptimizerRegression.test_irrelevant_atom_changes_still_count_as_full_installs) ... ok
+test_no_partial_optimum_and_exact_budget_boundary (tests.direct_optimizer_regression.DirectOptimizerRegression.test_no_partial_optimum_and_exact_budget_boundary) ... ok
+test_preparation_cannot_be_bypassed_by_public_construction_or_replace (tests.direct_optimizer_regression.DirectOptimizerRegression.test_preparation_cannot_be_bypassed_by_public_construction_or_replace) ... ok
+test_wall_budget_interrupts_without_a_partial_answer (tests.direct_optimizer_regression.DirectOptimizerRegression.test_wall_budget_interrupts_without_a_partial_answer) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.388s
+
+OK

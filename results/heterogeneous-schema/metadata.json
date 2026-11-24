@@ -1,0 +1,33 @@
+{
+  "baseline_partition": "exact interval dynamic programming for every generated path",
+  "declared_finite_domains": [
+    "two_owner",
+    "three_owner",
+    "three_owner_complete"
+  ],
+  "discovery_extension": "three_owner_complete_extra",
+  "domains": [
+    "two_owner",
+    "three_owner",
+    "three_owner_complete",
+    "three_owner_complete_extra"
+  ],
+  "event_semantics": "every release performs exactly one reader preparation or emitter activation",
+  "not_a_measure": "deployment prevalence or production workload frequency",
+  "population": "all labelled event permutations within each declared channel inventory",
+  "production_policy": {
+    "declared_domains": "every context",
+    "discovery_extension": "16 evenly spaced IDs plus the first outcome witnesses"
+  },
+  "queries_per_context": 1,
+  "query": "all-legacy to every field prepared and emitting",
+  "sources": [
+    "src/heterogeneous_contracts.py",
+    "src/factored_planner.py",
+    "src/envelope.py",
+    "src/controller.py",
+    "tests/heterogeneous_schema_study.py",
+    "tests/check_heterogeneous_schema.py"
+  ],
+  "specialized_exact_baseline": "weighted event DAG, chain weight zero, prepare-to-emit weight one"
+}

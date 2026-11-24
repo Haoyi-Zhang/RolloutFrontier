@@ -1,0 +1,19 @@
+{
+  "assurance": "Fresh SQLite path and verifier process controls; no research workload or performance measurement.",
+  "executed_test_methods": 4,
+  "optimization": 1,
+  "registered_test_methods": 4,
+  "skipped_test_methods": 0,
+  "status": "PASS",
+  "test_errors": 0,
+  "test_failures": 0,
+  "verified_counts": {
+    "absolute_and_relative_forms_per_name": 2,
+    "missing_source_rejections_without_file_creation": 48,
+    "path_names": 6,
+    "processes_per_group": 2,
+    "read_only_source_connections": 60,
+    "sigint_process_group_controls": 1,
+    "timeout_process_group_controls": 1
+  }
+}

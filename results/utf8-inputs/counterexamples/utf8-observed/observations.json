@@ -1,0 +1,50 @@
+{
+  "transport": "real TCP owner process and relay",
+  "invalid_key_json": "\"\\ud800\"",
+  "seed_prevalidation": "accepted",
+  "request_outcomes": [
+    {
+      "attempt": 0,
+      "error": "SchemaRequestPending",
+      "message": "physical schema effect unconfirmed at owner"
+    },
+    {
+      "attempt": 1,
+      "error": "SchemaRequestPending",
+      "message": "physical schema effect unconfirmed at owner"
+    },
+    {
+      "attempt": 2,
+      "error": "SchemaRequestPending",
+      "message": "physical schema effect unconfirmed at owner"
+    }
+  ],
+  "request_rows": [
+    [
+      "bad-input",
+      "{\"key\":\"\\ud800\",\"status\":1,\"value\":17}",
+      "pending",
+      null
+    ]
+  ],
+  "close_before_reopen": false,
+  "close_after_reopen": false,
+  "durable_stage_after_reopen": "closing",
+  "remaining_holds": 1,
+  "durable_effects": 0,
+  "schema_audit": [
+    {
+      "reason": "UnicodeEncodeError",
+      "status": "invalid"
+    },
+    {
+      "reason": "UnicodeEncodeError",
+      "status": "invalid"
+    },
+    {
+      "reason": "UnicodeEncodeError",
+      "status": "invalid"
+    }
+  ],
+  "counterexample_reproduced": true
+}

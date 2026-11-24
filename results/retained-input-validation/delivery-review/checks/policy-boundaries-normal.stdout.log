@@ -1,0 +1,33 @@
+{
+  "blocked_rule_witnesses": 3,
+  "compatible_vectors": 23,
+  "completed_lifecycles": 3,
+  "completed_seeds": 23,
+  "data_only_checker": true,
+  "database_snapshots": 12,
+  "frontier_members_across_completed_seeds": 44,
+  "handoff": {
+    "blocked": 2,
+    "database_snapshots": 15,
+    "final_targets_completed": 3,
+    "first_phase_targets_completed": 2,
+    "goal_steps": 3,
+    "installation_requests": 5,
+    "installed": 3,
+    "single_static_optimum": 2,
+    "status": "PASS",
+    "target_reached": true,
+    "unchanged": 0
+  },
+  "lifecycle_proposals": 36,
+  "marginal_false_positives": 22,
+  "refused_seeds": 0,
+  "rule_deletion_false_positives": {
+    "ha_gap": 4,
+    "max_lag": 3,
+    "not_newer": 9
+  },
+  "source_files": 15,
+  "status": "PASS",
+  "vectors": 45
+}

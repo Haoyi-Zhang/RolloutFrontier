@@ -1,0 +1,11 @@
+{
+  "literal_trace_events": 198,
+  "partition_completed_steps": {
+    "after": 2,
+    "before": 0
+  },
+  "read_rpcs_after": 36,
+  "read_rpcs_before": 48,
+  "scope": "Independent saved-message transition replay and terminal observations; no network or timing experiment.",
+  "status": "PASS"
+}

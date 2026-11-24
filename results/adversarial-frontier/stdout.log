@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "output": "/workspace/scratch/e34480916f53/verification/r3-integration/runs/adversarial-normal",
+  "contexts": 240,
+  "totals": {
+    "checked_products": 21228,
+    "safe_products": 2120,
+    "frontier_members": 260,
+    "covered_batch_optimum_comparisons": 240,
+    "covered_batch_proposals": 7440,
+    "exact_budget_acceptances": 240,
+    "one_less_budget_refusals": 240,
+    "zero_weight_entries": 757,
+    "mismatches": 0
+  }
+}

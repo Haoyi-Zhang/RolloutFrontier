@@ -1,0 +1,98 @@
+{
+  "normal_exit_code": 0,
+  "normal_invocation": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-m",
+      "tests.adversarial_frontier",
+      "--out",
+      "/workspace/scratch/e34480916f53/verification/r3-integration/runs/adversarial-normal"
+    ],
+    "core_source_after": {
+      "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+      "src/android_contracts.py": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+      "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+      "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+      "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+      "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+      "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+      "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae"
+    },
+    "core_source_before": {
+      "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+      "src/android_contracts.py": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+      "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+      "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+      "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+      "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+      "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+      "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae"
+    },
+    "core_source_scope": "The eight inherited src modules; each study also retains and checks its own declared source inventory.",
+    "core_source_unchanged": true,
+    "cwd": "/workspace/scratch/e34480916f53/work/artifact",
+    "elapsed_seconds": 3.232895641000141,
+    "exit_code": 0,
+    "finished_utc": "2026-11-19T03:42:31.110704+00:00",
+    "label": "adversarial-normal",
+    "started_utc": "2026-11-19T03:42:27.877828+00:00",
+    "stderr_log": "adversarial-normal.stderr.log",
+    "stdout_log": "adversarial-normal.stdout.log"
+  },
+  "optimized_exit_code": 0,
+  "optimized_invocation": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-O",
+      "-B",
+      "-m",
+      "tests.adversarial_frontier",
+      "--out",
+      "/workspace/scratch/e34480916f53/verification/r3-integration/runs/adversarial-optimized"
+    ],
+    "core_source_after": {
+      "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+      "src/android_contracts.py": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+      "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+      "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+      "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+      "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+      "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+      "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae"
+    },
+    "core_source_before": {
+      "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+      "src/android_contracts.py": "aed6b441b0982877fa595f40171cac020fb6eb267d66400e6ce4f89c78bb609b",
+      "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+      "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+      "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+      "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+      "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+      "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae"
+    },
+    "core_source_scope": "The eight inherited src modules; each study also retains and checks its own declared source inventory.",
+    "core_source_unchanged": true,
+    "cwd": "/workspace/scratch/e34480916f53/work/artifact",
+    "elapsed_seconds": 3.124205917999916,
+    "exit_code": 0,
+    "finished_utc": "2026-11-19T03:42:34.235769+00:00",
+    "label": "adversarial-optimized",
+    "started_utc": "2026-11-19T03:42:31.111578+00:00",
+    "stderr_log": "adversarial-optimized.stderr.log",
+    "stdout_log": "adversarial-optimized.stdout.log"
+  },
+  "scope": "Fresh final-source finite logical executions; no timing comparison.",
+  "semantic_results_identical": true,
+  "source_identities_match_delivered_files": true,
+  "source_sha256": {
+    "docs/ADVERSARIAL-FRONTIER-DESIGN.md": "7f4d39081d83117d0722d68a72b2caaac91767b0b79c2f262205ba5268c39055",
+    "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "tests/adversarial_frontier.py": "817dc29c9cef66efe1876276ed410a49a49d6bde007b98aa4a5b5d7a7ac6dbd1"
+  },
+  "status": "PASS",
+  "summary_sha256": "a6a6e2d9f70747a60e8f6f5328ee80b1121244b4f045fe60210e24f718596b24"
+}

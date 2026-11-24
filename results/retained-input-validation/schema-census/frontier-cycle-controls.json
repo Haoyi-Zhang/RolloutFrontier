@@ -1,0 +1,1614 @@
+[
+  {
+    "answer": {
+      "branches": [
+        {
+          "0": [
+            "accept:old-name",
+            "emit:old-name"
+          ],
+          "1": [
+            "accept:old-name",
+            "emit:old-name"
+          ],
+          "2": [
+            "accept:old-name",
+            "emit:old-name"
+          ]
+        },
+        {
+          "0": [
+            "accept:new-name",
+            "emit:old-name"
+          ],
+          "1": [
+            "accept:old-name",
+            "emit:old-name"
+          ],
+          "2": [
+            "accept:old-name",
+            "emit:new-name"
+          ]
+        },
+        {
+          "0": [
+            "accept:old-name",
+            "emit:old-name"
+          ],
+          "1": [
+            "accept:old-name",
+            "emit:new-name"
+          ],
+          "2": [
+            "accept:new-name",
+            "emit:old-name"
+          ]
+        },
+        {
+          "0": [
+            "accept:new-name",
+            "emit:old-name"
+          ],
+          "1": [
+            "accept:old-name",
+            "emit:new-name"
+          ],
+          "2": [
+            "accept:new-name",
+            "emit:new-name"
+          ]
+        },
+        {
+          "0": [
+            "accept:old-name",
+            "emit:new-name"
+          ],
+          "1": [
+            "accept:new-name",
+            "emit:old-name"
+          ],
+          "2": [
+            "accept:old-name",
+            "emit:old-name"
+          ]
+        },
+        {
+          "0": [
+            "accept:new-name",
+            "emit:new-name"
+          ],
+          "1": [
+            "accept:new-name",
+            "emit:old-name"
+          ],
+          "2": [
+            "accept:old-name",
+            "emit:new-name"
+          ]
+        },
+        {
+          "0": [
+            "accept:old-name",
+            "emit:new-name"
+          ],
+          "1": [
+            "accept:new-name",
+            "emit:new-name"
+          ],
+          "2": [
+            "accept:new-name",
+            "emit:old-name"
+          ]
+        },
+        {
+          "0": [
+            "accept:new-name",
+            "emit:new-name"
+          ],
+          "1": [
+            "accept:new-name",
+            "emit:new-name"
+          ],
+          "2": [
+            "accept:new-name",
+            "emit:new-name"
+          ]
+        }
+      ],
+      "budgets": {
+        "frontier_states_per_expansion": 250000,
+        "phase_candidates": 250000,
+        "placements": 4096
+      },
+      "catalog": {
+        "0": [
+          [
+            "accept:new-name",
+            "accept:old-name",
+            "emit:new-name",
+            "program:enum-alias:emitting"
+          ],
+          [
+            "accept:new-name",
+            "accept:old-name",
+            "emit:old-name",
+            "program:enum-alias:accepting"
+          ],
+          [
+            "accept:new-name",
+            "emit:new-name",
+            "program:enum-alias:current"
+          ],
+          [
+            "accept:old-name",
+            "emit:old-name",
+            "program:enum-alias:legacy"
+          ]
+        ],
+        "1": [
+          [
+            "accept:new-name",
+            "accept:old-name",
+            "emit:new-name",
+            "program:enum-alias:emitting"
+          ],
+          [
+            "accept:new-name",
+            "accept:old-name",
+            "emit:old-name",
+            "program:enum-alias:accepting"
+          ],
+          [
+            "accept:new-name",
+            "emit:new-name",
+            "program:enum-alias:current"
+          ],
+          [
+            "accept:old-name",
+            "emit:old-name",
+            "program:enum-alias:legacy"
+          ]
+        ],
+        "2": [
+          [
+            "accept:new-name",
+            "accept:old-name",
+            "emit:new-name",
+            "program:enum-alias:emitting"
+          ],
+          [
+            "accept:new-name",
+            "accept:old-name",
+            "emit:old-name",
+            "program:enum-alias:accepting"
+          ],
+          [
+            "accept:new-name",
+            "emit:new-name",
+            "program:enum-alias:current"
+          ],
+          [
+            "accept:old-name",
+            "emit:old-name",
+            "program:enum-alias:legacy"
+          ]
+        ]
+      },
+      "cost": {
+        "handoffs": 2,
+        "installations": 9,
+        "phases": 3
+      },
+      "initial": {
+        "0": [
+          "accept:old-name",
+          "emit:old-name",
+          "program:enum-alias:legacy"
+        ],
+        "1": [
+          "accept:old-name",
+          "emit:old-name",
+          "program:enum-alias:legacy"
+        ],
+        "2": [
+          "accept:old-name",
+          "emit:old-name",
+          "program:enum-alias:legacy"
+        ]
+      },
+      "objective": [
+        "fewest guard phases",
+        "fewest installations"
+      ],
+      "phases": [
+        {
+          "box": {
+            "0": [
+              [
+                "accept:old-name",
+                "emit:old-name"
+              ]
+            ],
+            "1": [
+              [
+                "accept:old-name",
+                "emit:old-name"
+              ]
+            ],
+            "2": [
+              [
+                "accept:old-name",
+                "emit:old-name"
+              ]
+            ]
+          },
+          "local_paths": {
+            "0": [
+              [
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:legacy"
+              ],
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:accepting"
+              ]
+            ],
+            "1": [
+              [
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:legacy"
+              ],
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:accepting"
+              ]
+            ],
+            "2": [
+              [
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:legacy"
+              ],
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:accepting"
+              ]
+            ]
+          },
+          "source": {
+            "0": [
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:legacy"
+            ],
+            "1": [
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:legacy"
+            ],
+            "2": [
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:legacy"
+            ]
+          },
+          "steps": [
+            {
+              "node": "0",
+              "support": [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:accepting"
+              ]
+            },
+            {
+              "node": "1",
+              "support": [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:accepting"
+              ]
+            },
+            {
+              "node": "2",
+              "support": [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:accepting"
+              ]
+            }
+          ],
+          "target": {
+            "0": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ],
+            "1": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ],
+            "2": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ]
+          }
+        },
+        {
+          "box": {
+            "0": [
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name"
+              ],
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name"
+              ]
+            ],
+            "1": [
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name"
+              ],
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name"
+              ]
+            ],
+            "2": [
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name"
+              ],
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name"
+              ]
+            ]
+          },
+          "local_paths": {
+            "0": [
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:accepting"
+              ],
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name",
+                "program:enum-alias:emitting"
+              ]
+            ],
+            "1": [
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:accepting"
+              ],
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name",
+                "program:enum-alias:emitting"
+              ]
+            ],
+            "2": [
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:old-name",
+                "program:enum-alias:accepting"
+              ],
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name",
+                "program:enum-alias:emitting"
+              ]
+            ]
+          },
+          "source": {
+            "0": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ],
+            "1": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ],
+            "2": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ]
+          },
+          "steps": [
+            {
+              "node": "0",
+              "support": [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name",
+                "program:enum-alias:emitting"
+              ]
+            },
+            {
+              "node": "1",
+              "support": [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name",
+                "program:enum-alias:emitting"
+              ]
+            },
+            {
+              "node": "2",
+              "support": [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name",
+                "program:enum-alias:emitting"
+              ]
+            }
+          ],
+          "target": {
+            "0": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ],
+            "1": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ],
+            "2": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ]
+          }
+        },
+        {
+          "box": {
+            "0": [
+              [
+                "accept:new-name",
+                "emit:new-name"
+              ]
+            ],
+            "1": [
+              [
+                "accept:new-name",
+                "emit:new-name"
+              ]
+            ],
+            "2": [
+              [
+                "accept:new-name",
+                "emit:new-name"
+              ]
+            ]
+          },
+          "local_paths": {
+            "0": [
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name",
+                "program:enum-alias:emitting"
+              ],
+              [
+                "accept:new-name",
+                "emit:new-name",
+                "program:enum-alias:current"
+              ]
+            ],
+            "1": [
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name",
+                "program:enum-alias:emitting"
+              ],
+              [
+                "accept:new-name",
+                "emit:new-name",
+                "program:enum-alias:current"
+              ]
+            ],
+            "2": [
+              [
+                "accept:new-name",
+                "accept:old-name",
+                "emit:new-name",
+                "program:enum-alias:emitting"
+              ],
+              [
+                "accept:new-name",
+                "emit:new-name",
+                "program:enum-alias:current"
+              ]
+            ]
+          },
+          "source": {
+            "0": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ],
+            "1": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ],
+            "2": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ]
+          },
+          "steps": [
+            {
+              "node": "0",
+              "support": [
+                "accept:new-name",
+                "emit:new-name",
+                "program:enum-alias:current"
+              ]
+            },
+            {
+              "node": "1",
+              "support": [
+                "accept:new-name",
+                "emit:new-name",
+                "program:enum-alias:current"
+              ]
+            },
+            {
+              "node": "2",
+              "support": [
+                "accept:new-name",
+                "emit:new-name",
+                "program:enum-alias:current"
+              ]
+            }
+          ],
+          "target": {
+            "0": [
+              "accept:new-name",
+              "emit:new-name",
+              "program:enum-alias:current"
+            ],
+            "1": [
+              "accept:new-name",
+              "emit:new-name",
+              "program:enum-alias:current"
+            ],
+            "2": [
+              "accept:new-name",
+              "emit:new-name",
+              "program:enum-alias:current"
+            ]
+          }
+        }
+      ],
+      "schema": "rollout-goal-plan-v1",
+      "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+      "search": {
+        "after": {
+          "cached_state_expansions": 18,
+          "catalog_placements": 64,
+          "frontier_calls": 18,
+          "frontier_search_states": 1343,
+          "phase_candidates": 174,
+          "phase_edge_budget_exhausted": false
+        },
+        "before": {
+          "cached_state_expansions": 0,
+          "catalog_placements": 64,
+          "frontier_calls": 0,
+          "frontier_search_states": 0,
+          "phase_candidates": 0,
+          "phase_edge_budget_exhausted": false
+        },
+        "query": {
+          "cached_state_expansions": 0,
+          "incumbent_pruned_states": 9,
+          "new_state_expansions": 18,
+          "settled_states": 28
+        }
+      },
+      "status": "planned",
+      "target": {
+        "0": [
+          "accept:new-name",
+          "emit:new-name",
+          "program:enum-alias:current"
+        ],
+        "1": [
+          "accept:new-name",
+          "emit:new-name",
+          "program:enum-alias:current"
+        ],
+        "2": [
+          "accept:new-name",
+          "emit:new-name",
+          "program:enum-alias:current"
+        ]
+      },
+      "transitions": {
+        "0": [
+          {
+            "source": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ],
+            "target": [
+              "accept:new-name",
+              "emit:new-name",
+              "program:enum-alias:current"
+            ]
+          },
+          {
+            "source": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ],
+            "target": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ]
+          },
+          {
+            "source": [
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:legacy"
+            ],
+            "target": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ]
+          }
+        ],
+        "1": [
+          {
+            "source": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ],
+            "target": [
+              "accept:new-name",
+              "emit:new-name",
+              "program:enum-alias:current"
+            ]
+          },
+          {
+            "source": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ],
+            "target": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ]
+          },
+          {
+            "source": [
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:legacy"
+            ],
+            "target": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "source": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ],
+            "target": [
+              "accept:new-name",
+              "emit:new-name",
+              "program:enum-alias:current"
+            ]
+          },
+          {
+            "source": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ],
+            "target": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:new-name",
+              "program:enum-alias:emitting"
+            ]
+          },
+          {
+            "source": [
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:legacy"
+            ],
+            "target": [
+              "accept:new-name",
+              "accept:old-name",
+              "emit:old-name",
+              "program:enum-alias:accepting"
+            ]
+          }
+        ]
+      }
+    },
+    "context": "enum-alias-graph-25"
+  },
+  {
+    "answer": {
+      "branches": [
+        {
+          "0": [
+            "accept:old-key",
+            "emit:old-key"
+          ],
+          "1": [
+            "accept:old-key",
+            "emit:old-key"
+          ],
+          "2": [
+            "accept:old-key",
+            "emit:old-key"
+          ]
+        },
+        {
+          "0": [
+            "accept:new-key",
+            "emit:old-key"
+          ],
+          "1": [
+            "accept:old-key",
+            "emit:old-key"
+          ],
+          "2": [
+            "accept:old-key",
+            "emit:new-key"
+          ]
+        },
+        {
+          "0": [
+            "accept:old-key",
+            "emit:old-key"
+          ],
+          "1": [
+            "accept:old-key",
+            "emit:new-key"
+          ],
+          "2": [
+            "accept:new-key",
+            "emit:old-key"
+          ]
+        },
+        {
+          "0": [
+            "accept:new-key",
+            "emit:old-key"
+          ],
+          "1": [
+            "accept:old-key",
+            "emit:new-key"
+          ],
+          "2": [
+            "accept:new-key",
+            "emit:new-key"
+          ]
+        },
+        {
+          "0": [
+            "accept:old-key",
+            "emit:new-key"
+          ],
+          "1": [
+            "accept:new-key",
+            "emit:old-key"
+          ],
+          "2": [
+            "accept:old-key",
+            "emit:old-key"
+          ]
+        },
+        {
+          "0": [
+            "accept:new-key",
+            "emit:new-key"
+          ],
+          "1": [
+            "accept:new-key",
+            "emit:old-key"
+          ],
+          "2": [
+            "accept:old-key",
+            "emit:new-key"
+          ]
+        },
+        {
+          "0": [
+            "accept:old-key",
+            "emit:new-key"
+          ],
+          "1": [
+            "accept:new-key",
+            "emit:new-key"
+          ],
+          "2": [
+            "accept:new-key",
+            "emit:old-key"
+          ]
+        },
+        {
+          "0": [
+            "accept:new-key",
+            "emit:new-key"
+          ],
+          "1": [
+            "accept:new-key",
+            "emit:new-key"
+          ],
+          "2": [
+            "accept:new-key",
+            "emit:new-key"
+          ]
+        }
+      ],
+      "budgets": {
+        "frontier_states_per_expansion": 250000,
+        "phase_candidates": 250000,
+        "placements": 4096
+      },
+      "catalog": {
+        "0": [
+          [
+            "accept:new-key",
+            "accept:old-key",
+            "emit:new-key",
+            "program:field-key:emitting"
+          ],
+          [
+            "accept:new-key",
+            "accept:old-key",
+            "emit:old-key",
+            "program:field-key:accepting"
+          ],
+          [
+            "accept:new-key",
+            "emit:new-key",
+            "program:field-key:current"
+          ],
+          [
+            "accept:old-key",
+            "emit:old-key",
+            "program:field-key:legacy"
+          ]
+        ],
+        "1": [
+          [
+            "accept:new-key",
+            "accept:old-key",
+            "emit:new-key",
+            "program:field-key:emitting"
+          ],
+          [
+            "accept:new-key",
+            "accept:old-key",
+            "emit:old-key",
+            "program:field-key:accepting"
+          ],
+          [
+            "accept:new-key",
+            "emit:new-key",
+            "program:field-key:current"
+          ],
+          [
+            "accept:old-key",
+            "emit:old-key",
+            "program:field-key:legacy"
+          ]
+        ],
+        "2": [
+          [
+            "accept:new-key",
+            "accept:old-key",
+            "emit:new-key",
+            "program:field-key:emitting"
+          ],
+          [
+            "accept:new-key",
+            "accept:old-key",
+            "emit:old-key",
+            "program:field-key:accepting"
+          ],
+          [
+            "accept:new-key",
+            "emit:new-key",
+            "program:field-key:current"
+          ],
+          [
+            "accept:old-key",
+            "emit:old-key",
+            "program:field-key:legacy"
+          ]
+        ]
+      },
+      "cost": {
+        "handoffs": 2,
+        "installations": 9,
+        "phases": 3
+      },
+      "initial": {
+        "0": [
+          "accept:old-key",
+          "emit:old-key",
+          "program:field-key:legacy"
+        ],
+        "1": [
+          "accept:old-key",
+          "emit:old-key",
+          "program:field-key:legacy"
+        ],
+        "2": [
+          "accept:old-key",
+          "emit:old-key",
+          "program:field-key:legacy"
+        ]
+      },
+      "objective": [
+        "fewest guard phases",
+        "fewest installations"
+      ],
+      "phases": [
+        {
+          "box": {
+            "0": [
+              [
+                "accept:old-key",
+                "emit:old-key"
+              ]
+            ],
+            "1": [
+              [
+                "accept:old-key",
+                "emit:old-key"
+              ]
+            ],
+            "2": [
+              [
+                "accept:old-key",
+                "emit:old-key"
+              ]
+            ]
+          },
+          "local_paths": {
+            "0": [
+              [
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:legacy"
+              ],
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:accepting"
+              ]
+            ],
+            "1": [
+              [
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:legacy"
+              ],
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:accepting"
+              ]
+            ],
+            "2": [
+              [
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:legacy"
+              ],
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:accepting"
+              ]
+            ]
+          },
+          "source": {
+            "0": [
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:legacy"
+            ],
+            "1": [
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:legacy"
+            ],
+            "2": [
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:legacy"
+            ]
+          },
+          "steps": [
+            {
+              "node": "0",
+              "support": [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:accepting"
+              ]
+            },
+            {
+              "node": "1",
+              "support": [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:accepting"
+              ]
+            },
+            {
+              "node": "2",
+              "support": [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:accepting"
+              ]
+            }
+          ],
+          "target": {
+            "0": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ],
+            "1": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ],
+            "2": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ]
+          }
+        },
+        {
+          "box": {
+            "0": [
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key"
+              ],
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key"
+              ]
+            ],
+            "1": [
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key"
+              ],
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key"
+              ]
+            ],
+            "2": [
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key"
+              ],
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key"
+              ]
+            ]
+          },
+          "local_paths": {
+            "0": [
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:accepting"
+              ],
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key",
+                "program:field-key:emitting"
+              ]
+            ],
+            "1": [
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:accepting"
+              ],
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key",
+                "program:field-key:emitting"
+              ]
+            ],
+            "2": [
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:old-key",
+                "program:field-key:accepting"
+              ],
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key",
+                "program:field-key:emitting"
+              ]
+            ]
+          },
+          "source": {
+            "0": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ],
+            "1": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ],
+            "2": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ]
+          },
+          "steps": [
+            {
+              "node": "0",
+              "support": [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key",
+                "program:field-key:emitting"
+              ]
+            },
+            {
+              "node": "1",
+              "support": [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key",
+                "program:field-key:emitting"
+              ]
+            },
+            {
+              "node": "2",
+              "support": [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key",
+                "program:field-key:emitting"
+              ]
+            }
+          ],
+          "target": {
+            "0": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ],
+            "1": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ],
+            "2": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ]
+          }
+        },
+        {
+          "box": {
+            "0": [
+              [
+                "accept:new-key",
+                "emit:new-key"
+              ]
+            ],
+            "1": [
+              [
+                "accept:new-key",
+                "emit:new-key"
+              ]
+            ],
+            "2": [
+              [
+                "accept:new-key",
+                "emit:new-key"
+              ]
+            ]
+          },
+          "local_paths": {
+            "0": [
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key",
+                "program:field-key:emitting"
+              ],
+              [
+                "accept:new-key",
+                "emit:new-key",
+                "program:field-key:current"
+              ]
+            ],
+            "1": [
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key",
+                "program:field-key:emitting"
+              ],
+              [
+                "accept:new-key",
+                "emit:new-key",
+                "program:field-key:current"
+              ]
+            ],
+            "2": [
+              [
+                "accept:new-key",
+                "accept:old-key",
+                "emit:new-key",
+                "program:field-key:emitting"
+              ],
+              [
+                "accept:new-key",
+                "emit:new-key",
+                "program:field-key:current"
+              ]
+            ]
+          },
+          "source": {
+            "0": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ],
+            "1": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ],
+            "2": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ]
+          },
+          "steps": [
+            {
+              "node": "0",
+              "support": [
+                "accept:new-key",
+                "emit:new-key",
+                "program:field-key:current"
+              ]
+            },
+            {
+              "node": "1",
+              "support": [
+                "accept:new-key",
+                "emit:new-key",
+                "program:field-key:current"
+              ]
+            },
+            {
+              "node": "2",
+              "support": [
+                "accept:new-key",
+                "emit:new-key",
+                "program:field-key:current"
+              ]
+            }
+          ],
+          "target": {
+            "0": [
+              "accept:new-key",
+              "emit:new-key",
+              "program:field-key:current"
+            ],
+            "1": [
+              "accept:new-key",
+              "emit:new-key",
+              "program:field-key:current"
+            ],
+            "2": [
+              "accept:new-key",
+              "emit:new-key",
+              "program:field-key:current"
+            ]
+          }
+        }
+      ],
+      "schema": "rollout-goal-plan-v1",
+      "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+      "search": {
+        "after": {
+          "cached_state_expansions": 18,
+          "catalog_placements": 64,
+          "frontier_calls": 18,
+          "frontier_search_states": 1343,
+          "phase_candidates": 174,
+          "phase_edge_budget_exhausted": false
+        },
+        "before": {
+          "cached_state_expansions": 0,
+          "catalog_placements": 64,
+          "frontier_calls": 0,
+          "frontier_search_states": 0,
+          "phase_candidates": 0,
+          "phase_edge_budget_exhausted": false
+        },
+        "query": {
+          "cached_state_expansions": 0,
+          "incumbent_pruned_states": 9,
+          "new_state_expansions": 18,
+          "settled_states": 28
+        }
+      },
+      "status": "planned",
+      "target": {
+        "0": [
+          "accept:new-key",
+          "emit:new-key",
+          "program:field-key:current"
+        ],
+        "1": [
+          "accept:new-key",
+          "emit:new-key",
+          "program:field-key:current"
+        ],
+        "2": [
+          "accept:new-key",
+          "emit:new-key",
+          "program:field-key:current"
+        ]
+      },
+      "transitions": {
+        "0": [
+          {
+            "source": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ],
+            "target": [
+              "accept:new-key",
+              "emit:new-key",
+              "program:field-key:current"
+            ]
+          },
+          {
+            "source": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ],
+            "target": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ]
+          },
+          {
+            "source": [
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:legacy"
+            ],
+            "target": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ]
+          }
+        ],
+        "1": [
+          {
+            "source": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ],
+            "target": [
+              "accept:new-key",
+              "emit:new-key",
+              "program:field-key:current"
+            ]
+          },
+          {
+            "source": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ],
+            "target": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ]
+          },
+          {
+            "source": [
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:legacy"
+            ],
+            "target": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "source": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ],
+            "target": [
+              "accept:new-key",
+              "emit:new-key",
+              "program:field-key:current"
+            ]
+          },
+          {
+            "source": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ],
+            "target": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:new-key",
+              "program:field-key:emitting"
+            ]
+          },
+          {
+            "source": [
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:legacy"
+            ],
+            "target": [
+              "accept:new-key",
+              "accept:old-key",
+              "emit:old-key",
+              "program:field-key:accepting"
+            ]
+          }
+        ]
+      }
+    },
+    "context": "field-key-graph-25"
+  }
+]

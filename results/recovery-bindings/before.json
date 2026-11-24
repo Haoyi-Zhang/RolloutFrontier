@@ -1,0 +1,5 @@
+{
+  "exit_code": 1,
+  "source_sha256": "4ccd3876d300f909957b9352e030bd920a018752e000f4d25e00664bf6cb2122",
+  "scope": "Durable recovery type-alias regression before repair; database mutation is an input-validation control."
+}

@@ -1,0 +1,79 @@
+{
+  "best_of_six": {
+    "gaps": 0,
+    "phases": 708,
+    "queries": 428
+  },
+  "exact_total_phases": 708,
+  "fallback_queries": 1296,
+  "hull_counterexample": [
+    0,
+    1,
+    3
+  ],
+  "priority_orders": [
+    {
+      "gaps": 24,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "phases": 732,
+      "queries": 428
+    },
+    {
+      "gaps": 8,
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "phases": 716,
+      "queries": 428
+    },
+    {
+      "gaps": 16,
+      "order": [
+        1,
+        0,
+        2
+      ],
+      "phases": 724,
+      "queries": 428
+    },
+    {
+      "gaps": 24,
+      "order": [
+        1,
+        2,
+        0
+      ],
+      "phases": 732,
+      "queries": 428
+    },
+    {
+      "gaps": 8,
+      "order": [
+        2,
+        0,
+        1
+      ],
+      "phases": 716,
+      "queries": 428
+    },
+    {
+      "gaps": 24,
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "phases": 732,
+      "queries": 428
+    }
+  ],
+  "queries": 1296,
+  "status": "pass"
+}
+

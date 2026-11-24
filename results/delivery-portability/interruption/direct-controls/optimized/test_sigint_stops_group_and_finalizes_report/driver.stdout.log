@@ -1,0 +1,2 @@
+Checking blocking-control (optimized)
+{"status": "INCOMPLETE", "counts": {"INTERRUPTED": 1, "NOT_RUN": 1}, "report": "/workspace/scratch/e34480916f53/finalization/review/reproduction/interruption-controls-optimized/test_sigint_stops_group_and_finalizes_report/report/report.json"}

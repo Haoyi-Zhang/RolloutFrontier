@@ -1,0 +1,19 @@
+{
+  "bibliography_entries": 44,
+  "citation_occurrences": 52,
+  "reading_depths": {
+    "abstract": 1,
+    "abstract+metadata": 25,
+    "abstract_or_overview": 1,
+    "body": 10,
+    "full_text_passages": 3,
+    "official_documentation": 1,
+    "official_policy": 2,
+    "publisher_preview": 1
+  },
+  "scope": "offline consistency of claim-level source records; not a live full-text re-verification",
+  "source_rows": 44,
+  "unique_cited": 44,
+  "unknown": 0,
+  "unused": 0
+}

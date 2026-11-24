@@ -1,0 +1,902 @@
+{
+  "cut": "new phase committed; old phase not retired",
+  "origin_states": {
+    "0": {
+      "attempts": {
+        "1": {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "allows.33",
+                  "allows.34",
+                  "allows.35",
+                  "allows.36",
+                  "ha.35_36",
+                  "ha.36_37"
+                ],
+                [
+                  "allows.34",
+                  "allows.35",
+                  "allows.36",
+                  "allows.37",
+                  "ha.36_37"
+                ]
+              ],
+              "1": [
+                [
+                  "allows.33",
+                  "allows.34",
+                  "allows.35",
+                  "allows.36",
+                  "ha.35_36",
+                  "ha.36_37"
+                ],
+                [
+                  "allows.34",
+                  "allows.35",
+                  "allows.36",
+                  "allows.37",
+                  "ha.36_37"
+                ]
+              ],
+              "2": [
+                [
+                  "client.34"
+                ],
+                [
+                  "client.35"
+                ],
+                [
+                  "client.36"
+                ]
+              ]
+            },
+            "manifest": "kubernetes-policy-handoff",
+            "mode": "envelope",
+            "origin": 0,
+            "receipts": [
+              {
+                "manifest": "kubernetes-policy-handoff",
+                "node": 0,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "allows.33",
+                    "allows.34",
+                    "allows.35",
+                    "allows.36",
+                    "ha.35_36",
+                    "ha.36_37"
+                  ],
+                  [
+                    "allows.34",
+                    "allows.35",
+                    "allows.36",
+                    "allows.37",
+                    "ha.36_37"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "kubernetes-policy-handoff",
+                "node": 1,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "allows.33",
+                    "allows.34",
+                    "allows.35",
+                    "allows.36",
+                    "ha.35_36",
+                    "ha.36_37"
+                  ],
+                  [
+                    "allows.34",
+                    "allows.35",
+                    "allows.36",
+                    "allows.37",
+                    "ha.36_37"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "kubernetes-policy-handoff",
+                "node": 2,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "client.34"
+                  ],
+                  [
+                    "client.35"
+                  ],
+                  [
+                    "client.36"
+                  ]
+                ],
+                "origin": 0,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1,
+              "2": 1
+            }
+          },
+          "manifest": "kubernetes-policy-handoff",
+          "sequences": {
+            "0": 1,
+            "1": 1,
+            "2": 1
+          },
+          "status": "committed"
+        }
+      },
+      "next": [
+        1,
+        1,
+        1
+      ],
+      "node_count": 3,
+      "origin": 0,
+      "policy": "predicate",
+      "serial": 1,
+      "window": 8
+    },
+    "1": {
+      "attempts": {
+        "1": {
+          "certificate": {
+            "box": {
+              "0": [
+                [
+                  "allows.34",
+                  "allows.35",
+                  "allows.36",
+                  "allows.37",
+                  "ha.36_37"
+                ]
+              ],
+              "1": [
+                [
+                  "allows.34",
+                  "allows.35",
+                  "allows.36",
+                  "allows.37",
+                  "ha.36_37"
+                ]
+              ],
+              "2": [
+                [
+                  "client.34"
+                ],
+                [
+                  "client.35"
+                ],
+                [
+                  "client.36"
+                ],
+                [
+                  "client.37"
+                ]
+              ]
+            },
+            "manifest": "kubernetes-policy-handoff",
+            "mode": "envelope",
+            "origin": 1,
+            "receipts": [
+              {
+                "manifest": "kubernetes-policy-handoff",
+                "node": 0,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "allows.34",
+                    "allows.35",
+                    "allows.36",
+                    "allows.37",
+                    "ha.36_37"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "kubernetes-policy-handoff",
+                "node": 1,
+                "observed_generation": 1,
+                "options": [
+                  [
+                    "allows.34",
+                    "allows.35",
+                    "allows.36",
+                    "allows.37",
+                    "ha.36_37"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              },
+              {
+                "manifest": "kubernetes-policy-handoff",
+                "node": 2,
+                "observed_generation": 0,
+                "options": [
+                  [
+                    "client.34"
+                  ],
+                  [
+                    "client.35"
+                  ],
+                  [
+                    "client.36"
+                  ],
+                  [
+                    "client.37"
+                  ]
+                ],
+                "origin": 1,
+                "requires": [],
+                "sequence": 1,
+                "status": "held"
+              }
+            ],
+            "sequences": {
+              "0": 1,
+              "1": 1,
+              "2": 1
+            }
+          },
+          "manifest": "kubernetes-policy-handoff",
+          "sequences": {
+            "0": 1,
+            "1": 1,
+            "2": 1
+          },
+          "status": "committed"
+        }
+      },
+      "next": [
+        1,
+        1,
+        1
+      ],
+      "node_count": 3,
+      "origin": 1,
+      "policy": "predicate",
+      "serial": 1,
+      "window": 8
+    }
+  },
+  "owner_states": {
+    "0": {
+      "catalog": {
+        "0": {
+          "generation": 1,
+          "node": 0,
+          "support": [
+            "allows.34",
+            "allows.35",
+            "allows.36",
+            "allows.37",
+            "ha.36_37"
+          ]
+        }
+      },
+      "floor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "generation": 1,
+      "node": 0,
+      "policy": "predicate",
+      "slots": {
+        "0:1": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 0,
+          "observed_generation": 0,
+          "options": [
+            [
+              "allows.33",
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "ha.35_36",
+              "ha.36_37"
+            ],
+            [
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "allows.37",
+              "ha.36_37"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        },
+        "1:1": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 0,
+          "observed_generation": 1,
+          "options": [
+            [
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "allows.37",
+              "ha.36_37"
+            ]
+          ],
+          "origin": 1,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        }
+      },
+      "support": [
+        "allows.34",
+        "allows.35",
+        "allows.36",
+        "allows.37",
+        "ha.36_37"
+      ],
+      "window": 8
+    },
+    "1": {
+      "catalog": {
+        "1": {
+          "generation": 1,
+          "node": 1,
+          "support": [
+            "allows.34",
+            "allows.35",
+            "allows.36",
+            "allows.37",
+            "ha.36_37"
+          ]
+        }
+      },
+      "floor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "generation": 1,
+      "node": 1,
+      "policy": "predicate",
+      "slots": {
+        "0:1": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 1,
+          "observed_generation": 0,
+          "options": [
+            [
+              "allows.33",
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "ha.35_36",
+              "ha.36_37"
+            ],
+            [
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "allows.37",
+              "ha.36_37"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        },
+        "1:1": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 1,
+          "observed_generation": 1,
+          "options": [
+            [
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "allows.37",
+              "ha.36_37"
+            ]
+          ],
+          "origin": 1,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        }
+      },
+      "support": [
+        "allows.34",
+        "allows.35",
+        "allows.36",
+        "allows.37",
+        "ha.36_37"
+      ],
+      "window": 8
+    },
+    "2": {
+      "catalog": {
+        "2": {
+          "generation": 0,
+          "node": 2,
+          "support": [
+            "client.36"
+          ]
+        }
+      },
+      "floor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "generation": 0,
+      "node": 2,
+      "policy": "predicate",
+      "slots": {
+        "0:1": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 2,
+          "observed_generation": 0,
+          "options": [
+            [
+              "client.34"
+            ],
+            [
+              "client.35"
+            ],
+            [
+              "client.36"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        },
+        "1:1": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 2,
+          "observed_generation": 0,
+          "options": [
+            [
+              "client.34"
+            ],
+            [
+              "client.35"
+            ],
+            [
+              "client.36"
+            ],
+            [
+              "client.37"
+            ]
+          ],
+          "origin": 1,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        }
+      },
+      "support": [
+        "client.36"
+      ],
+      "window": 8
+    }
+  },
+  "rpc_trace": [
+    {
+      "bytes": 540,
+      "event": "rpc",
+      "request": {
+        "manifest": "kubernetes-policy-handoff",
+        "op": "prepare",
+        "options": [
+          [
+            "allows.33",
+            "allows.34",
+            "allows.35",
+            "allows.36",
+            "ha.35_36",
+            "ha.36_37"
+          ],
+          [
+            "allows.34",
+            "allows.35",
+            "allows.36",
+            "allows.37",
+            "ha.36_37"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "response": {
+        "receipt": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 0,
+          "observed_generation": 0,
+          "options": [
+            [
+              "allows.33",
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "ha.35_36",
+              "ha.36_37"
+            ],
+            [
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "allows.37",
+              "ha.36_37"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        },
+        "status": "held"
+      },
+      "source": 0,
+      "target": 0,
+      "tick": 1,
+      "wall_ns": 2256381
+    },
+    {
+      "bytes": 540,
+      "event": "rpc",
+      "request": {
+        "manifest": "kubernetes-policy-handoff",
+        "op": "prepare",
+        "options": [
+          [
+            "allows.33",
+            "allows.34",
+            "allows.35",
+            "allows.36",
+            "ha.35_36",
+            "ha.36_37"
+          ],
+          [
+            "allows.34",
+            "allows.35",
+            "allows.36",
+            "allows.37",
+            "ha.36_37"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "response": {
+        "receipt": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 1,
+          "observed_generation": 0,
+          "options": [
+            [
+              "allows.33",
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "ha.35_36",
+              "ha.36_37"
+            ],
+            [
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "allows.37",
+              "ha.36_37"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        },
+        "status": "held"
+      },
+      "source": 0,
+      "target": 1,
+      "tick": 2,
+      "wall_ns": 1771071
+    },
+    {
+      "bytes": 358,
+      "event": "rpc",
+      "request": {
+        "manifest": "kubernetes-policy-handoff",
+        "op": "prepare",
+        "options": [
+          [
+            "client.34"
+          ],
+          [
+            "client.35"
+          ],
+          [
+            "client.36"
+          ]
+        ],
+        "origin": 0,
+        "requires": [],
+        "sequence": 1
+      },
+      "response": {
+        "receipt": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 2,
+          "observed_generation": 0,
+          "options": [
+            [
+              "client.34"
+            ],
+            [
+              "client.35"
+            ],
+            [
+              "client.36"
+            ]
+          ],
+          "origin": 0,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        },
+        "status": "held"
+      },
+      "source": 0,
+      "target": 2,
+      "tick": 3,
+      "wall_ns": 1587255
+    },
+    {
+      "bytes": 219,
+      "event": "rpc",
+      "request": {
+        "op": "install",
+        "support": [
+          "allows.34",
+          "allows.35",
+          "allows.36",
+          "allows.37",
+          "ha.36_37"
+        ]
+      },
+      "response": {
+        "observed": {
+          "generation": 1,
+          "node": 0,
+          "support": [
+            "allows.34",
+            "allows.35",
+            "allows.36",
+            "allows.37",
+            "ha.36_37"
+          ]
+        },
+        "status": "installed"
+      },
+      "source": 0,
+      "target": 0,
+      "tick": 4,
+      "wall_ns": 1219633
+    },
+    {
+      "bytes": 219,
+      "event": "rpc",
+      "request": {
+        "op": "install",
+        "support": [
+          "allows.34",
+          "allows.35",
+          "allows.36",
+          "allows.37",
+          "ha.36_37"
+        ]
+      },
+      "response": {
+        "observed": {
+          "generation": 1,
+          "node": 1,
+          "support": [
+            "allows.34",
+            "allows.35",
+            "allows.36",
+            "allows.37",
+            "ha.36_37"
+          ]
+        },
+        "status": "installed"
+      },
+      "source": 0,
+      "target": 1,
+      "tick": 5,
+      "wall_ns": 1264429
+    },
+    {
+      "bytes": 396,
+      "event": "rpc",
+      "request": {
+        "manifest": "kubernetes-policy-handoff",
+        "op": "prepare",
+        "options": [
+          [
+            "allows.34",
+            "allows.35",
+            "allows.36",
+            "allows.37",
+            "ha.36_37"
+          ]
+        ],
+        "origin": 1,
+        "requires": [],
+        "sequence": 1
+      },
+      "response": {
+        "receipt": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 0,
+          "observed_generation": 1,
+          "options": [
+            [
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "allows.37",
+              "ha.36_37"
+            ]
+          ],
+          "origin": 1,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        },
+        "status": "held"
+      },
+      "source": 1,
+      "target": 0,
+      "tick": 6,
+      "wall_ns": 1822889
+    },
+    {
+      "bytes": 396,
+      "event": "rpc",
+      "request": {
+        "manifest": "kubernetes-policy-handoff",
+        "op": "prepare",
+        "options": [
+          [
+            "allows.34",
+            "allows.35",
+            "allows.36",
+            "allows.37",
+            "ha.36_37"
+          ]
+        ],
+        "origin": 1,
+        "requires": [],
+        "sequence": 1
+      },
+      "response": {
+        "receipt": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 1,
+          "observed_generation": 1,
+          "options": [
+            [
+              "allows.34",
+              "allows.35",
+              "allows.36",
+              "allows.37",
+              "ha.36_37"
+            ]
+          ],
+          "origin": 1,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        },
+        "status": "held"
+      },
+      "source": 1,
+      "target": 1,
+      "tick": 7,
+      "wall_ns": 1341415
+    },
+    {
+      "bytes": 386,
+      "event": "rpc",
+      "request": {
+        "manifest": "kubernetes-policy-handoff",
+        "op": "prepare",
+        "options": [
+          [
+            "client.34"
+          ],
+          [
+            "client.35"
+          ],
+          [
+            "client.36"
+          ],
+          [
+            "client.37"
+          ]
+        ],
+        "origin": 1,
+        "requires": [],
+        "sequence": 1
+      },
+      "response": {
+        "receipt": {
+          "manifest": "kubernetes-policy-handoff",
+          "node": 2,
+          "observed_generation": 0,
+          "options": [
+            [
+              "client.34"
+            ],
+            [
+              "client.35"
+            ],
+            [
+              "client.36"
+            ],
+            [
+              "client.37"
+            ]
+          ],
+          "origin": 1,
+          "requires": [],
+          "sequence": 1,
+          "status": "held"
+        },
+        "status": "held"
+      },
+      "source": 1,
+      "target": 2,
+      "tick": 8,
+      "wall_ns": 1385732
+    }
+  ]
+}

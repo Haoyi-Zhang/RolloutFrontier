@@ -1,0 +1,90 @@
+{
+  "actual_emitted_wire_records": 10,
+  "actual_emitter_calls": 13,
+  "actual_parser_matrix_calls": 20,
+  "additional_parser_event_witness_calls": 2,
+  "all_compatible_source_target_pairs_covered": true,
+  "contexts": 56,
+  "contexts_not_min_closed": 56,
+  "corruption_controls": [
+    {
+      "name": "old parser falsely accepts new field",
+      "rejected": true
+    },
+    {
+      "name": "new field loses application value",
+      "rejected": true
+    },
+    {
+      "name": "prepared descriptor is unchanged",
+      "rejected": true
+    },
+    {
+      "name": "removed alternative reader",
+      "rejected": true
+    },
+    {
+      "name": "false non-min-closure witness",
+      "rejected": true
+    },
+    {
+      "name": "changed exact optimum",
+      "rejected": true
+    },
+    {
+      "name": "missing physical installation",
+      "rejected": true
+    },
+    {
+      "name": "unsafe positive guard",
+      "rejected": true
+    },
+    {
+      "name": "changed OR-round witness",
+      "rejected": true
+    },
+    {
+      "name": "changed selected-reader optimum",
+      "rejected": true
+    },
+    {
+      "name": "forward deadlock marked reachable",
+      "rejected": true
+    },
+    {
+      "name": "missing endpoint query",
+      "rejected": true
+    },
+    {
+      "name": "duplicated endpoint query",
+      "rejected": true
+    }
+  ],
+  "counts": {
+    "chosen_graphs": 14562,
+    "direction_refusals": 18142,
+    "forward_obstructions": 22,
+    "forward_queries": 8595,
+    "noops": 1205,
+    "queries": 26737,
+    "reachable_changes": 7368,
+    "unreachable": 18164
+  },
+  "every_context_max_closed": true,
+  "forward_phase_counts": {
+    "0": 1205,
+    "1": 5822,
+    "2": 1501,
+    "3": 45,
+    "unreachable": 22
+  },
+  "full_migrations": {
+    "2 phases": 52,
+    "3 phases": 3,
+    "unreachable": 1
+  },
+  "or_fixed_point_equals_literal_and_best_selected_dag": true,
+  "planning_compared_to_actual_codec_derived_relations": true,
+  "production_planner_queries": 26737,
+  "status": "PASS"
+}

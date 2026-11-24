@@ -1,0 +1,161 @@
+{
+  "cases": 24,
+  "design": [
+    [
+      "predicate",
+      "commit",
+      "none",
+      false
+    ],
+    [
+      "predicate",
+      "commit",
+      "none",
+      true
+    ],
+    [
+      "predicate",
+      "commit",
+      "endpoint",
+      false
+    ],
+    [
+      "predicate",
+      "commit",
+      "endpoint",
+      true
+    ],
+    [
+      "predicate",
+      "commit",
+      "coordinator",
+      false
+    ],
+    [
+      "predicate",
+      "commit",
+      "coordinator",
+      true
+    ],
+    [
+      "predicate",
+      "cancel",
+      "none",
+      false
+    ],
+    [
+      "predicate",
+      "cancel",
+      "none",
+      true
+    ],
+    [
+      "predicate",
+      "cancel",
+      "endpoint",
+      false
+    ],
+    [
+      "predicate",
+      "cancel",
+      "endpoint",
+      true
+    ],
+    [
+      "predicate",
+      "cancel",
+      "coordinator",
+      false
+    ],
+    [
+      "predicate",
+      "cancel",
+      "coordinator",
+      true
+    ],
+    [
+      "epoch",
+      "commit",
+      "none",
+      false
+    ],
+    [
+      "epoch",
+      "commit",
+      "none",
+      true
+    ],
+    [
+      "epoch",
+      "commit",
+      "endpoint",
+      false
+    ],
+    [
+      "epoch",
+      "commit",
+      "endpoint",
+      true
+    ],
+    [
+      "epoch",
+      "commit",
+      "coordinator",
+      false
+    ],
+    [
+      "epoch",
+      "commit",
+      "coordinator",
+      true
+    ],
+    [
+      "epoch",
+      "cancel",
+      "none",
+      false
+    ],
+    [
+      "epoch",
+      "cancel",
+      "none",
+      true
+    ],
+    [
+      "epoch",
+      "cancel",
+      "endpoint",
+      false
+    ],
+    [
+      "epoch",
+      "cancel",
+      "endpoint",
+      true
+    ],
+    [
+      "epoch",
+      "cancel",
+      "coordinator",
+      false
+    ],
+    [
+      "epoch",
+      "cancel",
+      "coordinator",
+      true
+    ]
+  ],
+  "detached_callbacks_not_covered": true,
+  "maximum_cases": 24,
+  "no_external_service": true,
+  "no_new_timing_campaign": true,
+  "same_host_process_and_SQLite_scope": true,
+  "source_bindings": {
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/effect_ledger.py": "6f88966c8db453a11f075a267b45d44994879e5fc71595e0734130388bdd5e3b",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+    "tests/effect_drain_study.py": "a98b770b7eb88f8e9b951aeff07b84e82ec56b0a56f12c9d6c1a66e3758accff"
+  },
+  "wall_cap_seconds": 120
+}

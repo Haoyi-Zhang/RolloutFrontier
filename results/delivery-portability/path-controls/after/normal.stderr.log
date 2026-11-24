@@ -1,0 +1,7 @@
+test_missing_database_is_rejected_without_creating_files (tests.test_sqlite_paths.SQLitePathTests.test_missing_database_is_rejected_without_creating_files) ... ok
+test_readers_open_literal_database_and_remain_read_only (tests.test_sqlite_paths.SQLitePathTests.test_readers_open_literal_database_and_remain_read_only) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.070s
+
+OK

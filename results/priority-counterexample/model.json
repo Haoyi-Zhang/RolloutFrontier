@@ -1,0 +1,289 @@
+{
+  "catalog": {
+    "0": [
+      [
+        "identity_0_0",
+        "row_0"
+      ],
+      [
+        "identity_0_1",
+        "row_1"
+      ],
+      [
+        "identity_0_2",
+        "row_2"
+      ],
+      [
+        "identity_0_3",
+        "row_3"
+      ],
+      [
+        "identity_0_4",
+        "row_4"
+      ]
+    ],
+    "1": [
+      [
+        "column_for_0",
+        "column_for_1",
+        "column_for_2",
+        "identity_1_0"
+      ],
+      [
+        "column_for_0",
+        "column_for_1",
+        "column_for_2",
+        "column_for_3",
+        "identity_1_1"
+      ],
+      [
+        "column_for_0",
+        "column_for_1",
+        "column_for_2",
+        "column_for_3",
+        "identity_1_2"
+      ],
+      [
+        "column_for_0",
+        "column_for_1",
+        "column_for_2",
+        "column_for_3",
+        "identity_1_3"
+      ],
+      [
+        "column_for_0",
+        "column_for_1",
+        "column_for_2",
+        "column_for_3",
+        "column_for_4",
+        "identity_1_4"
+      ],
+      [
+        "column_for_1",
+        "column_for_2",
+        "column_for_3",
+        "column_for_4",
+        "identity_1_5"
+      ],
+      [
+        "column_for_2",
+        "column_for_3",
+        "column_for_4",
+        "identity_1_6"
+      ]
+    ]
+  },
+  "factors": [
+    {
+      "branches": [
+        {
+          "0": [
+            "row_0"
+          ],
+          "1": [
+            "column_for_0"
+          ]
+        },
+        {
+          "0": [
+            "row_1"
+          ],
+          "1": [
+            "column_for_1"
+          ]
+        },
+        {
+          "0": [
+            "row_2"
+          ],
+          "1": [
+            "column_for_2"
+          ]
+        },
+        {
+          "0": [
+            "row_3"
+          ],
+          "1": [
+            "column_for_3"
+          ]
+        },
+        {
+          "0": [
+            "row_4"
+          ],
+          "1": [
+            "column_for_4"
+          ]
+        }
+      ],
+      "id": "threshold-dependencies"
+    }
+  ],
+  "initial": {
+    "0": [
+      "identity_0_0",
+      "row_0"
+    ],
+    "1": [
+      "column_for_0",
+      "column_for_1",
+      "column_for_2",
+      "identity_1_0"
+    ]
+  },
+  "target": {
+    "0": [
+      "identity_0_4",
+      "row_4"
+    ],
+    "1": [
+      "column_for_2",
+      "column_for_3",
+      "column_for_4",
+      "identity_1_6"
+    ]
+  },
+  "transitions": {
+    "0": [
+      {
+        "source": [
+          "identity_0_0",
+          "row_0"
+        ],
+        "target": [
+          "identity_0_1",
+          "row_1"
+        ]
+      },
+      {
+        "source": [
+          "identity_0_1",
+          "row_1"
+        ],
+        "target": [
+          "identity_0_2",
+          "row_2"
+        ]
+      },
+      {
+        "source": [
+          "identity_0_2",
+          "row_2"
+        ],
+        "target": [
+          "identity_0_3",
+          "row_3"
+        ]
+      },
+      {
+        "source": [
+          "identity_0_3",
+          "row_3"
+        ],
+        "target": [
+          "identity_0_4",
+          "row_4"
+        ]
+      }
+    ],
+    "1": [
+      {
+        "source": [
+          "column_for_0",
+          "column_for_1",
+          "column_for_2",
+          "identity_1_0"
+        ],
+        "target": [
+          "column_for_0",
+          "column_for_1",
+          "column_for_2",
+          "column_for_3",
+          "identity_1_1"
+        ]
+      },
+      {
+        "source": [
+          "column_for_0",
+          "column_for_1",
+          "column_for_2",
+          "column_for_3",
+          "identity_1_1"
+        ],
+        "target": [
+          "column_for_0",
+          "column_for_1",
+          "column_for_2",
+          "column_for_3",
+          "identity_1_2"
+        ]
+      },
+      {
+        "source": [
+          "column_for_0",
+          "column_for_1",
+          "column_for_2",
+          "column_for_3",
+          "identity_1_2"
+        ],
+        "target": [
+          "column_for_0",
+          "column_for_1",
+          "column_for_2",
+          "column_for_3",
+          "identity_1_3"
+        ]
+      },
+      {
+        "source": [
+          "column_for_0",
+          "column_for_1",
+          "column_for_2",
+          "column_for_3",
+          "identity_1_3"
+        ],
+        "target": [
+          "column_for_0",
+          "column_for_1",
+          "column_for_2",
+          "column_for_3",
+          "column_for_4",
+          "identity_1_4"
+        ]
+      },
+      {
+        "source": [
+          "column_for_0",
+          "column_for_1",
+          "column_for_2",
+          "column_for_3",
+          "column_for_4",
+          "identity_1_4"
+        ],
+        "target": [
+          "column_for_1",
+          "column_for_2",
+          "column_for_3",
+          "column_for_4",
+          "identity_1_5"
+        ]
+      },
+      {
+        "source": [
+          "column_for_1",
+          "column_for_2",
+          "column_for_3",
+          "column_for_4",
+          "identity_1_5"
+        ],
+        "target": [
+          "column_for_2",
+          "column_for_3",
+          "column_for_4",
+          "identity_1_6"
+        ]
+      }
+    ]
+  }
+}

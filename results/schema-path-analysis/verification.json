@@ -1,0 +1,9 @@
+{
+  "analyzer_matches_retained_source": true,
+  "application_queries": 186174,
+  "corruption_controls_rejected": 6,
+  "finite_queries": 7835,
+  "input_files": 8,
+  "normal_and_optimized_outputs_identical": true,
+  "status": "PASS"
+}

@@ -1,0 +1,224 @@
+{
+  "cohorts": [
+    {
+      "preparation_cpu_seconds": 7.2217e-05,
+      "query_cpu_seconds": 0.004001795,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004074012
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.004084108,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004084108
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.003910519,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003910519
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.003990228,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003990228
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.0
+    },
+    {
+      "preparation_cpu_seconds": 0.004107162,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004107162
+    },
+    {
+      "preparation_cpu_seconds": 0.003910479,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003910479
+    },
+    {
+      "preparation_cpu_seconds": 0.003970809,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003970809
+    },
+    {
+      "preparation_cpu_seconds": 0.004002456,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004002456
+    },
+    {
+      "preparation_cpu_seconds": 0.00399893,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.00399893
+    },
+    {
+      "preparation_cpu_seconds": 0.003998941,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003998941
+    },
+    {
+      "preparation_cpu_seconds": 0.004000012,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004000012
+    },
+    {
+      "preparation_cpu_seconds": 0.003996027,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003996027
+    },
+    {
+      "preparation_cpu_seconds": 0.004000283,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004000283
+    },
+    {
+      "preparation_cpu_seconds": 0.00408607,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.00408607
+    },
+    {
+      "preparation_cpu_seconds": 0.003910309,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003910309
+    },
+    {
+      "preparation_cpu_seconds": 0.003999461,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003999461
+    },
+    {
+      "preparation_cpu_seconds": 0.004012581,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004012581
+    },
+    {
+      "preparation_cpu_seconds": 0.003985301,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003985301
+    },
+    {
+      "preparation_cpu_seconds": 0.004003277,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004003277
+    },
+    {
+      "preparation_cpu_seconds": 0.003996577,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003996577
+    },
+    {
+      "preparation_cpu_seconds": 0.004000133,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004000133
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.004008485,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004008485
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.003994624,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003994624
+    },
+    {
+      "preparation_cpu_seconds": 0.004002947,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.004002947
+    },
+    {
+      "preparation_cpu_seconds": 0.003998229,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 576,
+      "total_cpu_seconds": 0.003998229
+    }
+  ],
+  "costs": [
+    {
+      "cost": {
+        "handoffs": 9,
+        "installations": 10,
+        "phases": 10
+      },
+      "status": "planned",
+      "task": "two-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 4,
+        "installations": 5,
+        "phases": 5
+      },
+      "status": "planned",
+      "task": "first-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 4,
+        "installations": 5,
+        "phases": 5
+      },
+      "status": "planned",
+      "task": "second-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 6,
+        "installations": 7,
+        "phases": 7
+      },
+      "status": "planned",
+      "task": "servers-ahead"
+    },
+    {
+      "cost": {
+        "handoffs": 7,
+        "installations": 8,
+        "phases": 8
+      },
+      "status": "planned",
+      "task": "catch-up-all"
+    },
+    {
+      "cost": {
+        "handoffs": 5,
+        "installations": 6,
+        "phases": 6
+      },
+      "status": "planned",
+      "task": "clients-only"
+    }
+  ],
+  "cpu": 0,
+  "cpu_budget_seconds": 30,
+  "domain": "active-5-owner",
+  "mean_preparation_cpu_seconds": 0.002925084653846154,
+  "mean_query_cpu_seconds": 0.0009226830384615385,
+  "mean_total_cpu_seconds": 0.0038477676923076923,
+  "repetition": 4,
+  "route": "one-step"
+}

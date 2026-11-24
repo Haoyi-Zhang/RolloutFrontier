@@ -1,0 +1,10 @@
+{
+  "checker_revision": "After timing, the independent checker was corrected to permit nonnegative individual subcohort deltas while enforcing the positive accumulated measurement interval. It also checks unique context and timing identities. The measured planners and timing producer were unchanged.",
+  "cold_cohorts": 1190,
+  "excluded_pilot": "An entire earlier timing pass overlapped pre-existing verification jobs and is excluded. The delivered 105-worker pass began after every other agent confirmed quiescence.",
+  "measurement": "Mean process-CPU seconds per complete cold cohort, including input parsing, common domain materialization, route construction, queries and cost serialization.",
+  "minimum_worker_accumulated_cpu_seconds": 0.100033544,
+  "short_interval_note": "Some subcohort and preparation intervals have equal process-CPU readings. These raw values are retained. No zero-work conclusion is drawn; every worker accumulates at least 0.1 CPU second before averaging. The underlying accounting cause has not been established.",
+  "workers": 105,
+  "zero_delta_subcohorts": 174
+}

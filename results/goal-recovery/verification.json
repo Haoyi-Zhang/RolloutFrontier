@@ -1,0 +1,23 @@
+{
+  "coordinator_sigkills": 6,
+  "database_snapshots": {
+    "normal": 60,
+    "optimized": 60
+  },
+  "documentation_is_executed_source": false,
+  "documentation_sha256": "1d25064580c7aa8ac83c9ef6c80fcd61e8618406e6a2aa3ea8136e5b2760f15a",
+  "errors": 0,
+  "failures": 0,
+  "locality_comparison_summary_sha256": "8a4f1834c297122fe6336843f64750d4807769715d216e0a9694515f14f40e5b",
+  "mode_counts_equal": true,
+  "normal_summary_sha256": "8e34b9efd750cbbeec16e81f378b3a995e4de5e7db55b53688cf4fd96c2bad57",
+  "observations": 23,
+  "optimized_summary_sha256": "82875d9252d4e2b4bb7dfc48a14fca0527b2b736d2de2b3e4b7cfae255217b8b",
+  "owner_sigkills": 6,
+  "prior_runtime_archive": "results/development/goal-recovery-global-preread",
+  "scope": "Per-mode recovery counts. Six coordinator and six later owner kills are subcases of one test method. The separate before/after study measures one retained goal and one TCP partition, not additional recovery test methods.",
+  "skipped": 0,
+  "source_bindings_equal": true,
+  "status": "PASS",
+  "tests_run": 24
+}

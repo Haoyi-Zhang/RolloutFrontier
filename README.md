@@ -1,483 +1,244 @@
-# Partition-safe API compatibility artifact
+# RolloutFrontier artifact
 
-## Owned application effects
+Code, inputs, saved results and checkers for the IEEE TPDS article
+**Joint Safe-Region and Path Planning for Durable API Rollouts**.
+In the full submission package the article, supplement and figure atlas are in
+the sibling `../paper/` directory; this repository is self-contained without it.
 
-`src/effect_ledger.py` adds one concrete application composition to the basic
-protocol markers. A guarded write reserves its payload in a durable SQLite
-ledger. Retirement stops new reservations, retains the protocol guard while any
-reservation is active, and persists a closed fence before releasing guards.
-Completing an admitted reservation and writing its actual key/value occur in
-one transaction. Lost release acknowledgements preserve the fence. Reopening
-the coordinator and application ledger does not turn an active operation into
-quiescence. This covers this owned store, not arbitrary remote effects,
-detached callbacks, Byzantine storage or concurrent coordinator failover.
+A rollout target specifies complete physical profiles at every owner.
+RolloutFrontier minimizes the number of safe guard phases and then the number
+of installations. Its general route uses complete acceptance frontiers while
+retaining every directed local path and possible phase endpoint. Its factored
+route recognizes componentwise-maximum closure in small overlapping contracts
+on directed chains. Greatest safe endpoints then give an exact plan without
+constructing the global product of owner catalogs.
 
-```sh
-python -B -m unittest tests.effect_drain -v
-python -O -B -m unittest tests.effect_drain -v
-python -B -m tests.check_effect_drain
-python -O -B -m tests.check_effect_drain
-python -B -m unittest tests.effect_drain_bindings -v
-python -O -B -m unittest tests.effect_drain_bindings -v
-python -B -m tests.effect_drain_study --out /fresh/owned-effect-lifetimes
-```
+The runtime records new phase authority before retiring its predecessor,
+conditions each installation on the observed owner state, and checks a common
+target through matching versioned collections. Application sessions retain
+actual emitter and parser obligations until their requests have durably
+completed. Each shared physical owner has one support state and one set of
+holds, regardless of how many factors mention it.
 
-The separate bounded study retains all 24 registered lifecycle combinations:
-predicate/full-generation policy, commit/cancel, no restart/owner restart/
-coordinator restart, and successful/partitioned release. Twelve writes commit
-and twelve cancel without a value write. New work during drain and stale work
-after retirement reject in all 24 cases. The 96 final application, origin and
-owner database snapshots remain in `results/effect-drain/databases.zip`, with
-byte identities and a data-only checker. The negative control deliberately
-violates the caller drain premise by writing through an unfenced application
-after protocol retirement; it is not a counterexample to the guarded-lifetime
-theorem. No new performance or field-deployment result is claimed.
+## Repository layout
 
-These saved observations bind the historical bytes in the unchanged
-`registration.json`, not a rerun of today's code. The current lifecycle repair
-copies mutable inputs before waiting for the client/adapter locks. Its
-`src/network.py` and `src/effect_ledger.py` therefore differ from the measured
-sources, whose exact verified bytes are preserved under
-`results/effect-drain/source-preimage/`. The executed study driver remains in
-`execution-source.py.gz`; see `results/effect-drain/README.md` for the split.
-The checker and binding regressions inspect saved data only. The optional study
-command above would create a separate new run; it was not used for this repair.
+| Path | Content |
+| --- | --- |
+| `src/` | Planner, checker, owner protocol, rollout executors, schema programs and session runtime |
+| `tests/` | Regression tests, experiment producers and independent checkers |
+| `data/` | Published version constraints and Android/Kubernetes inputs (`data/SOURCE-NOTES.md`) |
+| `results/` | Saved raw observations, source snapshots and checker records behind every table and figure |
+| `figures/` | Figure generators and the statistical-data map |
+| `docs/` | Design notes, experiment guides and the full [reproduction guide](docs/REPRODUCTION.md) |
+| `verify.py`, `reproduce.py`, `review_acceptance.py` | Saved-result verifier, fresh semantic reproduction, claim-facing subset |
+| `Makefile` | Single entry point (`make install env test verify reproduce`) |
+| `claim_bindings.json`, `claim_evidence_ledger.csv`, `source-replacements.json`, `current-source-manifest.json` | Claim-to-evidence bindings and the registry of intentionally updated harness files |
 
-## Pinned platform declaration bridge
+## Requirements
 
-`src/android_contracts.py` authenticates the complete fixed AOSP history using
-its exact byte length and Git blob SHA before parsing four selected classes.
-`data/android-pinned-class-contracts.json` retains those consumed factual rows.
-`python -B -m tests.android_contract_bridge` feeds their declaration profiles
-through synthesis, independent checking, durable acquisition, blocked rollback,
-owner/origin reopen, retirement and closed delayed prepare. Add
-`--history-base64 <external-input>` to verify the selected facts against the full
-Gitiles `?format=TEXT` payload. That complete payload is not bundled.
+- Linux x86-64 (tested: Ubuntu 24.04 under WSL2). The process-recovery code
+  uses POSIX signals, process groups and the `resource` module, so native
+  Windows is not supported; WSL2 works. macOS was not tested.
+- Python 3.12 with the standard `sqlite3` module, plus `make` and `ps`.
+- `protobuf==7.36.2`, hash-locked in `requirements-application.lock`
+  (`requirements-application.txt` has the version-only pin). No other package.
+- Permission to open loopback TCP connections. About 0.7 GB of disk for the
+  repository and less than 1 GB for outputs; 4 GB RAM; one CPU core suffices.
+- Time: `make test` about 1 minute, `make verify` about 8 minutes,
+  `make reproduce` about 3 minutes.
+- Only for `make paper` and the figure atlas in the full submission package:
+  a recent TeX Live (tested: TeX Live 2026 `scheme-full`, installed in user
+  space with `install-tl`), Poppler (`pdfinfo`, `pdffonts`, `pdftotext`; tested
+  from conda-forge via micromamba), and
+  `pip install matplotlib pillow pymupdf pypdf reportlab` in the same venv
+  (see `../paper/README.md`). Run `make paper` first, then
+  `python -B paper/build_figure_atlas.py` from the package root.
 
-The pinned file's latest explicit introduction level is 25 and it omits
-VibrationEffect despite the later repository commit date. The adapter refuses
-later API levels; absence is not extrapolated. Branches and proposed rollbacks
-are caller-authored. Class presence is neither hardware availability nor
-behavioral compatibility; no Android code/device or physical installer runs.
-This is separate evidence, not a new holdout or a rewrite of historic results.
-Run the portable boundary and equal-catalog/different-runtime-predicate tests
-with `python -B -m unittest tests.android_contract_bridge -v`.
+## Installation
 
-This directory is the standalone research artifact for the TPDS regular-paper
-manuscript **Availability Frontiers for Partition-Safe API Rollouts**. It uses only
-Python's standard library and local loopback communication. It does not require the
-paper directory, a network download, private data, a GPU, an external service, or a
-model API.
-
-## Reproduce retained semantic results
-
-From the artifact root:
+From the repository root:
 
 ```sh
-python reproduce.py --out /tmp/partition-safe-results --check-reference results
+python3.12 -m venv .venv
+. .venv/bin/activate
+make install                  # pip install --require-hashes -r requirements-application.lock
+make env                      # prints interpreter, protobuf and SQLite versions
 ```
 
-The output directory must be new or empty and outside the repository and reference
-tree; existing evidence is never replaced. The runner
-executes 17 sequential bounded jobs, requires 23 semantic outputs (17 JSON, four CSV,
-and two JSONL traces), and verifies 33 numeric manuscript bindings. Each child has a
-120-second wall timeout, 90-second CPU soft limit, and 512 MiB address-space limit.
-The five-owner process test can create five endpoint children in addition to the
-runner and job, so the stated maximum is seven project processes.
+`make env` reports `DIFFERENT` unless the interpreter is exactly the retained
+campaign environment (Python 3.12.14, protobuf 7.36.2, SQLite 3.53.1, recorded in
+`environment-retained.json`); this is informational. The original
+campaign interpreter was built from upstream sources; that build is not
+needed, and the online `pip` install above is the supported route.
 
-Timing, RSS, temporary paths, and instantaneous RPC latency are remeasured and excluded
-from semantic equality. Decisions, state, certificates, CSV rows, and complete logical
-traces are compared. A successful comparison establishes consistency with the retained
-sample, not theorem correctness or production performance.
+## Quick check and reproduction
 
-## Repository map
+All targets write only into new directories under `OUT` (default
+`/tmp/rolloutfrontier`; delete it or pass `OUT=/another/new/dir` before
+re-running). Saved results are never modified.
 
-- `src/envelope.py`: bounded exact frontier and greedy/fixed alternatives.
-- `src/checker.py`: independent certificate reconstruction and validation.
-- `src/controller.py`: persistent owner state and serialized guard transitions.
-- `src/network.py`: loopback protocol, managed channels, event trace, and validation.
-- `tests/`: unit, oracle, generated-holdout, protocol, process, hardening, replay,
-  cost, and source-boundary jobs.
-- `results/`: retained semantic reference outputs.
-- `proofs.md`: handwritten theorem and invariant arguments with scope limits.
-- `claim_evidence_ledger.csv`: material claim to proof/test/result mapping.
-- `claim_bindings.json` and `verify_claims.py`: typed numeric manuscript bindings.
-- `reference_audit.csv`, `reference_sources.csv`: ordered scholarly source audit.
-- `tpds_calibration.csv`: current TPDS journal structural sample.
-- `external_resources.csv`: public data and workflow-source inventory.
-- `data/`: exact curated Android declaration-history inputs.
-- `docs/ANALYSIS-DESIGN.md`: generated-family and conditional-resampling design.
-- `REPAIRS.md`: material implementation defects found and repaired.
+| Command | What it does | Expected result |
+| --- | --- | --- |
+| `make test` | Factored-planning regression plus the six `test_*.py` modules | `Ran 27 tests ... OK` then `Ran 61 tests ... OK` |
+| `make verify` | Read-only reconstruction of all saved results: 32 checks in normal and optimized (`-O`) Python | `PASS`, 64/64 with `../paper` present. Standalone (no `../paper`): the `publication` check is skipped, `PARTIAL` with `PASS: 62, NOT_RUN: 2`, exit 0 |
+| `make reproduce` | Re-runs the 17 bounded semantic jobs and compares them with `results/reproduction-baseline-2026-11-21/` (timing fields excluded) | All 17 jobs complete, 23 outputs match semantically, 33 numeric claim bindings verify; `[complete] execution.json written`, exit 0 |
+| `python -B review_acceptance.py --out /tmp/rf-review --checks sources,goal-planning,priority-counterexample,factored-planning,factored-scale,application-planning,application-rollout,phase-granularity,direct,recovery,kubernetes-skew` | Claim-facing checks as separate invocations | 11/11 `PASS` (add `publication` when `../paper` is present) |
+| `make paper` | Regenerates paper tables/figures and compiles `../paper` | Only in the full submission package; otherwise prints a notice |
 
-## Exact finite synthesis
+**Reference refresh (2026-11-24).** The reference `unit.json` was first
+captured with the earlier bytes of `tests/test_factored_runtime.py`
+(`9731c17d...`); the shipped file is `f782a1d9...`, a change registered in
+`source-replacements.json` (explicit SQLite connection closing for Python 3.13;
+expected outcomes unchanged). A fresh `reproduce.py` run with the shipped code
+differed from the old reference only in that one recorded digest
+(`test_source_sha256["tests/test_factored_runtime.py"]`): all 45 test IDs and
+outcomes, every other job record, CSV file and trace (22 files) and the 33
+numeric claim bindings agreed. `results/reproduction-baseline-2026-11-21/unit.json`
+was therefore replaced by that fresh `unit.json`, and
+`results/reproduction-acceptance-2026-11-21/` was regenerated with
+`make reproduce` against it (its `execution.json` binds the refreshed digest).
+No other baseline file changed.
 
-A manifest is a disjunction of complete placement alternatives. A local guard is a
-positive disjunction of conjunctions. The producer enumerates safe independent local
-products in a bounded language, removes dominated products, selects a maximum weighted
-frontier member, and emits a certificate. The checker independently rebuilds local
-libraries, safe products, nondominance, objective and tie-breaking, search counts,
-and guard-corner safety.
+These results were re-checked on Ubuntu 24.04 (WSL2), Python 3.12.3,
+SQLite 3.45.1 and protobuf 7.36.2. Fresh `summary.json` files of
+`tests.factored_planning_study` and `tests.goal_planner_study` (65,792 queries)
+were byte-identical to `results/factored-planning/summary.json` and
+`results/goal-planning/summary.json`. The long timing campaigns, live
+fault-injection suites and full physical execution campaigns were not rerun;
+their saved observations are checked by `make verify`, and the commands to rerun
+them are in [docs/REPRODUCTION.md](docs/REPRODUCTION.md).
 
-The retained exact domains include:
-
-- the 510 nonempty edge-encoded 3x3 relations with at most eight allowed cells and
-  2,295 seeded instances, with the
-  complete returned frontier compared record by record to a direct rectangle oracle;
-- 9,369 independently enumerated safe boxes, 3,222 independently derived and 3,222
-  returned frontier members, and 19,071 planner states in that exhaustive domain;
-- a negative mutation that deletes a valid nonselected frontier member and is rejected;
-- 480 sparse seeded 4x4/5x5 cases and 192 sparse seeded 3x3x3 cases checked against
-  independent subset oracles;
-- a high-pruning case with 260,876 raw local-choice combinations but 37 visited
-  prefixes; and
-- explicit failure for branch, local-library, corner, state, and frontier bounds.
-
-A greedy counterexample returns mass 2 while the exact product has mass 7. A weighted
-case selects objective value 80 where the unweighted choice has value 2. A zero-weight
-regression ensures selection remains on the nondominated frontier. These are finite
-algorithmic witnesses, not production workload claims.
-
-Branch-local requirements are limited to 96 atoms. Profile-derived guard terms use
-the 12,000-atom support encoding bound instead: projecting a profile onto eight
-branch requirements can retain up to 768 relevant atoms. The same guard encoding
-is used for synthesis, independent checking, durable acquisition, and recovery.
-The portable boundary regressions run separately from the retained five-test smoke
-denominator:
+The verifier's `--list` option shows every check and `--checks a,b` selects a
+subset. Focused saved-record checks, for example:
 
 ```sh
-python -B -m unittest tests.profile_bounds -v
+python -B -m tests.check_schema_contracts --results results/schema-census --corruption-controls
+python -B -m tests.check_factored_scale --results results/factored-scale --corruption-controls
 ```
 
-The complete positive-conjunction oracle and output-preservation checks are also
-portable standard-library jobs:
+Measured-era source preimages are immutable. Harness files that intentionally
+changed after those measurements are listed in `source-replacements.json` with
+both the retained and current digest; `current-source-manifest.json` binds the
+current bytes. The `sources` check requires all three links instead of either
+rejecting legitimate harness maintenance or silently accepting an unregistered
+source mismatch. Raw records under `results/` keep the original capture paths and
+interpreter details of the machines that produced them.
 
-```sh
-python -B -m tests.positive_oracle
-python -B -m unittest tests.output_paths -v
-```
+**Code Ocean.** For the reproducibility badge, use a Python 3.12 Ubuntu base
+image with `protobuf==7.36.2` (from `requirements-application.lock`) and run
+`make test verify reproduce OUT=/results/rolloutfrontier`
+from this directory as the entry command; outputs then appear under `/results`.
 
-The positive oracle exhausts one/two-alternative manifests and compatible current
-supports over two atoms at each of two owners, with a fixed three-atom weighted
-extension. It checks arbitrary supports directly rather than reusing the producer's
-corner test. It also checks the full nine-cell 3x3 relation, represented by one
-empty-requirement alternative, at all nine current cells. Projection aggregates
-three candidates into one weight-three profile per owner, preserving product mass
-nine. Together with the edge-encoded cases, coverage is all 511 nonempty relations
-and 2,304 current cells; the retained edge-encoded result counts are unchanged.
-The `scientific-checks.yml` workflow runs these jobs and the retained
-17-job POSIX suite on pushes to `main` or an explicit workflow dispatch. Its
-scientific status requires the actual tests and semantic comparisons to succeed,
-not merely syntax or file-presence checks.
+## Components
 
-## Portable term-membership regression
+| Component | Code | Purpose |
+| --- | --- | --- |
+| Safe-product synthesis | `src/envelope.py`, `src/checker.py` | Complete bounded acceptance frontiers and independent positive-guard checking |
+| General goal planning | `src/goal_planner.py` | Directed physical paths, all phase endpoints and lexicographic target cost |
+| Factored exact planning | `src/factored_planner.py` | Local max-closure recognition, greatest safe endpoints and shared-owner guard compilation |
+| Difference-hull comparison | `src/structured_planner.py` | Earlier exact finite difference-bound recognizer and complete-frontier fallback |
+| Guarded owner protocol | `src/controller.py`, `src/network.py` | Durable holds, nonreused admission sequences, retirement and conditional installation |
+| General rollout execution | `src/rollout.py` | Durable phase roles, step recovery and coherent completion |
+| Factored rollout execution | `src/factored_runtime.py` | Immutable physical registry and global composition of one-owner admissions |
+| Executable schema programs | `src/schema_contracts.py`, `src/schema_runtime.py` | Four actual ProtoJSON migrations and durable physical owner effects |
+| Heterogeneous release contracts | `src/heterogeneous_contracts.py`, `tests/heterogeneous_schema_study.py` | Real field preparations and activations, complete event orders and exact precedence comparisons |
+| Alternative compatible readers | `tests/alternate_reader_study.py`, `tests/alternate_reader_runtime.py` | Whole-record reader choices, exact disjunctive schedules and fixed-choice recovery |
+| Durable dataflow sessions | `src/factored_session.py` | Finite traversals, fan-out/join, exact request binding and pending-request guard retention |
+| Strong path comparisons | `tests/goal_path_baselines.py`, `tests/schema_contract_study.py` | Shortest safe paths, optimal fixed-path partitions and the complete six-priority portfolio |
+| Phase-granularity execution | `tests/phase_granularity_study.py`, `tests/check_phase_granularity.py` | Paired execution with identical installations and different phase boundaries |
+| Original transformed pipeline | `src/application.py` | Three-process enum migration with an exact integer transform and durable sink |
+| Static batch selection | `src/batch.py`, `src/direct_batch.py` | Frontier selection and exact branch-and-bound comparison for a supplied batch |
+| Owned application effects | `src/effect_ledger.py` | Transaction-interface drain and fencing |
 
-During exact synthesis, one invocation-local map holds immutable membership views
-of canonical tuple terms for corner subset tests. Tuples still determine traversal,
-pruning and output order; search counters and all language/refusal caps are unchanged.
-Local-guard construction and the independent checker do not share this map.
+The [documentation index](docs/README.md) links each component to its exact
+inputs, proof obligations and experiments. Complete mathematical arguments are
+also included in the article's supplement.
 
-```sh
-python -B tests/term_membership_regression.py -v
-```
+## Primary evidence
 
-This pure standard-library regression compares complete frontier plans, including
-every member and search counter, with a test-local literal Cartesian oracle. It
-covers 2,295 edge-encoded seeds, nine full-relation cases, six named fixtures and
-24 bounded positive-contract variants under three weight schedules. Additional
-checks cover negative/zero weights, duplicate projections, input isolation,
-nonselected-member omission, type aliases and refusal boundaries. A reduced
-test-local result cap exercises the refusal branch without changing the public cap.
-No files, endpoints, subprocesses, faults or timing jobs are used by this test;
-these checks do not constitute the retained full POSIX campaign or a speed claim.
+| Question | Recorded evidence | Location under `results/` |
+| --- | --- | --- |
+| Does the general planner attain its declared optimum? | 65,792 queries over 3,304 finite contexts; zero independent optimum or reachability discrepancies | `goal-planning/` |
+| Does factor recognition support the greatest-endpoint theorem? | 991 complete relation contexts; 519 recognized and 472 refused with witnesses; all 7,835 compatible ordered goals in recognized contexts agree with literal phase graphs | `factored-planning/` |
+| Do executable schema changes expose a path-selection gap? | Four migrations, two relation matrices, 63 nonempty three-owner graphs per migration and 186,174 queries; the fixed-owner portfolio needs an extra phase on 64 of 61,938 reachable changes, while the stage portfolio ties every goal | `schema-census/`, `schema-path-analysis/` |
+| What changes with heterogeneous release orders? | 394,560 finite contexts and 122,120 reachable tasks; individual priority families have gaps, while their full union and the exact event schedule tie all reachable tasks; production coverage is explicit per catalog | `heterogeneous-schema/` |
+| Does the application evidence extend beyond conjunctive threshold dependencies? | 56 non-min-closed contexts, 8,595 forward goals and 22 forward obstructions; four exact methods agree; both reader choices execute in separate three-owner deployments | `alternate-readers/` |
+| Are complete responses and journal initialization stable? | Both modes complete 22 requests and 42 effects, reject 50 input/identity/journal cases, reconstruct 182 audit rows and retain zero guards | `session-reliability/` |
+| How does factored planning grow with owner count and density? | Ten conditions from 8 to 1,024 owners and up to 4,096 factors; five fresh workers per condition; full witnesses and preparation-through-serialization costs retained | `factored-scale/` |
+| Does the factored runtime execute actual shared-owner dataflows? | Nine cohorts with up to 32 separate owner processes on one host; 185 logical requests, 4,884 durable per-hop effects and 605 installations | `factored-runtime/` |
+| Are admission identity, request binding and follow-on jobs correct? | Normal and optimized controls for reused readable identities, exact pending retries, successive rollouts, numeric domains and concurrent completion binding | `factored-runtime-review/` |
+| Can invalid input create permanently pending work? | Both APIs reject unencodable strings before binding; 36 actual program controls, 324 rejected inputs, 288 valid requests, 640 effects, 36 owner restarts and no remaining guard | `utf8-inputs/` |
+| What does a protection-phase boundary cost? | 19 paired goals, 38 executions, 129 installations per route; 129 versus 39 phases and 3,234 versus 1,386 owner RPCs | `phase-granularity/` |
 
-## Optional choice for an explicit proposal batch
+Planning scale and physical execution use different inventories. The 1,024-owner
+conditions are complete planner inputs with checked local contracts and paths.
+The largest executed dataflows have 32 owner processes on one host. Owner counts,
+factor counts, logical request counts and per-hop effects are reported separately.
+A cycle uses a finite declared route, with distinct hop identities when a request
+revisits one physical owner.
 
-`src.batch.choose_batch_box(branches, current, candidates, proposals, weights=None)`
-compares the original canonical frontier members for a caller-supplied ordered
-batch of at most 256 proposals. Each item has exactly `node` (the canonical string
-owner ID) and `support` (an explicit finite atom collection). It counts installed,
-blocked and unchanged proposals separately, retaining the full batch denominator
-and final support vector. It keeps the max-mass box unless another member yields
-strictly more forecast installations; an empty batch or a tie retains max mass.
+The schema census retains every graph and ordered compatible goal, including
+no-ops and unreachable cases. Both migrations in each matrix class remain
+identified as separate wire mechanisms. These registered graph instances do
+not estimate deployment prevalence. Each actual wire and parser outcome remains
+available in the source probes.
 
-The returned `frontier_plan` is the unmodified, independently checked max-mass
-result. The separate `box` is an optional static choice, not a new mass-optimality
-certificate. Admit it with the unchanged `Client.acquire_box` before updates;
-the independent strong-product check, every held guard and failed-close fallback
-remain mandatory. Search, encoding and certificate errors propagate, rather than
-returning a partial plan or silently falling back after a failed check.
+The runtime review uses the actual Endpoint, SQLite and ProtoJSON implementations
+in process; its missing-response control is a unit-test injection after an actual
+effect commit. The physical-runtime campaign separately records real owner and
+coordinator processes, TCP relay events, `SIGKILL`, durable reopen operations and
+their independent replays.
 
-Forecasts assume the supplied current vector, one unchanged admission, no other
-holds or intervening updates, and sufficient generation headroom. They are not
-live receipts or predictions of an unknown schedule. Targets can contain atoms
-outside the finite candidate domain; comparison is only among the returned
-canonical frontier members, not all possible guard languages. An overlapping
-hold, stale current vector, exhausted generation or protocol failure can reduce
-actual installations. The original 0-versus-200 counterexample, 1,440-case holdout,
-156 greedy schedule wins and centralized comparison remain unchanged; this option
-does not repair the impossibility of a positive worst-case future-throughput ratio.
+## Retained comparisons and supporting studies
 
-```sh
-python -B -m unittest tests.batch_choice -v
-```
+| Study | Evidence | Location under `results/` |
+| --- | --- | --- |
+| Difference-hull recognition and fallback | 17,710 queries over 785 contexts, including 160 recognized contexts; zero independent status/cost discrepancies | `structured-planning/` |
+| Complete fixed-path comparison | 46,080 relation/graph queries, including 20,654 nontrivial reachable tasks and 48 phase gaps | `goal-baselines/` |
+| Published version constraints | All 529 primary source/target pairs and 18 selected larger goals; fixed-path segmentation and exact methods tie on all 214 nontrivial reachable tasks | `goal-policy/`, `goal-baselines/` |
+| Original three-service pipeline | 1,296 catalog queries; individual priorities have 8–24 phase gaps, while the best six-path portfolio ties all 428 nontrivial reachable goals | `application-planning/` |
+| Transformed pipeline traffic | 18 fixed and migrating trials at concurrency 1, 4 and 16; 1,728 completed requests and 5,184 durable effects, plus separate failure controls | `application-rollout/` |
+| General coordinator recovery | 24 methods per Python mode, including six coordinator and six owner process kills per mode, with durable observations | `goal-recovery/` |
+| Earlier same-goal planning cost | 105 independently budgeted workers comparing the difference-hull route, complete frontiers and strong controls; preparation and every registered query included | `structured-planning/timing-summary.json` |
+| Static frontier preparation reuse | 16 contexts, 32 supplied batches and three repetitions; 14 contexts complete both routes | `direct-optimization/` |
 
-This separate portable regression uses literal tiny rectangle enumeration and
-in-memory owned endpoint transitions, with a temporary origin journal for cleanup
-checks. It is required in CI separately from the retained result denominators;
-it supplies neither a timing measurement nor a full Linux campaign result.
+These cohorts retain their original inputs and observations. The
+[difference-hull results](docs/STRUCTURED-PLANNING-RESULTS.md) describe that
+narrower recognizer; the [factored theorem](docs/FACTORED-PLANNING.md) and
+[schema census](docs/SCHEMA-CONTRACTS.md) cover the new max-closed route. The
+original transformed pipeline remains a separate workload with its own
+[application study](docs/APPLICATION-STUDY.md).
 
-## Same-semantic solver and durable lifecycle costs
+For a successful nonempty rollout with `n` owners, `k` phases and `W`
+installations, the executor's fault-free owner RPC count is
+`2W + 4nk + 4n`. The paired phase study holds every installation fixed to isolate
+the cost of admission and retirement. Timing workers, process executions and
+database checkpoints remain separate counting units.
 
-The prefix checker now collapses equal surviving-alternative masks. Its cache is
-owner/term indexed and invocation local; a reachable zero mask still refuses the
-prefix. The independent checker, literal selected-box check, objective, language
-caps and search counters are preserved. The mask equivalence argument is in
-`proofs.md`; portable literal and complete-frontier regressions run separately
-from the retained five-test smoke/17-job denominators:
+## Input and execution contract
 
-```sh
-python -B -m unittest tests.mask_safety tests.term_membership_regression -v
-python -B -m tests.optimizer_benchmark --out results/new-optimizer.json --repetitions 5
-python -B -m tests.full_path_costs --out results/new-full-path.json --repeats 3
-python -B -m unittest tests.cost_path_regression -v
-```
+Positive compatibility obligations, complete physical catalogs and permitted
+local transitions define the planning problem. General frontiers have explicit
+language and work limits. The factored route instead checks small local
+relations and guard corners under its own resource budgets; it does not apply
+the general route's global-corner cap to the full deployment. An exhausted
+budget returns refusal, not a partial optimum or an unreachable verdict.
 
-Use a new output filename: the benchmark entry points refuse existing evidence.
-They require only the standard library and use the invoking interpreter for owned
-children. The lifecycle worker binds only `127.0.0.1` and writes temporary data
-under the output parent. Unlike the POSIX reproduction runner, these Windows
-samples have no CPU affinity or address-space cap. Five owner children run at a
-time, with one request per TCP connection and fresh stores for each trial.
+Owners serialize guarded changes and persist support together with all live
+obligations. Execution assumes trusted registered programs, guarded mutations,
+durable storage and one active writer per identity. An unresolved request keeps
+its guards; no timeout releases protection. Inputs must fit every retained
+emitter's domain, and exact retries preserve their durable admission and effect
+identity. Matching versioned collections establish a common target state during
+the observation interval.
 
-`results/repair-optimizer.json` retains all 25 predetermined cases, five paired
-complete-solver samples/backend/case and independent checks. The reference is the
-preceding membership-cache backend, not greedy. Nineteen inputs complete and six
-refuse identically; complete outputs and counters agree. The sum of case medians
-is 548.8 ms for that backend versus 330.4 ms for mask merging. This says nothing
-about a SAT/SMT optimizer, asymptotic scale or successful-update throughput.
+The files under `results/` retain raw observations, executed source snapshots and
+independent checking records. [literature.md](literature.md) links the
+claim-level reference audit and source-reading records.
 
-`results/repair-full-path-summary.json` and its raw 48-row source
-`results/repair-full-path.json` retain the five-process FULL/DELETE SQLite/TCP
-sample. Across 1,152 proposals, every status matches a literal reference, every
-placement stays compatible, held-owner and origin reopen succeed, and retirement
-closes all holds. Fixed, greedy, maximum-mass and batch choices share the same
-protocol and inputs. On matched batches batch/greedy install 24 and maximum mass
-zero; on withheld reverse batches maximum mass installs 24 and batch/greedy zero.
-Thus batch selection does not improve over greedy on this witness and is not a
-future-workload guarantee. Large-payload batch prediction/planning costs about
-123 ms, including its independent checker, rather than being free.
 
-Full-cycle intervals include setup, planning/checking, durable admission, TCP
-updates, reopen/use, retirement, invariant inspection, statistics and shutdown.
-Per-stage timings and owner persistence totals are retained. The raw sample has
-53 measured RPC connections plus six acknowledged management connections whose
-270 application bytes are accounted separately by the summary. The current
-entry point directly records both. Frame bytes are not packet-capture wire bytes;
-SQLite file sizes are not device-level write bytes. Instrumentation/reference
-overhead is included, origin persistence is included in lifecycle stages rather
-than owner-only totals, and graceful reopen is not a crash/power-loss experiment.
-These separate costs do not replace or relabel the retained 1,440-case holdout,
-17-job Linux reproduction or earlier in-memory timing sample.
+## Licenses
 
-## Minimum obstruction
-
-The controller's frozen-vector explanation problem selects a smallest set of currently
-false atoms that intersects every failed whole alternative. `tests/finite.py` compares
-the implementation with direct subset enumeration for all 65,536 four-atom relations.
-An unsafe seed is reported as unsatisfiable rather than assigned a false witness.
-This is a restricted minimum hitting-set instance, not a new diagnosis theory.
-
-## Protocol and fault evidence
-
-`tests/modelcheck.py` uses an implementation-independent transition system. For one
-attempt, two owners, one positive atom, and one nonwrapping sequence, the guarded model
-has 296 reachable states and 1,388 transitions, no compatibility violation, and no
-closed-to-held edge. Unguarded installation and timeout reclamation produce retained
-five-step counterexamples. Cleanup is reachability under stated retry/delivery
-premises, not a fairness theorem.
-
-`tests/campaign.py` runs four relation families, six seeds, six policies, 24 proposals
-per workload, and five owners: 144 policy cases and 3,456 proposals. Exact, greedy,
-fixed-branch, and full-generation guards have no incompatible guarded snapshot in this
-campaign. Local marginal and unguarded controls produce 55 and 484 incompatible
-snapshots. The bridge family retains an unfavorable result for greedy: 30 installations
-versus 34 for fixed branch and exact.
-
-`tests/generalization.py` is a post-development generated holdout with six generators,
-seeds 1000--1239, 1,440 cases, and 69,120 proposals. All frontiers match a direct
-subset oracle and no guarded safety violation occurs. Exact installs 11,256 and greedy
-10,854; exact wins 206 schedules, greedy wins 156, and 1,078 tie. A centralized
-same-order authoritative reference installs 16,170 and exceeds exact in 978 cases.
-The holdout is generated and post-development, not an external population sample.
-
-`tests/journal_analysis.py` performs joint seed-cluster resampling over the six fixed
-holdout families and retains all 24 denser bounded-synthesis calls. It also executes a
-200-proposal witness for the theorem that maximum candidate-product mass does not have
-a positive worst-case update-throughput ratio against another frozen safe product.
-
-`tests/replay.py` imports neither planner nor controller and reconstructs the network
-campaign's 40,992 request/reply exchanges and 4,494,882 canonical serialized
-application bytes. The top-level reproduction runner independently performs a second
-layer of assurance by comparing both `network-trace.jsonl` and
-`observation-trace.jsonl` record by record against retained semantic references; the
-observation trace is not claimed to have a separate state-machine replayer.
-`tests/multiprocess.py` uses five same-host owner processes and five SQLite files,
-records 89 RPCs, one origin reopen, and three SIGKILL events, and exercises restart,
-partitioned retirement, delayed prepare, and cleanup. This is not a WAN, power-loss,
-or independent-machine experiment.
-
-`tests/hardening.py` rejects 12 certificate-structure mutations and 21 Boolean,
-floating-point, or out-of-range substitutions across the selected plan, every frontier
-member, search metadata, and nested certificate. It also rejects malformed persistent
-stores and unknown-field RPCs, checks async input detachment and 64 serialized
-two-client schedules, and verifies that a blocked three-contract update is atomic. A
-two-owner fixed-branch interruption retains one unresolved manifest record, stops
-fallback when close is unconfirmed, reopens successfully, retires a delayed hold after
-healing, and rejects its later resurrection. These are implementation regressions, not
-Byzantine or permanent-disk-loss evidence.
-
-## Public input boundary
-
-`data/android-class-introductions.csv` contains 24 curated class-introduction facts
-spanning API 8--34 at 18 introduction levels. `data/android-history.csv` contains four
-VibrationEffect factory facts. Tests perform 48 declaration-presence boundary checks and generate 96 reference sets.
-One implementation performs 96 lower-bound computations and then two checks per result,
-for 192 boundary/minimality assertions. The slice is not random or representative and
-does not establish behavioral API compatibility.
-
-The repository contains no complete AOSP API-history corpus, APK collection, SDK
-binary, emulator, device, production trace, or private application data. Immutable
-upstream identifiers retained in `data/SOURCE-NOTES.md` are provenance, not a claim
-that the complete source was consumed.
-
-## Reference and journal-positioning records
-
-The paper has 78 unique cited scholarly sources and 90 citation occurrences.
-`reference_audit.csv` and `reference_sources.csv` verify ordered inventory and state
-each record's verification depth. They do not claim fresh full-text validation of all
-inherited sources. The two added labelled-MSS papers were read in full;
-`literature.md` gives the scoped comparison and remaining applicability boundary.
-
-`tpds_calibration.csv` contains 12 real TPDS articles at metadata/abstract-level
-structural depth. It is used to check journal-native problem framing and evidence
-organization, not to infer acceptance probability or to pad the manuscript
-bibliography.
-
-## Operational model
-
-The controller enforces declared positive-contract predicates at serialized,
-single-writer owners with recoverable SQLite state. Admissions may block during
-partitions; retirement explicitly closes held sequences, without timeout release.
-Application effects continuing beyond retirement require their own completion or
-fencing rule. Exact planning uses the documented finite language and refuses at
-resource bounds. Evidence consists of handwritten invariant arguments, finite
-oracles, generated schedules and same-host process/TCP measurements. Behavioral
-contract extraction and production-fleet deployment are separate engineering tasks.
-
-## Receipt isolation and standard MSS representation
-
-`results/receipt-isolation/` and `results/standard-mss-comparison/` record raw
-inputs and outcomes. `tests.receipt_snapshots` covers 12 direct-owner
-return-value isolation cases; `tests.labelled_mss_bridge` uses literal Boolean
-assignment and label-subset enumeration, not a new SAT engine. Both support fresh
-output directories. The labelled-MSS bridge concerns planning vectors only.
-The off-catalog unsafe corner and equal-cardinality/different-mass controls remain
-explicit. No new counts are folded into historical campaign denominators.
-Current full-lifecycle measurements include detached receipts and staged durable
-state publication. `results/durable-state-costs/` contains all 48 rows for 1,152
-proposals plus the actual hardware/environment and unchanged-during-run source
-bindings. Four policies share inputs and schedules, including the reversed
-evaluation batch. Application-frame counts include six acknowledged management
-exchanges; they are not TCP wire capture. The earlier measurements remain
-historical scientific records, separate from the current paper's cost table.
-
-`python -B -m tests.persistence_failures` exercises eight owner transaction
-controls and one owned local TCP recovery path. `python -B -m
-tests.origin_persistence_failures` covers 16 fixed/envelope origin phase controls.
-Actual SQLite write aborts and simulated postcommit errors are distinguished.
-The in-memory image is published after commit; a database error stops further
-authorization until durable reopen. `tests.window_types` checks exact integer
-window admission and rejects invalid measurement parameters before output creation.
-The lifecycle driver uses explicit execution and comparison checks in both normal
-and optimized Python. The optimizer benchmark likewise uses explicit plan-equality
-and certificate checks; `tests.window_types` exercises these paths with one mocked
-fixture in both modes, without remeasuring the retained timing cohort.
-`tests.cost_path_regression` checks complete frame accounting,
-rejects contradictory repetitions and rejects incomplete policy groups.
-These tests concern the owned protocol, not power loss or physical device writes.
-
-The reported new costs come from executed local workflows; general results use
-the stated mathematical-proof and implementation premises.
-
-The current manuscript's cold-lifecycle table consumes only
-`results/durable-state-costs/measurements.json`: for example, its small-payload
-matched Fixed median is 582.4542 ms. The 882.8377 ms value in
-`results/repair-full-path-summary.json` belongs to the earlier measurement cohort.
-`lifecycle_table.py` independently recomputes all 16 group medians from all 48 raw
-rows, checks their 1,152 proposals, and rejects mixing either cohort's summary with
-the other's measurements. `paper/generate_lifecycle.py` consumes this checked
-table during the complete project's paper build; no earlier measurements are
-silently replaced and no new timing result is inferred.
-
-```sh
-python -B -m unittest tests.lifecycle_table_regression -v
-python -B lifecycle_table.py
-```
-
-## Manuscript diagrams
-
-The architecture and relation matrix are drawn as native vector PDFs. They encode the
-stated relationships, not measured performance. Use Python 3.9+, Matplotlib
-and the manuscript's URW Times fonts (discoverable through `kpsewhich` or
-`FIGURE_TEX_FONT_DIR`):
-
-```sh
-python -B figures/draw_schematics.py --output figures
-```
-
-## Pure delivery-contract checks
-
-The default scientific CI also runs these data-only controls in normal and
-optimized Python, separately from the retained five-test smoke denominator:
-
-```sh
-python -B -m unittest tests.delivery_contracts -v
-python -O -B -m unittest tests.delivery_contracts -v
-python -B verify_claims.py
-```
-
-They use in-memory owners and a stubbed stream adapter (no listening socket or
-durable store), copied retained rows and small schema fixtures. The binding CLI
-also runs in child interpreters with UTF-8 mode disabled/enabled and C-locale
-coercion disabled. Both manifest and result JSON reads explicitly use UTF-8;
-numeric type/value rejection remains mandatory. No benchmark is invoked.
-
-Advertisements require exactly `node`, `generation` and canonical list-valued
-`support`; malformed nested profiles follow the existing `invalid` response path.
-Lifecycle aggregation requires the complete typed policy/payload/schedule/repeat
-product, rejecting duplicate, missing and Boolean/float repetition identities.
-Its ns-derived median is checked without pre-rounding; only TeX display rounds.
-The current and older retained cohorts still reaggregate separately and unchanged.
-
-The durable-cost cohort's original `environment.json` binds measured bytes, not
-today's source tree. Of its 44 sources, 35 currently match live files; seven
-preimages are preserved under `results/durable-state-costs/source-preimage/`,
-including the measured `tests/full_path_costs.py` before stricter aggregation.
-The other two, `src/controller.py` and `src/network.py`, reuse exact preimages at
-`results/effect-drain/source-preimage/`, checked against the durable-cost
-inventory's own hashes. See `results/durable-state-costs/README.md` for the paths.
-All preimages are data only, never imports or measurement entry points.
-
-The existing `lifecycle_table.py` receiver anchors the complete original
-path/SHA-256 mapping and verifies every recorded source before deriving the unchanged table. Its pure
-`tests.lifecycle_table_regression` controls reject missing/corrupt bytes,
-current-source substitution, rewritten inventories and malformed paths. Outcome
-counts must be bounded integers; Boolean, float and negative aliases reject.
-The effect-source
-checker retains its own digest guard. Historical source maps, raw measurements
-and failed attempts are not resealed or refreshed; this is not a rerun or a claim
-that every measured source matches current code.
-
-## Portable path notation
-
-Published execution records use `<PYTHON_ROOT>`, `<NODE_ROOT>` and `<RUNTIME_ROOT>` for local tool installations, `<DEPENDENCIES_ROOT>` for local dependencies, and `<PROJECTS_ROOT>`, `<ARTIFACT_ROOT>`, `<SOURCE_ROOT>` and `<WORK_ROOT>` for the workspace, artifact checkout, source checkout and temporary work directory of the recorded run. These are path aliases, not literal directories or claims that historical temporary files are included in this bundle. Substitute the corresponding local roots when replaying a command. Recorded tool versions, source/input identities, measurements, outcomes and failures are unchanged. Current file inventories bind the portable published bytes; any `recorded_` identity denotes pre-normalization bytes.
+Code and documentation are under the MIT License (`LICENSE`). Third-party
+sources consulted or transcribed (Android API records, scholarly works) keep
+their own terms; see `THIRD-PARTY-NOTICES.md` and `data/SOURCE-NOTES.md`.

@@ -1,0 +1,3420 @@
+[
+  {
+    "branches": [
+      {
+        "0": [
+          "server.interval.35_36"
+        ],
+        "1": [
+          "server.interval.35_36"
+        ],
+        "2": [
+          "client.interval.35_36"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.36_36"
+        ],
+        "1": [
+          "server.interval.36_36"
+        ],
+        "2": [
+          "client.interval.36_36"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.36_37"
+        ],
+        "1": [
+          "server.interval.36_37"
+        ],
+        "2": [
+          "client.interval.36_37"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.37_37"
+        ],
+        "1": [
+          "server.interval.37_37"
+        ],
+        "2": [
+          "client.interval.37_37"
+        ]
+      }
+    ],
+    "candidates": {
+      "0": [
+        [
+          "server.interval.35_36",
+          "server.interval.36_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      ],
+      "1": [
+        [
+          "server.interval.35_36",
+          "server.interval.36_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      ],
+      "2": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.34"
+        ],
+        [
+          "client.interval.35_36",
+          "client.interval.36_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.35_36",
+          "client.interval.36_36",
+          "version.client.33"
+        ],
+        [
+          "client.interval.36_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ]
+    },
+    "catalog_placements": 45,
+    "compatible_placements": [
+      [
+        35,
+        35,
+        33
+      ],
+      [
+        35,
+        35,
+        34
+      ],
+      [
+        35,
+        35,
+        35
+      ],
+      [
+        35,
+        36,
+        33
+      ],
+      [
+        35,
+        36,
+        34
+      ],
+      [
+        35,
+        36,
+        35
+      ],
+      [
+        36,
+        35,
+        33
+      ],
+      [
+        36,
+        35,
+        34
+      ],
+      [
+        36,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        33
+      ],
+      [
+        36,
+        36,
+        34
+      ],
+      [
+        36,
+        36,
+        35
+      ],
+      [
+        36,
+        36,
+        36
+      ],
+      [
+        36,
+        37,
+        34
+      ],
+      [
+        36,
+        37,
+        35
+      ],
+      [
+        36,
+        37,
+        36
+      ],
+      [
+        37,
+        36,
+        34
+      ],
+      [
+        37,
+        36,
+        35
+      ],
+      [
+        37,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        34
+      ],
+      [
+        37,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        37
+      ]
+    ],
+    "name": "boundary-three-owner",
+    "profiles": {
+      "0": {
+        "35": [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        "36": [
+          "server.interval.35_36",
+          "server.interval.36_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        "37": [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      },
+      "1": {
+        "35": [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        "36": [
+          "server.interval.35_36",
+          "server.interval.36_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        "37": [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      },
+      "2": {
+        "33": [
+          "client.interval.35_36",
+          "client.interval.36_36",
+          "version.client.33"
+        ],
+        "34": [
+          "client.interval.35_36",
+          "client.interval.36_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.34"
+        ],
+        "35": [
+          "client.interval.35_36",
+          "client.interval.36_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        "36": [
+          "client.interval.36_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        "37": [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      }
+    },
+    "regions": [
+      {
+        "clients": [
+          33,
+          34,
+          35
+        ],
+        "servers": [
+          35,
+          36
+        ],
+        "tag": "35_36"
+      },
+      {
+        "clients": [
+          33,
+          34,
+          35,
+          36
+        ],
+        "servers": [
+          36
+        ],
+        "tag": "36_36"
+      },
+      {
+        "clients": [
+          34,
+          35,
+          36
+        ],
+        "servers": [
+          36,
+          37
+        ],
+        "tag": "36_37"
+      },
+      {
+        "clients": [
+          34,
+          35,
+          36,
+          37
+        ],
+        "servers": [
+          37
+        ],
+        "tag": "37_37"
+      }
+    ],
+    "specification": {
+      "client_owners": 1,
+      "client_versions": [
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "name": "boundary-three-owner",
+      "server_owners": 2,
+      "server_versions": [
+        35,
+        36,
+        37
+      ],
+      "tasks": "all ordered pairs of numerically compatible placements, including equal pairs and direction-infeasible pairs"
+    },
+    "transitions": {
+      "0": [
+        {
+          "source": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "target": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ]
+        },
+        {
+          "source": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "target": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ]
+        }
+      ],
+      "1": [
+        {
+          "source": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "target": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ]
+        },
+        {
+          "source": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "target": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ]
+        }
+      ],
+      "2": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.34"
+          ],
+          "target": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "version.client.33"
+          ],
+          "target": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.34"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "branches": [
+      {
+        "0": [
+          "server.interval.35_36"
+        ],
+        "1": [
+          "server.interval.35_36"
+        ],
+        "2": [
+          "client.interval.35_36"
+        ],
+        "3": [
+          "client.interval.35_36"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.36_37"
+        ],
+        "1": [
+          "server.interval.36_37"
+        ],
+        "2": [
+          "client.interval.36_37"
+        ],
+        "3": [
+          "client.interval.36_37"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.37_37"
+        ],
+        "1": [
+          "server.interval.37_37"
+        ],
+        "2": [
+          "client.interval.37_37"
+        ],
+        "3": [
+          "client.interval.37_37"
+        ]
+      }
+    ],
+    "candidates": {
+      "0": [
+        [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      ],
+      "1": [
+        [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      ],
+      "2": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ],
+      "3": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ]
+    },
+    "catalog_placements": 81,
+    "compatible_placements": [
+      [
+        35,
+        35,
+        35,
+        35
+      ],
+      [
+        35,
+        36,
+        35,
+        35
+      ],
+      [
+        36,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        35,
+        36
+      ],
+      [
+        36,
+        36,
+        36,
+        35
+      ],
+      [
+        36,
+        36,
+        36,
+        36
+      ],
+      [
+        36,
+        37,
+        35,
+        35
+      ],
+      [
+        36,
+        37,
+        35,
+        36
+      ],
+      [
+        36,
+        37,
+        36,
+        35
+      ],
+      [
+        36,
+        37,
+        36,
+        36
+      ],
+      [
+        37,
+        36,
+        35,
+        35
+      ],
+      [
+        37,
+        36,
+        35,
+        36
+      ],
+      [
+        37,
+        36,
+        36,
+        35
+      ],
+      [
+        37,
+        36,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        37
+      ]
+    ],
+    "name": "active-4-owner",
+    "profiles": {
+      "0": {
+        "35": [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        "36": [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        "37": [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      },
+      "1": {
+        "35": [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        "36": [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        "37": [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      },
+      "2": {
+        "35": [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        "36": [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        "37": [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      },
+      "3": {
+        "35": [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        "36": [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        "37": [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      }
+    },
+    "regions": [
+      {
+        "clients": [
+          35
+        ],
+        "servers": [
+          35,
+          36
+        ],
+        "tag": "35_36"
+      },
+      {
+        "clients": [
+          35,
+          36
+        ],
+        "servers": [
+          36,
+          37
+        ],
+        "tag": "36_37"
+      },
+      {
+        "clients": [
+          35,
+          36,
+          37
+        ],
+        "servers": [
+          37
+        ],
+        "tag": "37_37"
+      }
+    ],
+    "specification": {
+      "client_owners": 2,
+      "client_versions": [
+        35,
+        36,
+        37
+      ],
+      "name": "active-4-owner",
+      "server_owners": 2,
+      "server_versions": [
+        35,
+        36,
+        37
+      ],
+      "tasks": [
+        {
+          "initial_clients": 35,
+          "initial_servers": 35,
+          "name": "two-minor-all",
+          "target_clients": 37,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 35,
+          "name": "first-minor-all",
+          "target_clients": 36,
+          "target_servers": 36
+        },
+        {
+          "initial_clients": 36,
+          "initial_servers": 36,
+          "name": "second-minor-all",
+          "target_clients": 37,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 35,
+          "name": "servers-ahead",
+          "target_clients": 36,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 36,
+          "name": "catch-up-all",
+          "target_clients": 37,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 37,
+          "name": "clients-only",
+          "target_clients": 37,
+          "target_servers": 37
+        }
+      ]
+    },
+    "transitions": {
+      "0": [
+        {
+          "source": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "target": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ]
+        },
+        {
+          "source": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "target": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ]
+        }
+      ],
+      "1": [
+        {
+          "source": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "target": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ]
+        },
+        {
+          "source": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "target": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ]
+        }
+      ],
+      "2": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ],
+      "3": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "branches": [
+      {
+        "0": [
+          "server.interval.35_36"
+        ],
+        "1": [
+          "server.interval.35_36"
+        ],
+        "2": [
+          "client.interval.35_36"
+        ],
+        "3": [
+          "client.interval.35_36"
+        ],
+        "4": [
+          "client.interval.35_36"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.36_37"
+        ],
+        "1": [
+          "server.interval.36_37"
+        ],
+        "2": [
+          "client.interval.36_37"
+        ],
+        "3": [
+          "client.interval.36_37"
+        ],
+        "4": [
+          "client.interval.36_37"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.37_37"
+        ],
+        "1": [
+          "server.interval.37_37"
+        ],
+        "2": [
+          "client.interval.37_37"
+        ],
+        "3": [
+          "client.interval.37_37"
+        ],
+        "4": [
+          "client.interval.37_37"
+        ]
+      }
+    ],
+    "candidates": {
+      "0": [
+        [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      ],
+      "1": [
+        [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      ],
+      "2": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ],
+      "3": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ],
+      "4": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ]
+    },
+    "catalog_placements": 243,
+    "compatible_placements": [
+      [
+        35,
+        35,
+        35,
+        35,
+        35
+      ],
+      [
+        35,
+        36,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        35,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        35,
+        35,
+        36
+      ],
+      [
+        36,
+        36,
+        35,
+        36,
+        35
+      ],
+      [
+        36,
+        36,
+        35,
+        36,
+        36
+      ],
+      [
+        36,
+        36,
+        36,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        36,
+        35,
+        36
+      ],
+      [
+        36,
+        36,
+        36,
+        36,
+        35
+      ],
+      [
+        36,
+        36,
+        36,
+        36,
+        36
+      ],
+      [
+        36,
+        37,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        37,
+        35,
+        35,
+        36
+      ],
+      [
+        36,
+        37,
+        35,
+        36,
+        35
+      ],
+      [
+        36,
+        37,
+        35,
+        36,
+        36
+      ],
+      [
+        36,
+        37,
+        36,
+        35,
+        35
+      ],
+      [
+        36,
+        37,
+        36,
+        35,
+        36
+      ],
+      [
+        36,
+        37,
+        36,
+        36,
+        35
+      ],
+      [
+        36,
+        37,
+        36,
+        36,
+        36
+      ],
+      [
+        37,
+        36,
+        35,
+        35,
+        35
+      ],
+      [
+        37,
+        36,
+        35,
+        35,
+        36
+      ],
+      [
+        37,
+        36,
+        35,
+        36,
+        35
+      ],
+      [
+        37,
+        36,
+        35,
+        36,
+        36
+      ],
+      [
+        37,
+        36,
+        36,
+        35,
+        35
+      ],
+      [
+        37,
+        36,
+        36,
+        35,
+        36
+      ],
+      [
+        37,
+        36,
+        36,
+        36,
+        35
+      ],
+      [
+        37,
+        36,
+        36,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        37
+      ]
+    ],
+    "name": "active-5-owner",
+    "profiles": {
+      "0": {
+        "35": [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        "36": [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        "37": [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      },
+      "1": {
+        "35": [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        "36": [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        "37": [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      },
+      "2": {
+        "35": [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        "36": [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        "37": [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      },
+      "3": {
+        "35": [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        "36": [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        "37": [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      },
+      "4": {
+        "35": [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        "36": [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        "37": [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      }
+    },
+    "regions": [
+      {
+        "clients": [
+          35
+        ],
+        "servers": [
+          35,
+          36
+        ],
+        "tag": "35_36"
+      },
+      {
+        "clients": [
+          35,
+          36
+        ],
+        "servers": [
+          36,
+          37
+        ],
+        "tag": "36_37"
+      },
+      {
+        "clients": [
+          35,
+          36,
+          37
+        ],
+        "servers": [
+          37
+        ],
+        "tag": "37_37"
+      }
+    ],
+    "specification": {
+      "client_owners": 3,
+      "client_versions": [
+        35,
+        36,
+        37
+      ],
+      "name": "active-5-owner",
+      "server_owners": 2,
+      "server_versions": [
+        35,
+        36,
+        37
+      ],
+      "tasks": [
+        {
+          "initial_clients": 35,
+          "initial_servers": 35,
+          "name": "two-minor-all",
+          "target_clients": 37,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 35,
+          "name": "first-minor-all",
+          "target_clients": 36,
+          "target_servers": 36
+        },
+        {
+          "initial_clients": 36,
+          "initial_servers": 36,
+          "name": "second-minor-all",
+          "target_clients": 37,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 35,
+          "name": "servers-ahead",
+          "target_clients": 36,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 36,
+          "name": "catch-up-all",
+          "target_clients": 37,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 37,
+          "name": "clients-only",
+          "target_clients": 37,
+          "target_servers": 37
+        }
+      ]
+    },
+    "transitions": {
+      "0": [
+        {
+          "source": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "target": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ]
+        },
+        {
+          "source": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "target": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ]
+        }
+      ],
+      "1": [
+        {
+          "source": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "target": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ]
+        },
+        {
+          "source": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "target": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ]
+        }
+      ],
+      "2": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ],
+      "3": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ],
+      "4": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "branches": [
+      {
+        "0": [
+          "server.interval.35_36"
+        ],
+        "1": [
+          "server.interval.35_36"
+        ],
+        "2": [
+          "client.interval.35_36"
+        ],
+        "3": [
+          "client.interval.35_36"
+        ],
+        "4": [
+          "client.interval.35_36"
+        ],
+        "5": [
+          "client.interval.35_36"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.36_37"
+        ],
+        "1": [
+          "server.interval.36_37"
+        ],
+        "2": [
+          "client.interval.36_37"
+        ],
+        "3": [
+          "client.interval.36_37"
+        ],
+        "4": [
+          "client.interval.36_37"
+        ],
+        "5": [
+          "client.interval.36_37"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.37_37"
+        ],
+        "1": [
+          "server.interval.37_37"
+        ],
+        "2": [
+          "client.interval.37_37"
+        ],
+        "3": [
+          "client.interval.37_37"
+        ],
+        "4": [
+          "client.interval.37_37"
+        ],
+        "5": [
+          "client.interval.37_37"
+        ]
+      }
+    ],
+    "candidates": {
+      "0": [
+        [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      ],
+      "1": [
+        [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      ],
+      "2": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ],
+      "3": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ],
+      "4": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ],
+      "5": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ]
+    },
+    "catalog_placements": 729,
+    "compatible_placements": [
+      [
+        35,
+        35,
+        35,
+        35,
+        35,
+        35
+      ],
+      [
+        35,
+        36,
+        35,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        35,
+        35,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        35,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        35,
+        35,
+        35,
+        36
+      ],
+      [
+        36,
+        36,
+        35,
+        35,
+        36,
+        35
+      ],
+      [
+        36,
+        36,
+        35,
+        35,
+        36,
+        36
+      ],
+      [
+        36,
+        36,
+        35,
+        36,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        35,
+        36,
+        35,
+        36
+      ],
+      [
+        36,
+        36,
+        35,
+        36,
+        36,
+        35
+      ],
+      [
+        36,
+        36,
+        35,
+        36,
+        36,
+        36
+      ],
+      [
+        36,
+        36,
+        36,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        36,
+        35,
+        35,
+        36
+      ],
+      [
+        36,
+        36,
+        36,
+        35,
+        36,
+        35
+      ],
+      [
+        36,
+        36,
+        36,
+        35,
+        36,
+        36
+      ],
+      [
+        36,
+        36,
+        36,
+        36,
+        35,
+        35
+      ],
+      [
+        36,
+        36,
+        36,
+        36,
+        35,
+        36
+      ],
+      [
+        36,
+        36,
+        36,
+        36,
+        36,
+        35
+      ],
+      [
+        36,
+        36,
+        36,
+        36,
+        36,
+        36
+      ],
+      [
+        36,
+        37,
+        35,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        37,
+        35,
+        35,
+        35,
+        36
+      ],
+      [
+        36,
+        37,
+        35,
+        35,
+        36,
+        35
+      ],
+      [
+        36,
+        37,
+        35,
+        35,
+        36,
+        36
+      ],
+      [
+        36,
+        37,
+        35,
+        36,
+        35,
+        35
+      ],
+      [
+        36,
+        37,
+        35,
+        36,
+        35,
+        36
+      ],
+      [
+        36,
+        37,
+        35,
+        36,
+        36,
+        35
+      ],
+      [
+        36,
+        37,
+        35,
+        36,
+        36,
+        36
+      ],
+      [
+        36,
+        37,
+        36,
+        35,
+        35,
+        35
+      ],
+      [
+        36,
+        37,
+        36,
+        35,
+        35,
+        36
+      ],
+      [
+        36,
+        37,
+        36,
+        35,
+        36,
+        35
+      ],
+      [
+        36,
+        37,
+        36,
+        35,
+        36,
+        36
+      ],
+      [
+        36,
+        37,
+        36,
+        36,
+        35,
+        35
+      ],
+      [
+        36,
+        37,
+        36,
+        36,
+        35,
+        36
+      ],
+      [
+        36,
+        37,
+        36,
+        36,
+        36,
+        35
+      ],
+      [
+        36,
+        37,
+        36,
+        36,
+        36,
+        36
+      ],
+      [
+        37,
+        36,
+        35,
+        35,
+        35,
+        35
+      ],
+      [
+        37,
+        36,
+        35,
+        35,
+        35,
+        36
+      ],
+      [
+        37,
+        36,
+        35,
+        35,
+        36,
+        35
+      ],
+      [
+        37,
+        36,
+        35,
+        35,
+        36,
+        36
+      ],
+      [
+        37,
+        36,
+        35,
+        36,
+        35,
+        35
+      ],
+      [
+        37,
+        36,
+        35,
+        36,
+        35,
+        36
+      ],
+      [
+        37,
+        36,
+        35,
+        36,
+        36,
+        35
+      ],
+      [
+        37,
+        36,
+        35,
+        36,
+        36,
+        36
+      ],
+      [
+        37,
+        36,
+        36,
+        35,
+        35,
+        35
+      ],
+      [
+        37,
+        36,
+        36,
+        35,
+        35,
+        36
+      ],
+      [
+        37,
+        36,
+        36,
+        35,
+        36,
+        35
+      ],
+      [
+        37,
+        36,
+        36,
+        35,
+        36,
+        36
+      ],
+      [
+        37,
+        36,
+        36,
+        36,
+        35,
+        35
+      ],
+      [
+        37,
+        36,
+        36,
+        36,
+        35,
+        36
+      ],
+      [
+        37,
+        36,
+        36,
+        36,
+        36,
+        35
+      ],
+      [
+        37,
+        36,
+        36,
+        36,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        35,
+        37,
+        37
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        36,
+        37,
+        37
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        35,
+        37,
+        37,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        35,
+        37,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        36,
+        37,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        36,
+        37,
+        37,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        35,
+        37,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        36,
+        37,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        35,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        35,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        35,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        36,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        36,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        36,
+        37
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        37,
+        35
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        37,
+        36
+      ],
+      [
+        37,
+        37,
+        37,
+        37,
+        37,
+        37
+      ]
+    ],
+    "name": "active-6-owner",
+    "profiles": {
+      "0": {
+        "35": [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        "36": [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        "37": [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      },
+      "1": {
+        "35": [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        "36": [
+          "server.interval.35_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        "37": [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      },
+      "2": {
+        "35": [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        "36": [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        "37": [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      },
+      "3": {
+        "35": [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        "36": [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        "37": [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      },
+      "4": {
+        "35": [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        "36": [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        "37": [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      },
+      "5": {
+        "35": [
+          "client.interval.35_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        "36": [
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        "37": [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      }
+    },
+    "regions": [
+      {
+        "clients": [
+          35
+        ],
+        "servers": [
+          35,
+          36
+        ],
+        "tag": "35_36"
+      },
+      {
+        "clients": [
+          35,
+          36
+        ],
+        "servers": [
+          36,
+          37
+        ],
+        "tag": "36_37"
+      },
+      {
+        "clients": [
+          35,
+          36,
+          37
+        ],
+        "servers": [
+          37
+        ],
+        "tag": "37_37"
+      }
+    ],
+    "specification": {
+      "client_owners": 4,
+      "client_versions": [
+        35,
+        36,
+        37
+      ],
+      "name": "active-6-owner",
+      "server_owners": 2,
+      "server_versions": [
+        35,
+        36,
+        37
+      ],
+      "tasks": [
+        {
+          "initial_clients": 35,
+          "initial_servers": 35,
+          "name": "two-minor-all",
+          "target_clients": 37,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 35,
+          "name": "first-minor-all",
+          "target_clients": 36,
+          "target_servers": 36
+        },
+        {
+          "initial_clients": 36,
+          "initial_servers": 36,
+          "name": "second-minor-all",
+          "target_clients": 37,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 35,
+          "name": "servers-ahead",
+          "target_clients": 36,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 36,
+          "name": "catch-up-all",
+          "target_clients": 37,
+          "target_servers": 37
+        },
+        {
+          "initial_clients": 35,
+          "initial_servers": 37,
+          "name": "clients-only",
+          "target_clients": 37,
+          "target_servers": 37
+        }
+      ]
+    },
+    "transitions": {
+      "0": [
+        {
+          "source": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "target": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ]
+        },
+        {
+          "source": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "target": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ]
+        }
+      ],
+      "1": [
+        {
+          "source": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "target": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ]
+        },
+        {
+          "source": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "target": [
+            "server.interval.35_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ]
+        }
+      ],
+      "2": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ],
+      "3": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ],
+      "4": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ],
+      "5": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ]
+    }
+  }
+]

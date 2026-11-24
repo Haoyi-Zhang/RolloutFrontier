@@ -1,0 +1,10 @@
+{
+  "accepted": 180,
+  "channel_catalogs": 8,
+  "descriptors": 20,
+  "event_effect_parser_invocations": 28,
+  "event_effect_witnesses": 14,
+  "matrix_parser_invocations": 280,
+  "rejected": 100,
+  "wires": 100
+}

@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "source_url": "https://kubernetes.io/releases/version-skew-policy/",
+  "checked_date": "2026-11-18",
+  "source_sections": ["Supported version skew / kube-apiserver", "Supported version skew / kubelet", "Supported version skew / kube-controller-manager, kube-scheduler, and cloud-controller-manager", "Supported version skew / kubectl"],
+  "representation": "Manually transcribed numerical policy facts, not a downloaded cluster trace or an implementation-derived compatibility measurement.",
+  "rules": {
+    "ha_apiserver_max_minor_distance": 1,
+    "kubelet_not_newer_than_each_apiserver": true,
+    "kubelet_max_older_minor_distance_at_or_above_1_25": 3,
+    "controller_not_newer_than_each_contacted_apiserver": true,
+    "controller_max_older_minor_distance": 1,
+    "kubectl_max_absolute_minor_distance_from_each_apiserver": 1
+  },
+  "server_minor_catalog": [36, 37],
+  "cases": [
+    {"role": "kubelet", "client_minor_catalog": [35, 36, 37], "current": [37, 37, 36]},
+    {"role": "controller", "client_minor_catalog": [36, 37], "current": [37, 37, 36]},
+    {"role": "kubectl", "client_minor_catalog": [35, 36, 37, 38], "current": [37, 37, 36]}
+  ],
+  "scope": "Three-component policy slices with two HA API servers. Additional deployment-tool restrictions, patch requirements, admission-webhook compatibility, node draining, upgrade sequencing, and Kubernetes execution are outside this fixture. The client can contact either API server."
+}

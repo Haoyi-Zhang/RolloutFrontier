@@ -1,0 +1,61 @@
+family,canonical_graph,name,graphs,queries,no_ops,reachable_changes,unreachable,exact_phases,owner_six_phases,stage_fixed_phases,stage_six_phases,combined_seven_phases,owner_six_gap_goals,stage_fixed_gap_goals,stage_six_gap_goals,combined_seven_gap_goals,full_goals,full_owner_six_gap_goals,full_stage_fixed_gap_goals,full_stage_six_gap_goals
+enum-alias,1,other graph with 1 edges,6,13824,288,3792,9744,5232,5232,5232,5232,5232,0,0,0,0,6,0,0,0
+enum-alias,3,other graph with 2 edges,3,3888,108,1308,2472,2244,2244,2244,2244,2244,0,0,0,0,3,0,0,0
+enum-alias,5,other graph with 2 edges,3,4800,120,1440,3240,2340,2340,2370,2340,2340,0,30,0,0,3,0,0,0
+enum-alias,6,other graph with 2 edges,6,7776,216,2568,4992,4248,4248,4296,4248,4248,0,48,0,0,6,0,0,0
+enum-alias,7,other graph with 3 edges,6,5400,180,1980,3240,3744,3744,3786,3744,3744,0,42,0,0,6,0,0,0
+enum-alias,10,other graph with 2 edges,3,4800,120,1470,3210,2046,2046,2046,2046,2046,0,0,0,0,3,0,0,0
+enum-alias,11,other graph with 3 edges,6,6144,192,2172,3780,3708,3708,3708,3708,3708,0,0,0,0,6,0,0,0
+enum-alias,15,other graph with 4 edges,3,2352,84,882,1386,1680,1680,1689,1680,1680,0,9,0,0,3,0,0,0
+enum-alias,21,other graph with 3 edges,6,6144,192,2136,3816,3552,3552,3602,3552,3552,0,50,0,0,6,0,0,0
+enum-alias,23,other graph with 4 edges,3,2028,78,798,1152,1524,1524,1542,1524,1524,0,18,0,0,3,0,0,0
+enum-alias,25,directed three-cycle,2,1568,56,600,912,1112,1124,1138,1112,1112,12,26,0,0,2,2,0,0
+enum-alias,27,directed three-cycle plus one reverse edge,6,4056,156,1596,2304,3024,3042,3064,3024,3024,18,40,0,0,6,6,0,0
+enum-alias,30,other graph with 4 edges,3,2352,84,888,1380,1518,1518,1518,1518,1518,0,0,0,0,3,0,0,0
+enum-alias,31,other graph with 5 edges,6,3456,144,1404,1908,2700,2700,2714,2700,2700,0,14,0,0,6,0,0,0
+enum-alias,63,other graph with 6 edges,1,484,22,204,258,394,394,394,394,394,0,0,0,0,1,0,0,0
+field-key,1,other graph with 1 edges,6,13824,288,3792,9744,5232,5232,5232,5232,5232,0,0,0,0,6,0,0,0
+field-key,3,other graph with 2 edges,3,3888,108,1308,2472,2244,2244,2244,2244,2244,0,0,0,0,3,0,0,0
+field-key,5,other graph with 2 edges,3,4800,120,1440,3240,2340,2340,2370,2340,2340,0,30,0,0,3,0,0,0
+field-key,6,other graph with 2 edges,6,7776,216,2568,4992,4248,4248,4296,4248,4248,0,48,0,0,6,0,0,0
+field-key,7,other graph with 3 edges,6,5400,180,1980,3240,3744,3744,3786,3744,3744,0,42,0,0,6,0,0,0
+field-key,10,other graph with 2 edges,3,4800,120,1470,3210,2046,2046,2046,2046,2046,0,0,0,0,3,0,0,0
+field-key,11,other graph with 3 edges,6,6144,192,2172,3780,3708,3708,3708,3708,3708,0,0,0,0,6,0,0,0
+field-key,15,other graph with 4 edges,3,2352,84,882,1386,1680,1680,1689,1680,1680,0,9,0,0,3,0,0,0
+field-key,21,other graph with 3 edges,6,6144,192,2136,3816,3552,3552,3602,3552,3552,0,50,0,0,6,0,0,0
+field-key,23,other graph with 4 edges,3,2028,78,798,1152,1524,1524,1542,1524,1524,0,18,0,0,3,0,0,0
+field-key,25,directed three-cycle,2,1568,56,600,912,1112,1124,1138,1112,1112,12,26,0,0,2,2,0,0
+field-key,27,directed three-cycle plus one reverse edge,6,4056,156,1596,2304,3024,3042,3064,3024,3024,18,40,0,0,6,6,0,0
+field-key,30,other graph with 4 edges,3,2352,84,888,1380,1518,1518,1518,1518,1518,0,0,0,0,3,0,0,0
+field-key,31,other graph with 5 edges,6,3456,144,1404,1908,2700,2700,2714,2700,2700,0,14,0,0,6,0,0,0
+field-key,63,other graph with 6 edges,1,484,22,204,258,394,394,394,394,394,0,0,0,0,1,0,0,0
+field-addition,1,other graph with 1 edges,6,3456,144,972,2340,1116,1116,1116,1116,1116,0,0,0,0,6,0,0,0
+field-addition,3,other graph with 2 edges,3,1452,66,435,951,531,531,531,531,531,0,0,0,0,3,0,0,0
+field-addition,5,other graph with 2 edges,3,1323,63,405,855,531,531,531,531,531,0,0,0,0,3,0,0,0
+field-addition,6,other graph with 2 edges,6,2646,126,816,1704,1056,1056,1056,1056,1056,0,0,0,0,6,0,0,0
+field-addition,7,other graph with 3 edges,6,2166,114,714,1338,984,984,984,984,984,0,0,0,0,6,0,0,0
+field-addition,10,other graph with 2 edges,3,1452,66,435,951,531,531,531,531,531,0,0,0,0,3,0,0,0
+field-addition,11,other graph with 3 edges,6,2400,120,768,1512,1008,1008,1008,1008,1008,0,0,0,0,6,0,0,0
+field-addition,15,other graph with 4 edges,3,972,54,333,585,468,468,468,468,468,0,0,0,0,3,0,0,0
+field-addition,21,other graph with 3 edges,6,2166,114,714,1338,984,984,984,984,984,0,0,0,0,6,0,0,0
+field-addition,23,other graph with 4 edges,3,867,51,309,507,450,450,450,450,450,0,0,0,0,3,0,0,0
+field-addition,25,directed three-cycle,2,648,36,222,390,320,322,320,320,320,2,0,0,0,2,2,0,0
+field-addition,27,directed three-cycle plus one reverse edge,6,1734,102,618,1014,906,906,906,906,906,0,0,0,0,6,0,0,0
+field-addition,30,other graph with 4 edges,3,972,54,333,585,468,468,468,468,468,0,0,0,0,3,0,0,0
+field-addition,31,other graph with 5 edges,6,1536,96,570,870,852,852,852,852,852,0,0,0,0,6,0,0,0
+field-addition,63,other graph with 6 edges,1,225,15,87,123,133,133,133,133,133,0,0,0,0,1,0,0,0
+integer-widening,1,other graph with 1 edges,6,3456,144,972,2340,1116,1116,1116,1116,1116,0,0,0,0,6,0,0,0
+integer-widening,3,other graph with 2 edges,3,1452,66,435,951,531,531,531,531,531,0,0,0,0,3,0,0,0
+integer-widening,5,other graph with 2 edges,3,1323,63,405,855,531,531,531,531,531,0,0,0,0,3,0,0,0
+integer-widening,6,other graph with 2 edges,6,2646,126,816,1704,1056,1056,1056,1056,1056,0,0,0,0,6,0,0,0
+integer-widening,7,other graph with 3 edges,6,2166,114,714,1338,984,984,984,984,984,0,0,0,0,6,0,0,0
+integer-widening,10,other graph with 2 edges,3,1452,66,435,951,531,531,531,531,531,0,0,0,0,3,0,0,0
+integer-widening,11,other graph with 3 edges,6,2400,120,768,1512,1008,1008,1008,1008,1008,0,0,0,0,6,0,0,0
+integer-widening,15,other graph with 4 edges,3,972,54,333,585,468,468,468,468,468,0,0,0,0,3,0,0,0
+integer-widening,21,other graph with 3 edges,6,2166,114,714,1338,984,984,984,984,984,0,0,0,0,6,0,0,0
+integer-widening,23,other graph with 4 edges,3,867,51,309,507,450,450,450,450,450,0,0,0,0,3,0,0,0
+integer-widening,25,directed three-cycle,2,648,36,222,390,320,322,320,320,320,2,0,0,0,2,2,0,0
+integer-widening,27,directed three-cycle plus one reverse edge,6,1734,102,618,1014,906,906,906,906,906,0,0,0,0,6,0,0,0
+integer-widening,30,other graph with 4 edges,3,972,54,333,585,468,468,468,468,468,0,0,0,0,3,0,0,0
+integer-widening,31,other graph with 5 edges,6,1536,96,570,870,852,852,852,852,852,0,0,0,0,6,0,0,0
+integer-widening,63,other graph with 6 edges,1,225,15,87,123,133,133,133,133,133,0,0,0,0,1,0,0,0

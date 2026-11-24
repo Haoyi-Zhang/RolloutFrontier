@@ -1,0 +1,46 @@
+test_boolean_and_float_certificate_sequences_fail_closed (tests.recovery_type_aliases.RecoveryTypeAliasTests.test_boolean_and_float_certificate_sequences_fail_closed) ... 
+  test_boolean_and_float_certificate_sequences_fail_closed (tests.recovery_type_aliases.RecoveryTypeAliasTests.test_boolean_and_float_certificate_sequences_fail_closed) (envelope=False, alias='True') ... FAIL
+  test_boolean_and_float_certificate_sequences_fail_closed (tests.recovery_type_aliases.RecoveryTypeAliasTests.test_boolean_and_float_certificate_sequences_fail_closed) (envelope=False, alias='1.0') ... FAIL
+  test_boolean_and_float_certificate_sequences_fail_closed (tests.recovery_type_aliases.RecoveryTypeAliasTests.test_boolean_and_float_certificate_sequences_fail_closed) (envelope=True, alias='True') ... FAIL
+  test_boolean_and_float_certificate_sequences_fail_closed (tests.recovery_type_aliases.RecoveryTypeAliasTests.test_boolean_and_float_certificate_sequences_fail_closed) (envelope=True, alias='1.0') ... FAIL
+
+======================================================================
+FAIL: test_boolean_and_float_certificate_sequences_fail_closed (tests.recovery_type_aliases.RecoveryTypeAliasTests.test_boolean_and_float_certificate_sequences_fail_closed) (envelope=False, alias='True')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/work/artifact/tests/recovery_type_aliases.py", line 34, in test_boolean_and_float_certificate_sequences_fail_closed
+    with self.assertRaisesRegex(ValueError, 'certificate binding'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_boolean_and_float_certificate_sequences_fail_closed (tests.recovery_type_aliases.RecoveryTypeAliasTests.test_boolean_and_float_certificate_sequences_fail_closed) (envelope=False, alias='1.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/work/artifact/tests/recovery_type_aliases.py", line 34, in test_boolean_and_float_certificate_sequences_fail_closed
+    with self.assertRaisesRegex(ValueError, 'certificate binding'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_boolean_and_float_certificate_sequences_fail_closed (tests.recovery_type_aliases.RecoveryTypeAliasTests.test_boolean_and_float_certificate_sequences_fail_closed) (envelope=True, alias='True')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/work/artifact/tests/recovery_type_aliases.py", line 34, in test_boolean_and_float_certificate_sequences_fail_closed
+    with self.assertRaisesRegex(ValueError, 'certificate binding'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_boolean_and_float_certificate_sequences_fail_closed (tests.recovery_type_aliases.RecoveryTypeAliasTests.test_boolean_and_float_certificate_sequences_fail_closed) (envelope=True, alias='1.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e34480916f53/work/artifact/tests/recovery_type_aliases.py", line 34, in test_boolean_and_float_certificate_sequences_fail_closed
+    with self.assertRaisesRegex(ValueError, 'certificate binding'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.075s
+
+FAILED (failures=4)

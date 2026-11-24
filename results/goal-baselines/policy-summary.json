@@ -1,0 +1,843 @@
+[
+  {
+    "domain": "boundary-three-owner",
+    "routes": {
+      "frontier-goal": {
+        "counts": {
+          "equal_cost_to_goal": 196,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 587,
+          "no_op": 23,
+          "nontrivial_reachable": 196,
+          "phase_total": 309,
+          "planned": 219,
+          "tasks": 529,
+          "unreachable": 310
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 1,
+            "phases": 1,
+            "tasks": 40
+          },
+          {
+            "installations": 2,
+            "phases": 1,
+            "tasks": 35
+          },
+          {
+            "installations": 3,
+            "phases": 1,
+            "tasks": 16
+          },
+          {
+            "installations": 4,
+            "phases": 1,
+            "tasks": 2
+          },
+          {
+            "installations": 2,
+            "phases": 2,
+            "tasks": 10
+          },
+          {
+            "installations": 3,
+            "phases": 2,
+            "tasks": 27
+          },
+          {
+            "installations": 4,
+            "phases": 2,
+            "tasks": 31
+          },
+          {
+            "installations": 5,
+            "phases": 2,
+            "tasks": 18
+          },
+          {
+            "installations": 6,
+            "phases": 2,
+            "tasks": 6
+          },
+          {
+            "installations": 7,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 5,
+            "phases": 3,
+            "tasks": 2
+          },
+          {
+            "installations": 6,
+            "phases": 3,
+            "tasks": 4
+          },
+          {
+            "installations": 7,
+            "phases": 3,
+            "tasks": 3
+          },
+          {
+            "installations": 8,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      },
+      "interval-optimal": {
+        "counts": {
+          "equal_cost_to_goal": 196,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 587,
+          "no_op": 23,
+          "nontrivial_reachable": 196,
+          "phase_total": 309,
+          "planned": 219,
+          "tasks": 529,
+          "unreachable": 310
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 1,
+            "phases": 1,
+            "tasks": 40
+          },
+          {
+            "installations": 2,
+            "phases": 1,
+            "tasks": 35
+          },
+          {
+            "installations": 3,
+            "phases": 1,
+            "tasks": 16
+          },
+          {
+            "installations": 4,
+            "phases": 1,
+            "tasks": 2
+          },
+          {
+            "installations": 2,
+            "phases": 2,
+            "tasks": 10
+          },
+          {
+            "installations": 3,
+            "phases": 2,
+            "tasks": 27
+          },
+          {
+            "installations": 4,
+            "phases": 2,
+            "tasks": 31
+          },
+          {
+            "installations": 5,
+            "phases": 2,
+            "tasks": 18
+          },
+          {
+            "installations": 6,
+            "phases": 2,
+            "tasks": 6
+          },
+          {
+            "installations": 7,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 5,
+            "phases": 3,
+            "tasks": 2
+          },
+          {
+            "installations": 6,
+            "phases": 3,
+            "tasks": 4
+          },
+          {
+            "installations": 7,
+            "phases": 3,
+            "tasks": 3
+          },
+          {
+            "installations": 8,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      },
+      "literal-products-optimal": {
+        "counts": {
+          "equal_cost_to_goal": 196,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 587,
+          "no_op": 23,
+          "nontrivial_reachable": 196,
+          "phase_total": 309,
+          "planned": 219,
+          "tasks": 529,
+          "unreachable": 310
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 1,
+            "phases": 1,
+            "tasks": 40
+          },
+          {
+            "installations": 2,
+            "phases": 1,
+            "tasks": 35
+          },
+          {
+            "installations": 3,
+            "phases": 1,
+            "tasks": 16
+          },
+          {
+            "installations": 4,
+            "phases": 1,
+            "tasks": 2
+          },
+          {
+            "installations": 2,
+            "phases": 2,
+            "tasks": 10
+          },
+          {
+            "installations": 3,
+            "phases": 2,
+            "tasks": 27
+          },
+          {
+            "installations": 4,
+            "phases": 2,
+            "tasks": 31
+          },
+          {
+            "installations": 5,
+            "phases": 2,
+            "tasks": 18
+          },
+          {
+            "installations": 6,
+            "phases": 2,
+            "tasks": 6
+          },
+          {
+            "installations": 7,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 5,
+            "phases": 3,
+            "tasks": 2
+          },
+          {
+            "installations": 6,
+            "phases": 3,
+            "tasks": 4
+          },
+          {
+            "installations": 7,
+            "phases": 3,
+            "tasks": 3
+          },
+          {
+            "installations": 8,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      },
+      "one-step": {
+        "counts": {
+          "equal_cost_to_goal": 50,
+          "higher_phase_cost_than_goal": 146,
+          "installation_total": 587,
+          "no_op": 23,
+          "nontrivial_reachable": 196,
+          "phase_total": 587,
+          "planned": 219,
+          "tasks": 529,
+          "unreachable": 310
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 1,
+            "phases": 1,
+            "tasks": 40
+          },
+          {
+            "installations": 2,
+            "phases": 2,
+            "tasks": 45
+          },
+          {
+            "installations": 3,
+            "phases": 3,
+            "tasks": 43
+          },
+          {
+            "installations": 4,
+            "phases": 4,
+            "tasks": 33
+          },
+          {
+            "installations": 5,
+            "phases": 5,
+            "tasks": 20
+          },
+          {
+            "installations": 6,
+            "phases": 6,
+            "tasks": 10
+          },
+          {
+            "installations": 7,
+            "phases": 7,
+            "tasks": 4
+          },
+          {
+            "installations": 8,
+            "phases": 8,
+            "tasks": 1
+          }
+        ]
+      },
+      "shortest-path-segmented": {
+        "counts": {
+          "equal_cost_to_goal": 196,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 587,
+          "no_op": 23,
+          "nontrivial_reachable": 196,
+          "phase_total": 309,
+          "planned": 219,
+          "tasks": 529,
+          "unreachable": 310
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 1,
+            "phases": 1,
+            "tasks": 40
+          },
+          {
+            "installations": 2,
+            "phases": 1,
+            "tasks": 35
+          },
+          {
+            "installations": 3,
+            "phases": 1,
+            "tasks": 16
+          },
+          {
+            "installations": 4,
+            "phases": 1,
+            "tasks": 2
+          },
+          {
+            "installations": 2,
+            "phases": 2,
+            "tasks": 10
+          },
+          {
+            "installations": 3,
+            "phases": 2,
+            "tasks": 27
+          },
+          {
+            "installations": 4,
+            "phases": 2,
+            "tasks": 31
+          },
+          {
+            "installations": 5,
+            "phases": 2,
+            "tasks": 18
+          },
+          {
+            "installations": 6,
+            "phases": 2,
+            "tasks": 6
+          },
+          {
+            "installations": 7,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 5,
+            "phases": 3,
+            "tasks": 2
+          },
+          {
+            "installations": 6,
+            "phases": 3,
+            "tasks": 4
+          },
+          {
+            "installations": 7,
+            "phases": 3,
+            "tasks": 3
+          },
+          {
+            "installations": 8,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "domain": "active-4-owner",
+    "routes": {
+      "frontier-goal": {
+        "counts": {
+          "equal_cost_to_goal": 6,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 32,
+          "nontrivial_reachable": 6,
+          "phase_total": 12,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 4,
+            "phases": 1,
+            "tasks": 1
+          },
+          {
+            "installations": 4,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 6,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 8,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      },
+      "interval-optimal": {
+        "counts": {
+          "equal_cost_to_goal": 6,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 32,
+          "nontrivial_reachable": 6,
+          "phase_total": 12,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 4,
+            "phases": 1,
+            "tasks": 1
+          },
+          {
+            "installations": 4,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 6,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 8,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      },
+      "one-step": {
+        "counts": {
+          "equal_cost_to_goal": 0,
+          "higher_phase_cost_than_goal": 6,
+          "installation_total": 32,
+          "nontrivial_reachable": 6,
+          "phase_total": 32,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 4,
+            "phases": 4,
+            "tasks": 3
+          },
+          {
+            "installations": 6,
+            "phases": 6,
+            "tasks": 2
+          },
+          {
+            "installations": 8,
+            "phases": 8,
+            "tasks": 1
+          }
+        ]
+      },
+      "shortest-path-segmented": {
+        "counts": {
+          "equal_cost_to_goal": 6,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 32,
+          "nontrivial_reachable": 6,
+          "phase_total": 12,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 4,
+            "phases": 1,
+            "tasks": 1
+          },
+          {
+            "installations": 4,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 6,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 8,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "domain": "active-5-owner",
+    "routes": {
+      "frontier-goal": {
+        "counts": {
+          "equal_cost_to_goal": 6,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 41,
+          "nontrivial_reachable": 6,
+          "phase_total": 12,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 6,
+            "phases": 1,
+            "tasks": 1
+          },
+          {
+            "installations": 5,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 7,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 8,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 10,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      },
+      "interval-optimal": {
+        "counts": {
+          "equal_cost_to_goal": 6,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 41,
+          "nontrivial_reachable": 6,
+          "phase_total": 12,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 6,
+            "phases": 1,
+            "tasks": 1
+          },
+          {
+            "installations": 5,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 7,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 8,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 10,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      },
+      "one-step": {
+        "counts": {
+          "equal_cost_to_goal": 0,
+          "higher_phase_cost_than_goal": 6,
+          "installation_total": 41,
+          "nontrivial_reachable": 6,
+          "phase_total": 41,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 5,
+            "phases": 5,
+            "tasks": 2
+          },
+          {
+            "installations": 6,
+            "phases": 6,
+            "tasks": 1
+          },
+          {
+            "installations": 7,
+            "phases": 7,
+            "tasks": 1
+          },
+          {
+            "installations": 8,
+            "phases": 8,
+            "tasks": 1
+          },
+          {
+            "installations": 10,
+            "phases": 10,
+            "tasks": 1
+          }
+        ]
+      },
+      "shortest-path-segmented": {
+        "counts": {
+          "equal_cost_to_goal": 6,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 41,
+          "nontrivial_reachable": 6,
+          "phase_total": 12,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 6,
+            "phases": 1,
+            "tasks": 1
+          },
+          {
+            "installations": 5,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 7,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 8,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 10,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "domain": "active-6-owner",
+    "routes": {
+      "frontier-goal": {
+        "counts": {
+          "equal_cost_to_goal": 6,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 50,
+          "nontrivial_reachable": 6,
+          "phase_total": 12,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 8,
+            "phases": 1,
+            "tasks": 1
+          },
+          {
+            "installations": 6,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 8,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 10,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 12,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      },
+      "interval-optimal": {
+        "counts": {
+          "equal_cost_to_goal": 6,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 50,
+          "nontrivial_reachable": 6,
+          "phase_total": 12,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 8,
+            "phases": 1,
+            "tasks": 1
+          },
+          {
+            "installations": 6,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 8,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 10,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 12,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      },
+      "one-step": {
+        "counts": {
+          "equal_cost_to_goal": 0,
+          "higher_phase_cost_than_goal": 6,
+          "installation_total": 50,
+          "nontrivial_reachable": 6,
+          "phase_total": 50,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 6,
+            "phases": 6,
+            "tasks": 2
+          },
+          {
+            "installations": 8,
+            "phases": 8,
+            "tasks": 2
+          },
+          {
+            "installations": 10,
+            "phases": 10,
+            "tasks": 1
+          },
+          {
+            "installations": 12,
+            "phases": 12,
+            "tasks": 1
+          }
+        ]
+      },
+      "shortest-path-segmented": {
+        "counts": {
+          "equal_cost_to_goal": 6,
+          "higher_phase_cost_than_goal": 0,
+          "installation_total": 50,
+          "nontrivial_reachable": 6,
+          "phase_total": 12,
+          "planned": 6,
+          "tasks": 6
+        },
+        "phase_installation_distribution": [
+          {
+            "installations": 8,
+            "phases": 1,
+            "tasks": 1
+          },
+          {
+            "installations": 6,
+            "phases": 2,
+            "tasks": 2
+          },
+          {
+            "installations": 8,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 10,
+            "phases": 2,
+            "tasks": 1
+          },
+          {
+            "installations": 12,
+            "phases": 3,
+            "tasks": 1
+          }
+        ]
+      }
+    }
+  }
+]

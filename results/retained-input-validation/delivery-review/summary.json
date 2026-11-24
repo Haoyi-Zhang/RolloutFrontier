@@ -1,0 +1,40 @@
+{
+  "active_figures": 9,
+  "citation_occurrences": 52,
+  "document_pages": {
+    "figure_atlas.pdf": 9,
+    "main.pdf": 12,
+    "supplement.pdf": 29,
+    "titlepage.pdf": 1
+  },
+  "evidence_checks": {
+    "code_unchanged": true,
+    "failed": 0,
+    "modes": [
+      "normal",
+      "optimized"
+    ],
+    "not_run": 0,
+    "passed": 52,
+    "tasks": 26
+  },
+  "ordinary_prose": {
+    "main": {
+      "matched": 75,
+      "short_tails": 0,
+      "unmatched": 0
+    },
+    "supplement": {
+      "matched": 217,
+      "short_tails": 0,
+      "unmatched": 0
+    }
+  },
+  "prior_README_changes_recorded": 0,
+  "prior_scientific_records_preserved": 9429,
+  "publication_regression_tests": 12,
+  "reference_entries": 44,
+  "scope": "Completed saved-data verification from the candidate ZIP extraction, publication consistency and exact prior-evidence retention. Physical experiments have separate retained records.",
+  "status": "PASS",
+  "visual_review_record_included": true
+}

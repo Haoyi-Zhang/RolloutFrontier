@@ -1,0 +1,5 @@
+contract,class,method,parameter_types,first_public_api_level
+haptic.one,android.os.VibrationEffect,createOneShot,"long;int",26
+haptic.wave,android.os.VibrationEffect,createWaveform,"long[];int",26
+haptic.amplitude,android.os.VibrationEffect,createWaveform,"long[];int[];int",26
+haptic.predefined,android.os.VibrationEffect,createPredefined,int,29

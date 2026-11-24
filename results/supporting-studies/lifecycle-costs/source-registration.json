@@ -1,0 +1,34 @@
+{
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "-m",
+    "tests.full_path_costs",
+    "--out",
+    "<OUTPUT>/measurements.json",
+    "--repeats",
+    "3"
+  ],
+  "available_logical_cpus": 9,
+  "pinned_logical_cpu": 8,
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "processor_model": "AMD EPYC 9V74 80-Core Processor",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scope": "Current source; own same-host processes and durable stores; no WAN or power-loss claim",
+  "source_sha256": {
+    "reproduce.py": "ed3846ce809260440329f04e56dc8ed4322df1980b4df11d9fb485a59a7b9f89",
+    "src/__init__.py": "8e14b370b8eda8f9282e04b22d801fff4ff10d6cad25119f8d4290322bafa2ca",
+    "src/batch.py": "87b96d1f1e507995325c61e0e385d20d5aea114a9aae9a5fe90b94279e91b04f",
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+    "tests/capture_revision_study.py": "9f5b66eb04085446d053bff5d31312a90f19acb05e9d58bdece2ed3e09925655",
+    "tests/cost_endpoint.py": "687b66235cf1c20554de30aa2702a81ccf0ee853701615784a4166e72ef53343",
+    "tests/full_path_costs.py": "e90a204cac1f9dc25fbb566c5f1991c2b3e60fd225060117484f3bafa630d115",
+    "verify_claims.py": "6138e0745dd4d39258c0c9069c26d82a324b238fc623973979aa1fd0b7e88a77"
+  },
+  "sqlite": "3.53.1",
+  "started_utc": "2026-11-19T03:49:40.500213+00:00",
+  "study": "costs"
+}

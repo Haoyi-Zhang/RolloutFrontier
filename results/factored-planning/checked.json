@@ -1,0 +1,72 @@
+{
+  "contexts": 991,
+  "corruption_controls": [
+    {
+      "name": "changed optimum",
+      "rejected": true
+    },
+    {
+      "name": "missing physical installation",
+      "rejected": true
+    },
+    {
+      "name": "unsafe positive guard",
+      "rejected": true
+    },
+    {
+      "name": "changed axis certificate",
+      "rejected": true
+    },
+    {
+      "name": "false closure counterexample",
+      "rejected": true
+    },
+    {
+      "name": "missing query",
+      "rejected": true
+    },
+    {
+      "name": "missing overlapping factor",
+      "rejected": true
+    }
+  ],
+  "groups": {
+    "binary-triple": {
+      "contexts": 255,
+      "installations": 765,
+      "noops": 457,
+      "phases": 685,
+      "planned_nontrivial": 553,
+      "queries": 2017,
+      "recognized": 121,
+      "refused": 134,
+      "unreachable": 1007
+    },
+    "overlapping-binary-pairs": {
+      "contexts": 225,
+      "installations": 400,
+      "noops": 365,
+      "phases": 353,
+      "planned_nontrivial": 315,
+      "queries": 1183,
+      "recognized": 169,
+      "refused": 56,
+      "unreachable": 503
+    },
+    "ternary-pair": {
+      "contexts": 511,
+      "installations": 1964,
+      "noops": 959,
+      "phases": 1511,
+      "planned_nontrivial": 1236,
+      "queries": 4635,
+      "recognized": 229,
+      "refused": 282,
+      "unreachable": 2440
+    }
+  },
+  "queries": 7835,
+  "recognized": 519,
+  "refused": 472,
+  "status": "pass"
+}

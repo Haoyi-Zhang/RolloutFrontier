@@ -1,0 +1,22 @@
+[
+  {
+    "mutation": "cost",
+    "reason": "Reported plan cost differs",
+    "status": "rejected"
+  },
+  {
+    "mutation": "inventory",
+    "reason": "Task inventory/order differs",
+    "status": "rejected"
+  },
+  {
+    "mutation": "guard",
+    "reason": "Unsafe positive guard corner",
+    "status": "rejected"
+  },
+  {
+    "mutation": "finite-optimum",
+    "reason": "Finite exact optimum differs",
+    "status": "rejected"
+  }
+]

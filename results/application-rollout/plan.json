@@ -1,0 +1,722 @@
+{
+  "branches": [
+    {
+      "0": [
+        "emit:ACTIVE"
+      ],
+      "1": [
+        "emit:ACTIVE",
+        "parse:ACTIVE"
+      ],
+      "2": [
+        "parse:ACTIVE"
+      ]
+    },
+    {
+      "0": [
+        "emit:ACTIVE"
+      ],
+      "1": [
+        "emit:ENABLED",
+        "parse:ACTIVE"
+      ],
+      "2": [
+        "parse:ENABLED"
+      ]
+    },
+    {
+      "0": [
+        "emit:ENABLED"
+      ],
+      "1": [
+        "emit:ACTIVE",
+        "parse:ENABLED"
+      ],
+      "2": [
+        "parse:ACTIVE"
+      ]
+    },
+    {
+      "0": [
+        "emit:ENABLED"
+      ],
+      "1": [
+        "emit:ENABLED",
+        "parse:ENABLED"
+      ],
+      "2": [
+        "parse:ENABLED"
+      ]
+    }
+  ],
+  "budgets": {
+    "frontier_states_per_expansion": 250000,
+    "phase_candidates": 250000,
+    "placements": 4096
+  },
+  "catalog": {
+    "0": [
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ],
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "program:legacy"
+      ],
+      [
+        "emit:ENABLED",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:emitting"
+      ],
+      [
+        "emit:ENABLED",
+        "parse:ENABLED",
+        "program:current"
+      ]
+    ],
+    "1": [
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ],
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "program:legacy"
+      ],
+      [
+        "emit:ENABLED",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:emitting"
+      ],
+      [
+        "emit:ENABLED",
+        "parse:ENABLED",
+        "program:current"
+      ]
+    ],
+    "2": [
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ],
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "program:legacy"
+      ],
+      [
+        "emit:ENABLED",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:emitting"
+      ],
+      [
+        "emit:ENABLED",
+        "parse:ENABLED",
+        "program:current"
+      ]
+    ]
+  },
+  "cost": {
+    "handoffs": 2,
+    "installations": 9,
+    "phases": 3
+  },
+  "initial": {
+    "0": [
+      "emit:ACTIVE",
+      "parse:ACTIVE",
+      "program:legacy"
+    ],
+    "1": [
+      "emit:ACTIVE",
+      "parse:ACTIVE",
+      "program:legacy"
+    ],
+    "2": [
+      "emit:ACTIVE",
+      "parse:ACTIVE",
+      "program:legacy"
+    ]
+  },
+  "objective": [
+    "fewest guard phases",
+    "fewest installations"
+  ],
+  "phases": [
+    {
+      "box": {
+        "0": [
+          [
+            "emit:ACTIVE"
+          ]
+        ],
+        "1": [
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE"
+          ]
+        ],
+        "2": [
+          [
+            "parse:ACTIVE"
+          ]
+        ]
+      },
+      "local_paths": {
+        "0": [
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "program:legacy"
+          ]
+        ],
+        "1": [
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "program:legacy"
+          ],
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:accepting"
+          ]
+        ],
+        "2": [
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "program:legacy"
+          ],
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:accepting"
+          ]
+        ]
+      },
+      "source": {
+        "0": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "program:legacy"
+        ],
+        "1": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "program:legacy"
+        ],
+        "2": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "program:legacy"
+        ]
+      },
+      "steps": [
+        {
+          "node": "1",
+          "support": [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:accepting"
+          ]
+        },
+        {
+          "node": "2",
+          "support": [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:accepting"
+          ]
+        }
+      ],
+      "target": {
+        "0": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "program:legacy"
+        ],
+        "1": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ],
+        "2": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ]
+      }
+    },
+    {
+      "box": {
+        "0": [
+          [
+            "emit:ACTIVE"
+          ],
+          [
+            "emit:ENABLED"
+          ]
+        ],
+        "1": [
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "parse:ENABLED"
+          ],
+          [
+            "emit:ENABLED",
+            "parse:ACTIVE",
+            "parse:ENABLED"
+          ]
+        ],
+        "2": [
+          [
+            "parse:ACTIVE",
+            "parse:ENABLED"
+          ]
+        ]
+      },
+      "local_paths": {
+        "0": [
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "program:legacy"
+          ],
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:accepting"
+          ],
+          [
+            "emit:ENABLED",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:emitting"
+          ]
+        ],
+        "1": [
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:accepting"
+          ],
+          [
+            "emit:ENABLED",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:emitting"
+          ]
+        ],
+        "2": [
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:accepting"
+          ]
+        ]
+      },
+      "source": {
+        "0": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "program:legacy"
+        ],
+        "1": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ],
+        "2": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ]
+      },
+      "steps": [
+        {
+          "node": "0",
+          "support": [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:accepting"
+          ]
+        },
+        {
+          "node": "0",
+          "support": [
+            "emit:ENABLED",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:emitting"
+          ]
+        },
+        {
+          "node": "1",
+          "support": [
+            "emit:ENABLED",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:emitting"
+          ]
+        }
+      ],
+      "target": {
+        "0": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ],
+        "1": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ],
+        "2": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ]
+      }
+    },
+    {
+      "box": {
+        "0": [
+          [
+            "emit:ENABLED"
+          ]
+        ],
+        "1": [
+          [
+            "emit:ENABLED",
+            "parse:ENABLED"
+          ]
+        ],
+        "2": [
+          [
+            "parse:ENABLED"
+          ]
+        ]
+      },
+      "local_paths": {
+        "0": [
+          [
+            "emit:ENABLED",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:emitting"
+          ],
+          [
+            "emit:ENABLED",
+            "parse:ENABLED",
+            "program:current"
+          ]
+        ],
+        "1": [
+          [
+            "emit:ENABLED",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:emitting"
+          ],
+          [
+            "emit:ENABLED",
+            "parse:ENABLED",
+            "program:current"
+          ]
+        ],
+        "2": [
+          [
+            "emit:ACTIVE",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:accepting"
+          ],
+          [
+            "emit:ENABLED",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:emitting"
+          ],
+          [
+            "emit:ENABLED",
+            "parse:ENABLED",
+            "program:current"
+          ]
+        ]
+      },
+      "source": {
+        "0": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ],
+        "1": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ],
+        "2": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ]
+      },
+      "steps": [
+        {
+          "node": "0",
+          "support": [
+            "emit:ENABLED",
+            "parse:ENABLED",
+            "program:current"
+          ]
+        },
+        {
+          "node": "1",
+          "support": [
+            "emit:ENABLED",
+            "parse:ENABLED",
+            "program:current"
+          ]
+        },
+        {
+          "node": "2",
+          "support": [
+            "emit:ENABLED",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:emitting"
+          ]
+        },
+        {
+          "node": "2",
+          "support": [
+            "emit:ENABLED",
+            "parse:ENABLED",
+            "program:current"
+          ]
+        }
+      ],
+      "target": {
+        "0": [
+          "emit:ENABLED",
+          "parse:ENABLED",
+          "program:current"
+        ],
+        "1": [
+          "emit:ENABLED",
+          "parse:ENABLED",
+          "program:current"
+        ],
+        "2": [
+          "emit:ENABLED",
+          "parse:ENABLED",
+          "program:current"
+        ]
+      }
+    }
+  ],
+  "schema": "rollout-goal-plan-v1",
+  "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+  "search": {
+    "after": {
+      "cached_state_expansions": 26,
+      "catalog_placements": 64,
+      "frontier_calls": 26,
+      "frontier_search_states": 468,
+      "phase_candidates": 311,
+      "phase_edge_budget_exhausted": false
+    },
+    "before": {
+      "cached_state_expansions": 0,
+      "catalog_placements": 64,
+      "frontier_calls": 0,
+      "frontier_search_states": 0,
+      "phase_candidates": 0,
+      "phase_edge_budget_exhausted": false
+    },
+    "query": {
+      "cached_state_expansions": 0,
+      "incumbent_pruned_states": 9,
+      "new_state_expansions": 26,
+      "settled_states": 36
+    }
+  },
+  "status": "planned",
+  "target": {
+    "0": [
+      "emit:ENABLED",
+      "parse:ENABLED",
+      "program:current"
+    ],
+    "1": [
+      "emit:ENABLED",
+      "parse:ENABLED",
+      "program:current"
+    ],
+    "2": [
+      "emit:ENABLED",
+      "parse:ENABLED",
+      "program:current"
+    ]
+  },
+  "transitions": {
+    "0": [
+      {
+        "source": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ],
+        "target": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ]
+      },
+      {
+        "source": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "program:legacy"
+        ],
+        "target": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ]
+      },
+      {
+        "source": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ],
+        "target": [
+          "emit:ENABLED",
+          "parse:ENABLED",
+          "program:current"
+        ]
+      }
+    ],
+    "1": [
+      {
+        "source": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ],
+        "target": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ]
+      },
+      {
+        "source": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "program:legacy"
+        ],
+        "target": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ]
+      },
+      {
+        "source": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ],
+        "target": [
+          "emit:ENABLED",
+          "parse:ENABLED",
+          "program:current"
+        ]
+      }
+    ],
+    "2": [
+      {
+        "source": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ],
+        "target": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ]
+      },
+      {
+        "source": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "program:legacy"
+        ],
+        "target": [
+          "emit:ACTIVE",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:accepting"
+        ]
+      },
+      {
+        "source": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ],
+        "target": [
+          "emit:ENABLED",
+          "parse:ENABLED",
+          "program:current"
+        ]
+      }
+    ]
+  }
+}

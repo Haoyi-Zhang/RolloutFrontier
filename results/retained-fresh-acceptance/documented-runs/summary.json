@@ -1,0 +1,248 @@
+{
+  "commands_found": 24,
+  "commands_passed": 0,
+  "commands_failed": 24,
+  "all_pass": false,
+  "rows": [
+    {
+      "id": 1,
+      "source": "artifact/README.md",
+      "line": 35,
+      "documented_command": "python -m pip install --require-hashes -r artifact/requirements-application.lock",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -m pip install --require-hashes -r artifact/requirements-application.lock",
+      "exit_code": 127,
+      "seconds": 0.002,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/01.log"
+    },
+    {
+      "id": 2,
+      "source": "artifact/README.md",
+      "line": 36,
+      "documented_command": "python -B artifact/verify.py --mode both --out /tmp/rollout-check",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B artifact/verify.py --mode both --out /tmp/rollout-check",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/02.log"
+    },
+    {
+      "id": 3,
+      "source": "artifact/README.md",
+      "line": 47,
+      "documented_command": "python -B artifact/review_acceptance.py --out /tmp/rollout-review",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B artifact/review_acceptance.py --out /tmp/rollout-review",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/03.log"
+    },
+    {
+      "id": 4,
+      "source": "artifact/README.md",
+      "line": 83,
+      "documented_command": "python -B reproduce.py --out /tmp/rollout-semantic-fresh \\",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B reproduce.py --out /tmp/rollout-semantic-fresh \\",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/04.log"
+    },
+    {
+      "id": 5,
+      "source": "artifact/docs/INPUT-VALIDATION.md",
+      "line": 82,
+      "documented_command": "python -B -m tests.check_utf8_campaign --results results/utf8-inputs --corruption-controls",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.check_utf8_campaign --results results/utf8-inputs --corruption-controls",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/05.log"
+    },
+    {
+      "id": 6,
+      "source": "artifact/docs/INPUT-VALIDATION.md",
+      "line": 83,
+      "documented_command": "python -O -B -m tests.check_utf8_campaign --results results/utf8-inputs --corruption-controls",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -O -B -m tests.check_utf8_campaign --results results/utf8-inputs --corruption-controls",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/06.log"
+    },
+    {
+      "id": 7,
+      "source": "artifact/docs/INPUT-VALIDATION.md",
+      "line": 89,
+      "documented_command": "python -B -m tests.utf8_input_regression --output /tmp/rollout-inputs/normal",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.utf8_input_regression --output /tmp/rollout-inputs/normal",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/07.log"
+    },
+    {
+      "id": 8,
+      "source": "artifact/docs/INPUT-VALIDATION.md",
+      "line": 90,
+      "documented_command": "python -O -B -m tests.utf8_input_regression --output /tmp/rollout-inputs/optimized",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -O -B -m tests.utf8_input_regression --output /tmp/rollout-inputs/optimized",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/08.log"
+    },
+    {
+      "id": 9,
+      "source": "artifact/docs/INPUT-VALIDATION.md",
+      "line": 91,
+      "documented_command": "python -B -m tests.check_utf8_inputs /tmp/rollout-inputs/normal --self-test",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.check_utf8_inputs /tmp/rollout-inputs/normal --self-test",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/09.log"
+    },
+    {
+      "id": 10,
+      "source": "artifact/docs/INPUT-VALIDATION.md",
+      "line": 92,
+      "documented_command": "python -O -B -m tests.check_utf8_inputs /tmp/rollout-inputs/optimized --self-test",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -O -B -m tests.check_utf8_inputs /tmp/rollout-inputs/optimized --self-test",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/10.log"
+    },
+    {
+      "id": 11,
+      "source": "artifact/docs/ADVERSARIAL-FRONTIER-DESIGN.md",
+      "line": 77,
+      "documented_command": "python -B -m tests.adversarial_frontier --out /tmp/rollout-adversarial-normal",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.adversarial_frontier --out /tmp/rollout-adversarial-normal",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/11.log"
+    },
+    {
+      "id": 12,
+      "source": "artifact/docs/ADVERSARIAL-FRONTIER-DESIGN.md",
+      "line": 78,
+      "documented_command": "python -O -B -m tests.adversarial_frontier --out /tmp/rollout-adversarial-optimized",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -O -B -m tests.adversarial_frontier --out /tmp/rollout-adversarial-optimized",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/12.log"
+    },
+    {
+      "id": 13,
+      "source": "artifact/docs/HETEROGENEOUS-RELEASES.md",
+      "line": 83,
+      "documented_command": "python -B -m tests.heterogeneous_schema_study /tmp/rollout-release-orders",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.heterogeneous_schema_study /tmp/rollout-release-orders",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/13.log"
+    },
+    {
+      "id": 14,
+      "source": "artifact/docs/APPLICATION-STUDY.md",
+      "line": 59,
+      "documented_command": "python -B -m tests.test_application_rollout",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.test_application_rollout",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/14.log"
+    },
+    {
+      "id": 15,
+      "source": "artifact/docs/APPLICATION-STUDY.md",
+      "line": 60,
+      "documented_command": "python -O -B -m tests.test_application_rollout",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -O -B -m tests.test_application_rollout",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/15.log"
+    },
+    {
+      "id": 16,
+      "source": "artifact/docs/DURABLE-ROLLOUT.md",
+      "line": 292,
+      "documented_command": "python -B -m tests.rollout_recovery --out /tmp/rollout-recovery-normal",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.rollout_recovery --out /tmp/rollout-recovery-normal",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/16.log"
+    },
+    {
+      "id": 17,
+      "source": "artifact/docs/DURABLE-ROLLOUT.md",
+      "line": 293,
+      "documented_command": "python -O -B -m tests.rollout_recovery --out /tmp/rollout-recovery-optimized",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -O -B -m tests.rollout_recovery --out /tmp/rollout-recovery-optimized",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/17.log"
+    },
+    {
+      "id": 18,
+      "source": "artifact/docs/DURABLE-ROLLOUT.md",
+      "line": 294,
+      "documented_command": "python -B -m tests.rollout_locality_study --out /tmp/rollout-locality-comparison",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.rollout_locality_study --out /tmp/rollout-locality-comparison",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/18.log"
+    },
+    {
+      "id": 19,
+      "source": "artifact/docs/REPRODUCTION.md",
+      "line": 114,
+      "documented_command": "python -B -m tests.factored_planning_study --out /tmp/rollout-factored-planning",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.factored_planning_study --out /tmp/rollout-factored-planning",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/19.log"
+    },
+    {
+      "id": 20,
+      "source": "artifact/docs/REPRODUCTION.md",
+      "line": 115,
+      "documented_command": "python -B -m tests.check_factored_planning --results /tmp/rollout-factored-planning --corruption-controls",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.check_factored_planning --results /tmp/rollout-factored-planning --corruption-controls",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/20.log"
+    },
+    {
+      "id": 21,
+      "source": "artifact/docs/REPRODUCTION.md",
+      "line": 116,
+      "documented_command": "python -O -B -m tests.check_factored_planning --results /tmp/rollout-factored-planning --corruption-controls",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -O -B -m tests.check_factored_planning --results /tmp/rollout-factored-planning --corruption-controls",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/21.log"
+    },
+    {
+      "id": 22,
+      "source": "artifact/docs/REPRODUCTION.md",
+      "line": 120,
+      "documented_command": "python -B -m tests.schema_contract_study --out /tmp/rollout-schema-census",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.schema_contract_study --out /tmp/rollout-schema-census",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/22.log"
+    },
+    {
+      "id": 23,
+      "source": "artifact/docs/REPRODUCTION.md",
+      "line": 121,
+      "documented_command": "python -B -m tests.check_schema_contracts --results /tmp/rollout-schema-census --corruption-controls",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -B -m tests.check_schema_contracts --results /tmp/rollout-schema-census --corruption-controls",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/23.log"
+    },
+    {
+      "id": 24,
+      "source": "artifact/docs/REPRODUCTION.md",
+      "line": 122,
+      "documented_command": "python -O -B -m tests.check_schema_contracts --results /tmp/rollout-schema-census --corruption-controls",
+      "executed_command": "/mnt/data/rollout_frontier_round9/exact-runtime/run-python312-retained.sh -O -B -m tests.check_schema_contracts --results /tmp/rollout-schema-census --corruption-controls",
+      "exit_code": 127,
+      "seconds": 0.001,
+      "log": "/mnt/data/rollout_frontier_round9/exact_documented_runs/24.log"
+    }
+  ]
+}

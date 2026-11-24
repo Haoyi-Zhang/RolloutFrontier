@@ -1,0 +1,2197 @@
+[
+  {
+    "after_drain_install": {
+      "observed": {
+        "generation": 1,
+        "node": 2,
+        "support": [
+          "emit:ENABLED",
+          "parse:ENABLED",
+          "program:current"
+        ]
+      },
+      "status": "installed"
+    },
+    "initial": [
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ],
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ],
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ]
+    ],
+    "late_request": {
+      "status": "not-authorized"
+    },
+    "name": "drain",
+    "new_request_rejected": true,
+    "premature_install": {
+      "holds": [
+        "2:1"
+      ],
+      "status": "blocked"
+    },
+    "result": {
+      "owner_replies": [
+        {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"11\",\"key\":\"drain\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "encode",
+          "status": "applied"
+        },
+        {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"40\",\"key\":\"drain\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "transform",
+          "status": "applied"
+        },
+        {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "record": {
+              "amount": 40,
+              "key": "drain"
+            }
+          },
+          "role": "store",
+          "status": "applied"
+        }
+      ],
+      "record": {
+        "amount": 40,
+        "key": "drain"
+      }
+    },
+    "retired": true,
+    "trace": [
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "0",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-drain-2vk3gh4k/process-node-0.sqlite",
+          "--initial",
+          "accepting"
+        ],
+        "event": "process-start",
+        "node": 0,
+        "pid": 113,
+        "time_ns": 95221484352859
+      },
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "1",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-drain-2vk3gh4k/process-node-1.sqlite",
+          "--initial",
+          "accepting"
+        ],
+        "event": "process-start",
+        "node": 1,
+        "pid": 114,
+        "time_ns": 95221613328523
+      },
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "2",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-drain-2vk3gh4k/process-node-2.sqlite",
+          "--initial",
+          "accepting"
+        ],
+        "event": "process-start",
+        "node": 2,
+        "pid": 115,
+        "time_ns": 95221875092242
+      },
+      {
+        "bytes": 179,
+        "call": 1,
+        "end_ns": 95221888282445,
+        "event": "rpc",
+        "owner_order": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95221882115042,
+        "target": 0,
+        "wall_ns": 6167403
+      },
+      {
+        "bytes": 179,
+        "call": 2,
+        "end_ns": 95221891187824,
+        "event": "rpc",
+        "owner_order": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95221888304018,
+        "target": 1,
+        "wall_ns": 2883806
+      },
+      {
+        "bytes": 179,
+        "call": 3,
+        "end_ns": 95221894133493,
+        "event": "rpc",
+        "owner_order": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95221891202486,
+        "target": 2,
+        "wall_ns": 2931007
+      },
+      {
+        "bytes": 301,
+        "call": 4,
+        "end_ns": 95221900466466,
+        "event": "rpc",
+        "owner_order": 2,
+        "request": {
+          "manifest": "drain-control-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "emit:ACTIVE"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "drain-control-attempt-0",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "emit:ACTIVE"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95221895610094,
+        "target": 0,
+        "wall_ns": 4856372
+      },
+      {
+        "bytes": 331,
+        "call": 5,
+        "end_ns": 95221916357350,
+        "event": "rpc",
+        "owner_order": 2,
+        "request": {
+          "manifest": "drain-control-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "emit:ACTIVE",
+            "parse:ACTIVE"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "drain-control-attempt-0",
+            "node": 1,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "emit:ACTIVE",
+              "parse:ACTIVE"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95221900499175,
+        "target": 1,
+        "wall_ns": 15858175
+      },
+      {
+        "bytes": 303,
+        "call": 6,
+        "end_ns": 95221922090150,
+        "event": "rpc",
+        "owner_order": 2,
+        "request": {
+          "manifest": "drain-control-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "parse:ACTIVE"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "drain-control-attempt-0",
+            "node": 2,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "parse:ACTIVE"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95221916386344,
+        "target": 2,
+        "wall_ns": 5703806
+      },
+      {
+        "bytes": 393,
+        "call": 7,
+        "end_ns": 95221935585763,
+        "event": "rpc",
+        "owner_order": 3,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": {
+            "amount": 11,
+            "key": "drain"
+          },
+          "manifest": "drain-control-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "drained-request",
+          "sequence": 1
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"11\",\"key\":\"drain\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "encode",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95221929509116,
+        "target": 0,
+        "wall_ns": 6076647
+      },
+      {
+        "bytes": 144,
+        "call": 8,
+        "end_ns": 95221940495776,
+        "event": "rpc",
+        "owner_order": 3,
+        "request": {
+          "op": "install",
+          "support": [
+            "emit:ENABLED",
+            "parse:ENABLED",
+            "program:current"
+          ]
+        },
+        "response": {
+          "holds": [
+            "2:1"
+          ],
+          "status": "blocked"
+        },
+        "source": 0,
+        "start_ns": 95221937112278,
+        "target": 2,
+        "wall_ns": 3383498
+      },
+      {
+        "bytes": 429,
+        "call": 9,
+        "end_ns": 95221946251871,
+        "event": "rpc",
+        "owner_order": 3,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": "{\"amount\":\"11\",\"key\":\"drain\",\"state\":\"ACTIVE\"}",
+          "manifest": "drain-control-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "drained-request",
+          "sequence": 1
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"40\",\"key\":\"drain\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "transform",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95221940658140,
+        "target": 1,
+        "wall_ns": 5593731
+      },
+      {
+        "bytes": 394,
+        "call": 10,
+        "end_ns": 95221951598440,
+        "event": "rpc",
+        "owner_order": 4,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": "{\"amount\":\"40\",\"key\":\"drain\",\"state\":\"ACTIVE\"}",
+          "manifest": "drain-control-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "drained-request",
+          "sequence": 1
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "record": {
+              "amount": 40,
+              "key": "drain"
+            }
+          },
+          "role": "store",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95221946288306,
+        "target": 2,
+        "wall_ns": 5310134
+      },
+      {
+        "bytes": 98,
+        "call": 11,
+        "end_ns": 95221975931343,
+        "event": "rpc",
+        "owner_order": 4,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95221969062715,
+        "target": 0,
+        "wall_ns": 6868628
+      },
+      {
+        "bytes": 98,
+        "call": 12,
+        "end_ns": 95221983032841,
+        "event": "rpc",
+        "owner_order": 4,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95221975956771,
+        "target": 1,
+        "wall_ns": 7076070
+      },
+      {
+        "bytes": 98,
+        "call": 13,
+        "end_ns": 95221988991811,
+        "event": "rpc",
+        "owner_order": 5,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95221983056557,
+        "target": 2,
+        "wall_ns": 5935254
+      },
+      {
+        "bytes": 228,
+        "call": 14,
+        "end_ns": 95222000465654,
+        "event": "rpc",
+        "owner_order": 6,
+        "request": {
+          "op": "install",
+          "support": [
+            "emit:ENABLED",
+            "parse:ENABLED",
+            "program:current"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 2,
+            "support": [
+              "emit:ENABLED",
+              "parse:ENABLED",
+              "program:current"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 0,
+        "start_ns": 95221991818421,
+        "target": 2,
+        "wall_ns": 8647233
+      },
+      {
+        "bytes": 266,
+        "call": 15,
+        "end_ns": 95222004248181,
+        "event": "rpc",
+        "owner_order": 7,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": "{\"key\":\"late\",\"amount\":\"10\",\"state\":\"ACTIVE\"}",
+          "manifest": "drain-control-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "post-retirement",
+          "sequence": 1
+        },
+        "response": {
+          "status": "not-authorized"
+        },
+        "source": 2,
+        "start_ns": 95222000494247,
+        "target": 2,
+        "wall_ns": 3753934
+      },
+      {
+        "event": "process-stop",
+        "killed": false,
+        "node": 0,
+        "returncode": -15
+      },
+      {
+        "event": "process-stop",
+        "killed": false,
+        "node": 1,
+        "returncode": -15
+      },
+      {
+        "event": "process-stop",
+        "killed": false,
+        "node": 2,
+        "returncode": -15
+      }
+    ]
+  },
+  {
+    "initial": [
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ],
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ],
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ]
+    ],
+    "name": "guard-controls",
+    "pipeline_rejected": true,
+    "removed": {
+      "floor": 1,
+      "status": "closed"
+    },
+    "trace": [
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "0",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-guard-isswcd32/process-node-0.sqlite",
+          "--initial",
+          "accepting"
+        ],
+        "event": "process-start",
+        "node": 0,
+        "pid": 116,
+        "time_ns": 95222228637984
+      },
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "1",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-guard-isswcd32/process-node-1.sqlite",
+          "--initial",
+          "accepting"
+        ],
+        "event": "process-start",
+        "node": 1,
+        "pid": 117,
+        "time_ns": 95222397088063
+      },
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "2",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-guard-isswcd32/process-node-2.sqlite",
+          "--initial",
+          "accepting"
+        ],
+        "event": "process-start",
+        "node": 2,
+        "pid": 118,
+        "time_ns": 95222544337945
+      },
+      {
+        "bytes": 179,
+        "call": 1,
+        "end_ns": 95222563621571,
+        "event": "rpc",
+        "owner_order": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95222549940429,
+        "target": 0,
+        "wall_ns": 13681142
+      },
+      {
+        "bytes": 179,
+        "call": 2,
+        "end_ns": 95222573876330,
+        "event": "rpc",
+        "owner_order": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95222563641200,
+        "target": 1,
+        "wall_ns": 10235130
+      },
+      {
+        "bytes": 179,
+        "call": 3,
+        "end_ns": 95222576484742,
+        "event": "rpc",
+        "owner_order": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95222573892434,
+        "target": 2,
+        "wall_ns": 2592308
+      },
+      {
+        "bytes": 301,
+        "call": 4,
+        "end_ns": 95222593801891,
+        "event": "rpc",
+        "owner_order": 2,
+        "request": {
+          "manifest": "guard-removal-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "emit:ACTIVE"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "guard-removal-attempt-0",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "emit:ACTIVE"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95222585516423,
+        "target": 0,
+        "wall_ns": 8285468
+      },
+      {
+        "bytes": 331,
+        "call": 5,
+        "end_ns": 95222598152533,
+        "event": "rpc",
+        "owner_order": 2,
+        "request": {
+          "manifest": "guard-removal-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "emit:ACTIVE",
+            "parse:ACTIVE"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "guard-removal-attempt-0",
+            "node": 1,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "emit:ACTIVE",
+              "parse:ACTIVE"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95222593824885,
+        "target": 1,
+        "wall_ns": 4327648
+      },
+      {
+        "bytes": 303,
+        "call": 6,
+        "end_ns": 95222603409958,
+        "event": "rpc",
+        "owner_order": 2,
+        "request": {
+          "manifest": "guard-removal-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "parse:ACTIVE"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "guard-removal-attempt-0",
+            "node": 2,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "parse:ACTIVE"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95222598172202,
+        "target": 2,
+        "wall_ns": 5237756
+      },
+      {
+        "bytes": 98,
+        "call": 7,
+        "end_ns": 95222617771212,
+        "event": "rpc",
+        "owner_order": 3,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95222613668894,
+        "target": 1,
+        "wall_ns": 4102318
+      },
+      {
+        "bytes": 391,
+        "call": 8,
+        "end_ns": 95222624993342,
+        "event": "rpc",
+        "owner_order": 3,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": {
+            "amount": 9,
+            "key": "fenced"
+          },
+          "manifest": "guard-removal-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "without-guard",
+          "sequence": 1
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"9\",\"key\":\"fenced\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "encode",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95222619039710,
+        "target": 0,
+        "wall_ns": 5953632
+      },
+      {
+        "bytes": 265,
+        "call": 9,
+        "end_ns": 95222632415582,
+        "event": "rpc",
+        "owner_order": 4,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": "{\"amount\":\"9\",\"key\":\"fenced\",\"state\":\"ACTIVE\"}",
+          "manifest": "guard-removal-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "without-guard",
+          "sequence": 1
+        },
+        "response": {
+          "status": "not-authorized"
+        },
+        "source": 2,
+        "start_ns": 95222625024749,
+        "target": 1,
+        "wall_ns": 7390833
+      },
+      {
+        "bytes": 249,
+        "call": 10,
+        "end_ns": 95222638813152,
+        "event": "rpc",
+        "owner_order": 4,
+        "request": {
+          "manifest": "weak-guard",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [],
+          "sequence": 2
+        },
+        "response": {
+          "receipt": {
+            "manifest": "weak-guard",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [],
+            "sequence": 2,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95222635261702,
+        "target": 0,
+        "wall_ns": 3551450
+      },
+      {
+        "bytes": 222,
+        "call": 11,
+        "end_ns": 95222648088629,
+        "event": "rpc",
+        "owner_order": 5,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": {
+            "amount": 1,
+            "key": "weak"
+          },
+          "manifest": "weak-guard",
+          "op": "application",
+          "origin": 2,
+          "request_id": "weak-authority",
+          "sequence": 2
+        },
+        "response": {
+          "status": "codec-not-retained"
+        },
+        "source": 2,
+        "start_ns": 95222645755260,
+        "target": 0,
+        "wall_ns": 2333369
+      },
+      {
+        "bytes": 98,
+        "call": 12,
+        "end_ns": 95222654438337,
+        "event": "rpc",
+        "owner_order": 6,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 2
+        },
+        "response": {
+          "floor": 0,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95222650578713,
+        "target": 0,
+        "wall_ns": 3859624
+      },
+      {
+        "bytes": 115,
+        "call": 13,
+        "end_ns": 95222666579853,
+        "event": "rpc",
+        "owner_order": 7,
+        "request": {
+          "op": "install",
+          "support": [
+            "emit:ACTIVE"
+          ]
+        },
+        "response": {
+          "reason": "ValueError",
+          "status": "invalid"
+        },
+        "source": 0,
+        "start_ns": 95222661279423,
+        "target": 0,
+        "wall_ns": 5300430
+      },
+      {
+        "event": "process-stop",
+        "killed": false,
+        "node": 0,
+        "returncode": -15
+      },
+      {
+        "event": "process-stop",
+        "killed": false,
+        "node": 1,
+        "returncode": -15
+      },
+      {
+        "event": "process-stop",
+        "killed": false,
+        "node": 2,
+        "returncode": -15
+      }
+    ],
+    "unknown_program": {
+      "reason": "ValueError",
+      "status": "invalid"
+    },
+    "weak_authority": {
+      "status": "codec-not-retained"
+    }
+  },
+  {
+    "after_reopen": {
+      "owner_replies": [
+        {
+          "applied_generation": 1,
+          "applied_program": "emitting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"3\",\"key\":\"active\",\"state\":\"ENABLED\"}"
+          },
+          "role": "encode",
+          "status": "applied"
+        },
+        {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"16\",\"key\":\"active\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "transform",
+          "status": "applied"
+        },
+        {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "record": {
+              "amount": 16,
+              "key": "active"
+            }
+          },
+          "role": "store",
+          "status": "applied"
+        }
+      ],
+      "record": {
+        "amount": 16,
+        "key": "active"
+      }
+    },
+    "committed_before_retry": [
+      [
+        "uncertain-request",
+        "[\"ACTIVE\",\"ACTIVE\"]",
+        "\"{\\\"amount\\\":\\\"-14\\\",\\\"key\\\":\\\"recovered\\\",\\\"state\\\":\\\"ACTIVE\\\"}\"",
+        "{\"record\":{\"amount\":-14,\"key\":\"recovered\"}}",
+        0,
+        "accepting"
+      ]
+    ],
+    "initial": [
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ],
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ],
+      [
+        "emit:ACTIVE",
+        "parse:ACTIVE",
+        "parse:ENABLED",
+        "program:accepting"
+      ]
+    ],
+    "installed": {
+      "observed": {
+        "generation": 1,
+        "node": 0,
+        "support": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ]
+      },
+      "status": "installed"
+    },
+    "name": "crash-recovery",
+    "pending_retirement": false,
+    "reopened": {
+      "observed": {
+        "generation": 1,
+        "node": 0,
+        "support": [
+          "emit:ENABLED",
+          "parse:ACTIVE",
+          "parse:ENABLED",
+          "program:emitting"
+        ]
+      },
+      "status": "observed"
+    },
+    "retry": {
+      "owner_replies": [
+        {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": true,
+          "output": {
+            "wire": "{\"amount\":\"-7\",\"key\":\"recovered\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "encode",
+          "status": "applied"
+        },
+        {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": true,
+          "output": {
+            "wire": "{\"amount\":\"-14\",\"key\":\"recovered\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "transform",
+          "status": "applied"
+        },
+        {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": true,
+          "output": {
+            "record": {
+              "amount": -14,
+              "key": "recovered"
+            }
+          },
+          "role": "store",
+          "status": "applied"
+        }
+      ],
+      "record": {
+        "amount": -14,
+        "key": "recovered"
+      }
+    },
+    "sink_exit_code": -9,
+    "trace": [
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "0",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-crash-z3hfjdob/process-node-0.sqlite",
+          "--initial",
+          "accepting"
+        ],
+        "event": "process-start",
+        "node": 0,
+        "pid": 119,
+        "time_ns": 95222809242928
+      },
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "1",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-crash-z3hfjdob/process-node-1.sqlite",
+          "--initial",
+          "accepting"
+        ],
+        "event": "process-start",
+        "node": 1,
+        "pid": 120,
+        "time_ns": 95222914688100
+      },
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "2",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-crash-z3hfjdob/process-node-2.sqlite",
+          "--initial",
+          "accepting",
+          "--kill-after-request",
+          "uncertain-request"
+        ],
+        "event": "process-start",
+        "node": 2,
+        "pid": 121,
+        "time_ns": 95223034505423
+      },
+      {
+        "bytes": 179,
+        "call": 1,
+        "end_ns": 95223040489681,
+        "event": "rpc",
+        "owner_order": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95223037621328,
+        "target": 0,
+        "wall_ns": 2868353
+      },
+      {
+        "bytes": 179,
+        "call": 2,
+        "end_ns": 95223043452746,
+        "event": "rpc",
+        "owner_order": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95223040508910,
+        "target": 1,
+        "wall_ns": 2943836
+      },
+      {
+        "bytes": 179,
+        "call": 3,
+        "end_ns": 95223046208941,
+        "event": "rpc",
+        "owner_order": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95223043469131,
+        "target": 2,
+        "wall_ns": 2739810
+      },
+      {
+        "bytes": 295,
+        "call": 4,
+        "end_ns": 95223068974272,
+        "event": "rpc",
+        "owner_order": 2,
+        "request": {
+          "manifest": "sink-crash-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "emit:ACTIVE"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "sink-crash-attempt-0",
+            "node": 0,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "emit:ACTIVE"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95223047589527,
+        "target": 0,
+        "wall_ns": 21384745
+      },
+      {
+        "bytes": 325,
+        "call": 5,
+        "end_ns": 95223072958392,
+        "event": "rpc",
+        "owner_order": 2,
+        "request": {
+          "manifest": "sink-crash-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "emit:ACTIVE",
+            "parse:ACTIVE"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "sink-crash-attempt-0",
+            "node": 1,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "emit:ACTIVE",
+              "parse:ACTIVE"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95223068997897,
+        "target": 1,
+        "wall_ns": 3960495
+      },
+      {
+        "bytes": 297,
+        "call": 6,
+        "end_ns": 95223079499087,
+        "event": "rpc",
+        "owner_order": 2,
+        "request": {
+          "manifest": "sink-crash-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "parse:ACTIVE"
+          ],
+          "sequence": 1
+        },
+        "response": {
+          "receipt": {
+            "manifest": "sink-crash-attempt-0",
+            "node": 2,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "parse:ACTIVE"
+            ],
+            "sequence": 1,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95223072970220,
+        "target": 2,
+        "wall_ns": 6528867
+      },
+      {
+        "bytes": 400,
+        "call": 7,
+        "end_ns": 95223095587013,
+        "event": "rpc",
+        "owner_order": 3,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": {
+            "amount": -7,
+            "key": "recovered"
+          },
+          "manifest": "sink-crash-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "uncertain-request",
+          "sequence": 1
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"-7\",\"key\":\"recovered\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "encode",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95223091163651,
+        "target": 0,
+        "wall_ns": 4423362
+      },
+      {
+        "bytes": 437,
+        "call": 8,
+        "end_ns": 95223100317236,
+        "event": "rpc",
+        "owner_order": 3,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": "{\"amount\":\"-7\",\"key\":\"recovered\",\"state\":\"ACTIVE\"}",
+          "manifest": "sink-crash-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "uncertain-request",
+          "sequence": 1
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"-14\",\"key\":\"recovered\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "transform",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95223095616587,
+        "target": 1,
+        "wall_ns": 4700649
+      },
+      {
+        "call": 9,
+        "end_ns": 95223104049397,
+        "event": "unreachable",
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": "{\"amount\":\"-14\",\"key\":\"recovered\",\"state\":\"ACTIVE\"}",
+          "manifest": "sink-crash-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "uncertain-request",
+          "sequence": 1
+        },
+        "response": null,
+        "source": 2,
+        "start_ns": 95223100340661,
+        "target": 2,
+        "wall_ns": 3708736
+      },
+      {
+        "event": "process-stop",
+        "killed": true,
+        "node": 2,
+        "returncode": -9
+      },
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "2",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-crash-z3hfjdob/process-node-2.sqlite",
+          "--initial",
+          "accepting"
+        ],
+        "event": "process-start",
+        "node": 2,
+        "pid": 122,
+        "time_ns": 95223398844464
+      },
+      {
+        "event": "process-restart",
+        "node": 2
+      },
+      {
+        "bytes": 399,
+        "call": 10,
+        "end_ns": 95223406014946,
+        "event": "rpc",
+        "owner_order": 4,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": {
+            "amount": -7,
+            "key": "recovered"
+          },
+          "manifest": "sink-crash-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "uncertain-request",
+          "sequence": 1
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": true,
+          "output": {
+            "wire": "{\"amount\":\"-7\",\"key\":\"recovered\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "encode",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95223399020549,
+        "target": 0,
+        "wall_ns": 6994397
+      },
+      {
+        "bytes": 436,
+        "call": 11,
+        "end_ns": 95223408348605,
+        "event": "rpc",
+        "owner_order": 4,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": "{\"amount\":\"-7\",\"key\":\"recovered\",\"state\":\"ACTIVE\"}",
+          "manifest": "sink-crash-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "uncertain-request",
+          "sequence": 1
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": true,
+          "output": {
+            "wire": "{\"amount\":\"-14\",\"key\":\"recovered\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "transform",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95223406051922,
+        "target": 1,
+        "wall_ns": 2296683
+      },
+      {
+        "bytes": 402,
+        "call": 12,
+        "end_ns": 95223411248556,
+        "event": "rpc",
+        "owner_order": 3,
+        "request": {
+          "codec": [
+            "ACTIVE",
+            "ACTIVE"
+          ],
+          "input": "{\"amount\":\"-14\",\"key\":\"recovered\",\"state\":\"ACTIVE\"}",
+          "manifest": "sink-crash-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "uncertain-request",
+          "sequence": 1
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": true,
+          "output": {
+            "record": {
+              "amount": -14,
+              "key": "recovered"
+            }
+          },
+          "role": "store",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95223408370478,
+        "target": 2,
+        "wall_ns": 2878078
+      },
+      {
+        "bytes": 98,
+        "call": 13,
+        "end_ns": 95223418173088,
+        "event": "rpc",
+        "owner_order": 5,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95223414271030,
+        "target": 0,
+        "wall_ns": 3902058
+      },
+      {
+        "bytes": 98,
+        "call": 14,
+        "end_ns": 95223425723361,
+        "event": "rpc",
+        "owner_order": 5,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95223418182552,
+        "target": 1,
+        "wall_ns": 7540809
+      },
+      {
+        "bytes": 98,
+        "call": 15,
+        "end_ns": 95223429894462,
+        "event": "rpc",
+        "owner_order": 4,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 1
+        },
+        "response": {
+          "floor": 1,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95223425733816,
+        "target": 2,
+        "wall_ns": 4160646
+      },
+      {
+        "bytes": 260,
+        "call": 16,
+        "end_ns": 95223434576673,
+        "event": "rpc",
+        "owner_order": 6,
+        "request": {
+          "op": "install",
+          "support": [
+            "emit:ENABLED",
+            "parse:ACTIVE",
+            "parse:ENABLED",
+            "program:emitting"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "emit:ENABLED",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:emitting"
+            ]
+          },
+          "status": "installed"
+        },
+        "source": 0,
+        "start_ns": 95223431178754,
+        "target": 0,
+        "wall_ns": 3397919
+      },
+      {
+        "event": "process-stop",
+        "killed": true,
+        "node": 0,
+        "returncode": -9
+      },
+      {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "-B",
+          "-m",
+          "src.application",
+          "--serve",
+          "0",
+          "--database",
+          "/workspace/scratch/e34480916f53/completion/project/artifact/application-crash-z3hfjdob/process-node-0.sqlite",
+          "--initial",
+          "accepting"
+        ],
+        "event": "process-start",
+        "node": 0,
+        "pid": 123,
+        "time_ns": 95223714182040
+      },
+      {
+        "event": "process-restart",
+        "node": 0
+      },
+      {
+        "bytes": 179,
+        "call": 17,
+        "end_ns": 95223720927833,
+        "event": "rpc",
+        "owner_order": 7,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "emit:ENABLED",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:emitting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 0,
+        "start_ns": 95223714191184,
+        "target": 0,
+        "wall_ns": 6736649
+      },
+      {
+        "bytes": 179,
+        "call": 18,
+        "end_ns": 95223722768321,
+        "event": "rpc",
+        "owner_order": 8,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "emit:ENABLED",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:emitting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95223720945981,
+        "target": 0,
+        "wall_ns": 1822340
+      },
+      {
+        "bytes": 179,
+        "call": 19,
+        "end_ns": 95223725297985,
+        "event": "rpc",
+        "owner_order": 6,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 1,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95223722775111,
+        "target": 1,
+        "wall_ns": 2522874
+      },
+      {
+        "bytes": 179,
+        "call": 20,
+        "end_ns": 95223730810293,
+        "event": "rpc",
+        "owner_order": 5,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 2,
+            "support": [
+              "emit:ACTIVE",
+              "parse:ACTIVE",
+              "parse:ENABLED",
+              "program:accepting"
+            ]
+          },
+          "status": "observed"
+        },
+        "source": 2,
+        "start_ns": 95223725304805,
+        "target": 2,
+        "wall_ns": 5505488
+      },
+      {
+        "bytes": 323,
+        "call": 21,
+        "end_ns": 95223739792700,
+        "event": "rpc",
+        "owner_order": 9,
+        "request": {
+          "manifest": "after-activation-reopen-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "emit:ENABLED"
+          ],
+          "sequence": 2
+        },
+        "response": {
+          "receipt": {
+            "manifest": "after-activation-reopen-attempt-0",
+            "node": 0,
+            "observed_generation": 1,
+            "origin": 2,
+            "requires": [
+              "emit:ENABLED"
+            ],
+            "sequence": 2,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95223732847426,
+        "target": 0,
+        "wall_ns": 6945274
+      },
+      {
+        "bytes": 353,
+        "call": 22,
+        "end_ns": 95223744987531,
+        "event": "rpc",
+        "owner_order": 7,
+        "request": {
+          "manifest": "after-activation-reopen-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "emit:ACTIVE",
+            "parse:ENABLED"
+          ],
+          "sequence": 2
+        },
+        "response": {
+          "receipt": {
+            "manifest": "after-activation-reopen-attempt-0",
+            "node": 1,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "emit:ACTIVE",
+              "parse:ENABLED"
+            ],
+            "sequence": 2,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95223739803837,
+        "target": 1,
+        "wall_ns": 5183694
+      },
+      {
+        "bytes": 323,
+        "call": 23,
+        "end_ns": 95223765020774,
+        "event": "rpc",
+        "owner_order": 6,
+        "request": {
+          "manifest": "after-activation-reopen-attempt-0",
+          "op": "prepare",
+          "origin": 2,
+          "requires": [
+            "parse:ACTIVE"
+          ],
+          "sequence": 2
+        },
+        "response": {
+          "receipt": {
+            "manifest": "after-activation-reopen-attempt-0",
+            "node": 2,
+            "observed_generation": 0,
+            "origin": 2,
+            "requires": [
+              "parse:ACTIVE"
+            ],
+            "sequence": 2,
+            "status": "held"
+          },
+          "status": "held"
+        },
+        "source": 2,
+        "start_ns": 95223745000210,
+        "target": 2,
+        "wall_ns": 20020564
+      },
+      {
+        "bytes": 402,
+        "call": 24,
+        "end_ns": 95223777603223,
+        "event": "rpc",
+        "owner_order": 10,
+        "request": {
+          "codec": [
+            "ENABLED",
+            "ACTIVE"
+          ],
+          "input": {
+            "amount": 3,
+            "key": "active"
+          },
+          "manifest": "after-activation-reopen-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "after-reopen",
+          "sequence": 2
+        },
+        "response": {
+          "applied_generation": 1,
+          "applied_program": "emitting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"3\",\"key\":\"active\",\"state\":\"ENABLED\"}"
+          },
+          "role": "encode",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95223771615239,
+        "target": 0,
+        "wall_ns": 5987984
+      },
+      {
+        "bytes": 439,
+        "call": 25,
+        "end_ns": 95223782299535,
+        "event": "rpc",
+        "owner_order": 8,
+        "request": {
+          "codec": [
+            "ENABLED",
+            "ACTIVE"
+          ],
+          "input": "{\"amount\":\"3\",\"key\":\"active\",\"state\":\"ENABLED\"}",
+          "manifest": "after-activation-reopen-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "after-reopen",
+          "sequence": 2
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "wire": "{\"amount\":\"16\",\"key\":\"active\",\"state\":\"ACTIVE\"}"
+          },
+          "role": "transform",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95223777624786,
+        "target": 1,
+        "wall_ns": 4674749
+      },
+      {
+        "bytes": 404,
+        "call": 26,
+        "end_ns": 95223788321930,
+        "event": "rpc",
+        "owner_order": 7,
+        "request": {
+          "codec": [
+            "ENABLED",
+            "ACTIVE"
+          ],
+          "input": "{\"amount\":\"16\",\"key\":\"active\",\"state\":\"ACTIVE\"}",
+          "manifest": "after-activation-reopen-attempt-0",
+          "op": "application",
+          "origin": 2,
+          "request_id": "after-reopen",
+          "sequence": 2
+        },
+        "response": {
+          "applied_generation": 0,
+          "applied_program": "accepting",
+          "duplicate": false,
+          "output": {
+            "record": {
+              "amount": 16,
+              "key": "active"
+            }
+          },
+          "role": "store",
+          "status": "applied"
+        },
+        "source": 2,
+        "start_ns": 95223782318072,
+        "target": 2,
+        "wall_ns": 6003858
+      },
+      {
+        "bytes": 99,
+        "call": 27,
+        "end_ns": 95223800834755,
+        "event": "rpc",
+        "owner_order": 11,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 2
+        },
+        "response": {
+          "floor": 2,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95223794354050,
+        "target": 0,
+        "wall_ns": 6480705
+      },
+      {
+        "bytes": 98,
+        "call": 28,
+        "end_ns": 95223806743199,
+        "event": "rpc",
+        "owner_order": 9,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 2
+        },
+        "response": {
+          "floor": 2,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95223800846122,
+        "target": 1,
+        "wall_ns": 5897077
+      },
+      {
+        "bytes": 98,
+        "call": 29,
+        "end_ns": 95223812038071,
+        "event": "rpc",
+        "owner_order": 8,
+        "request": {
+          "op": "close",
+          "origin": 2,
+          "sequence": 2
+        },
+        "response": {
+          "floor": 2,
+          "status": "closed"
+        },
+        "source": 2,
+        "start_ns": 95223806755097,
+        "target": 2,
+        "wall_ns": 5282974
+      },
+      {
+        "event": "process-stop",
+        "killed": false,
+        "node": 1,
+        "returncode": -15
+      },
+      {
+        "event": "process-stop",
+        "killed": false,
+        "node": 2,
+        "returncode": -15
+      },
+      {
+        "event": "process-stop",
+        "killed": false,
+        "node": 0,
+        "returncode": -15
+      }
+    ]
+  }
+]

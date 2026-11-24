@@ -1,0 +1,25 @@
+[
+  {
+    "mode": "normal",
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-c",
+      "import runpy; runpy.run_path('/workspace/scratch/e34480916f53/finalization/review/reproduction/audit_saved_readers.py', run_name='__main__')"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "exit_code": 0
+  },
+  {
+    "mode": "optimized",
+    "command": [
+      "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+      "-B",
+      "-O",
+      "-c",
+      "import runpy; runpy.run_path('/workspace/scratch/e34480916f53/finalization/review/reproduction/audit_saved_readers.py', run_name='__main__')"
+    ],
+    "cwd": "/workspace/scratch/e34480916f53/completion/project/artifact",
+    "exit_code": 0
+  }
+]

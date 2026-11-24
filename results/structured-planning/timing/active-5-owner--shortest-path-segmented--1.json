@@ -1,0 +1,212 @@
+{
+  "cohorts": [
+    {
+      "preparation_cpu_seconds": 0.001570997,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.001570997
+    },
+    {
+      "preparation_cpu_seconds": 0.004051539,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.004051539
+    },
+    {
+      "preparation_cpu_seconds": 0.003850509,
+      "query_cpu_seconds": 0.004007619,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.007858128
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.00405934,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.00405934
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.003934595,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.003934595
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.004001895,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.004001895
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.003997705,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.003997705
+    },
+    {
+      "preparation_cpu_seconds": 0.003999762,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.003999762
+    },
+    {
+      "preparation_cpu_seconds": 0.004005831,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.004005831
+    },
+    {
+      "preparation_cpu_seconds": 0.00399878,
+      "query_cpu_seconds": 0.004000313,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.007999093
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.0
+    },
+    {
+      "preparation_cpu_seconds": 0.004002125,
+      "query_cpu_seconds": 0.003993763,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.007995888
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.0
+    },
+    {
+      "preparation_cpu_seconds": 0.004003788,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.004003788
+    },
+    {
+      "preparation_cpu_seconds": 0.003995366,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.003995366
+    },
+    {
+      "preparation_cpu_seconds": 0.003996887,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.003996887
+    },
+    {
+      "preparation_cpu_seconds": 0.004005291,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.004005291
+    },
+    {
+      "preparation_cpu_seconds": 0.003997969,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.003997969
+    },
+    {
+      "preparation_cpu_seconds": 0.004002095,
+      "query_cpu_seconds": 0.0,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.004002095
+    },
+    {
+      "preparation_cpu_seconds": 0.004053713,
+      "query_cpu_seconds": 0.003942616,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.007996329
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.004002006,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.004002006
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.004001825,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.004001825
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.004000713,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.004000713
+    },
+    {
+      "preparation_cpu_seconds": 0.0,
+      "query_cpu_seconds": 0.003996878,
+      "serialization_bytes": 575,
+      "total_cpu_seconds": 0.003996878
+    }
+  ],
+  "costs": [
+    {
+      "cost": {
+        "handoffs": 2,
+        "installations": 10,
+        "phases": 3
+      },
+      "status": "planned",
+      "task": "two-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 5,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "first-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 5,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "second-minor-all"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 7,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "servers-ahead"
+    },
+    {
+      "cost": {
+        "handoffs": 1,
+        "installations": 8,
+        "phases": 2
+      },
+      "status": "planned",
+      "task": "catch-up-all"
+    },
+    {
+      "cost": {
+        "handoffs": 0,
+        "installations": 6,
+        "phases": 1
+      },
+      "status": "planned",
+      "task": "clients-only"
+    }
+  ],
+  "cpu": 0,
+  "cpu_budget_seconds": 30,
+  "domain": "active-5-owner",
+  "mean_preparation_cpu_seconds": 0.0022306105,
+  "mean_query_cpu_seconds": 0.0019974695,
+  "mean_total_cpu_seconds": 0.00422808,
+  "repetition": 1,
+  "route": "shortest-path-segmented"
+}

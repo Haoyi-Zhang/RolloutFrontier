@@ -1,0 +1,35 @@
+test_canonical_expected_profile_precedes_any_write (__main__.ConditionalInstallTests.test_canonical_expected_profile_precedes_any_write) ... ok
+test_commit_and_reopen_preserve_conditional_installation (__main__.ConditionalInstallTests.test_commit_and_reopen_preserve_conditional_installation) ... ok
+test_stale_source_does_not_write_or_override_guard (__main__.ConditionalInstallTests.test_stale_source_does_not_write_or_override_guard) ... ok
+test_rejects_unsafe_box_transition_target_and_cost (__main__.PlanValidationTests.test_rejects_unsafe_box_transition_target_and_cost) ... ok
+test_close_commit_with_lost_response_is_idempotently_reconciled (__main__.RecoveryTests.test_close_commit_with_lost_response_is_idempotently_reconciled) ... ok
+test_coordinator_sigkills_recover_while_owners_are_independent (__main__.RecoveryTests.test_coordinator_sigkills_recover_while_owners_are_independent) ... Executing <Task pending name='Task-13' coro=<RecoveryTests.test_coordinator_sigkills_recover_while_owners_are_independent() running at artifact/tests/rollout_recovery.py:681> wait_for=<Future pending cb=[Task.task_wakeup()] created at <python-runtime>/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at <python-runtime>/asyncio/base_events.py:181] created at <python-runtime>/asyncio/runners.py:100> took 0.112 seconds
+Executing <Task pending name='Task-13' coro=<RecoveryTests.test_coordinator_sigkills_recover_while_owners_are_independent() running at artifact/tests/rollout_recovery.py:681> wait_for=<Future pending cb=[Task.task_wakeup()] created at <python-runtime>/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at <python-runtime>/asyncio/base_events.py:181] created at <python-runtime>/asyncio/runners.py:100> took 0.119 seconds
+Executing <Task pending name='Task-13' coro=<RecoveryTests.test_coordinator_sigkills_recover_while_owners_are_independent() running at artifact/tests/rollout_recovery.py:681> wait_for=<Future pending cb=[Task.task_wakeup()] created at <python-runtime>/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at <python-runtime>/asyncio/base_events.py:181] created at <python-runtime>/asyncio/runners.py:100> took 0.125 seconds
+Executing <Task pending name='Task-13' coro=<RecoveryTests.test_coordinator_sigkills_recover_while_owners_are_independent() running at artifact/tests/rollout_recovery.py:681> wait_for=<Future pending cb=[Task.task_wakeup()] created at <python-runtime>/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at <python-runtime>/asyncio/base_events.py:181] created at <python-runtime>/asyncio/runners.py:100> took 0.124 seconds
+Executing <Task pending name='Task-13' coro=<RecoveryTests.test_coordinator_sigkills_recover_while_owners_are_independent() running at artifact/tests/rollout_recovery.py:681> wait_for=<Future pending cb=[Task.task_wakeup()] created at <python-runtime>/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at <python-runtime>/asyncio/base_events.py:181] created at <python-runtime>/asyncio/runners.py:100> took 0.118 seconds
+Executing <Task pending name='Task-13' coro=<RecoveryTests.test_coordinator_sigkills_recover_while_owners_are_independent() running at artifact/tests/rollout_recovery.py:681> wait_for=<Future pending cb=[Task.task_wakeup()] created at <python-runtime>/asyncio/base_events.py:448> cb=[_run_until_complete_cb() at <python-runtime>/asyncio/base_events.py:181] created at <python-runtime>/asyncio/runners.py:100> took 0.114 seconds
+ok
+test_current_target_tcp_partition_remains_pending_without_skipping (__main__.RecoveryTests.test_current_target_tcp_partition_remains_pending_without_skipping) ... ok
+test_external_target_is_reconciled_without_install_credit (__main__.RecoveryTests.test_external_target_is_reconciled_without_install_credit) ... ok
+test_foreign_origin_authority_is_never_retired (__main__.RecoveryTests.test_foreign_origin_authority_is_never_retired) ... ok
+test_four_phase_origin_reuse_and_completed_reopen (__main__.RecoveryTests.test_four_phase_origin_reuse_and_completed_reopen) ... ok
+test_install_commit_with_lost_response_is_not_counted_twice (__main__.RecoveryTests.test_install_commit_with_lost_response_is_not_counted_twice) ... ok
+test_journal_abort_after_admission_requires_reopen (__main__.RecoveryTests.test_journal_abort_after_admission_requires_reopen) ... ok
+test_late_prepare_remains_closed_after_completed_owner_reopen (__main__.RecoveryTests.test_late_prepare_remains_closed_after_completed_owner_reopen) ... ok
+test_live_state_snapshots_cannot_change_the_persisted_plan (__main__.RecoveryTests.test_live_state_snapshots_cannot_change_the_persisted_plan) ... ok
+test_new_phase_partition_preserves_old_authority_until_healed (__main__.RecoveryTests.test_new_phase_partition_preserves_old_authority_until_healed) ... ok
+test_old_close_loss_keeps_new_guard_and_recovers (__main__.RecoveryTests.test_old_close_loss_keeps_new_guard_and_recovers) ... ok
+test_other_owner_deviation_is_detected_at_phase_boundary (__main__.RecoveryTests.test_other_owner_deviation_is_detected_at_phase_boundary) ... ok
+test_read_write_race_does_not_overwrite_an_external_profile (__main__.RecoveryTests.test_read_write_race_does_not_overwrite_an_external_profile) ... ok
+test_tampered_durable_role_and_input_are_rejected (__main__.RecoveryTests.test_tampered_durable_role_and_input_are_rejected) ... ok
+test_target_collect_cannot_invent_a_joint_configuration (__main__.RecoveryTests.test_target_collect_cannot_invent_a_joint_configuration) ... ok
+test_target_collect_detects_aba_generation_change (__main__.RecoveryTests.test_target_collect_detects_aba_generation_change) ... ok
+test_uncertain_journal_commit_uses_durable_position (__main__.RecoveryTests.test_uncertain_journal_commit_uses_durable_position) ... ok
+test_unrelated_tcp_partition_allows_current_steps_until_phase_boundary (__main__.RecoveryTests.test_unrelated_tcp_partition_allows_current_steps_until_phase_boundary) ... ok
+test_zero_phase_goal_is_checked_without_admission (__main__.RecoveryTests.test_zero_phase_goal_is_checked_without_admission) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 2.663s
+
+OK

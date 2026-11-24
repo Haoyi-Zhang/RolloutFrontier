@@ -1,0 +1,28 @@
+{
+  "transport": "three actual TCP/SQLite owner processes",
+  "request_outcomes": [
+    {
+      "attempt": 0,
+      "error": "RuntimeError",
+      "message": "pipeline call incomplete: {'reason': 'UnicodeEncodeError', 'status': 'invalid'}"
+    },
+    {
+      "attempt": 1,
+      "error": "RuntimeError",
+      "message": "pipeline call incomplete: {'reason': 'UnicodeEncodeError', 'status': 'invalid'}"
+    }
+  ],
+  "request_rows": [
+    [
+      "bad-input",
+      "{\"amount\":17,\"key\":\"\\ud800\"}",
+      "pending",
+      null
+    ]
+  ],
+  "retire_before_reopen": false,
+  "retire_after_reopen": false,
+  "remaining_holds": 3,
+  "durable_effects": 0,
+  "counterexample_reproduced": true
+}

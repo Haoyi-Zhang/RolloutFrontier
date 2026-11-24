@@ -1,0 +1,260 @@
+{
+  "corner_checks": [
+    {
+      "accepted": false,
+      "checker_median_ns": 10866,
+      "checker_min_ns": 9324,
+      "corners": 4,
+      "nodes": 1,
+      "repetitions": 5
+    },
+    {
+      "accepted": true,
+      "checker_median_ns": 8303,
+      "checker_min_ns": 7822,
+      "corners": 4,
+      "nodes": 1,
+      "repetitions": 5
+    },
+    {
+      "accepted": false,
+      "checker_median_ns": 31928,
+      "checker_min_ns": 31367,
+      "corners": 16,
+      "nodes": 2,
+      "repetitions": 5
+    },
+    {
+      "accepted": true,
+      "checker_median_ns": 29935,
+      "checker_min_ns": 27101,
+      "corners": 16,
+      "nodes": 2,
+      "repetitions": 5
+    },
+    {
+      "accepted": false,
+      "checker_median_ns": 108353,
+      "checker_min_ns": 102294,
+      "corners": 64,
+      "nodes": 3,
+      "repetitions": 5
+    },
+    {
+      "accepted": true,
+      "checker_median_ns": 122445,
+      "checker_min_ns": 118539,
+      "corners": 64,
+      "nodes": 3,
+      "repetitions": 5
+    },
+    {
+      "accepted": false,
+      "checker_median_ns": 493502,
+      "checker_min_ns": 486481,
+      "corners": 256,
+      "nodes": 4,
+      "repetitions": 5
+    },
+    {
+      "accepted": true,
+      "checker_median_ns": 537969,
+      "checker_min_ns": 521884,
+      "corners": 256,
+      "nodes": 4,
+      "repetitions": 5
+    },
+    {
+      "accepted": false,
+      "checker_median_ns": 2284444,
+      "checker_min_ns": 2107959,
+      "corners": 1024,
+      "nodes": 5,
+      "repetitions": 5
+    },
+    {
+      "accepted": true,
+      "checker_median_ns": 2606699,
+      "checker_min_ns": 2559067,
+      "corners": 1024,
+      "nodes": 5,
+      "repetitions": 5
+    },
+    {
+      "accepted": false,
+      "checker_median_ns": 10361897,
+      "checker_min_ns": 10108556,
+      "corners": 4096,
+      "nodes": 6,
+      "repetitions": 5
+    },
+    {
+      "accepted": true,
+      "checker_median_ns": 9873677,
+      "checker_min_ns": 6806652,
+      "corners": 4096,
+      "nodes": 6,
+      "repetitions": 5
+    }
+  ],
+  "cpu_seconds": 5.4093883929999995,
+  "hold_costs": [
+    {
+      "conjunction_atoms": 32,
+      "contracts": 128,
+      "holders": 1,
+      "install_median_ns": 82234,
+      "repetitions": 6,
+      "serialized_state_bytes": 3727,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 128,
+      "holders": 8,
+      "install_median_ns": 155394,
+      "repetitions": 6,
+      "serialized_state_bytes": 7220,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 128,
+      "holders": 64,
+      "install_median_ns": 913693,
+      "repetitions": 6,
+      "serialized_state_bytes": 35328,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 128,
+      "holders": 384,
+      "install_median_ns": 6812461,
+      "repetitions": 6,
+      "serialized_state_bytes": 196162,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 1024,
+      "holders": 1,
+      "install_median_ns": 932152,
+      "repetitions": 6,
+      "serialized_state_bytes": 25231,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 1024,
+      "holders": 8,
+      "install_median_ns": 1049538,
+      "repetitions": 6,
+      "serialized_state_bytes": 28724,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 1024,
+      "holders": 64,
+      "install_median_ns": 1223770,
+      "repetitions": 6,
+      "serialized_state_bytes": 56832,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 1024,
+      "holders": 384,
+      "install_median_ns": 7759544,
+      "repetitions": 6,
+      "serialized_state_bytes": 217666,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 12000,
+      "holders": 1,
+      "install_median_ns": 7659925,
+      "repetitions": 6,
+      "serialized_state_bytes": 288655,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 12000,
+      "holders": 8,
+      "install_median_ns": 7585273,
+      "repetitions": 6,
+      "serialized_state_bytes": 292148,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 12000,
+      "holders": 64,
+      "install_median_ns": 7845474,
+      "repetitions": 6,
+      "serialized_state_bytes": 320256,
+      "storage": "in-memory only, no SQLite or RPC"
+    },
+    {
+      "conjunction_atoms": 32,
+      "contracts": 12000,
+      "holders": 384,
+      "install_median_ns": 11475622,
+      "repetitions": 6,
+      "serialized_state_bytes": 481090,
+      "storage": "in-memory only, no SQLite or RPC"
+    }
+  ],
+  "normalization_order_case": {
+    "corners": 3,
+    "counterexample": {
+      "0": [
+        "bad"
+      ]
+    },
+    "safe": false
+  },
+  "peak_rss_kib": 13464,
+  "wall_seconds": 5.42290902700006,
+  "witness_costs": [
+    {
+      "atoms_per_branch": 1,
+      "branches": 8,
+      "dp_median_ns": 430637,
+      "false_atoms": 8,
+      "independent_check": "coverage and deletion-minimality; minimum also follows disjoint branches",
+      "minimum": 8,
+      "repetitions": 3
+    },
+    {
+      "atoms_per_branch": 8,
+      "branches": 8,
+      "dp_median_ns": 3470727,
+      "false_atoms": 64,
+      "independent_check": "coverage and deletion-minimality; minimum also follows disjoint branches",
+      "minimum": 8,
+      "repetitions": 3
+    },
+    {
+      "atoms_per_branch": 32,
+      "branches": 8,
+      "dp_median_ns": 25365391,
+      "false_atoms": 256,
+      "independent_check": "coverage and deletion-minimality; minimum also follows disjoint branches",
+      "minimum": 8,
+      "repetitions": 3
+    },
+    {
+      "atoms_per_branch": 96,
+      "branches": 8,
+      "dp_median_ns": 42368902,
+      "false_atoms": 768,
+      "independent_check": "coverage and deletion-minimality; minimum also follows disjoint branches",
+      "minimum": 8,
+      "repetitions": 3
+    }
+  ]
+}

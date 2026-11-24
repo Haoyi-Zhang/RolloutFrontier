@@ -98,6 +98,40 @@ class EffectLedger:
             self.db.execute("INSERT INTO leases VALUES(?,'open')",(token,));return 'open'
         return self.mutate(action)
 
+    def check_registration_room(self,token=None):
+        """Refuse foreseeable exhaustion before acquiring protocol guards.
+
+        An existing admission is reusable only with its existing open lease.
+        The retained lease/operation bounds are cumulative, not active counts.
+        """
+        self.healthy()
+        if token is not None:
+            if self.phase(token)!='open':raise ValueError('effect lease already closed')
+            return
+        if self.db.execute('SELECT COUNT(*) FROM leases').fetchone()[0]>=MAX_LEASES:
+            raise ValueError('effect lease bound')
+        if self.db.execute('SELECT COALESCE(MAX(id),0) FROM operations').fetchone()[0]>=MAX_OPERATIONS:
+            raise ValueError('effect operation bound')
+
+    def fence_uncommitted(self,committed_tokens):
+        """Fence registrations whose recovered origin never committed them.
+
+        Retain every lease and operation row. An orphan with active work is an
+        inconsistent composition state and cannot be silently reclaimed.
+        """
+        self.healthy()
+        tokens=frozenset(committed_tokens)
+        candidates=[token for token,phase in self.db.execute('SELECT token,phase FROM leases')
+                    if phase!='closed' and token not in tokens]
+        if not candidates:return 0
+        def action():
+            for token in candidates:
+                if self.db.execute("SELECT 1 FROM operations WHERE lease=? AND phase='active'",(token,)).fetchone():
+                    raise ValueError('active effect has no committed protocol authority')
+                self.db.execute("UPDATE leases SET phase='closed' WHERE token=?",(token,))
+            return len(candidates)
+        return self.mutate(action)
+
     def phase(self,token):
         self.healthy();row=self.db.execute('SELECT phase FROM leases WHERE token=?',(token,)).fetchone()
         if row is None:raise ValueError('unknown effect lease')
@@ -147,24 +181,64 @@ class EffectLedger:
         if not self.closed:self.db.close();self.closed=True
 
 class DrainingClient:
-    """Serialize core-client actions and gate all owned SQLite writes."""
+    """Register before protocol commitment and gate all owned SQLite writes.
+
+    The ledger belongs to this one coordinator identity. Acquire owned
+    admissions through the adapter: a bare Client admission has no application
+    registration and cannot be attached by reusing its name.
+    """
     def __init__(self,client:Client,ledger:EffectLedger):
         self.client,self.ledger=client,ledger
         self.lock=asyncio.Lock()
+
+    async def _recover_unlocked(self):
+        # Reopen a failed origin before this point. In particular, never infer
+        # an absent commitment from stale memory after an uncertain DB commit.
+        await self.client.recover()
+        committed={lease_id(record['certificate']) for record in self.client.state['attempts'].values()
+                   if record['status']=='committed'}
+        fenced=self.ledger.fence_uncommitted(committed)
+        pending=sum(record['status']!='committed' for record in self.client.state['attempts'].values())
+        return dict(fenced_registrations=fenced,pending_protocol_attempts=pending)
+
+    async def recover(self):
+        """Retry journal cleanup and fence uncommitted, operation-free leases.
+
+        Interrupted acquisition remains recoverable after cancellation or a
+        partition. Failed database objects must first be closed and reopened.
+        Committed registrations, including active writes, remain unchanged.
+        """
+        async with self.lock:
+            return await self._recover_unlocked()
 
     async def acquire(self,manifest,branches,box=None):
         # This outer lock can block before the core client's own snapshot.
         branches=deepcopy(branches)
         box=deepcopy(box) if box is not None else None
         async with self.lock:
-            result=(await self.client.acquire(manifest,branches) if box is None else
-                    await self.client.acquire_box(manifest,branches,box))
+            await self._recover_unlocked()
+            existing=next((record['certificate'] for record in self.client.state['attempts'].values()
+                           if record['manifest']==manifest and record['status']=='committed'),None)
+            self.ledger.check_registration_room(None if existing is None else lease_id(existing))
+            def register(certificate):
+                if self.ledger.register(lease_id(certificate))!='open':
+                    raise ValueError('effect lease already closed')
+            try:
+                result=(await self.client.acquire(manifest,branches,_before_commit=register) if box is None else
+                        await self.client.acquire_box(manifest,branches,box,_before_commit=register))
+            except Exception as error:
+                # A cancellation or process exit leaves the same durable intent
+                # for explicit recover(). Ordinary failures get one cleanup try.
+                try:
+                    await self._recover_unlocked()
+                except Exception as cleanup:
+                    if hasattr(error,'add_note'):
+                        error.add_note('Adapter recovery incomplete; reopen failed stores and retry recover(): '+type(cleanup).__name__)
+                raise
             if result['status']!='admitted':return result,None
             certificate=deepcopy(result['certificate'])
             token=lease_id(certificate)
-            # Failure here leaves the protocol's durable guard held. Recovery
-            # must not silently presume that application work has drained.
-            if self.ledger.register(token)!='open':raise ValueError('effect lease already closed')
+            if self.ledger.phase(token)!='open':raise ValueError('effect lease already closed')
             return result,DrainingLease(self,certificate)
 
     async def resume(self,certificate):

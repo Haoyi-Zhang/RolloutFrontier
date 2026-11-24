@@ -205,11 +205,20 @@ class RecordedSources(unittest.TestCase):
     def test_entire_inventory_and_existing_table_consumer(self):
         resolved=verify_sources()
         self.assertEqual(len(resolved),44)
-        self.assertEqual(sum(rel==path for rel,path in resolved.items()),35)
-        self.assertEqual(sum(path.startswith('results/durable-state-costs/source-preimage/')
-                             for path in resolved.values()),7)
-        self.assertEqual(sum(path.startswith('results/effect-drain/source-preimage/')
-                             for path in resolved.values()),2)
+        entries=json.loads((ROOT/'results/durable-state-costs/environment.json').read_text())['sources']
+        expected={entry['path']:entry['sha256'] for entry in entries}
+        self.assertEqual(set(resolved),set(expected))
+        # Later source edits can move a binding from live bytes to its exact
+        # preimage. Check each identity, not a revision-specific count of matches.
+        for rel,path in resolved.items():
+            with self.subTest(source=rel):
+                self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),expected[rel])
+                live=ROOT/rel
+                if live.is_file() and hashlib.sha256(live.read_bytes()).hexdigest()==expected[rel]:
+                    self.assertEqual(path,rel)
+                else:
+                    self.assertIn(path,('results/durable-state-costs/source-preimage/'+rel,
+                                        'results/effect-drain/source-preimage/'+rel))
         self.assertEqual(receiver.table(),derive(json.loads(
             (ROOT/'results/durable-state-costs/measurements.json').read_text(encoding='utf-8'))))
 

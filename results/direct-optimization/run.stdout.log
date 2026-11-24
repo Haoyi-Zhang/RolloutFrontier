@@ -1,0 +1,70 @@
+{"context": "owners-2-alternatives-2-repeat-0", "status": "completed", "seconds": 0.334}
+{"context": "owners-2-alternatives-2-repeat-1", "status": "completed", "seconds": 0.293}
+{"context": "owners-2-alternatives-2-repeat-2", "status": "completed", "seconds": 0.342}
+{"context": "owners-2-alternatives-3-repeat-0", "status": "completed", "seconds": 0.531}
+{"context": "owners-2-alternatives-3-repeat-1", "status": "completed", "seconds": 0.369}
+{"context": "owners-2-alternatives-3-repeat-2", "status": "completed", "seconds": 0.357}
+{"context": "owners-2-alternatives-4-repeat-0", "status": "completed", "seconds": 0.379}
+{"context": "owners-2-alternatives-4-repeat-1", "status": "completed", "seconds": 0.392}
+{"context": "owners-2-alternatives-4-repeat-2", "status": "completed", "seconds": 0.421}
+{"context": "owners-2-alternatives-6-repeat-0", "status": "completed", "seconds": 0.682}
+{"context": "owners-2-alternatives-6-repeat-1", "status": "completed", "seconds": 0.658}
+{"context": "owners-2-alternatives-6-repeat-2", "status": "completed", "seconds": 0.808}
+{"context": "owners-3-alternatives-2-repeat-0", "status": "completed", "seconds": 0.365}
+{"context": "owners-3-alternatives-2-repeat-1", "status": "completed", "seconds": 0.319}
+{"context": "owners-3-alternatives-2-repeat-2", "status": "completed", "seconds": 0.295}
+{"context": "owners-3-alternatives-3-repeat-0", "status": "completed", "seconds": 0.536}
+{"context": "owners-3-alternatives-3-repeat-1", "status": "completed", "seconds": 0.655}
+{"context": "owners-3-alternatives-3-repeat-2", "status": "completed", "seconds": 0.519}
+{"context": "owners-3-alternatives-4-repeat-0", "status": "completed", "seconds": 0.6}
+{"context": "owners-3-alternatives-4-repeat-1", "status": "completed", "seconds": 0.618}
+{"context": "owners-3-alternatives-4-repeat-2", "status": "completed", "seconds": 0.65}
+{"context": "owners-3-alternatives-6-repeat-0", "status": "completed", "seconds": 1.454}
+{"context": "owners-3-alternatives-6-repeat-1", "status": "completed", "seconds": 1.395}
+{"context": "owners-3-alternatives-6-repeat-2", "status": "completed", "seconds": 1.46}
+{"context": "owners-4-alternatives-2-repeat-0", "status": "completed", "seconds": 0.363}
+{"context": "owners-4-alternatives-2-repeat-1", "status": "completed", "seconds": 0.361}
+{"context": "owners-4-alternatives-2-repeat-2", "status": "completed", "seconds": 0.344}
+{"context": "owners-4-alternatives-3-repeat-0", "status": "completed", "seconds": 1.852}
+{"context": "owners-4-alternatives-3-repeat-1", "status": "completed", "seconds": 2.01}
+{"context": "owners-4-alternatives-3-repeat-2", "status": "completed", "seconds": 1.962}
+{"context": "owners-4-alternatives-4-repeat-0", "status": "completed", "seconds": 1.407}
+{"context": "owners-4-alternatives-4-repeat-1", "status": "completed", "seconds": 1.386}
+{"context": "owners-4-alternatives-4-repeat-2", "status": "completed", "seconds": 1.26}
+{"context": "owners-4-alternatives-6-repeat-0", "status": "completed", "seconds": 2.598}
+{"context": "owners-4-alternatives-6-repeat-1", "status": "completed", "seconds": 2.766}
+{"context": "owners-4-alternatives-6-repeat-2", "status": "completed", "seconds": 2.772}
+{"context": "owners-6-alternatives-2-repeat-0", "status": "completed", "seconds": 0.344}
+{"context": "owners-6-alternatives-2-repeat-1", "status": "completed", "seconds": 0.39}
+{"context": "owners-6-alternatives-2-repeat-2", "status": "completed", "seconds": 0.376}
+{"context": "owners-6-alternatives-3-repeat-0", "status": "completed", "seconds": 31.65}
+{"context": "owners-6-alternatives-3-repeat-1", "status": "completed", "seconds": 31.655}
+{"context": "owners-6-alternatives-3-repeat-2", "status": "completed", "seconds": 31.453}
+{"context": "owners-6-alternatives-4-repeat-0", "status": "completed", "seconds": 32.92}
+{"context": "owners-6-alternatives-4-repeat-1", "status": "completed", "seconds": 33.019}
+{"context": "owners-6-alternatives-4-repeat-2", "status": "completed", "seconds": 32.937}
+{"context": "owners-6-alternatives-6-repeat-0", "status": "completed", "seconds": 8.878}
+{"context": "owners-6-alternatives-6-repeat-1", "status": "completed", "seconds": 8.751}
+{"context": "owners-6-alternatives-6-repeat-2", "status": "completed", "seconds": 9.244}
+{
+  "status": "PASS",
+  "contexts": 16,
+  "repetitions_per_context": 3,
+  "queries_per_repetition": 32,
+  "distinct_batches_per_context": 32,
+  "proposals_per_batch": 96,
+  "worker_records": 48,
+  "completed_workers": 48,
+  "route_budget_seconds": 30,
+  "wall_time_limited_workers": 0,
+  "frontier_construction_refusals": 0,
+  "frontier_preparation_wall_budgets": 6,
+  "direct_completed_queries": 1536,
+  "frontier_completed_queries": 1344,
+  "direct_query_refusals": 0,
+  "direct_query_wall_budgets": 0,
+  "frontier_query_wall_budgets": 0,
+  "comparable_optima": 1344,
+  "source_unchanged": true,
+  "interpretation": "Each direct query optimizes only that batch and may reuse its local language. Frontier queries additionally reuse independently checked complete alternatives. Counterfactual queries reset to the same initial placement; installation count is not rollout goal completion."
+}

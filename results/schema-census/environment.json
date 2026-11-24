@@ -1,0 +1,18 @@
+{
+  "counts_are": "registered contract/topology instances; not sampled production deployments",
+  "graph_inventory": "all 63 nonempty directed simple graphs on three labelled owners",
+  "owners": 3,
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "protobuf": "7.36.2",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "query_inventory": "all ordered compatible physical configurations in every context",
+  "source_sha256": {
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/factored_planner.py": "b8971360df79d7437c7bb9f1976c6c3e915396ca37fd975cc291901c35cc71ef",
+    "src/goal_planner.py": "7489b4ffe8f62195dc0d054eac3c6d49452109077714203eb4a357405ca8f28d",
+    "src/schema_contracts.py": "d6b6344f80465e4e22a4af016b9baa07b6e18e6ffeb2f6552bce1b6bbda44e50",
+    "tests/schema_contract_study.py": "80c5dadfd0b39da649fed34428966f3f507a2052d76adc002704fef940f8b684"
+  }
+}

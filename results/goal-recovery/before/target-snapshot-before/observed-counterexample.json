@@ -1,0 +1,380 @@
+{
+  "scope": "Intermediate new coordinator review before source freeze; not a failure of the previously delivered core guard protocol.",
+  "before_source_sha256": "fafa9d2cb36bc67deaf0ced9d8066189370aabd82c2bc1efda3605ed745a0094",
+  "before": {
+    "result": {
+      "status": "complete",
+      "phase_index": 0,
+      "step_index": 0,
+      "stage": "complete",
+      "planned_cost": {
+        "phases": 0,
+        "installations": 0,
+        "handoffs": 0
+      },
+      "acknowledged_installs": 0,
+      "reconciled_steps": 0,
+      "goal_reached": true
+    },
+    "actual_vectors": [
+      [
+        [
+          "a",
+          "shared"
+        ],
+        [
+          "other-b",
+          "shared"
+        ]
+      ],
+      [
+        [
+          "other-a",
+          "shared"
+        ],
+        [
+          "other-b",
+          "shared"
+        ]
+      ],
+      [
+        [
+          "other-a",
+          "shared"
+        ],
+        [
+          "b",
+          "shared"
+        ]
+      ]
+    ],
+    "target_ever_present": false,
+    "rpc_trace": [
+      {
+        "event": "rpc",
+        "tick": 1,
+        "source": 0,
+        "target": 0,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "shared"
+            ]
+          },
+          "status": "observed"
+        },
+        "bytes": 98,
+        "wall_ns": 830059
+      },
+      {
+        "event": "rpc",
+        "tick": 2,
+        "source": 5,
+        "target": 0,
+        "request": {
+          "op": "install",
+          "support": [
+            "other-a",
+            "shared"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "other-a",
+              "shared"
+            ]
+          },
+          "status": "installed"
+        },
+        "bytes": 139,
+        "wall_ns": 305850
+      },
+      {
+        "event": "rpc",
+        "tick": 3,
+        "source": 5,
+        "target": 1,
+        "request": {
+          "op": "install",
+          "support": [
+            "b",
+            "shared"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b",
+              "shared"
+            ]
+          },
+          "status": "installed"
+        },
+        "bytes": 127,
+        "wall_ns": 387983
+      },
+      {
+        "event": "rpc",
+        "tick": 4,
+        "source": 0,
+        "target": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b",
+              "shared"
+            ]
+          },
+          "status": "observed"
+        },
+        "bytes": 98,
+        "wall_ns": 73020
+      }
+    ]
+  },
+  "after": {
+    "result": {
+      "status": "pending",
+      "phase_index": 0,
+      "step_index": 0,
+      "stage": "complete",
+      "planned_cost": {
+        "phases": 0,
+        "installations": 0,
+        "handoffs": 0
+      },
+      "acknowledged_installs": 0,
+      "reconciled_steps": 0,
+      "reason": "target-snapshot-changed",
+      "target_observation": {
+        "first": {
+          "0": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "shared"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b",
+              "shared"
+            ]
+          }
+        },
+        "second": {
+          "0": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "other-a",
+              "shared"
+            ]
+          },
+          "1": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b",
+              "shared"
+            ]
+          }
+        }
+      }
+    },
+    "actual_vectors": [
+      [
+        [
+          "a",
+          "shared"
+        ],
+        [
+          "other-b",
+          "shared"
+        ]
+      ],
+      [
+        [
+          "other-a",
+          "shared"
+        ],
+        [
+          "other-b",
+          "shared"
+        ]
+      ],
+      [
+        [
+          "other-a",
+          "shared"
+        ],
+        [
+          "b",
+          "shared"
+        ]
+      ]
+    ],
+    "target_ever_present": false,
+    "rpc_trace": [
+      {
+        "event": "rpc",
+        "tick": 1,
+        "source": 0,
+        "target": 0,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 0,
+            "node": 0,
+            "support": [
+              "a",
+              "shared"
+            ]
+          },
+          "status": "observed"
+        },
+        "bytes": 98,
+        "wall_ns": 493341
+      },
+      {
+        "event": "rpc",
+        "tick": 2,
+        "source": 5,
+        "target": 0,
+        "request": {
+          "op": "install",
+          "support": [
+            "other-a",
+            "shared"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "other-a",
+              "shared"
+            ]
+          },
+          "status": "installed"
+        },
+        "bytes": 139,
+        "wall_ns": 281122
+      },
+      {
+        "event": "rpc",
+        "tick": 3,
+        "source": 5,
+        "target": 1,
+        "request": {
+          "op": "install",
+          "support": [
+            "b",
+            "shared"
+          ]
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b",
+              "shared"
+            ]
+          },
+          "status": "installed"
+        },
+        "bytes": 127,
+        "wall_ns": 410427
+      },
+      {
+        "event": "rpc",
+        "tick": 4,
+        "source": 0,
+        "target": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b",
+              "shared"
+            ]
+          },
+          "status": "observed"
+        },
+        "bytes": 98,
+        "wall_ns": 76125
+      },
+      {
+        "event": "rpc",
+        "tick": 5,
+        "source": 0,
+        "target": 0,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 0,
+            "support": [
+              "other-a",
+              "shared"
+            ]
+          },
+          "status": "observed"
+        },
+        "bytes": 104,
+        "wall_ns": 46370
+      },
+      {
+        "event": "rpc",
+        "tick": 6,
+        "source": 0,
+        "target": 1,
+        "request": {
+          "op": "read"
+        },
+        "response": {
+          "observed": {
+            "generation": 1,
+            "node": 1,
+            "support": [
+              "b",
+              "shared"
+            ]
+          },
+          "status": "observed"
+        },
+        "bytes": 98,
+        "wall_ns": 40301
+      }
+    ]
+  }
+}

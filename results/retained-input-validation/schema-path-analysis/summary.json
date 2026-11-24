@@ -1,0 +1,8228 @@
+{
+  "aggregate": {
+    "combined_seven_gap_goals": 0,
+    "combined_seven_phases": 98808,
+    "exact_phases": 98808,
+    "full_goals": 252,
+    "full_owner_six_gap_goals": 20,
+    "full_stage_fixed_gap_goals": 0,
+    "full_stage_six_gap_goals": 0,
+    "no_ops": 6522,
+    "owner_six_gap_goals": 64,
+    "owner_six_phases": 98872,
+    "queries": 186174,
+    "reachable_changes": 61938,
+    "stage_fixed_gap_goals": 554,
+    "stage_fixed_phases": 99362,
+    "stage_six_gap_goals": 0,
+    "stage_six_phases": 98808,
+    "unreachable": 117714
+  },
+  "comparators": {
+    "combined_seven": "Best of the existing six owner-priority paths and the fixed 0,1,2 stage-priority path.",
+    "exact": "Independent breadth-first search of every literal safe interval phase between compatible physical states.",
+    "owner_six": "Best exact partition of six breadth-first shortest-safe paths with static owner expansion order.",
+    "stage_fixed": "At each target-directed one-rank step choose the enabled owner with least current rank; break ties by 0,1,2; then find the exact minimum-phase partition of that path.",
+    "stage_six": "Best exact partition of the six least-current-rank paths, one per static owner tie order."
+  },
+  "families": [
+    {
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 39066,
+      "exact_phases": 39066,
+      "family": "enum-alias",
+      "full_goals": 63,
+      "full_owner_six_gap_goals": 8,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graph_isomorphism_classes": 15,
+      "graphs": 63,
+      "no_ops": 2040,
+      "owner_six_gap_goals": 30,
+      "owner_six_gap_orbits": 7,
+      "owner_six_phases": 39096,
+      "queries": 69072,
+      "query_orbits": 12044,
+      "query_orbits_with_fixed_stage_gap": 87,
+      "reachable_change_orbits": 4075,
+      "reachable_changes": 23238,
+      "stage_fixed_gap_goals": 277,
+      "stage_fixed_phases": 39343,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 39066,
+      "unreachable": 43794
+    },
+    {
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 39066,
+      "exact_phases": 39066,
+      "family": "field-key",
+      "full_goals": 63,
+      "full_owner_six_gap_goals": 8,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graph_isomorphism_classes": 15,
+      "graphs": 63,
+      "no_ops": 2040,
+      "owner_six_gap_goals": 30,
+      "owner_six_gap_orbits": 7,
+      "owner_six_phases": 39096,
+      "queries": 69072,
+      "query_orbits": 12044,
+      "query_orbits_with_fixed_stage_gap": 87,
+      "reachable_change_orbits": 4075,
+      "reachable_changes": 23238,
+      "stage_fixed_gap_goals": 277,
+      "stage_fixed_phases": 39343,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 39066,
+      "unreachable": 43794
+    },
+    {
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 10338,
+      "exact_phases": 10338,
+      "family": "field-addition",
+      "full_goals": 63,
+      "full_owner_six_gap_goals": 2,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graph_isomorphism_classes": 15,
+      "graphs": 63,
+      "no_ops": 1221,
+      "owner_six_gap_goals": 2,
+      "owner_six_gap_orbits": 1,
+      "owner_six_phases": 10340,
+      "queries": 24015,
+      "query_orbits": 4229,
+      "query_orbits_with_fixed_stage_gap": 0,
+      "reachable_change_orbits": 1370,
+      "reachable_changes": 7731,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 10338,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 10338,
+      "unreachable": 15063
+    },
+    {
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 10338,
+      "exact_phases": 10338,
+      "family": "integer-widening",
+      "full_goals": 63,
+      "full_owner_six_gap_goals": 2,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graph_isomorphism_classes": 15,
+      "graphs": 63,
+      "no_ops": 1221,
+      "owner_six_gap_goals": 2,
+      "owner_six_gap_orbits": 1,
+      "owner_six_phases": 10340,
+      "queries": 24015,
+      "query_orbits": 4229,
+      "query_orbits_with_fixed_stage_gap": 0,
+      "reachable_change_orbits": 1370,
+      "reachable_changes": 7731,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 10338,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 10338,
+      "unreachable": 15063
+    }
+  ],
+  "finite_control": {
+    "counts": {
+      "combined_portfolio_gap_goals": 0,
+      "no_ops": 1781,
+      "owner_portfolio_gap_goals": 0,
+      "queries": 7835,
+      "reachable_changes": 2104,
+      "stage_portfolio_gap_goals": 2,
+      "unreachable": 3950
+    },
+    "gaps": [
+      {
+        "context": "ternary-pair-311",
+        "exact_endpoints": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "exact_phases": 2,
+        "owner_portfolio_phases": 2,
+        "relation": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "source": [
+          0,
+          0
+        ],
+        "stage_paths": [
+          {
+            "cuts": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "order": [
+              0,
+              1
+            ],
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "phases": 3
+          },
+          {
+            "cuts": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "order": [
+              1,
+              0
+            ],
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "phases": 3
+          }
+        ],
+        "stage_portfolio_phases": 3,
+        "target": [
+          2,
+          2
+        ]
+      },
+      {
+        "context": "ternary-pair-473",
+        "exact_endpoints": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "exact_phases": 2,
+        "owner_portfolio_phases": 2,
+        "relation": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "source": [
+          0,
+          0
+        ],
+        "stage_paths": [
+          {
+            "cuts": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "order": [
+              0,
+              1
+            ],
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "phases": 3
+          },
+          {
+            "cuts": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "order": [
+              1,
+              0
+            ],
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "phases": 3
+          }
+        ],
+        "stage_portfolio_phases": 3,
+        "target": [
+          2,
+          2
+        ]
+      }
+    ],
+    "recognized_contexts": 519,
+    "registered_contexts": 991,
+    "scope": "Retained finite compatibility relations; not application deployment observations.",
+    "status": "PASS"
+  },
+  "fixed_stage_gap_representatives": [
+    {
+      "context": "enum-alias-graph-5",
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "context": "enum-alias-graph-6",
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "context": "enum-alias-graph-7",
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "context": "enum-alias-graph-15",
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        1
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "context": "enum-alias-graph-21",
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          1,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          6
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "context": "enum-alias-graph-23",
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          6
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "context": "enum-alias-graph-25",
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "fixed_stage_phases": 3,
+      "source": [
+        0,
+        0,
+        1
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        3
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          2,
+          4,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          4,
+          6
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "context": "enum-alias-graph-27",
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "context": "enum-alias-graph-31",
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        1
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "context": "field-key-graph-5",
+      "exact_phases": 2,
+      "family": "field-key",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "context": "field-key-graph-6",
+      "exact_phases": 2,
+      "family": "field-key",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "context": "field-key-graph-7",
+      "exact_phases": 2,
+      "family": "field-key",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "context": "field-key-graph-15",
+      "exact_phases": 2,
+      "family": "field-key",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        1
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "context": "field-key-graph-21",
+      "exact_phases": 2,
+      "family": "field-key",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          1,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          6
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "context": "field-key-graph-23",
+      "exact_phases": 2,
+      "family": "field-key",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          6
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "context": "field-key-graph-25",
+      "exact_phases": 2,
+      "family": "field-key",
+      "fixed_stage_phases": 3,
+      "source": [
+        0,
+        0,
+        1
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        3
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          2,
+          4,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          4,
+          6
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "context": "field-key-graph-27",
+      "exact_phases": 2,
+      "family": "field-key",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        0
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "context": "field-key-graph-31",
+      "exact_phases": 2,
+      "family": "field-key",
+      "fixed_stage_phases": 3,
+      "source": [
+        1,
+        0,
+        1
+      ],
+      "stage_path_costs": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ],
+      "stage_path_cuts": [
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ]
+      ],
+      "stage_paths": [
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ]
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        2,
+        2
+      ]
+    }
+  ],
+  "graph_isomorphism_classes": 15,
+  "motifs": [
+    {
+      "canonical_graph": 1,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 5232,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "exact_phases": 5232,
+      "family": "enum-alias",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "name": "other graph with 1 edges",
+      "no_ops": 288,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 5232,
+      "queries": 13824,
+      "reachable_changes": 3792,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 5232,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 5232,
+      "unreachable": 9744
+    },
+    {
+      "canonical_graph": 3,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 2244,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 2244,
+      "family": "enum-alias",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        3,
+        12,
+        48
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 108,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 2244,
+      "queries": 3888,
+      "reachable_changes": 1308,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 2244,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 2244,
+      "unreachable": 2472
+    },
+    {
+      "canonical_graph": 5,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 2340,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 2340,
+      "family": "enum-alias",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        5,
+        18,
+        40
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 120,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 2340,
+      "queries": 4800,
+      "reachable_changes": 1440,
+      "stage_fixed_gap_goals": 30,
+      "stage_fixed_phases": 2370,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 2340,
+      "unreachable": 3240
+    },
+    {
+      "canonical_graph": 6,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 4248,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 4248,
+      "family": "enum-alias",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        6,
+        9,
+        17,
+        24,
+        34,
+        36
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 216,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 4248,
+      "queries": 7776,
+      "reachable_changes": 2568,
+      "stage_fixed_gap_goals": 48,
+      "stage_fixed_phases": 4296,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 4248,
+      "unreachable": 4992
+    },
+    {
+      "canonical_graph": 7,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 3744,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 3744,
+      "family": "enum-alias",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        7,
+        13,
+        19,
+        44,
+        50,
+        56
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 180,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 3744,
+      "queries": 5400,
+      "reachable_changes": 1980,
+      "stage_fixed_gap_goals": 42,
+      "stage_fixed_phases": 3786,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 3744,
+      "unreachable": 3240
+    },
+    {
+      "canonical_graph": 10,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 2046,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2046,
+      "family": "enum-alias",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        10,
+        20,
+        33
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 120,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 2046,
+      "queries": 4800,
+      "reachable_changes": 1470,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 2046,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 2046,
+      "unreachable": 3210
+    },
+    {
+      "canonical_graph": 11,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 3708,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3708,
+      "family": "enum-alias",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        11,
+        14,
+        28,
+        35,
+        49,
+        52
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 192,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 3708,
+      "queries": 6144,
+      "reachable_changes": 2172,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 3708,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 3708,
+      "unreachable": 3780
+    },
+    {
+      "canonical_graph": 15,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1680,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 1680,
+      "family": "enum-alias",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        15,
+        51,
+        60
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 84,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1680,
+      "queries": 2352,
+      "reachable_changes": 882,
+      "stage_fixed_gap_goals": 9,
+      "stage_fixed_phases": 1689,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1680,
+      "unreachable": 1386
+    },
+    {
+      "canonical_graph": 21,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 3552,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3552,
+      "family": "enum-alias",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        21,
+        22,
+        26,
+        37,
+        41,
+        42
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 192,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 3552,
+      "queries": 6144,
+      "reachable_changes": 2136,
+      "stage_fixed_gap_goals": 50,
+      "stage_fixed_phases": 3602,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 3552,
+      "unreachable": 3816
+    },
+    {
+      "canonical_graph": 23,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1524,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 1524,
+      "family": "enum-alias",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        23,
+        45,
+        58
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 78,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1524,
+      "queries": 2028,
+      "reachable_changes": 798,
+      "stage_fixed_gap_goals": 18,
+      "stage_fixed_phases": 1542,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1524,
+      "unreachable": 1152
+    },
+    {
+      "canonical_graph": 25,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1112,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 1112,
+      "family": "enum-alias",
+      "full_goals": 2,
+      "full_owner_six_gap_goals": 2,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 2,
+      "labelled_graphs": [
+        25,
+        38
+      ],
+      "name": "directed three-cycle",
+      "no_ops": 56,
+      "owner_six_gap_goals": 12,
+      "owner_six_phases": 1124,
+      "queries": 1568,
+      "reachable_changes": 600,
+      "stage_fixed_gap_goals": 26,
+      "stage_fixed_phases": 1138,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1112,
+      "unreachable": 912
+    },
+    {
+      "canonical_graph": 27,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 3024,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3024,
+      "family": "enum-alias",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 6,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        27,
+        29,
+        39,
+        46,
+        54,
+        57
+      ],
+      "name": "directed three-cycle plus one reverse edge",
+      "no_ops": 156,
+      "owner_six_gap_goals": 18,
+      "owner_six_phases": 3042,
+      "queries": 4056,
+      "reachable_changes": 1596,
+      "stage_fixed_gap_goals": 40,
+      "stage_fixed_phases": 3064,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 3024,
+      "unreachable": 2304
+    },
+    {
+      "canonical_graph": 30,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1518,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 1518,
+      "family": "enum-alias",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        30,
+        43,
+        53
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 84,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1518,
+      "queries": 2352,
+      "reachable_changes": 888,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 1518,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1518,
+      "unreachable": 1380
+    },
+    {
+      "canonical_graph": 31,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 2700,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2700,
+      "family": "enum-alias",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        31,
+        47,
+        55,
+        59,
+        61,
+        62
+      ],
+      "name": "other graph with 5 edges",
+      "no_ops": 144,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 2700,
+      "queries": 3456,
+      "reachable_changes": 1404,
+      "stage_fixed_gap_goals": 14,
+      "stage_fixed_phases": 2714,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 2700,
+      "unreachable": 1908
+    },
+    {
+      "canonical_graph": 63,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 394,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 394,
+      "family": "enum-alias",
+      "full_goals": 1,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 1,
+      "labelled_graphs": [
+        63
+      ],
+      "name": "other graph with 6 edges",
+      "no_ops": 22,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 394,
+      "queries": 484,
+      "reachable_changes": 204,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 394,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 394,
+      "unreachable": 258
+    },
+    {
+      "canonical_graph": 1,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 5232,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "exact_phases": 5232,
+      "family": "field-key",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "name": "other graph with 1 edges",
+      "no_ops": 288,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 5232,
+      "queries": 13824,
+      "reachable_changes": 3792,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 5232,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 5232,
+      "unreachable": 9744
+    },
+    {
+      "canonical_graph": 3,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 2244,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 2244,
+      "family": "field-key",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        3,
+        12,
+        48
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 108,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 2244,
+      "queries": 3888,
+      "reachable_changes": 1308,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 2244,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 2244,
+      "unreachable": 2472
+    },
+    {
+      "canonical_graph": 5,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 2340,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 2340,
+      "family": "field-key",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        5,
+        18,
+        40
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 120,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 2340,
+      "queries": 4800,
+      "reachable_changes": 1440,
+      "stage_fixed_gap_goals": 30,
+      "stage_fixed_phases": 2370,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 2340,
+      "unreachable": 3240
+    },
+    {
+      "canonical_graph": 6,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 4248,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 4248,
+      "family": "field-key",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        6,
+        9,
+        17,
+        24,
+        34,
+        36
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 216,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 4248,
+      "queries": 7776,
+      "reachable_changes": 2568,
+      "stage_fixed_gap_goals": 48,
+      "stage_fixed_phases": 4296,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 4248,
+      "unreachable": 4992
+    },
+    {
+      "canonical_graph": 7,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 3744,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 3744,
+      "family": "field-key",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        7,
+        13,
+        19,
+        44,
+        50,
+        56
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 180,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 3744,
+      "queries": 5400,
+      "reachable_changes": 1980,
+      "stage_fixed_gap_goals": 42,
+      "stage_fixed_phases": 3786,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 3744,
+      "unreachable": 3240
+    },
+    {
+      "canonical_graph": 10,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 2046,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 2046,
+      "family": "field-key",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        10,
+        20,
+        33
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 120,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 2046,
+      "queries": 4800,
+      "reachable_changes": 1470,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 2046,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 2046,
+      "unreachable": 3210
+    },
+    {
+      "canonical_graph": 11,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 3708,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 3708,
+      "family": "field-key",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        11,
+        14,
+        28,
+        35,
+        49,
+        52
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 192,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 3708,
+      "queries": 6144,
+      "reachable_changes": 2172,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 3708,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 3708,
+      "unreachable": 3780
+    },
+    {
+      "canonical_graph": 15,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1680,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 1680,
+      "family": "field-key",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        15,
+        51,
+        60
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 84,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1680,
+      "queries": 2352,
+      "reachable_changes": 882,
+      "stage_fixed_gap_goals": 9,
+      "stage_fixed_phases": 1689,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1680,
+      "unreachable": 1386
+    },
+    {
+      "canonical_graph": 21,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 3552,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3552,
+      "family": "field-key",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        21,
+        22,
+        26,
+        37,
+        41,
+        42
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 192,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 3552,
+      "queries": 6144,
+      "reachable_changes": 2136,
+      "stage_fixed_gap_goals": 50,
+      "stage_fixed_phases": 3602,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 3552,
+      "unreachable": 3816
+    },
+    {
+      "canonical_graph": 23,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1524,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 1524,
+      "family": "field-key",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        23,
+        45,
+        58
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 78,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1524,
+      "queries": 2028,
+      "reachable_changes": 798,
+      "stage_fixed_gap_goals": 18,
+      "stage_fixed_phases": 1542,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1524,
+      "unreachable": 1152
+    },
+    {
+      "canonical_graph": 25,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1112,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 1112,
+      "family": "field-key",
+      "full_goals": 2,
+      "full_owner_six_gap_goals": 2,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 2,
+      "labelled_graphs": [
+        25,
+        38
+      ],
+      "name": "directed three-cycle",
+      "no_ops": 56,
+      "owner_six_gap_goals": 12,
+      "owner_six_phases": 1124,
+      "queries": 1568,
+      "reachable_changes": 600,
+      "stage_fixed_gap_goals": 26,
+      "stage_fixed_phases": 1138,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1112,
+      "unreachable": 912
+    },
+    {
+      "canonical_graph": 27,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 3024,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3024,
+      "family": "field-key",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 6,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        27,
+        29,
+        39,
+        46,
+        54,
+        57
+      ],
+      "name": "directed three-cycle plus one reverse edge",
+      "no_ops": 156,
+      "owner_six_gap_goals": 18,
+      "owner_six_phases": 3042,
+      "queries": 4056,
+      "reachable_changes": 1596,
+      "stage_fixed_gap_goals": 40,
+      "stage_fixed_phases": 3064,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 3024,
+      "unreachable": 2304
+    },
+    {
+      "canonical_graph": 30,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1518,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 1518,
+      "family": "field-key",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        30,
+        43,
+        53
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 84,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1518,
+      "queries": 2352,
+      "reachable_changes": 888,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 1518,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1518,
+      "unreachable": 1380
+    },
+    {
+      "canonical_graph": 31,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 2700,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2700,
+      "family": "field-key",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        31,
+        47,
+        55,
+        59,
+        61,
+        62
+      ],
+      "name": "other graph with 5 edges",
+      "no_ops": 144,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 2700,
+      "queries": 3456,
+      "reachable_changes": 1404,
+      "stage_fixed_gap_goals": 14,
+      "stage_fixed_phases": 2714,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 2700,
+      "unreachable": 1908
+    },
+    {
+      "canonical_graph": 63,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 394,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 394,
+      "family": "field-key",
+      "full_goals": 1,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 1,
+      "labelled_graphs": [
+        63
+      ],
+      "name": "other graph with 6 edges",
+      "no_ops": 22,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 394,
+      "queries": 484,
+      "reachable_changes": 204,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 394,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 394,
+      "unreachable": 258
+    },
+    {
+      "canonical_graph": 1,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1116,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "exact_phases": 1116,
+      "family": "field-addition",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "name": "other graph with 1 edges",
+      "no_ops": 144,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1116,
+      "queries": 3456,
+      "reachable_changes": 972,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 1116,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1116,
+      "unreachable": 2340
+    },
+    {
+      "canonical_graph": 3,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 531,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 531,
+      "family": "field-addition",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        3,
+        12,
+        48
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 66,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 531,
+      "queries": 1452,
+      "reachable_changes": 435,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 531,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 531,
+      "unreachable": 951
+    },
+    {
+      "canonical_graph": 5,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 531,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 531,
+      "family": "field-addition",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        5,
+        18,
+        40
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 63,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 531,
+      "queries": 1323,
+      "reachable_changes": 405,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 531,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 531,
+      "unreachable": 855
+    },
+    {
+      "canonical_graph": 6,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1056,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 1056,
+      "family": "field-addition",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        6,
+        9,
+        17,
+        24,
+        34,
+        36
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 126,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1056,
+      "queries": 2646,
+      "reachable_changes": 816,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 1056,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1056,
+      "unreachable": 1704
+    },
+    {
+      "canonical_graph": 7,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 984,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 984,
+      "family": "field-addition",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        7,
+        13,
+        19,
+        44,
+        50,
+        56
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 114,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 984,
+      "queries": 2166,
+      "reachable_changes": 714,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 984,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 984,
+      "unreachable": 1338
+    },
+    {
+      "canonical_graph": 10,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 531,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 531,
+      "family": "field-addition",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        10,
+        20,
+        33
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 66,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 531,
+      "queries": 1452,
+      "reachable_changes": 435,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 531,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 531,
+      "unreachable": 951
+    },
+    {
+      "canonical_graph": 11,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1008,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 1008,
+      "family": "field-addition",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        11,
+        14,
+        28,
+        35,
+        49,
+        52
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 120,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1008,
+      "queries": 2400,
+      "reachable_changes": 768,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 1008,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1008,
+      "unreachable": 1512
+    },
+    {
+      "canonical_graph": 15,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 468,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 468,
+      "family": "field-addition",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        15,
+        51,
+        60
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 54,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 468,
+      "queries": 972,
+      "reachable_changes": 333,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 468,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 468,
+      "unreachable": 585
+    },
+    {
+      "canonical_graph": 21,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 984,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 984,
+      "family": "field-addition",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        21,
+        22,
+        26,
+        37,
+        41,
+        42
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 114,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 984,
+      "queries": 2166,
+      "reachable_changes": 714,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 984,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 984,
+      "unreachable": 1338
+    },
+    {
+      "canonical_graph": 23,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 450,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 450,
+      "family": "field-addition",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        23,
+        45,
+        58
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 51,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 450,
+      "queries": 867,
+      "reachable_changes": 309,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 450,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 450,
+      "unreachable": 507
+    },
+    {
+      "canonical_graph": 25,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 320,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 320,
+      "family": "field-addition",
+      "full_goals": 2,
+      "full_owner_six_gap_goals": 2,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 2,
+      "labelled_graphs": [
+        25,
+        38
+      ],
+      "name": "directed three-cycle",
+      "no_ops": 36,
+      "owner_six_gap_goals": 2,
+      "owner_six_phases": 322,
+      "queries": 648,
+      "reachable_changes": 222,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 320,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 320,
+      "unreachable": 390
+    },
+    {
+      "canonical_graph": 27,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 906,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 906,
+      "family": "field-addition",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        27,
+        29,
+        39,
+        46,
+        54,
+        57
+      ],
+      "name": "directed three-cycle plus one reverse edge",
+      "no_ops": 102,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 906,
+      "queries": 1734,
+      "reachable_changes": 618,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 906,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 906,
+      "unreachable": 1014
+    },
+    {
+      "canonical_graph": 30,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 468,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 468,
+      "family": "field-addition",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        30,
+        43,
+        53
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 54,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 468,
+      "queries": 972,
+      "reachable_changes": 333,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 468,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 468,
+      "unreachable": 585
+    },
+    {
+      "canonical_graph": 31,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 852,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 852,
+      "family": "field-addition",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        31,
+        47,
+        55,
+        59,
+        61,
+        62
+      ],
+      "name": "other graph with 5 edges",
+      "no_ops": 96,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 852,
+      "queries": 1536,
+      "reachable_changes": 570,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 852,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 852,
+      "unreachable": 870
+    },
+    {
+      "canonical_graph": 63,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 133,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 133,
+      "family": "field-addition",
+      "full_goals": 1,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 1,
+      "labelled_graphs": [
+        63
+      ],
+      "name": "other graph with 6 edges",
+      "no_ops": 15,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 133,
+      "queries": 225,
+      "reachable_changes": 87,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 133,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 133,
+      "unreachable": 123
+    },
+    {
+      "canonical_graph": 1,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1116,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "exact_phases": 1116,
+      "family": "integer-widening",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "name": "other graph with 1 edges",
+      "no_ops": 144,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1116,
+      "queries": 3456,
+      "reachable_changes": 972,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 1116,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1116,
+      "unreachable": 2340
+    },
+    {
+      "canonical_graph": 3,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 531,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_phases": 531,
+      "family": "integer-widening",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        3,
+        12,
+        48
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 66,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 531,
+      "queries": 1452,
+      "reachable_changes": 435,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 531,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 531,
+      "unreachable": 951
+    },
+    {
+      "canonical_graph": 5,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 531,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 531,
+      "family": "integer-widening",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        5,
+        18,
+        40
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 63,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 531,
+      "queries": 1323,
+      "reachable_changes": 405,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 531,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 531,
+      "unreachable": 855
+    },
+    {
+      "canonical_graph": 6,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1056,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 1056,
+      "family": "integer-widening",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        6,
+        9,
+        17,
+        24,
+        34,
+        36
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 126,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1056,
+      "queries": 2646,
+      "reachable_changes": 816,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 1056,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1056,
+      "unreachable": 1704
+    },
+    {
+      "canonical_graph": 7,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 984,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_phases": 984,
+      "family": "integer-widening",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        7,
+        13,
+        19,
+        44,
+        50,
+        56
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 114,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 984,
+      "queries": 2166,
+      "reachable_changes": 714,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 984,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 984,
+      "unreachable": 1338
+    },
+    {
+      "canonical_graph": 10,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 531,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 531,
+      "family": "integer-widening",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        10,
+        20,
+        33
+      ],
+      "name": "other graph with 2 edges",
+      "no_ops": 66,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 531,
+      "queries": 1452,
+      "reachable_changes": 435,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 531,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 531,
+      "unreachable": 951
+    },
+    {
+      "canonical_graph": 11,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 1008,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 1008,
+      "family": "integer-widening",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        11,
+        14,
+        28,
+        35,
+        49,
+        52
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 120,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 1008,
+      "queries": 2400,
+      "reachable_changes": 768,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 1008,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 1008,
+      "unreachable": 1512
+    },
+    {
+      "canonical_graph": 15,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 468,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exact_phases": 468,
+      "family": "integer-widening",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        15,
+        51,
+        60
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 54,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 468,
+      "queries": 972,
+      "reachable_changes": 333,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 468,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 468,
+      "unreachable": 585
+    },
+    {
+      "canonical_graph": 21,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 984,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 984,
+      "family": "integer-widening",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        21,
+        22,
+        26,
+        37,
+        41,
+        42
+      ],
+      "name": "other graph with 3 edges",
+      "no_ops": 114,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 984,
+      "queries": 2166,
+      "reachable_changes": 714,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 984,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 984,
+      "unreachable": 1338
+    },
+    {
+      "canonical_graph": 23,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 450,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 450,
+      "family": "integer-widening",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        23,
+        45,
+        58
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 51,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 450,
+      "queries": 867,
+      "reachable_changes": 309,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 450,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 450,
+      "unreachable": 507
+    },
+    {
+      "canonical_graph": 25,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 320,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 320,
+      "family": "integer-widening",
+      "full_goals": 2,
+      "full_owner_six_gap_goals": 2,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 2,
+      "labelled_graphs": [
+        25,
+        38
+      ],
+      "name": "directed three-cycle",
+      "no_ops": 36,
+      "owner_six_gap_goals": 2,
+      "owner_six_phases": 322,
+      "queries": 648,
+      "reachable_changes": 222,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 320,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 320,
+      "unreachable": 390
+    },
+    {
+      "canonical_graph": 27,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 906,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 906,
+      "family": "integer-widening",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        27,
+        29,
+        39,
+        46,
+        54,
+        57
+      ],
+      "name": "directed three-cycle plus one reverse edge",
+      "no_ops": 102,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 906,
+      "queries": 1734,
+      "reachable_changes": 618,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 906,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 906,
+      "unreachable": 1014
+    },
+    {
+      "canonical_graph": 30,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 468,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 468,
+      "family": "integer-widening",
+      "full_goals": 3,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 3,
+      "labelled_graphs": [
+        30,
+        43,
+        53
+      ],
+      "name": "other graph with 4 edges",
+      "no_ops": 54,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 468,
+      "queries": 972,
+      "reachable_changes": 333,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 468,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 468,
+      "unreachable": 585
+    },
+    {
+      "canonical_graph": 31,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 852,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 852,
+      "family": "integer-widening",
+      "full_goals": 6,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 6,
+      "labelled_graphs": [
+        31,
+        47,
+        55,
+        59,
+        61,
+        62
+      ],
+      "name": "other graph with 5 edges",
+      "no_ops": 96,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 852,
+      "queries": 1536,
+      "reachable_changes": 570,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 852,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 852,
+      "unreachable": 870
+    },
+    {
+      "canonical_graph": 63,
+      "combined_seven_gap_goals": 0,
+      "combined_seven_phases": 133,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exact_phases": 133,
+      "family": "integer-widening",
+      "full_goals": 1,
+      "full_owner_six_gap_goals": 0,
+      "full_stage_fixed_gap_goals": 0,
+      "full_stage_six_gap_goals": 0,
+      "graphs": 1,
+      "labelled_graphs": [
+        63
+      ],
+      "name": "other graph with 6 edges",
+      "no_ops": 15,
+      "owner_six_gap_goals": 0,
+      "owner_six_phases": 133,
+      "queries": 225,
+      "reachable_changes": 87,
+      "stage_fixed_gap_goals": 0,
+      "stage_fixed_phases": 133,
+      "stage_six_gap_goals": 0,
+      "stage_six_phases": 133,
+      "unreachable": 123
+    }
+  ],
+  "owner_six_gap_query_orbits": [
+    {
+      "canonical_graph": 25,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "labelled_query_members": 2,
+      "owner_six_phases": 3,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "canonical_graph": 25,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "labelled_query_members": 6,
+      "owner_six_phases": 4,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 3,
+      "target": [
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "canonical_graph": 25,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "labelled_query_members": 2,
+      "owner_six_phases": 4,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 3,
+      "target": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "canonical_graph": 25,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "enum-alias",
+      "labelled_query_members": 2,
+      "owner_six_phases": 3,
+      "source": [
+        1,
+        1,
+        1
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "canonical_graph": 27,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "labelled_query_members": 6,
+      "owner_six_phases": 4,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 3,
+      "target": [
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "canonical_graph": 27,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "labelled_query_members": 6,
+      "owner_six_phases": 4,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 3,
+      "target": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "canonical_graph": 27,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "enum-alias",
+      "labelled_query_members": 6,
+      "owner_six_phases": 4,
+      "source": [
+        0,
+        1,
+        0
+      ],
+      "stage_six_phases": 3,
+      "target": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "canonical_graph": 25,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-key",
+      "labelled_query_members": 2,
+      "owner_six_phases": 3,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "canonical_graph": 25,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "labelled_query_members": 6,
+      "owner_six_phases": 4,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 3,
+      "target": [
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "canonical_graph": 25,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "labelled_query_members": 2,
+      "owner_six_phases": 4,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 3,
+      "target": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "canonical_graph": 25,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-key",
+      "labelled_query_members": 2,
+      "owner_six_phases": 3,
+      "source": [
+        1,
+        1,
+        1
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "canonical_graph": 27,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "labelled_query_members": 6,
+      "owner_six_phases": 4,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 3,
+      "target": [
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "canonical_graph": 27,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "labelled_query_members": 6,
+      "owner_six_phases": 4,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 3,
+      "target": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "canonical_graph": 27,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 3,
+      "family": "field-key",
+      "labelled_query_members": 6,
+      "owner_six_phases": 4,
+      "source": [
+        0,
+        1,
+        0
+      ],
+      "stage_six_phases": 3,
+      "target": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "canonical_graph": 25,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "field-addition",
+      "labelled_query_members": 2,
+      "owner_six_phases": 3,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "canonical_graph": 25,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exact_phases": 2,
+      "family": "integer-widening",
+      "labelled_query_members": 2,
+      "owner_six_phases": 3,
+      "source": [
+        0,
+        0,
+        0
+      ],
+      "stage_six_phases": 2,
+      "target": [
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "scope": "Exhaustive reconstruction of the registered homogeneous three-owner schema census; no production prevalence or universal heuristic-optimality claim.",
+  "status": "PASS"
+}

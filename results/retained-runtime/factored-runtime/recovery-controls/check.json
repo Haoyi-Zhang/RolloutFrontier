@@ -1,0 +1,1 @@
+{"checked":true,"complete_requests":1,"cut_requests":1,"deployment":"separate processes and TCP relays on one host","duplicate_receipts":2,"durable_effects":4,"factor_corners":12,"factors":3,"installations":9,"installations_with_application_holds":0,"max_owner_slots":2,"owner_audit_rows":103,"owners":3,"parser_calls":3,"phases":3,"relay_socket_accepts":106,"reply_cuts":2}

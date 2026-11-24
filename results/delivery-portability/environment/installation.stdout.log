@@ -1,0 +1,5 @@
+Collecting protobuf==7.36.2 (from -r artifact/requirements-application.txt (line 1))
+  Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+Installing collected packages: protobuf
+Successfully installed protobuf-7.36.2

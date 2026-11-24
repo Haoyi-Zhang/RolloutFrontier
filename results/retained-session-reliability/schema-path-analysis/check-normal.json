@@ -1,0 +1,47 @@
+{
+  "contexts": 252,
+  "corruption_controls": {
+    "controls": [
+      {
+        "control": "remove_owner_gap_without_changing_query_denominators",
+        "rejected": true
+      },
+      {
+        "control": "invent_stage_portfolio_gap_with_consistent_aggregate_totals",
+        "rejected": true
+      },
+      {
+        "control": "move_gap_between_motifs_preserving_family_totals",
+        "rejected": true
+      },
+      {
+        "control": "change_orbit_multiplicities_preserving_total_gaps",
+        "rejected": true
+      },
+      {
+        "control": "erase_the_two_finite_stage_counterexamples",
+        "rejected": true
+      },
+      {
+        "control": "alter_finite_counterexample_path_with_unchanged_cost",
+        "rejected": true
+      }
+    ],
+    "scope": "Six readable derived-record mutations checked against full independent reconstruction; raw inputs remain unchanged.",
+    "status": "PASS"
+  },
+  "finite_control": {
+    "combined_portfolio_gap_goals": 0,
+    "no_ops": 1781,
+    "owner_portfolio_gap_goals": 0,
+    "queries": 7835,
+    "reachable_changes": 2104,
+    "stage_portfolio_gap_goals": 2,
+    "unreachable": 3950
+  },
+  "graph_isomorphism_classes": 15,
+  "owner_six_gap_goals": 64,
+  "queries": 186174,
+  "stage_six_gap_goals": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,66 @@
+test_cancelled_channel_waiter_cannot_drop_an_active_callers_connection (tests.cancellation_lifecycle.CancellationLifecycleTests.test_cancelled_channel_waiter_cannot_drop_an_active_callers_connection) ... ok
+test_cancelled_read_cannot_become_a_later_install_reply (tests.cancellation_lifecycle.CancellationLifecycleTests.test_cancelled_read_cannot_become_a_later_install_reply) ... FAIL
+test_envelope_acquisition_recovers_after_cancelled_persisted_prepare (tests.cancellation_lifecycle.CancellationLifecycleTests.test_envelope_acquisition_recovers_after_cancelled_persisted_prepare) ... FAIL
+test_fixed_acquisition_recovers_after_cancelled_persisted_prepare (tests.cancellation_lifecycle.CancellationLifecycleTests.test_fixed_acquisition_recovers_after_cancelled_persisted_prepare) ... FAIL
+
+======================================================================
+FAIL: test_cancelled_read_cannot_become_a_later_install_reply (tests.cancellation_lifecycle.CancellationLifecycleTests.test_cancelled_read_cannot_become_a_later_install_reply)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/work/artifact/tests/cancellation_lifecycle.py", line 82, in test_cancelled_read_cannot_become_a_later_install_reply
+    self.assertEqual(reply['status'], 'installed')
+AssertionError: 'observed' != 'installed'
+- observed
++ installed
+
+
+======================================================================
+FAIL: test_envelope_acquisition_recovers_after_cancelled_persisted_prepare (tests.cancellation_lifecycle.CancellationLifecycleTests.test_envelope_acquisition_recovers_after_cancelled_persisted_prepare)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/work/artifact/tests/cancellation_lifecycle.py", line 134, in test_envelope_acquisition_recovers_after_cancelled_persisted_prepare
+    await self.cancelled_acquisition(True)
+  File "/workspace/scratch/e34480916f53/work/artifact/tests/cancellation_lifecycle.py", line 108, in cancelled_acquisition
+    self.assertEqual(client.state['attempts'], {})
+AssertionError: {'1': {'status': 'retiring', 'manifest': '[38 chars] 1}}} != {}
++ {}
+- {'1': {'manifest': 'cancelled',
+-        'sequences': {'0': 1, '1': 1},
+-        'status': 'retiring'}}
+
+======================================================================
+FAIL: test_fixed_acquisition_recovers_after_cancelled_persisted_prepare (tests.cancellation_lifecycle.CancellationLifecycleTests.test_fixed_acquisition_recovers_after_cancelled_persisted_prepare)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e34480916f53/work/artifact/tests/cancellation_lifecycle.py", line 131, in test_fixed_acquisition_recovers_after_cancelled_persisted_prepare
+    await self.cancelled_acquisition(False)
+  File "/workspace/scratch/e34480916f53/work/artifact/tests/cancellation_lifecycle.py", line 108, in cancelled_acquisition
+    self.assertEqual(client.state['attempts'], {})
+AssertionError: {'1': {'status': 'retiring', 'manifest': '[38 chars] 1}}} != {}
++ {}
+- {'1': {'manifest': 'cancelled',
+-        'sequences': {'0': 1, '1': 1},
+-        'status': 'retiring'}}
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.071s
+
+FAILED (failures=3)

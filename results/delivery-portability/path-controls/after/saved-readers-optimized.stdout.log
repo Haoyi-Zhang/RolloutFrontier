@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "mode": "optimized",
+  "checks": {
+    "counterexample_loader": {
+      "status": "PASS",
+      "database_count": 7,
+      "payload_bytes": 187695,
+      "scope": "Actual historical manifest, SQLite integrity, table inventory and rows loaded; no current-source preimage claim."
+    },
+    "effect_drain": {
+      "status": "PASS",
+      "lifecycles": 24,
+      "database_snapshots": 96,
+      "independent_performance_comparison_claimed": false
+    },
+    "supporting_effects": {
+      "status": "PASS",
+      "source_files": 9,
+      "lifecycles": 24,
+      "database_snapshots": 96
+    }
+  },
+  "readonly_connections": {
+    "counterexample_loader": 7,
+    "effect_drain": 96,
+    "supporting_effects": 96
+  },
+  "unexpected_or_changed_files": [],
+  "source_databases_unchanged": true
+}

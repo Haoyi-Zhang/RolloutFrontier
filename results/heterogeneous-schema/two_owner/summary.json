@@ -1,0 +1,212 @@
+{
+  "all_context_validation": "weighted-event-DAG versus greatest-contiguous-prefix iteration",
+  "context_count_formula": [
+    24,
+    24
+  ],
+  "cost_vectors": [
+    {
+      "contexts": 12,
+      "exact_owner_stage_prepare_preparestage": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "contexts": 4,
+      "exact_owner_stage_prepare_preparestage": [
+        2,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "contexts": 116,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 32,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        3,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 8,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 8,
+      "exact_owner_stage_prepare_preparestage": [
+        3,
+        4,
+        5,
+        3,
+        3
+      ]
+    },
+    {
+      "contexts": 48,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 8,
+      "exact_owner_stage_prepare_preparestage": [
+        4,
+        4,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "contexts": 8,
+      "exact_owner_stage_prepare_preparestage": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    }
+  ],
+  "counts": {
+    "all_tie": 244,
+    "attempted": 576,
+    "owner_gap": 20,
+    "owner_stage_gap": 16,
+    "owner_stage_tie": 228,
+    "owner_tie": 224,
+    "prepare_first_stage_tie": 244,
+    "prepare_first_tie": 244,
+    "reachable": 244,
+    "stage_gap": 56,
+    "stage_tie": 188,
+    "unreachable": 332
+  },
+  "domain": "two_owner",
+  "elapsed_seconds": 1.0283924250106793,
+  "events_by_owner": [
+    [
+      "e_ab0",
+      "e_ab1",
+      "p_ba0",
+      "p_ba1"
+    ],
+    [
+      "p_ab0",
+      "p_ab1",
+      "e_ba0",
+      "e_ba1"
+    ]
+  ],
+  "field_edges": [
+    [
+      "ab0",
+      0,
+      1
+    ],
+    [
+      "ab1",
+      0,
+      1
+    ],
+    [
+      "ba0",
+      1,
+      0
+    ],
+    [
+      "ba1",
+      1,
+      0
+    ]
+  ],
+  "installations": 8,
+  "optimal_phase_counts": {
+    "2": 16,
+    "3": 164,
+    "4": 56,
+    "5": 8
+  },
+  "priorities": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "production_counts": {
+    "all_contexts": 576,
+    "checked": 576,
+    "planned": 244,
+    "unreachable": 332
+  },
+  "production_fixed_grid": [
+    0,
+    38,
+    77,
+    115,
+    153,
+    192,
+    230,
+    268,
+    307,
+    345,
+    383,
+    422,
+    460,
+    498,
+    537,
+    575
+  ],
+  "production_scope": "every_context",
+  "retained_example_validation": "literal catalog cells and safe-phase rectangles plus BFS",
+  "retained_examples": [
+    "first_unreachable",
+    "first_reachable",
+    "first_owner_gap",
+    "first_stage_gap",
+    "first_owner_stage_gap"
+  ],
+  "scope": "declared_finite_domain",
+  "state_shape": [
+    5,
+    5
+  ],
+  "strategies": [
+    "owner",
+    "stage",
+    "prepare_first",
+    "prepare_first_stage"
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "corruption_controls": {
+    "normal": [
+      {
+        "control": "rejection-claim",
+        "error": "ValueError",
+        "reason": "rejection identity, domain, or exception type"
+      },
+      {
+        "control": "missing-request",
+        "error": "ValueError",
+        "reason": "final request denominator"
+      },
+      {
+        "control": "changed-owner-effect",
+        "error": "KeyError",
+        "reason": "'record'"
+      }
+    ],
+    "optimized": [
+      {
+        "control": "rejection-claim",
+        "error": "ValueError",
+        "reason": "rejection identity, domain, or exception type"
+      },
+      {
+        "control": "missing-request",
+        "error": "ValueError",
+        "reason": "final request denominator"
+      },
+      {
+        "control": "changed-owner-effect",
+        "error": "KeyError",
+        "reason": "'record'"
+      }
+    ]
+  },
+  "historical_counterexamples": {
+    "corruption_controls": [
+      {
+        "control": "pending-binding",
+        "reason": "historical schema request is not the bad pending input",
+        "rejected": true
+      },
+      {
+        "control": "owner-hold",
+        "reason": "durable owner state differs from its recorded history",
+        "rejected": true
+      },
+      {
+        "control": "owner-effect",
+        "reason": "historical failed input has an application effect",
+        "rejected": true
+      },
+      {
+        "control": "failure-reply",
+        "reason": "recorded encoding-failure response differs",
+        "rejected": true
+      },
+      {
+        "control": "source-preimage",
+        "reason": "changed-source preimage differs: src/schema_contracts.py",
+        "rejected": true
+      },
+      {
+        "control": "post-fix-source",
+        "reason": "changed-source preimage differs: src/schema_contracts.py",
+        "rejected": true
+      }
+    ],
+    "databases": 7,
+    "durable_effects": 0,
+    "full_historical_source_tree": false,
+    "held_owner_obligations": 4,
+    "historical_cases": 2,
+    "included_in_post_fix_counts": false,
+    "old_code_reexecuted": false,
+    "owner_audit_rows": 14,
+    "payload_bytes": 187695,
+    "payload_files": 20,
+    "pending_requests": 2,
+    "pipeline_session": {
+      "closing_gate": true,
+      "durable_effects": 0,
+      "held_owner_obligations": 3,
+      "owner_audit_rows": 8,
+      "pending_requests": 1,
+      "recorded_encoding_failure_replies": 2,
+      "recorded_tcp_calls": 8,
+      "retirement_before_and_after_reopen_recorded_false": true
+    },
+    "recorded_encoding_failure_replies": 5,
+    "schema_session": {
+      "closing_gate": true,
+      "durable_effects": 0,
+      "held_owner_obligations": 1,
+      "owner_audit_rows": 6,
+      "pending_requests": 1,
+      "recorded_encoding_failure_replies": 3,
+      "recorded_tcp_calls": 6,
+      "retirement_before_and_after_reopen_recorded_false": true
+    },
+    "scope": "Read-only consistency of retained failure observations, TCP/owner-audit replies, durable pending requests, blocked drain state, and two changed-source preimages. Before/after-reopen retirement returns are recorded outcomes; old code is not executed.",
+    "source_preimages": [
+      {
+        "comparison": "retained first post-fix source minus the original UTF-8 validation block",
+        "current_source": "src/schema_contracts.py",
+        "function": "validate_payload",
+        "path": "source-preimages/src/schema_contracts.py",
+        "post_fix_source": "results/retained-session-reliability/utf8-inputs/normal/sources/src/schema_contracts.py"
+      },
+      {
+        "comparison": "retained first post-fix source minus the original UTF-8 validation block",
+        "current_source": "src/application.py",
+        "function": "semantic_record",
+        "path": "source-preimages/src/application.py",
+        "post_fix_source": "results/retained-session-reliability/utf8-inputs/normal/sources/src/application.py"
+      }
+    ],
+    "status": "PASS"
+  },
+  "modes": 2,
+  "normal_and_optimized_agree": true,
+  "per_mode": {
+    "audit_rows": 468,
+    "cases": 18,
+    "effects": 320,
+    "final_holds": 0,
+    "owner_restarts": 18,
+    "rejections": 162,
+    "requests": 144
+  },
+  "scope": "Saved TCP owner histories, rejected-input checkpoints, request bindings, effects and retirement reconstruction; recorded call-site rejection outcomes.",
+  "status": "PASS",
+  "totals": {
+    "audit_rows": 936,
+    "cases": 36,
+    "effects": 640,
+    "final_holds": 0,
+    "owner_restarts": 36,
+    "rejections": 324,
+    "requests": 288
+  }
+}

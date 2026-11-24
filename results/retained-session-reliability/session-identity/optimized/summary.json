@@ -1,0 +1,73 @@
+{
+  "control_groups": 6,
+  "controls": {
+    "acquisition_cancellation": {
+      "birth_durable_before_prepare": true,
+      "final_effects": 2,
+      "final_holds": 0,
+      "holds_at_cut": 1,
+      "recovered_owner_a_sequence": 2,
+      "same_birth_on_reopen": true
+    },
+    "fresh_and_repeated_journal": {
+      "admission_manifest_characters_at_label_limit": 201,
+      "final_effects": 4,
+      "final_holds": 0,
+      "foreign_journal_rejections": 2,
+      "fresh_births_distinct": true,
+      "later_same_label_and_request_id": "independent-completion",
+      "old_exact_retry_recovered": true,
+      "pending_holds_preserved": 2
+    },
+    "precreated_journal": {
+      "admitted_after_previous_drain": true,
+      "created_before_other_session": true,
+      "final_effects": 2,
+      "final_holds": 0,
+      "foreign_journal_rejections": 1,
+      "old_exact_retry_recovered": true,
+      "precreated_birth_preserved": true
+    },
+    "request_cancellation": {
+      "active_tasks_after_cancellation": 0,
+      "effects_at_cut": 1,
+      "exact_retry_recovered": true,
+      "final_effects": 2,
+      "final_holds": 0,
+      "pending_holds_preserved": 2
+    },
+    "retirement_cancellation": {
+      "final_effects": 0,
+      "final_holds": 0,
+      "holds_at_cut": 1,
+      "same_birth_on_reopen": true
+    },
+    "workflow_binding": {
+      "altered_journal_controls_rejected": 4,
+      "different_workflow_same_obligations": "rejected",
+      "final_effects": 3,
+      "final_holds": 0,
+      "old_exact_retry_recovered": true
+    }
+  },
+  "runtime": {
+    "optimized": 1,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "protobuf": "7.36.2",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "scope": "actual in-process Endpoint, SQLite and ProtoJSON; task/response cuts after committed operations",
+  "source_sha256": {
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/factored_planner.py": "b8971360df79d7437c7bb9f1976c6c3e915396ca37fd975cc291901c35cc71ef",
+    "src/factored_runtime.py": "6b3bc1dd0d9250714069586d3438dcdbf7888889319536d84ee6e7f3746c1891",
+    "src/factored_session.py": "9b7fd6cd94655efbe3e533592fdb20b4f18349a6f1367f704dd0d83f96732602",
+    "src/network.py": "1b53846520612a0e641f1ed0ffa513d246a33ace5b3234bcc3d68200db74a2ae",
+    "src/schema_contracts.py": "1288b34486c2661d3473bc6bb65e9ce1fe411013817b56525c0d11e4330d4fae",
+    "src/schema_runtime.py": "cb969ea68828f5df28fc2a4d936d024510828d2f62c1664089acc3786665edd6",
+    "tests/session_identity_regression.py": "407bb09c9aa364244d5b653f5d551e0df8f4454f265a006bc0d98ba4d5a2942d"
+  },
+  "status": "pass"
+}

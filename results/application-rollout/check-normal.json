@@ -1,0 +1,306 @@
+{
+  "catalog": {
+    "compatible_configurations": 36,
+    "frontier_phases": 708,
+    "no_op": 36,
+    "one_step_phases": 1452,
+    "plan_disagreements": 0,
+    "queries": 1296,
+    "reachable_nontrivial": 428,
+    "segmentation_gaps": 24,
+    "segmented_phases": 732,
+    "unreachable": 832
+  },
+  "completed_pipeline_requests": 1728,
+  "controls": 3,
+  "corruption_controls": [
+    {
+      "mutation": "changed-output",
+      "reason": "origin durable traffic inventory",
+      "rejected": true
+    },
+    {
+      "mutation": "missing-durable-effect",
+      "reason": "application reply lacks durable effect",
+      "rejected": true
+    },
+    {
+      "mutation": "removed-owner-audit",
+      "reason": "network response missing owner audit",
+      "rejected": true
+    },
+    {
+      "mutation": "changed-phase-count",
+      "reason": "reported phase count differs",
+      "rejected": true
+    },
+    {
+      "mutation": "source-excluding-guard",
+      "reason": "phase guard excludes its source",
+      "rejected": true
+    },
+    {
+      "mutation": "changed-local-path",
+      "reason": "phase path witness differs",
+      "rejected": true
+    },
+    {
+      "mutation": "missing-catalog-edge",
+      "reason": "application transitions differ",
+      "rejected": true
+    }
+  ],
+  "migration_cost": {
+    "handoffs": 2,
+    "installations": 9,
+    "phases": 3
+  },
+  "observed_owner_counts": {
+    "applied_calls": 5196,
+    "authority_rejections": 2,
+    "blocked_installs": 15,
+    "codec_rejections": 1,
+    "effects": 5194,
+    "installs": 83
+  },
+  "owner_effects_in_traffic": 5184,
+  "schema_probes": 8,
+  "status": "pass",
+  "traffic_trials": 18,
+  "trials": [
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 1,
+      "condition": "fixed",
+      "installed_program_changes": 0,
+      "median_latency_ms": 18.988577499999998,
+      "name": "fixed-clients-1-trial-1",
+      "observed_max_concurrency": 1,
+      "p95_latency_ms": 36.292891,
+      "repetition": 0,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 0
+    },
+    {
+      "blocked_install_attempts": 3,
+      "concurrency": 1,
+      "condition": "rollout",
+      "installed_program_changes": 9,
+      "median_latency_ms": 21.188706,
+      "name": "rollout-clients-1-trial-1",
+      "observed_max_concurrency": 1,
+      "p95_latency_ms": 38.942716,
+      "repetition": 0,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 1
+    },
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 1,
+      "condition": "rollout",
+      "installed_program_changes": 9,
+      "median_latency_ms": 22.950054,
+      "name": "rollout-clients-1-trial-2",
+      "observed_max_concurrency": 1,
+      "p95_latency_ms": 54.331521,
+      "repetition": 1,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 3
+    },
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 1,
+      "condition": "fixed",
+      "installed_program_changes": 0,
+      "median_latency_ms": 25.154605500000002,
+      "name": "fixed-clients-1-trial-2",
+      "observed_max_concurrency": 1,
+      "p95_latency_ms": 43.773821,
+      "repetition": 1,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 0
+    },
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 1,
+      "condition": "fixed",
+      "installed_program_changes": 0,
+      "median_latency_ms": 22.188612499999998,
+      "name": "fixed-clients-1-trial-3",
+      "observed_max_concurrency": 1,
+      "p95_latency_ms": 36.637691,
+      "repetition": 2,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 0
+    },
+    {
+      "blocked_install_attempts": 1,
+      "concurrency": 1,
+      "condition": "rollout",
+      "installed_program_changes": 9,
+      "median_latency_ms": 24.4697305,
+      "name": "rollout-clients-1-trial-3",
+      "observed_max_concurrency": 1,
+      "p95_latency_ms": 36.364868,
+      "repetition": 2,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 3
+    },
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 4,
+      "condition": "fixed",
+      "installed_program_changes": 0,
+      "median_latency_ms": 42.652350999999996,
+      "name": "fixed-clients-4-trial-1",
+      "observed_max_concurrency": 4,
+      "p95_latency_ms": 79.456312,
+      "repetition": 0,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 0
+    },
+    {
+      "blocked_install_attempts": 2,
+      "concurrency": 4,
+      "condition": "rollout",
+      "installed_program_changes": 9,
+      "median_latency_ms": 41.7358165,
+      "name": "rollout-clients-4-trial-1",
+      "observed_max_concurrency": 4,
+      "p95_latency_ms": 111.219174,
+      "repetition": 0,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 8
+    },
+    {
+      "blocked_install_attempts": 2,
+      "concurrency": 4,
+      "condition": "rollout",
+      "installed_program_changes": 9,
+      "median_latency_ms": 42.833199,
+      "name": "rollout-clients-4-trial-2",
+      "observed_max_concurrency": 4,
+      "p95_latency_ms": 139.50551,
+      "repetition": 1,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 8
+    },
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 4,
+      "condition": "fixed",
+      "installed_program_changes": 0,
+      "median_latency_ms": 46.249336,
+      "name": "fixed-clients-4-trial-2",
+      "observed_max_concurrency": 4,
+      "p95_latency_ms": 77.166761,
+      "repetition": 1,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 0
+    },
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 4,
+      "condition": "fixed",
+      "installed_program_changes": 0,
+      "median_latency_ms": 42.641014999999996,
+      "name": "fixed-clients-4-trial-3",
+      "observed_max_concurrency": 4,
+      "p95_latency_ms": 123.967214,
+      "repetition": 2,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 0
+    },
+    {
+      "blocked_install_attempts": 1,
+      "concurrency": 4,
+      "condition": "rollout",
+      "installed_program_changes": 9,
+      "median_latency_ms": 40.090028000000004,
+      "name": "rollout-clients-4-trial-3",
+      "observed_max_concurrency": 4,
+      "p95_latency_ms": 61.46705,
+      "repetition": 2,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 8
+    },
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 16,
+      "condition": "fixed",
+      "installed_program_changes": 0,
+      "median_latency_ms": 137.95373899999998,
+      "name": "fixed-clients-16-trial-1",
+      "observed_max_concurrency": 16,
+      "p95_latency_ms": 227.043103,
+      "repetition": 0,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 0
+    },
+    {
+      "blocked_install_attempts": 3,
+      "concurrency": 16,
+      "condition": "rollout",
+      "installed_program_changes": 9,
+      "median_latency_ms": 126.602565,
+      "name": "rollout-clients-16-trial-1",
+      "observed_max_concurrency": 16,
+      "p95_latency_ms": 178.791168,
+      "repetition": 0,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 32
+    },
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 16,
+      "condition": "rollout",
+      "installed_program_changes": 9,
+      "median_latency_ms": 167.59463799999997,
+      "name": "rollout-clients-16-trial-2",
+      "observed_max_concurrency": 16,
+      "p95_latency_ms": 321.083808,
+      "repetition": 1,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 36
+    },
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 16,
+      "condition": "fixed",
+      "installed_program_changes": 0,
+      "median_latency_ms": 138.78774199999998,
+      "name": "fixed-clients-16-trial-2",
+      "observed_max_concurrency": 16,
+      "p95_latency_ms": 206.791575,
+      "repetition": 1,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 0
+    },
+    {
+      "blocked_install_attempts": 0,
+      "concurrency": 16,
+      "condition": "fixed",
+      "installed_program_changes": 0,
+      "median_latency_ms": 163.43246449999998,
+      "name": "fixed-clients-16-trial-3",
+      "observed_max_concurrency": 16,
+      "p95_latency_ms": 230.335891,
+      "repetition": 2,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 0
+    },
+    {
+      "blocked_install_attempts": 2,
+      "concurrency": 16,
+      "condition": "rollout",
+      "installed_program_changes": 9,
+      "median_latency_ms": 134.6681255,
+      "name": "rollout-clients-16-trial-3",
+      "observed_max_concurrency": 16,
+      "p95_latency_ms": 222.184072,
+      "repetition": 2,
+      "requests": 96,
+      "requests_overlapping_install_rpc": 32
+    }
+  ]
+}

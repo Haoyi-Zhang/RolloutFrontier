@@ -1,0 +1,37 @@
+{
+  "command": [
+    "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python",
+    "-B",
+    "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/verify.py",
+    "--mode",
+    "normal",
+    "--checks",
+    "heterogeneous-schema",
+    "--out",
+    "/workspace/scratch/e34480916f53/finalization/review/reproduction/interrupted verification observed"
+  ],
+  "cwd": "/workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact",
+  "scope": "SIGINT during an actual independent saved-evidence checker; no experiment or timing campaign.",
+  "coordinator_pid": 6,
+  "worker_before_sigint": {
+    "pid": 10,
+    "ppid": 6,
+    "state": "Rs",
+    "command": "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python -B -m tests.check_heterogeneous_schema /workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/results/heterogeneous-schema --corruption-controls"
+  },
+  "worker_process_group": 10,
+  "signal_sent": "SIGINT",
+  "coordinator_exit_code": -2,
+  "worker_after_coordinator_exit": {
+    "ppid": 1,
+    "state": "Rs",
+    "command": "/workspace/scratch/e34480916f53/finalization/review/reproduction/environment/bin/python -B -m tests.check_heterogeneous_schema /workspace/scratch/e34480916f53/deepening/delivery/RolloutFrontier/artifact/results/heterogeneous-schema --corruption-controls"
+  },
+  "worker_remained_active": true,
+  "retained_report_status": "RUNNING",
+  "retained_report_has_finished_time": false,
+  "retained_report_has_exit_code": false,
+  "retained_check_records": 9,
+  "worker_after_cleanup": null,
+  "active_worker_after_cleanup": false
+}

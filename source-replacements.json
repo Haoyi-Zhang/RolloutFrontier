@@ -1,0 +1,36 @@
+{
+  "replacements": {
+    "reproduce.py": {
+      "current_sha256": "d44c24b91515658356daf53b2ffd03bcba6dbc23920a996275ac178a8d4fcefe",
+      "reason": "The current bounded semantic runner gives the isolated 45-test unit job its declared 300-second allowance and binds the accepted reference files by SHA-256. Historical supporting-study preimages remain unchanged.",
+      "retained_sha256": "ed3846ce809260440329f04e56dc8ed4322df1980b4df11d9fb485a59a7b9f89"
+    },
+    "tests/capture_revision_study.py": {
+      "current_sha256": "f35b0e466a3215b7a188f9d5d9748477a11e743fae90696255f4d20c89fc1f65",
+      "reason": "The current capture driver points semantic acceptance to the dated 45-test baseline, binds all discovered test modules, and records the reference digests and declared semantic timeout.",
+      "retained_sha256": "9f5b66eb04085446d053bff5d31312a90f19acb05e9d58bdece2ed3e09925655"
+    },
+    "tests/check_policy_boundaries.py": {
+      "current_sha256": "b32e27a9ad9374b4d889bcb87e30184614f306ea781952c42ad3636aa8a95584",
+      "reason": "The checker was corrected so later unrelated modules do not become retrospective inputs to the recorded campaign; the retained measured-era checker bytes remain verified.",
+      "retained_sha256": "6866961eb9ae05a8ae7923e2e735b93fca25694bbab6bcabf7d81c18b83d8988"
+    },
+    "tests/test_factored_runtime.py": {
+      "current_sha256": "f782a1d9287a69175106bcaa28b3aed3319dcaada4074aaff89dc30afb13c869",
+      "reason": "The current Python 3.13 acceptance test closes direct SQLite inspection connections explicitly while retaining transaction commit semantics. The measured-era runtime source and all expected outcomes remain unchanged.",
+      "retained_sha256": "9731c17d06f81ab720a920379c4249d008ec06732a0321b95b4ab6456b033d1c"
+    },
+    "tests/unit.py": {
+      "current_sha256": "c802a7afbf09ce9fdf8905f74cd9bfc53f881e9d59ea2fd0f1e6f12f68c8bdb3",
+      "reason": "The current unit entrypoint isolates each discovered test module in a fresh subprocess, binds all 45 test IDs and module bytes, and fails closed on timeouts or leaked descendants. Historical five-test-era preimages remain unchanged.",
+      "retained_sha256": "0d47cfec9b618d52c290aeb7ef2ab014a0441664368921f51e589f91acfe4957"
+    },
+    "verify.py": {
+      "current_sha256": "8072e3e9854257de0514b6593f2769ba0e89d2f845c3c6628f95b577515a9cea",
+      "reason": "The current verifier distinguishes immutable measured-era preimages from registered current harness replacements, including the physical-runtime acceptance test whose Python 3.13 SQLite inspection contexts were made explicit.",
+      "retained_sha256": "4e075df3f27e84b3a6d8dfa37f571b343bdaeb0cb04682da61a58bcfd874e26a"
+    }
+  },
+  "rule": "A mismatch is acceptable only when the retained preimage matches retained_sha256, the current file matches current_sha256, and current-source-manifest.json binds the current digest.",
+  "schema": "rolloutfrontier-source-replacements-v1"
+}

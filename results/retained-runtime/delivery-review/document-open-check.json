@@ -1,0 +1,20 @@
+{
+  "main.pdf": {
+    "pages": 12,
+    "all_pages_extractable": true,
+    "rendered_page": 12,
+    "render": "/workspace/scratch/e34480916f53/completion/review/package/main-from-archive.png"
+  },
+  "supplement.pdf": {
+    "pages": 28,
+    "all_pages_extractable": true,
+    "rendered_page": 15,
+    "render": "/workspace/scratch/e34480916f53/completion/review/package/supplement-from-archive.png"
+  },
+  "figure_atlas.pdf": {
+    "pages": 9,
+    "all_pages_extractable": true,
+    "rendered_page": 9,
+    "render": "/workspace/scratch/e34480916f53/completion/review/package/figure_atlas-from-archive.png"
+  }
+}

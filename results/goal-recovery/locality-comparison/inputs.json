@@ -1,0 +1,927 @@
+{
+  "goal": {
+    "branches": [
+      {
+        "0": [
+          "server.interval.35_36"
+        ],
+        "1": [
+          "server.interval.35_36"
+        ],
+        "2": [
+          "client.interval.35_36"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.36_36"
+        ],
+        "1": [
+          "server.interval.36_36"
+        ],
+        "2": [
+          "client.interval.36_36"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.36_37"
+        ],
+        "1": [
+          "server.interval.36_37"
+        ],
+        "2": [
+          "client.interval.36_37"
+        ]
+      },
+      {
+        "0": [
+          "server.interval.37_37"
+        ],
+        "1": [
+          "server.interval.37_37"
+        ],
+        "2": [
+          "client.interval.37_37"
+        ]
+      }
+    ],
+    "budgets": {
+      "frontier_states_per_expansion": 250000,
+      "phase_candidates": 250000,
+      "placements": 4096
+    },
+    "catalog": {
+      "0": [
+        [
+          "server.interval.35_36",
+          "server.interval.36_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      ],
+      "1": [
+        [
+          "server.interval.35_36",
+          "server.interval.36_36",
+          "server.interval.36_37",
+          "version.server.36"
+        ],
+        [
+          "server.interval.35_36",
+          "version.server.35"
+        ],
+        [
+          "server.interval.36_37",
+          "server.interval.37_37",
+          "version.server.37"
+        ]
+      ],
+      "2": [
+        [
+          "client.interval.35_36",
+          "client.interval.36_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.34"
+        ],
+        [
+          "client.interval.35_36",
+          "client.interval.36_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.35"
+        ],
+        [
+          "client.interval.35_36",
+          "client.interval.36_36",
+          "version.client.33"
+        ],
+        [
+          "client.interval.36_36",
+          "client.interval.36_37",
+          "client.interval.37_37",
+          "version.client.36"
+        ],
+        [
+          "client.interval.37_37",
+          "version.client.37"
+        ]
+      ]
+    },
+    "cost": {
+      "handoffs": 2,
+      "installations": 6,
+      "phases": 3
+    },
+    "initial": {
+      "0": [
+        "server.interval.35_36",
+        "version.server.35"
+      ],
+      "1": [
+        "server.interval.35_36",
+        "version.server.35"
+      ],
+      "2": [
+        "client.interval.35_36",
+        "client.interval.36_36",
+        "client.interval.36_37",
+        "client.interval.37_37",
+        "version.client.35"
+      ]
+    },
+    "objective": [
+      "fewest guard phases",
+      "fewest installations"
+    ],
+    "phases": [
+      {
+        "box": {
+          "0": [
+            [
+              "server.interval.35_36"
+            ]
+          ],
+          "1": [
+            [
+              "server.interval.35_36"
+            ]
+          ],
+          "2": [
+            [
+              "client.interval.35_36"
+            ]
+          ]
+        },
+        "local_paths": {
+          "0": [
+            [
+              "server.interval.35_36",
+              "version.server.35"
+            ],
+            [
+              "server.interval.35_36",
+              "server.interval.36_36",
+              "server.interval.36_37",
+              "version.server.36"
+            ]
+          ],
+          "1": [
+            [
+              "server.interval.35_36",
+              "version.server.35"
+            ],
+            [
+              "server.interval.35_36",
+              "server.interval.36_36",
+              "server.interval.36_37",
+              "version.server.36"
+            ]
+          ],
+          "2": [
+            [
+              "client.interval.35_36",
+              "client.interval.36_36",
+              "client.interval.36_37",
+              "client.interval.37_37",
+              "version.client.35"
+            ]
+          ]
+        },
+        "source": {
+          "0": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "1": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "2": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ]
+        },
+        "steps": [
+          {
+            "node": "0",
+            "support": [
+              "server.interval.35_36",
+              "server.interval.36_36",
+              "server.interval.36_37",
+              "version.server.36"
+            ]
+          },
+          {
+            "node": "1",
+            "support": [
+              "server.interval.35_36",
+              "server.interval.36_36",
+              "server.interval.36_37",
+              "version.server.36"
+            ]
+          }
+        ],
+        "target": {
+          "0": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "1": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "2": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ]
+        }
+      },
+      {
+        "box": {
+          "0": [
+            [
+              "server.interval.36_37"
+            ]
+          ],
+          "1": [
+            [
+              "server.interval.36_37"
+            ]
+          ],
+          "2": [
+            [
+              "client.interval.36_36",
+              "client.interval.36_37",
+              "client.interval.37_37"
+            ]
+          ]
+        },
+        "local_paths": {
+          "0": [
+            [
+              "server.interval.35_36",
+              "server.interval.36_36",
+              "server.interval.36_37",
+              "version.server.36"
+            ],
+            [
+              "server.interval.36_37",
+              "server.interval.37_37",
+              "version.server.37"
+            ]
+          ],
+          "1": [
+            [
+              "server.interval.35_36",
+              "server.interval.36_36",
+              "server.interval.36_37",
+              "version.server.36"
+            ],
+            [
+              "server.interval.36_37",
+              "server.interval.37_37",
+              "version.server.37"
+            ]
+          ],
+          "2": [
+            [
+              "client.interval.35_36",
+              "client.interval.36_36",
+              "client.interval.36_37",
+              "client.interval.37_37",
+              "version.client.35"
+            ]
+          ]
+        },
+        "source": {
+          "0": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "1": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "2": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ]
+        },
+        "steps": [
+          {
+            "node": "0",
+            "support": [
+              "server.interval.36_37",
+              "server.interval.37_37",
+              "version.server.37"
+            ]
+          },
+          {
+            "node": "1",
+            "support": [
+              "server.interval.36_37",
+              "server.interval.37_37",
+              "version.server.37"
+            ]
+          }
+        ],
+        "target": {
+          "0": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ],
+          "1": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ],
+          "2": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ]
+        }
+      },
+      {
+        "box": {
+          "0": [
+            [
+              "server.interval.36_37",
+              "server.interval.37_37"
+            ]
+          ],
+          "1": [
+            [
+              "server.interval.36_37",
+              "server.interval.37_37"
+            ]
+          ],
+          "2": [
+            [
+              "client.interval.37_37"
+            ]
+          ]
+        },
+        "local_paths": {
+          "0": [
+            [
+              "server.interval.36_37",
+              "server.interval.37_37",
+              "version.server.37"
+            ]
+          ],
+          "1": [
+            [
+              "server.interval.36_37",
+              "server.interval.37_37",
+              "version.server.37"
+            ]
+          ],
+          "2": [
+            [
+              "client.interval.35_36",
+              "client.interval.36_36",
+              "client.interval.36_37",
+              "client.interval.37_37",
+              "version.client.35"
+            ],
+            [
+              "client.interval.36_36",
+              "client.interval.36_37",
+              "client.interval.37_37",
+              "version.client.36"
+            ],
+            [
+              "client.interval.37_37",
+              "version.client.37"
+            ]
+          ]
+        },
+        "source": {
+          "0": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ],
+          "1": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ],
+          "2": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ]
+        },
+        "steps": [
+          {
+            "node": "2",
+            "support": [
+              "client.interval.36_36",
+              "client.interval.36_37",
+              "client.interval.37_37",
+              "version.client.36"
+            ]
+          },
+          {
+            "node": "2",
+            "support": [
+              "client.interval.37_37",
+              "version.client.37"
+            ]
+          }
+        ],
+        "target": {
+          "0": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ],
+          "1": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ],
+          "2": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      }
+    ],
+    "schema": "rollout-goal-plan-v1",
+    "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+    "search": {
+      "after": {
+        "cached_state_expansions": 23,
+        "catalog_placements": 45,
+        "frontier_calls": 23,
+        "frontier_search_states": 1277,
+        "phase_candidates": 120,
+        "phase_edge_budget_exhausted": false
+      },
+      "before": {
+        "cached_state_expansions": 23,
+        "catalog_placements": 45,
+        "frontier_calls": 23,
+        "frontier_search_states": 1277,
+        "phase_candidates": 120,
+        "phase_edge_budget_exhausted": false
+      },
+      "query": {
+        "cached_state_expansions": 10,
+        "incumbent_pruned_states": 1,
+        "new_state_expansions": 0,
+        "settled_states": 12
+      }
+    },
+    "status": "planned",
+    "target": {
+      "0": [
+        "server.interval.36_37",
+        "server.interval.37_37",
+        "version.server.37"
+      ],
+      "1": [
+        "server.interval.36_37",
+        "server.interval.37_37",
+        "version.server.37"
+      ],
+      "2": [
+        "client.interval.37_37",
+        "version.client.37"
+      ]
+    },
+    "transitions": {
+      "0": [
+        {
+          "source": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "target": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ]
+        },
+        {
+          "source": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "target": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ]
+        }
+      ],
+      "1": [
+        {
+          "source": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ],
+          "target": [
+            "server.interval.36_37",
+            "server.interval.37_37",
+            "version.server.37"
+          ]
+        },
+        {
+          "source": [
+            "server.interval.35_36",
+            "version.server.35"
+          ],
+          "target": [
+            "server.interval.35_36",
+            "server.interval.36_36",
+            "server.interval.36_37",
+            "version.server.36"
+          ]
+        }
+      ],
+      "2": [
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.34"
+          ],
+          "target": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.35"
+          ],
+          "target": [
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "version.client.33"
+          ],
+          "target": [
+            "client.interval.35_36",
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.34"
+          ]
+        },
+        {
+          "source": [
+            "client.interval.36_36",
+            "client.interval.36_37",
+            "client.interval.37_37",
+            "version.client.36"
+          ],
+          "target": [
+            "client.interval.37_37",
+            "version.client.37"
+          ]
+        }
+      ]
+    }
+  },
+  "goal_origin": {
+    "path": "results/goal-policy-development/global-preread/executions.json",
+    "record": "normal-two-minor",
+    "sha256": "184ca9440c75eeb5a46aaeedca807183c0aef9a211f77e69af494ef63b55cce5"
+  },
+  "partition": {
+    "branches": [
+      {
+        "0": [
+          "cap0"
+        ],
+        "1": [
+          "cap1"
+        ],
+        "2": [
+          "cap2"
+        ]
+      }
+    ],
+    "budgets": {
+      "frontier_states_per_expansion": 250000,
+      "phase_candidates": 250000,
+      "placements": 4096
+    },
+    "catalog": {
+      "0": [
+        [
+          "cap0",
+          "v0"
+        ],
+        [
+          "cap0",
+          "v1"
+        ]
+      ],
+      "1": [
+        [
+          "cap1",
+          "v0"
+        ],
+        [
+          "cap1",
+          "v1"
+        ]
+      ],
+      "2": [
+        [
+          "cap2",
+          "v0"
+        ],
+        [
+          "cap2",
+          "v1"
+        ]
+      ]
+    },
+    "cost": {
+      "handoffs": 0,
+      "installations": 2,
+      "phases": 1
+    },
+    "initial": {
+      "0": [
+        "cap0",
+        "v0"
+      ],
+      "1": [
+        "cap1",
+        "v0"
+      ],
+      "2": [
+        "cap2",
+        "v0"
+      ]
+    },
+    "objective": [
+      "fewest guard phases",
+      "fewest installations"
+    ],
+    "phases": [
+      {
+        "box": {
+          "0": [
+            [
+              "cap0"
+            ]
+          ],
+          "1": [
+            [
+              "cap1"
+            ]
+          ],
+          "2": [
+            [
+              "cap2"
+            ]
+          ]
+        },
+        "local_paths": {
+          "0": [
+            [
+              "cap0",
+              "v0"
+            ],
+            [
+              "cap0",
+              "v1"
+            ]
+          ],
+          "1": [
+            [
+              "cap1",
+              "v0"
+            ],
+            [
+              "cap1",
+              "v1"
+            ]
+          ],
+          "2": [
+            [
+              "cap2",
+              "v0"
+            ]
+          ]
+        },
+        "source": {
+          "0": [
+            "cap0",
+            "v0"
+          ],
+          "1": [
+            "cap1",
+            "v0"
+          ],
+          "2": [
+            "cap2",
+            "v0"
+          ]
+        },
+        "steps": [
+          {
+            "node": "0",
+            "support": [
+              "cap0",
+              "v1"
+            ]
+          },
+          {
+            "node": "1",
+            "support": [
+              "cap1",
+              "v1"
+            ]
+          }
+        ],
+        "target": {
+          "0": [
+            "cap0",
+            "v1"
+          ],
+          "1": [
+            "cap1",
+            "v1"
+          ],
+          "2": [
+            "cap2",
+            "v0"
+          ]
+        }
+      }
+    ],
+    "schema": "rollout-goal-plan-v1",
+    "scope": "fixed catalog and directed local transitions; exact bounded guard language; coordinated phase boundaries",
+    "search": {
+      "after": {
+        "cached_state_expansions": 1,
+        "catalog_placements": 8,
+        "frontier_calls": 1,
+        "frontier_search_states": 4,
+        "phase_candidates": 7,
+        "phase_edge_budget_exhausted": false
+      },
+      "before": {
+        "cached_state_expansions": 0,
+        "catalog_placements": 8,
+        "frontier_calls": 0,
+        "frontier_search_states": 0,
+        "phase_candidates": 0,
+        "phase_edge_budget_exhausted": false
+      },
+      "query": {
+        "cached_state_expansions": 0,
+        "incumbent_pruned_states": 5,
+        "new_state_expansions": 1,
+        "settled_states": 7
+      }
+    },
+    "status": "planned",
+    "target": {
+      "0": [
+        "cap0",
+        "v1"
+      ],
+      "1": [
+        "cap1",
+        "v1"
+      ],
+      "2": [
+        "cap2",
+        "v0"
+      ]
+    },
+    "transitions": {
+      "0": [
+        {
+          "source": [
+            "cap0",
+            "v0"
+          ],
+          "target": [
+            "cap0",
+            "v1"
+          ]
+        },
+        {
+          "source": [
+            "cap0",
+            "v1"
+          ],
+          "target": [
+            "cap0",
+            "v0"
+          ]
+        }
+      ],
+      "1": [
+        {
+          "source": [
+            "cap1",
+            "v0"
+          ],
+          "target": [
+            "cap1",
+            "v1"
+          ]
+        },
+        {
+          "source": [
+            "cap1",
+            "v1"
+          ],
+          "target": [
+            "cap1",
+            "v0"
+          ]
+        }
+      ],
+      "2": [
+        {
+          "source": [
+            "cap2",
+            "v0"
+          ],
+          "target": [
+            "cap2",
+            "v1"
+          ]
+        },
+        {
+          "source": [
+            "cap2",
+            "v1"
+          ],
+          "target": [
+            "cap2",
+            "v0"
+          ]
+        }
+      ]
+    }
+  }
+}

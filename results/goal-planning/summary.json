@@ -1,0 +1,30 @@
+{
+  "centralized_reachability_mismatches": 0,
+  "contexts": 3304,
+  "design": {
+    "2x2": "15 nonempty relations, all 16 directed graph pairs, all compatible ordered endpoints",
+    "2x2x2": "255 nonempty relations, complete/forward-chain/reverse-chain/alternating-direction, all compatible ordered endpoints",
+    "3x3": "511 nonempty relations, complete/forward-chain/reverse-chain/directed-cycle, all compatible ordered endpoints"
+  },
+  "frontier_calls": 13692,
+  "goal_queries": 65792,
+  "literal_phase_edges_summed": 18614,
+  "literal_safe_products_summed": 29656,
+  "optimum_mismatches": 0,
+  "planned_installations": 43930,
+  "planned_phases": 36405,
+  "queries_sha256": "5cf1ac836ffea541fd26ed3f0f603da234c3d84891e0b59cb416f5564ad99047",
+  "reachable": 40517,
+  "scope": "Finite logical planning and full safe-product oracle; no network, failures or timing comparison.",
+  "source_sha256": {
+    "src/checker.py": "78246d23893f98a9a0176422faf44493c8ef0ce975c622412130e89d4430d318",
+    "src/controller.py": "06dba18d50a34e7115d96b4dcafdafe17bd6fda3d626d5b6584b0a0adcfc84e6",
+    "src/envelope.py": "3bb5f487520f8d1eaf4edb0646c60181a5e06ba4a8112345aee1fd358a630856",
+    "src/goal_planner.py": "7489b4ffe8f62195dc0d054eac3c6d49452109077714203eb4a357405ca8f28d",
+    "tests/goal_planner_oracle.py": "515ae758f19694bcc994cf6585b71a7f49441faf03523059fb2955f3316f3221",
+    "tests/goal_planner_study.py": "3aa0fcbc4e002cdd56c5757c99f433ce1b244dee0e4e453b6b6d7a2cd0cc2224"
+  },
+  "status": "PASS",
+  "unreachable": 25275,
+  "zero_step_queries": 13824
+}

@@ -1,17 +1,18 @@
 # Availability frontiers: model, arguments, and finite exactness
 
-These arguments concern a finite abstract API-contract model. They are not a proof
-that real APIs satisfy their declarations, a mechanization, or a new general theory
-of coordination avoidance. Predicate reservation, warranties, and local treaties
-already establish the broader local-to-global preservation pattern. The contribution
-here is narrower: characterize every independently enforceable positive product in a
-bounded rollout domain, choose an exact finite availability optimum, and connect that
-choice to durable acquisition and retirement.
+These arguments characterize the independently enforceable positive products in a
+bounded API-contract model, establish exact selection objectives, and connect each
+selected product to durable acquisition and retirement. Predicate reservation,
+warranties, and local treaties supply the broader local-to-global preservation
+pattern. The proofs below operate on declared support; validation that real APIs
+satisfy those declarations belongs to the contract-extraction boundary.
 
 ## 1. State and trust boundary
 
 There are at most six endpoint owners and six origins. Each identity has one writer;
-there is no concurrent failover for the same origin. Endpoint `i` has authoritative
+there is no concurrent failover for the same origin. An origin serializes acquisition,
+recovery, use and retirement across their complete asynchronous lifetimes, including
+message waits. A shared lifecycle gate enforces this order. Endpoint `i` has authoritative
 installed support `S_i`, a finite set of positive contract atoms. Only the serialized
 installation operation changes `S_i`. An atom denotes a declared behavioral
 obligation, not merely a method spelling. The prototype trusts these declarations and
@@ -206,14 +207,17 @@ persisting the hold. The only support-changing transition checks all holds befor
 installation. Replay and duplicate prepares do not weaken a stored hold, while close
 removes obligations only after the origin has stopped authorizing use.
 
-**Theorem 5 (admission lifetime safety).** Under the single-writer, durable-storage,
-and guarded-installation premises, every use authorized by a committed, nonretired
+**Theorem 5 (admission lifetime safety).** Under the single-writer, serialized-origin,
+durable-storage and guarded-installation premises, every use authorized by a committed, nonretired
 admission satisfies one complete workload alternative.
 
 *Argument.* Invariant 4 places each selected endpoint in the accepted set of its
 acquired guard. Theorem 2 makes the resulting product a subset of `F`. Crashes and
 partitions can delay transitions but do not create a transition that bypasses the
-owner's durable hold check.
+owner's durable hold check. The origin gate prevents recovery or retirement from
+releasing the collected holds before commitment, which additionally requires the
+attempt to remain acquiring. Retirement ceases authorization before sending closes.
+Thus a delayed acquisition continuation cannot reauthorize a retired attempt.
 
 This is exactly-once logical authorization neither for application effects nor for
 physical platform writes. Application state transfer and routing handover are not
@@ -331,6 +335,90 @@ worst-case ratio of scheduled successful installations follows from the frozen
 maximum-mass objective. This is not a lower bound for all online strategies.
 The executable T=100 case is retained in `results/journal-analysis.json`.
 
+## Exact static selection for a catalog-covered batch
+
+An announced batch can be optimized directly in installed changes. Let
+`B=((i_t,T_t))_(t=1..h)` list each proposed owner and full target support. Define
+`pi_i(T)` as projection onto owner `i`'s manifest-relevant atoms. The batch is
+**catalog-covered** when every proposed projection belongs to that owner's
+candidate domain `D_i`, including the zero-weight current anchor. Guards use only
+these relevant atoms. Consequently their accepted candidate labels determine
+their decisions on every covered proposal, even if the complete target contains
+additional irrelevant atoms.
+
+Fix the supplied initial support vector and one unchanged predicate-guard
+admission, with no additional holds or intervening mutations and enough generation
+headroom for the batch. For a legal static product `E`, let `I_B(E)` count actual
+changes to full supports. A repeated full support is a no-op. Two distinct full
+supports with the same relevant projection can therefore still contribute a change.
+
+**Lemma (monotonicity of static installed-change count).** If the batch is covered
+and `A_i(E_i) subseteq A_i(E'_i)` for every owner, then `I_B(E) <= I_B(E')`.
+Equal acceptance vectors give identical decisions and final full supports.
+
+*Proof.* At each owner, form a sequence beginning with its current full support,
+followed by all proposed full supports accepted by that owner's fixed guard. Keep
+repeated values. The installation count is the sum of `1[x_(k-1) != x_k]` over
+adjacent values. Both guards accept the starting support. Coverage and containment
+make the sequence for `E` a subsequence of the sequence for `E'`, with the same
+first value. Removing an interior value cannot increase this count because
+
+    1[x != z] <= 1[x != y] + 1[y != z].
+
+Removing a trailing value also cannot increase it. Sum this argument over owners;
+interleaving their proposals does not alter the separate static checks. Equal
+acceptance vectors accept exactly the same proposals, so the sequences, no-op
+decisions, refusals and final supports agree. This proof uses full support identity
+for changes and projected catalog identity only for guard acceptance.
+
+**Theorem (frontier sufficiency for the static batch optimum).** If exact synthesis
+completes and the supplied batch is catalog-covered, then
+
+    max_(all legal bounded static products E) I_B(E)
+      = max_(returned canonical frontier members E) I_B(E).
+
+*Proof.* There are finitely many legal acceptance vectors. Each has a maximal
+dominating vector, and exact synthesis returns that vector. The lemma implies its
+installation count is at least as large. The canonical representative has the same
+acceptance labels and therefore the same replay on a covered batch. A returned
+member thus attains the all-product maximum. Conversely, every returned member is
+a legal product, so its count cannot exceed that maximum.
+
+The optional selector in `src/batch.py` evaluates every canonical member, requires
+a strict improvement to replace the maximum-mass default, and keeps an optimum
+when counts tie. Its public batch bound is 256. The theorem supplies a positive
+optimality statement for an announced sequence; the earlier mass-versus-schedule
+construction still rules out a guarantee for an unknown future sequence.
+
+Coverage cannot be omitted. With one owner, manifest `a OR b`, current support
+`{a,b}`, and catalog containing only that projection, the canonical one-term guard
+is `a`. For the off-catalog batch proposing `{b}`, it installs zero changes, whereas
+the equally catalog-accepting legal guard `b` installs one. Supplying the additional
+candidate `{b}` restores the theorem's coverage premise if synthesis completes.
+
+`tests/static_batch_optimality.py` independently checks this result without using
+the planner's corner test, dominance routine or batch forecaster as its oracle.
+It enumerates full abstract support vectors and all legal antichains. The retained
+`results/theory-review/summary.json` contains:
+
+- 147,420 comparisons of nested accepted sets with a common current value, for all
+  sequences of length zero through five on four full support values;
+- all 136 one/two-alternative manifests over two atoms at each of two owners and
+  their 1,024 compatible current vectors;
+- 2,582 legal guard products before acceptance-vector quotienting and 1,143
+  canonical frontier members, summed across those contexts;
+- all 585 owner/target batches of length zero through three per context, yielding
+  599,040 comparisons between the optimum over all legal products and the optimum
+  over returned frontier members;
+- 1,024 calls to the actual selector on separate 16-proposal batches, each compared
+  with literal all-product replay; and
+- controls for irrelevant-only support changes, repeated full-support no-ops,
+  empty-catalog current anchors, and the discriminating off-catalog example.
+
+All comparisons agree. Source SHA-256 identities identify the implementation
+executed by this new finite logical cohort. No result from it is added to a prior
+network, timing, generated-holdout or application-effect denominator.
+
 ## Generalized complexity, not fixed-cap hardness
 
 The unbounded two-coordinate weighted seeded problem contains maximum edge
@@ -395,30 +483,84 @@ SQLite reopen equality. Network JSON serialization already detached TCP replies.
 This protects the return-value boundary, not intentional mutation of the public
 internal state object, arbitrary store corruption, or a malicious in-process actor.
 
+## Live certificate identity
+
+A supplied live certificate selects a durable attempt only if it is a complete
+dictionary matching that attempt and satisfies the same canonical schema used
+on recovery. Python value equality alone does not establish this property:
+Boolean values and equal-valued floats compare equal to integers, and a missing
+certificate can compare equal to a supplied null. The live record lookup first
+excludes missing certificates and then validates the supplied representation.
+Thus `use`, `retire` and adapter `resume` share the exact token boundary already
+required by the recovery argument. Copies made before waiting for the lifecycle
+gate preserve the checked input against later caller edits. The additional regressions
+exercise 26 numeric aliases in fixed and envelope certificates and the missing
+certificate case; no rejected token sends a protocol message or changes a record.
+
 ## Owned transactional-effect composition
 
-The application adapter adds a reservation ledger for its own SQLite mutations.
-Each reservation is created only after a checked live use and is bound to the
-complete admission certificate and the exact key/value payload. A transaction
-finishes a reservation and applies its stored write together. Retirement first
-closes the lease to new reservations. If any reservation remains active, it
-returns `draining` without beginning protocol retirement. Otherwise it durably
-fences the lease before requesting any protocol close.
+The application adapter adds a registration and reservation ledger for its own
+SQLite mutations. One ledger belongs to one coordinator identity. All owned
+acquisition, writes and retirement pass through the adapter and its serialization
+gate. A lease identifier hashes the complete checked admission certificate;
+each operation reservation also binds its exact key/value payload.
 
-For this owned effect interface, every actual write therefore occurs while its
-protocol guards remain held. Before the fence, an active reservation prevents
-protocol retirement; after the fence, no active reservation exists and no new
-reservation is admitted. Serialized owner actions preserve the old guards until
-their close, so the guarded-lifetime theorem covers each completed mutation.
-Writing the value and marking the reservation done in one transaction avoids a
-gap between application completion and the drain test. On reopen, durable active
-reservations still block retirement. An uncertain ledger commit stops use of
-that object and cannot trigger protocol release. A lost remote close leaves the
-local fence closed, making repeated cleanup safe.
+**Registration precedes authority.** After checking owner receipts, the core
+invokes the adapter's synchronous registration callback while the existing
+durable attempt is still `acquiring`. Only a successful callback permits the
+core to persist `committed` and return an admitted lease. Consequently every
+owned committed admission has a preceding durable registration. The two stores
+need no atomic joint commit: an interrupted registration can leave an acquiring
+attempt or an extra registration, but cannot by itself authorize an operation.
+A bare core admission has no such registration guarantee and cannot be attached
+to the adapter by merely reusing its manifest name.
 
-The argument assumes every owned mutation uses this interface, one coordinator
-writer, the existing SQLite durability premises, and no malicious in-process
-state modification. It does not cover detached callbacks, writes through another
-database, generic remote effects, multi-writer failover or physical power loss.
-The saved unfenced callback is a composition negative control that violates the
-drain premise, not a counterexample to the original protocol theorem.
+**Recovery preserves committed work.** Registration failures remain covered by
+the core's existing acquisition journal. Ordinary errors receive one cleanup
+attempt; cancellation, process loss or a lost close leave that journal available
+for a later `DrainingClient.recover`. Recovery first completes the core recovery
+step and reads its resulting commitment state. It then fences registrations
+without a committed attempt only when they have no active operations. Closed
+registration rows remain present. An active orphan is an inconsistent composition
+state and is rejected rather than cancelled. Committed registrations, including
+open or closing leases with active work, remain unchanged. If persistence reports
+an uncertain core commitment, the failed origin must reopen before this step;
+stale in-memory `acquiring` state cannot justify fencing an actually committed
+lease. This distinguishes a safely closed, never-authorized acquisition from
+retirement of an admission that may already own application work.
+
+**Draining bounds the effect lifetime.** Each reservation is created only after
+a checked live use. A transaction finishes the reservation and applies its
+stored write together. Retirement first closes the lease to new reservations.
+If any reservation remains active, it returns `draining` without beginning
+protocol retirement. Otherwise it durably fences the lease before requesting
+any protocol close. Before the fence, an active reservation prevents retirement;
+after the fence, no active reservation exists and no new one is admitted.
+Serialized owner actions preserve the guards until their close, so every actual
+owned write lies within the guarded lifetime. Combining the write and completion
+record in one transaction avoids a gap between application completion and the
+drain test. Durable active reservations still block retirement after reopen.
+An uncertain ledger write stops that object, and retirement cannot infer a drain
+from that error. A lost remote close leaves the fence closed for repeated cleanup.
+
+**The ledger is cumulatively bounded.** It retains at most 64 lease records and
+2,048 operation records, including closed leases, recovery-fenced registrations
+and completed or cancelled operations. Known exhaustion is checked before a new
+protocol admission; a registration error after that check still occurs before
+core commitment and follows the recovery argument above. Reacquiring an existing
+open registered lease does not consume another lease row, while each new write
+must still satisfy the operation bound. No old lease is deleted to recover
+capacity, so a delayed callback cannot obtain authority by reusing a discarded
+registration. These cumulative bounds do not follow from, or replace, the core's
+live-window and closed-floor bounds.
+
+The argument assumes one coordinator writer, acquisition and retirement through
+this adapter, every owned mutation through its reservation interface, the
+existing SQLite durability premises, and no malicious in-process state change.
+It does not cover detached callbacks, another database, generic remote effects,
+multi-writer failover or physical power loss. The current 56-method boundary
+suite includes registration/commit failures, cancellation, lost-close recovery
+and four actual same-host SIGKILL cuts in each Python mode. Those controls test
+the stated recovery transitions; they do not substitute for the storage premise.
+The saved unfenced callback violates the drain premise and remains a composition
+negative control for this interface.
