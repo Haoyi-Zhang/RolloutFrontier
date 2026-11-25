@@ -51,8 +51,9 @@ holds, regardless of how many factors mention it.
   space with `install-tl`), Poppler (`pdfinfo`, `pdffonts`, `pdftotext`; tested
   from conda-forge via micromamba), and
   `pip install matplotlib pillow pymupdf pypdf reportlab` in the same venv
-  (see `../paper/README.md`). Run `make paper` first, then
-  `python -B paper/build_figure_atlas.py` from the package root.
+  (see `../paper/README.md`). `make paper` also rebuilds the figure atlas
+  (`../paper/figure_atlas.pdf`) from the compiled documents before it removes
+  the auxiliary files.
 
 ## Installation
 

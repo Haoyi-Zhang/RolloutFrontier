@@ -512,12 +512,11 @@ The manuscript sources are not part of this repository. In the full
 submission package, from the package root (the parent of `artifact/`):
 
 ```sh
-sh paper/build.sh --named
-python -B paper/build_figure_atlas.py
+sh paper/build.sh
 ```
 
 Publication dependencies and figure sources are listed in `paper/README.md`.
 The build derives numerical rows from checked observations. Statistical figures
-are regenerated in Python, and the atlas uses actual placements from the compiled
-article and supplement. Review the resulting PDFs and both color and grayscale
+are regenerated in Python, and the build then rebuilds the atlas from the actual
+placements in the compiled article and supplement. Review the resulting PDFs and both color and grayscale
 figures at their printed width.

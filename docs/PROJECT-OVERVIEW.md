@@ -140,10 +140,10 @@ python -B reproduce.py --out /tmp/rollout-semantic-fresh \
 In the full submission package, from its root (the parent of `artifact/`):
 
 ```sh
-sh paper/build.sh --named
-python -B paper/build_figure_atlas.py
+sh paper/build.sh
 ```
 
-The build regenerates statistical plots from retained observations. Fresh
+The build regenerates statistical plots from retained observations and
+rebuilds the figure atlas from the compiled documents. Fresh
 experiment commands require new output directories; timing campaigns should run
 while other experiments and document builds are idle.
