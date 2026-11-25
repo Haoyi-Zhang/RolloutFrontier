@@ -1,9 +1,13 @@
 # Publication figure review
 
-The article targets IEEE Transactions on Parallel and Distributed Systems. Its
-five main figures and five supplementary figures have been redrawn as one
-collection, with manuscript-font labels, consistent panel markers and explicit
-relations between the objects being compared.
+The article targets IEEE Transactions on Parallel and Distributed Systems. The
+current submission carries seven figures in the article (four conceptual
+placeholders with drawing prompts, and three statistical plots) and five in the
+supplement (two statistical plots and three data-derived diagrams); the compiled
+numbering and printed sizes are in `paper/figure_atlas.json`. The review below
+records the redrawing of the figure collection at the time the plot generators
+were consolidated into `paper/figure-source/make_statistical_figures.py`; it is
+retained as a record of that pass.
 
 ## Journal calibration
 
