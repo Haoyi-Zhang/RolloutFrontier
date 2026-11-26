@@ -7,9 +7,9 @@ placements and grayscale inspection copies.
 
 | Scientific comparison | Python generator under `paper/` | Retained inputs under `artifact/results/` |
 | --- | --- | --- |
-| Preparation-inclusive planning cost of the four routes through six owners (article Fig. 5) | `figure-source/make_statistical_figures.py` | `structured-planning/timing-summary.json` and all 105 worker records |
-| Factored planning CPU cost and peak memory through 1,024 owners (article Fig. 6) | `figure-source/make_statistical_figures.py` | `factored-scale/summary.json`, both checked summaries and the 50 fresh-worker records |
-| Owner communication for identical installation paths (article Fig. 7) | `figure-source/make_statistical_figures.py` | `phase-granularity/` paired process traces and summaries |
+| Preparation-inclusive planning cost of the four routes through six owners (article Fig. 6) | `figure-source/make_statistical_figures.py` | `structured-planning/timing-summary.json` and all 105 worker records |
+| Factored planning CPU cost and peak memory through 1,024 owners (article Fig. 7) | `figure-source/make_statistical_figures.py` | `factored-scale/summary.json`, both checked summaries and the 50 fresh-worker records |
+| Owner communication for identical installation paths (article Fig. 8) | `figure-source/make_statistical_figures.py` | `phase-granularity/` paired process traces and summaries |
 | Cumulative static-batch planning cost (supplement) | `figure-source/make_statistical_figures.py` | `direct-optimization/` complete repetitions |
 | Goals with an extra phase per deployment graph class under two fixed-choice baselines (supplement) | `figure-source/make_statistical_figures.py` | `schema-path-analysis/summary.json` and its motif CSV, cross-checked against `schema-census/summary.json` |
 
@@ -32,6 +32,5 @@ leaves their geometry and data bindings unchanged.
 
 Run `sh paper/build.sh` from the project root with the publication dependencies
 listed in [paper/README.md](../../paper/README.md). It regenerates the statistical
-figures from retained observations and compiles the manuscripts. Run
-`python -B paper/build_figure_atlas.py` afterward to regenerate the atlas from the
-newly compiled placements.
+figures from retained observations, compiles the manuscripts and rebuilds the atlas
+from the newly compiled placements (`make paper` does the same from the artifact).

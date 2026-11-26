@@ -1,7 +1,7 @@
 # Publication figure review
 
 The article targets IEEE Transactions on Parallel and Distributed Systems. The
-current submission carries seven figures in the article (four conceptual
+current submission carries eight figures in the article (five conceptual
 placeholders with drawing prompts, and three statistical plots) and five in the
 supplement (two statistical plots and three data-derived diagrams); the compiled
 numbering and printed sizes are in `paper/figure_atlas.json`. The review below
