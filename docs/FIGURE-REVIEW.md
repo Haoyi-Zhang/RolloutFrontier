@@ -2,8 +2,7 @@
 
 The article targets IEEE Transactions on Parallel and Distributed Systems. The
 current submission carries eight figures in the article (five conceptual
-figures drawn from prompts, four of them final and one still a placeholder, and
-three statistical plots) and five in the
+figures, all five drawn from prompts, and three statistical plots) and five in the
 supplement (two statistical plots and three data-derived diagrams); the compiled
 numbering and printed sizes are in `paper/figure_atlas.json`. The review below
 records the redrawing of the figure collection at the time the plot generators
